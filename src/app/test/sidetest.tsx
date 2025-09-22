@@ -78,7 +78,7 @@ export default function Sidebar({ data = sidebarData }: SidebarProps) {
         const hasChildren = item.children && item.children.length > 0;
         const isExpanded = expandedItems.has(item.name);
         const isActive = activeItem === item.name;
-        const isHovered = hoveredItem === item.name;
+        const _isHovered = hoveredItem === item.name;
 
         return (
             <div key={item.name} className="relative">
@@ -223,7 +223,7 @@ export default function Sidebar({ data = sidebarData }: SidebarProps) {
                         <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <p>No results found for "{searchTerm}"</p>
+                        <p>No results found for &quot;{searchTerm}&quot;</p>
                     </div>
                 )}
             </div>

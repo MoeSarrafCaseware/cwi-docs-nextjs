@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "./LanguageProvider";
 
@@ -109,7 +109,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         const data = await response.json();
         
         if (data.results) {
-          const results: SearchResult[] = data.results.map((result: any) => ({
+          const results: SearchResult[] = data.results.map((result: { title: string; href: string; section: string; snippet: string; matchType: string }) => ({
             title: result.title,
             path: `/docs${result.href}`,
             section: result.section,
@@ -122,7 +122,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           const sectionResults: {[key: string]: SearchResult[]} = {};
           if (data.sectionResults) {
             Object.keys(data.sectionResults).forEach(section => {
-              sectionResults[section] = data.sectionResults[section].map((result: any) => ({
+              sectionResults[section] = data.sectionResults[section].map((result: { title: string; href: string; section: string; snippet: string; matchType: string }) => ({
                 title: result.title,
                 path: `/docs${result.href}`,
                 section: result.section,

@@ -7,7 +7,7 @@ export default function EditorSetupContent() {
         <h1 className="text-4xl font-bold text-white mb-6">Get started with Tailwind CSS</h1>
         <div className="space-y-4 text-gray-300">
           <p>
-            Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file. It's fast, flexible, and reliable — with zero-runtime.
+            Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file. It&apos;s fast, flexible, and reliable — with zero-runtime.
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function EditorSetupContent() {
               <h3 className="text-lg font-semibold text-white">Create your project</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Start by creating a new Vite project if you don't have one set up already. The most common approach is to use Create Vite.
+              Start by creating a new Vite project if you don&apos;t have one set up already. The most common approach is to use Create Vite.
             </p>
             <div className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
               <div className="bg-gray-700 px-4 py-2 flex items-center justify-between">

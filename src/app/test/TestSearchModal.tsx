@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -109,7 +109,7 @@ export default function TestSearchModal({ isOpen, onClose }: TestSearchModalProp
         const data = await response.json();
         
         if (data.results) {
-          const results: SearchResult[] = data.results.map((result: any) => ({
+          const results: SearchResult[] = data.results.map((result: { title: string; href: string; section: string; snippet: string; matchType: string }) => ({
             title: result.title,
             path: `/test/docs${result.href}`, // Route to test docs
             section: result.section,
@@ -122,7 +122,7 @@ export default function TestSearchModal({ isOpen, onClose }: TestSearchModalProp
           const sectionResults: {[key: string]: SearchResult[]} = {};
           if (data.sectionResults) {
             Object.keys(data.sectionResults).forEach(section => {
-              sectionResults[section] = data.sectionResults[section].map((result: any) => ({
+              sectionResults[section] = data.sectionResults[section].map((result: { title: string; href: string; section: string; snippet: string; matchType: string }) => ({
                 title: result.title,
                 path: `/test/docs${result.href}`, // Route to test docs
                 section: result.section,
@@ -207,7 +207,7 @@ export default function TestSearchModal({ isOpen, onClose }: TestSearchModalProp
                 </div>
               ) : searchData && searchData.results.length > 0 ? (
                 <div className="max-h-96 overflow-y-auto">
-                  {searchData.sortedSections.map((section, sectionIndex) => {
+                  {searchData.sortedSections.map((section, _sectionIndex) => {
                     const sectionResults = searchData.sectionResults[section] || [];
                     if (sectionResults.length === 0) return null;
 

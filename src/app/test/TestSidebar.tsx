@@ -27,7 +27,7 @@ interface SidebarProps {
     data?: SidebarData;
 }
 
-export default function TestSidebar({ data }: SidebarProps) {
+export default function TestSidebar({ data: _data }: SidebarProps) {
     const { currentLanguage, currentRegion } = useLanguage();
     const router = useRouter();
     const pathname = usePathname();
@@ -146,7 +146,7 @@ export default function TestSidebar({ data }: SidebarProps) {
                 }
             });
         };
-        data.navigationSections.forEach(section => collectItems(section.items));
+        navigationSections.forEach(section => collectItems(section.items));
         setExpandedItems(allItems);
     };
 
@@ -167,7 +167,7 @@ export default function TestSidebar({ data }: SidebarProps) {
         const hasChildren = item.children && item.children.length > 0;
         const isExpanded = expandedItems.has(item.name);
         const isActive = activeItem === item.name;
-        const isHovered = hoveredItem === item.name;
+        const _isHovered = hoveredItem === item.name;
 
         // Create unique key by combining language, region, item name, href, parent path, level, and index
         // This ensures uniqueness even for items with the same name and no href

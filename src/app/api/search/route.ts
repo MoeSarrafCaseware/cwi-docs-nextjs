@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
 
     // Search through all navigation items
     for (const section of navigationData.navigationSections) {
-        const searchInItems = async (items: Array<{name: string, href?: string, items?: any[], children?: any[]}>) => {
+        const searchInItems = async (items: Array<{name: string, href?: string, items?: unknown[], children?: unknown[]}>) => {
         for (const item of items) {
           if (item.href) {
             try {
@@ -111,7 +111,7 @@ export async function GET(request: NextRequest) {
           }
           
           if (item.children) {
-            await searchInItems(item.children);
+            await searchInItems(item.children as Array<{name: string, href?: string, items?: unknown[], children?: unknown[]}>);
           }
         }
       };

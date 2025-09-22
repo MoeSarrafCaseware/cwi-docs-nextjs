@@ -11,6 +11,12 @@ type NavigationItem = {
   children?: NavigationItem[];
 };
 
+type NavigationSection = {
+  id: string;
+  title: string;
+  items: NavigationItem[];
+};
+
 type SidebarProps = {
   itemPaddingClass?: string;
   indicatorOffsetClass?: string; // e.g. 'left-3'
@@ -138,12 +144,12 @@ function NavigationItemComponent({
 }
 
 export default function Sidebar({
-  itemPaddingClass = "py-2",
-  indicatorOffsetClass = "left-3",
-  indicatorWidthClass = "w-[2px]",
+  itemPaddingClass: _itemPaddingClass = "py-2",
+  indicatorOffsetClass: _indicatorOffsetClass = "left-3",
+  indicatorWidthClass: _indicatorWidthClass = "w-[2px]",
 }: SidebarProps) {
-  const { currentLanguage, currentRegion, setLanguage } = useLanguage();
-  const [navigationSections, setNavigationSections] = useState<any[]>([]);
+  const { currentLanguage, currentRegion, setLanguage: _setLanguage } = useLanguage();
+  const [navigationSections, setNavigationSections] = useState<NavigationSection[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
 
