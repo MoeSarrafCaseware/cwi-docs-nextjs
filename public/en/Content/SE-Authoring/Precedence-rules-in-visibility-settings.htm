@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Precedence rules in visibility settings</h1>
+        <p>The following precedence rules apply when visibility settings are evaluated for a specific item:</p>
+        <p><i>An item is anything in the platform that you can set visibility for. For example, a checklist procedure, a query question set, a document, a folder.</i>
+        </p>
+        <ol>
+            <li>
+                <p><b>Signoff</b>
+                </p>
+                <p>Signoff takes the highest rank in precedence.  If the item is signed off, it becomes visible.</p>
+                <p>That is, if an item  is hidden then users sign off on it, it becomes visible.</p>
+                <p><b>Example:</b> If a checklist document is hidden by visibility settings and a user selects <b>Show hidden items</b> then signs off on it, the procedure becomes visible.</p>
+            </li>
+            <li>
+                <p><b>Visibility settings on the item</b>
+                </p>
+                <p>Visibility settings on the item rank second in precedence. If visibility settings for the item exist, then the item's visibility settings are used - regardless of the visibility settings for the parent that it belongs to.</p>
+                <p><b>Example</b>: If a procedure in a checklist is hidden due its own visibility settings and the group it belongs to is visible, then the procedure  is hidden - following its own visibility settings not the group's visibility settings.</p>
+            </li>
+            <li>
+                <p><b>Visibility settings on the item's parent (if the item has a parent)</b>
+                </p>
+                <p>Visibility settings on the item's parent (if the item belongs to a parent) rank last in precedence. If the item does not have visibility set to it and belongs to a parent, then the visibility settings for the parent  are used.</p>
+            </li>
+            <p>That is, if the parent of an item is hidden due to visibility settings and there are no visibility settings for this item, then the item is hidden - following its parent's visibility settings.</p>
+            <p><b>Example</b>: If a folder is hidden by visibility settings and no visibility settings are available for the documents in this folder and none of the documents has been signed off, then each document is hidden - following the folder's visibility settings.</p>
+        </ol>
+        <p class="note inline"><b>Note:</b> <a href="Define-components.htm">Components</a> are not included in this list as they currently affect trial balance groups only. In a future release, components will affect visibility of additional items in the platform and information about how they rank in precedence will be added.</p>
+    </body>
+</html>

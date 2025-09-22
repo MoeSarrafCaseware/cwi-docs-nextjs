@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Rounding"></a>Rounding differences in financial statements</h1>
+        <p class="note inline"><b>Note:</b> If the trial balance is out of balance (Assets does not equal Liabilities + Equity), the process to apply rounding differences cannot be followed. Also, an <b>Out of balance</b> indicator displays in the <b>Trial Balance</b> page (<img src="../../Resources/Images/icon-out-of-balance-TB.png" style="vertical-align: text-bottom;" />) marking the out of balance columns.</p>
+        <p>Rounding account balances in financial statements tables follows specific rules:</p>
+        <ul>
+            <li>
+                <p>The total of the rounding differences in all balances is applied to the first account with non-zero balance within the default group that's predefined in your product.</p>
+            </li>
+            <p>Note that "applied to the first account" means "added to the balance of the first account".</p>
+            <p><b>Example:</b>
+            </p>
+            <p>Let's assume that:</p>
+            <ul style="list-style-type: circle;">
+                <li>the total of rounding differences in the current year is $3, </li>
+                <li>the default group in your product is <i>Cash and Cash Equivalents</i>,</li>
+                <li> and the first account with non-zero balance in this group is <i>Cash</i> with balance $12,400</li>
+            </ul>
+            <p>In this case, rounding differences apply to <i>Cash</i> and the new balance for <i>Cash</i> becomes $12,403.</p>
+            <li>
+                <p>Rounding differences can only apply to accounts.</p>
+            </li>
+            <li>
+                <p>You can change the account where rounding differences apply and select a different account.</p>
+            </li>
+        </ul>
+        <p>In the financial statements tables, the row where the rounding differences are applied is marked with an asterisk (*). </p>
+        <p>In this figure, the asterisk (*) marks <i>Property, Plant and equipment</i> row to denote that rounding differences apply to an account in this group.</p>
+        <p>
+            <img src="../../Resources/Images/PPE-group-rounding-applied.PNG" alt="Asterisk (*) appears at Property, Plant and Equipment denotes that rounding differences apply in an account in this group" />
+        </p>
+        <p>As you expand the group, the asterisk (*) relocates until you reach the account where the rounding differences apply.</p>
+        <p>
+            <img src="../../Resources/Images/PPE-account-rounding-applied.PNG" alt="Asterisk (*) reolcates until you reach the account where the rounding differences apply" />
+        </p>
+        <h2><a name="Rounding2"></a>Rounding and Carry Forward</h2>
+        <p>In Carry Forward, rounding differences apply to the same accounts in prior years (that is, no change for prior years). As for the current year, rounding differences apply to the account of the most recent prior year. Here is an example:</p>
+        <p>if you carry forward data for 2018, 2017 and 2016, where,</p>
+        <ul style="list-style-type: circle;">
+            <li>Rounding differences for 2018 applied to <i>Cash</i></li>
+            <li>Rounding differences for 2016 and 2017  applied to <i>Liabilities</i></li>
+        </ul>
+        <p>then,</p>
+        <ul style="list-style-type: circle;">
+            <li>Rounding differences for 2019 apply to <i>Cash</i> (same account for the most recent prior year - 2018)</li>
+            <li>Rounding differences in 2018 apply to <i>Cash</i> (no change)</li>
+            <li>Rounding differences in 2016 and 2017 apply to <i>Liabilities</i> (no change)</li>
+        </ul>
+    </body>
+</html>

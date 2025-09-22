@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>2019-07 release notes</h1>
+        <p style="font-style: italic;">The features below are automatically enabled if the corresponding component or module has been enabled. 
+</p>
+        <h2>Redesign of Query documents</h2>
+        <p>Staff-contact collaboration is switching to a new and improved user interface. The new query documents design is now available.</p>
+        <p>The Query document redesign focused on enhancing style and visual appeal, improving usability, optimizing the layout and organization of components, as well as using clear and simple terms.</p>
+        <p>Here is a quick glance at the main features.</p>
+        <ul>
+            <li>
+                <p>Term changes.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><b>Query -</b> previously used to refer to the document and the questions in the document. In the new design, the term Query only refers to the document. While Query Question now refers to the questions in the document.</p>
+                    </li>
+                    <li>
+                        <p><b>Question Set -</b> replaced the old term Group.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Question cards enclosing the question title and body, the response and comments.</p>
+            </li>
+            <p>With question cards, users can easily spot and identify items belonging to the same question.</p>
+            <li>
+                <p>A side navigation pane, where users can view and scroll through all the available query questions grouped by question set.</p>
+            </li>
+            <p>The navigation pane also features a single select and drag action. You can now easily rearrange question sets and query questions.</p>
+            <li>
+                <p>A simpler method for adding query questions.</p>
+            </li>
+            <p>You now select the desired response type as you add the query question in the document. You no longer need to access the settings dialog to add or modify a response type.</p>
+        </ul>
+        <p>To enable the new query design in your product, go to <b>Product Settings</b> | <b>Queries</b> and select <b>Enable new query layout.</b></p>
+        <p>
+            <img src="../Resources/Images/product-settings-enable-equery.PNG" alt="How to enable the new query design in your product" />
+        </p>
+        <p class="note inline"><b>Note:</b> We strongly advise that you thoroughly test the existing queries in your product after enabling the new design and verify everything works as expected, before you enable the new design in the production environment.</p>
+        <h2>Custom terminology</h2>
+        <p>You can now customize terms in your product. The Product Settings dialog now includes a new section <b>Terminology</b>, where you can customize terms.</p>
+        <p>In this release, you can customize the <b>Preliminary</b> and <b>Final</b> terms that are used by default in the Trial Balance page or the Data page (whichever is enabled in your product) and the Analysis tab in checklists. </p>
+        <p>
+            <img src="../Resources/Images/product-settings-terminology.PNG" alt="Customizing terms: The terms you enter here are used in lieu of the default &quot;Prelim&quot; and &quot;Final&quot; throughout the product" />
+        </p>
+        <h2>Adjustments</h2>
+        <p>Users can now export adjustments to a CSV file, a PDF, or to Working Papers (CSV ASCII format).</p>
+        <h2>Financial Statements</h2>
+        <p>In this release, we've added a placeholder indicator in the financial statements document and new features to support reconciliation. We've also enhanced rounding relations and included some feature enhancements for dynamic tables, trial balance group properties and notes.</p>
+        <h3>Dimensions</h3>
+        <p>To support markets that need to include the Statement of Changes in Equity in their financial statements, you can now assign trial balance groups to specific dimensions within a category.</p>
+        <p>In the Group Properties dialog, a button is now available next to the <b>Breakdown by dimension</b> property, where you can exclude certain dimensions from the selected category.</p>
+        <h3>Dynamic tables</h3>
+        <p><a href="#*" class="BlackText" style="color: #000000;font-weight: bold;">**</a> You can now:</p>
+        <ul>
+            <li>
+                <p>View the group total row once you add a custom group in the table edit mode. Previously, the group total row didn't show in the table edit mode, causing users to accidentally add the group rows outside of the custom group.  </p>
+            </li>
+            <li>
+                <p>Include data links in the column and row titles. The formula icon (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;" />) is now available in the table edit mode. </p>
+            </li>
+        </ul>
+        <h3>Notes</h3>
+        <p>You can now change the default title of the section (<b>Notes to the Financial Statements</b>). </p>
+        <h3>Text and field placeholders</h3>
+        <p>Users can now easily locate and replace placeholders in the financial statements. Similar to letters and memos, a placeholder indicator is now available in the document. It shows the number of empty placeholders and navigates users to the next empty placeholder in the document. </p>
+        <p>
+            <img src="../Resources/Images/FS-placeholder-indicator.PNG" title="" alt="Placeholder indicator in financial statements" />
+        </p>
+        <h3>Review Tools</h3>
+        <p>We've optimized the look and feel for Review Tools to improve usability.</p>
+        <p>The filter icon is no longer available. Once users select the <b>Review Tools</b> icon (<img src="../Resources/Images/icon-review-tools-financials.png" style="width: 21px;height: 20px;vertical-align: text-bottom;" />), check boxes for the tools display so they can filter the view. They can also enable or disable the Review Tools using the available toggle. </p>
+        <p>
+            <img src="../Resources/Images/review-tools-new-look.PNG" alt="Review tools in financial statements - new look and feel" />
+        </p>
+        <h3>Rounding</h3>
+        <p><a href="#*" class="BlackText" style="color: #000000;font-weight: bold;">**</a> You can now select the financial group that you'd like the rounding differences to be applied to. Once selected, all the rounding differences are added to the group total. In the account details popup, an additional line displays showing the rounding details. </p>
+        <p>
+            <img src="../Resources/Images/plug-applied-to-cash.PNG" alt="Rounding details (yellow higlighted line) in the Account Details popup" />
+        </p>
+        <p>In carry forward, the currently selected group in prior years is retained. While, the currently selected group in the most recent prior year is rolled forward to the current year.  </p>
+        <p><b>Example:</b>
+        </p>
+        <p>if you've carried forward data for 2018, 2017 and 2016, where,</p>
+        <p style="text-indent: 0.5in;">Cash was selected to hold the rounding differences in 2018</p>
+        <p style="text-indent: 0.5in;">Liabilities was selected to hold rounding differences in 2016 and 2017</p>
+        <p>then,</p>
+        <p style="text-indent: 0.5in;">Cash becomes the selected group for rounding differences in 2019</p>
+        <p style="text-indent: 0.5in;">Cash remains the selected group for rounding differences in 2018</p>
+        <p style="text-indent: 0.5in;">Liabilities remains the selected group for rounding differences in 2016, 2017</p>
+        <h3>Reconciliation</h3>
+        <p>We've added new features to support reconciliation and help users easily spot and identify balance discrepancies to produce reliable, accurate, and high-quality financial statements.</p>
+        <ul>
+            <li>
+                <p>In the dynamic table edit mode, you can now label the accounts that you want the application to compare their balances.</p>
+            </li>
+            <p>For example, you can label two records in two different tables in the document with the label 'Cash' to have their balances compared. Note that the comparison happens in real time.  </p>
+            <li>
+                <p>Users can now easily spot records that don't agree with each other.</p>
+            </li>
+            <p>An icon displays next to each account balance with identified discrepancies. Clicking the icon displays a pop-up that shows the discrepancies details (account names and balances).</p>
+        </ul>
+        <p>
+            <img src="../Resources/Images/diagnostics-user-view.PNG" alt="Discrepancy between &quot;Proceeds from the sale of property, plant and equipment&quot;  in the Statement of Cash Flows and &quot;Restricted Cash&quot; in the Cash and Cash Equivalents note" />
+        </p>
+        <p><span style="color: #808080;">Note that if users attempt to sign off or print the financial statements document without reconciling the identified record discrepancies, they get a warning message.</span>
+        </p>
+        <p style="color: #000000;"><span style="color: #808080;"><span style="color: #000000;"><span style="color: #808080;">With this feature, a new review tool </span></span></span><b style="color: #808080;">Balance Check</b><span style="color: #808080;"><span style="color: #000000;"><span style="color: #808080;"> is also available. It marks all rows with identified balance discrepancies, and all rows where balances agree.</span></span></span><i>(The warning on sign-off/print and Balance Check review tool features are no longer included in 2019-07, and will be available in future releases</i>)</p>
+        <p class="note inline"><b>Note:</b> This feature is only available for tables which follow the standard 3-column format (Description, CY, PY). It is not available in IFRS/SOCIE tables, tables displaying a break-down of dimensions or entities, tables displaying both parent and consolidated columns, or tables which display year-to-date and current period as separate columns.</p>
+        <h3>Overwriting a calculated balance</h3>
+        <p>Users can now override account balances sourced from the trial balance in dynamic tables. Changes are automatically reflected in all tables in the document, as well as variance calculations (if available).</p>
+        <p>For overridden balances, the account details popup shows the overridden balance and includes an additional line showing the original balance.</p>
+        <p class="note inline"><b>Note:</b>This feature is not available in IFRS/SOCIE tables or tables displaying a break-down of dimensions or entities</p>
+        <h2>Letters, memos and financial statements</h2>
+        <p>Users are now prompted if they attempt to print or bulk print letters, memos, or financial statements document with empty placeholders.</p>
+        <p>The prompt notifies users of the number of placeholders that haven't been replaced.</p>
+        <h2>The Data page</h2>
+        <p>We've enhanced styling and reviewed terms in the Data page to improve user experience.</p>
+        <p>We have also included features from the old design (the Trial balance page), as well as new features:</p>
+        <ul>
+            <li>
+                <p>Support for Tax and Prescribed Accounts (Chart of Accounts) grouping structures is now available, with a designated view for each grouping. </p>
+            </li>
+            <li>
+                <p>A navigation path now displays at the top as users navigate through groups, accounts and transactions so they can easily navigate back and forth. </p>
+            </li>
+            <li>
+                <p>The default view of the page is now based on the user's progress in the engagement.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>If the user hasn't imported the financial data, then the Data page opens defaulted to the <b>Import</b> view. </p>
+                    </li>
+                    <li>
+                        <p>If the user imported the financial data and assigned accounts (if need be), the Data page opens defaulted to the <b>Accounts</b> view. Users are also redirected to the <b>Accounts</b> view upon successful import of data. </p>
+                    </li>
+                    <li>
+                        <p>If the user has been working in the <b>Groups</b> view before leaving the Data page, it opens defaulted to the <b>Groups</b> view. </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Users can now:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Export trial balance data to Working Papers (CSV ASCII format) or a PDF.</p>
+                    </li>
+                    <li>
+                        <p>Import and view prior year data for up to 5 years. </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>The link to transactions on accounts is now only active if users have successfully imported the transactions data.</p>
+            </li>
+            <li>
+                <p>In consolidation engagements, a separate view for the parent entity data is now available. For each grouping, users can now select <b>Consolidated</b> to view the consolidated data or <b>Parent Entity</b> to view the parent entity data only. </p>
+            </li>
+            <p>
+                <img src="../Resources/Images/data-page-consolidated-parent-views.PNG" alt="Consolidated view and Parent Entity view" />
+            </p>
+        </ul>
+        <ul>
+            <li>
+                <p>You can now import the following group properties using a CSV file.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Contrary Name (Text)</p>
+                    </li>
+                    <li>
+                        <p>Inconsistent Name (Text)</p>
+                    </li>
+                    <li>
+                        <p>Dimension Category (one of the dimension categories defined in Product Settings)</p>
+                    </li>
+                    <li>
+                        <p>Reassign Group for contrary accounts (one of the groups in the Financial Groups structure)</p>
+                    </li>
+                    <li>
+                        <p>Group Classification (one of the automap keywords)</p>
+                    </li>
+                    <li>
+                        <p>Preference (Number)</p>
+                    </li>
+                    <li>
+                        <p>Restriction (one of the values of the Account Restriction property)</p>
+                    </li>
+                    <li>
+                        <p>Link to a Tax Group (Number)</p>
+                    </li>
+                    <li>
+                        <p>Link to a Chart of Accounts Group (Number)</p>
+                    </li>
+                    <li>
+                        <p>Cycle (Text)</p>
+                    </li>
+                    <li>
+                        <p>Area (Text)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>We've enhanced the search functionality for account assignment to improve performance. Matching results now display after users enter at least 3 characters in the search field. </p>
+            </li>
+        </ul>
+        <h2>The Documents page</h2>
+        <p>You can now set the <b>Detailed View</b> to be the default view in the Documents page using the product's API. To learn more, see the <span style="font-family: 'Courier New';">detailedDocumentsView</span> property in <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-configure-your-se-product.html">SDK documentation. </a></p>
+        <h2>Fixes</h2>
+        <ul>
+            <li>
+                <p>Fixed an issue where placeholders navigation didn't work in old content.</p>
+            </li>
+            <li>
+                <p>Fixed an issue where the visibility icon (<img src="../Resources/Images/icon-visibility-visible.png" style="vertical-align: text-bottom;" />) was always available in a text section that has one or more lists with visibility settings.</p>
+            </li>
+            <li>
+                <p>Fixed a few issues in Analysis tabs in checklists where,</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>accounts with zero balances didn't show. </p>
+                    </li>
+                    <li>
+                        <p>tooltips didn't display correctly. </p>
+                    </li>
+                    <li>
+                        <p>charts and graphs didn't always display properly. </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Fixed an issue in PDF reference copy of the engagement, where annotations with long text didn't display correctly. </p>
+            </li>
+            <li>
+                <p>Fixed an issue when setting bulk print, where an error displays once you attempt to create a document group. </p>
+            </li>
+            <li>
+                <p>Fixed an issue where text in document flagged Issues (<img src="../Resources/Images/icon-issues-global-inline.PNG" style="width: 24px;height: 19px;vertical-align: text-bottom;" />) didn't wrap. </p>
+            </li>
+            <li>
+                <p>Fixed an issue in the Materiality document where the defined materiality amounts in are lost every time users leave the page or refresh. </p>
+            </li>
+            <li>
+                <p>Fixed an issue where CSV exports always use dot as decimal separator. It now uses the product decimal separator (as defined in Product Settings | Format | Numbers). </p>
+            </li>
+            <li>
+                <p>Fixed an issue in Risk reports where the procedure description showed empty if a user attempted to add it as a reference for a risk and the procedure description included data links (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;" />). </p>
+            </li>
+            <li>
+                <p>Resolved a translation issue where abbreviated prior year and current year terms have the same initials in Spanish. The full term is now used in the column headers. We recommend the same resolution for similar cases. </p>
+            </li>
+            <li>
+                <p>Fixed an issue where input notes for procedures in the Conclusions area didn't show. </p>
+            </li>
+            <li>
+                <p>Fixed a layout issue when allowing users to add rows outside of the dynamic table edit mode, the (<b>+ Row</b>) buttons didn't align properly. </p>
+            </li>
+            <li>
+                <p>Fixed a few issues in financial statements, where:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>authors couldn't add excluded items back in the document. </p>
+                    </li>
+                    <li>
+                        <p>users experience out of sync scrolling. </p>
+                    </li>
+                    <li>
+                        <p>left-side navigation pane included confusing terms (Documents and Document). Terms have now been revised; <b>Document Map</b> shows the areas and sections in the financial statements document, while <b>Documents</b> shows the available documents in the engagement.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+        <p style="font-size: 10pt;"><span style="font-weight: bold; color: #000000;">**</span><a name="*"></a><b>Available for authors and users (accountants, auditors, or other engagement team members).</b>
+        </p>
+    </body>
+</html>

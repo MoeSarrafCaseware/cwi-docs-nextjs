@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Disclosure</h1>
+        <p>The <b>Disclosure</b> analytic package encompasses a series of tests that are designed to identify and evaluate critical financial relationships and transactions for proper financial statement disclosure. It focuses on detecting material concentrations in related party transactions, customer and supplier dependencies, and balances in accounts receivable (AR) and accounts payable (AP). It ensures transparency, highlights financial risks, and addresses potential vulnerabilities related to financial stability and liquidity.</p>
+        <p>This analytic package can be used to:</p>
+        <ul>
+            <li>
+                <p>Detect related party transactions and identify material balances for proper financial statement disclosure</p>
+            </li>
+            <li>
+                <p>Highlight risks of revenue concentration and overdependence on specific customers for cash flow</p>
+            </li>
+            <li>
+                <p>Assess the financial stability impact of major customers and identify potential liquidity vulnerabilities</p>
+            </li>
+            <li>
+                <p>Highlight risks of overdependence on a limited number of suppliers or vendors</p>
+            </li>
+            <li>
+                <p>Assess the impact of major vendors on financial stability and sustainability</p>
+            </li>
+            <li>
+                <p>Identify vulnerabilities in cash flow management and supplier relationships due to concentration in payables</p>
+            </li>
+        </ul>
+        <h2>Analysis fields</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference:</b> Unique fields that are used to create a transaction ID, such as the Entry ID field for the general ledger dataset. They are used to identify the transactions that are part of the result. Reference fields are predefined in the package and cannot be modified.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>The following parameters must be set to run this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Threshold (%):</b> Set the percentage of third parties to analyze.</p>
+            </li>
+            <li>
+                <p><b>Select grouping column:</b> Refers to the column that groups information for the purposes of the test, for example, the vendors or suppliers column identifier.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The available configurations will vary depending on the product you’re using.</p>
+        <p>The following test configurations are available for this package:</p>
+        <ul>
+            <li>
+                <p><b>Related Party Summary:</b> Identifies significant related party transactions to ensure proper disclosure in financial statements.</p>
+            </li>
+            <li>
+                <p><b>Customer Concentration:</b> Detects customers contributing 10% or more of the total revenue to assess dependency risks and financial sustainability.</p>
+            </li>
+            <li>
+                <p><b>Disclosure AR:</b> Identifies customers with 10% or more of the accounts receivable balances to evaluate liquidity risks and cash flow concentration.</p>
+            </li>
+            <li>
+                <p><b>Purchase Concentration:</b> Identifies suppliers accounting for 10% or more of the total expenses to assess dependency risks and operational vulnerabilities.</p>
+            </li>
+            <li>
+                <p><b>Disclosure AP:</b> Identifies vendors with 10% or more of the accounts payable balances to analyze concentration risks and supplier relationships.</p>
+            </li>
+        </ul>
+        <h2>Technical specifications</h2>
+        <p>To run the <b>Disclosures</b> analytic package:</p>
+        <ol>
+            <li>
+                <p>If required, filter the data to the subset that you want to analyze, otherwise the analysis will run on the entire data file.</p>
+            </li>
+            <li>
+                <p>Ensure that you’ve selected the necessary reference fields.</p>
+            </li>
+            <li>
+                <p>Select the test configuration to use from the following options:</p>
+                <ul>
+                    <li>
+                        <p>Disclosure AP</p>
+                    </li>
+                    <li>
+                        <p>Disclosure AR</p>
+                    </li>
+                    <li>
+                        <p>Customer Concentration</p>
+                    </li>
+                    <li>
+                        <p>Purchase Concentration</p>
+                    </li>
+                    <li>
+                        <p>Related Party Summary</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>For the <b>Disclosure AP</b>, <b>Disclosure AR</b>, <b>Customer Concentration</b>, or <b>Purchase Concentration</b> test:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Determine the threshold (%) of third parties to analyze.</p>
+                    </li>
+                    <li>
+                        <p>Enter the grouping column that identifies third parties in the GL.</p>
+                    </li>
+                    <li>
+                        <p>Select the column for amounts.</p>
+                    </li>
+                    <li>
+                        <p>The result is presented as a ranking.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>For the <b>Related Party Summary</b> test:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Determine the threshold (%) of third parties to analyze.</p>
+                    </li>
+                    <li>
+                        <p>Enter the grouping column that identifies third parties in the GL.</p>
+                    </li>
+                    <li>
+                        <p>Select the column for amounts.</p>
+                    </li>
+                    <li>
+                        <p>The result is presented in a table that groups transactions by the related party.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

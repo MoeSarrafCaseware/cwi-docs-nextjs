@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Visibility conditions</h1>
+        <p><a name="visbility-conditions-description"></a>The following listing describes the visibility conditions, the available parameters for each condition and shows an example for each condition.</p>
+        <h2>RMM (Risk of Material Misstatement)</h2>
+        <p>Select an assertion type, a group from the trial balance and one of the following conditions:</p>
+        <ul>
+            <li><b>RMM</b> - selected group has RMM for this assertion type.</li>
+            <li><b>No RMM</b> - selected group has no RMM for this assertion type.</li>
+        </ul>
+        <p>If you've <a href="Enable-the-new-risk-module.htm">enabled the new risk module</a> in your product, a difference set of parameters are available for this condition:</p>
+        <ul>
+            <li>Select the assertion type.</li>
+            <li>Select the area or business cycle.</li>
+            <li>Specify the logical operation to compare and evaluate (=,&lt;=,&gt;=).</li>
+            <li>Select the RMM scale.</li>
+        </ul>
+        <p>The values in the RMM scales list are defined in the <a href="Enable-the-new-risk-module.htm#Customiz">RMM scales setup</a> in Product Settings.</p>
+        <h3>Example</h3>
+        <p>If <b>Completeness</b> for <b>Cash</b> has <b>No RMM</b>, then show this item.</p>
+        <p><i>Or, if you've  enabled the new risk module:</i>
+        </p>
+        <p>If <b>Accuracy</b> for <b>Inventory</b> has <b>RMM less than Medium</b>, then hide this item.</p>
+        <h2>Financial Grouping</h2>
+        <p>Select a group from the trial balance, specify the year (current or prior) and one of the following balance values:</p>
+        <ul>
+            <li>is zero</li>
+            <li>is non-zero</li>
+            <li>is material</li>
+            <li>is not material</li>
+        </ul>
+        <h3>Example</h3>
+        <p>If the balance for the <b>Short term investment</b> account for the <b>Current year  is material</b>, then show this item</p>
+        <h2><a name="Response"></a>Response</h2>
+        <p>Select a source document, a  procedure in the document and a response for the procedure.</p>
+        <h3>Example</h3>
+        <p>In the <b>200 Optimizer</b> document, if the response to <b>What is the type of engagement as defined under SSARS21?</b> procedure is <b>Compilation</b>, then hide this item.</p>
+        <p>Note that if a response has been changed after you've set up a <b>Response</b> visibility condition that references that response, the value <b>Response Not Recorded</b> displays.</p>
+        <p>
+            <img src="../Resources/Images/response-not-recorded.PNG" alt="The value Response Not Recorded displays instead of the referenced response because the response has been changed after you've set up the Response visibility condition." />
+        </p>
+        <h2>Consolidation </h2>
+        <p>Specify whether the engagement is Consolidated or Non-consolidated, where:</p>
+        <ul>
+            <li>
+                <p>Non-consolidated balance = Parent entity + Parent entity adjustments (excluding eliminating adjustments).</p>
+            </li>
+            <li>
+                <p>Consolidated balance = Parent entity + Parent entity adjustments + Subsidiary entities + Subsidiary entities adjustments + Eliminating adjustments to  the Parent and Subsidiary entities.</p>
+            </li>
+        </ul>
+        <h3>Example</h3>
+        <p>If the engagement is <b>Consolidated,</b> then show this item.</p>
+        <p>
+            <img src="../Resources/Images/visibility-settings-optimizer-2025.png" alt="The user interface for setting group audit conditions in the Visibility Settings" />
+        </p>
+        <h2>Group audit</h2>
+        <p>Using this condition, you can show or hide documents based on whether they belong to a group audit engagement. Specify whether the engagement is shown or hidden based on the engagement type:</p>
+        <ul>
+            <li>
+                <p>is group audit</p>
+            </li>
+            <li>
+                <p>is non-group audit</p>
+            </li>
+        </ul>
+        <h3>Example</h3>
+        <p>If the engagement is a group audit, then show this document.</p>
+        <p>&#160;</p>
+        <h2>Scaling/Rounding</h2>
+        <p>Select a rounding scale from the drop-down.</p>
+        <h3>Example</h3>
+        <p>If the rounding is in <b>Millions</b>, then display this item.</p>
+        <h2><a name="reporting-period-cond"></a>Reporting period</h2>
+        <p>Select the reporting period:</p>
+        <ul>
+            <li>Monthly</li>
+            <li>Quarterly</li>
+            <li>Semi-Annual</li>
+            <li>Annual</li>
+        </ul>
+        <h3>Example</h3>
+        <p>If the reporting period is <b>Annual,</b> the show this item.</p>
+        <h2>Date</h2>
+        <p>To set a date condition, select the applicable parameter option from the available drop-downs.</p>
+        <ol>
+            <li>Select the nature of the date:<ul><li>Effective on</li><li>Expires on</li></ul></li>
+            <li>Select the period type options for fiscal year and interim periods within a fiscal year:<ul><li>Year start date</li><li>Year end date</li><li>Period start date</li><li>Period end date</li></ul></li>
+            <li>Select the mathematical operations used to compare and evaluate (&lt;,&gt;, &lt;=,&gt;=).</li>
+            <li>Select the date.</li>
+        </ol>
+        <h3>Example</h3>
+        <p>This item shows if <b>effective  date</b> for the engagement <b>year start date</b> is after  <b>November 30-2019</b>.</p>
+        <h2>Organization type</h2>
+        <p>Select country and select organization type.</p>
+        <h3>Example</h3>
+        <p>If the entity type is <b>Canadian Private Corporation</b>, then show this item.</p>
+        <h2>Language</h2>
+        <p>Select a content language from the drop-down.</p>
+        <h3>Example</h3>
+        <p>If the content language is <b>French</b>, then display this item.</p>
+        <p>Note that:</p>
+        <ul>
+            <li>
+                <p>The content language means the language currently selected in the <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Engagement Properties</a> popup up</p>
+            </li>
+            <li>
+                <p>Only <a href="Set-up-multiple-content-languages.htm">active languages</a> are available for selection in the drop-down</p>
+            </li>
+        </ul>
+        <h2>Group of conditions</h2>
+        <p>Add the conditions to set up the group</p>
+        <p class="note inline"><b>Note:</b> All condition types are available for you to add.</p>
+        <h3>Example</h3>
+        <p>This item shows if the engagement type is <b>Review</b>  and the entity type is <b>Canadian Private Corporation</b><![CDATA[  ]]><i>or if</i> the <b>year star tdate</b> is after <b>October-21-2019 </b>.</p>
+        <h2>Form Value</h2>
+        <p>You can include one or more  forms in the condition setup.
+
+Select the form name, a field in the selected form and a value for the selected field.
+</p>
+        <p>The value options for a selected field depend on the field type. For example, numeric fields have logical operators and numerical values, while date fields have a calendar icon for date selection.</p>
+        <p class="note inline"><b>Note:</b> If you have not developed forms using <a href="Develop-custom-forms.htm">SE Builder</a> in your product, the parameter drop-downs for this condition are disabled.</p>
+        <h3>Example</h3>
+        <p>If the field <b>T2S8</b> in <b>S8 - Capital cost allowance (CCA)</b> form is <b>&gt; 10</b> or the field <b>T3S8</b> in <b>S8 - Capital cost allowance (CCA)</b> form is <b>&gt; 10</b>, then show this item.</p>
+    </body>
+</html>

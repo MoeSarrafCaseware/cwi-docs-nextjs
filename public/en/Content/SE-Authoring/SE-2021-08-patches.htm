@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2021-08 patches</h1>
+        <p>Here is a summary of the patches that have been deployed for SE 2021-08.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-note-on-version-access.flsnp" />
+        <h2>SE 2021-08-U1</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 681</b>
+        </p>
+        <p>Here is the list of issues that have been fixed with the deployment of SE 2021-08-U1.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <ul>
+            <li>
+                <p>Financial statements:</p>
+                <ul>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29088">SE-29088</a>] - When rounding is applied to an account in a dynamic table, other dynamic tables that include the account are not updated with the rounded value.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29229">SE-29229</a>] - A performance improvement.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29163">SE-29163</a>] - In the financial statements, zeros do not display as dashes when the <b>Show zeros as dashes</b> option is selected in the product settings.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29113">SE-29113</a>] - Guidance sections do not display in the notes to the financial statements.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29119">SE-29119</a>] - When users define note associations for parent-level notes, the association does not apply to the corresponding subnotes.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29284">SE-29284</a>] - When users open a PDF document, annotations do not display and the option to add annotations is unavailable.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-28920">SE-28920</a>] - In products that support multiple languages, when firm authors mark a language as inactive in the firm template, the language is no longer visible to the firm author in the list of content languages in the product settings.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29161">SE-29161</a>] | [<a href="https://bugs.caseware.com/browse/SE-29329">SE-29329</a>] - Checklist procedures with an <b>Entity information</b> response type that link to the <b>Organization type</b> field display “Unassigned” as the response if the organization type is “Limited Liability Company (LLC)”.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29226">SE-29226</a>] - External documents are deleted from engagements if a user attempts to update the document properties at the same time as another user replaces the document.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29231">SE-29231</a>] - When users export XBRL files, values in IFRS movement tables are not included in the export unless the user has the financial statements open when they perform the export.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29244">SE-29244</a>] - Users cannot use the scroll bar when viewing long comments in queries.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29297">SE-29297</a>] - In products that support multiple languages, document names display as “Untitled” for the following use-case:</p>
+                <ol>
+                    <li>
+                        <p>Users switch the content language to a non-default language and upload a file.</p>
+                    </li>
+                    <li>
+                        <p>Users then switch to another content language.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29042">SE-29042</a>] - Changes made to the conclusion section of checklists are not included when users carry forward an engagement.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29050">SE-29050</a>] - In dynamic tables, an error occurs when users enter non-numeric values in columns with a numeric column type. The dynamic table cannot be saved.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29084">SE-29084</a>] - Table borders are not applied to dynamic tables in worksheets.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29218">SE-29218</a>] - When users print checklists, the generated PDF does not display as expected. Sign-offs for procedures in the conclusion section are not aligned correctly.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29313">SE-29313</a>] - In products that support multiple languages, when users switch the content language to a non-default language, picklist response options in checklists do not display.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29127">SE-29127</a>] | [<a href="https://bugs.caseware.com/browse/SE-29131">SE-29131</a>] | [<a href="https://bugs.caseware.com/browse/SE-29137">SE-29137</a>] | [<a href="https://bugs.caseware.com/browse/SE-29108">SE-29108</a>]  - Technical issues that have been identified after reviewing production logs.</p>
+            </li>
+        </ul>
+        <h2>SE 2021-08-U2</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 686</b>
+        </p>
+        <p>Here is the list of issues that have been fixed with the deployment of SE 2021-08-U2.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <ul>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29365">SE-29365</a>] - In the notes to the financial statements, the Insert from library option is not available if users have already added all hidden parent-level notes, even if there are hidden sub-level notes available in the library.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29484">SE-29484</a>] - In engagements created from carry forward, engagement glossary terms that were edited by end users in the prior year file do not carry forward as expected.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29376">SE-29376</a>] - When users import data from BGL Simple Fund 360, the import screen does not display the BGL entity that the data will be imported from.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29334">SE-29334</a>] - When users import trial balance data, the data displays as out of balance if any of the account balances include exponential notation.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29449">SE-29449</a>] - If translated content is not available for the selected content language, the content does not display at all instead of displaying in the default language.</p>
+            </li>
+        </ul>
+        <h2>SE 2021-08-U5</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 690</b>
+        </p>
+        <p>One issue has been fixed with the deployment of SE 2021-08-U5.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <p>[<a href="https://bugs.caseware.com/browse/SE-29885">SE-29885</a>] - A performance improvement related to custom forms development.</p>
+        <h2>SE 2021-08-U9</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 700</b>
+        </p>
+        <p>Here is the list of issues that have been fixed with the deployment of SE 2021-08-U9.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <ul>
+            <li>
+                <p>Dynamic tables</p>
+                <ul>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29813">SE-29813</a>] -  Diagnostic labels display as partially hidden and cannot be edited.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29712">SE-29712</a>] - Adding annotations to a dynamic table row does not work as expected. When users refresh or navigate away, the annotation is not saved.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29894">SE-29894</a>] - Decimal places do not display in input columns.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29728">SE-29728</a>] - The <b>Change Font Size</b> menu does not display as expected. Users cannot access the menu to select options.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29852">SE-29852</a>] - Data links (fx) do not work as expected when authors copy dynamic tables.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29826">SE-29826</a>] - Clients cannot download files uploaded to query documents.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29918">SE-29918</a>] - Prior year tax data does not display in custom forms.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29972">SE-29972</a>] - An error occurs when users attempt to export iXBRL files. The files do not generate.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-23001">SE-23001</a>] - Data links (fx) with trial balance conditions do not work as expected if the financial group parameter for the condition is a net income group.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29317">SE-29317</a>] -  In consolidation engagements, the Data page incorrectly displays as out of balance.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29474">SE-29474</a>] - In consolidation engagements, the Data page does not display the correct names for subsidiary entities.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29637">SE-29637</a>] - When users create issues, there is a delay between the user typing and the typed text displaying in the description text box.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29769">SE-29769</a>] - In analysis charts, tooltips for account balances do not display as expected. An equal sign (=) displays at the end of the account balance value in the tooltip.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29858">SE-29858</a>] - When users open a document from the Documents page, the incorrect document opens if they have selected to view hidden items on the page.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30051">SE-30051</a>] - In products that support multiple languages, when users change the content language of the engagement to a non-default language, the content continues to display in the default language.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-28565">SE-28565</a>] - An error occurs when users attempt to carry forward an engagement for the following use case:</p>
+                <ul>
+                    <li>
+                        <p>The primary author removed a data formula (fx) from the prior year template.</p>
+                    </li>
+                    <li>
+                        <p>The primary author then used the undo function (CTRL + Z) to undo the removal.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29529">SE-29529</a>] - When users export XBRL documents, XBRL facts tagged with false-y tags are not included in the generated file.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29861">SE-29861</a>] - When users print the financial statements, text with justified alignment does not display as expected.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29926">SE-29926</a>] - In the financial statements, when users select an area in the Document Map, they are not navigated to the beginning of the area.</p>
+            </li>
+        </ul>
+        <h2>SE 2021-08-U10</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 701</b>
+        </p>
+        <p>Here is the list of issues that have been fixed  with the deployment of SE 2021-08-U10.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <ul>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30237">SE-30237</a>] - A technical issue that causes errors when carrying forward an engagement if identical sign-off roles were added in both the prior year engagement file and the current year firm template.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30090">SE-30090</a>] - The Risk tab in checklists does not work as expected. The names of some assertions are not displayed.</p>
+            </li>
+        </ul>
+        <h2>SE 2021-08-U11</h2>
+        <p><i>Version: </i><b style="font-style: italic; font-weight: normal;">2021-08 Build 707</b>
+        </p>
+        <p>Here is the list of issues that have been fixed  with the deployment of SE 2021-08-U11.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" />
+        <ul>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30443">SE-30443</a>] - When users print documents, dynamic tables that span more than one page do not display as expected in the generated PDF. After page breaks, the table headers are not formatted correctly.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30323">SE-30323</a>] - When users print the financial statements, notes do not display as expected in the generated PDF if parent-level notes were suppressed by the firm author in the firm template. The sub-level notes for the suppressed parent notes are included in the PDF.</p>
+            </li>
+        </ul>
+    </body>
+</html>

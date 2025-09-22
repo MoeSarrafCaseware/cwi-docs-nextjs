@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comparisons</h1>
+        <p>The Comparisons analytic can be used to compare two or more sets of information to validate that the information is the same or different depending on your choices. For instance, you can use this test to confirm that the user responsible for inputting transaction details differs from the user authorizing those transactions. This test can be instrumental in validating consistency between receiving reports and corresponding invoices.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Possible attempts to manipulate the financial statements</p>
+            </li>
+            <li>
+                <p>Financial reporting areas that have lower accuracy or precision</p>
+            </li>
+            <li>
+                <p>Systemic issues in how a department processes transactions</p>
+            </li>
+            <li>
+                <p>Improperly configured system settings which may need improvement and further evaluation</p>
+            </li>
+            <li>
+                <p>Weak internal controls</p>
+            </li>
+            <li>
+                <p>Weak monitoring and detecting activities</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>A risk of material misstatement due to fraud</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> -  Unique field(s) that are used to create a unique transaction ID such as the Entry ID field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Core fields</b> - Two or more fields of any type need to be tagged for the comparison. The fields tagged should be of the same type.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>The following parameter must be set to run this test:</p>
+        <p><b>Comparison type</b> - Select how the data in the selected fields should compare to each other. Your options are:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Equal</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Not equal</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Greater than</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Greater than or equal</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Less than</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Less than or equal</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Character field comparison</b> - Compares two character fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+            <li>
+                <p><b>Date field comparison</b> - Compares two date fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+            <li>
+                <p><b>Numeric field comparison</b> - Compares two numeric fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+        </ul>
+        <h2>Technical Specifications</h2>
+        <p>When you run the Comparisons analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis.  If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This is only valid if specific fields have been selected. If all the columns are available, this is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that two or more fields have been selected and that all the fields selected are of the same type.</p>
+            </li>
+            <li>
+                <p>Obtain the type of comparison from the parameters entered. The options are:</p>
+                <ul>
+                    <li>
+                        <p><b>Equal</b> (==)</p>
+                    </li>
+                    <li>
+                        <p><b>Not equal</b> (!=)</p>
+                    </li>
+                    <li>
+                        <p><b>Greater than or equal</b> (&gt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Greater than</b> (&gt;)</p>
+                    </li>
+                    <li>
+                        <p><b>Less than or equal</b> (&lt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Less than</b> (&lt;)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Perform the core analytic comparing the fields selected with the comparison type.</p>
+                <ul>
+                    <li>
+                        <p>When comparing two fields, extract any records where the comparison returns true.</p>
+                    </li>
+                    <li>
+                        <p>When comparing three or more fields, extract any records where the comparison between at least two of the fields returns true.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Optionally, the filters in step 1 can be placed on the data after the core analytic is complete instead of prior to completion.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

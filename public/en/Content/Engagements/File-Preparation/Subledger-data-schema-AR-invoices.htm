@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Accounts receivable—invoices described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement.  This topic details the fields in the Accounts receivable—invoices subledger. </p>
+        <p>For more information on the subledgerset data descriptions, see  <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaction ID <br />(<code>ar_invoice_transaction_id</code></td>
+                    <td>
+                        <p>A cross-reference to the general ledger (GL) posting. It can contain many different levels to identify the transaction, including cost centers, such as company, division, region, group and branch/department. 
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Primary key:  The value of this field is used to form the unique identifier of this entry. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Fiscal Year<br /><br />(<code>ar_invoice_invoice_fiscal_year</code></td>
+                    <td>
+                        <p>The fiscal year in which <b>Invoice Date</b> occurs.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Period <br />(<code>ar_invoice_invoice_period</code></td>
+                    <td>
+                        <p>The fiscal period in which <b>Invoice Date</b> occurs.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Due Date <br />(<code>ar_invoice_invoice_due_date</code></td>
+                    <td>
+                        <p>The date payment is due from the customer. Aging of a receivable is usually calculated based on this date.
+
+</p>
+                        <p>Data type: </p>
+                        <p>Date
+Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sales Order ID <br />(<code>ar_invoice_sales_order_id</code></td>
+                    <td>
+                        <p>The sales order identifier for invoiced items.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Amount <br />(<code>ar_invoice_invoice_amount</code></td>
+                    <td>
+                        <p>The transaction monetary amount recorded in the functional or group currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reporting Invoice Amount <br />(<code>ar_invoice_invoice_amount_reporting</code></td>
+                    <td>
+                        <p>The transaction monetary amount recorded in the reporting currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local Invoice Amount <br />(<code>ar_invoice_invoice_amount_local</code></td>
+                    <td>
+                        <p>The transaction monetary amount in local currency. Usually the amount seen on the original invoice document.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grouping Code <br />(<code>ar_invoice_grouping_code</code></td>
+                    <td>
+                        <p>A grouping mechanism for related items in a batch or grouping of invoices, such as the invoice grouping found in certain ERP systems. 
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Description <br />(<code>ar_invoice_description</code></td>
+                    <td>
+                        <p>A free-form description of the payment. </p>
+                        <p>
+
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch Number <br />(<code>ar_invoice_batch_id</code></td>
+                    <td>
+                        <p>A batch identifier generated by the source system. 
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source ID <br />(<code>ar_invoice_source_id</code></td>
+                    <td>
+                        <p>The posting source. The code for the source where the journal entry originated, such as sales journal, cash receipts journal, general journal, payroll journal, accountant manual entry, spreadsheet, and so on.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Number <br />(<code>ar_invoice_invoice_number</code></td>
+                    <td>
+                        <p>An identification number for an internally generated invoice.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: Yes
+</p>
+                        <p>Primary key: First alternate.  If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Date <br />(<code>ar_invoice_invoice_date</code></td>
+                    <td>
+                        <p>The date of the invoice, regardless of the date the invoice is entered. This is the date from which the due date is calculated based on the invoice terms.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No
+</p>
+                        <p>Primary key: Second alternate. If Transaction ID is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Amount <br />(<code>ar_invoice_invoice_amount</code></td>
+                    <td>
+                        <p>Transaction monetary amount recorded in the functional or group currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Due Date <br />(<code>ar_invoice_invoice_due_date</code></td>
+                    <td>
+                        <p>The date payment is due to the supplier. Not all transactions will have a due date (for example, credit memos).
+</p>
+                        <p>
+Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Business Unit Code <br />(<code>ar_invoice_business_unit_code</code></td>
+                    <td>
+                        <p>Used to identify the business unit, region, branch, and so on at the level that financial statements are being audited.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Number <br />(<code>ar_invoice_reference_number</code></td>
+                    <td>
+                        <p>The identification number for an internally or externally generated transaction. Examples include check number, wire transfer number, or original document identifier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Date <br />(<code>ar_invoice_reference_date</code></td>
+                    <td>
+                        <p>The date on an externally generated transaction. Examples include check date or wire transfer date.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Customer Account ID <br />(<code>ar_invoice_customer_account_id</code></td>
+                    <td>
+                        <p>The identifier of the customer from whom payment is expected or to whom unused credits have been applied.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Customer Account Name <br />(<code>ar_invoice_customer_account_name</code></td>
+                    <td>
+                        <p>The name of the customer.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Terms Discount Percentage <br />(<code>ar_invoice_terms_discount_percentage</code></td>
+                    <td>
+                        <p>The discount percentage the customer may take if an invoice is paid before a certain number of days.
+
+</p>
+                        <p>Data type: Decimal
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Terms Discount Days <br />(<code>ar_invoice_terms_discount_days</code></td>
+                    <td>
+                        <p>The number of days from the invoice date the customer has to take advantage of discounted terms.
+
+</p>
+                        <p>Data type: Integer
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Term Due Days <br />(<code>ar_invoice_terms_due_days</code></td>
+                    <td>
+                        <p>The number of days allowed to meet the obligation before an invoice becomes overdue.
+</p>
+                        <p>
+Data type: Integer
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered By <br />(<code>ar_invoice_entered_by</code></td>
+                    <td>
+                        <p>The date the transaction was entered into the source system. This is sometimes referred to as the creation date.
+</p>
+                        <p>
+Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered Date <br />(<code>ar_invoice_entered_date</code></td>
+                    <td>
+                        <p>The time this transaction was entered into the source system.
+</p>
+                        <p>
+Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered Time <br />(<code>ar_invoice_entered_time</code></td>
+                    <td>
+                        <p>The time this transaction was entered into the source system.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved By <br />(<code>ar_invoice_approved_by</code></td>
+                    <td>
+                        <p>The user identifier of the person who approved customer master additions or changes.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approval Date <br />(<code>ar_invoice_approved_by_date</code></td>
+                    <td>
+                        <p>The date the entry was approved.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approval Time <br />(<code>ar_invoice_approved_by_time</code></td>
+                    <td>
+                        <p>The time the entry was approved.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified By <br />(<code>ar_invoice_last_modified_by</code></td>
+                    <td>
+                        <p>The user identifier of the last person modifying this entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Date <br />(<code>ar_invoice_last_modified_date</code></td>
+                    <td>
+                        <p>The date the entry was last modified.
+</p>
+                        <p>
+Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Time <br />(<code>ar_invoice_last_modified_time</code></td>
+                    <td>
+                        <p>The time the entry was last modified.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Currency <br />(<code>ar_invoice_invoice_amount_currency</code></td>
+                    <td>
+                        <p>The functional or group currency related to the invoice amount.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reporting Invoice Currency <br />(<code>ar_invoice_invoice_reporting_currency</code></td>
+                    <td>
+                        <p>The reporting currency related to the invoice reporting amount for nonconsolidated reporting.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local Invoice Currency <br />(<code>ar_invoice_invoice_local_currency</code></td>
+                    <td>
+                        <p>The currency for local reporting requirements.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tax Type <br />(<code>ar_invoice_tax1_type</code></td>
+                    <td>
+                        <p>The code for the tax type. Examples include Sales, VAT.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tax Description <br />(<code>ar_invoice_tax1_type_description</code></td>
+                    <td>
+                        <p>The <b>Tax Type</b> description. For example, the authority to which tax is paid and other information to identify the type of tax.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tax Amount <br />(<code>ar_invoice_tax1_local</code></td>
+                    <td>
+                        <p>The amount of the tax indicated in <b>Tax Type</b> that is included in the transaction. Recorded in local currency. 
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Official Invoice Code <br />(<code>ar_invoice_official_invoice_code</code></td>
+                    <td>
+                        <p>The unique official code of the invoice, which is usually generated by the tax authorities.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Line Detail - Account ID <br />(<code>ar_invoice_line_account_id</code></td>
+                    <td>
+                        <p>The general ledger (GL) account code of the GL revenue account. This code can contain a subaccount identifier, as well as many different levels to identify the Account, including cost centers, such as company, division, region, group and branch/department.
+</p>
+                        <p>
+
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Line Detail - Account Description <br />(<code>ar_invoice_line_account_description</code></td>
+                    <td>
+                        <p>The description of the account whose identifier appears in <b>Line Detail - Account ID</b>.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

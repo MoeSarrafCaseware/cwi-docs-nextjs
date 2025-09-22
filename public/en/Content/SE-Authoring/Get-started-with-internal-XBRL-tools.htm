@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Get started with internal XBRL tools</h1>
+        <p><u>This guide is intended for Developers and Product Managers</u>. It covers three internal tools:</p>
+        <ul>
+            <li>
+                <p>The <a href="#Tagging">Tagging Merge Tool</a>, which allows you to combine two separate XBRL data files and verify the changes between them.</p>
+            </li>
+            <li>
+                <p>The <a href="#Taxonomy">Taxonomy Checker Tool</a>, which allows you to validate XBRL data against a selected taxonomy. It generates an error report detailing any issues found in the XBRL data. The tool checks both the structure of the data and whether the tags, dimensions and namespaces are relevant to the selected taxonomy.</p>
+            </li>
+            <li>
+                <p>The <a href="#Namespace">Taxonomy Namespace Tool</a>, which allows you to generate the namespace map in your XBRL data. This map cannot be exported from an engagement and must be created using this tool. The namespace map is required in your XBRL product script so the system knows which namespaces to use. You only need to use this tool once per product to generate the relevant map. The map can then be merged into your files each time you use the Tagging Merge Tool.</p>
+            </li>
+        </ul>
+        <p>The main section of this guide describes the process of merging tags. Custom Tags are added to an engagement using the Platform Tagging Tool. The Tagging Merge Tool then extracts these Custom Tags and incorporates them into the product template. Once added, these product tags are referred to as System Tags.</p>
+        <h2>Workflow</h2>
+        <p>The following diagram shows the expected workflow within your product, including the tasks required from both Developers and Product Managers.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-001.png" />
+        </p>
+        <p class="note"><b>Note:</b> If your Solutions team is new to Cloud XBRL, please use the UK product script. It helps you stay up to date with new features, reduces development effort and enables your Product Manager to use the Platform Tagging Tool to generate System Tags. Using the UK product script also allows you to directly import the JSON files into your product. If you do not use the script, you will need to create your own solution manually.</p>
+        <h3>Product Manager tasks</h3>
+        <p><b>Platform Tagging Tool</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>Use the Platform Tagging Tool to generate XBRL data</b>
+                </p>
+                <p>Use the Platform Tagging Tool to generate the Custom Tags, numerics and contexts that you want to include as System Tags, numerics and contexts.</p>
+            </li>
+            <li>
+                <p><b>Export the XBRL data</b>
+                </p>
+                <p>Export the tagging data from the engagement you have applied tags to. For instructions, see <a href="#HowDoIExport">How do I export XBRL data?</a></p>
+            </li>
+            <li>
+                <p><b>Save the exported file</b>
+                </p>
+                <p>Save the exported file in a secure location. Be sure to store it in a way that clearly indicates which product it belongs to and the date the data was exported.</p>
+            </li>
+        </ul>
+        <p><b>Internal XBRL tools</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>Do you have an existing master file?</b>
+                </p>
+                <p>This will only be "no" the first time you export data from the product. After that, you will have the latest master file saved.</p>
+            </li>
+            <li>
+                <p><b>Use the Tagging Merge Tool to merge with the existing master file</b>
+                </p>
+                <p>Use the Tagging Merge Tool to combine the new exported file with the existing master file for that product.</p>
+            </li>
+            <li>
+                <p><b>Save the new file as the latest master file</b>
+                </p>
+                <p>Save the file in your designated document area. Keep previous master files for version control and as a backup in case anything goes wrong.</p>
+            </li>
+            <li>
+                <p><b>Does the file contain the namespace map?</b>
+                </p>
+                <p>This step only applies if you haven’t yet used the Taxonomy Namespace Tool for the provided data. Once this is done, you can continue importing data via the Tagging Merge Tool using the <b>Namespace</b> panel.</p>
+            </li>
+            <li>
+                <p><b>Use the Taxonomy Namespace Tool to add namespaces</b>
+                </p>
+                <p>Use the Taxonomy Namespace Tool to create the namespace map. You’ll need the exported file that contains both your existing data and the new namespace map.</p>
+            </li>
+            <li>
+                <p><b>Do you want to validate the taxonomy data?</b>
+                </p>
+                <p>Consider validating the taxonomy data to ensure it's relevant to the specified taxonomy. Perform this step whenever it suits your team. This could be after each update or once tagging is complete.</p>
+            </li>
+            <li>
+                <p><b>Validate taxonomy data using the Taxonomy Checker Tool</b>
+                </p>
+                <p>Use the Taxonomy Checker Tool to verify whether the taxonomy data is relevant for the taxonomy.</p>
+            </li>
+            <li>
+                <p><b>Get the error log</b>
+                </p>
+                <p>Retrieve the error log from the Taxonomy Checker Tool and make the necessary adjustments.</p>
+            </li>
+            <li>
+                <p><b>Do you have errors to fix in the Platform Tagging Tool?</b>
+                </p>
+                <p>If errors are found that can be fixed, return to the beginning of the Platform Tagging Tool workflow and apply the necessary corrections.</p>
+            </li>
+        </ul>
+        <h3>Developer tasks</h3>
+        <ul>
+            <li>
+                <p><b>Provide the latest master JSON files to Product Developers</b>
+                </p>
+            </li>
+            <li>
+                <p><b>Do you want to make manual changes to the file?</b>
+                </p>
+                <p>As a Developer, you can manually edit the JSON file if the required changes cannot be made through the standard process.</p>
+            </li>
+            <li>
+                <p><b>Make manual changes (if necessary)</b>
+                </p>
+                <p>If you do make manual changes, ensure that you update the master JSON file maintained by your Product Manager so that it remains current.</p>
+            </li>
+        </ul>
+        <p><b>Product Script</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>Update JSON files in the product script</b>
+                </p>
+                <p>Update the product script to ensure its data is current.</p>
+            </li>
+        </ul>
+        <h2>How do I get the tool?</h2>
+        <p>The Tagging Merge Tool allows you to manipulate and test exported XBRL data. You can obtain this tool from the SE XBRL team. Please contact them to receive a ZIP file containing the latest version.</p>
+        <p>You will also need to install Java for the tool to function correctly.</p>
+        <h3>How to install Java</h3>
+        <ol>
+            <li>
+                <p>Go to the following link: <a href="https://adoptium.net/en-GB/temurin/releases/?version=17&amp;os=any&amp;arch=any">https://adoptium.net/en-GB/temurin/releases/?version=17&amp;os=any&amp;arch=any</a></p>
+            </li>
+            <li>
+                <p>Scroll down and find the download button for Windows.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-003.png" />
+                </p>
+            </li>
+            <li>
+                <p>This will download an installer through your browser.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-005.png" />
+                </p>
+            </li>
+            <li>
+                <p>Run the downloaded file and follow the installation process, using the default settings.</p>
+                <p class="note"><b>Note:</b> A system restart may be required for the installation to take effect.</p>
+            </li>
+        </ol>
+        <h2>How do I run the tool?</h2>
+        <p>Once you have the ZIP file containing the tool, unzip the folder by right-clicking on it and selecting <b>Extract All</b>, as shown below.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-006.png" />
+        </p>
+        <p>After the folder is unzipped, navigate to the new folder and locate the executable file named <b>xbrl-to-tag-converter</b>. Running this file will launch the tool.</p>
+        <h2><a name="HowDoIExport"></a>How do I export the XBRL data?</h2>
+        <p>You can extract the XBRL data from the platform by accessing the developer console.</p>
+        <ol>
+            <li>
+                <p>First, you will need to open the engagement from which you want to extract the Custom Tags, contexts and numerics.</p>
+            </li>
+            <li>
+                <p>Once you're in your engagement, click <b>Start Review</b> in the XBRL menu.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-007.png" />
+                </p>
+            </li>
+            <li>
+                <p>After the review panel appears on the right side of the screen, you can access the developer console. Right-click anywhere on the page and select <b>Inspect</b>.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-009.png" />
+                </p>
+            </li>
+            <li>
+                <p>This will open the developer tools panel.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-010.png" />
+                </p>
+            </li>
+            <li>
+                <p>At the top of the panel, navigate to the <b>Console</b> tab.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-012.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the console, enter the following command: <b>wpw.xbrl.jsonExporter.jsonExport()</b></p>
+            </li>
+            <li>
+                <p>After you press <b>Enter</b>, a list of errors will appear for any Custom Tags that are missing an XBRL identifier. If a tag is missing an identifier, it will not be exported.</p>
+            </li>
+            <li>
+                <p>The tool will then generate a file called <b>customXbrl.json</b> in your <b>Downloads</b> folder. This file will contain all the Custom Tags, contexts and numerics from your engagement.</p>
+                <p class="note"><b>Note:</b> This export does not include System Tags, contexts, or numerics.</p>
+                <p>
+                    <img src="../Resources/Images/xbrl-tools-014.png" />
+                </p>
+            </li>
+        </ol>
+        <h2><a name="Tagging"></a>Tagging Merge Tool</h2>
+        <p>The Tagging&#160;Merge Tool allows you to combine two separate XBRL data files and verify the changes between them.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-016.png" />
+        </p>
+        <p>You can input two files in this menu, typically your master JSON file and your newly exported XBRL data. You can review each file individually to view its contents. Press <b>Generate XbrlData.json</b> to begin the merge process.</p>
+        <h3>Merge process</h3>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-018.png" />
+        </p>
+        <p>Above is the Merge Files dialog, where you will handle merge conflicts. In the top bar, you can navigate between tags, numerics, contexts and namespaces.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-020.png" />
+        </p>
+        <p>Each section of the Merge Files dialog contains four subsections:</p>
+        <ul>
+            <li>
+                <p>Final Contexts</p>
+            </li>
+            <li>
+                <p>Conflicting Contexts</p>
+            </li>
+            <li>
+                <p>Only in First</p>
+            </li>
+            <li>
+                <p>Only in Second</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-022.png" />
+        </p>
+        <p><b>Final Contexts section</b>
+        </p>
+        <p>The Final Contexts section contains everything that will be included in your final file. Anything not listed here will not be included in the exported file. This section is automatically populated with items that are exact matches in both input files. For example, if a context is identical in both files, it will appear here automatically.</p>
+        <p>You can click on each entry to view its contents in a detailed panel.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-024.png" />
+        </p>
+        <p><b>Conflicting Contexts section</b>
+        </p>
+        <p>The Conflicting Contexts section contains items that exist in both files but differ in some way. Clicking on a row will open the Conflict dialog, where you can compare the two versions and select the one you want to include in the final file.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-026.png" />
+        </p>
+        <p>Once selected, the chosen version will be moved to the Final Contexts section.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-028.png" />
+        </p>
+        <p><b>Only in First and Only in Second sections</b>
+        </p>
+        <p>The Only in First and Only in Second sections list items that are only contained in one file. You can click on each row to review the item and choose to add it to the final file by clicking <b>Add</b>. There is also an <b>Add All</b> option at the top of each list, which will move all entries to the <b>Final Contexts</b> section.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-030.png" />
+        </p>
+        <p>After reviewing and resolving all entries, click <b>Export</b> to generate a new master file that contains your changes.</p>
+        <p class="note"><b>Note:</b> Only items in the Final Contexts section will be included in the export. Make sure that all necessary contexts, numerics, tags and namespaces are included. Items left in the Only in First or Only in Second sections will not be exported.</p>
+        <h3>Review panel</h3>
+        <p>Clicking <b>Review</b> opens the Review panel, which displays the contents of the selected file.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-032.png" />
+        </p>
+        <p>Below you can see the Review panel.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-034.png" />
+        </p>
+        <p>In this panel, you can browse the tags, numerics and contexts. Clicking on any item will show detailed information about it.</p>
+        <p>The panel also highlights:</p>
+        <ul>
+            <li>
+                <p><b>Unused contexts and numerics:</b> These exist in the file but are not referenced by any tags.</p>
+            </li>
+            <li>
+                <p><b>Missing contexts and numerics:</b> These are IDs referenced by tags but are not present in the file.</p>
+            </li>
+        </ul>
+        <h2><a name="Taxonomy"></a>Taxonomy Checker Tool</h2>
+        <p>The Taxonomy Checker Tool allows you to validate XBRL data against a selected taxonomy. It generates an error report detailing any issues found in the XBRL data. The tool checks both the structure of the data and whether the tags, dimensions and namespaces are relevant to the selected taxonomy.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-036.png" />
+        </p>
+        <p>You can use the input field to select the XBRL data file you wish to test. A drop-down menu is provided to choose the taxonomy to test against. If your taxonomy is not available in the drop-down, please refer to the section below on how to add your own taxonomy.</p>
+        <h3>What tests are run?</h3>
+        <p>The tool runs several validation checks to ensure:</p>
+        <ul>
+            <li>
+                <p>The data structure is valid</p>
+            </li>
+            <li>
+                <p>There are no blank values</p>
+            </li>
+            <li>
+                <p>All tags, contexts and numerics are valid for the selected taxonomy</p>
+            </li>
+        </ul>
+        <p>Additionally, contexts are checked to ensure they fall under a valid role and primary item for their dimensions.</p>
+        <p>Below is a list of all the errors that can be generated.</p>
+        <table>
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <thead>
+                <tr>
+                    <th>Error</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Invalid taxonomy selected. The selected taxonomy wasn't able to be reviewed. Please contact the development team."</td>
+                    <td>This error is generated when the server fails to initialize due to an invalid or missing taxonomy file. This could happen if the taxonomy file path provided in the request is incorrect or the file is corrupted.</td>
+                </tr>
+                <tr>
+                    <td>"Duplicate context names found: '[name]' for context IDs '[id1]' and '[id2]'."</td>
+                    <td>This error is generated when two or more contexts in the JSON data have the same name (after trimming whitespace). Context names must be unique.</td>
+                </tr>
+                <tr>
+                    <td>"The context with name '[name]' has a null context id."</td>
+                    <td>This error is generated when a context in the JSON data has a null value for its contextTag.</td>
+                </tr>
+                <tr>
+                    <td>"The context with name '[name]' has an empty context id."</td>
+                    <td>This error is generated when a context in the JSON data has an empty string as its contextTag.</td>
+                </tr>
+                <tr>
+                    <td>"The context with name '[name]' has a context id with invalid characters."</td>
+                    <td>This error is generated when a context's contextTag contains spaces or other invalid characters.</td>
+                </tr>
+                <tr>
+                    <td>"The context with name '[name]' has a context id that doesn't match the parent id."</td>
+                    <td>This error is generated when the contextTag of a context does not match its parent ID in the JSON data.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null label."</td>
+                    <td>This error is generated when a context in the JSON data has a null value for its label.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an empty label."</td>
+                    <td>This error is generated when a context in the JSON data has an empty string as its label.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null type."</td>
+                    <td>This error is generated when a context in the JSON data has a null value for its contextType.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an invalid type. Expected 'segment' but got '[type]'."</td>
+                    <td>This error is generated when a context's contextType is not segment.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null 'applicableTo' value in its period data."</td>
+                    <td>This error is generated when the applicableTo field in the periodData of a context is null.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an invalid 'applicableTo' value in its period data. Expected 'Full', 'Start', or 'End', but got '[value]'."</td>
+                    <td>This error is generated when the applicableTo field in the periodData of a context has a value other than Full, Start, or End.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null 'period' value in its period data."</td>
+                    <td>This error is generated when the period field in the periodData of a context is null.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an invalid 'period' value in its period data. Expected 'Active' or 'Prior' but got '[value]'."</td>
+                    <td>This error is generated when the period field in the periodData of a context has a value other than Active or Prior.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null 'fixedDimensions' value."</td>
+                    <td>This error is generated when the dimensions field in a context is null.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null 'dimensionTag' value in its fixed dimension."</td>
+                    <td>This error is generated when a fixed dimension in a context has a null value for its dimensionTag.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a null 'dimensionValue' value in its fixed dimension."</td>
+                    <td>This error is generated when a fixed dimension in a context has a null value for its selectedItem.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an invalid 'dimensionTag' value in its fixed dimension. '[value]'."</td>
+                    <td>This error is generated when the dimensionTag of a fixed dimension in a context is invalid or not found in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has an invalid 'dimensionValue' that doesn't exist on the parent dimension. [value] but not found in the taxonomy."</td>
+                    <td>This error is generated when the selectedItem of a fixed dimension in a context does not exist in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a fixed dimension that is typed. It should be explicit."</td>
+                    <td>This error is generated when a fixed dimension in a context is incorrectly marked as typed instead of explicit.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a typed dimension that doesn't exist in the taxonomy."</td>
+                    <td>This error is generated when the typedDimension of a context does not exist in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a typed dimension that is not typed."</td>
+                    <td>This error is generated when the typedDimension of a context is incorrectly marked as not typed.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a typed dimension that doesn't have a domain reference on UBP."</td>
+                    <td>This error is generated when the typedDimension of a context is missing a domain reference in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has a typed dimension that doesn't equal the expected domain reference on UBP. got: '[value1]' and expected: '[value2]'."</td>
+                    <td>This error is generated when the domain reference of a typedDimension in a context does not match the expected value in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has no related concept in the taxonomy."</td>
+                    <td>This error is generated when no related concept can be found in the taxonomy for a context.</td>
+                </tr>
+                <tr>
+                    <td>"The context with id '[id]' has duplicate fixed dimensions with the same dimension tag. '[tag]'."</td>
+                    <td>This error is generated when a context has multiple fixed dimensions with the same dimensionTag.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a context that doesn't exist in the taxonomy. Looking for context with id '[contextId]'."</td>
+                    <td>This error is generated when a tag references a context that is not found in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a tag name '[name]' with namespace '[namespace]' that doesn't exist in the taxonomy."</td>
+                    <td>This error is generated when a tag references a tag name and namespace that are not found in the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a tag name '[name]' with namespace '[namespace]' that requires a numeric but doesn't have one."</td>
+                    <td>This error is generated when a tag references a concept that requires a numeric value but does not provide one.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a tag name '[name]' with namespace '[namespace]' that doesn't require a numeric but has one."</td>
+                    <td>This error is generated when a tag references a concept that does not require a numeric value but provides one.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a context that is not valid for the concept. The concept requires a duration period but the context is instant."</td>
+                    <td>This error is generated when a tag references a concept that requires a duration period, but the context provided is instant.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a context that is not valid for the concept. The concept requires an instant period, but the context is duration."</td>
+                    <td>This error is generated when a tag references a concept that requires an instant period, but the context provided is duration.</td>
+                </tr>
+                <tr>
+                    <td>"The tag with id '[id]' has a context that is not valid for the concept. The tags hypercube was expecting different dimensions than the context provided."</td>
+                    <td>This error is generated when the dimensions in the context do not match the dimensions expected by the concept's hypercube.</td>
+                </tr>
+                <tr>
+                    <td>"Duplicate numeric names found: '[name]' for numeric IDs '[id1]' and '[id2]'."</td>
+                    <td>This error is generated when two or more numerics have the same name (after trimming whitespace). Numeric names must be unique.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with name '[name]' has a null numeric id."</td>
+                    <td>This error is generated when a numeric has a null value for its numericOptionTag.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with name '[name]' has an empty numeric id."</td>
+                    <td>This error is generated when a numeric has an empty string as its numericOptionTag.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with name '[name]' has a numeric id with invalid characters."</td>
+                    <td>This error is generated when a numeric's numericOptionTag contains spaces or other invalid characters.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with name '[name]' has a numeric id that doesn't match the parent id."</td>
+                    <td>This error is generated when the numericOptionTag of a numeric does not match its parent ID.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null label."</td>
+                    <td>This error is generated when a numeric has a null value for its label.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an empty label."</td>
+                    <td>This error is generated when a numeric has an empty string as its label.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null numeric option data."</td>
+                    <td>This error is generated when a numeric has a null value for its numericOptionData.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null scaled value."</td>
+                    <td>This error is generated when the scaled field in the numericOptionData of a numeric is null.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an invalid scaled value: '[value]'."</td>
+                    <td>This error is generated when the scaled field in the numericOptionData of a numeric has a value that is not in the predefined set of valid scaled values.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null decimals value."</td>
+                    <td>This error is generated when the decimals field in the numericOptionData of a numeric is null.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an invalid decimal value: '[value]'."</td>
+                    <td>This error is generated when the decimals field in the numericOptionData of a numeric has a value that is not in the predefined set of valid decimal values.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null unit namespace."</td>
+                    <td>This error is generated when a unit in a numeric has a null value for its namespace.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an empty unit namespace."</td>
+                    <td>This error is generated when a unit in a numeric has an empty string as its namespace.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an invalid unit namespace: '[namespace]'."</td>
+                    <td>This error is generated when the namespace of a unit in a numeric is not a valid URL.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null unit identifier."</td>
+                    <td>This error is generated when a unit in a numeric has a null value for its identifier.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an empty unit identifier."</td>
+                    <td>This error is generated when a unit in a numeric has an empty string as its identifier.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null unit value."</td>
+                    <td>This error is generated when a unit in a numeric has a null value for its value.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an empty unit value."</td>
+                    <td>This error is generated when a unit in a numeric has an empty string as its value.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a unit with a namespace that does not contain a '/'. Namespace: '[namespace]'."</td>
+                    <td>This error is generated when the namespace of a unit in a numeric does not contain a / character.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a unit value that does not match the expected value derived from the namespace. Expected: '[expected]' but got: '[value]'."</td>
+                    <td>This error is generated when the value of a unit in a numeric does not match the expected value derived from its namespace.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has a null unit type."</td>
+                    <td>This error is generated when a unit in a numeric has a null value for its unitType.</td>
+                </tr>
+                <tr>
+                    <td>"The numeric with id '[id]' has an invalid unit type: '[type]'. Expected 'other' or 'monetary'."</td>
+                    <td>This error is generated when the unitType of a unit in a numeric is not other or monetary.</td>
+                </tr>
+                <tr>
+                    <td>"Namespace Map error: The short namespace '[shortNamespace]' does not exist in the namespaces of the taxonomy."</td>
+                    <td>This error is generated when a short namespace in the provided namespace map does not exist in the official namespaces of the taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"Namespace Map error: The short namespace '[shortNamespace]' does not match the full namespace '[providedNamespace]'. It should be '[expectedNamespace]'."</td>
+                    <td>This error is generated when the full namespace associated with a short namespace in the provided namespace map does not match the expected full namespace in the official taxonomy.</td>
+                </tr>
+                <tr>
+                    <td>"Namespace Map error: The short namespace '[shortNamespace]' and long namespace '[longNamespace]' is missing from the namespace map."</td>
+                    <td>This error is generated when a short namespace and its corresponding long namespace from the official taxonomy are missing in the provided namespace map.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Namespace"></a>Taxonomy Namespace Tool</h2>
+        <p>The Taxonomy Namespace Tool allows you to generate the namespace map in your XBRL data. This map cannot be exported from an engagement and must be created using this tool. The namespace map is required in your XBRL product script so the system knows which namespaces to use. You only need to use this tool once per product to generate the relevant map. The map can then be merged into your files each time you use the Tagging Merge Tool.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-038.png" />
+        </p>
+        <p>The tool has two input fields:</p>
+        <ul>
+            <li>
+                <p>The first input allows you to select the JSON data file to which you want to add the namespace data.</p>
+            </li>
+            <li>
+                <p>The second input allows you to select the taxonomy from which you want to retrieve the namespace data.</p>
+            </li>
+        </ul>
+        <p>If your taxonomy is not available in the drop-down menu, refer to the section <b>How to add your taxonomy to the drop-down</b>.</p>
+        <p>Once both selections are made, click the <b>Generate Namespaces</b> button. This will open a dialog displaying the namespaces for the selected taxonomy. You can then click <b>Confirm</b> to add the namespace data.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-040.png" />
+        </p>
+        <p>In the dialog, you can either click <b>Close</b> to cancel or <b>Confirm and Export</b> to generate a new JSON file containing your existing data along with the added namespace map.</p>
+        <h2>How to add your taxonomy to the drop-down</h2>
+        <p>If your taxonomy is not available in the drop-down, you will need to contact the UK team to obtain a ZIP folder containing your taxonomy. Once you have the ZIP file, extract it by right-clicking the file and selecting <b>Extract All</b>, as shown below.</p>
+        <p>
+            <img src="../Resources/Images/xbrl-tools-042.png" />
+        </p>
+        <p>Next, place the extracted folder into the following directory within the tool: <b>xbrl-to-tag-converter-win32-x64\resources\server\taxonomies</b></p>
+        <p>After this is done, restart the tool. Your taxonomy will now appear in the drop-down list.</p>
+    </body>
+</html>

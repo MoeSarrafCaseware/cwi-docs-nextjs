@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Methodology</h1>
+        <p>Github Advanced Security is included in the suite of tooling used by Caseware’s Application Security Team. It is used for SAST, Secrets Scanning and dependency vulnerability management and is integrated into our CI/CD workflow. We use GitHub Advanced Security API and DevSecOps artifacts for reporting purposes, giving developers real-time visibility on security findings. This empowers them to fix security concerns before they are introduced to the code base.</p>
+        <p>SAST scanning is performed on all Pull Requests, any new feature released as part of the software is guaranteed to have been scanned and reviewed before being released. We use a workflow where developers have to address any newly introduced security vulnerability in their code before it is considered complete and merged into releases.</p>
+        <p>All security findings are displayed to developers during code reviews, we enforce that High and Critical security findings are addressed before merges out of development branches are approved. Medium findings are reviewed for context and possible risk but do not block further development and release process unless it is exploitable and is a demonstrable risk. Our Application Security team assesses findings against the Common Vulnerability Scoring System (CVSS), version 3.1, to ensure residual risk and findings are acceptable. Any low or informational findings are generally accepted. We keep records and an audit log of all actions taken on security findings.</p>
+        <p>The Caseware Application Security Team has verified the most recent version of Working Papers has been properly scanned for the creation of this report. This version of Working Papers is a preproduction development branch, and several of these findings are already scheduled for remediation, and are in development backlogs for the next release. </p>
+        <h2>GHAS Migration </h2>
+        <p>Caseware recently phased out Veracode, in favor of the Github Advanced Security for all code bases. Historically, GHAS was used for online services while Veracode was in use for Desktop products. We’ve found GHAS to be more effective when combined with several additional commercial and open-source tools integrated into our DevSecOps processes.
+
+		Our methodology prevents the introduction of new high and critical findings. For products that have transitioned from Veracode, the results of the first scans are used to establish a security baseline.  As we introduce more efficient and effective tooling, findings are prioritized by criticality and added to product development backlogs for remediation. All findings are rated using the CVSSv3 standard by the Application Security team.</p>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>New in SE 2025-07 </h1>
+        <p>Welcome to 2025-07! This release introduces  improved PDF editing capabilities, the ability to copy individual risks across engagements and more.</p>
+        <p>On this page, you can view all the new features included in this release that apply to both authors and end users.</p>
+        <ul>
+            <li>
+                <p><a href="#Authorin">Authoring features</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="#End-user">End-user features</a>
+                </p>
+            </li>
+        </ul>
+        <h2><a name="Authorin"></a>Authoring features</h2>
+        <div MadCap:conditions="General.Ignore">
+            <h3>Multilingual capabilities for Procedure Settings</h3>
+            <p><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm"> #firmauthor</a><a href="network-author.htm"> #enterpriseauthor</a>
+            </p>
+            <p class="note inline"><b>Note:</b> This feature is enabled on all Caseware apps. It is only available for new engagements.</p>
+            <p>As a firm, enterprise or primary author, you now have multilingual capabilities in the editable fields of <b>Procedure Settings</b> within a checklist. This enhancement allows for greater flexibility and localization across global engagements.</p>
+            <p>The following fields now support multilingual input:</p>
+            <ul>
+                <li>
+                    <p>Note placeholder title</p>
+                </li>
+                <li>
+                    <p>Response placeholder text</p>
+                </li>
+                <li>
+                    <p>‘Other’ field in response options</p>
+                </li>
+            </ul>
+            <p>This update ensures that key elements of the checklist interface can be tailored to the language needs of your users.</p>
+            <p>
+                <img src="../Resources/Images/multilingual-procedure-settings.png" alt="The user interface for selecting multilingual options in the procedure settings." />
+            </p>
+        </div>
+        <h3>Subtotal across multiple groups in a trial balance</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p class="note inline"><b>Note:</b> This feature is available for all primary authors and is enabled by default. It is only available for new engagements.</p>
+        <p>Authors can now select multiple financial groups to subtotal in the <b>Advanced</b> section of the <b>Group Properties</b> dialog, under the trial balance. The single-selector has been replaced by a multi-selection picklist allowing for subtotal balances across multiple groups at once rather than just one at a time.</p>
+        <p>This feature enables users to view and compare group subtotals more easily. Group selections are now saved together in one step, reducing errors and improving change tracking. To learn more, refer to <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Subtotal-across-multiple-groups-in-a-trial-balance.htm">Subtotal across multiple groups in a trial balance</a>.</p>
+        <p>
+            <img src="../Resources/Images/Selecting-balancegroup-for-subtotaling.png" alt="The user interface for selecting balance sources for subtotaling." />
+        </p>
+        <div MadCap:conditions="General.Ignore">
+            <h3>Support for embedded forms in Group Audit</h3>
+            <p><a href="Primary-author.htm">#primaryauthor</a>
+            </p>
+            <p class="note inline"><b>Note:</b> This feature must be enabled through source code (<code>formData.js</code>) and is available only to primary authors.</p>
+            <p>As a primary author, you can allow group auditors to include embedded forms within a group audit. This includes choosing which forms and values to use and preserving them to be carried forward  across the audit.</p>
+            <p>As a result, group auditors can have more options on what to share with component auditors.</p>
+            <p>To learn more about embedded forms, refer to: <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-SE-Builder/Tutorial-Embed-SE-Builder-forms-in-SE-documents/Embed-SE-Builder-forms-in-SE-documents.htm">Embed SE Builder forms in SE documents</a>.</p>
+        </div>
+        <h2><a name="End-user"></a>End-user features</h2>
+        <h3>Open and edit PDFs locally - now supported across Caseware</h3>
+        <p><a href="end-user.htm">#enduser</a>
+        </p>
+        <p class="note inline"><b>Note:</b> This feature requires a one-time protocol installation and is only available for Windows users.</p>
+        <p>The feature to open and edit PDFs locally, previously limited to select users, is now available across all Caseware applications.</p>
+        <p>As part of this rollout, this feature includes a new in-house protocol, Caseware WebDAV protocol, which improves installation and feature functionality. </p>
+        <p>To learn more about this feature, refer to:  <a href="../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm">Attach documents to an engagement file</a>.</p>
+        <h3>Copy individual risks and risk assessments across engagements</h3>
+        <p><a href="end-user.htm">#enduser</a>
+        </p>
+        <p class="note inline"><b>Note:</b> This feature must be enabled in your <b>Product</b> settings. It is only available for new engagements.</p>
+        <p>You can now copy individual risks, including risk assessments, over to other engagements using the <b>Copy from Other Engagement</b> feature. This builds on a previous enhancement to perform a risk assessment on an individual risk. With this update, when you copy a risk from one engagement to another, any associated individual risk assessments are automatically copied as well. These assessments retain their structure and context within the destination engagement and are synced to changes made to the source engagement.</p>
+        <h2>Fixes 2025-07 </h2>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-56162">SE-56162</a>] - Changes made by enterprise authors to the assertion names are overwritten by the primary author updates for multilingual support.</p>
+        <p>&#160;</p>
+    </body>
+</html>

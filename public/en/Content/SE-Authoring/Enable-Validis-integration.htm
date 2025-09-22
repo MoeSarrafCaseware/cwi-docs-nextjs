@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Enable integration with Validis</h1>
+        <p class="note"><b>Note:</b> Users will require a license from Validis to enable integration with any Caseware Cloud app.</p>
+        <p>
+            <MadCap:snippetText src="../Resources/Snippets/Validis-intro.flsnp" />
+        </p>
+        <p><b>To enable the Validis data connector:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Obtain your Validis API key from Validis. To learn more, refer to <a href="https://support.validis.com/hc/en-gb/articles/360014196771-Validis-API">Getting Started with Validis</a>.</p>
+            </li>
+            <li>
+                <p>Specify the Validis ID in the imports array of the <code>product.json</code> file of your SE product. To learn more, refer to <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html#Enablespecificonlinedataimportsources">Enable specific online data import sources</a>.</p>
+            </li>
+            <li>
+                <p>Update the <code>collaborate.js</code> file to enable the Validis firm settings page by specifying the following parameters:</p>
+            </li>
+        </ol>
+        <p class="indent"> <div><pre><code>this.firmSettingsPages = [
+						{
+						heading: 'Validis',
+						anchorId: '900',
+						url: '../c/validis-settings/'
+						}
+		];</code></pre></div></p>
+        <ol>
+            <li value="4">
+                <p>Provide a Validis API key on the Validis page under your app in <b>Settings</b>: </p>
+                <ul>
+                    <li>
+                        <p>Ensure you have the Settings Admin role or equivalent permissions.</p>
+                    </li>
+                    <li>
+                        <p>From the Cloud menu (<img src="../Resources/Images/cloud-menu.png" alt="" style="vertical-align: text-bottom;" />), select <b>Settings | Your app | Validis</b>.</p>
+                    </li>
+                    <li>
+                        <p>In <b>API Key</b>, enter the API key for the Validis API.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Save</b>.</p>
+                    </li>
+                </ul>
+                <p class="note inline"><b>Note:</b> Your Cloud app can only store one API key.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/ValidisAPI-Settings.png" alt="Providing the Validis API key in your firm settings. " />
+        </p>
+    </body>
+</html>

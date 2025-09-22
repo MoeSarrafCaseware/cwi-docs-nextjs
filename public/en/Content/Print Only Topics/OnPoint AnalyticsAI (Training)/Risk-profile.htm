@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Risk profile</h1>
+        <p>In this stage, you will complete the following:</p>
+        <ul>
+            <li>
+                <b>2-1 Influencers (Organizational Risk)</b>
+            </li>
+            <li>
+                <b>2-2 Risk Analysis (Transaction Risk)</b>
+            </li>
+            <li>
+                <b>2-3 Analytical Review</b>
+            </li>
+        </ul>
+        <h2>Influencers</h2>
+        <p>Influencers are accounts that you want to emphasize as part of your risk analysis. They capture macroeconomic and organizational risk and highlight transactions that may be of interest in light of those risks.</p>
+        <p>For example, if you suspect that there are control weaknesses over cash accounts, you might set the influencer for any cash accounts to raise the score by a specific percentage. You could set the influencer for cash accounts to, say 50%, and the risk scores of any transactions which contain cash accounts will be automatically increased by 50%. Transactions with zero risk will not be adjusted, and therefore will remain at zero risk.</p>
+        <p>In a less trivial example, suppose an auditor was auditing a mature organization, whose motivation was to reduce paid tax. The auditor could set an influencer for any discretionary revenue accrual accounts so that any risk scores on transactions containing those accounts are automatically increased.</p>
+        <h3>Influence %</h3>
+        <p>The values in the <b>Influence %</b> column are applied as a fraction of the transaction's risk.</p>
+        <p>Low-risk transactions aren't greatly affected by higher <b>Influence %</b> values, whereas transactions that already appear questionable could be bumped up significantly higher.</p>
+        <p>For example, a transaction with five risk points, which is affected by an <b>Influence %</b> set to 20, will increase to six risk points, which is not a significant difference.</p>
+        <p>However, a transaction that's already risky, for example, one that failed the complex accounts test, and has a risk score of 50 points, will be moved up to 60 points.</p>
+        <p>If the <b>Influence %</b> is set to 60%, the lower risk transaction would only move to eight points. However, the higher risk transaction would move to 80 — a large jump that could significantly affect a transaction's position in the list.</p>
+        <h3>Practice set</h3>
+        <p>
+            <b>To adjust Influencers:</b>
+        </p>
+        <ol>
+            <li>Select <b>2-1 Influencers (Organizational Risk)</b> from the <b>Documents</b> page. </li>
+            <li>Select the <b>Summary</b> tab. </li>
+            <li>Click the <b>Influence %</b> field for the <b>Sales</b> account and enter <i>40</i>.</li>
+            <li>In the <b>Note</b> field, enter <i>Client has a history of overstating sales</i>. </li> <img src="../../Resources/Images/onpoint-aai-influencers.png" /><li>
+				Return to the <b>Documents</b> page.
+			</li></ol>
+        <h2>Risk analysis</h2>
+        <p>The <b>RESULTS</b> page gives you an overview of the engagement's test results using different widgets.</p>
+        <h3>Practice set</h3>
+        <p>
+            <b>To view the test results:</b>
+        </p>
+        <ol>
+            <li>Select <b>2-2 Risk Analysis (Transaction Risk)</b> from the <b>Documents</b> page. <br />These results include the 40% influence that was applied to the Sales account in the <b>Influencers</b>. <br /><img src="../../Resources/Images/results-with-sales-account-influencer-40.png" /><br /></li>
+            <li>Select <b>2-1 Influencers (Organizational Risk)</b> from the <b>Documents</b> page and set the <b>Influence %</b> for the Sales account to 0.</li>
+            <li>Select <b>2-2 Risk Analysis (Transaction Risk)</b> from the <b>Documents</b> page. <br />These are the new results:<br /><img src="../../Resources/Images/onpoint-aai-results-page.png" /></li>
+        </ol>
+        <MadCap:pageBreak />
+        <h3>Widgets</h3>
+        <p>Click labels or charts in any of the widgets to display more information. The information shown in the widgets changes to reflect your selection.</p>
+        <p>You click on the <b>Risk Summary</b>, <b>High Risk Exceptions</b>, <b>High Risk Users</b> and <b>High Risk Journals</b> widgets to see further details. </p>
+        <h4>Navigate a widget</h4>
+        <p>Elements inside the widgets are clickable so that you can quickly filter on areas of interest. For example, you can click on <b>High Score</b> in the <b>Risk Summary</b> to isolate the riskiest transactions.</p>
+        <p>You can also scroll down the page to see a list of transactions, in descending order of overall risk.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-results-transactions.png" />
+        </p>
+        <p>Click on a transaction to see more details.</p>
+        <p>Click on a test button, for example <b>Two Digit Benford's Law</b>, to highlight areas of concern. A brief description of the test also displays.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-2-digit-benford.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>Risk summary</h4>
+        <p>This widget ranks the transactions in terms of overall risk score.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-risk-summary.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>High risk exceptions</h4>
+        <p>This widget shows transactions with a risk score that are grouped by test. The top four tests with the highest dollar amount display.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-high-risk-except.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>High risk users</h4>
+        <p>This widget shows the top five users that posted transactions with the highest risk score.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-high-risk-users.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>High risk journals</h4>
+        <p>This widget shows the top five journals with the highest risk score.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-high-journ.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>Time series chart</h4>
+        <p>Use the <b>Time Series Risk to Value of Transactions</b> chart to observe the risk score and dollar value of the evaluated transactions for the previous 13  months from the uploaded data set. Hover over the chart to display more information.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-time-series-chart.png" />
+        </p>
+        <h3>Change the configuration on specific tests
+
+</h3>
+        <p>
+
+From the <b>CONFIGURATION</b> tab, you can see all the tests that are run in AnalyticsAI. You can also configure the tests here by doing the the following: </p>
+        <ul>
+            <li>Select what tests to run.</li>
+            <li>Change the emphasis (<b>Risk Score</b>) on specific tests. </li>
+            <li>Refine test parameters.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <MadCap:snippetBlock src="../../Resources/Snippets/view-configuration-page.flsnp" />
+        <p>Deselect a test's check box if you don't want it to run.
+</p>
+        <p>You can also use this page to change the emphasis (<b>Risk Score</b>) on specific tests and their parameters.</p>
+        <MadCap:pageBreak />
+        <MadCap:snippetBlock src="../../Resources/Snippets/change-risk-score.flsnp" />
+        <MadCap:pageBreak />
+        <h4>Charts and graphs</h4>
+        <p>Tests include a pie chart that shows the percentage and quantity of the flagged transactions for that test. Pie charts appear when a test has flagged transactions.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-dup-entries.png" />
+        </p>
+        <MadCap:pageBreak />
+        <p>Some tests, such as <b>High Amounts</b> include a pie chart and an additional graph that helps you configure parameters.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-high-amounts.png" />
+        </p>
+        <p>The test-specific bar graphs show the data distribution relative to the default test parameter, so that an auditor can have a clear picture of where to set the parameter. For example, the <b>High Amounts</b> bar graph shows the transactions' line counts distribution across dollar amounts. You can adjust the <b>Percentile</b> to flag transactions to the right of the black bar (the default parameter).</p>
+        <p>In this example, the default percentile value has been changed to 99.7. Notice that for the default percentile value of 99.1 there are 18 transactions flagged. When we change the <b>Percentile</b> to 99.7 and rerun the tests, the number of transactions flagged drops to six.</p>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-high-amounts-adjusted.png" />
+        </p>
+        <MadCap:pageBreak />
+        <h4>Outlier detection</h4>
+        <p>AnalyticsAI has a number of machine learning (ML) based outlier detection tests. These tests are turned off by default. </p>
+        <p>
+            <b>To turn on the outlier detection tests:</b>
+        </p>
+        <ul>
+            <li>Select the check boxes of the outlier detection tests on the <b>CONFIGURATION</b> page </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/enable-outlier-test.png" alt="Enable AnalyticsAI outlier tests" />
+        </p>
+        <p>See <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Analytics-ai-configuration.htm#Teststatus">Test status</a> for more information. </p>
+        <h2>Analytical review</h2>
+        <p>The <b>2-3 Analytical Review</b> document identifies relationships (for possible use in substantive analytical procedures), risks and inconsistencies. The analysis charts in this document are linked to data throughout the engagement to help auditors visually compare data and discover trends and patterns using predefined data analytics.</p>
+        <p>Use the drop-down to select <b>Preliminary</b> or <b>Final</b> results. Use the filter switches to display the desired analyses widgets. The widgets are interactive. Hover over a specific item in a graph to see more information.</p>
+        <MadCap:pageBreak />
+        <h3>Practice set</h3>
+        <p>
+            <b>To view the Analytical Review:</b>
+        </p>
+        <ul>
+            <li>Select <b>2-3 Analytical Review</b> from the <b>Documents</b> page. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/onpoint-aai-analytical-review.png" />
+        </p>
+        <p> </p>
+    </body>
+</html>

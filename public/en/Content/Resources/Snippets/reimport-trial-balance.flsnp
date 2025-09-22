@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>After you complete the import, you can reimport the trial balance data at any point in time by going to the <b>Data</b> page, and selecting <b>Import</b>, then one of the available options:</p>
+        <ul>
+            <li>
+                <p><b>Reimport Trial Balance</b> - Select this method to reimport the data with the original import method that you used. For example, if you previously used Xero to import the trial balance data, the Xero import method displays when you attempt a reimport.</p>
+            </li>
+            <li>
+                <p><b>Reimport from different source</b> - Select this method to reimport the data with a different import method. For example, if you previously used Xero, but now want to import the trial balance data from a CSV file.</p>
+            </li>
+        </ul>
+        <p>When you reimport the data, accounts from the new data are matched to the old data using the account name and number. Balances for matching accounts are overwritten with the new data. Accounts that only exist in the old data and not the new data are deleted.</p>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <ul>
+                <li>
+                    <p>If you reimport the data from a different source and there are accounts in the existing data that are not in the new data, the balance of these existing accounts is set to 0.</p>
+                </li>
+                <li>
+                    <p>In engagement files created from carry forward, account balances from prior years are not overwritten or deleted by the new data from reimport.</p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

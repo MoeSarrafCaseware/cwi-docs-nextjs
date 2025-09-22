@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Resolve issues related to Microsoft Office and Cloud engagements</h1>
+        <p><b>Published:</b> January 10, 2024</p>
+        <hr />
+        <p>Need help uploading Office documents to Caseware Cloud? See below for solutions.  </p>
+        <h2>Verify the form-based sign-in behavior policy set up in the Microsoft Trust Center</h2>
+        <p>This procedure assumes that you are an administrator and have a subscription version of Microsoft Office, such as Microsoft 365 Apps for enterprise, to see the <strong>Form-based sign-in behavior</strong> tab on the Microsoft Trust Center. </p>
+        <p>To verify the form-based sign-in behavior policy:</p>
+        <ol>
+            <li>
+                <p>Open any Office application, such as Word or Excel.</p>
+            </li>
+            <li>
+                <p>Go to <b>File | Options | Trust Center</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Trust Center Settings</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Form-based sign-in</b>.</p>
+            </li>
+            <li>
+                <p>Under <b>Sign-in prompt behavior</b>, select the <b>Ask me what to do for each host</b> option.</p>
+            </li>
+            <li>
+                <p>Click <b>OK</b> to save the changes.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Microsoft Office will not block future sign-in prompts. </li>
+                <li>The <strong>Hosts allowed to show sign-in prompts</strong> list will be auto-populated based on your future actions. </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="7">On the Documents page of an engagement, do one of the following:&#160;<ul><li>Open an existing Microsoft Office file. See <a href="../../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Access2">Access an uploaded Word or Excel document</a> for more information. </li><li>Or add a new Word or Excel file. See <a href="../../Engagements/Documentation-and-Review/Add-new-Word-and-Excel-documents.htm">Add new Word and Excel documents</a> for more information. </li></ul></li>
+            <li>Make a modification in the document, save it and close it. </li>
+            <li>Refresh the engagement page in your browser.</li>
+            <li>Open the Microsoft Office document you modified and access the Trust Center Settings as described previously in this procedure. </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>The following entry should automatically be added for Caseware Cloud in the <strong>Hosts allowed to show sign-in prompts</strong> list:
+</li>
+            </ul>
+        </p>
+        <p class="indent"><code>app.casewarecloud.com</code>
+        </p>
+        <h2>Verify whether add-ins are interfering with Cloud</h2>
+        <p>Troubleshoot add-ins by disabling them one by one.</p>
+        <p><strong>To disable add-ins one at a time:</strong>
+        </p>
+        <ol>
+            <li>Open Excel.</li>
+            <li>Select <strong>File | Options | Add-ins</strong>.</li>
+            <li>Set the <strong>Manage</strong> dropdown to Excel add-ins and click <strong>Go</strong>.</li>
+            <li>If you can't find an Add-ins option specific to the Office app in the Manage list, choose COM Add-ins instead.</li>
+            <li>Uncheck one of the add-ins in the list and click <strong>OK</strong>.</li>
+            <li>Go through the process of trying to upload supporting Word or Excel documents to a Cloud engagement and see if the issue is solved. </li>
+            <li>Repeat these steps until you find out the add-in causing the issue.</li>
+        </ol>
+        <h2>Verify HttpClient on Windows</h2>
+        <p>HttpClient is a class in the .NET framework used to send HTTP requests and receive HTTP responses from a resource identified by a URI and is used in various types of applications. It can interfere with information exchange between Microsoft Office and Cloud engagements. </p>
+        <p><b>To verify if HttpClient is causing an information exchange issue:</b>
+        </p>
+        <ol>
+            <li>In the Windows Search box, type services.msc</li>
+            <li>Select <strong>Services</strong>.</li>
+            <li>In <strong>Name</strong>, find <strong>WebClient</strong>.</li>
+            <li>Right-click and select <strong>Properties</strong>.</li>
+            <li>In <strong>Startup type</strong>, select <strong>Automatic.</strong></li>
+            <li>Click <strong>Apply</strong>, then <strong>OK.</strong></li>
+            <li>Exit.</li>
+            <li>See if this resolves the issue.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/AutomaticStartupHttpClient.png" alt="Changing the Startup type setting for WebClient service. " />
+        </p>
+        <h2>Troubleshoot saving Office documents in Cloud engagements</h2>
+        <h3>Verify that autosaving has been disabled</h3>
+        <p>Autosaving must be disabled for interactions between Microsoft Office and Cloud to work properly. </p>
+        <p class="note inline"><b>Note:</b> You must not use a third-party website to save or back up any Microsoft Office document that has been attached to a Cloud engagement. </p>
+        <p><strong>To verify that autosaving has been disabled:</strong>
+        </p>
+        <ol>
+            <li>Open any Office application, such as Word or Excel.</li>
+            <li>Select <strong>Files | Options | Save.</strong></li>
+            <li>Unselect the <strong>Autosave files stored in the cloud by default in Excel</strong> option. </li>
+        </ol>
+        <h3>Verify that you are not uploading Office files from the default local file location</h3>
+        <p>For Office applications, the default local file location is the following:</p>
+        <p><code>C:\Users\{user.name}\Documents</code>
+        </p>
+        <p><strong>To verify your default local file location:</strong>
+        </p>
+        <ol>
+            <li>Open Excel.</li>
+            <li>Select <strong>Files | Options | Save.</strong></li>
+            <li>Find the <strong>Default local file location</strong> setting and verify the path. Ensure that you are not uploading any files from this location to Cloud. </li>
+        </ol>
+        <h3>Verify that you or other Cloud engagement users are not using the sharing feature within Microsoft Office</h3>
+        <p>Ensure that you or any other users are not using the Microsoft Office sharing feature in any Microsoft Office documents you are uploading to or creating within Cloud engagements. The Microsoft Office sharing feature is not supported in conjunction with Caseware Cloud:</p>
+        <p>
+            <img src="../../Resources/Images/ShareFeature.png" alt="Share feature within Microsoft Office applications." />
+        </p>
+        <ul>
+            <li>
+                <p>If two users share and have access to the same Office documents, save race conditions can occur, causing unexpected results.</p>
+            </li>
+            <li>
+                <p>When a user shares an Office document using the Office sharing feature, a site is required to support synchronization operations. As a result, synchronization operations must occur on the computer belonging to the user who initiated the sharing. Several scenarios can take place whenever the shared document is saved, all leading to a loss of saved information.</p>
+            </li>
+        </ul>
+        <p><strong>To fix this:</strong>
+        </p>
+        <ol>
+            <li>Remove all sharing on current documents by copying the document to different locations.</li>
+            <li>Make any necessary updates to the documents, for example, any edits that could not be made while sharing was enabled. </li>
+            <li>Replace the file by uploading the non-shared saved version.</li>
+        </ol>
+        <h2>Provide logs upon request by technical support</h2>
+        <p>Providing these logs will help us troubleshoot the issue further if you contact Technical Support.</p>
+        <h3>Mac
+        </h3>
+        <p>If you or your client uses Mac OS and we need to check logs, our Technical Support team will need help from you or your client to gather them.</p>
+        <p><b>Path where you can find the logs</b>
+        </p>
+        <p>
+            <div><pre><code>/Users/user_name/Library/Containers/com.microsoft.Excel/Data/Library/Logs/Diagnostics</code></pre>
+            </div>
+        </p>
+        <p>To find the logs, you may need to unhide log files. Press Shift + (⌘) + (.) keys simultaneously.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/LogsonMac.png" alt="Locate Microsoft Office document logs on a Mac." />
+        </p>
+        <p>&#160;</p>
+        <p>For more information, see <a href="https://support.apple.com/en-gb/guide/console/cnsl9361/mac">Locate a log file using Console on Mac</a>.</p>
+        <h3>Windows</h3>
+        <p>The following instructions are valid for Windows 10. </p>
+        <ol>
+            <li>Open Windows Explorer.</li>
+            <li>Go to C:\Users\{user.name}\AppData\Local\Temp</li>
+            <li>Locate the Diagnostics folder.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Look for the folder named after the application with which you are experiencing issues. </li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/WindowsOfficeLogs.png" alt="Locating logs for Microsoft Office applications. " />
+            </p>
+        </p>
+        <h2>Clear the Microsoft Office cache</h2>
+        <p>See the instructions for your operating system:</p>
+        <h3>Windows</h3>
+        <ol>
+            <li>Manually delete the cached files, and reopen the files.</li>
+        </ol>
+        <p class="note inline"><b>Note:</b>The file currently open in Excel will be excluded. This should trigger a download from Caseware Cloud.</p>
+        <ol>
+            <li value="2">In your Office app, go to <b>File | Options | Save</b>.</li>
+            <li>In <b>Cache Settings</b>, select <b>Delete files from the Office Document cache when they are closed</b>. This clears the file's cache when it is closed.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/CacheSettingsOfficeDocs.png" alt="Select the Delete files from the Office Document Cache when they are closed setting. " />
+        </p>
+        <h3>Mac OS</h3>
+        <p>Go to the following location, which will change slightly depending on whether you use Excel or Word:
+		</p>
+        <p>
+            <div><pre xml:space="preserve"><code>~/Library/Containers/MicrosoftExcel/Data/Library/Caches</code></pre>
+            </div>
+        </p>
+        <p>For more information, see <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">Clear the Office cache</a>.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/ClearCacheinMac.png" alt="Location of Office Document cache on computers running Mac OS." />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

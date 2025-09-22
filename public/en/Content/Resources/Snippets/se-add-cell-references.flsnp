@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>You can reference values from one dynamic table into another. This eliminates the need to manually enter the same value multiple times in different tables in the financial statements.</p>
+        <p><b>To add cell references:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the table.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b>, then choose <b>Edit Dynamic Table</b>.</p>
+                <p>The table opens in edit mode.</p>
+            </li>
+            <li>
+                <p>Go to the desired cell and select the <b>fx</b> icon.</p>
+                <p class="note inline"><b>Note:</b> The cell must be an <b>Input row</b> or <b>Input</b> column cell.</p>
+                <p>
+                    <img src="../Images/fx-icon-in-cell.png" alt="The fx icon displays on the left margin of the cell." />
+                </p>
+            </li>
+            <li>
+                <p>In the <b>Calculation</b> dialog, select <b>Insert data</b> (<b>f</b><sub style="font-weight: bold;">x</sub>).</p>
+            </li>
+            <li>
+                <p>The <b>Data Link</b> dialog opens. Select the <b>Cell Reference</b> tab.</p>
+            </li>
+            <li>
+                <p>In the <b>Select area/note</b> drop-down, select from the list of available areas or notes to reference.</p>
+                <p>
+                    <img src="../Images/add-cell-references-01.png" alt="The Select area/note drop-down on the Data Link page." />
+                </p>
+            </li>
+            <li>
+                <p>In the <b>Select dynamic table</b> field, search for a table in the financial statement area or note, or select a table from the list below.</p>
+                <p>
+                    <img src="../Images/add-cell-references-02.png" alt="The Select dynamic table search field on the Data Link page." />
+                </p>
+            </li>
+            <li>
+                <p>In the dynamic table preview, select the applicable cell to reference.</p>
+                <p>
+                    <img src="../Images/add-cell-references-03.png" alt="The dynamic table preview pane on the Data Link page." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>DONE</b> to close the <b>Calculation</b> tab.</p>
+            </li>
+        </ol>
+    </body>
+</html>

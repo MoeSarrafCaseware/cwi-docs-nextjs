@@ -1,0 +1,183 @@
+﻿/*<meta />*/
+
+@font-face
+{
+   font-family: 'Switzer';
+   src: url(../Fonts/Switzer-Regular.otf);
+}
+
+@font-face
+{
+   font-family: 'Pastiche Grotesque SemiBold';
+   src: url(../Fonts/PasticheGrotesque-SemiBold.otf);
+}
+
+body
+{
+	color: #303333;
+	font-family: Switzer;
+	font-size: 10pt;	
+	line-height: 1.5em;
+	mc-hyphenate: never;
+}
+
+h1
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 30pt;
+	font-weight: normal;
+	margin-top: 0px;
+	page-break-before: avoid;	
+}
+
+h2
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 20pt;
+	font-weight: normal;	
+	page-break-before: avoid;	
+}
+
+h3
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 16pt;	
+	font-weight: normal;
+	mc-heading-level: 0;
+	page-break-before: avoid;
+}
+
+h4
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 14pt;	
+	font-weight: normal;
+	mc-heading-level: 0;
+	page-break-before: avoid;
+}
+
+p
+{
+	margin-bottom: 5.67pt;
+	margin-top: 8px;
+}
+
+p.Title
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 45pt;
+	font-weight: normal;	
+	line-height: 0px;
+}
+
+p.Subtitle
+{
+	color: #303333;
+	font-family: 'Switzer';
+	font-size: 24pt;
+	font-weight: normal;
+}
+
+p.Heading
+{
+	color: #303333;
+	font-family: 'Pastiche Grotesque SemiBold';
+	font-size: 30pt;
+	font-weight: normal;
+}
+
+div.pagebreak
+{
+	page-break-after: always;
+}
+
+div.copyright
+{
+	font-family: Switzer;
+	font-size: 11pt;
+}
+
+div.copyrightfr
+{
+	font-family: Switzer;
+	font-size: 10pt;
+}
+
+img
+{
+	max-width: 600;
+	mc-thumbnail-max-height: 48;
+	mc-thumbnail-max-width: auto;
+	page-break-before: avoid;
+}
+
+ol
+{
+	page-break-before: avoid;
+}
+
+ul
+{
+	page-break-before: avoid;
+}
+
+table
+{
+	border-collapse: collapse;
+	page-break-before: avoid;
+}
+
+table.large
+{
+	font-size: 9pt;
+	width: 100%;
+}
+
+table.wide
+{
+	border-collapse: collapse;
+	font-size: 9pt;
+	page-break-before: avoid;
+	page-break-inside: avoid;	
+}
+
+th
+{
+	background-color: #d4d1d4;
+	border-bottom-color: #d4d1d4;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;	
+	page-break-before: avoid;
+	text-align: left;
+}
+
+td
+{		
+	background-color: #ffffff;
+	border-bottom-color: #d4d1d4;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	border-right-width: 1px;	
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	page-break-before: avoid;
+}
+
+MadCap|tocProxy.TOC
+{
+	color: 303333;
+	font-family: 'Switzer';
+}

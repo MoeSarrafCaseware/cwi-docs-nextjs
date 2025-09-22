@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Accounts payable—suppliers described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement.  This topic details the fields in the Accounts payable—suppliers subledger. </p>
+        <p>For more information on the subledger dataset descriptions, see  <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Supplier ID <br />(<code>ap_supplier_supplier_account_id</code>)</td>
+                    <td>
+                        <p>The identifier of the supplier to whom payment is due or from whom unused credits have been applied.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: Yes
+</p>
+                        <p>Primary key:  The value of this field is used to form the unique identifier of this entry. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Name<br />(<code>ap_supplier_supplier_account_name</code>)</td>
+                    <td>
+                        <p>The name of the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Primary key: First alternate. If <b>Supplier ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Grouping Code <br />(<code>ap_supplier_supplier_group</code>)</td>
+                    <td>
+                        <p>If the organization segments suppliers into groups, the group to which this supplier is assigned.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Street Address 1 <br />(<code>ap_supplier_supplier_physical_street_address1</code>)</td>
+                    <td>
+                        <p>The physical street address line 1 of the supplier.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Street Address 2 <br />(<code>ap_supplier_supplier_physical_street_address2</code>)</td>
+                    <td>
+                        <p>The physical street address line 2 of the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier City (<br /><code>ap_supplier_supplier_physical_city</code>)</td>
+                    <td>
+                        <p>The physical city where the supplier is located.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier State <br />(<code>ap_supplier_supplier_physical_state_province</code>)</td>
+                    <td>
+                        <p>The physical state or province where the supplier is located.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Zip Code <br />(<code>ap_supplier_supplier_physical_zip_postal_code</code>)</td>
+                    <td>
+                        <p>The zip code of the city where the supplier is physically located.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Country <br />(<code>ap_supplier_supplier_physical_country</code>)</td>
+                    <td>
+                        <p>The country code where the supplier is physically located.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier TIN <br />(<code>ap_supplier_supplier_tin</code>)</td>
+                    <td>
+                        <p>The supplier’s tax identification number.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing Address 1 <br />(<code>ap_supplier_supplier_billing_address1</code>)</td>
+                    <td>
+                        <p>The billing address line 1 of the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing Address 2 <br />(<code>ap_supplier_supplier_billing_address2</code>)</td>
+                    <td>
+                        <p>The billing address line 2 of the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing City <br />(<code>ap_supplier_supplier_billing_city</code>)</td>
+                    <td>
+                        <p>The billing city of the supplier.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing State (<code>ap_supplier_supplier_billing_state_province</code>)</td>
+                    <td>
+                        <p>The billing state or province of the supplier.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing Zip <br />(<code>ap_supplier_supplier_billing_zip_postal_code</code>)</td>
+                    <td>
+                        <p>The billing zip code of the supplier’s city.</p>
+                        <p>
+
+Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing Country <br />(<code>ap_supplier_supplier_billing_country</code>)</td>
+                    <td>
+                        <p>The billing country code of the supplier.
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Active Date <br />(<code>ap_supplier_active_date</code>)</td>
+                    <td>
+                        <p>The date the supplier declared active.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inactive Date <br />(<code>ap_supplier_inactive_date</code>)</td>
+                    <td>
+                        <p>The date the supplier was declared inactive.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaction Credit Limit <br />(<code>ap_supplier_transaction_credit_limit</code>)</td>
+                    <td>
+                        <p>The per invoice credit limit established with this supplier.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overall Credit Limit <br />(<code>ap_supplier_overall_credit_limit</code>)</td>
+                    <td>
+                        <p>The credit limit for the total outstanding balance approved for the supplier.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Terms Discount Percentage <br />(<code>ap_supplier_terms_discount_percentage</code>)</td>
+                    <td>
+                        <p>The discount percentage the supplier may provide if an invoice is paid before a certain number of days.
+</p>
+                        <p>
+Data type: Decimal
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Terms Discount Days <br />(<code>ap_supplier_terms_discount_days</code>)</td>
+                    <td>
+                        <p>The number of days from the invoice date the supplier allows to take advantage of discounted terms.
+
+</p>
+                        <p>Data type: Integer
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Term Due Days <br />(<code>ap_supplier_terms_due_days</code>)</td>
+                    <td>
+                        <p>The number of days allowed to meet the obligation before an invoice becomes overdue.
+
+</p>
+                        <p>Data type: Integer
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Primary Contact Name <br />(<code>ap_supplier_primary_contact_name</code>)</td>
+                    <td>
+                        <p>The name of the primary contact at the supplier.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Primary Contact Phone <br />(<code>ap_supplier_primary_contact_phone</code>)</td>
+                    <td>
+                        <p>The phone number of the primary contact at the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Primary Contact Email (<br /><code>ap_supplier_primary_contact_email</code>)</td>
+                    <td>
+                        <p>The email address of the primary contact at the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Created By <br />(<code>ap_supplier_entered_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who created the record.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Created Date <br />(<code>ap_supplier_entered_date</code>)</td>
+                    <td>
+                        <p>The date the transaction was entered into the source system. This is sometimes referred to as the creation date.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Created Time <br />(<code>ap_supplier_entered_time</code>)</td>
+                    <td>
+                        <p>The time this transaction was entered into the source system.
+</p>
+                        <p>
+Data type: Date/time
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved By <br />(<code>ap_supplier_approved_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who approved the entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved Date <br />(<code>ap_supplier_approved_by_date</code>)</td>
+                    <td>
+                        <p>The date the entry was approved.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved Time <br />(<code>ap_supplier_approved_by_time</code>)</td>
+                    <td>
+                        <p>The time the entry was approved.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified By <br />(<code>ap_supplier_last_modified_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the last person to modify this entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Date <br />(<code>ap_supplier_last_modified_date</code>)</td>
+                    <td>
+                        <p>The date the entry was last modified.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Time <br />(<code>ap_supplier_last_modified_time</code>)</td>
+                    <td>
+                        <p>The time the entry was last modified.
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Consolidation allows you to combine several entities into one engagement file (the parent company) for the purpose of publishing consolidated financial statements." />
+    </head>
+    <body>
+        <h1>Create a consolidation engagement</h1>
+        <p>Consolidation allows you to combine several entities into one engagement file (the parent company) for the purpose of publishing consolidated financial statements.</p>
+        <h2 id="define">Define a consolidation hierarchy </h2>
+        <p>To consolidate an engagement file you must first define the consolidation hierarchy. This describes the relationship between a parent company and its subsidiaries. It is used to combine the financial results of subsidiaries into their parent company's financial results.</p>
+        <p>Note that you can add multiple levels of subsidiary engagements. For example, the parent entity can have two subsidiary entities and those subsidiary entities can have their own subsidiary entities as well.</p>
+        <p>The <b>Consolidation Hierarchy</b> page displays this relationship in either the form of a flowchart or a grid.</p>
+        <p>
+            <img src="../../Resources/Images/consolidation-graph-view.png" style="width: 1385px;height: 621px;" alt="The graph view of the Consolidation Hierarchy page." />
+        </p>
+        <p>
+            <img src="../../Resources/Images/consolidation-grid-view.png" style="width: 1392px;height: 387px;" alt="The grid view of the Consolidation Hierarchy page." />
+        </p>
+        <p>You can define subsidiaries in two different ways in the consolidation hierarchy:</p>
+        <ul>
+            <li>
+                <p><b>Linked engagement</b> - If the subsidiary requires its own engagement file in a separate entity in your Cloud site, you can link the subsidiary’s engagement file to the parent engagement file.</p>
+            </li>
+            <li>
+                <p><b>Imported TB</b> - If the subsidiary does not require its own engagement file, you can add the subsidiary internally in the parent engagement file and import the subsidiary’s trial balance to the file.</p>
+            </li>
+        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/To-create-a-consolidation-hierarchy.flsnp" />
+        <p>If you want to view or modify the consolidation hierarchy after you have defined it, select the Consolidation icon (<img src="../../Resources/Images/icon-consolidation.png" style="vertical-align: bottom;" />) that now appears in the top menu.</p>
+        <p>Once you have added a subsidiary firm to the <b>Consolidation Hierarchy</b> page, the <b>Consolidate</b> button (<img src="../../Resources/Images/icon-consolidate-47x16.png" style="vertical-align: bottom;" />) no longer appears in the engagement properties pop-up. You can add more subsidiaries from the Consolidation Hierarchy page.</p>
+        <h2>Import a trial balance for an internal subsidiary</h2>
+        <p>If you use the <b>Add imported TB</b> option to add subsidiaries that do not have separate engagement files, you can import the trial balances for these entities from the <b>Data</b> page. You can select which entity you’re importing the trial balance for during the import process.</p>
+        <p>See <a href="Import-and-manage-data.htm">Import and manage data</a> for more information.</p>
+        <p>
+            <img src="../../Resources/Images/import-data-subsidiary-selection.png" alt="The Select entity for import step in the data import process." />
+        </p>
+        <h2 id="link">Link a consolidation engagement to another engagement file</h2>
+        <p>In some jurisdictions, financial reporting for the parent entity must happen separately from financial reporting for the consolidation itself.</p>
+        <p>Using the <b>Consolidation Hierarchy</b> page, you can link a consolidated engagement file with the parent entity engagement file using the <b>Parent Engagement</b> dialog. Linking the two engagement files ensures that both engagements are displayed as a single entity in the consolidation hierarchy.</p>
+        <p>The <b>Parent Engagement</b> dialog:</p>
+        <ul>
+            <li>
+                <p>Only allows the selection of one engagement file</p>
+            </li>
+            <li>
+                <p>Filters for engagements based on the same SE product and same year-end</p>
+            </li>
+            <li>
+                <p>Does not show engagements that are consolidated (have subsidiaries.)</p>
+            </li>
+        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/To-link-a-consolidation-engagement-to-another-engagement-file.flsnp" />
+        <h2 id="updating">Updating a linked subsidiary engagement's trial balance</h2>
+        <p>You can update a subsidiary engagement's trial balance data in a consolidated engagement by bringing in any changes made in the subsidiary engagement, while keeping changes made in the consolidated engagement.</p>
+        <p>If an update to the trial balance of a subsidiary engagement file has been made since consolidating, the Consolidation icon (<img src="../../Resources/Images/icon-consolidation-updated.png" style="vertical-align: bottom;" />) that appears in the top menu displays with a red dot. In the Consolidation Hierarchy page, entities with updated trial balances display a warning icon (<img src="../../Resources/Images/icon-warning-consolidation.png" />). You can apply the update using the <b>Reconsolidate</b> option in the hierarchy.</p>
+        <p>In the example below, changes have been made to the trial balance data for the CaseWare Auto Shop subsidiary. Select <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Reconsolidate</b> to update the information in the consolidated file.
+</p>
+        <p>
+            <img src="../../Resources/Images/reconsolidate-graph-view.png" style="width: 1445px;height: 456px;" alt="The Reconsolidate option for a subsidiary in graph view." />
+        </p>
+        <p>
+            <img src="../../Resources/Images/reconsolidate-grid-view.png" style="width: 1461px;height: 344px;" alt="The Reconsolidate option for a subsidiary in grid view." />
+        </p>
+        <h2>Internal consolidation in embedded analytics</h2>
+        <p>You can now analyze data across entities within a consolidation engagement from the Analytics Hub tab. This allows the user to:</p>
+        <ul>
+            <li>
+                <p>Evaluate engagement-level datasets effectively</p>
+            </li>
+            <li>
+                <p>View aggregated results by entity</p>
+            </li>
+            <li>
+                <p>Ensure a comprehensive review of organizational data for accurate and informed audit conclusions</p>
+            </li>
+        </ul>
+        <p>The feature integrates seamlessly with existing analytics workflows, ensuring minimal disruption to user operations.</p>
+        <p>Appropriate error messages are displayed when permissions are insufficient or when cross-entity datasets are incompatible.</p>
+        <p><b>To use this feature</b>, you will first need to know how to create a <a href="Create-a-consolidation-engagement.htm">consolidation engagement</a>. From within a consolidation engagement, you can select the parent or any child entity to view its analytic results from the <b>Analytics Hub</b> tab.</p>
+        <p>
+            <img src="../../Resources/Images/Support internal consolidation rn1.png" alt="the user interface for selecting consolidated entities for analytic tests" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Consolidated-engagement-aggregated-results.png" alt="the user interface for selecting parent or sub entities wihtin the aggregated results of a consolidated engagement" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>SE 2019-04 release notes</h1>
+        <p style="font-style: italic;">The features below are automatically enabled if the corresponding component or module has been enabled. 
+</p>
+        <h2>The Data page</h2>
+        <p>The Data page is a redesign of the Trial Balance page. The purpose of the redesign is to provide flexible reporting methods, support more data sources and parameters, provide a guided workflow for import and mapping as well as improve performance and usability.</p>
+        <p>New features to the Data page include:</p>
+        <ul>
+            <li>
+                <p>A redesigned groups and accounts view</p>
+            </li>
+            <li>
+                <p>Defining the default trial balance groups for the level of detail required by the product</p>
+            </li>
+            <li>
+                <p>Drill-down to transactional details</p>
+            </li>
+            <li>
+                <p>A left pane to easily switch views</p>
+            </li>
+            <li>
+                <p>Data sorting and filtering within each view</p>
+            </li>
+            <li>
+                <p>Search capabilities</p>
+            </li>
+            <li>
+                <p>Data export (trial balance to CSV)</p>
+            </li>
+        </ul>
+        <p>The following features are available using the previous interface and will be improved in future releases:</p>
+        <ul>
+            <li>
+                <p>Data import and account mapping (for trial balance and transactions)</p>
+            </li>
+            <li>
+                <p>Adjustments</p>
+            </li>
+            <li>
+                <p>Accessible predefined reports by saving data filters</p>
+            </li>
+        </ul>
+        <p>Primary authors can enable the Data page in their products by selecting the <b>Enable Data page</b> check box in the product settings.</p>
+        <p><b>Recommendation: We suggest that distributors spend significant time testing their product prior to deploying the new UI to clients.</b>
+        </p>
+        <h2>Letters, memos and financial statements</h2>
+        <ul>
+            <li>
+                <p>To easily and efficiently locate missed placeholders in the document, you can now select the placeholder indicator to navigate the placeholders that haven't been specified.</p>
+            </li>
+            <li>
+                <p>Authors can now add a logo and letterhead placeholder in the product or firm template. The placeholder will automatically populate from the new Logo and Letterhead fields in Collaborate. The letterhead automatically displays in the PDF file when users print the document.</p>
+            </li>
+        </ul>
+        <h2>Financials new design</h2>
+        <h3>Authoring</h3>
+        <p>Authors can now add guidance information in the Financial Statements document.</p>
+        <ul>
+            <li>
+                <p>The <b>Add Guidance</b> menu option is now available for areas, text sections, dynamic tables and notes. Users can turn the guidance information on or off using the lightbulb icon next to the area or text section or table.</p>
+            </li>
+            <li>
+                <p>A new <b>Guidance</b> area is also now available to add general guidance information in the document.</p>
+            </li>
+        </ul>
+        <h3>Notes</h3>
+        <ul>
+            <li>
+                <p>You can now have a 3-level notes list by adding second level (Heading1) and third level (Heading2) notes. If you delete a note, all headings and content within this note are also deleted. Note that third level notes don't show in the Document Map unless you expand their respective second level notes (parent notes) in the document.</p>
+            </li>
+            <li>
+                <p>The notes library now displays notes based on hierarchy (sublevel notes or main notes). You can traverse the hierarchy of the displayed notes by selecting <b>View note.</b></p>
+            </li>
+            <li>
+                <p>When you add a note from library, a blue indicator now shows next to the newly added note in the Document Map. The blue indicator disappears once you select the note.</p>
+            </li>
+        </ul>
+        <h3>Dynamic tables</h3>
+        <ul>
+            <li>
+                <p>You now have the option to edit note references in a row or column. You can also navigate to the referenced note (in the <b>Notes to the Financial Statements area</b>) to view or edit its content.</p>
+            </li>
+            <li>
+                <p>The <b>Description</b> column can now show account numbers in addition to the account name and total. Note that authors must enable this feature in the product.</p>
+            </li>
+            <li>
+                <p>A new table format is now available to support the International Financial Reporting Standards (IFRS) and the Statement of Changes In Equity (SOCIE). The new format flips the table to have dimensions as rows and trial balance groups as columns.</p>
+            </li>
+            <p>Note that any existing setup and information is lost once the table format is changed. Authors need to redo any existing table setup if they switch to IFRS/SOCIE format.</p>
+        </ul>
+        <h3>Visibility settings</h3>
+        <p>In the Financial Statements, you now get a confirmation prompt if you attempt to exclude content that's available due to visibility settings. The prompt shows the details of the response conditions logic and provides a link to the checklist document so you can review and change responses if needed.</p>
+        <p>Note that currently, this feature is only available for visibility settings based on response conditions.</p>
+        <h2>Fixes</h2>
+        <ul>
+            <li>
+                <p>Fixed an issue where decimal numbers didn't display correctly when comma is the decimal separator and period is the digit grouping separator.</p>
+            </li>
+            <li>
+                <p>Excluded content is removed from the Add Content (+) menu for primary authors in the new financials design.</p>
+            </li>
+            <li>
+                <p>Fixed some issues related to the indentation and truncation of note titles in the Document Map in the new financials design.</p>
+            </li>
+            <li>
+                <p>Fixed an issue related to review tools post a carry forward where some procedure responses were incorrectly marked as changed.</p>
+            </li>
+            <li>
+                <p>Fixed an inconsistent icon size issue for annotations in the engagement reference copy (PDF file).</p>
+            </li>
+            <li>
+                <p>Fixed a styling issue in the Table of Contents area in the new financials design.</p>
+            </li>
+            <li>
+                <p>The print icon has been removed from the Query page.</p>
+            </li>
+            <li>
+                <p>Fixed an issue where the Review Tools icon was available for authors in the new financials design. It has now been removed.</p>
+            </li>
+            <li>
+                <p>Fixed various translation issues where some text incorrectly displayed in english.</p>
+            </li>
+            <li>
+                <p>Fixed performance issues in the Financials with large tables.</p>
+            </li>
+        </ul>
+    </body>
+</html>

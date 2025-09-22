@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Insert data using the right pane</h1>
+        <p>You can use the right pane to retrieve and insert data from the engagement into the excel file.
+</p>
+        <p>Note that your starting point is always the <b>Documents</b> page:</p>
+        <ol>
+            <li>
+                <p>Go to the <b>Documents</b> page.</p>
+            </li>
+            <li>
+                <p>Open the excel file.</p>
+                <p class="note"><b>Note:</b> If you see a <b>New Office Add-in</b> dialog prompting you to add the end user Cloud Connector add-in, close the dialog and do not select <b>Trust this add-in</b>. You must use the partner add-in to author content in partner environments. To learn how to get the partner add-on, see <a href="How-to-get-started-with-Cloud-Connector.htm">How to get started with Cloud Connector</a>.</p>
+                <p>
+                    <img src="../Resources/Images/cloud-connector-trust-msg.png" style="width: 305px;height: 338px;" alt="The New Office Add-in dialog." />
+                </p>
+            </li>
+            <li>
+                <p>Select the <b>Datalink</b> icon from the ribbon.</p>
+            </li>
+            <p>A pane opens on the right side showing two data source links: <b>Trial Balance</b> and <b>Properties.</b></p>
+            <p>
+                <img src="../Resources/Images/cloud-connector-redesign.png" style="width: 928px;height: 492px;" alt="A Microsoft Excel file with the Caseware Cloud Connector pane open." />
+            </p>
+        </ol>
+        <p style="font-weight: bold;">To insert trial balance data:</p>
+        <ol>
+            <li>
+                <p>Select the cell where you want to insert trial balance group data.</p>
+            </li>
+            <li>
+                <p>Go to the right pane and locate the desired group. Use the down arrows (<img src="../Resources/Images/icon-expand-group-connector.png" style="vertical-align: text-bottom;" />) to expand parent groups if needed.</p>
+                <p class="tip"><b>Tip:</b> You can also use the search field at the top. You can search by group name or group number (if you've <a href="Customize-the-trial-balance-groups-display-settings.htm">enabled the display of trial balance group numbers</a> in your product).</p>
+            </li>
+            <li>
+                <p>Use the filters (<img src="../Resources/Images/cloud-connector-filter-icon.png" style="width: 30px;height: 28px;vertical-align: text-bottom;" alt=" " />) to select which columns you want to add for the group and its subgroups. For example, if you want to insert the group number, name, the current year balance and the prior year balance, select the filters for those columns.</p>
+                <p>If you want to include zero balance accounts, select the <b>Insert zero-balance items</b> filter.</p>
+                <p>If your engagement is consolidated, you can select an entity in the consolidation data to display data for that entity. You can also use the <b>Consolidated</b> filter to select whether to insert consolidated or non-consolidated data.</p>
+            </li>
+            <li>
+                <p>Select the Add groups and subgroups icon (<img src="../Resources/Images/add-tb-group-icon.png" alt=" " style="vertical-align: text-bottom;" />) next to the group.</p>
+                <p>The group you selected and all its subgroups are inserted in the file.</p>
+                <p>
+                    <img src="../Resources/Images/cloud-connector-add-groups-and-subgroups.png" style="width: 984px;height: 528px;" alt="A Microsoft Excel spreadsheet with a group and its subgroup added to the file from the Cloud Connector pane." />
+                </p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">To insert an engagement property:</p>
+        <ol>
+            <li>
+                <p>Select the cell where you want to insert an engagement property.</p>
+            </li>
+            <li>
+                <p>Go to the right pane and select the <b>Properties</b> tab.</p>
+            </li>
+            <li>
+                <p>Locate the engagement property that you want to insert.</p>
+            </li>
+            <p class="tip"><b>Tip:</b> You can also use the search field at the top.</p>
+            <li>
+                <p>Select the <b>Insert Property Link</b> icon (<img src="../Resources/Images/add-tb-group-icon.png" alt=" " style="vertical-align: text-bottom;" />).</p>
+            </li>
+            <p>The information is fetched from the engagement and inserted in the cell.</p>
+        </ol>
+        <p style="font-weight: bold;">To insert a firm property:</p>
+        <ol>
+            <li>
+                <p>Select the cell where you want to insert an engagement property.</p>
+            </li>
+            <li>
+                <p>Go to the right pane and select the <b>Properties</b> tab.</p>
+            </li>
+            <li>
+                <p>Scroll down to the <b>Firm Properties</b> section.</p>
+            </li>
+            <li>
+                <p>Select the <b>Insert Property Link</b> icon (<img src="../Resources/Images/add-tb-group-icon.png" alt=" " style="vertical-align: text-bottom;" />) to insert the <b>Firm name</b> or the <b>Firm address</b>.</p>
+            </li>
+            <p>The information is fetched from the engagement and inserted in the cell.</p>
+        </ol>
+        <MadCap:snippetBlock src="../Resources/Snippets/general-tips-connector-tasks.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/cloud-connector-addin-note.flsnp" />
+    </body>
+</html>

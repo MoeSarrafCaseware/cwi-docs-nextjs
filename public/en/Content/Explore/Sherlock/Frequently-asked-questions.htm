@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Frequently asked questions</h1>
+        <p>You'll find some of the most frequently asked questions (FAQs) on Caseware Sherlock below.</p>
+        <h2>Setup</h2>
+        <ul>
+            <li>
+                <p><b>How can I view my engagement data in Caseware Sherlock?</b>
+                </p>
+                <p>You can view engagement data in Caseware Sherlock when you meet the following requirements:</p>
+                <ul>
+                    <li>
+                        <p>You are an active Hybrid Cloud user with a <b>Sherlock Builder</b> or <b>Sherlock Reader</b> license</p>
+                    </li>
+                    <li>
+                        <p>The engagement file has been published to Caseware Cloud</p>
+                    </li>
+                    <li>
+                        <p>You have the <b>Read</b> permission in the entity where the engagement file is stored</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Data</h2>
+        <ul>
+            <li>
+                <p><b>How does Caseware Sherlock know when to extract data from my engagement files?</b>
+                </p>
+                <p>A data extraction request is triggered automatically by the following three scenarios:</p>
+                <ul>
+                    <li>
+                        <p>An engagement file is published from your local Working Papers application to Caseware Cloud with modifications <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/Sync-Log.htm">over the threshold</a></p>
+                    </li>
+                    <li>
+                        <p>An engagement file is uploaded to Caseware Cloud using the Cloud interface</p>
+                    </li>
+                    <li>
+                        <p>Engagement files are uploaded to Caseware Cloud in bulk using the Migration Manager tool</p>
+                    </li>
+                </ul>
+                <p>Once the data extraction request has been triggered, the data is extracted during the next scheduled cycle.</p>
+                <table class="table">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th>Region</th>
+                            <th>Cycle (UTC)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Asia Pacific</p>
+                            </td>
+                            <td>
+                                <p>Monday - Thursday: 13:00-22:00</p>
+                                <p>Friday: 13:00 - 23:59</p>
+                                <p>Saturday: 0:00 - 16:00, 17:00-23:59</p>
+                                <p>Sunday: 0:00 - 22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Canada</p>
+                            </td>
+                            <td>
+                                <p>Sunday - Thursday: 4:00 - 12:00</p>
+                                <p>Saturday: 4:00 - 6:30, 7:30 - 12:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Europe</p>
+                            </td>
+                            <td>
+                                <p>Monday - Friday: 0:00 - 5:30, 21:30 - 23:59</p>
+                                <p>Saturday: 5:30 - 21:30</p>
+                                <p>Sunday: 5:30 - 22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>United States</p>
+                            </td>
+                            <td>
+                                <p>Monday: 0:00 - 13:00</p>
+                                <p>Tuesday - Friday: 1:00 - 13:00</p>
+                                <p>Saturday: 1:00 - 6:30, 7:30 - 23:59</p>
+                                <p>Sunday: 0:00 - 23:59</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Why don't I see my recent engagement modifications in Caseware Sherlock?</b>
+                </p>
+                <p>Existing engagement data may not display recent modifications due to any of the following circumstances:</p>
+                <ul>
+                    <li>
+                        <p>The data extraction process could not be completed within the scheduled cycle due to high volume of requests. Extraction is automatically rescheduled to the next day's cycle.</p>
+                    </li>
+                    <li>
+                        <p>You do not have the <b>Read</b> permission in the entity where the engagement file is stored</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Visualizations</h2>
+        <ul>
+            <li>
+                <p><b>Why can't I see some visualizations in Sherlock Reader?</b>
+                </p>
+                <p>If the visualizations were created by a Sherlock Builder user in your organization, they must share the visualizations with you.</p>
+                <p>If the visualizations are from Caseware or a distributor, your firm's administrator must assign you licenses for the visualizations.</p>
+            </li>
+        </ul>
+        <h2>Security</h2>
+        <p class="note"><b>Note:</b> This information pertains to all Caseware Cloud data, including but not limited to Caseware Sherlock.</p>
+        <ul>
+            <li>
+                <p><b>Where is my data stored?</b>
+                </p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/cloud-data-location.flsnp" />
+            </li>
+            <li>
+                <p><b>Is my data encrypted?</b>
+                </p>
+                <p>Storage of data (data-at-rest) is encrypted using the same level of encryption as online banking.</p>
+            </li>
+            <li>
+                <p><b>Security and Policy</b>
+                </p>
+                <p>Caseware Cloud uses an advanced cloud-delivered endpoint protection platform to detect and defend against known and unknown attacks.</p>
+                <p>Caseware Cloud also relies on the Amazon Web Services security polices and their accreditations which are a key element to protecting your sensitive information. </p>
+                <p>For Canadian Clients: The Office of the Privacy Commissioner of Canada has stated that outsourcing arrangements do not offend the Personal Information Protection and Electronic Documents Act where the confidentiality and security provisions in the outsourcing agreement satisfy the requirement to provide a comparable level of protection of personal information.</p>
+            </li>
+        </ul>
+    </body>
+</html>

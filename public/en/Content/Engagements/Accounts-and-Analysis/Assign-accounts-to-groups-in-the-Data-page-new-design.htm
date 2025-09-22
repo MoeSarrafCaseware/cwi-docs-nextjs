@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Assign accounts to groups</h1>
+        <p>On the Accounts tab, which you access from the <b>Data</b> page, the <b>Assign Accounts</b> icon can sometimes show a red badge ( <img src="../../Resources/Images/AssignAccountsBadge.png" alt="" style="vertical-align: text-bottom;" />) once you import the trial balance. This means that one or more accounts haven't been assigned to groups. The same happens once you manually add one or more accounts. Note that the red badge shows the number of unassigned accounts. For example, if there are three unassigned accounts, the badge shows <b>3</b> (<img src="../../Resources/Images/AssignAccountsBadge.png" alt="" style="vertical-align: text-bottom;" />).</p>
+        <p>
+            <img src="../../Resources/Images/AccountsTab-AccountsUnassigned.png" alt="Accounts tab with an unassigned accounts badge showing the number of accounts that must be assigned." />
+        </p>
+        <p>You must manually map unassigned accounts to appropriate groups so that your financial data populates correctly throughout the engagement. If multiple grouping structures are available, assigning an account to a group in the default structure automatically assigns it to linked groups in other structures.</p>
+        <h2>Assign accounts to groups</h2>
+        <p style="font-weight: normal;">You can manually assign accounts to groups from the <b>Assign Accounts</b> page.</p>
+        <p style="font-weight: bold;">To assign an account to a group:</p>
+        <ol>
+            <li>
+                <p>Select <b>Assign Accounts</b> icon (<img src="../../Resources/Images/AssignAccountsBadge.png" alt="" />) from the top right corner of the Accounts tab, of the <b>Data</b> page.</p>
+                <p>You can also select the <b>Assign Accounts</b> tab from the left-side panel.</p>
+                <p>In the <b>Assign Accounts</b> tab, the unassigned accounts are displayed in the <b>Unassigned accounts</b> list.</p>
+                <p>If your engagement is consolidated, you can use the entity selector dropdown to select which entity you are assigning accounts for.</p>
+                <p>The financial groups are displayed in the <b>Groups</b> list. If your product has multiple grouping structures, you can use the dropdown to select the grouping structure you want to assign accounts to.</p>
+                <p>You can select the <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Show Hidden</b> check box to view groups that have been hidden in the engagement. If you select <b>Show Hidden</b>, the invisible icon (<img src="../../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;" />) displays next to the hidden groups so you can spot them in the list.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/AssignAccounts-DA-2024-09.png" alt="Assigning unassigned accounts to groups." />
+        </p>
+        <ol> <li value="2"><p>Select a group to assign the selected account to that group.</p><p>You can also drag the account from the <b>Unassigned accounts</b> list and drop it in a group to assign it.</p><p>You can use the search box or the filters to find the account you want to assign. The search box allows you to search for accounts based on the number or name. The filters available allow you to filter the unassigned accounts by whether the account has a credit or debit balance, and the balance amount.</p></li></ol>
+        <p>
+            <img src="../../Resources/Images/FiltersUnassignedAccounts.png" alt="Filtering unassigned accounts." />
+        </p>
+        <p class="indent">If dimensions are available in your product, you can assign the account to dimensions after you assign it to a group by selecting the <b>Dropdown</b> (<img src="../../Resources/Images/icon-assign-accounts-dropdown.png" style="width: 40px;height: 23px;vertical-align: text-bottom;" alt=" " />) icon and then <b>Assign dimensions</b>. Note that while you can assign an account to multiple dimensions, you can only assign one dimension per dimension category.</p>
+        <p>
+            <img src="../../Resources/Images/ShowingDimensions-AssignAccounts.png" alt="Assigning an account to a dimension." />
+        </p>
+        <p class="note"><b>Note:</b> You can only assign accounts to a lower-level group if there are no accounts assigned to its parent group. For example, let’s say you have two account groups, <i>Revenue income</i> and <i>Lease income</i>, that are both assigned to the <i>Income</i> parent group. If you assign an account to the <i>Income</i> group, you cannot assign any accounts to the <i>Revenue income</i> or <i>Lease income</i> groups. If you want to assign accounts to a lower-level group, you must first manually unassign the accounts assigned to the parent group. To learn more, see <a href="#Unassign">Unassign accounts from groups</a>.</p>
+        <p>After you assign an account, you can select <b>Undo</b> (<img src="../../Resources/Images/icon-undo-assign-accounts.png" style="vertical-align: text-bottom;" />), if required, to unassign the account again.</p>
+        <p>
+            <img src="../../Resources/Images/assign-accounts-undo.png" />
+        </p>
+        <h2>View and compare multiple trial balances</h2>
+        <p>You can view and compare trial balances with up to four different dates while assigning accounts. Some common examples include the following:</p>
+        <ul>
+            <li>
+                <p>Current year (planning and final)</p>
+            </li>
+            <li>
+                <p>Prior year (planning and final)</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note:</b> Not all products provide for the import of planning balances.</p>
+        <p>Notice that there is different behavior on the Assign Accounts tab where there are balances at more than one date. The example below shows the Assign Accounts tab after the import of a trial balance containing:</p>
+        <ul>
+            <li>
+                <p>Current year planning balance—9/30/2024</p>
+            </li>
+            <li>
+                <p>Prior year final balance—12/31/2023</p>
+            </li>
+            <li>
+                <p>Prior year planning balance—9/30/2023</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomy of the Assign Accounts tab where a trial balance has more than one end date." />
+        </p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Unassigned accounts list</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Trial balance selector for the Unassigned accounts list</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Groups list</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Alternative trial balance column</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>Main trial balance column</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Trial balance selector for the Alternative trial balance column</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Dates are synced from left to right. When choosing a different date (<b>2</b>) on the <b>Unassigned accounts</b> list (<b>1</b>), the balances in the Alternative trial balance column (<b>4</b>) in the <b>Groups</b> list change to match automatically. In the example below, we are selecting the planning balance of the prior year–9/30/2023 (<b>2</b>).</p>
+        <p>
+            <img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomy of the Assign Accounts tab where a trial balance has more than one end date." />
+        </p>
+        <p>Which makes the Alternative trial balance column (<b>4</b>) on the <b>Groups</b> list change to be the same.</p>
+        <p>
+            <img src="../../Resources/Images/Assign-accounts-multiple-TBs-part2.png" alt="Viewing how balances are synced from left to right, depending on the end date of the balance selected in the Unassigned account list." />
+        </p>
+        <p>Choosing the balances at a different date (<b>6</b>) in the Alternative trial balance column in the <b>Groups</b> list has no effect on the balances shown in the <b>Unassigned accounts</b> list (<b>1</b>).</p>
+        <h3>Precedence of display</h3>
+        <p>If you import a trial balance as of two or more dates into the engagement, two columns are displayed on the <b>Groups</b> list, with the highest priority balances shown in the Main trial balance column and the other balances shown in the Alternative trial balance column. </p>
+        <p><b>Order of priority</b>
+        </p>
+        <ul>
+            <li>
+                <p>Current year final balance</p>
+            </li>
+            <li>
+                <p>Current year planning balance</p>
+            </li>
+            <li>
+                <p>Prior year final balance</p>
+            </li>
+            <li>
+                <p>Prior year planning balance</p>
+            </li>
+        </ul>
+        <h2>Copy account assignment from another engagement</h2>
+        <p>To simplify the account assignment process, you can copy the account assignment structure from another engagement. This allows you to take advantage of engagements that use the same financial grouping structure and group numbers, so you can automatically assign accounts in your current engagement to match the engagement you’re copying from.</p>
+        <p><b>Note:</b> The steps to select an engagement to copy from differ slightly if the engagement you select to copy from is a consolidated engagement.</p>
+        <p>When you select an engagement to copy from, accounts in your current engagement that have the same account number as the accounts in the other engagement will be assigned to the appropriate financial groups.</p>
+        <p class="note"><b>Note:</b> You can only copy account assignments from engagements you have access to.</p>
+        <p style="font-weight: bold;">To copy an account assignment from another engagement:</p>
+        <ol>
+            <li>
+                <p>On the <b>Assign Accounts</b> page, select <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Copy account assignment from another engagement</b>.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/CopyAssignment-DA-2024-09.png" alt="Selecting the option to copy an account assignment from a different engagement to the current engagement." />
+        </p>
+        <ol>
+            <li value="2">
+                <p>In the <b>Copy assignment from engagement</b> dialog, in <b>Entity</b>, select the entity that contains the engagement you want to copy from.</p>
+            </li>
+            <li>
+                <p>In <b>Engagement</b>, select the engagement from which you want to copy the account assignment.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/SelectingEntitySuccess-AssignAccounts.png" alt="Selecting the entity containing the engagement whose account assignment you want to copy. " />
+        </p>
+        <p class="indent"> <ol style="list-style-type: lower-alpha;"><li><p>If you are copying from a consolidated engagement, you are prompted to select the entity to which the consolidated engagement belongs:</p></li></ol></p>
+        <p>
+            <img src="../../Resources/Images/Copying-assignment-consolidated-DA-2024-09.png" alt="Where you are copying the account assignment from a consolidated engagement, you are prompted to select the entity to which the consolidated engagement belongs. " />
+        </p>
+        <p class="indent">You can also copy account assignments from multiple financial group structures by selecting the financial groups in the source engagement to copy over, in <b>Grouping structure</b>. </p>
+        <p class="note inline"><b>Note:</b> If the source engagement has multiple financial groups available in <b>Grouping structure</b>, and you do not make a selection, the primary financial group is selected by default and appears in <b>Grouping structure</b>.</p>
+        <p class="note inline"><b>Note:</b> For source engagements with a single financial group, the only available financial group is selected by default, and you can’t deselect or change this.</p>
+        <p class="indent">If the grouping structure for accounts matches the current engagement, a success indicator appears, and the name of the grouping structure appears in <b>Grouping structure</b>.</p>
+        <p>
+            <img src="../../Resources/Images/Copying-account-assignments-from-multiple-financial-groups.png" alt="Selecting multiple financial groups from where to copy account assignments." />
+        </p>
+        <ol>
+            <li value="4">
+                <p>In <b>Engagement entity</b> under Destination, Select the engagement to which you want to apply the account assignment. You can copy account assignments from another engagement to multiple entities in your current engagement by selecting the destination entities from the dropdown.</p>
+            </li>
+        </ol>
+        <p class="indent">If you want to override any existing account assignments you’ve made, select <b>Override existing account assignment</b>. If you don’t select this option, your existing account assignments remain unchanged and only accounts that are currently unassigned are assigned.</p>
+        <ol>
+            <li value="5">
+                <p>Select <b>Done</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Unassign accounts from groups</h2>
+        <p>You can manually unassign accounts from groups in the <b>Assign Accounts</b> tab.</p>
+        <p><b>To unassign an account from a group:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>Assign Accounts</b> tab, navigate to the group you want to unassign accounts from.</p>
+            </li>
+            <li>
+                <p>Select and drag the accounts assigned to the parent group to the <b>Unassigned</b> section.</p>
+            </li>
+        </ol>
+    </body>
+</html>

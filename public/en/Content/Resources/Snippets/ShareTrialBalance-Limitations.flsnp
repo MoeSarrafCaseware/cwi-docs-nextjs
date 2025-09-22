@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p>A link to the source engagement displays on the <b>Data</b> page and for adjustments that are synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You cannot edit accounts, groups or adjustments synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You cannot assign accounts that have been synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You can create issues and annotations for synced accounts and groups but cannot create annotations for synced adjustments.</p>
+            </li>
+            <li>
+                <p>When changes are made to the source engagement, users in the destination engagement receive a notification to inform them that those changes have been applied to their file. Engagements are resynced every five minutes.</p>
+                <p>If changes have been made to the source engagement while a user was logged out of the destination engagement, they will receive a notification that there are changes pending when they next log in to the file, and then the pending changes will sync to the destination engagement on the usual five-minute cycle.</p>
+                <p class="note"><b>Note:</b> Group names that are changed in the source engagement are not synced to the destination engagement.</p>
+            </li>
+            <li>
+                <p>When you make adjustments in the destination engagement, the adjustments are not synced back to the source engagement.</p>
+            </li>
+            <li>
+                <p>If you lock down an engagement that contains data synced from a source engagement, changes made in the source engagement are no longer synced.</p>
+            </li>
+            <li>
+                <p>If both the source and destination engagement are carried forward, the carried forward files are automatically linked so you can continue to sync data from the current year source engagement.</p>
+            </li>
+        </ul>
+    </body>
+</html>

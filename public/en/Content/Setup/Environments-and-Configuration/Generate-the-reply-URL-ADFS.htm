@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Generate the Reply URL (ADFS)</h1>
+        <p>ADFS uses a Reply URL to redirect users back to Cloud after they've signed in.</p>
+        <p><b>To generate a Reply URL in Cloud:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>On the Identity Provider page, complete the following fields:</p>
+                <ul>
+                    <li>
+                        <p><b>Identity provider name:</b> Enter a meaningful name for your identity provider. For example, ADFS. This name will be displayed next to your Reply URL to identify it.</p>
+                        <p class="note"><b>Note:</b> This name cannot exceed 32 characters and can only contain letters, numbers, underscores, plus and minus signs.</p>
+                    </li>
+                    <li>
+                        <p><b>Identity provider metadata endpoint:</b> Enter your metadata endpoint using the following format:</p>
+                        <p>https://your-adfs.com/adfs/.well-known/openid-configuration</p>
+                        <p>Replace <i>your-adfs.com</i> with your ADFS hostname.</p>
+                    </li>
+                    <li>
+                        <p><b>Client ID:</b> Paste the <b>Client Identifier</b> that you <a href="Create-a-new-application-group.htm">copied to a text document previously</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Client secret:</b> Paste the <b>Client Secret</b> that you <a href="Create-a-new-application-group.htm">copied to a text document previously</a>.</p>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="The Single Sign-On settings page." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>. Your Reply URL displays.</p>
+                <p class="warning"><b>Important:</b> Select the <b>Copy to Clipboard</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon and paste the Reply URL  to a text document for later use. Label it <b>Reply URL</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Use the Copy to Clipboard button to copy your reply URL." />
+                </p>
+            </li>
+        </ol>
+        <h2>Set your Reply URL in ADFS</h2>
+        <p>After you generate a Reply URL, you'll need to add it to ADFS to ensure that users can sign in successfully.</p>
+        <p><b>To set your Reply URL in ADFS:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the ADFS Administration Console, click the <b>Application Groups</b> folder, then double-click your <a href="Create-a-new-application-group.htm">new application group</a>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-api-app-01.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Properties dialog, double-click the Server application.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-reply-url-01.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Server application Properties dialog, clear the contents of the Redirect URI field, then paste the <b>Reply URL</b> that you copied to a text document previously. Click <b>Add</b>, then click <b>OK</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-reply-url-02.png" />
+                </p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Test-your-single-sign-on-integration.htm">Test your single sign-on integration</a></p>
+    </body>
+</html>

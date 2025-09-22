@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Cloud users can integrate Google Calender with their accounts to generate pending entries automatically. " />
+    </head>
+    <body>
+        <h1>Automate time entries using your calendar</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" />
+        <p>As a manager or a staff member, you want to ensure that your time entries are as accurate as possible for both your own records and your client invoices. One way to ensure this accuracy and avoid clerical errors (if manually entering data) is to automatically create them based on events in your calendar. </p>
+        <p>When integrated with Google Calendar or Office 365, Cloud can automatically generate pending entries based on events in your calendar. Pending entries are time entries that must be assigned a work code and reviewed before they are counted as billable or non-billable time. </p>
+        <p>To use this feature, ensure that it has been enabled by an administrator, and that either your Google account or your Office 365 account is integrated with your Cloud account. To learn more, see <MadCap:xref href="../../Explore/Interface/Firm-Settings/Customization.htm">Customization (Settings)</MadCap:xref> and <MadCap:xref href="../Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm">Integrate productivity tools with Cloud</MadCap:xref>.</p>
+        <p><b>To integrate your calendar with Cloud:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that integration has been enabled for your organization in <b>Settings | Customization | Enable/Disable Features</b>, and that you have integrated your Google account or your Office 365 account with your Cloud account. Enabling integration for your organization in <b>Settings</b> must be performed by a user with the <i>Settings Admin</i> role or equivalent privileges. </p>
+            </li>
+            <li>
+                <p>Select your <b>avatar</b>, then select <b>My Settings</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/staff-avatar-my-settings.png" alt="The avatar menu." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Calendar Entries</b> from the sidebar.</p>
+            </li>
+            <li>
+                <p>Select <b>Google Calendar</b> or <b>Office 365 Calendar</b>.</p>
+            </li>
+            <li>
+                <p>Choose appropriate <b>Calendar Rules</b>, and select <b>Save</b>. A dialog is displayed asking you to confirm that you want to data from your calendar to be used to create automatic time entries. Select <b>Yes</b>.</p>
+            </li>
+        </ol>
+        <p>Cloud will now generate pending entries automatically based on events in your calendar. After integrating your calendar, be aware of the following: </p>
+        <ul>
+            <li>
+                <p>Pending entries can take up to one hour to generate after an event ends.</p>
+            </li>
+            <li>
+                <p>Any calendar events from the two days before integration will generate pending entries. For example, if you integrate your calendar on May 20th, any calendar events from May 18th and May 19th will generate pending entries. </p>
+            </li>
+            <li>
+                <p>Modifying a calendar event will not change the associated pending entry after the pending entry is created. </p>
+            </li>
+        </ul>
+        <p>Pending entries must be finalized before they can be recorded as billable or non-billable time. To learn more, see <MadCap:xref href="../../Practice/Time-and-Billing/View-and-finalize-pending-entries.htm">View and finalize pending entries</MadCap:xref>.</p>
+    </body>
+</html>

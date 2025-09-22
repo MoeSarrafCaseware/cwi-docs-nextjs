@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Export invoices to Xero</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" />
+        <p>After <a href="Integrate-online-accounting-software-with-Cloud.htm">integrating</a> with Xero, you can export finalized invoices.</p>
+        <h2>Limitations</h2>
+        <p>Before you export an invoice, note the following limitations.</p>
+        <p style="font-weight: bold;">Invoices are not synchronized between services</p>
+        <p>If you need to modify an invoice in Cloud after it has been exported to your accounting software, you must perform the export again to ensure both services are up to date. For more information, see <MadCap:xref href="#Modify">Modify an exported invoice</MadCap:xref>.</p>
+        <p style="font-weight: bold;">Exporting and editing client information is limited</p>
+        <p>When you export an invoice, Time attempts to associate the invoice with a pre-existing client in your accounting software. If no match is found, a new client is created using the entity name from Cloud. To change client information after an export, you need to manually update it in Cloud and your accounting software.</p>
+        <p style="font-weight: bold;">Invoices created in your accounting software cannot be exported to Cloud</p>
+        <p>If you create an invoice in your accounting software, you cannot export that invoice to Cloud.</p>
+        <p style="font-weight: bold;">Paid and approved invoices are closed automatically in Cloud</p>
+        <p>When you mark an invoice as Paid or Approved in your accounting software, the status of the invoice changes to Closed in Cloud. This process can take up to twelve hours depending on your accounting software.</p>
+        <p style="font-weight: bold;">Invoice numbers applied to exported invoices cannot be reused after the invoice is marked as Approved in Xero</p>
+        <p>If an invoice is marked as Approved in Xero, its invoice number cannot be reused. If an invoice is deleted before it's marked as Approved, its invoice number can be reused.</p>
+        <h2>Export an invoice</h2>
+        <p>Before you start, ensure you have the <i>Export to accounting software</i> Time permission.</p>
+        <p style="font-weight: bold;">To export an invoice to Xero:</p>
+        <ol>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Billing</b>.</p>
+            </li>
+            <li>
+                <p>Select the finalized invoices you want to export, then select the <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Export selected invoices to Xero</b>.</p>
+            </li>
+        </ol>
+        <p>If any errors or warnings occur during export, they are displayed in the <b>Xero Export</b> column.</p>
+        <h2><a name="Modify"></a>Modify an exported invoice</h2>
+        <p>In some cases, you may want to modify an invoice after it has been exported. For example, if a line item is incorrect in the invoice. The process for modifying an invoice after it has been exported varies depending on your accounting software and the invoice status.</p>
+        <h3>Modify an unpaid invoice</h3>
+        <p>If you have exported an invoice to Xero but have not yet added any payment information, we recommend that you make the necessary changes in Cloud and not in Xero. Changes made to an invoice in Xero are not synced between the two services and can lead to inaccurate records in Cloud.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/to-modify-an-unpaid-invoice.flsnp" />
+        <p>The invoice is removed from Xero and can now be modified. After you make the necessary changes, export the invoice again using the <b>More Actions</b> menu.</p>
+        <h3>Modify a paid or approved invoice</h3>
+        <p>If an invoice has been marked as Approved in Xero, it cannot be modified directly. Instead, void the invoice in Xero then, delete it from Cloud and create a new invoice in Cloud.</p>
+    </body>
+</html>

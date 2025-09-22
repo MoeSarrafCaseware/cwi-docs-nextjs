@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Assign accounts to groups in the Data page (new design)</h1>
+        <p class="note"><b>Note:</b> The new design for assigning accounts is only available if it has been enabled in your product. See <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Assign accounts to groups in the Data page</a> to learn how to assign accounts from the old version of the page.
+</p>
+        <p>On the <b>Data</b> page, the <b>Assign Accounts</b> icon can sometimes show a red badge ( <img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;"></img>) once you import the trial balance. This means that one or more accounts haven't been successfully mapped to groups. The same happens once you manually add one or more accounts. Note that the red badge shows the number of unassigned accounts. For example, if there is one unassigned account, the badge shows <b>1</b> (<img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;"></img>).</p>
+        <p>
+            <img src="../../Resources/Images/assign-accounts-screen2.png" alt="The Assign accounts page.">
+            </img>
+        </p>
+        <p>You must manually map unassigned accounts to appropriate groups so that your financial data populates correctly throughout the engagement. If there is more than one grouping structure available in your product, when you assign a group to an account in the default grouping structure, it is automatically assigned to the linked groups in other grouping structures.</p>
+        <h2>Assign accounts to groups</h2>
+        <p style="font-weight: normal;">You can manually assign unassigned accounts to groups from the <b>Assign Accounts</b> page.</p>
+        <p style="font-weight: bold;">To assign an account to a group:</p>
+        <ol>
+            <li>
+                <p>Select <b>Assign Accounts</b> icon (<img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;"></img>) from the top right corner of the <b>Data</b> page.</p>
+                <p>You can also select the <b>Assign Accounts</b> tab from the left side panel.</p>
+                <p>In the <b>Assign Accounts</b> tab, the unassigned accounts display in the <b>Unassigned</b> section.</p>
+                <p>If your engagement is consolidated, you can use the entity selector drop-down to select which entity you are assigning accounts for.</p>
+                <p>The financial groups display in the <b>Grouping structure</b> section. If your product has multiple grouping structures, you can use the dropdown to select which grouping structure you want to assign accounts to.</p>
+                <p>You can select the <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;"></img>) | <b>Show Hidden</b> check box to view groups that have been hidden in the engagement If you select <b>Show Hidden</b>, the invisible icon (<img src="../../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;"></img>) displays next to the hidden groups so you can spot them in the list.</p>
+                <p>
+                    <img src="../../Resources/Images/assign-accounts-new-design.png" alt="The Assign Accounts page.">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>Select a group to assign the selected account to that group.</p>
+                <p>You can also drag the account from the Unassigned section and drop it in a group to map it.</p>
+                <p>You can use the search box or the filters to find the account you want to assign. The filters available allow you to filter the unassigned accounts by account name, account number, whether the account has a credit or debit balance, and the balance amount.</p>
+                <p>You can also assign accounts to dimensions if they’re available in your product.</p>
+                <p>
+                    <img src="../../Resources/Images/assign-accounts-new-filters.png" alt="The Assign Accounts page with the Filters popover open.">
+                    </img>
+                </p>
+            </li>
+        </ol>
+        <p class="note"><b>Note:</b> You can only assign accounts to a lower level group if there are no accounts assigned to its parent group. For example, let’s say you have two account groups, <i>Revenue income</i> and <i>Lease income</i>, that are both assigned to the <i>Income</i> parent group. If you assign an account to the <i>Income</i> group, you cannot assign any accounts to the <i>Revenue income</i> or <i>Lease income</i> groups. If you want to assign accounts to a lower level group, you must first manually unassign the accounts assigned to the parent group. To learn more, see <a href="#Unassign">Unassign accounts from groups</a>.</p>
+        <p>After you assign an account, you can select <b>Undo</b> (<img src="../../Resources/Images/icon-undo-assign-accounts.png" style="vertical-align: text-bottom;"></img>), if required, to unassign the account again.</p>
+        <p>
+            <img src="../../Resources/Images/assign-accounts-undo.png">
+            </img>
+        </p>
+        <h2>Copy account assignment from another engagement</h2>
+        <p>To simplify the account assignment process, you can copy the account assignment structure from another engagement. This allows you to take advantage of engagements that use the same financial grouping structure and group numbers, so you can automatically assign accounts in your current engagement to match the engagement you’re copying from.</p>
+        <p>When you select an engagement to copy from, accounts in your current engagement that have the same account number as the accounts in the other engagement will be assigned to the appropriate financial groups.</p>
+        <p class="note"><b>Note:</b> You can only copy account assignments from engagements you have access to.</p>
+        <p style="font-weight: bold;">To copy account assignment from another engagement:</p>
+        <ol>
+            <li>
+                <p>On the <b>Assign Accounts</b> page, select <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;"></img>) | <b>Copy account assignment from another engagement</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/assign-accounts-copy-assgnmt.png" alt="The Copy account assignment from another engagement option in the More actions menu.">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>In the Copy assignment from engagement dialog, select the entity that contains the engagement you want to copy from and then select the engagement.</p>
+                <p>
+                    <img src="../../Resources/Images/copy-assignment-from-engagement-dialog.png" alt="The Copy assignment from engagement dialog.">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>If you want to override any existing account assignments you’ve made, select <b>Override existing account assignment</b>. If you don’t select this option, your existing account assignments remain unchanged and only accounts that are currently unassigned are assigned.</p>
+            </li>
+            <li>
+                <p>Select <b>Done</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Unassign accounts from groups</h2>
+        <p>You can manually unassign accounts from groups in the <b>Assign Accounts</b> tab.</p>
+        <p><b>To unassign an account from a group:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>Assign Accounts</b> tab, navigate to the group you want to unassign accounts from.</p>
+            </li>
+            <li>
+                <p>Select and drag the accounts assigned to the parent group to the <b>Unassigned</b> section.</p>
+            </li>
+        </ol>
+    </body>
+</html>

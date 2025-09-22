@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>After you review the XBRL tags, you can export the XBRL report to validate that it generates as expected.</p>
+        <p><b>To export an XBRL report:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the <b>XBRL</b> (<img src="../../Images/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon in the top menu.</p>
+            </li>
+            <li>
+                <p>In the <b>XBRL Export</b> section, select the XBRL taxonomy you want to export if there are multiple options and then select <b>Export</b>.</p>
+                <p>
+                    <img src="../../Images/xbrl-popup-export.png" alt="The XBRL popup." />
+                </p>
+            </li>
+            <li>
+                <p>If any duplicate facts exist in the financial statements, the Duplicate XBRL fact dialog appears. Duplicate facts occur when the same tag is present in multiple locations of the financial statements and contains different values. They are often caused by rounding errors.</p>
+                <p>You can select which of the duplicate values to export in the Duplicate XBRL Fact dialog:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select a duplicate fact to correct and then select <b>Correct</b>.</p>
+                        <p>
+                            <img src="../../Images/xbrl-new (16).png" alt="The Duplicate XBRL Fact dialog." />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Correct Duplicate XBRL Fact dialog, you can select the values to open the financial statements to the location of the tagged fact so you can determine which value to export.</p>
+                        <p>You can move and resize the Duplicate XBRL Fact and Correct Duplicate XBRL Fact dialogs to view the content in your financial statements. When you select a fact, it will jump to that location in the accounts. You can toggle this function on or off with the <b>Go to fact</b> control.</p>
+                        <p>
+                            <img src="../../Images/xbrl-new (17).png" alt="The Duplicate XBRL Fact and Correct Duplicate XBRL Fact dialogs." />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Identify the value you want to export and select <b>Continue</b>.</p>
+                        <p>If you want to combine the values to export them, set the <b>Combine values</b> option to <b>Yes</b>, and select any number of values to be combined. If the tag is numeric, this will add the selected values together. If it is alphanumeric, it will concatenate the values.</p>
+                        <p>
+                            <img src="../../Images/xbrl-new (18).png" alt="The Correct Duplicate XBRL Fact dialog." />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Repeat the steps above until you have corrected all the duplicate facts and then select <b>Proceed</b>.</p>
+                        <p class="note"><b>Note:</b> Your selections here have no impact on the financial statements, and only affect the report generation.</p>
+                        <p>
+                            <img src="../../Images/xbrl-duplicate-xbrl-fact-proceed.png" alt="The Duplicate XBRL Fact dialog." />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The system now retains duplicate fact selections if you return to this screen on a subsequent report generation in the same session (i.e. you have not refreshed your browser).</p>
+                        <p>This can save you significant time if you are diagnosing errors which may appear later in the process, as addressing duplicate facts in mandatory.</p>
+                        <p>To update or change the selections in the event of error, click on the <b>Resolved Duplicate Tags</b> tab.</p>
+                        <p>
+                            <img src="../../Images/xbrl-new (20).png" alt="Resolve duplicate XBRL fact tags." />
+                        </p>
+                        <p>You can then interact with and update the saved selections with the same interface as the initial selection.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>If there are validation errors in the report, they will be flagged at this point. Select <b>Cancel</b> to cancel the export process and address the errors or select <b>Proceed</b> to continue the export process.</p>
+                <p>
+                    <img src="../../Images/xbrl-validation-failed-dialog.png" alt="The XBRL Validation Failed dialog." />
+                </p>
+            </li>
+            <li>
+                <p>In the Generate XBRL Review dialog, you can review the content of the report before you generate it.</p>
+                <p>There are four tabs in the dialog. On each tab, you can select <b>Export CSV</b> to export the content of the tab to a CSV file to review it more easily.</p>
+                <p>
+                    <img src="../../Images/xbrl-new (21).png" alt="The Errors tag of the Generate XBRL Review dialog." />
+                </p>
+                <p>The four tabs are:</p>
+                <ul>
+                    <li>
+                        <p><b>Errors</b>  - Indicates diagnostic errors not picked up earlier in the process, such as tags containing data of incorrect type, or tags missing required phrases.</p>
+                    </li>
+                    <li>
+                        <p><b>Mandatory Tags</b> - Indicates whether the report is missing any tags considered required by the relevant regulatory body. Missing tags are displayed in red, and a quick reference summary is presented in the tab for this area.</p>
+                        <p>
+                            <img src="../../Images/xbrl-generate-xbrl-review-mandatory-tags.png" style="width: 803px;height: 260px;" alt="The Mandatory Tags tab of the Generate XBRL Review dialog." />
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>System Tags</b> - Lists the tags, value and relevant information surrounding the system tags within your report. This can be useful for confirming the duplicate values addressed earlier in the process have been handled correctly.</p>
+                        <p>
+                            <img src="../../Images/xbrl-generate-xbrl-review-system-tags.png" style="width: 814px;height: 297px;" alt="The System Tags tab of the Generate XBRL Review dialog." />
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Custom Tags</b> - Lists the tags which have been applied by you in the engagement.</p>
+                        <p>
+                            <img src="../../Images/xbrl-new (22).png" alt="The Custom Tags tab of the Generate XBRL Review dialog." />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>When you’ve finished reviewing the information in the dialog, select <b>Continue to generate iXBRL</b>.</p>
+            </li>
+        </ol>
+        <p>The iXBRL html report with the company name, date and time of export is saved to the <b>Documents</b> page in your engagement.</p>
+    </body>
+</html>

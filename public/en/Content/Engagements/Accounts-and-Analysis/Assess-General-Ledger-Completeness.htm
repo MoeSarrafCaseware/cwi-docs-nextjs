@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Assess General Ledger Completeness</h1>
+        <p class="note"><b>Note:</b> This feature may not be available in your product.</p>
+        <p>The <b>General Ledger Completeness</b> provides automatic validation, which helps you to quickly identify discrepancies in your trial balance or general ledger data.</p>
+        <p>In an engagement you can navigate to the <b>General Ledger Completeness</b> tab from the <b>Data</b> page via the:</p>
+        <ul>
+            <li>
+                <p>Link below <b>Assign Accounts</b> on the navigation pane.</p>
+            </li>
+            <li>
+                <p>Link within the <b>General Ledger</b> grouping on the <b>Datasets</b> tab</p>
+            </li>
+            <li>
+                <p>Link on the Documents page (which may not be available in your product)</p>
+            </li>
+        </ul>
+        <p>The tab is always available if in a single entity or consolidated engagement. However, in a consolidated engagement, <b>General Ledger Completeness</b> will only reflect the trial balance and general ledger of the parent entity. If you are in an externally consolidated engagement, the links mentioned above are not available. To learn more about externally consolidated engagements refer to <a href="../File-Preparation/Create-an-externally-consolidated-engagement.htm">Create an externally consolidated engagement</a>.</p>
+        <p>When first creating an engagement, the page will not have any data and will indicate as such on the page.</p>
+        <p>
+            <img src="../../Resources/Images/gl completeness no data imported.png" alt="The message display in the General Ledger Completeness page when no data is imported." />
+        </p>
+        <p>Once data is imported and accounts are assigned, data will populate the <b>General Ledger Completeness</b> tab.</p>
+        <p><b>To assess completeness of the general ledger:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Add your trial balance on the <b>Datasets</b> tab. Select the <b>Configure</b> button to assign the required fields. Ensure you add prior period balances and current period balances and that you include zero balances. To learn more, refer to the <b>Accounts not found in Trial balance</b> section under <b>Exceptions</b> below.</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p>If you don’t assign prior and current period balances, you will get a <b>Data import issue</b> error message on the <b>General Ledger Completeness</b> page.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/gl completeness data import issue.png" alt="an error message on the user interface for General ledger completeness shown as an 'x' in a red box." />
+        </p>
+        <ul>
+            <li>
+                <p>If you only assign one or the other of the period balances, the page will advise that you are missing data.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/General-ledger-completeness-missing-data2.png" alt="an error message when data is missing in the general ledger completedness feature" />
+        </p>
+        <ol start="2">
+            <li>
+                <p>Select the <b>Assign Accounts</b> tab on the navigation pane to assign accounts to financial groups if not already imported with the trial balance.</p>
+                <p>To learn more about account assignment, refer to <a href="Assign-accounts-to-groups-in-the-Data-page-new-design.htm">Assign accounts to groups</a>.</p>
+            </li>
+            <li>
+                <p>Add your general ledger on the <b>Datasets</b> tab.  Select the <b>Configure</b> button to assign the following fields:</p>
+                <ol style="list-style-type: lower-roman;">
+                    <li>
+                        <p>Account number</p>
+                    </li>
+                    <li>
+                        <p>Amount</p>
+                    </li>
+                    <li>
+                        <p>Posting date</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p>If you don’t assign columns to the above three fields, and it is the only dataset imported, the same <b>Data import issue</b> error message appears on the <b>General Ledger Completeness</b> page as mentioned above.</p>
+            </li>
+            <li>
+                <p>If both a trial balance and general ledger have been imported, but the general ledger is missing any of the three required fields, the <b>General ledger total amount </b>column displays a <b>Missing data</b> message. </p>
+            </li>
+        </ul>
+        <p>To learn more about data import, refer to <a href="../../Explore/Global-Statutory-Reporting/Import-and-manage-data.htm">Import and manage data</a>.</p>
+        <ol start="4">
+            <li>
+                <p>Click the <b>General Ledger Completeness</b> link on the <b>Datasets</b> tab on the navigation pane to view the table, which shows:</p>
+                <ul>
+                    <li>
+                        <p>Accounts in their assigned groups according to the default financial grouping structure.</p>
+                    </li>
+                    <li>
+                        <p><b>Prior period balance</b> of each account. Hover over the date to understand how the prior period’s closing entry to Retained Earnings is reflected.  For more information, refer to Impact of the closing entry to Retained Earnings.</p>
+                    </li>
+                    <li>
+                        <p><b>General ledger total amount</b> of each account. This is the aggregate total of all amounts for that account found in the general ledger.</p>
+                    </li>
+                    <li>
+                        <p><b>Current period calculated balance</b> of each account. This adds the values from the previous two columns as applicable based on the type of group it’s assigned to. See the <b>Calculations based on type of group</b> section below.</p>
+                    </li>
+                    <li>
+                        <p><b>Current period balance</b> of each account.</p>
+                    </li>
+                    <li>
+                        <p><b>Difference</b> between the values in the previous two columns. Differences that are not zero are highlighted.</p>
+                    </li>
+                    <li>
+                        <p><b>NET BALANCE</b> for each column. This is the total of the account balances that have been assigned to groups.  In an unfiltered view, if the total is not zero it’s out of balance. <b>NET BALANCE</b> will recalculate if the table is filtered to non-zero differences.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/General ledger completeness full example1.png" />
+        </p>
+        <ul>
+            <li>
+                <p>You can collapse the entire table to the group level or expand it to the account level.</p>
+            </li>
+            <li>
+                <p>You can perform a search based on account number, account name, financial group number and name.</p>
+            </li>
+            <li>
+                <p>You can filter the table to show only rows with non-zero values in the <b>Difference</b> column. Group totals are also shown and will recalculate if filtered to non-zero differences.  To see all rows, uncheck <b>Show only non-zero differences</b>.</p>
+            </li>
+            <li>
+                <p>The number formatting displayed in the table follows your <b>Engagement Settings</b>. If you decide to show zero decimal places and there is a difference of less than 0.5, it will round to zero and not be highlighted as a difference.  If you want to see all your differences, increase the number of decimal places in your display.</p>
+            </li>
+            <li>
+                <p>Invalid data or exceptions are displayed below the data in the grouping structure. See <b>Exceptions</b> section below.</p>
+            </li>
+            <li>
+                <p>If there is a change in the data while you’re reviewing the page, like an account gets assigned, or new data has been ingested, a <b>New data available</b> button appears for you to update the table with the new information.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/gl completeness new data available.png" alt="a blue message button on the General Ledger page denoting that new data is available for the analysis. " />
+        </p>
+        <p>&#160;</p>
+        <p>You can use the <b>Export</b> icon [<img src="../../Resources/Images/export icon.png" alt="an icon for exporting. It is an image of a document with an up arrow in it." />] to export the table as a CSV file. The CSV file will display the values in a flat table such that the lowest level group number and group name are in their own columns.</p>
+        <h2>Impact of the closing entry to Retained Earnings</h2>
+        <p>The impact of closing the prior period’s net income to Retained Earnings will be reflected once you assign an account to a Retained Earnings group and an account to an Income Statement group.  The result is that the income statement account balances will become zero, and the Retained Earnings balance will reflect the opening balance for the period.</p>
+        <h2>Calculation based on type of group</h2>
+        <p>The calculation will be applied based on the type of group the account is assigned to:</p>
+        <p class="indent">If Balance Sheet:</p>
+        <p class="indent" style="font-weight: bold;">Current period calculated balance = Prior period balance + General ledger total amount</p>
+        <p class="indent">If Income Statement, Net Income or Comprehensive Income:</p>
+        <p class="indent" style="font-weight: bold;">Current period calculated balance = General ledger total amount</p>
+        <h2>Exceptions</h2>
+        <ul>
+            <li>
+                <p><u>Unassigned accounts</u>
+                </p>
+            </li>
+        </ul>
+        <p class="indent">Accounts that haven’t been assigned are displayed in this group with a warning message that calculations cannot be performed since the calculation is dependent on the type of group it is assigned to. Once the accounts are assigned, they will move out of this group and into a financial group above.</p>
+        <ul>
+            <li>
+                <p><u>Accounts not found in Trial balance</u>
+                </p>
+            </li>
+        </ul>
+        <p class="indent">Accounts that exist in the general ledger but not in the trial balance will show up in this group with a warning message that calculations cannot be performed.</p>
+        <p class="indent">If the general ledger was imported but no trial balance yet, the accounts will appear in this group.</p>
+        <p class="indent">If the aggregate total of the account in the general ledger is zero, and you did not import zero balances when importing the trial balance, the accounts will appear in this group.  Check off “Include zero-balance accounts” when configuring the trial balance file during the import process to prevent these accounts from appearing in this group.</p>
+        <p>
+            <img src="../../Resources/Images/General ledger completeness include zero-balance accounts.png" alt="A screenshot of the user interface clickbox to include zero-balance accounts in the General Ledger Completeness tableview" />
+        </p>
+        <p>&#160;</p>
+        <ul>
+            <li>
+                <p><u>Entries outside reporting period</u>
+                </p>
+            </li>
+        </ul>
+        <p class="indent">If general ledger transactions were not posted within the engagement’s reporting period, they will display in this group with a warning message that calculations cannot be performed. The column of the general ledger file assigned to the Posting date field is either missing a date or there are date values that do not fall in the engagement’s reporting period.</p>
+        <h2>Locked engagement</h2>
+        <p>When you lock your engagement the link on the navigation pane as well as on the <b>Datasets</b> tab will no longer display.  If you unlock your engagement, these links return.  If you have a link on the <b>Documents</b> page, it will continue to be available even if the engagement is locked.</p>
+    </body>
+</html>

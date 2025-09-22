@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>New in SE 2024-12</h1>
+        <p>Welcome to SE 2024-12! This release features the ability to add a lockdown history to the downloaded reference copy of an engagement, and more.</p>
+        <p>To view the most recent fixes in this release, see the following topic:</p>
+        <ul>
+            <li>
+                <p><a href="#Fixes">Fixes in SE 2024-12</a>
+                </p>
+            </li>
+        </ul>
+        <h2>Lockdown history included as a PDF</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a>
+        </p>
+        <p>Users can now download the lockdown history as a PDF within the reference copy. To enable this feature, add the following code to the <code>archive</code> array of the <i>product.json</i> file for your product:</p>
+        <div><pre><code>{ "title": "Lockdown", "uri": "index.jsp#/lockdown" }</code></pre>
+        </div>
+        <p>The reference copy is available from the <b>Information</b> icon (<img src="../Resources/Images/info icon black.png" alt="" style="vertical-align: text-bottom;" />) at the top menu.</p>
+        <p>
+            <img src="../Resources/Images/lockdown_history_as_pdf.png" alt="Displays the Download reference copy feature from the Information menu" />
+        </p>
+        <h2>Cloud Engagements integration with Sherlock</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a>
+        </p>
+        <p>For the latest integration updates with Caseware Sherlock, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/Whats-New/Whats-new-CaseWare-Sherlock.htm">What's new - Caseware-Sherlock.</a></p>
+        <h2>Java upgrades to the Cloud Engagements server and microservices</h2>
+        <p>The Caseware Cloud Engagement server is now upgraded from Java 11 to Java 17. In addition, its microservices are now upgraded from Java 17 to Java 21.</p>
+        <h2><a name="Fixes"></a>Fixes in SE 2024-12</h2>
+        <p>The following list features a brief description of bugs that have been resolved in SE 2024-12.</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-43739">SE-43739</a>] - When applying XBRL tags to note headers, the selection isn’t immediately highlighted, and the highlight color and placement is inconsistent with other areas of the UX.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-49594">SE-49594</a>] - The option to clear a search in the taxonomy viewer does not clear the search.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-50284">SE-50284</a>] - The custom context editor freezes when creating new contexts or editing existing contexts.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51097">SE-51097</a>] - Text in the Table of contents description field is not saved if a new text section is added to the financial statements prior to the description.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51303">SE-51303</a>] - Deleted text sections are not visibly removed from the financial statements until the webpage is refreshed.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51482">SE-51482</a>] - The Identifier and Name fields in the Document Properties dialog are not visible to primary authors, which prevents them from being modified.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51634">SE-51634</a>] - When importing trial balance data from an existing engagement, a single engagement can be selected as both the source and destination. As a result, the destination engagement becomes out of balance.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51655">SE-51655</a>] - After assigning an account to a dimension, the Dimension selector is not visible on the Data page until the webpage is refreshed.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51780">SE-51780</a>] - The iXBRL generation failed in certain environments.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52319">SE-52319</a>] - In the XBRL Context Editor dialog, the button to copy context does not carry over the correct Applicable field.</p>
+            </li>
+        </ul>
+    </body>
+</html>

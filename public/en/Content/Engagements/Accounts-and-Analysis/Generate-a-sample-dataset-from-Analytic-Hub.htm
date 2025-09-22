@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Generate a sample from Analytics Hub</h1>
+        <p>Each analytic test in the Analytics Hub includes a sample calculator in the Test Parameters tab. This tool lets you generate Random, Attribute, or Monetary Unit samples. You can also apply Systematic sampling manually, without the calculator. Sampling helps you quickly gain insights from large datasets by analyzing a smaller, representative portion, whether you're working with structured data like client transactions or unstructured inputs such as natural language descriptions (for example, 'Monthly control = bank reconciliations are reviewed and approved by the Controller'). You can use sampling within an analytic test or as a standalone tool.</p>
+        <h2 class="collapsible">Sampling methods</h2>
+        <p>The following sampling methods are available:</p>
+        <h3>Attribute sampling</h3>
+        <p>Attribute sampling is a statistical method used to evaluate the frequency of a specific attribute within a dataset. Each attribute is binary, having only two possible outcomes:&#160;true or false, and is commonly used for testing controls or compliance. </p>
+        <h3>Monetary unit sampling</h3>
+        <p>Monetary unit sampling (MUS) selects records based on the monetary value of a specified column. Each monetary unit (for example, each dollar) is treated as a sampling unit, giving larger transactions a higher probability of selection compared to smaller ones. The sample size is determined by parameters, such as risk tolerances and confidence levels. This method is especially useful in financial auditing, as it focuses on transactions with greater monetary impact. MUS is applicable to both the general ledger and subledgers, offering a reliable way to prioritize high-value transactions for review.</p>
+        <h3>Random sampling</h3>
+        <p>Random sampling selects a randomly chosen subset of records from a dataset. This approach is useful for unbiased testing or validation processes, ensuring each record has an equal probability of being included in the sample. It can be applied to both the general ledger and subledgers.</p>
+        <h3>Systematic sampling</h3>
+        <p>Systematic sampling selects records at regular intervals based on a predefined frequency (for example, every 10th record). This method ensures an evenly distributed sample across the dataset and can uncover patterns or anomalies within a dataset. It is particularly effective for structured financial reviews and can be applied to both the general ledger and subledgers for identifying irregularities in transaction posting or trends in financial data.</p>
+        <h2><a name="Generate"></a>Generate a sample from analytic test results</h2>
+        <p><b>To generate a sample from analytic test results:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Open the <b>Analytics Hub</b>.  This can be done in two ways:</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p>From the <b>Documents</b> page, click the Analytics icon (<img src="../../Resources/Images/analytics icon.png" alt="An icon of a line graph to symbolize Analytics" style="width: 38px;height: 30px;vertical-align: bottom;" />)  next to any checklist procedure where an analytic test is available. The Analytics tab will open providing a list of tests available for that checklist item.</p>
+            </li>
+            <li>
+                <p>Select <b>Analytics Hub</b> at the top of the screen to display all checklist procedures that are available for an analytic test. Data must already be imported, or no data will be displayed.</p>
+            </li>
+        </ul>
+        <p>2. Select an analytic test from the left panel. Results appear on the right. If there are no results, then run the analytic test first..</p>
+        <p>3. Select the <b>Test parameters</b> tab and scroll down to <b>Sampling</b>.</p>
+        <p>4. Select a <b>Sampling method</b> to apply to the selected analytic test results.</p>
+        <ul>
+            <li>
+                <p>Attribute Sampling</p>
+            </li>
+            <li>
+                <p>Monetary Unit Sampling</p>
+            </li>
+            <li>
+                <p>Random Sampling</p>
+            </li>
+            <li>
+                <p>Systematic Sampling</p>
+            </li>
+        </ul>
+        <p class="tip"><b>Tip:</b> You can adjust the parameters of the analytic test in the <b>Configuration</b> section to influence the sample results.</p>
+        <h2>Generate an attribute sample from an analytic test</h2>
+        <p>The sample calculator for <b>Attribute Sampling</b> includes specific calculator elements.</p>
+        <ol>
+            <li>
+                <p>Follow the steps in <a href="#Generate">Generate a sample from analytic test results</a> and select <b>Monetary Unit Sampling</b> as your <b>Sampling method</b>.</p>
+            </li>
+            <li>
+                <p>Adjust your parmeters as needed. See <a href="#Calculat">Calculator parameters.</a> Click <b>Calculate</b></p>
+            </li>
+        </ol>
+        <h3><a name="Calculat"></a>Calculator parameters</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Calculator parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Population size</td>
+                    <td>
+                        <p>The total number of records available for sampling, based on the full dataset defined by the analytic tests selected and previously run. </p>
+                        <p>Select the Calculate Population Size icon (<img src="../../Resources/Images/PopulationCalculationSizeIcon.png" alt="" style="vertical-align: text-bottom;"></img>) (when it appears black) to recalculate the population size. </p>
+                        <p>This is required when: 
+
+</p>
+                        <ul>
+                            <li>
+                                <p>A new filter is added under <b>Filter dataset</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Test parameters are changed under <b>Configuration</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Filters or configurations are modified in any analytic test linked to the same procedure. </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confidence level</td>
+                    <td>
+                        <p>Specify the percentage certainty (for example, 90%, 95%) that you want to achieve in concluding that the control is effective.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tolerable error</td>
+                    <td>Enter the maximum percentage of control failures (for example, 5%) you are willing to accept while still considering the control effective. </td>
+                </tr>
+                <tr>
+                    <td>Expected error</td>
+                    <td>Estimate and enter the percentage of control failures  (for example, 4%) you expect to find in the population based on prior audits or professional judgment.  </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="tip"><b>Tip:</b> You can adjust the parameters of the analytic test in the <b>Configuration</b> section to influence the sample results.</p>
+        <p>The <b>Sample size</b> will generate in the fields below the Calculate button based on the selected analytic test results.</p>
+        <p>
+            <img src="../../Resources/Images/AttributeSampling.png" alt="Setting parameters for the Attribute sampling calculator." />
+        </p>
+        <h2>Generate a monetary unit sample from an analytic test</h2>
+        <p><b>To generate a monetary unit sample from an analytic test:</b>
+        </p>
+        <p>The sample calculator for <b>Monetary Unit Sampling</b> includes specific calculator elements.</p>
+        <ol>
+            <li>
+                <p>Follow the steps in <a href="#Generate">Generate a sample from analytic test results</a> and select <b>Monetary Unit Sampling</b> as your <b>Sampling method</b>.</p>
+            </li>
+            <li>
+                <p>On the right panel, in <b>Select monetary field to calculate sampling interval</b>, select <b>Amount</b>. </p>
+            </li>
+            <li>
+                <p>Adjust your parameters as needed and click <b>Calculate</b>.</p>
+            </li>
+        </ol>
+        <h3>Calculator parameters</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Calculator parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Population size</td>
+                    <td>
+                        <p>The total number of records available for sampling, based on the full dataset defined by the analytic tests selected and previously run. </p>
+                        <p>Select the Calculate Population Size icon (<img src="../../Resources/Images/PopulationCalculationSizeIcon.png" alt="" style="vertical-align: text-bottom;"></img>) (when it appears black) to recalculate the population size. </p>
+                        <p>This is required when: 
+
+</p>
+                        <ul>
+                            <li>
+                                <p>A new filter is added under <b>Filter dataset</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Test parameters are changed under <b>Configuration</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Filters or configurations are modified in any analytic test linked to the same procedure. </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confidence level</td>
+                    <td>
+                        <p>Specify the desired level of assurance that the population is not misstated beyond the tolerable misstatement as a percentage.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tolerable error</td>
+                    <td>Specify the maximum amount of error or misstatement you are willing to accept in the population and still consider the financial statements to be fairly represented as a percentage. </td>
+                </tr>
+                <tr>
+                    <td>Expected error</td>
+                    <td>Specify your best estimate of the total misstatement in the population before testing as a percentage. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="tip"><b>Tip:</b> You can adjust the underlying parameters of the analytic test and recalculate the population size.</p>
+        <p class="indent">The <b>Sample size</b> will generate in the fields below the <b>Calculate</b> button based on the selected analytic test results.</p>
+        <p>
+            <img src="../../Resources/Images/generete sample analytic tests rn3.png" alt="The user interface for sampling in an analytic test" />
+        </p>
+        <h2>Generate a random sample from an analytic test</h2>
+        <p><b>To generate a random sample from an analytic test:</b>
+        </p>
+        <p>The sample calculator for <b>Random Sampling</b> includes specific calculator elements.</p>
+        <ol>
+            <li>
+                <p style="font-weight: normal;">Follow the steps in <a href="#Generate">Generate a sample from analytic test results</a> and select <b>Random Sampling</b> as your <b>Sampling method</b>.</p>
+            </li>
+            <li>
+                <p>Adjust your parameters as needed. See <a href="#Calculat2">Calculator parameters</a>. Click <b>Calculate</b>.</p>
+            </li>
+        </ol>
+        <h3><a name="Calculat2"></a>Calculator parameters</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Calculator parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Population size</td>
+                    <td>
+                        <p>The total number of records available for sampling, based on the full dataset defined by the analytic tests selected and previously run. </p>
+                        <p>Select the Calculate Population Size icon (<img src="../../Resources/Images/PopulationCalculationSizeIcon.png" alt="" style="vertical-align: text-bottom;"></img>) (when it appears black) to recalculate the population size. </p>
+                        <p>This is required when: 
+
+</p>
+                        <ul>
+                            <li>
+                                <p>A new filter is added under <b>Filter dataset</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Test parameters are changed under <b>Configuration</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Filters or configurations are modified in any analytic test linked to the same procedure. </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confidence level</td>
+                    <td>
+                        <p>Specify the percentage confidence (for example, 90%, 95%) that the sample results will reflect the population accurately.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tolerable error</td>
+                    <td>Enter the maximum percentage of misstatements or anomalies  (for example, 5%) you are willing to tolerate in the population. </td>
+                </tr>
+                <tr>
+                    <td>Expected error</td>
+                    <td>Provide your best estimate of the percentage of misstatements expected in the population before testing.  </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Tip:</b> You can adjust the underlying parameters of the analytic test and recalculate the population size.</p>
+        <p class="indent">The <b>Sample size</b> will generate in the fields below the <b>Calculate</b> button based on the selected analytic test results.</p>
+        <p class="indent">
+            <img src="../../Resources/Images/RandomSampling.png" alt="Setting parameters for the Random Sampling method. " />
+        </p>
+        <h2>Generate a standalone sample from Analytics Hub</h2>
+        <p>You can generate a standalone sample from <b>Analytics Hub</b> that is not based on an underlying analytic test but on the data imported into your engagement. A random, attribute, systematic or monetary unit sampling test can be selected from the left-side of <b>Analytics Hub</b> enabling you to generate a sample based on the population of the entire dataset or a customized filter.</p>
+        <p>Be sure you have imported the data required before calculating a standalone sample. The type of data required is listed under <b>Dataset type</b>. See <a href="../File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client's data from a CSV or Excel file</a> for more information.</p>
+        <p><b>Example of the standalone Monetary Unit Sampling</b>
+        </p>
+        <p>
+            <img src="../../Resources/Images/generate standalone calculator for monetary unit sampling.png" alt="User interface for using the standalone monetary unit sample from Analytics Hub." />
+        </p>
+        <h2>Generate a standalone sample from schemaless data using Attribute or Random sampling methods</h2>
+        <p>Schemaless data can be used to calculate standalone samples using the <b>Attribute</b> or <b>Random</b> sampling methods. Schemaless data refers to unstructured data that doesn’t follow a predefined format, for example, transaction data exported from a legacy system whose records do not have all the same fields, or whose structure is nested and inconsistent.</p>
+        <p>To begin, make sure you have imported the schemaless data you want to use into your engagement using the <b>Other</b> dataset type. See <a href="../File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client's data from a CSV or Excel file</a> for more information.</p>
+        <ol>
+            <li>
+                <p>In the <b>Analytics Hub</b>, under <b>Analytic tests list</b>, select either the <b>OT-Attribute Sampling</b> or <b>OT-Random Sampling</b> methods.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/SamplingMethodSelection.png" alt="Selecting the sampling method to use on schemaless data." />
+        </p>
+        <ol>
+            <li value="2">
+                <p>Select the <b>Test parameters</b> tab, and then in <b>Dataset selection</b>, select the source file containing the schemaless data you imported into your engagement previously.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/SchemalessDataset.png" alt="Selecting the schemaless dataset previously imported and for which you want to generate a sample. " />
+        </p>
+        <ol>
+            <li value="3">
+                <p>Under <b>Configuration</b>, specify values for the calculator parameters described in <a href="#Calculate">Calculator parameters</a>.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/ConfigParamsSampleMethod.png" alt="Specifying calculator parameters for the sampling method. " />
+        </p>
+        <ol>
+            <li value="4">
+                <p>Click <b>Calculate</b>. The <b>Sample size</b> will generate in the fields below the <b>Calculate</b> button based on the schemaless data in your engagement. </p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/SampleSize.png" alt="Viewing the calculated sample size. " />
+        </p>
+        <ol>
+            <li value="5">
+                <p>In <b>Analytic tests list</b>, select the checkbox for either the <b>OT-Attribute Sampling</b> or <b>OT-Random Sampling</b> method and then click <b>Run</b> in the top menu.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/RunStandaloneSampling.png" alt="Running a sampling method standalone. " />
+        </p>
+        <h3><a name="Calculate"></a>Calculator parameters</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Calculator parameter</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Population size</td>
+                    <td>
+                        <p>The total number of records available for sampling, based on the full dataset. </p>
+                        <p>Select the Calculate Population Size icon (<img src="../../Resources/Images/PopulationCalculationSizeIcon.png" alt="" style="vertical-align: text-bottom;"></img>) (when it appears black) to recalculate the population size. </p>
+                        <p>This is required when: 
+
+</p>
+                        <ul>
+                            <li>
+                                <p>A new filter is added under <b>Filter dataset</b>. 
+
+</p>
+                            </li>
+                            <li>
+                                <p>Test parameters are changed under <b>Configuration</b>. 
+
+</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confidence level</td>
+                    <td>
+                        <p>Specify the desired level of assurance that the population is not misstated beyond the tolerable misstatement as a percentage: for example, 90%, 95%, or 99%.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tolerable error</td>
+                    <td>Specify the maximum amount of error or misstatement you are willing to accept in the population and still consider the financial statements to be fairly represented as a percentage. </td>
+                </tr>
+                <tr>
+                    <td>Expected error</td>
+                    <td>Specify your best estimate of the total misstatement in the population before testing as a percentage. This is often based on prior experience, historical data, or preliminary analysis.   </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Export a sample</h2>
+        <p>After you generate a data sample, you can export the sample to a CSV file by using the Export icon [<img src="../../Resources/Images/export icon.png" alt="an icon for exporting. It is an image of a document with an up arrow in it." style="width: 20px;height: 22px;vertical-align: bottom;" />] on the right-side of the analytic test in <b>Analytics Hub</b>.</p>
+    </body>
+</html>

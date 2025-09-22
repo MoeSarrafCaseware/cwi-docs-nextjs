@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entities to represent client firms, which can be used by contacts and staff to collaborate and store files" />
+    </head>
+    <body>
+        <h1>Create client entities</h1>
+        <p>In Cloud, client organizations are represented by <b>Client Entities</b>. These entities can be categorized and organized in multiple ways, such as by forming associations between them or by assigning tags or workflow stages.</p>
+        <h2 id="Creating-client-workspaces-from-a-client-list"><a name="Creating"></a>Creating client entities from a client list</h2>
+        <p>Cloud enables you to add multiple client entities in a single procedure using a .csv file or a block of delimited text.</p>
+        <p>When using either method, ensure that:</p>
+        <ul>
+            <li>
+                <p>Each row represents one client entity, and</p>
+            </li>
+            <li>
+                <p>Each column represents a property, such as their name, start date, and tags. To assign multiple tags, place the tags between quote marks and separate them with commas. Any tags that do not currently exist in Cloud will be created by performing the import.</p>
+            </li>
+            <li>
+                <p>The dates in the <b>Client Since</b> and <b>Inactive Date</b> column must be in the same format as the date format set in your personal regional settings.</p>
+            </li>
+        </ul>
+        <p>In this example, an administrator wants to add two client entities:</p>
+        <p><i>Name, Location, Entity Number, Client Since, Fiscal Year End, Tags</i>
+            <br style="font-style: italic;" /><i>Chockablock Industries, Toronto, 4829, 09/07/2012, December, "Retail, Partnership"</i>
+            <br style="font-style: italic;" /><i>Superior Furniture, Toronto, 5937, 22 /08/2010, December, Retail</i>
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp" />
+        <p>The entities are added to Cloud. Any existing entities with the same <b>Entity Number</b> are modified.</p>
+        <h2 id="Creating-a-single-client-workspace"><a name="Single"></a>Creating a single client entity</h2>
+        <p>If you want to create organizations individually instead, you can do so from the <b>Entities</b> page.</p>
+        <p><b>To create an entity:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Entities Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Entities</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New</b> and the appropriate entity type.</p>
+                <p>
+                    <img src="../../Resources/Images/Entity-new-create-types-630x220.png" alt="When creating a new entity, first select the entity type." />
+                </p>
+            </li>
+            <li>
+                <p>Choose a <b>Country of Registration</b> and an <b>Organization Type</b>. The available organization types vary based on which country of registration is selected. For more information, see <MadCap:xref href="../../Explore/Interface/Entities/Entity-creation.htm">Entity creation</MadCap:xref>. </p>
+                <p>
+                    <img src="../../Resources/Images/entities-create-new-entity-CAN.png" alt="The Create Entity dialog." />
+                </p>
+            </li>
+            <li>
+                <p>Enter a <b>Name</b> and <b>Entity Number</b>. These fields are required.</p>
+                <p class="note"><b>Note:</b> The Entities page may not sort correctly if it contains alphanumeric codes with inconsistent lengths (e.g. 1 ABC, 23 DEF, 456 GHI). To correct this, pad each number with zeroes to ensure a consistent length (e.g. 001 ABC, 023 DEF, 456 GHI) or use numeric codes. </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>The entity is added, and is displayed on the Entities page.</p>
+        <h2 id="Tagging-workspaces">Tagging entities</h2>
+        <p>Assigning <b>Tags</b> helps to categorize and identify people, files, and entities in your organization.  You may want to tag entities according to their industry, organizational structure, or the type of work your organization performs for them.</p>
+        <p style="font-weight: bold;">To tag entities:</p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Staff Editor</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Entities</b>.</p>
+            </li>
+            <li>
+                <p>Select the entity you want to edit the tags for. In the entity's menu, select <b>Tag</b> (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p>
+                    <img src="../../Resources/Images/Tag-entity-select-630x80.png" alt="Select the Tag icon on an entity or file to manage its tags" />
+                </p>
+            </li>
+            <li>
+                <p>Choose appropriate <b>Unassigned</b> tags to assign them.</p>
+                <p>
+                    <img src="../../Resources/Images/Tags-assign-dialog-645x339.png" alt="The Assign Tags dialog" />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b> to apply your changes.</p>
+            </li>
+        </ol>
+        <p>After you've assigned tags to an entity, you can filter entities based on their tags from the Search bar.</p>
+        <p>
+            <img src="../../Resources/Images/caseware-cloud-searching-with-tags.png" alt="Tags displayed in the Filter drop-down menu." />
+        </p>
+        <h2 id="Categori">Categorizing client entities</h2>
+        <p>If you have created a workflow for client entities, you can use that workflow's stages to categorize your client entities appropriately. For more information on creating workflows, see <a href="../Administration-and-Settings/Create-custom-fields-tags-and-workflows.htm">Create custom fields, tags and workflows</a>.</p>
+        <p>You can also categorize entities using the entity status. Both workflow stages and entity statuses are informational only and have no impact on what actions a staff member can take in the entity.</p>
+        <p>Before you start, ensure you have the <i>Entity Access</i> role or equivalent rights to the entity.</p>
+        <p style="font-weight: bold;">To set an entity's workflow stage:</p>
+        <ol>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Entities</b> and then select the entity you want to edit.</p>
+            </li>
+            <li>
+                <p>Select the entity's current workflow stage and then select the workflow stage you want to assign to the entity.</p>
+                <p>
+                    <img src="../../Resources/Images/Workflow-update-client-640x433.png" alt="Update your client's workflow to change its type" />
+                </p>
+            </li>
+        </ol>
+        <p><b>To set an entity's status:</b>
+        </p>
+        <ol>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Entities</b> and then select the entity you want to edit.</p>
+            </li>
+            <li>
+                <p>Select the <b>Edit</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) button.</p>
+            </li>
+            <li>
+                <p>In the <b>Edit Entity</b> dialog, select the <b>Profile</b> tab.</p>
+            </li>
+            <li>
+                <p>Select the appropriate status from the <b>Status</b> dropdown.</p>
+                <p>
+                    <img src="../../Resources/Images/entities-profile-status-active.png" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

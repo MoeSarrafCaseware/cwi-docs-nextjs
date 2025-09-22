@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultBatchTarget
+  Version="1"
+  Comment="New Batch Target">
+  <Targets>
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="PDF Template/PDF Template"
+      Type="PDF" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="Online Output/HTML5 - Online Master (PROD)"
+      Type="HTML5"
+      Build="true" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="Online Output/HTML5 - Online Master (TEST)"
+      Type="HTML5" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="Online Output/Online Master - Clean"
+      Type="Clean XHTML" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="PDF/FAQ (Cloud)"
+      Type="PDF"
+      LastBuilt="2017-07-31T16:28:50.8765885-04:00" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="PDF/OnPoint PCR (Training)"
+      Type="PDF"
+      LastBuilt="2017-08-01T08:40:39.0115908-04:00" />
+    <Target
+      Icon="System.Drawing.Bitmap"
+      Name="PDF/OnPoint PCR Quick Start Guide"
+      Type="PDF" />
+  </Targets>
+</CatapultBatchTarget>

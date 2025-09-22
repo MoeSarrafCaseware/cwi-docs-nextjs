@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="These settings are related to the overall security of your Cloud, including role permissions, password settings, and session management." />
+    </head>
+    <body>
+        <h1>Firm settings - Security</h1>
+        <h2><a name="Role"></a>Role Permissions</h2>
+        <p>
+            <img src="../../../Resources/Images/settings-role-permissions.png" alt="Security settings - Role permissions" />
+        </p>
+        <p>The Role Permissions section contains options to review Cloud's built-in roles and create new ones to suit your organization's requirements.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Add Role</td>
+                    <td>
+                        <p>Create a new security role. For more information, see <MadCap:xref href="../../../Setup/Security/Create-custom-security-roles.htm">Creating security roles</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Copy/Edit/Delete Role</td>
+                    <td>
+                        <p>Modify, or remove security roles. Cloud's built-in roles cannot be edited or deleted. You can use the <b>Copy</b> option to use a built-in role's permission settings as the basis for a new custom role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Applies to</td>
+                    <td>
+                        <p>Denotes whether the role is for <b>Staff</b> (<img src="../../../Resources/Icons/Staff-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) or <b>Contacts</b> (<img src="../../../Resources/Icons/Contacts-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Role name</td>
+                    <td>
+                        <p>The name of the role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Scope</td>
+                    <td>
+                        <p>The access levels defined in this role.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Password"></a>Password Settings</h2>
+        <p>
+            <img src="../../../Resources/Images/firm-settings-password-settings-1441x417.png" alt="Password options displayed on the Settings page." />
+        </p>
+        <p>Set the system-wide standards for user passwords: <b>Moderate</b>, <b>Strong</b>, or <b>Very Strong</b>, as well as the frequency with which users will be required to reset their passwords. Cloud's definitions for each security level are displayed in the examples.</p>
+        <h2><a name="Session"></a>Authentication and Session Management</h2>
+        <p>You can enable session management to permit users to stay signed in for a specified period of time. When enabled, users only need to sign in once to access Cloud during the specified period from the same browser. Only when users explicitly sign out of the system, or have exceeded the specified time limit, will they need to sign back in.
+</p>
+        <p>With two-factor authentication, users will be expected to supply two pieces of information to verify their identity before gaining access to Cloud. To learn more about two-factor authentication, see <MadCap:xref href="../../../Setup/Security/Login-settings.htm#Configur">Configure two-factor authentication</MadCap:xref>. </p>
+        <p>These options are disabled by default. </p>
+        <h3>Two-factor authentication</h3>
+        <p>
+            <img src="../../../Resources/Images/firm-settings-authentication-session-management-two-factor.png" alt="Two-factor authentication settings." />
+        </p>
+        <p><b>All Staff</b> - Enable two-factor authentication for all staff accounts. </p>
+        <p><b>All Contacts</b> - Enable two-factor authentication for all contacts.</p>
+        <p><b>Allow user to skip setup until:</b> - Allow users to sign in without two-factor authentication until the specified date. </p>
+        <p><b>Require users to log in using two-factor authentication</b> - Set how often users are required to enter a verification code when they sign in. </p>
+        <ul>
+            <li><b>Every 30 days</b> - User must enter a new verification code every 30 days. </li>
+            <li><b>Every sign-in</b>- User must enter a new verification code each time they sign in. </li>
+        </ul>
+        <p>The first time a user signs in on a device, they must enter a new verification code.</p>
+        <h3>Session management</h3>
+        <p>
+            <img src="../../../Resources/Images/Firm-session-management-973x243.png" alt="The options available in the Session Management section of the Settings page." />
+        </p>
+        <p>To enable session management, select <b>Remember Users on Sign In</b> and type the number of hours in <b>Hours to Remember Users</b>.</p>
+        <p>Users can then select <b>Stay signed in for X hours</b> when signing in<br /></p>
+    </body>
+</html>

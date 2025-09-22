@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>What's new in Caseware Cloud Engagements 2024-12</h1>
+        <p>Welcome to the Cloud Engagements 2024-12 release. In this release, we introduce enhancements to your user experience, including AI-assisted column assignment for trial balance imports. Additionally, we offer improved customization features for new analytic tests for financial data analysis.</p>
+        <p>To learn more about the Caseware Cloud Engagements platform, see <a href="../Cloud-Apps/Caseware-Cloud-Engagements.htm">What is Caseware Cloud Engagements</a>?</p>
+        <h2>User-experience enhancements</h2>
+        <p>Several enhancements related to your user experience have been included in this release:</p>
+        <h3>Sync trial balance improvements</h3>
+        <p>We’ve enhanced the existing Sync trial balance feature, including the introduction of new display error and warning message dialogs, and spinners for in-progress tasks.</p>
+        <h3>Assign accounts improvements</h3>
+        <p>We’ve added enhancements to the Assign Accounts tab, including improved drag-and-drop functionality when assigning accounts to groups.</p>
+        <h2>AI column assignment of trial balance data</h2>
+        <p>You can leverage AI to suggest column assignment automatically when importing your trial balances using Excel or CSV files, so you do not have to manually assign the columns.</p>
+        <p>This feature will save you time on trial balance imports and reduce column assignment errors by providing useful suggestions for assigning trial balance columns to Caseware fields.</p>
+        <p><b>Note:</b> This release will support all English-language trial balance data imports. AI-column autoassignment also works on non-English trial balances, but the results will not be as accurate. Always review the column assignment before importing any data.</p>
+        <h3>To AI-autoassign columns in a trial balance:</h3>
+        <ol>
+            <li>
+                <p>Go to the <b>Data</b> page, which opens to the <b>Datasets</b> tab by default.</p>
+            </li>
+            <li>
+                <p>Import your trial balance by dragging and dropping your CSV file on to the upload area.</p>
+            </li>
+            <li>
+                <p>Select <b>Configure</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Assign Fields</b> window, select <b>Assign columns</b>. Columns are autoassigned.</p>
+            </li>
+            <li>
+                <p>Review the autoassignment. They make any adjustments as necessary and click <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/Assign_fields_assign_columns.png" alt="Displays Datasets window and the Assign columns tool." />
+        </p>
+        <h2 MadCap:conditions="General.Ignore">Assign dimensions to trial balance data based on spreadsheet column</h2>
+        <p MadCap:conditions="General.Ignore">You can now assign dimensions to accounts based on spreadsheet columns. This provides a streamlined approach to assigning multiple dimensions as part of an Excel/CSV import flow, rather than having to manually assign them individually.</p>
+        <p MadCap:conditions="General.Ignore">To learn more, refer to <a href="../../Engagements/Planning/Set-up-trial-balance-with-dimensions.htm">Set up and import a trial balance with dimensions</a>.</p>
+        <h2>Import planning balances from data connectors</h2>
+        <p>This feature allows you to carry out audit planning and fieldwork prior to the year-end, to work on a planning trial balance, imported from an online/desktop connector. You can now select a planning balance or final balance when going through the import flow.</p>
+        <p class="note inline"><b>Note:</b> This feature may not be available in all products.</p>
+        <h2>Select a file to import from the engagement</h2>
+        <p>You can now import data from CSV and Excel files that are on the <b>Documents</b> tab. The <b>Import from Documents</b> option is available from the Datasets tab.</p>
+        <p>
+            <img src="../../Resources/Images/Import_from_Documents.png" alt="Displays the Import from Documents option in the Add data window" />
+        </p>
+        <h2>Analytic-test authoring improvements</h2>
+        <p>The new procedure-level analytics customization feature empowers solution and firm authors to tailor analytics to specific use cases, enhancing relevance and usability for end users. Firm authors can duplicate analytic tests, adjust parameters, filters, and metadata, and configure key fields such as names, descriptions, and default values—all within the Analytics Hub.</p>
+        <p>To learn more, refer to <a href="../../Engagements/Template-and-Authoring/Customize-analytic-tests.htm">Customize analytic tests</a>.</p>
+        <h2>Disclosure analytic package</h2>
+        <p>The Disclosure analytic package we are introducing in this release contains analytic tests for identifying significant customer sales and vendor purchases, analyzing outstanding accounts payable and receivable balances, summarizing cash disbursements for interest and income taxes, and disclosing related-party transactions.</p>
+        <p>See <a href="../../Engagements/Accounts-and-Analysis/disclosure-generic.htm">Disclosure</a> for more information.</p>
+        <h2>Machine-learning-powered analytic tests</h2>
+        <p><b>Isolation forest analysis for account-vendor pairing anomalies</b>
+        </p>
+        <p>This test leverages the Isolation Forest algorithm to identify infrequent patterns in general ledger (GL) transactions by analyzing the relationships between key attributes such as chart-of-accounts codes and vendor names. The analysis focuses on detecting anomalies that deviate from typical transactional patterns.</p>
+        <p>See <a href="../../Engagements/Accounts-and-Analysis/isolation-forest.htm">Isolation forest</a> for more information.</p>
+        <h2 MadCap:conditions="General.Ignore">Journal entry relevance ranking analytic package</h2>
+        <p MadCap:conditions="General.Ignore">We are introducing an analytic package called Journal entry relevance ranking analytics to prioritize journal entries based on auditing standards, ensuring meaningful and actionable insights for compliance-driven testing. This package applies rule-based tests to identify and rank entries for relevance, streamlining the journal entry review process and aligning with regulatory guidelines.</p>
+        <p MadCap:conditions="General.Ignore">The Journal entry relevance ranking analytics provide users with a clear, numerical guide for selecting journal entries that comply with auditing standards while avoiding the pitfalls of traditional anomaly detection methods. The final aggregated score is stored in the Relevance rank column for seamless integration into auditing workflows.</p>
+        <p MadCap:conditions="General.Ignore">See <a href="../../Engagements/Accounts-and-Analysis/journal-entry-relevance-ranking.htm">Journal entry relevance ranking analytics</a> for more information.</p>
+    </body>
+</html>

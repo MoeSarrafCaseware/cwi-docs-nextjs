@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        
+    </head>
+    <body>
+        <p><b>To grant access to specific files or activities in an entity:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Owner</i> role or equivalent rights to the files.</p>
+            </li>
+            <li>
+                <p>Ensure that the users or groups  have been granted the <u>following roles only</u> on the entity where the files belong:</p>
+                <ul>
+                    <li>
+                        <p><b>Contact - Entity Access</b> role for contacts or contact groups.</p>
+                    </li>
+                    <li>
+                        <p><b>Entity Access</b> role for staff or staff groups.</p>
+                    </li>
+                </ul>
+                <p>For example, if you want to grant staff member John Smith access to specific files in entity A, make sure that you select the <b>Entity Access</b> role for John Smith in the sharing properties of entity A.</p>
+                <p>The following figure shows the sharing properties icon.</p>
+                <p>
+                    <img src="../Images/share-properties-entities.png" alt="Share icon in the entity properties." style="width: 648px;height: 241px;" />
+                </p>
+            </li>
+            <li>
+                <p>From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Files</b>.</p>
+                <p>If you want to grant access to an activity, select <b>Activities</b>.</p>
+            </li>
+            <li>
+                <p>Select the files or activities that you want to assign roles for, then select <b>Share</b> (<img src="../Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Select the users or groups you want to have access to the file or activity, then select <b>Assign Roles to (#)</b>.</p>
+                <p>The list of roles that displays is different based on whether the selected users or groups are Staff or Contacts.</p>
+                <p>
+                    <img src="../Images/share-files-contacts.PNG" alt="Sharing specific files with a contact." />
+                </p>
+            </li>
+            <li>
+                <p>Select the check box next to the roles that you want to grant the users or groups.</p>
+            </li>
+            <li>
+                <p>Select <b>Share</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

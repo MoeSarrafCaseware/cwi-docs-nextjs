@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Current limitations</h1>
+        <p>The current Smart Copy-Paste functionality has the following limitations that will be resolved in future releases.</p>
+        <ul>
+            <li>You can copy the following documents:<ul><li><p>Financial Statements</p></li><li><p>Letters</p></li><li><p>Memos</p></li><li><p>Worksheets</p></li></ul><p>You cannot copy:</p><ul><li><p>Checklists</p></li><li><p>SE Builder Forms</p></li><li><p>Word/Excel/PDF</p></li><li><p>Risk, Materiality, Misstatements</p></li><li><p>Analysis</p></li><li><p>Placeholder</p></li><li><p>Documents that include visibility settings or formulas that reference  forms or embedded form sections</p></li></ul></li>
+            <li>
+                <p>Once you copy documents, potential missing or inconsistent data across templates are automatically identified. To learn more, see <a href="Resolve-conflicts-in-financial-statements.htm">Resolve conflicts in financial statements</a>.</p>
+            </li>
+            <li>
+                <p>For all other documents, you need to manually identify and resolve data discrepancies.</p>
+            </li>
+            <li>
+                <p>Conflict resolution for copied financial statements:</p>
+                <p>If a dynamic text with a response condition and a data link (fx) in the output text generates multiple conflicts, resolving one conflict causes the other conflicts to be removed from the <b>Broken Links</b> pane.</p>
+                <p>You resolve those conflicts by:</p>
+                <ol>
+                    <li>
+                        <p>Manually locate broken formulas in the document.</p>
+                        <p>Broken formulas display as <b>#ValueUnavailable#</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select the broken formula to launch the data link dialog and resolve the conflict.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Existing <b>Issues</b> in the source template (that is, the template where you copy documents from) are not copied.</p>
+            </li>
+            <p class="bestpractice"><b>Best Practice:</b> We recommend keeping the grouping structure between the source and destination template identical.</p>
+        </ul>
+    </body>
+</html>

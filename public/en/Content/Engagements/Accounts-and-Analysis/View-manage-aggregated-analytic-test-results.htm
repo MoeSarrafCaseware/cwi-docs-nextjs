@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>View and manage aggregated analytic test results</h1>
+        <p class="note"><b>Note:</b> This feature may not be available in your product.</p>
+        <p>Where there are multiple analytics tests attached to a single checklist procedure in your engagement, you can view the aggregate results. You can also filter them and view and set the status of each transaction that has been flagged by analytic tests.</p>
+        <p><b>To view the aggregate results for multiple analytic tests:</b>
+        </p>
+        <ol>
+            <li>On the Documents page, navigate to a checklist procedure where multiple analytic tests have been linked. The <b>Analytics</b> icon (<img src="../../Resources/Images/icon-analytics-test.png" style="vertical-align: text-bottom;" />) appears next to any checklist procedures where an analytic test is available.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/NavigatingToAnalyticTest.png" alt="Navigating to analytic tests from a checklist procedure." />
+        </p>
+        <ol>
+            <li value="2">Select the icon to view the test results: </li>
+        </ol>
+        <p class="indent">If multiple analytic tests have been linked to the checklist in your product, the Analytics Hub opens. If only a single analytic test is available for the procedure, a Results tab showing only results for that analytic test opens. See <a href="Run-analytics-tests-from-checklists.htm">View analytic test results for checklists</a>, for more information. </p>
+        <p>
+            <img src="../../Resources/Images/AnalyticsHub-Multiple.png" alt="Viewing multiple analytic tests in the Analytics Hub. " />
+        </p>
+        <ol>
+            <li value="3">Select the analytic tests you want to run and click <b>Run</b>.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/RunMultipleAnalyticTests.png" alt="Running the analytic tests that were selected in Analytics Hub." />
+            <br />
+        </p>
+        <ol>
+            <li value="4">Once the <b>Status</b> column shows Success indicators (<img src="../../Resources/Images/SuccessIndicator.png" alt="" style="vertical-align: text-bottom;" />) for the tests, click <b>Results</b>. </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/AnalyticsLastRun.png" alt="Navigating to aggregated results of multiple analytic tests. " />
+        </p>
+        <p class="indent">On the Aggregate results page, you have these options:</p>
+        <ul>
+            <li>
+                <p><a href="#Exclude">Exclude columns or analytic tests</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="#Filter">Filter aggregate data results</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="#Set">Set statuses of transactions flagged in analytic tests</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="#Export">Export aggregate results</a>
+                </p>
+            </li>
+        </ul>
+        <h2><a name="Exclude"></a>Exclude columns or analytic tests</h2>
+        <p><b>To exclude columns or analytic tests from aggregate results:</b>
+        </p>
+        <ol>
+            <li>Click <b>Columns.</b></li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/FilteringColumnsAggregateResults.png" alt="Filtering aggregate results on columns. " />
+        </p>
+        <ol>
+            <li value="2">Deselect the columns or analytic tests you want to exclude from the aggregate results.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/DeselectingColumnsAggregateResults.png" alt="Deselecting columns or analytic tests to exclude them from showing on the Aggregate results page. " />
+        </p>
+        <p class="indent">The columns or analytics tests you deselected are excluded from the Aggregate results page.</p>
+        <h2><a name="Filter"></a>Filter aggregate data results</h2>
+        <p>You can filter the aggregate results by clicking <b>Filters</b> and then in the Filters panel, making selections for any of the columns in the dataset. All the column filters use the CONTAIN operator, whereas the entire set of filters use the AND operator.</p>
+        <p><b>To filter aggregate data results:</b>
+        </p>
+        <ol>
+            <li>Click Filters.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/FilterAggregateResults.png" alt="Navigating to filters for aggregate results" />
+        </p>
+        <ol>
+            <li value="2">On the <b>Filters</b> panel, make selections to filter the data in the columns making up the aggregate results data. The filtering conditions you can apply depend on the format of the data in the column you're filtering. For example, in a date column such as <b>Posting date</b>, you can filter by a range of dates. If the column contains numerical data, you might filter by numerical ranges or specific values.</li>
+        </ol>
+        <p class="indent">The entire set of filters uses the AND operator.</p>
+        <p class="indent">In the example below, transactions will be retained by the filter if</p>
+        <p class="indent"><code>Checklist/Procedure =  `1-1 Data Reliability Checklist`&gt;</code> (any transaction line where Checklist/Procedure is set to the value `1-1 Data Reliability Checklist`)</p>
+        <p class="indent">AND</p>
+        <p class="indent"><code>Status = `Open`</code> (any transaction line where Status is set to the value `Open`)</p>
+        <p>
+            <img src="../../Resources/Images/AggregateResultsFilterExample.png" alt="Setting up filters on aggregate results from multiple analytic tests." />
+        </p>
+        <ol>
+            <li value="3">Click <b>Apply</b>.</li>
+        </ol>
+        <h2><a name="Set"></a>Set statuses of transactions flagged in analytic tests</h2>
+        <p>The Aggregate results page lists all the transactions flagged in the analytic tests that were run. You have the option of setting a status to track each transaction that was flagged. All flagged transactions start off set to Open.</p>
+        <p><b>To set the status of one or multiple transactions:</b>
+        </p>
+        <ol>
+            <li>In the leftmost column, select the list number of the one or more transactions whose status you want to edit.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/EditStatus-AggregateResults.png" alt="Selecting transaction lines where you want to edit the status. " />
+        </p>
+        <ol>
+            <li value="2">
+                <p>Click <b>Edit Status</b>.</p>
+            </li>
+            <li>
+                <p>Select the status to which you want to set the transactions you selected. In the example below, we are setting the transaction to the Investigating status.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/EditStatus.png" alt="Selecting a status to set the transaction line to." />
+        </p>
+        <ol>
+            <li value="4">
+                <p>Click <b>Save</b>. </p>
+            </li>
+        </ol>
+        <p class="note inline"> <b>Note:</b> The statuses available may vary according to the product. Those shown in the example above are those that are available by default.</p>
+        <h2><a name="Export"></a>Export aggregated results</h2>
+        <p>You can export the aggregated analytic test results displayed on the Aggregate results page to a CSV file.</p>
+        <p><b>To export aggregate results:</b>
+        </p>
+        <ol>
+            <li>Click <b>Export</b></li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/ExportAggregateResults.png" alt="Exporting aggregate results from multiple analytic tests. " />
+        </p>
+        <ol>
+            <li value="2">
+                <p>You are prompted with a message to the effect that the process to export the aggregate data may take several minutes. Click <b>Export</b>.</p>
+            </li>
+            <li>
+                <p>When prompted, specify the name of the CSV export file and its location.</p>
+            </li>
+        </ol>
+        <h2>Delete analytic test results</h2>
+        <p>Delete the results from one or more analytic tests by selecting the analytic tests that have been run and then selecting <b>Delete results</b>. </p>
+        <p><b>To delete analytic test results:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Go to the <b>Analytics Hub</b> page.</p>
+            </li>
+            <li>
+                <p>Analytic tests that have been successfully run and for which there are results have a green check mark in the <b>Success</b> column.</p>
+            </li>
+            <li>
+                <p>From these analytic tests that have been run, select those whose results you want to delete.</p>
+            </li>
+            <li>
+                <p>Select <b>Delete results</b> in the top menu.</p>
+            </li>
+            <li>
+                <p>In the <b>Delete analytic results</b> dialog that appears, select <b>Delete</b>.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/DeleteAnalyticTestResults.png" alt="Deleting analytic test results." />
+        </p>
+    </body>
+</html>

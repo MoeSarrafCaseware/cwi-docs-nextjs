@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Assign authorized staff to use single sign-on (Entra ID / Azure AD)</h1>
+        <p>If you want to ensure that only authorized staff within your firm are able to access Caseware Cloud via single sign-on, you can assign authorized users to your app in Entra. If you want all staff members at your firm to be able to access Caseware Cloud, you can skip this step and proceed to <a href="#Assign">assign API permissions</a>.</p>
+        <p style="font-weight: bold;">To assign authorized staff:</p>
+        <ol>
+            <li>
+                <p>Select <b>Entra ID</b> | <b>Enterprise Applications</b>, then select your app.</p>
+            </li>
+            <li>
+                <p>From the left-hand navigation pane, select <b>Properties</b>.</p>
+            </li>
+            <li>
+                <p>Set <b>User assignment required</b> to <b>Yes</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/azure-authorized-staff.png" alt="Set User Assignment Required to Yes." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+            <li>
+                <p>From the left-hand navigation pane, select <b>Users and Groups</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Add user</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/azure-add-user.png" alt="Select Add User." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Users</b> and select each user you want to assign to the application.</p>
+                <p class="note"><b>Note:</b> If you have a Premium Microsoft Entra account, you can create user groups and then select the group to grant access to all members of the group. For more information, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal">Create a basic group and add members</a>.</p>
+            </li>
+            <li>
+                <p>Select <b>Select</b> when you have added all users who should have access.</p>
+            </li>
+            <li>
+                <p>Select <b>Assign</b> to allow these users to access the application.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Assign-API-permissions.htm">Assign API&#160;permissions</a></p>
+    </body>
+</html>

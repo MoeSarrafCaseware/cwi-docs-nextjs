@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Integrate online accounting software with Caseware Cloud</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" />
+        <p>You can export invoices from Caseware Cloud to Xero or QuickBooks Online (QBO). This process is faster and more precise than manual data entry. Before you export invoices, you need to:</p>
+        <ol>
+            <li>
+                <p>Link your accounting software to Cloud.</p>
+            </li>
+            <li>
+                <p>Configure the integration settings.</p>
+            </li>
+        </ol>
+        <h2 id="link-cloud">Link online accounting software to Caseware Cloud</h2>
+        <p>To export invoices to online accounting software, link Cloud to an existing account.</p>
+        <p class="note"><b>Note:</b> If you're a QBO user, you must enable Custom transaction numbers before you export invoices. For more information, see <a href="https://community.intuit.com/articles/1145900-change-the-number-on-invoices-or-other-transactions">Change the number on invoices or other transactions</a>.</p>
+        <p><b>To link online accounting software to Cloud:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role and any Time permission.</p>
+            </li>
+            <li>
+                <p>Ensure the general ledger (GL) is disabled. For more information on disabling the GL, see <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm#Time">Time and Expense Settings</MadCap:xref>.</p>
+                <p>
+                    <img src="../../Resources/Images/firm-settings-time-time-and-expense-settings-gl-disabled.png" alt="The Time and Expense Settings page with the Enable general ledger option disabled." />
+                </p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Time | General | Accounting Software Integration</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Link to QuickBooks Online</b> or <b>Link to Xero</b>, then sign in to your account.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Note:</b> After linking to a Xero account, attempting to change the account may result in a data retrieval error.</p>
+        <h2>Configure integration settings</h2>
+        <p>To ensure that your invoices are correctly exported to your online accounting software, you need to set the default income account, default tax rate and default payment term.</p>
+        <h3>Set the default income account</h3>
+        <p>Exported invoices are applied to an income account that you select from the <b>Default Income Account</b> drop-down.</p>
+        <p style="font-weight: bold;">To set a default income account:</p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role and any Time permission.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Time | General | Accounting Software Integration</b>.</p>
+            </li>
+            <li>
+                <p>Select an income account from the <b>Default Income Account</b> drop-down.</p>
+                <p>
+                    <img src="../../Resources/Images/default-income-account.png" alt="Select an income account from the Default Income Account dropdown." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <h3>Set the default tax rate</h3>
+        <p>When you export invoices from Cloud to the accounting software, the tax jurisdiction is automatically mapped using a best-effort approach based on the tax rates set in Cloud. Alternatively, you can manually set a default tax jurisdiction by selecting a <b>Default Tax Rate</b> in Cloud.</p>
+        <p>The tax rates in the <b>Default Tax Rate</b> drop-down differ depending on your Cloud settings and your accounting software.</p>
+        <p style="font-weight: bold;">QuickBooks Online</p>
+        <p>Tax rates in QBO matching your <b>Primary Tax Rate</b> and your <b>Secondary Tax Rate</b> populate in the <b>Default Tax Rate</b> drop-down. For example, if your <b>Primary Tax Rate</b> is set to 10% and your <b>Secondary Tax Rate</b> is set to 5%, then tax rates in QBO with a primary rate of 10% and a secondary rate of 5% display in the <b>Default Tax Rate</b> drop-down.</p>
+        <p><b>Xero</b>
+        </p>
+        <p>Tax rates in Xero matching the total of your <b>Primary Tax Rate</b> and your <b>Secondary Tax Rate</b> populate in the <b>Default Tax Rate</b> drop-down. For example, if your <b>Primary Tax Rate</b> is set to 10% and your <b>Secondary Tax Rate</b> is set to 5%, then tax rates that total 15% from Xero display in the drop-down.</p>
+        <p>To learn more about setting tax rates, see <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm">Time (Settings)</MadCap:xref>.</p>
+        <p>If your clients are located in the same jurisdiction as your business, set the <b>Default Tax Rate</b> to your business tax jurisdiction. If you are exporting invoices for clients outside of your business jurisdiction, you may have to manually set the correct tax jurisdiction in your accounting software after you export the invoices.</p>
+        <p>For example, let's assume your business operates out of Nova Scotia, Canada and you have clients in both Nova Scotia and New Brunswick. Both jurisdictions require a tax rate of 15% for goods and services. If most of your clients are in Nova Scotia, set the Default Tax Rate to Nova Scotia. This way, each exported invoice that charges a 15% tax will have Nova Scotia set as the jurisdiction in your accounting software. If you export an invoice for New Brunswick (which also has a 15% tax rate), you need to manually change the jurisdiction in your accounting software.</p>
+        <p><b>To set a default tax rate for exported invoices:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role and any Time permission.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Time | General | Accounting Software Integration</b>.</p>
+            </li>
+            <li>
+                <p>From the <b>Default Tax Rate</b> drop-down, select the applicable tax rate.</p>
+                <p>
+                    <img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="The Accounting Software Integration section of the Settings page after integrating QuickBooks Online. " />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <h4>Set the default payment term</h4>
+        <p>The default payment term determines the number of days before the expected payment is due. For example, an invoice issued on July 10th with a default payment term of 7 is due on July 17th.</p>
+        <p>A default payment term of 0 sets the due date of all exported invoices to the date the invoice is issued. For example, an invoice created on September 1st with a payment term of 0 will have September 1 as the due date as well.</p>
+        <p>Once you integrate your accounting software, the default payment term is automatically set to 30.</p>
+        <p style="font-weight: bold;">To set a default payment term:</p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role and any Time permission.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Time | General | Accounting Software Integration</b>.</p>
+            </li>
+            <li>
+                <p>In the <b>Default Payment Term</b> field, enter a number between 0 and 999.</p>
+                <p>
+                    <img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="The Accounting Software Integration section of the Settings page after integrating QuickBooks Online. " />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>After you have completed integration, you can export invoices to your online accounting software. For more information, see</p>
+        <ul>
+            <li>
+                <p><a href="Export-invoices-to-QuickBooks-Online.htm">Export invoices to QuickBooks Online</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Export-invoices-to-Xero.htm">Export invoices to Xero</a>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

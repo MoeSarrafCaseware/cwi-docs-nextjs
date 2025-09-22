@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Get started with Cloud API</h1>
+        <p class="note inline"><b>Note:</b> If you are an existing Caseware Cloud API user and have implemented V1, plan your transition to V2. If you are a new user, be sure to start with V2. All examples are from V2.</p>
+        <p>Caseware Cloud API provides a set of API operations to automate the management of your practice data, such as clients, users, groups, permissions and more.</p>
+        <p>The SDK app exemplifies the following:</p>
+        <ul>
+            <li>
+                <p>Available endpoints and operations on each endpoint</p>
+            </li>
+            <li>
+                <p>Input and output parameters for each operation</p>
+            </li>
+            <li>
+                <p>Required and response headers</p>
+            </li>
+        </ul>
+        <h2>Authentication and authorization</h2>
+        <p>By registering an API client and acquiring an API token, you can send requests to Cloud API endpoints. Caseware Cloud API is structured around REST. Predictable resource-oriented URLs deliver JSON-encoded responses, along with standard HTTP response codes.</p>
+        <p>Cloud API follows the authentication requirements of the client credentials grant flow of the OAuth 2.0 protocol. This flow is designed for confidential, server-to-server communication with no end-user.</p>
+        <p><b>To get started:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Obtain a client ID and client secret. See <a href="../Explore/Interface/Firm-Settings/Integration.htm">Firm Settings - Integration</a> for more information. </p>
+            </li>
+            <li>
+                <p>Next, use the generated client ID and client secret to obtain an API token on POST /auth/token:</p>
+            </li>
+        </ol>
+        <p><b>Request</b>
+        </p>
+        <div><pre><code>curl --location 'https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/auth/token' \
+        --header 'accept: application/json' \
+        --header 'Content-Type: application/json' \
+        --data '{
+        "ClientId": "966592b3-8586-4541-9909-f7a901ef0b9a",
+        "ClientSecret": "sg1eb53tkbn6dez0momdxr0gm87fih1kkoekm40u",
+        "Language": "en"
+        }'</code></pre>
+        </div>
+        <p><b>Response</b>
+        </p>
+        <p><code>Status code: 200 OK</code>
+        </p>
+        <div><pre><code>
+            {
+            "Token": "YTA1NGNiOTgtOWJjOS02NDg5LWIyYTgtZTZhNDA5MDJiNGQwOjk1Y2U2YmRjLWUzMDktMmMxZS00ZDYyLWY5NWJmZGE4MGY1ZjpiYTk4OTc1YS04Mjc4LTRhZWEtOWVjOC0wMDcyM2FhMjRjNGY="
+            }</code></pre>
+        </div>
+        <p>Use the API token as a bearer token in an authorization header to make additional API requests. The API token remains valid for 30 minutes.<br /></p>
+        <h2>Session lifetime</h2>
+        <p>Each Cloud API authentication generates a new session that lives for 30 minutes and that doesn’t invalidate any previous sessions. A client secret reset invalidates all existing sessions of that API client. As a result, a new authorization is required.</p>
+        <h2>Rate limit policy</h2>
+        <p>The rate limit aims to prevent the starvation of Cloud API resources. When an API client makes a request, the availability of resources is temporarily decreased and replenished after a certain delay.</p>
+        <p>When no resources are available, HTTP status 429 (too many requests) is returned.
+			You can use the ratelimit response header to determine the remaining number of requests, burst capacity, replenishment rate, and the number of requested tokens. The token bucket algorithm regulates incoming requests. Imagine a bucket of tokens. When an API request is made, a token must be taken from the bucket to process the request further. The API request is rejected if no token is available in the bucket. Tokens are automatically added to the bucket at the replenishment rate as API requests consume tokens from the available pool.
+		</p>
+        <p> <b>Response headers</b></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Header</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x-ratelimit-burst-capacity</td>
+                    <td>The maximum number of tokens that the bucket can hold and that can be used in a second.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-remaining</td>
+                    <td>The number of tokens left in the bucket.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-replenish-rate</td>
+                    <td>The number of tokens replenished in a second.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-requested-tokens</td>
+                    <td>The number of tokens that an API request costs.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note inline"><b>Note:</b> The values of the rate-limit configuration are likely to change. Do not hard code these values.</p>
+        <h2>View API documentation</h2>
+        <p>Cloud API endpoint and parameters are described in the Caseware Cloud SDK app:</p>
+        <p><b>To view API documentation:</b>
+        </p>
+        <ol>
+            <li>In your browser, go to this URL:</li>
+        </ol>
+        <div><pre><code>https://{region}.casewarecloud.com/{firm}/sdk</code></pre>
+            <p>&#160;</p>
+        </div>
+        <ol>
+            <li value="2">On the left, expand  <b>/caseware-cloud</b></li>
+            <li>Select the version you are using. </li>
+            <li>Use the Search to locate the operation you need:</li>
+        </ol>
+        <p>
+            <img alt="Using the search to find an API operation" src="../Resources/Images/SearchAPI.png" />
+        </p>
+        <p>Query parameters that can be used in the API request are described.</p>
+        <p>See the format of the request URL by expanding the endpoint signature dropdown:</p>
+        <p>
+            <img src="../Resources/Images/API-endpoint-signature.png" alt="View the format of the request URL" />
+        </p>
+        <ol>
+            <li value="5">Refer to the response samples to the right for listings and descriptions of the data you can expect in the response. </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/GetEntityDetails.png" alt="View response samples for an API request" />
+        </p>
+    </body>
+</html>

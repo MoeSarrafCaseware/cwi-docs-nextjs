@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Journal Entry Relevance Ranking</h1>
+        <p>The Journal Entry Relevance Ranking (JERR) analytic package provides a sort order of recommendations for testing, mapped to worldwide audit standards, as an approach to comply with the journal entry (JE CAAT/JET) tests in an efficient manner.</p>
+        <p>It differs from other approaches by reducing the risk of over-selection or perceived false positives that create additional noise, such as a listing of rules-based tests or anomaly detection.</p>
+        <p>The JERR analytic package should only be used for JE CAAT/JET testing related to public accounting/auditing. It is likely unsuitable for any other purpose. Be sure to link the JERR to your engagement procedures.</p>
+        <h2>Statistical approach to relevance ranking</h2>
+        <p>The ranking methodology used in this analytic package addresses the need for relevance, rather than relying on generic anomaly detection that ranks the differences between similar transactions, even though this is a common practice. It aligns directly with auditing regulations, ensuring that flagged entries are meaningful for journal entry testing while optimizing processing efficiency.</p>
+        <h3>Process steps:</h3>
+        <ul>
+            <li>
+                <p><b>Narrow the scope:</b>
+                </p>
+                <p>Data is filtered to include only journal entries (e.g. general journals) and exclude sources like AR and AP modules, which are outside the regulatory focus. This step reduces processing overhead and focuses analysis on regulatory requirements, as the procedure is typically related to fraud risk (i.e. the highest risk in a general ledger within general journals).</p>
+                <p>Data may include manual and system, or only manual general journals, depending on the general journal mapping in the general ledger (GL). If your GL allows you to separately identify manual and system-created general journals, map to the manually created general journals as these would be the highest fraud risk aligned with the various global audit standards.</p>
+            </li>
+            <li>
+                <p><b>Rule-based testing:</b>
+                </p>
+                <p>A set of rule-based tests is applied to the filtered dataset, based on examples identified (as of August 30, 2024) in the following relevant auditing standards:</p>
+                <ul>
+                    <li>
+                        <p>International Public and Private Company Audit (IAASB): ISA 240 par. 31-32, A41-44</p>
+                    </li>
+                    <li>
+                        <p>US Private Company Audit (ASB): AU-C 240 par. 31-32, A47-50</p>
+                    </li>
+                    <li>
+                        <p>US Public Company Audit (PCAOB); AS 2401 par. 57-62</p>
+                    </li>
+                </ul>
+                <p>These tests include:</p>
+                <ul>
+                    <li>
+                        <p>JE- Transactions with a data range</p>
+                    </li>
+                    <li>
+                        <p>JE- Keyword search</p>
+                    </li>
+                    <li>
+                        <p>JE-Percentage high value amount</p>
+                    </li>
+                    <li>
+                        <p>JE-Out of balance entries</p>
+                    </li>
+                    <li>
+                        <p>JE-Amounts with recurring numeric pattern</p>
+                    </li>
+                    <li>
+                        <p>JE-Complex account combinations</p>
+                    </li>
+                    <li>
+                        <p>JE-Missing descriptions</p>
+                    </li>
+                    <li>
+                        <p>JE-Missing ID</p>
+                    </li>
+                    <li>
+                        <p>JE-Missing codes</p>
+                    </li>
+                    <li>
+                        <p>JE-Missing dates</p>
+                    </li>
+                    <li>
+                        <p>JE-Complex account combination</p>
+                    </li>
+                </ul>
+                <p>Positive results from these tests are represented as "1", while negative results are represented as "0".</p>
+            </li>
+            <li>
+                <p><b>Weighting individual rules:</b>
+                </p>
+                <p>The JERR’s foundation is based on a concept that dynamically weights each test result based on its prevalence in the general ledger. Therefore, each rule's results are weighted by rarity, calculated as:</p>
+                <p>(1 - Number of positive occurrences / Total rows in the filtered dataset)</p>
+                <p>This weighting ensures that rarer occurrences have a stronger influence on the final relevance rank.</p>
+            </li>
+            <li>
+                <p><b>Aggregating results for relevance:</b>
+                </p>
+                <p>For each journal entry, results from all tests are combined using the formula:</p>
+                <p>
+                    <img src="../../Resources/Images/RelevanceScoreFormula.png" alt="Relevance score formula (Σ (Positive Result × (1-Rarity) )/ # of tests have positive results)" />
+                </p>
+                <p>The final aggregated value indicates the relevance rank of each journal entry for testing, with values closer to 1.0 suggesting higher relevance. By emphasizing relevance rather than rarity alone, JERR ensures that flagged entries are meaningful and actionable for journal entry testing.</p>
+            </li>
+            <li>
+                <p><b>Selection criteria:</b>
+                </p>
+                <p>We recommend that each firm or organization adds final selection criteria to the relevance ranking for their methodologies. Selection criteria could align with historical sample sizes deemed appropriate for JE CAAT/JET testing, for example, ‘select the top 25 rankings’.</p>
+                <p>This approach leverages historically appropriate methodologies related to sampling, while providing a sort order for recommendations to sample based on direct linkage to standards. It also ensures higher quality over historic sampling methods, due to the extensive interrogation of the data set and the relevance score derived from the prevalence of the attribute.</p>
+                <p>Other approaches could be based on anything over a set relevance threshold or percentage of non-zero scores. However, due to the variable nature of dynamic weighting and the variety of ledgers across industries and clients, this may lead to extreme diversity in outcomes with little linkage to a rationale for selection.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Note:</b> The relevance rank should not be conflated with a risk score or other such concepts. The relevance rank is solely a sort order specifically designed for public auditing JE CAAT/JET testing, in accordance with the standards noted earlier as of the date of those standards and is narrowly fit-for-purpose for this sole use case.</p>
+    </body>
+</html>

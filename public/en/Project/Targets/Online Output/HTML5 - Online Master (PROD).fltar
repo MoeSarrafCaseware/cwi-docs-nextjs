@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  DefaultUrl="/Content/webapps.htm"
+  MasterToc="/Project/TOCs/Online Output.fltoc"
+  MasterPage="/Content/Resources/MasterPages/Default.flmsp"
+  Skin="(none)"
+  ExcludeUnreferencedContent="false"
+  RemoveMadCapStyles="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/CWI.css"
+  DisableAutoSync="true"
+  MoveOutputContentToRoot="true"
+  ConditionTagExpression="exclude[General.Ignore or General.PDF] "
+  PartialWordSearch="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

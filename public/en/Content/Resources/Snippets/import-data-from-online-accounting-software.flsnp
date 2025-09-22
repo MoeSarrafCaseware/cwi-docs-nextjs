@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Navigate to the <b>Data</b> page. The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+                <ul>
+                    <li>
+                        <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                    </li>
+                    <li>
+                        <p>If your engagement is consolidated and has internal subsidiary entities, select which entity you want to import data for from the list.<br /></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Under IMPORT FROM DATA CONNECTOR, select the accounting software from the list. This example uses Xero.</p>
+                <p>If your data source is not visible, enter its name into the Search box to find it.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Images/ImportFromDataConnector.png" alt="Searching for the accounting software you want to import data from." />
+        </p>
+        <p>&#160;</p>
+        <p class="note"><b>Note:</b> If you’re importing data from Sage Intacct, you’ll first need to ensure your client has added Caseware’s sender ID to the Web Services authorization section of their Sage configuration. Caseware’ sender ID is <code>CaseWare-MPP</code>. To learn more, see <a href="https://www.intacct.com/ia/docs/en_US/help_action/Company/Company_setup/Company_Information/Security/company-web-services-authorizations.htm?cshid=Web_services_authorizations#AddWebServicesauthorizations">Add Web Services authorizations</a>.</p>
+        <ol>
+            <li value="3">
+                <p>On the login page for the software you’re importing from, enter your credentials and grant permissions to allow access.</p>
+                <p>The authentication experience differs depending on your software. </p>
+            </li>
+            <li>
+                <p>If there are multiple organization options, the <b>Select Organization</b> stage displays. Select the appropriate organization to import data from, then <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>At the <b>Configure Data</b> stage of the import wizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Year start date</b> is automatically filled with the start date of the data.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end date</b> is automatically filled with the end date of the data.</p>
+                        <p class="note"><b>Note:</b>  Year end date must match the year-end date of the data to be imported. The year-end date of the engagement where you are importing this data must also match the end date of the data to be imported.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>In <b>Select dataset type</b>, choose the type of dataset you are importing.</p>
+                <p>To learn more about the dataset options, see <a href="../../Engagements/File-Preparation/Import-data-from-online-accounting-sofware-new-method.htm#Dataset">Dataset types</a>. Note that some dataset types may not be available in your product.</p>
+            </li>
+            <li>
+                <p>If you selected <b>Trial balance</b>, collapse the list of dataset types by selecting the <b>Collapse</b> icon  (<img src="../Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />). Notice the <b>Trial balance</b> options appear:</p>
+                <p>
+                    <img src="../Images/PlannedBalanceImport.png" alt="Importing a planning balance from an online accounting software provider." />
+                </p>
+            </li>
+            <ul>
+                <li>
+                    <p>Select <b>Planning trial balance</b> if you are importing a planning balance or <b>Final trial balance</b> if you are importing a final balance.</p>
+                </li>
+                <li>
+                    <p>Ensure <b>End date</b> is correct.</p>
+                </li>
+            </ul>
+        </ol>
+        <p class="note inline"><b>Note: </b>If you are importing final balances, or if planning balances have not been enabled in your product, <b>End date</b> must match the year-end date of the data to be imported. </p>
+        <p class="indent"> <ul><li><p>In <b>Prior years</b>, you have the option of importing data related to the last five years:</p></li><ul><li><p>Select <b>Import the last 5 years of final trial balance data</b> to import final balances. </p></li><li><p>Select Import the last 5 years of planning trial balance data to import planning balances. </p></li></ul></ul></p>
+        <ol>
+            <li value="8">
+                <p>Select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>At the Confirmation stage of the import wizard, review the information and select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Note:</b> If you navigate away from the Datasets tab while the data is importing, the import will continue. When you return to the Datasets tab, you'll be able to see the status of the import.</p>
+        <p>To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p>
+            <img src="../Images/ViewData-GL.png" alt="Clicking the View data button to view the dataset just imported. " />
+        </p>
+        <p>A new page appears displaying the data.</p>
+        <p>By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p>Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p>For more information, refer to <a href="../../Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">View the client's general and subledger data</a>.</p>
+        <p>&#160;</p>
+        <p>
+            <br />
+        </p>
+    </body>
+</html>

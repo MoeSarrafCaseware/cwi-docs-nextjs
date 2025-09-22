@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Create an Issuance Transform rule (ADFS)</h1>
+        <p>Create an Issuance Transform rule to map LDAP attributes to outgoing claims.</p>
+        <p style="font-weight: bold;">To create an Issuance Transform rule:</p>
+        <ol>
+            <li>
+                <p>In the ADFS Administration Console, click the <b>Application Groups</b> folder, then double-click your <a href="Create-a-new-application-group.htm">new application group</a>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-api-app-01.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Properties dialog, double-click the <a href="Create-a-Web-API-application.htm">Web API application</a>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-transform-rule-01.png" />
+                </p>
+            </li>
+            <li>
+                <p>In the Web API Properties dialog, click the <b>Issuance Transform Rules</b> tab, then click <b>Add Rule</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-transform-rule-02.png" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b>Claim rule template</b> drop-down and select <b>Send LDAP Attributes as Claims</b>. Click <b>Next</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-transform-rule-03.png" />
+                </p>
+            </li>
+            <li>
+                <p>Enter a claim rule name, then click the <b>Attribute store</b> drop-down and select <b>Active Directory</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/adfs-transform-rule-04.png" />
+                </p>
+            </li>
+            <li>
+                <p>Complete the Mapping of LDAP attribute to outgoing claim types table as follows:</p>
+                <table class="table">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <tbody>
+                        <tr>
+                            <th>LDAP Attribute</th>
+                            <th>Outgoing Claim Type</th>
+                        </tr>
+                        <tr>
+                            <td>E-Mail-Addresses</td>
+                            <td>email</td>
+                        </tr>
+                        <tr>
+                            <td>Given-Name</td>
+                            <td>given_name</td>
+                        </tr>
+                        <tr>
+                            <td>Surname</td>
+                            <td>family_name</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Click <b>Finish</b> to complete the configuration.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Generate-the-reply-URL-ADFS.htm">Generate the Reply URL</a></p>
+    </body>
+</html>

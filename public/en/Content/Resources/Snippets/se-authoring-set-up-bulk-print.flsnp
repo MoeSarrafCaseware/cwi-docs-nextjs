@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>At <b>Print | Bulk</b> <b>Print,</b> you can configure bulk printing for some documents, where they are grouped in one PDF document.</p>
+        <MadCap:snippetBlock src="to-access-the-product-settings.flsnp" />
+        <p style="font-weight: bold;">To configure bulk print:</p>
+        <ol>
+            <li>
+                <p>Create a document group.</p>
+            </li>
+            <p>Select <b>+ADD DOCUMENT GROUP</b> and specify a name for the group.</p>
+            <li>
+                <p>Add documents to the group.</p>
+            </li>
+            <p>Select <b>+ADD DOCUMENT</b> to choose the documents that you want to include in the group.</p>
+        </ol>
+        <p>You can select and drag (<img src="../Icons/bulk-print-drag.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to reorganize documents in the group. You can also select (<img src="../Icons/remove-currency.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to remove documents from the group or (<img src="../Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to delete the group itself.</p>
+        <p>When the user attempts to print any of the documents in the group, a drop-down list displays at the print icon. The group name shows in the list as one of the print options.</p>
+        <p style="font-weight: bold;">Example:</p>
+        <p>Bulk print configured to include a query document and a letter. The group name <b>Query and review letter</b> displays in the print menu. If selected, the query document and the letter are combined into one PDF for printing.</p>
+        <p>
+            <img src="../Images/bulk-print-menu.PNG" alt="Print drop down - Print all documents in group: Query and review letter" />
+        </p>
+    </body>
+</html>

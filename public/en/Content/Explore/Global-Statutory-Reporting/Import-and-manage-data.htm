@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Import and manage data</h1>
+        <p>You can import trial balance, general ledger and subledger data into your engagement from a variety of sources. </p>
+        <p>Data import files, such as Excel or CSV files, are referred to as data sources, which you can then configure and assign to a dataset on the <strong>Datasets</strong> page. Multiple data sources can be assigned to a single dataset. In addition, you can also import unstructured data—data that cannot be readily assigned to any of the existing dataset types—by selecting the Other dataset type. The import source and dataset options available to you vary based on your product. </p>
+        <p>Any engagement can have several types of datasets, which are collections of data normally found in an engagement. Each dataset stores data related to a different aspect of an engagement and has predetermined fields. See descriptions of datasets and their fields in <MadCap:xref href="#Dataset">Dataset types described</MadCap:xref>. </p>
+        <p class="note inline"><b>Note:</b> The <strong>Datasets</strong> page is not available for data imported from Working Papers or from another engagement. It is available for trial balance data imported from CSV or Excel only if enabled in your product. </p>
+        <p>To learn more about importing and managing your data, see:</p>
+        <ul>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file-old-method.htm">Import the trial balance from a CSV or Excel file (old method)</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the trial balance from a CSV or Excel file (new method)</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-data-from-online-accounting-sofware-new-method.htm">Import data from online accounting software</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-data-from-a-desktop-accounting-software.htm">Import data from desktop accounting software</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-from-Sage-desktop.htm">Import from Sage desktop</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-an-engagement-file.htm">Import the trial balance from an engagement file</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Manage-your-imported-data.htm">Manage your imported data</a>
+                </p>
+            </li>
+        </ul>
+        <h2>Data sources and datasets explained, an example</h2>
+        <p>The diagram conceptualizes the differences between data sources and datasets. See also <a href="../../Engagements/File-Preparation/Resolve-data-conflicts.htm">Resolve data import conflicts</a> for more information on how data conflicts can arise and how to solve them. </p>
+        <p>
+            <img src="../../Resources/Images/Dataset-versus-data-sources.png" alt="Data sources in relation to datasets" />
+        </p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>One or more data sources can be imported into a dataset. Each data import file is listed as a separate data source. There is a data conflict between ImportFileA and ImportFileB in the data row whose Supplier ID is 1234 in both files. In this case the user has opted to keep the data in ImportFileA.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>The resulting dataset does not necessarily contain all the data rows from all data sources depending on how any potential data conflicts are resolved. </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>You can view the data making up a dataset by exporting the dataset. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Dataset"></a>Dataset types described</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Dataset type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Understand-genledger-data.htm">General ledger</a>
+                    </td>
+                    <td>General ledger transactions</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Trial-balance-described.htm">Trial balance</a>
+                    </td>
+                    <td>A worksheet in which all ledgers are compiled into debit and credit columns in order to ensure a company's bookkeeping system is mathematically correct. </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AP-invoices.htm">Accounts payable - invoices
+</a>
+                    </td>
+                    <td>
+                        <p>The Accounts payable—invoices dataset contains all invoices received during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AP-payments-made.htm">Accounts payable - payments made</a>
+                    </td>
+                    <td>
+                        <p>The Accounts payable—payments Made dataset contains all payment transactions (check, wire transfer, cash, and so on) made during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AP-suppliers.htm">Accounts payable - suppliers</a>
+                    </td>
+                    <td>
+                        <p>The Accounts payable—suppliers dataset contains all details related to the Supplier such as Contact details, address, credit limit and so on.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AP-open-balances.htm">Accounts payable - open balances</a>
+                    </td>
+                    <td>
+                        <p>The Open accounts payable dataset contains details regarding all open, unpaid, or unresolved payable transactions as of the close of business on a specified date.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AR-invoices.htm">Accounts receivable - invoices</a>
+                    </td>
+                    <td>
+                        <p>The Accounts receivable—invoice dataset contains all invoices generated during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AR-cash-received.htm">Accounts receivable - cash received</a>
+                    </td>
+                    <td>
+                        <p>The Accounts receivables—cash received dataset contains all payment transactions (check, wire transfer, cash, and so on) received during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AR-customers.htm">Accounts receivable - customers</a>
+                    </td>
+                    <td>The Accounts receivable—customers dataset contains all details related to the customer, such as contact details, address, credit limit and so on.</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-AR-open-balances.htm">Accounts receivable - open balances</a>
+                    </td>
+                    <td>The Accounts receivable—open balances dataset contains details regarding all open, unpaid or unresolved customer transactions as of the close of business on a specified date.
+</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-inventory-transactions.htm">Inventory transactions</a>
+                    </td>
+                    <td>Captures all transactions affecting inventory accounts during the time period specified (for example, receipts, shipments, transfers, returns and adjustments).</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Engagements/File-Preparation/Subledger-data-schema-inventory-on-hand.htm">Inventory on hand</a>
+                    </td>
+                    <td>Captures the on-hand inventory quantities of items by location and amounts as of the specified date.</td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td>Unstructured transaction data that does not follow a predefined schema. Select this option to import data that does not correspond to any of the dataset types described here. 
+Each file you import using this dataset type is considered its own dataset.
+</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

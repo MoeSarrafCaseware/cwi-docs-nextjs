@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">To add dynamic text:</p>
+        <ol>
+            <li>
+                <p>Go to where you want to add a formula in the text.</p>
+            </li>
+            <li>
+                <p>Select <b>Add Data Link</b> (<img src="../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) from the toolbar.</p>
+            </li>
+            <li>
+                <p>At the <b>Dynamic Text</b> tab, select the <b>Add Condition</b> drop-down list.</p>
+            </li>
+            <p>Different set of parameters display in the <b>Data Link</b> dialog based on the condition you choose. </p>
+            <p>For information on how to set up conditions, see <a href="../../SE-Authoring/Conditions-for-glossary-terms-and-dynamic-text-display-logic.htm">Conditions for glossary terms and dynamic text display logic.</a></p>
+            <p>You can add more than one condition type to trigger additional text outputs. To add another condition, select<b> Add Condition.</b></p>
+            <p>You can also optionally specify an alternate output for the text if no conditions are met.</p>
+            <li>
+                <p>Once you're done, select <b>Save</b>.</p>
+            </li>
+            <p>If a condition (or conditions) is met, the corresponding output text you specified for that condition displays.</p>
+            <p>If no condition is met, the alternate text output (the one you specified for when none of the conditions are met) displays. Otherwise, <i>#ValueEmpty#</i> displays.</p>
+        </ol>
+        <p class="tip"><b>Tip:</b> You can remove a Data Link  by highlighting it, then selecting Delete or Backspace.</p>
+    </body>
+</html>

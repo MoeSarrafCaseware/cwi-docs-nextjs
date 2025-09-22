@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Account details described</h1>
+        <p>When <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions data display properly in the engagement. </p>
+        <p>This topic describes the fields within the <b>ACCOUNT DETAILS</b> category  that appear in the General ledger dataset. </p>
+        <p class="note inline"><b>Note: </b> that some fields are mandatory for specific analytic tests to function properly. Refer to the descriptions below.</p>
+        <h2>Account number (<code>account_id</code>)</h2>
+        <p>An identifier or the account the entry has been recorded in. <br />Examples "1001" or "Bank Account 1".</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Must be tagged for all transaction-related features to function.</p>
+                </li>
+                <li>
+                    <p>Associating trial balance with transaction information.</p>
+                </li>
+                <li>
+                    <p>Trial balance drill down into transactions.</p>
+                </li>
+                <li>
+                    <p>Analytic tests (embedded analytics) require <b>Account number</b>.</p>
+                </li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Less than 5,000 unique values.</p>
+                </li>
+                <li>
+                    <p>Matches with imported trial balance accounts.</p>
+                </li>
+            </ul>
+        </p>
+        <h2>Account name (<code>account_main_description</code>)</h2>
+        <p>An identifier description for the account group the entry has been recorded in. <br />Examples: "Cash", "Property, plant and equipment".</p>
+        <h3>Usage</h3>
+        <p>Visual text description for accounts.</p>
+        <h2>Entered by (<code>entered_by</code>)</h2>
+        <p>User ID for person creating the entry.</p>
+        <h3>Usage</h3>
+        <p>In these analytic tests:
+			<ul><li><p>Comparison</p></li><li><p>Unusual items</p></li></ul></p>
+        <h2>Entered date (<code>entered_date</code>)</h2>
+        <p>Actual date/time the entry was posted (validated) to the general ledger - provided automatically by system - does not necessarily correspond with the date when the entry was posted to the general ledger.</p>
+        <h3>Usage</h3>
+        <p>In the Unusual items analytic test.</p>
+        <h3>Requirements</h3>
+        <p>Date format must be properly set:
+				</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" />
+        <h2>Entry approved by (<code>entry_responsible_person</code>)</h2>
+        <p>User ID for person approving the entry.</p>
+        <h3>Usage</h3>
+        <p>In the Comparison analytic test.</p>
+    </body>
+</html>

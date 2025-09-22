@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Financial Information</h1>
+        <p>This Sherlock Canada Hybrid Visualization provides insights for a more effective engagement, including:</p>
+        <ul>
+            <li><a href="#Trial">Trial balance insights</a>
+            </li>
+            <li><a href="#Financial">Financial statement insights</a>
+            </li>
+            <li><a href="#Benchmarking">Benchmarking</a>
+            </li>
+        </ul>
+        <p>Each tab includes controls to display data based on the client name and year end.</p>
+        <div class="note">
+            <p><b>Note:</b> Prior to using Sherlock visualizations for the first time, you must configure them using the options in the <b>Configuration</b> tab. Some examples of these options include:</p>
+            <ul>
+                <li><b>Current assets:</b> Specify the leadsheets that are classified as current assets.  These leadsheets will be used to calculate different financial ratios and generate graphs in Sherlock for benchmarking purposes. Note that leadsheets from Working Papers' default leadsheet listing are selected by default, but can be removed if they are not applicable.</li>
+            </ul>
+        </div>
+        <h2><a name="Trial"></a>Trial balance insights</h2>
+        <p>
+            <img src="../../Resources/Images/scv-in-trial-balance-insights.png" style="border:1px solid #3f66a3" />
+        </p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Missing accounts</p>
+                    </td>
+                    <td>
+                        <p>Displays the number of accounts that are not included in the current year trial balance, but were present in prior years.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Analysis of missing accounts</td>
+                    <td>Displays details of the missing accounts for the selected year.</td>
+                </tr>
+                <tr>
+                    <td>New accounts</td>
+                    <td>Displays the number of new accounts in the engagement for the  selected year.</td>
+                </tr>
+                <tr>
+                    <td>Analysis of trial balance</td>
+                    <td>Displays details of the imported trial balance for the selected year.</td>
+                </tr>
+                <tr>
+                    <td>Exceeds variance threshold ($)</td>
+                    <td>
+                        <p>Displays the number of accounts with a variance greater than the amount in the <b>Variance threshold ($)</b> control, compared to the prior year.</p>
+                        <p>This widget can be used in tandem with the <b>Exceeds variance threshold (%)</b> widget, but will only highlight rows in the <b>Analysis of the trial balance</b> that meet one of the two thresholds, not both.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Exceeds variance threshold (%)</td>
+                    <td>
+                        <p>Displays the number of accounts with a variance greater than the amount in the <b>Variance threshold (%)</b> control, compared to the prior year.</p>
+                        <p>
+This widget can be used in tandem with the <b>Exceeds variance threshold ($)</b> widget, but will only highlight rows in the <b>Analysis of the trial balance</b> that meet one of the two thresholds, not both.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Financial"></a>Financial statement insights</h2>
+        <p>
+            <img src="../../Resources/Images/scv-in-financial-statement-insights.png" style="border:1px solid #3f66a3" />
+        </p>
+        <p class="note"><b>Note:</b> You can only generate comparative data between files that have been uploaded to Cloud. For example, if your Cloud file contains prior-year comparative balances, you’ll need to upload the prior-year file to Cloud for that data to display in Sherlock visualizations.</p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Current ratio trends</td>
+                    <td>
+                        <p>Displays trends in the current ratio, year-over-year.</p>
+                        <p><![CDATA[
+]]><b>Formula:</b> Current assets / Current liabilities</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debt ratio trends</td>
+                    <td>
+                        <p>Displays trends in the debt ratio, year-over-year.</p>
+                        <p><![CDATA[
+]]><b>Formula:</b> Total liabilities / Total assets</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debt-to-equity ratio trends</td>
+                    <td>
+                        <p>Displays trends in the debt-to-equity ratio, year-over-year.</p>
+                        <p><![CDATA[
+]]><b>Formula:</b> Total liabilities / Total equity</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Return on assets ratio trends</td>
+                    <td>
+                        <p>Displays trends in the return on assets ratio, year-over-year.</p>
+                        <p><![CDATA[
+]]><b>Formula:</b> Net income / Total assets</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gross profit ratio trends</td>
+                    <td>
+                        <p>Displays trends in the gross profit ratio, year-over-year.</p>
+                        <p><![CDATA[
+]]><b>Formula:</b> (Net sales - Cost of goods sold) / Net sales</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assets</td>
+                    <td>Displays an account breakdown of the assets category, year-over-year.</td>
+                </tr>
+                <tr>
+                    <td>Liabilities and equity (excl. net income)</td>
+                    <td>Displays an account breakdown of the liabilities and equity category, year-over-year.</td>
+                </tr>
+                <tr>
+                    <td>Revenue</td>
+                    <td>Displays an account breakdown of the revenue category, year-over-year.</td>
+                </tr>
+                <tr>
+                    <td>Expenses</td>
+                    <td>Displays an account breakdown of the expenses category, year-over-year.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Benchmarking"></a>Benchmarking</h2>
+        <p>
+            <img src="../../Resources/Images/scv-in-benchmarking.png" style="border:1px solid #3f66a3" />
+        </p>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <ul>
+                <li>You can only generate comparative data between files that have been uploaded to Cloud. For example, if your Cloud file contains prior-year comparative balances, you’ll need to upload the prior-year file to Cloud for that data to display in Sherlock visualizations.</li>
+                <li>Benchmarking data from the year in the <b>Year end</b> control will display in widgets regardless of whether it is selected in the <b>Year end(s) to benchmark</b> control.</li>
+            </ul>
+        </div>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Current assets benchmark</td>
+                    <td>Compares an entity’s current asset financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Long-term assets benchmark</td>
+                    <td>Compares an entity’s long-term assets financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Current liabilities benchmark</td>
+                    <td>Compares an entity’s current liabilities financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Long-term liabilities benchmark</td>
+                    <td>Compares an entity’s long-term liabilities financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Revenue benchmark</td>
+                    <td>Compares an entity’s revenue financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Expenses benchmark</td>
+                    <td>Compares an entity’s operating expenses financial statement category against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Net income benchmark</td>
+                    <td>Compares an entity’s net income against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+                <tr>
+                    <td>Gross margin benchmark</td>
+                    <td>Compares an entity’s gross margin against selected entities used as a benchmark. The benchmark is calculated as an average across years and entities.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

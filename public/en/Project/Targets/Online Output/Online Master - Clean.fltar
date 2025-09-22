@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="CleanXHTML"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Online Output.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/CWI.css"
+  MasterPage="/Content/Resources/MasterPages/Default.flmsp"
+  ExcludeUnreferencedContent="true"
+  DefaultUrl="/Content/webapps.htm"
+  MoveOutputContentToRoot="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

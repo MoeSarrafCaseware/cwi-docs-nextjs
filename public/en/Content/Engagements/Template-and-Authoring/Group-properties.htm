@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Group properties</h1>
+        <p>The following listing describes each property in the Group Properties dialog.</p>
+        <h2>Number</h2>
+        <p>Enter a unique mapping number. The mapping number must follow the existing mapping mask structure.</p>
+        <h2>Consistent Name</h2>
+        <p>Enter a description for the group to be displayed if the balance is consistent with the group's normal sign. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <h2>Contrary Name</h2>
+        <p>If applicable, enter a description for the group to be displayed if the balance is opposite to the group's normal sign. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <p>For example, "Bank Overdraft" will appear instead of "Bank" when the balance is a credit.</p>
+        <h2>Inconsistent Name</h2>
+        <p>If applicable, enter an alternative description for the group to be displayed when the current and prior year have opposite signs. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <p class="note"><b>Note:</b> This name takes precedence over the consistent name and contrary name regardless of the group balance in the Trial Balance.</p>
+        <h2>Sign</h2>
+        <p>Select the applicable sign (debit or credit).</p>
+        <h2>Parent group</h2>
+        <p>Select the higher level (next level up) group in the structure.</p>
+        <h2>Default group</h2>
+        <p>This property allows you to mark the group as one of your Default Groups or <i>preferred groups</i>. If the <b>Default Groups Only</b> option is enabled in the Groups View (Financials or Tax, or Prescribed), then only the default groups display in the page.</p>
+        <p>For example, if you have a large grouping structure, you can mark the most common groups that you work with (your preferred groups) by selecting the <b>Default group</b> check box. At the Groups View, select the <b>Default Groups Only</b> option to only display the marked groups (the ones that have the Default Group check box selected) in the page.</p>
+        <h2>Cycle and Area</h2>
+        <p>Select a business cycle and area for the group <b>Area/Cycle</b> drop-downs. If your Cloud app includes a risk assessment document, when you assign a group to a business cycle, items in that group will automatically be shown under this cycle in the document, making it easier to audit by business cycle.</p>
+        <h2>Component Categories</h2>
+        <p class="note"><b>Note:</b> This property is only available if components are enabled in your Cloud app.</p>
+        <p>Component categories organize the components in your product for multiple industries, entity types or reporting frameworks. For example, components related to industry type can be grouped in a category and components related to reporting frameworks in another category.</p>
+        <p>Select one or more categories to assign to the group from the <b>Component Categories</b> drop-down. Once you assign a category to a group, it's included in the Group Properties dialog and you can assign the applicable components.</p>
+        <h2>Components</h2>
+        <p class="note"><b>Note:</b> This property is only available if components are enabled in your Cloud app.</p>
+        <p>Components help you set up a market-driven, or region-driven visibility logic for trial balance groups. For example, if the entity operates within the Agriculture industry, then display trial balance groups that are relevant to agriculture.</p>
+        <p>If you associate multiple components to a trial balance group and there are visibility settings defined for each component in your Cloud app, then the visibility of the trial balance group varies based on whether the assigned components belong to the same category or different categories:</p>
+        <ul>
+            <li>
+                <p>If the assigned components belong to the same category, the trial balance group is visible if at least one component is visible - otherwise the group is hidden</p>
+            </li>
+            <li>
+                <p>If the assigned components belong to different categories, the trial balance group is visible if at least one component from each category is visible - otherwise, the group is hidden</p>
+            </li>
+        </ul>
+        <p>One exception to the above rules is if staff members add an account to an engagement, select the <b>Show Hidden</b> check box (in the <b>Assign Accounts</b> tab) and assign the new account to a hidden group. In this case, the group and its parent groups become visible.</p>
+        <p>For example, let's assume that the group <i>Operating expenses</i> is hidden due to component visibility settings. The user creates an account <i>Other expenses</i> and assigns it to <i>Operating expenses</i>. In this case, <i>Operating expenses</i> and its parent groups automatically become visible.</p>
+        <h2>Linked group structures</h2>
+        <p>Select groups in other grouping structures to link the financial group to it. This enables you to automatically assign accounts to groups in other grouping structures based on their initial group assignment.</p>
+        <h2>Reassign target for contrary accounts</h2>
+        <p>If applicable, select a group ("<b>reassign target</b>") for accounts with a contrary balance. If an account would be automatically assigned to this group but it does not match the selected sign (debit or credit) for this group, it will be automatically assigned to the <b>reassign target</b>.</p>
+        <p>For example, negative <b>Asset</b> --&gt; positive <b>Liability</b></p>
+        <h2>Classification</h2>
+        <p>Type or select a classification from a master chart of accounts. This master list of classifications allows direct automapping from an accounting package by matching the classification applied to the group to the account-type in the accounting package.</p>
+        <h2>Adjust preference of group</h2>
+        <p>Weight is used to automap accounts to a group based on a scale. For example, groups with a positive weight will be preferred over groups without a weight assigned.</p>
+        <h2>Breakdown by dimension</h2>
+        <p class="note"><b>Note:</b> Dimensions are only available if they have been enabled in your product.</p>
+        <p>If applicable, select dimension categories for the group from the <b>Breakdown by dimension</b> drop-down (values in the list are defined in product settings). This enables you to filter by dimensions when:</p>
+        <ul>
+            <li>
+                <p>Viewing financial groups</p>
+            </li>
+            <li>
+                <p>Inserting a trial balance row in a dynamic table</p>
+            </li>
+            <li>
+                <p>Inserting a trial balance data link</p>
+            </li>
+        </ul>
+    </body>
+</html>

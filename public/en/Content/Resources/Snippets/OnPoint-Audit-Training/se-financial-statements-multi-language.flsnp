@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><b>To add the French version of text sections in financial statements:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Navigate to the existing text section in the financial statements</p>
+            </li>
+            <li>
+                <p>Remove the English language content and add the French version of the content.</p>
+            </li>
+        </ol>
+        <p><b>To add French headers and footers in financial statements:</b>
+        </p>
+        <ol>
+            <li>
+                <p>To add the document level header and footer, select the <b>Settings</b> icon (<img src="../../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) and choose <b>Document Print Settings</b>.</p>
+            </li>
+            <li>
+                <p>Enter the header and footer content in the <b>Header</b> and <b>Footer</b> text fields.</p>
+            </li>
+        </ol>
+        <p>You can also add custom French headers and footers for individual areas in the financial statements, the financial statement notes, and page breaks.</p>
+        <p><b>To add a custom French header or footer in an area or page break:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Go to the desired area.</p>
+            </li>
+            <li>
+                <p>Select the <b>More actions</b> (<img src="../../Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon at the top right corner of the page.</p>
+            </li>
+            <li>
+                <p>Choose <b>Edit Print Settings</b> from the list of actions.</p>
+            </li>
+            <li>
+                <p>Select <b>Custom header</b> and <b>Custom footer</b> to display the text fields for the header or footer.</p>
+            </li>
+            <li>
+                <p>Enter the header and footer content in the text fields.</p>
+            </li>
+        </ol>
+        <p><b>To add a custom French header or footer for the financial statement notes:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the <b>Settings</b> icon (<img src="../../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) and choose <b>Notes Print Settings</b>.</p>
+            </li>
+            <li>
+                <p>Enter the header and footer content in the <b>Header</b> and <b>Footer</b> text fields.</p>
+            </li>
+        </ol>
+        <p>For any other French version items, such as the titles of areas, in the financial statements, you need to either use dynamic text or add the French version of the content and then set them to only show if the selected content language of the template is French.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.SE-Authoring"><b>To set up multi-language support in financial statements using dynamic text:</b>
+            </MadCap:conditionalText><b> </b>
+            <MadCap:conditionalText MadCap:conditions="General.Cloud-Help"><b>To author financial statements in French using dynamic text:</b>
+            </MadCap:conditionalText>
+        </p>
+        <ol>
+            <li>
+                <p>Go to the section you want to add French content to and select <b>Add Data Link</b> (<img src="../../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) from the toolbar.</p>
+            </li>
+            <li>
+                <p>The Data Link dialog opens.</p>
+            </li>
+            <li>
+                <p>At the <b>Dynamic Text</b> tab, add the French content in the <b>Output</b> field.</p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

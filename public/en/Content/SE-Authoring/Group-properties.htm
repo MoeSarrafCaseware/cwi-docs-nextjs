@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Group properties</h1>
+        <p>The following listing describes each property in the Group Properties dialog.</p>
+        <h2><a name="Number"></a>Number</h2>
+        <p>Enter a unique mapping number. If you have already imported groups, the mapping number must follow the existing mapping mask structure. </p>
+        <h2><a name="Consiste"></a>Consistent Name</h2>
+        <p>Enter a description for the group to be displayed if the balance is consistent with the group's normal sign. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <h2><a name="Contrary"></a>Contrary Name</h2>
+        <p>If applicable, enter a description for the group to be displayed if the balance is opposite to the group's normal sign. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <p>For example, "Bank Overdraft" will appear instead of "Bank" when the  balance is a credit. </p>
+        <h2><a name="Inconsis"></a>Inconsistent Name</h2>
+        <p>If applicable, enter an alternative description for the group to be displayed when the current and prior year have opposite signs. This description populates in the <b>Preliminary</b> column in the financial statements.</p>
+        <p class="note inline"><b>Note:</b> This name takes precedence over the consistent name and contrary name regardless of the group balance in the Trial Balance.</p>
+        <h2><a name="Sign"></a>Sign</h2>
+        <p>Select the applicable sign (debit or credit). </p>
+        <h2><a name="Type"></a>Type</h2>
+        <p>Select the appropriate statement type for this group (Balance Sheet, Income Statement of Comprehensive Income).</p>
+        <h2>Formula</h2>
+        <p>If applicable, enter an AOCI formula to calculate the values for this group. Once your user imports the trial balance, this group will display an amount derived from the balances in other groups.</p>
+        <p><b>Sample AOCI formula:</b>
+        </p>
+        <p> <span style="font-family: 'Courier New';">Tagbal("1.234",perspec({yearOffset}),{type},{code})</span> </p>
+        <p>, where 1.234 is the OCI group in the Income Statement section</p>
+        <h2><a name="Breakdow"></a>Breakdown by dimension</h2>
+        <p>If applicable, select dimension categories for the group from the <b>Breakdown by dimension</b> drop-down (values in the list are defined in <a href="Add-dimensions.htm#Add">Product Settings</a>). This enables users to filter the trial balance so that they can view balance information by dimension. </p>
+        <h2><a name="Include"></a>Include Dimensions</h2>
+        <p>This button is only available if a dimension category is selected in <b>Breakdown by dimension</b>. It allows you to exclude specific dimensions from the selected category.
+</p>
+        <p>The button displays the available dimensions in the selected category. You can exclude a specific dimension by clearing the check box next to it.
+</p>
+        <p style="text-align: left;">
+            <img src="../Resources/Images/include-dimensions-button.PNG" style="width: 257px;height: 174px;" alt="Breakdown by Dimension with a deminsion category selected" />
+        </p>
+        <h2><a name="Cycle"></a>Cycle and Area</h2>
+        <p>Select a business cycle and area for the group <b>Area</b>/<b>Cycle</b> drop-downs (values in the drop-downs are defined in the <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Product Settings</a>). When you assign a group to a business cycle, items in that group will automatically be shown under this cycle in the <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">Risk Assessment document</a>, making it easier to audit by business cycle.</p>
+        <h2><a name="Componen2"></a>Component Categories</h2>
+        <p>Component categories organize the components in your product for multiple industries, entity types or reporting frameworks. For example, you can group components related to industry type in a category and components related to reporting frameworks in another category. To learn more, see <a href="Define-components.htm">Define components</a>. </p>
+        <p>Select one or more categories to assign to the group from the <b>Component Categories</b> drop-down (the categories in the drop-down are defined in the <a href="Define-components.htm">Product Settings</a>). Once you assign a category to a group, it's included in the Group Properties dialog and you can assign the applicable components.</p>
+        <p>
+            <img src="../Resources/Images/component-category-property.png" alt="Users can select categories from the drop-down menu." />
+        </p>
+        <h2><a name="Componen"></a>Components</h2>
+        <p>Components help you set up  a market-driven, region-driven or product-driven visibility logic for trial balance groups. For example, if the entity operates within the <i>Agriculture</i> industry, then display trial balance groups that are relevant to agriculture. To learn more, see <a href="Define-components.htm">Define components</a>. </p>
+        <p>Before you can assign components, you must  select one or more <a href="#Componen2">component categories</a>. Once you select a category for the group, it's included in the dialog. Select one or more components to assign to the group from the category drop-down (components in the category drop-down are defined in the <a href="Define-components.htm">Product Settings</a>).</p>
+        <p>
+            <img src="../Resources/Images/components-in-a-category.PNG" alt="User selects Manufacturing and Agriculture, forestry, fishing and hunting categories. Notice how they are included in the dialog once selected." />
+        </p>
+        <p>If you associate multiple components to a trial balance group and <a href="Define-components.htm#To">define visibility settings</a> for each one of the components, then the visibility logic varies based on whether the assigned components belong to the same category or different categories:</p>
+        <ul>
+            <li>
+                <p>If the assigned components belong to the same category, the trial balance group is visible if at least one component is visible - otherwise the group is hidden</p>
+            </li>
+            <li>
+                <p>If the assigned components belong to different categories, the trial balance group is  visible if at least one component from each category is visible - otherwise, the group is hidden</p>
+            </li>
+        </ul>
+        <p>One exception to the above rules is if users add an account, select the <b>Show Hidden</b> check box (in the <b>Assign Accounts</b> tab) and assign the new account to a hidden group. In this case, the group and its parent groups become visible.</p>
+        <p>For example, let's assume that the group <i>Operating expenses</i> is hidden due to component visibility settings. The user creates an account <i>Other expenses</i> and assigns it to <i>Operating expenses</i>. In this case, <i>Operating expenses</i> and its parent groups automatically become visible.</p>
+        <h2><a name="Link"></a>Linked group structures</h2>
+        <p>Select groups in other grouping structures to link the financial group to it. This enables you to automatically assign accounts to groups in other grouping structures based on their initial group assignment.</p>
+        <h2>Properties</h2>
+        <p>This property is reserved for future use in custom forms development.</p>
+        <p MadCap:conditions="General.Ignore">&lt;INFORMATION REMOVED AS IT ONLY APPLIES TO OLD FINANCIALS WHICH WE NO LONGER SUPPORT- From WEEKLY TICKET MEETING, KYLE AND TEAM&gt;Select the applicable option from the Properties drop-down.</p>
+        <p MadCap:conditions="General.Ignore">
+            <img src="../Resources/Images/group-table-01.PNG" style="width: 530px;height: 75px;" alt="Properties drop-down" />
+        </p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>breakdown = visible</b> - Select this option to have the subgroups expanded by default in the financial statements.</p>
+                <p MadCap:conditions="General.Ignore"> For example, <b style="font-style: italic;">Property, plant and equipment</b> displays the subgroups <i>Property, plant and equipment</i> and <i>Property plant and equipment accumulated depreciation</i> by default. </p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Ignore">
+            <img src="../Resources/Images/group-table-02.PNG" style="width: 392px;height: 251px;" />
+        </p>
+        <ul MadCap:continue="true">
+            <p MadCap:conditions="General.Ignore">The group can be collapsed in the Financial Statements by selecting the <b>Collapse group</b> icon.</p>
+        </ul>
+        <p MadCap:conditions="General.Ignore">
+            <img src="../Resources/Images/group-table-03.PNG" style="width: 335px;height: 95px;" alt="Property, Plant and Equipment and Property, Plant and Equipment subgroup collapsed" />
+        </p>
+        <ul>
+            <li MadCap:conditions="General.Ignore"><b>breakdown = hidden</b> - Select this options to have subgroups collapsed by default in the Financial statements. You can expand the details in the Financial Statements by selecting the <b>Expand group</b> icon.</li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>breakdown = none</b> - Select this option to hide subgroups in the Financial Statements.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>highLevelView = true</b> - Enter this property for any account groups that should be collapsed when the user selects the <b>Collapse</b> button in the trial balance.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>financialClassification = netIncome</b> - Select this option to mark the group as net income. </p>
+            </li>
+        </ul>
+        <h2><a name="Allow"></a>Allow account assignment</h2>
+        <p style="font-weight: normal;">Select this check box to allow accounts to be assigned to this group. </p>
+        <h2><a name="Reassign"></a>Reassign target for contrary accounts</h2>
+        <p>If applicable, select a group (<b>"reassign target"</b>) for accounts with a contrary balance. If an account would be automatically assigned to this group but it does not match the selected sign (debit or credit) for this group, it will be automatically assigned to the <b>reassign target. </b></p>
+        <p>For example, negative <b>Asset</b> --&gt; positive <b>Liability</b></p>
+        <h2><a name="Classifi"></a>Classification</h2>
+        <p>Type or select a classification from a <a href="https://docs.google.com/spreadsheets/d/1o_RjAZ18tN27Q37g5EMujJPPCaPNqxLGPL1FV-8WlL4/edit#gid=0">master chart of accounts.</a> This master list of classifications allows direct automapping from an accounting package by matching the classification applied to the group to the account-type in the accounting package.</p>
+        <h2><a name="Adjust"></a>Adjust preference of group</h2>
+        <p>Weight is used to automap accounts to a group based on a scale. For example, groups with a positive weight will be preferred over groups without a weight assigned. </p>
+        <h2><a name="Account"></a>Account balance restrictions</h2>
+        <p>Specify the types of accounts that can be assigned based on their balance: </p>
+        <ul>
+            <li>accounts with any balance to be assigned</li>
+            <li>only accounts with a debit (positive) balance to be assigned</li>
+            <li>only accounts with a credit (negative) balance to be assigned</li>
+        </ul>
+        <h2>Parent group</h2>
+        <p>Select the higher level (next level up) group in the structure. </p>
+        <h2><a name="Default"></a>Default group</h2>
+        <p>This property allows you to mark the group as one of your Default Groups <i>or preferred groups</i>. If the <b>Default Groups Only</b> option is enabled in the Groups View (Financials or Tax, or Prescribed), then only the default groups display in the page.</p>
+        <p>
+For example, if you have a large grouping structure, you can mark the most common groups that you work with (your preferred groups) by selecting the <b>Default group</b> check box. At the Groups View, select the <b>Default Groups Only</b> option to  only display the marked groups (the ones that have the Default Group check box selected) in the page.
+</p>
+    </body>
+</html>

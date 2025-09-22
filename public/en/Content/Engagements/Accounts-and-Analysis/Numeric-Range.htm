@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Numeric Range</h1>
+        <p>The Numeric Range analytic test identifies transactions within a defined value range. Its main purpose is to flag high-value transactions, but you can adjust the configuration to detect transactions falling below a set threshold or within specific value ranges. You can also select to use percentage-based thresholds instead of numeric thresholds. For example, you can configure the test to identify the highest one percent of transactions.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Transactions that contain significant estimates</p>
+            </li>
+            <li>
+                <p>Complex, non-routine or unusual business transactions that may warrant further investigation</p>
+            </li>
+            <li>
+                <p>Material transactions</p>
+            </li>
+            <li>
+                <p>Missing transactions which were potentially voided</p>
+            </li>
+            <li>
+                <p>Valuation issues</p>
+            </li>
+            <li>
+                <p>Material transactions from within the population</p>
+            </li>
+            <li>
+                <p>Low or zero value transactions from within the population</p>
+            </li>
+            <li>
+                <p>Zero value transactions or balances</p>
+            </li>
+            <li>
+                <p>A range of values such as just below a cut-off point</p>
+            </li>
+            <li>
+                <p>Debit accounts with credit transactions or credit accounts with debit transactions</p>
+            </li>
+            <li>
+                <p>Customers with large credit limits</p>
+            </li>
+            <li>
+                <p>Account receivable balances over a certain amount</p>
+            </li>
+            <li>
+                <p>Account payable balances over a certain amount</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>This analysis uses one numeric field that contains either amounts or quantities. You can select which field to use when you set the test parameters.</p>
+        <h2>Parameters</h2>
+        <p>There are multiple parameters that must be set in order to run the test:</p>
+        <ul>
+            <li>
+                <p><b>Select fields</b> - Select one or more numeric fields from the list to use to perform the test.</p>
+            </li>
+            <li>
+                <p><b>Numeric or Percentage</b> - Select whether to perform the test using the numeric value of the fields or percentage values. <b>Numeric</b> is selected by default. The option you select here determines what the remaining parameters are for this test.</p>
+            </li>
+        </ul>
+        <p>If you select <b>Numeric</b>, make selections for the following parameters:</p>
+        <ul>
+            <li>
+                <p><b>High value threshold</b> - Enter a value in this field to extract all transactions with amounts higher than this value.</p>
+            </li>
+            <li>
+                <p><b>Low value threshold</b> - Enter a value in this field to extract all transactions with amounts lower than this value.</p>
+            </li>
+            <li>
+                <p><b>Value ranges</b> - Enter one or more value ranges to extract all transactions with amounts in these ranges.</p>
+            </li>
+            <li>
+                <p><b>Exact values</b> - Enter an exact value to extract all transactions with that value. For example, you can use this parameter to extract all zero value transactions.</p>
+            </li>
+        </ul>
+        <p>If you select <b>Percentage</b>, make selections for the following parameters:</p>
+        <ul>
+            <li>
+                <p><b>High percentage threshold</b> - Enter a percentage in this field to extract all transactions with percentages higher than this value.</p>
+            </li>
+            <li>
+                <p><b>Low percentage threshold</b> - Enter a percentage in this field to extract all transactions with percentages lower than this value.</p>
+            </li>
+            <li>
+                <p><b>Value ranges</b> - Enter one or more percentage ranges to extract all transactions with percentages in these ranges.</p>
+            </li>
+            <li>
+                <p><b>Exact values</b> - Enter an exact percentage to extract all transactions with that percentage.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Amount range</b> - Identifies transactions within a defined range for amount fields based on a numeric value or a percentage value.</p>
+            </li>
+            <li>
+                <p><b>Discount range</b> - Identifies transactions within a defined range for discount fields based on a numeric or a percentage value.</p>
+            </li>
+            <li>
+                <p><b>Quantity range</b> - Identifies transactions within a defined range for quantity fields based on a numeric or a percentage value.</p>
+            </li>
+            <li>
+                <p><b>Due days range</b> - Identifies transactions within a defined range for due days fields based on a numeric or a percentage value.</p>
+            </li>
+            <li>
+                <p><b>Numeric range</b> - Identifies transactions within a defined range based on a numeric or a percentage value.</p>
+            </li>
+            <li>
+                <p><b>High monetary value</b> - Identifies transactions where the amount field is greater than or equal to the defined numeric value.</p>
+            </li>
+        </ul>
+        <h2>Technical specifications</h2>
+        <p>When you run the Numeric Range analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that the field selected to perform the test is numeric.</p>
+            </li>
+            <li>
+                <p>Based on the parameters selected by the user, determine the type of amount extraction:</p>
+                <ul>
+                    <li>
+                        <p>Equal to the value</p>
+                    </li>
+                    <li>
+                        <p>Greater than the value</p>
+                    </li>
+                    <li>
+                        <p>Greater than and equal to the value</p>
+                    </li>
+                    <li>
+                        <p>Less than the value</p>
+                    </li>
+                    <li>
+                        <p>Less than and equal to the value</p>
+                    </li>
+                    <li>
+                        <p>Not equal to the value</p>
+                    </li>
+                    <li>
+                        <p>A range of values</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Obtain from the user if the analytic will be based on a percentage or a value.</p>
+                <ul>
+                    <li>
+                        <p>If value is selected then obtain the value from the user. If the option is range extraction then two values will be needed.</p>
+                    </li>
+                    <li>
+                        <p>If a percentage is selected then obtain the percentage from the user and then calculate the value that the percentage represents. This will change depending on the type of extraction such as 10% for high values would give a different value than 10% for low values. If the option is range extraction then two values will be needed.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

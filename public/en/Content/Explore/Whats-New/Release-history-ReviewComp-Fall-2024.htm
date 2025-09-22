@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>What's new - Caseware ReviewComp Fall 2024 (v1.2939.0)</h1>
+        <p>Here's a list of what's new in the Caseware ReviewComp Fall 2024 release.</p>
+        <h2>New features and enhancements</h2>
+        <h3><a name="Newuserinterface"></a>New user interface for trial balance imports from Excel or CSV</h3>
+        <p>We've revamped the user interface for importing trial balance data from Excel or CSV files to support engagement files with a much greater number of accounts, as well as to bring us closer to providing a more tightly integrated, polished data acquisition user experience.</p>
+        <ul>
+            <li>
+                <p>Import Excel files containing formulas. This means you will no longer have to manually remove formulas used to calculate values before you import your data.</p>
+            </li>
+            <li>
+                <p>Trial balance deletion</p>
+            </li>
+            <li>
+                <p>Enhancements to trial balance reimport</p>
+            </li>
+            <li>
+                <p>Dimensions for general ledger datasets</p>
+            </li>
+        </ul>
+        <p>For more information, see <a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the trial balance from a CSV or Excel file</a>.</p>
+        <h3><a name="Partnermanagersummary"></a>Partner and manager summary document</h3>
+        <p>We've added a new document to Review engagements. It's designed to streamline review work by providing a more efficient way to review key information and monitor progress across your engagement.</p>
+        <p>The <b>5-30 Partner and manager summary</b> includes an overview of the following:</p>
+        <ul>
+            <li>
+                <p>Financial information</p>
+            </li>
+            <li>
+                <p>Overall engagement information</p>
+            </li>
+            <li>
+                <p>Engagement team</p>
+            </li>
+            <li>
+                <p>Documents with non optimal answers</p>
+            </li>
+            <li>
+                <p>Documents with custom conclusions</p>
+            </li>
+            <li>
+                <p>Documents with custom sign-off schemes</p>
+            </li>
+            <li>
+                <p>Issues raised and the corresponding status</p>
+            </li>
+            <li>
+                <p>Posted adjustments</p>
+            </li>
+            <li>
+                <p>Documents with overridden visibility</p>
+            </li>
+            <li>
+                <p>Documents modified after sign-off</p>
+            </li>
+        </ul>
+        <h3><a name="FinGrpUI"></a>Enhanced financial group layout</h3>
+        <p>We’ve updated the layout of the <b>Data | Financial Groups</b> page to include additional subgroup details in specific groups, such as revenue and cost of sales.</p>
+        <p>
+            <img src="../../Resources/Images/enhanced-fg-layout.png" alt="The new layout of the Financial Groups page." />
+        </p>
+        <h3><a name="Synctrialbalance"></a>Sync trial balance across engagements</h3>
+        <p>During data import, a new option called <b>Sync Trial Balance</b> lets you automatically link data from another engagement. Any changes you make to the source data will be reflected in the synced engagement, keeping everything up-to-date.</p>
+        <p>
+            <img src="../../Resources/Images/SyncTrialBalance.png" alt="Sync Trial Balance option" />
+        </p>
+        <p>When engagement data is synced from another engagement:</p>
+        <ul>
+            <li>
+                <p>A link to the source engagement is displayed on the <b>Data</b> page.</p>
+            </li>
+            <li>
+                <p>You cannot edit accounts, groups or adjustments synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You cannot assign accounts that have been synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You can create issues and annotations for synced accounts and groups but cannot create annotations for synced adjustments.</p>
+            </li>
+            <li>
+                <p>When changes are made to the source engagement, users in the destination engagement receive a notification to inform them that those changes have been applied to their file. Engagements are resynced every five minutes.</p>
+            </li>
+            <li>
+                <p>If you lock down an engagement that contains data synced from a source engagement, changes made in the source engagement are no longer synced.</p>
+            </li>
+            <li>
+                <p>If both the source and destination engagement are carried forward, the carried forward files are automatically linked so you can continue to sync data from the current year's source engagement.</p>
+            </li>
+        </ul>
+        <h3><a name="Bulkactions"></a>Bulk actions for documents</h3>
+        <p>The <b>Documents</b> page now features the option to make changes to multiple documents at once.</p>
+        <p>
+            <img src="../../Resources/Images/BulkDocuments.png" alt="Enabling Bulk actions option on a documents in an engagement." />
+        </p>
+        <p>When you turn on the <b>Bulk actions</b> option from the <b>More actions</b> (<img src="../../Resources/Images/more-actions-inline.png" alt="" style="vertical-align: text-bottom;" />) menu on the <b>Documents</b> page, you can select multiple documents and then move, delete or sign off on all of those documents at once.</p>
+        <p><b>Document permissions:</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>Firm authors:</b> Can't delete documents available in the app by default.</p>
+            </li>
+            <li>
+                <p><b>End users:</b> Can't delete documents available in the app by default or those created by firm authors.</p>
+            </li>
+            <li>
+                <p><b>Bulk Sign-off:</b> This option is only available within engagements.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/bulk-actions-rc-01.png" alt="The options to move, sign off, or delete selected documents at the top of the Documents page." />
+        </p>
+        <p>If you try to delete documents without permission, a confirmation dialog will list the documents you can't delete.</p>
+        <p>
+            <img src="../../Resources/Images/bulk-actions-rc-02.png" alt="The Delete Documents confirmation dialog." />
+        </p>
+        <p>During bulk sign-off, you can review documents before finalizing. The <b>Review</b> dialog displays a <b>Status</b> column highlighting any important information you should be aware of.</p>
+        <p>For instance, if you're signing off on a checklist, the <b>Status</b> column will indicate if any procedures still need to be signed off on.</p>
+        <p>Similarly, the dialog will alert you if you've selected any documents that cannot be signed off on at this time.</p>
+        <p>
+            <img src="../../Resources/Images/bulk-actions-rc-03.png" alt="The Review selected documents dialog." />
+        </p>
+        <p>When you have completed the actions you want to take you can turn off <b>Bulk actions</b> from the <b>More actions</b> (<img src="../../Resources/Images/more-actions-inline.png" alt="" style="vertical-align: text-bottom;" />) menu or select the <b>Close</b> (<img src="../../Resources/Images/CloseIcon.png" style="vertical-align: text-bottom;width: 15px;height: 15px;" alt="" />) icon.</p>
+        <p>
+            <img src="../../Resources/Images/bulk-actions-rc-04.png" alt="The Close icon highlighted at the top of the page." />
+        </p>
+        <h3>Qualitative Disclosures section</h3>
+        <p>We've added a new section in <b>2-10 Materiality</b> to describe the nature and impact of qualitative considerations.</p>
+        <p>
+            <img src="../../Resources/Images/qualitative-disclosures-section.png" alt="The Qualitative Disclosures section in the Materiality document." />
+        </p>
+        <h3><a name="Linkannotations"></a>Link annotations to checklist procedures</h3>
+        <p>You can now link annotations to specific checklist procedures instead of the checklist document as a whole. You can select a specific procedure after they select a checklist document from the <b>Link</b> dropdown. They can expand and collapse groups and procedures with subprocedures to find the procedure they're looking for. The selected procedure is displayed in blue.</p>
+        <p>
+            <img src="../../Resources/Images/link-annotations.png" alt="Editing an Annotation, with the Link drop-down as an option." />
+        </p>
+        <h3>Carry forward for adjustments</h3>
+        <p>You can now edit and delete prior year adjustments in engagements created from carry forward.</p>
+        <h3>Calculated adjustments</h3>
+        <p>You can now create calculated adjustments. When you add an account or group line to an adjustment, they can select <b>fx</b> in the <b>Amount</b> field and create a calculation to determine the adjustment amount.</p>
+        <p>
+            <img src="../../Resources/Images/calculated-adjustments-01.png" alt="The New Adjustment dialog with the calculation field highlighted." />
+        </p>
+        <p>Similarly to custom calculations in dynamic tables, you can reference trial balance data in the calculation. If the value of the referenced trial balance account or group is changed, a <b>Recalculate</b> button appears for the adjustment on the <b>Adjustments</b> page. Users can select this button to recalculate and update the adjustment amount.</p>
+        <p>If more than one adjustment requires recalculation, users can also select the <b>Recalculate all</b> button at the top of the page to recalculate all adjustments at once.</p>
+        <p>
+            <img src="../../Resources/Images/calculated-adjustments-02.png" alt="The Recalculate button at the top of the document." />
+        </p>
+        <h3>Customize headings in financial statements</h3>
+        <p>The following updates have been made to give you more customization options for headings in financial statements:</p>
+        <ul>
+            <li>
+                <p>The Formatting Options dialog now includes a field to set the font size for area titles.</p>
+            </li>
+            <li>
+                <p>You can now add numbering for area titles in the Numbering Heading Options dialog. While previously the numbering was only displayed in the Document Map, it is now also displayed when you navigate to the area in the financial statements as well as in the table of contents</p>
+            </li>
+            <li>
+                <p>All five heading levels for areas and notes can now be displayed in the table of contents.</p>
+            </li>
+            <li>
+                <p>You can now hide individual headings for areas and notes from the table of contents as well as hide the numbering for an individual heading from the <b>More actions</b> (<img src="../../Resources/Images/more-actions-inline.png" alt="" style="vertical-align: text-bottom;" />) menu for an area or note.</p>
+            </li>
+        </ul>
+        <h3>Page numbering settings for financial statements</h3>
+        <p>The print settings for financial statement areas now include a <b>Page Numbering</b> section. You can choose whether to continue the page numbering from the previous area or restart the numbering.</p>
+        <p>
+            <img src="../../Resources/Images/PageNumbering-FS.png" alt="Page numbering settings for financial statements" />
+        </p>
+        <h3>Edit planning balances on the Data page</h3>
+        <p>You can now edit planning balances on the <b>Data</b> page even after the final balance has been imported.</p>
+        <h3>Search for financial groups on the Data page</h3>
+        <p>To allow you to more easily find financial groups, a search option is now available on the <b>Financial groups</b> tabs on the <b>Data</b> page.</p>
+        <p>
+            <img src="../../Resources/Images/search-financial-groups.png" alt="The search option on a Financial group." />
+        </p>
+        <h3>Hide zero balance columns in dynamic tables</h3>
+        <p>You can now set dynamic table columns to hide automatically if the column contains only zero balances from the table settings.</p>
+        <p>When you create a new dynamic table in a template or engagement, the <b>Hide zero balance columns</b> setting is turned on by default. The setting is turned off for any existing dynamic tables created before this release.</p>
+        <p>
+            <img src="../../Resources/Images/hide-zero-balance-columns.png" alt="The Hide zero balance columns option selected in the Settings drop-down menu." />
+        </p>
+        <h3>Financial groups on the Data page</h3>
+        <p>When you access the financial groups tabs of the <b>Data</b> page, you can now:</p>
+        <ul>
+            <li>
+                <p>Reorder groups</p>
+            </li>
+            <li>
+                <p>Expand and collapse groups</p>
+            </li>
+        </ul>
+        <h3>Add accounts for internal subsidiaries</h3>
+        <p>In consolidation engagements, you can now manually add and edit accounts for internal subsidiaries.</p>
+        <h3>Select multiple dimensions when posting adjustments</h3>
+        <p>When you post adjustments to groups, you can now select multiple dimensions for each group line in the adjustment.</p>
+    </body>
+</html>

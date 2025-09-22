@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>New in SE 2025-02 </h1>
+        <p>Welcome to SE 2025-02! This release introduces new numbered heading options for financial statements, the ability to open and edit PDFs locally and sync back to the Document Manager and the ability to enable/disable the <b>Sync trial balance</b> function from the data import workflow.</p>
+        <p>To view the most recent fixes in this release, see the following:</p>
+        <ul>
+            <li>
+                <p><a href="#Fixes">Fixes in SE 2025-02</a>
+                </p>
+            </li>
+        </ul>
+        <h2>Numbered heading options in financial statements</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a><a href="end-user.htm">#enduser</a>
+        </p>
+        <p>Users can now choose whether note and area headings are numbered. In addition, the style of numbering can be customized per each individual Area or applied across the entire financial statement. The new option is available from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) menu for each Area.</p>
+        <p>
+            <img src="../Resources/Images/numbered-heading-feature.png" alt="The heading options for Area in Caseware Cloud." />
+        </p>
+        <p>
+            <img src="../Resources/Images/numbered-heading-feature enabledisable.png" alt="Numbered headings in area tab" />
+        </p>
+        <p>In addition to being able to hide headings, users can now hide numbers that are applied to headings, including automatic numbering, for an individual heading. This feature is available from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) menu for each heading for the notes and text areas in the financial statements. The number will also be hidden in the Table of Contents should the heading be displayed.</p>
+        <p>
+            <img src="../Resources/Images/numbered-heading-feature3.png" alt="Visibility options dialog." />
+        </p>
+        <h2>Open / edit PDFs locally from Document Manager</h2>
+        <p><a href="end-user.htm">#enduser</a>
+        </p>
+        <p class="note inline"><b>Note:</b> This feature requires a one-time protocol installation and may not be available in your product.</p>
+        <p>Users can now open PDF files that have been added to the engagement in using a standard PDF viewer or editor app installed on your machine. This includes the ability to comment on and highlight PDFs, enabling better collaboration on your engagements. Once users save the file, the edits they made will be synced to the file in the engagement. To learn more, refer to <a href="../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Open">Open and edit PDFs locally</a>.</p>
+        <p>
+            <img src="../Resources/Images/Open_PDF.png" alt="Screenshot of 'Open' menu to 'Open file locally' option." />
+        </p>
+        <h2>Enable/disable Sync trial balance from the engagement file import flow</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <div class="note">
+            <p><b>Note:</b> To include this feature, add the following to the features array in the <i>product.json</i>:</p>
+            <p><code>"feature": {</code>
+            </p>
+            <p><code>"syncTrialBalance": false,</code>
+            </p>
+            <p>For more information, see <a href="https://developers.caseware.com/se-authoring/31/List-of-product-features-(API).htm#Trial">List of product features / Trial balance</a>.</p>
+        </div>
+        <p>Primary authors can now enable or disable the <b>Sync trial balance</b> toggle from the engagement file import workflow.</p>
+        <p>
+            <img src="../Resources/Images/disable_sync_trial_balance.png" alt="A screenshot of a data import window featuring a toggle for turning on/off the Sync trial balance." />
+        </p>
+        <p>The <b>Sync trial balance</b> function is, by default, enabled on all Caseware products that support engagement file imports. Since there are some use cases where this function should not be used, this enhancement allows the primary author to hide the function from the end user in the Engagement File import dialog.</p>
+        <h2>Rounding setup recommendations</h2>
+        <p>If you have rounding set up in <b>Format | Numbers</b> on Product Settings, there are recommendations for settings found in the <b>Features | Financial Statements</b> tab. To learn more, see <a href="Rounding-recommendations-author-side.htm">Rounding setup recommendations</a>.</p>
+        <h1><a name="Fixes"></a>Fixes in SE 2025-02 </h1>
+        <p>The following list features a brief description of bugs that have been resolved in SE 2025-02</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-53245">SE-53245</a>] - The formatting between different note number styles in the Document Settings is inconsistent.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-53202">SE-53202</a>] - Query responses are not visible in linked checklists.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-53196">SE-53196</a>] - Financial group modifications are not saved if the group is hidden by component visibility settings.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-53184">SE-53184</a>] - Changing a group name also changes the group sign.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52928">SE-52928</a>] - When viewing a print preview of a financial statement, custom formulas show a value of zero.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52834">SE-52834</a>] - When comparing financial statement versions, the difference indicators do not display.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52830">SE-52830</a>] - Added validation for order characters in the group structure import interface.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-53184">SE-53184</a>] - When expanding a dynamic table row, an empty column is inserted on the right side of the table.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52790">SE-52790</a>] - Clicking the adjustments link for the net income group does not highlight the contributing adjustments.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52760">SE-52760</a>] - The attachables model does not properly initialize after updating accounts.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52726">SE-52726</a>] - When downloading a reference copy of the Controls document, some sections appear blank.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52723">SE-52723</a>] - When exporting the Financial Groups document as a PDF, some of the expected columns are missing.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52664">SE-52664</a>] - Trial balance title rows revert to the default text if the columns are set to Input.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52617">SE-52617</a>] - Reconsolidation leaves orphaned structure tags for unassigned consolidation entities.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52615">SE-52615</a>] - Sub-level consolidation entities are not copied along with the parent engagement.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52611">SE-52611</a>] - When adding an account, the guidance for Prelim and PY Prelim shows “Name” rather than “Amount”.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52577">SE-52577</a>] - When placing an SE builder form into a financial statement document, the form jumps to the top of the document instead of staying in the desired position.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52501">SE-52501</a>] - An unnecessary scrollbar displays under the Workflow column of the Engagement Settings | Roles dialog.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52481">SE-52481</a>] - The search bar in the Risk Library returns no results if the query includes parentheses.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-52413">SE-52413</a>] - The header in Product Settings | Controls is duplicated.</p>
+        <p>[<a href="https://caseware.atlassian.net/browse/SE-51332">SE-51332</a>] - In the financial statement, changes to the Rounding setting are not applied until the page is refreshed.</p>
+    </body>
+</html>

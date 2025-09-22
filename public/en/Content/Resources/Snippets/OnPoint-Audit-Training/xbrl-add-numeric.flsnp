@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>You can add or edit numerics from the XBRL review panel.</p>
+        <p>Before you begin, select the XBRL icon (<img src="../../Images/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in the top menu, select the taxonomy you want to review and <b>Start Review</b> to open the review panel.</p>
+        <h2>Add a new numeric</h2>
+        <p>You can add a new numeric if the existing numerics don’t meet your requirements.</p>
+        <p><b>To add a numeric:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>Numeric</b> section, select <b>Numeric editor</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Create numeric</b>.</p>
+                <p>
+                    <img src="../../Images/xbrl-new (12).png" alt="The Numeric Options Editor dialog." />
+                </p>
+            </li>
+            <li>
+                <p>Populate the initial fields for the new numeric.</p>
+                <p>
+                    <img src="../../Images/xbrl-new (13).png" alt="The New Numeric Option dialog." />
+                </p>
+                <ul>
+                    <li>
+                        <p><b>Scaled:</b> When set to <b>Document default</b>, this field ensures that the scale of your nominal figures in the exported iXBRL report matches those of the financial statements.</p>
+                        <p>For example, when the statements are rounded to <b>Thousands</b>, a figure such as $125,000 will appear as $125 in the statements and subsequently the iXBRL report. The scale attribute ensures the true value of this amount is preserved within the report.</p>
+                    </li>
+                    <li>
+                        <p><b>Decimals:</b> Similar to the <b>Scaled</b> setting, this field ensures that values containing decimal places are interpreted correctly.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click to add any units required by your numeric.</p>
+                <p>
+                    <img src="../../Images/xbrl-new (14).png" alt="Add units to this numeric." />
+                </p>
+            </li>
+            <li>
+                <p>Define the units in the <b>Unit Creator</b> dialog.</p>
+                <p>
+                    <img src="../../Images/xbrl-new (15).png" alt="The Unit Creator dialog." />
+                </p>
+                <ul>
+                    <li>
+                        <p>All possible monetary units can be selected from the dropdown. Other units can be found defined here: <a href="https://www.xbrl.org/utr/utr.xml">https://www.xbrl.org/utr/utr.xml</a></p>
+                        <p class="note"><b>Note:</b> A planned future enhancement will introduce all possible "other" units in the same way as the existing monetary units.</p>
+                    </li>
+                    <li>
+                        <p>You can add multiple units in this dialog.</p>
+                    </li>
+                    <li>
+                        <p>You may need to add "divisor" units, such as earnings per share. These numerics cannot be defined in this dialog. If you need to create such numerics, reach out to the XBRL team.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Select <b>Add</b>.</p>
+            </li>
+        </ol>
+        <p>The numeric you created is now available to apply to tags.</p>
+        <h2>Edit a numeric</h2>
+        <p>You can also edit any numerics you add.</p>
+        <p class="note"><b>Note:</b> You cannot edit the preexisting system numerics.</p>
+        <p><b>To edit a numeric:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>Numeric</b> section, select <b>Numeric editor</b>.</p>
+            </li>
+            <li>
+                <p>Navigate to the numeric you want to edit on the list and select it.</p>
+            </li>
+            <li>
+                <p>Once you select a numeric, the details of that numeric display below the numeric list. Edit the information as required.</p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>What’s new in XBRL - January 2025</h1>
+        <p>The following lists describe the improvements and fixed issues in the January 2025 XBRL updates.</p>
+        <h2>SE&#160;Client</h2>
+        <h3>Improvements</h3>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52334">SE-52334</a>] - In the Context Editor, the Close button has been relabeled to ‘Cancel’ to more accurately reflect its function.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52319">SE-52319</a>] - In the Context Editor, the Copy function now copies over the selected period from the <b>Applicable</b> selector.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52102">SE-52102</a>] - The list of domain segments for a dimension now indicates which domain is the default value.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51418">SE-51418</a>] - Removed the SE Server step from the iXBRL Generation process to improve loading performance.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-50130">SE-50130</a>] - The XBRL review dialog now displays a warning when a tag requires a typed dimensional context.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-46605">SE-46605</a>] - The <b>Automatic</b> option for decimals in the Numeric Option editor now uses the decimal value specified in <b>Product Settings | Financial Statements</b>.</p>
+            </li>
+        </ul>
+        <h3>Fixed issues</h3>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52129">SE-52129</a>] - Scaling settings are not correctly applied to engagements during the XBRL export process if a custom tag’s scaling value is set to <b>Document default</b>.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51071">SE-51071</a>] - Empty placeholders do not visually indicate whether they are tagged.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-50848">SE-50848</a>] - Some instances of ‘overridden’ are spelled incorrectly, resulting in UI styling issues.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-43739">SE-43739</a>] - Note headers are highlighted in an inconsistent manner when selected and when tags are applied.</p>
+            </li>
+        </ul>
+        <h2>Microservices</h2>
+        <h3>Ver 2.5.1.1</h3>
+        <p style="font-weight: bold;">Improvements</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52463">SE-52463</a>] - Added cached files from the FT19 taxonomy to the NT19 cache to create a combined taxonomy.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52445">SE-52445</a>] - Upgraded UBPartners to version 2024.2.0.35.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Fixed issues</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52684">SE-52684</a>] - iXBRL tags are generated with a ‘null’ decimal value rather than 0, which prevents the microservice from applying a unit of measure to the tags.</p>
+            </li>
+        </ul>
+        <h3>Ver 2.4.0.5</h3>
+        <p style="font-weight: bold;">Improvements</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52461">SE-52461</a>] - Added an endpoint to build hypercubes, hypercube roles, primary items and dimensions.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Fixed issues</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52051">SE-52051</a>] - Pages in landscape mode are erroneously removed during iXBRL generation.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51780">SE-51780</a>] - An endpoint attribute disrupts the iXBRL Generation process.</p>
+            </li>
+        </ul>
+        <h2>Taxonomies</h2>
+        <ul>
+            <li>
+                <p>BE - Fin Tax (nbb-cbso-25.0.5)</p>
+            </li>
+            <li>
+                <p>NL - Combined FT19 and NT19</p>
+            </li>
+            <li>
+                <p>ZA - SE IFRS (CIPC)</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Transaction details described</h1>
+        <p>When <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map fields, so the transactions data displays properly in the engagement. In addition, certain fields are consistent across lines within an entry. </p>
+        <p>This topic describes the fields within the <b>TRANSACTION DETAILS</b> category  that appear in the General ledger dataset.</p>
+        <p class="note inline"><b>Note: </b> that some fields are mandatory for specific analytic tests to function properly. Refer to the descriptions below.</p>
+        <h2> Entry number (<code>entry_number</code>)</h2>
+        <p>Sequential identifier that is unique to each journal entry. </p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>Groups transaction lines into transactions (if <b>Entry ID</b> isn't assigned).</li>
+                <li>Visual identifier for transactions.</li>
+                <li>If <b>Entry Number</b> and <b>Entry ID</b> are not assigned, each transaction is assigned a random unique identifier.</li>
+                <li>In the Gap detection analytic test.</li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>If <b>Entry&#160;ID</b>&#160;is not assigned, there must be no blank <b>Entry Number</b> cells. </p>
+                </li>
+                <li>
+                    <p>If <b>Entry ID</b> is assigned, only the first entry number value for each unique <b>Entry ID</b> will be imported.</p>
+                </li>
+            </ul>
+        </p>
+        <h2>Amount (<code>amount</code>)</h2>
+        <p>Amount of the transaction line. This can be a positive value for a debit and negative for a credit.</p>
+        <h3>Usage</h3>
+        <ul>
+            <li>
+                <p>Data reconciliation/completeness</p>
+            </li>
+            <li>
+                <p>In these analytic tests:</p>
+            </li>
+            <ul>
+                <li>
+                    <p>Duplicate detection</p>
+                </li>
+                <li>
+                    <p>Recurring numeric pattern</p>
+                </li>
+                <li>
+                    <p>High amounts</p>
+                </li>
+                <li>
+                    <p>Rounded values</p>
+                </li>
+            </ul>
+        </ul>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>Positive and negative values can be included in either of:</li>
+                <ul>
+                    <li>One column with negative values formatted in a standard negative formatting.
+                                        Examples include:</li>
+                    <ul>
+                        <li>-4000.00</li>
+                        <li>(4000.00)</li>
+                        <li>4000.00-</li>
+                    </ul>
+                    <li>Separate columns tagged "debit" and "credit".</li>
+                </ul>
+                <li>Commas or periods are interpreted as decimal separators.</li>
+            </ul>
+        </p>
+        <h2>Detail comment (<code>detail_comment</code>)</h2>
+        <p>Description of the line entry.</p>
+        <h3>Usage</h3>
+        <p>In these analytic tests:
+                            <ul><li><p>Missing information</p></li>
+							<li><p>Keywords</p></li></ul></p>
+        <h2>Posting date (<code>posting_date</code>)</h2>
+        <p>Effective date - data entry was posted (validated) to the general ledger, regardless of the date created.</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>Associates transactions with a date and fiscal period.</li>
+                <li>In these analytic tests:
+		               		<ul><li><p>Duplicates</p></li><li><p>Date entries</p></li></ul></li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <p>To be viewed in the transactions list, transactions must be within fiscal-year range as set within the engagement.</p>
+            <p>Date format must be properly set:
+</p>
+            <MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" />
+            <p><![CDATA[					
+						]]></p>
+        </p>
+        <h2>Posting status (<code>posting_status</code>)</h2>
+        <p>Indicates whether the entry has been posted or not posted.</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>Transactions whose <b>Posting Status</b> is set to <code>non-posted</code> are not used for calculating the sum of transactions for data completeness checks. </li>
+                <li>Transactions whose <b>Posting Status</b> is set to <code>posted</code> are used in analytic tests. </li>
+            </ul>
+        </p>
+        <p>To learn more, see <a href="../Accounts-and-Analysis/Run-analytics-tests-from-checklists.htm">View analytic test results for checklists</a>. </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Less than 2,500 unique values. These values must be tagged to one of:</p>
+                </li>
+                <ul>
+                    <li><p>Posted</p></li>
+                    <li><p>Non-posted</p></li>
+                </ul>
+            </ul>
+        </p>
+        <h2>Document type (<code>document_type</code>)</h2>
+        <p>Enumerated field describing the original source document, with check, debit-memo, credit-memo, finance-charge, invoice, order-customer, order-vendor, payment-other, reminder, tegata, voucher, shipment, receipt, manual-adjustment, other.</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>Filtering transactions based on journal type.</li>
+                <li>In the Unusual items analytic test.</li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>Less than 2,500 unique values. </li>
+                <li>The data in the applicable column in the transaction import file (the CSV file) must be assigned to the <code>document_type</code> values below:
+												<ul><li>GJ - General Ledger Entries</li><li>CD - Cash Disbursement</li><li>CR - Cash Receipts</li><li>SJ - Sales Invoices</li><li>PJ - Purchases Invoices</li><li>PL - Payroll Ledger Entries</li><li>AR - Accounts Receivable Adjustments (credits, returns, other adjustments)</li><li>AP - Accounts Payable Adjustments (credits, returns, other adjustments)</li><li>FA - Fixed Assets Adjustments</li><li>IN - Inventory Adjustments</li><li>SC - Sales Contracts</li><li>SO - Sales Orders</li><li>PC - Purchases Contracts</li><li>PR - Purchase Requisitions</li><li>PO - Purchase Orders</li><li>GS - Goods Shipped</li><li>GR - Goods Received </li><li>OT - Other</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

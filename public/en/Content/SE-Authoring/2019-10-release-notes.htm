@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>2019-10 release notes</h1>
+        <p>SE 2019-10 features a redesign of the risk module, support of Inline eXtensible Business Reporting Language (iXBRL) and more.</p>
+        <h2>New user interface for the risk module</h2>
+        <p>The Cloud Engagements simple risk module is switching to a new user interface to support more complex engagements, where the need for additional documentation and enhanced workflows related to risk identification, assessment and response is required.</p>
+        <p>Key features at a glance:</p>
+        <ul>
+            <li>
+                <p>A centralized approach for risk identification and assessment.</p>
+            </li>
+            <li>
+                <p>A workflow to guide users through risk assessment, featuring a high level overview and drill-down options - users can view details as they work through each financial statement area.</p>
+            </li>
+            <li>
+                <p>Extending the risk documentation to scale the platform for different products or engagement types and jurisdictions.</p>
+            </li>
+            <li>
+                <p>Introducing product-level customization capabilities, where you can customize the terminology and level of complexity required for their market, such as field names and labels, assessment methods, Risk of Material Misstatement (RMM) mapping.</p>
+            </li>
+        </ul>
+        <p>The new interface utilizes modern UI best practices, featuring:</p>
+        <ul>
+            <li>
+                <p>risk cards and assessment cards with collapsed and expanded views.</p>
+            </li>
+            <li>
+                <p>data filtering and sorting.</p>
+            </li>
+            <li>
+                <p>an improved method for linking to checklist procedures for risk identification and response.</p>
+            </li>
+            <li>
+                <p>linkage to analysis tabs in checklists.</p>
+            </li>
+            <li>
+                <p>improved assertions tagging.</p>
+            </li>
+        </ul>
+        <p>Scaling up to larger and more complex engagements called for numerous wording changes, for instance, the term <i>Reference</i> in the old interface has been reworded to <i>Audit Response</i> in the new interface.</p>
+        <p>
+            <img src="../Resources/Images/risk-control-module.PNG" alt="New layout for the risk module. In this image: (1) add risk, (2) filters on the left pane, (3) annotate, add issue or delete risk, (4) tagged assertions for area/cycle affected by the risk, (5) add controls, references, areas/cycles and audit response, (6) input fields for comments and notes, (7) risk type, (8) drop-down for easy selection of a conclusion. " />
+        </p>
+        <p>To switch to the new risk module layout, go to the <a href="Enable-the-new-risk-module.htm">Product Settings</a> and select <b>Risks</b> | <b>General</b>, then select the <b>Enable new risk functionality</b> check box.</p>
+        <p>
+            <img src="../Resources/Images/enable-new-risk.PNG" alt="How to enable the new risk module in your product settings." />
+        </p>
+        <p>Once you enable the new layout, the new <b>Risks</b> page becomes available in the template, where you can easily access the new risk module.</p>
+        <p>To complement the new risk module, we've enhanced the Risk of Material Misstatement (RMM) visibility condition to support more logic. In addition to the assertion type, the following parameters are now available:</p>
+        <ul>
+            <li>
+                <p>Business cycle or area.</p>
+            </li>
+            <li>
+                <p>Logical operators.</p>
+            </li>
+            <li>
+                <p>RMM value.</p>
+            </li>
+        </ul>
+        <p>For example, an RMM condition logic can now be: If 'Accuracy' for 'Inventory' has RMM 'less than' 'Medium', then hide this item.</p>
+        <p class="note inline"><b>Please note that:</b>
+            <br />- the additional RMM condition parameters are only available if the new risk module is enabled in the product.<br />- if you enable the new risk module in your product, any existing RMM visibility conditions in the old risk module do not migrate to the new layout. You must set your RMM conditions again using the enhanced parameter logic.<br />- we strongly advise that you thoroughly test the new risk module and verify everything works as expected, before you enable it in the production environment.</p>
+        <h2>iXBRL support</h2>
+        <p>We now support Inline eXtensible Business Reporting Language (iXBRL). iXBRL is an open standard that allows firms to prepare financial statements in a format that provides the structured data that regulators and analysts require, while allowing preparers to retain full control over the layout and presentation of their report. To learn more about iXBRL, see <a href="https://www.xbrl.org/the-standard/what/ixbrl/">iXBRL.org.</a></p>
+        <p>For information on how to enable iXBRL, see the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">XBRL SDK tutorial</a>.</p>
+        <h2>Form values in visibility settings and data links</h2>
+        <p>Values from SE Builder forms can now be used to drive visibility logic in the product. Form values can also be retrieved and inserted in various text fields within documents.</p>
+        <p class="note inline"><b>Note:</b> This feature is only available in the product if you have developed custom forms using SE Builder. To learn more, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-SE-Builder/Get-started-with-SE-Builder.htm">Get started with SE Builder</a>.</p>
+        <ul>
+            <li>
+                <p>A new visibility condition <b>Form Value</b> is now available with the following parameters:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>A list of the available forms in the product.</p>
+                    </li>
+                    <li>
+                        <p>A list of the available fields for a selected form.</p>
+                    </li>
+                    <li>
+                        <p>The applicable values for a selected form field. Note that the displayed values depend on the field types. For example, numeric fields would have different value options and than date fields.</p>
+                    </li>
+                </ul>
+            </li>
+            <p class="note inline"><b>Note:</b> More then one form can be selected when setting up this condition.</p>
+            <p>
+                <img src="../Resources/Images/forms-values-visibility-condition.PNG" alt="How to set up Form Value visibility condition." />
+            </p>
+            <li>
+                <p>A new data link (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) option <b>Forms Value</b> is now available. This option retrieves a specific value in a form and inserts it in text fields. For example, insert the value for Provincial Jurisdiction from a Tax form in a text section in the financial statements.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/form-values-data-link.PNG" alt="Forms Value data link option." />
+        </p>
+        <h2>New for authors</h2>
+        <p>Here is what's new for authors in SE 2019-10. </p>
+        <p style="font-style: italic;">Each feature is hash-tagged with the role it applies to.</p>
+        <h3>Queries integration with Working Papers</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a>
+        </p>
+        <p>A new field <b>Author ID</b> is now available in query documents to allow Working Papers (WP) users to pull the uploaded files within a specific query document to designated locations in a WP file.</p>
+        <p>Note that <b>Author ID</b> is only available in query documents, not in query templates. It is an optional field that you only need to specify if you intend to integrate query documents in your product with Working Papers. </p>
+        <p>Here is a brief description of the workflow for Queries-WP integration:</p>
+        <ol>
+            <li>
+                <p>Set an Author ID value. You can set it for one or more response.</p>
+            </li>
+            <p class="note inline"><b>Note:</b> You must collaborate with WP authors to decide where you should add Author IDs in your query document.</p>
+            <li>
+                <p>Working Papers authors must use the same ID when setting up a location in WP for the files received from an SE query document.</p>
+            </li>
+            <li>
+                <p>Once a file is uploaded in the SE query document, WP users can click the Receive button to automatically pull the file from SE to its location in the WP file.</p>
+            </li>
+        </ol>
+        <p>To learn more, see <a href="Add-Author-IDs-(new-design).htm"> Add Author IDs.</a></p>
+        <h3>Data page</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauthor</a>
+        </p>
+        <p>We have expanded the list of import providers in the <b>Import</b> page. It now includes custom import platforms developed by authors. </p>
+        <h3>Analysis charts development</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauthor</a>
+        </p>
+        <p>You no longer need to maintain the description of analysis charts in the analysis.js file. The tag description is now used as the title for analysis charts. </p>
+        <h2>New for end users</h2>
+        <p>Here is what's new for end users in SE 2019-10.</p>
+        <h3>Queries (new design)</h3>
+        <p>We've introduced a few feature enhancements for query documents and the Query Dashboard.</p>
+        <ul>
+            <li>
+                <p>The Query Dashboard now has an additional column <b>Contacts</b> that displays the number of assigned contacts to each query document in the dashboard.</p>
+            </li>
+            <p>Users can select the number to display a popup showing contact details. The popup also includes the <b>Add contacts</b> button so you users can create a contact, if needed. </p>
+            <p>
+                <img src="../Resources/Images/query-dashboard-assigned-contact.PNG" alt="Contacts column in the Query Dashboard. User selected the number of assigned contacts for 300-Q Client queries - Compilation engagement." />
+            </p>
+            <li>
+                <p>In query documents,</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>users can now collapse or expand question sets in the left navigation pane. </p>
+                    </li>
+                    <li>
+                        <p>query questions are no longer numbered.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>A notification displays for contacts once they answer all questions in the document. The notification message features the <b>Mark Responded</b> button so contacts can easily proceed to the next step in the workflow. Similarly, a notification also displays for staff members once they accept all responses in the document. The notification message in this case features the <b>Mark Complete</b> button. </p>
+            </li>
+            <p>
+                <img src="../Resources/Images/mark-complete-queries.PNG" alt="Notification message once all responses are accepted, featuring the MARK COMPLETE button." />
+            </p>
+        </ul>
+        <h3>Data page</h3>
+        <p>We've introduced a few UI improvements for end users, as well as functionality changes in the <b>Accounts</b> view page to support new features.</p>
+        <ul>
+            <li>
+                <p>Users can now view prior year transactions, if they've imported the respective data. This feature introduces two changes in the current functionality in the <b>Accounts</b> view page. </p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p> To view transactions for a specific account in the current year, users now select accounts from the <b>Preliminary</b> column instead of the <b>Final</b> column to view account transactions. For a prior year account transactions, users select accounts from the corresponding prior year column.</p>
+                </li>
+                <li>
+                    <p>Users can no longer edit the account name or number directly on the page. In this release, users select the <b>Edit</b> (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon to modify account information. Two additional fields are also available in the Account dialog to allow users to edit the current and prior balances, if needed. </p>
+                </li>
+            </ul>
+            <p>
+                <img src="../Resources/Images/eidt-account.PNG" alt="Dialog for editing accounts in the Data page." />
+            </p>
+            <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">View account transactions.</a></p>
+            <li>
+                <p>Opening and closing balances are now available in the Transactions page footer for the selected account. This helps users compare account transactions net total in a specific period. </p>
+            </li>
+            <p>
+                <img src="../Resources/Images/opening-closing-balances.PNG" alt="Opening and closing balances display in the page footer for CASH ON HAND transactions." />
+            </p>
+            <li>
+                <p><b>Tax Groups</b> and <b>Prescribed Groups</b> views no longer display for users in the left navigation pane in group views if you haven't set up Tax Code or Chart of Accounts groupings in the product. </p>
+            </li>
+            <p>Similarly, the <b>Tax Code</b> and <b>Tax Adjustments</b> options no longer display for users in the <b>Columns</b> drop-down in group views if you haven't set up Tax Code groupings and tax adjustments in the product.</p>
+        </ul>
+        <h3>Review Tools in financial statements</h3>
+        <p>Two additional review tools are now available in financial statements to easily locate disagreeing balances and overridden balances in the document. </p>
+        <ul>
+            <li>
+                <p><b>Balance check</b> - marks all rows with identified balance discrepancies and all rows where balances agree (that is, all rows with a <a href="Set-up-diagnostics.htm">Diagnostics label</a>).</p>
+            </li>
+            <li>
+                <p><b>Overwritten balances</b> - marks all rows with overridden balances.</p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Review prepared documents (Review-Tools).</a></p>
+        <h2>Fixes</h2>
+        <p>The following listing features a brief description of the bug fixes in SE 2019-10.</p>
+        <h3>Dynamic tables</h3>
+        <p>Fixed issues in dynamic tables where:</p>
+        <ul>
+            <li>
+                <p>custom calculations in dynamic table headings display incorrect values or NaN. </p>
+            </li>
+            <li>
+                <p>column descriptions with data links (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) do not display correctly. </p>
+            </li>
+            <li>
+                <p>users experience a delay in data display when they set up input rows. </p>
+            </li>
+            <li>
+                <p>the Account Details popup does not show adjustments for a prior year group. </p>
+            </li>
+            <li>
+                <p>column headers with long descriptions do not display properly on the page. </p>
+            </li>
+            <li>
+                <p>users are unable to reopen the Data Link dialog in table headers.</p>
+            </li>
+            <li>
+                <p>some trial balance line items are missing. </p>
+            </li>
+        </ul>
+        <h3>Checklist documents</h3>
+        <p>Fixed issues in checklist documents where:</p>
+        <ul>
+            <li>
+                <p>users get an error when they attempt to add a data link (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in the <b>Conclusions</b> section in checklist documents.</p>
+            </li>
+            <li>
+                <p>content in multiple-row checklist procedures are misaligned. </p>
+            </li>
+        </ul>
+        <h3>Product authoring</h3>
+        <p>Fixed product authoring issues where:</p>
+        <ul>
+            <li>
+                <p>queries open in the old layout although the new layout has been enabled in the Product Settings.</p>
+            </li>
+            <li>
+                <p>the custom terms entered for <b>Preliminary</b> and <b>Final</b> column labels are not applied.</p>
+            </li>
+            <li>
+                <p>the <b>Data page</b> is enabled in the template although it is disabled in the Product Settings. </p>
+            </li>
+            <li>
+                <p>the order of data in analysis graphs does not follow the trial balance order. </p>
+            </li>
+        </ul>
+        <h3>Queries</h3>
+        <p>Fixed issues in query documents where:</p>
+        <ul>
+            <li>
+                <p>adding a comment in a question that has been responded to, produces multiple notification messages on the page.</p>
+            </li>
+            <li>
+                <p>recently accessed query documents do not show on the left navigation pane.</p>
+            </li>
+        </ul>
+        <h3>Data page</h3>
+        <p>Fixed issues in the Data page where:</p>
+        <ul>
+            <li>
+                <p>the Out of balance (<img src="../Resources/Images/out-of-balance-indicator.PNG" style="vertical-align: text-bottom;" />) indicator displays although all accounts are correctly balanced. </p>
+            </li>
+            <li>
+                <p>accounts are not sorted properly. </p>
+            </li>
+            <li>
+                <p>users have to refresh the page so they can search accounts properly in the <b>Assign Accounts</b> page. </p>
+            </li>
+        </ul>
+        <h3>Financial statements</h3>
+        <p>Fixed issues in financial statements related to:</p>
+        <ul>
+            <li>
+                <p>the reconciliation feature, where rows with agreeing balances are identified and flagged as disagreeing in the document. </p>
+            </li>
+            <li>
+                <p>the financial statements notes, where adding page breaks in the <b>Notes to the Financial Statements</b> area generates duplicate entries in the <b>Table of Contents. </b></p>
+            </li>
+        </ul>
+        <h3>Other fixes</h3>
+        <p>The following general issues are fixed in SE 2019-10.</p>
+        <ul>
+            <li>
+                <p>The word Trial Balance is not highlighted while users are actively working on the <b>Trial Balance</b> page. </p>
+            </li>
+            <li>
+                <p>The filenames for some files copied from Caseware Cloud to an engagement file do not display correctly. </p>
+            </li>
+            <li>
+                <p>GIFI codes do not change when reassigning financial grouping accounts.</p>
+            </li>
+            <li>
+                <p>Users experience delays while using the rounding feature in financial statements with large trial balance data set. </p>
+            </li>
+            <li>
+                <p>Internal links do not work when users attempt to access them in the left navigation pane of a document.</p>
+            </li>
+            <li>
+                <p>Carry Forward issue, where user-added sections in financial statements are not visible or available as a carry forward selection item after the file has been rolled forward. </p>
+            </li>
+            <li>
+                <p>The sign of an account balance changes when users override the balance in the Statement of Cash Flows.</p>
+            </li>
+            <li>
+                <p>When users import from QuickBooks then perform a reimport in the Trial Balance page in the same year (to update balances), the prior year balances are doubled.</p>
+            </li>
+            <li>
+                <p>The <b>Suppress</b> icon (<img src="../Resources/Icons/suppress-content.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) displays as disabled in firm templates when it is actually enabled. </p>
+            </li>
+            <li>
+                <p>A few translation issues have been fixed. </p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can add general ledger accounts and specify tax and billing defaults." />
+    </head>
+    <body>
+        <h1>Set up general ledger accounts</h1>
+        <p>In Settings, you can create and assign general ledger (GL) accounts to track your organization's balances for Time and Billing.</p>
+        <h2><a name="Adding"></a>Adding GL accounts</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/note-general-ledger-enabled.flsnp" />
+        <p>While Cloud comes with a predefined set of GL accounts, you may want to add new accounts depending on your organization's requirements. For example, assume you want users to be able to invoice for office expenses. In this case, you would create a GL account specifically for office expenses.</p>
+        <p><b>To add a GL account:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role or equivalent rights.</p>
+            </li>
+            <li>
+                <p>Ensure you have selected <b>Enable general ledger</b> in <b>Settings | Time | General | Time and Expense Settings</b>.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time</b> and, in the Accounts section, select <b>Chart of Accounts</b>.</p>
+                <p>
+                    <img style="border:1px solid #3f66a3" src="../../Resources/Images/Firm-settings-chart-of-accounts-630x570.png" alt="The Chart of Accounts section of the Settings page." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>New</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/Firm-settings-new-GL-account-630x393.png" alt="The New GL Account dialog in the Chart of Accounts page" />
+                </p>
+            </li>
+            <li>
+                <p>Complete the fields and select <b>Save</b>. The <b>Account No.</b> field is mandatory.</p>
+            </li>
+        </ol>
+        <p>The new account is added to the chart of accounts.</p>
+        <h2><a name="Setting"></a>Setting Tax accounts</h2>
+        <p>Cloud enables you to specify <b>primary</b> and <b>secondary</b> tax accounts. You can define each tax and assign them to existing GL accounts.</p>
+        <p><b>To set tax accounts:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent rights.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time</b> and, under Invoice, select <b>Tax</b>.</p>
+                <p>
+                    <img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-tax-631x580.png" alt="The Tax section of the Settings page." />
+                </p>
+            </li>
+            <li>
+                <p>Complete the fields under <b>Primary Tax</b> (and, if appropriate, the <b>Secondary Tax</b>).</p>
+                <p>
+                    <img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-tax-fields-630x404.png" alt="Complete the fields in the Primary and Secondary tax sections" />
+                </p>
+            </li>
+            <li>
+                <p>If you have enabled the general ledger, select a <b>GL account</b> to associate with each modified tax.</p>
+            </li>
+            <li>
+                <p>Select <b>Save</b> to apply your changes.</p>
+            </li>
+        </ol>
+        <p>Your organization's tax accounts have been set.</p>
+        <h2><a name="Setting2"></a>Setting default accounts</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/note-general-ledger-enabled.flsnp" />
+        <p>You can set default GL accounts for <b>receivables</b>, <b>fees</b>, and <b>work in process</b>. With these defaults selected, users will be able to produce invoices without having to assign GL accounts themselves.</p>
+        <p>A receivables default must be set for your staff to be able to use the Time Billing app.</p>
+        <p><b>To set default accounts:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent rights.</p>
+            </li>
+            <li>
+                <p>Ensure you have selected <b>Enable general ledger</b> in <b>Settings | Time | General | Time and Expense Settings</b>.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time</b> and, under Accounts, select <b>Default Accounts</b>.</p>
+                <p>
+                    <img style="border:1px solid #3f66a3" src="../../Resources/Images/Firm-settings-default-accounts-630x585.png" alt="The Default Accounts section of the Settings page." />
+                </p>
+            </li>
+            <li>
+                <p>Select the appropriate <b>GL account</b> for each category.</p>
+            </li>
+            <li>
+                <p>Select <b>Save</b> to apply your changes.</p>
+            </li>
+        </ol>
+        <p>You have updated the default accounts. New billing entries of these types will default to these accounts.</p>
+    </body>
+</html>

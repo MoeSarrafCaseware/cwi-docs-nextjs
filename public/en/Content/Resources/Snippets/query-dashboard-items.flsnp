@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p><b>Query document</b> - title of the query.</p>
+            </li>
+            <li MadCap:conditions="Product.SE">
+                <p><b>Status</b> - status of the query. Available options are:</p>
+                <table>
+                    <col />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src="../Images/icon-query-dash-draft-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                                </p>
+                            </td>
+                            <td>You haven't sent the query to the contacts yet.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../Images/icon-query-dash-reopened-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                            </td>
+                            <td>You reopened the query to make modifications or request further information or clarifications.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../Images/icon-query-dash-responded-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                            </td>
+                            <td>Contacts responded to all questions in the query.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../Images/icon-query-dash-awaiting-response-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                            </td>
+                            <td>You have sent the query to contacts and they haven't responded yet.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../Images/icon-query-dash-complete-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                            </td>
+                            <td>You've marked the query as completed.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../Images/icon-query-dash-cancelled-status.PNG" style="vertical-align: text-bottom;" alt="" />
+                            </td>
+                            <td>You canceled the query.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Progress</b> - tracker of the contacts progress. It shows the number of answered questions out of the total questions in the request.</p>
+            </li>
+            <li>
+                <p><b>Due date</b> - shows the query due date.</p>
+            </li>
+            <li>
+                <p><b>Contacts</b> - displays the number of assigned contacts to each query document in the dashboard. You can also select a number to display a popup showing contact details. The popup also includes the <b>Add contacts</b> button which allows you to create a contact, if needed.</p>
+            </li>
+        </ul>
+    </body>
+</html>

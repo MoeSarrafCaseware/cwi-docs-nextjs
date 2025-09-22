@@ -1,0 +1,1926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Overview</h1>
+        <p>Caseware Sherlock is pioneering accounting practice intelligence for firms globally. It’s a powerful, secure, cloud-based business intelligence platform with a sleek user interface. Sherlock automatically gathers and stores data from your firm’s current and historic Caseware engagements, and offers a flexible path to turn this big data into actionable practice-wide insights in near real-time through advanced analytics and data visualizations. Now you can monitor practice health, manage risks better, identify growth avenues and become the trusted strategic advisor for your clients with this new gateway to limitless possibilities.</p>
+        <h2>How does it work?</h2>
+        <p>Sherlock automatically and continuously data mines all engagements that reside within the Caseware ecosystem. Engagement data is extracted, transformed, organized and stored in the Sherlock data lake, enabling practice-wide engagement analysis. Firms can access and query their engagement data to drive business decisions, both for their practice as well as for their clients.</p>
+        <p>
+The Caseware Sherlock platform consists of three primary solutions: <MadCap:conditionalText MadCap:conditions="General.Online"><a href="#Reader">Sherlock Reader</a>, <a href="#Builder">Sherlock Builder</a> and <a href="#API">Sherlock API</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">Sherlock Reader, Sherlock Builder and Sherlock API.</MadCap:conditionalText> Together these products provide a firm-wide solution usable by staff of various roles.
+</p>
+        <p>
+            <img src="../../Resources/Images/sherlock-visualization.png" />
+        </p>
+        <h2><a name="Reader"></a>Sherlock Reader</h2>
+        <p>Sherlock Reader enables staff to present key engagement data from client entities in easy-to-use visualizations. You can leverage the data in these visualizations to gain insights into your clients' financials, help you manage your own practice, open new revenue opportunities with advisory services, and more. Visualizations are available from your Caseware distributor, or custom designed by your firm author using Sherlock Builder.</p>
+        <p MadCap:conditions="General.Online"><a href="../../Explore/Getting-Started/Get-started-with-Sherlock-Reader.htm">Learn how to get started with Sherlock Reader</a>.</p>
+        <h2><a name="Builder"></a>Sherlock Builder</h2>
+        <p>Sherlock Builder is a data visualization tool that consumes Working Papers engagement data and enables firm authors to develop customized templates.
+</p>
+        <p>Sherlock Builder consists of three components:</p>
+        <ul>
+            <li>Analyses are customizable templates for visualizations. You can share an analysis with other Sherlock Builder users to collaborate on its development.
+</li>
+            <li>Visualizations are the read-only versions of analyses that Sherlock Reader users share with clients.</li>
+            <li>Datasets contain the collective data that populates an analysis. The datasets in Sherlock Builder are preloaded and cannot be modified. Datasets refresh daily.
+</li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="https://developers.caseware.com/sherlock-builder/v1/Sherlock-Builder/Get-started-with-Sherlock-Builder.htm">Learn how to get started with Sherlock Builder</a>. (MyCaseware credentials and a Sherlock Builder license required)</p>
+        <h1>Get started</h1>
+        <p>Before staff can access Sherlock, an administrator must assign them a license for the applicable app (Sherlock Reader or Sherlock&#160;Builder).</p>
+        <p class="warning"><b>Warning:</b> Do not change the email address or revoke the license of a Sherlock Builder user. Any analyses created by the user will become inaccessible to all users — including administrators.</p>
+        <p><b>To assign a Sherlock license to a staff member:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Staff Admin</i> role or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Staff</b>.</p>
+            </li>
+            <li>
+                <p>Select the staff member that you want to assign the license to, then select <b>Edit</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Select <b>Apps</b>, then choose the appropriate permissions (either <b>Sherlock Reader</b> or <b>Sherlock Builder</b>).</p>
+            </li>
+            <li>Select <b>Save</b>.</li>
+        </ol>
+        <h1>Sherlock Builder: Create an analysis</h1>
+        <p>You can create an analysis for each dataset and customize how you want to present the engagement data in the visualization.</p>
+        <p><b>To create an analysis:</b>
+        </p>
+        <ol>
+            <li>
+                <p>From the Cloud menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Sherlock Builder</b>.</p>
+                <p>An interactive frame powered by <a href="https://docs.aws.amazon.com/quicksight/latest/user/welcome.html" target="_blank">Amazon QuickSight</a> displays.</p>
+            </li>
+            <li>
+                <p>Select the <b>Analyses</b> tab.</p>
+                <p>A list of existing analyses displays.</p>
+            </li>
+            <li>
+                <p>Select <b>New analysis</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-analysis-01.png" alt="The Sherlock BI Builder interface with the New analyses button highlighted." />
+                </p>
+            </li>
+            <li>
+                <p>Select the applicable dataset for the analysis. Available datasets include:</p>
+                <table class="borderless">
+                    <col style="width: 55%;" />
+                    <col style="width: 45%;" />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>accountsummary</li>
+                                    <li>cv (CaseView)</li>
+                                    <li>cvcontrol</li>
+                                    <li>cvmlp (management letter points)</li>
+                                    <li>cvrisk</li>
+                                    <li>groupings</li>
+                                    <li>hi (history)</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>mappings</li>
+                                    <li>metadata (engagement properties)</li>
+                                    <li>sh (document)</li>
+                                    <li>trialbalance</li>
+                                    <li>ts (issues)</li>
+                                    <li>user</li>
+                                    <li>usergroup</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">
+                    <p><b>Notes:</b>
+                    </p>
+                    <ul>
+                        <li>Dataset names are appended with the firm's short name (e.g. trialbalance-testfirm-001).</li>
+                        <li>The <b>entityrls</b> dataset contains entity level security information and should not be used as the dataset for an analysis or shared with others.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p>Select <b>Create analysis</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-analysis-02.png" alt="The dataset confirmation dialog with the Create analysis button highlighted." />
+                </p>
+            </li>
+            <li>
+                <p>Customize the analysis.</p>
+                <p>Example customizations for different scenarios can be found following this procedure.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-analysis-03.png" alt="The interface for designing an analysis." />
+                </p>
+            </li>
+            <li>
+                <p>If you want to collaborate on the analysis with other Sherlock Builder users in your firm, select <b>Share (<img src="../../Resources/Icons/share-icon-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Share analysis</b>.</p>
+                <p>The Share analysis dialog displays.</p>
+            </li>
+            <li>
+                <p>Enter each user's email and select <b>Share</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-analysis-04.png" alt="The Share analysis dialog with the Share field and Share button highlighted." />
+                </p>
+            </li>
+        </ol>
+        <h2>Customize an analysis for: Project management</h2>
+        <p>The following widgets enable you to highlight the status of a firm's open engagements and ensure that they're on track for completion.</p>
+        <h3>Engagement progress</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Gauge chart (<img src="../../Resources/Icons/gauge-chart-23x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of completed documents:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that defines the logic of what your users would consider a "completed" document.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf(Role 1 Initials, isNotNull(nullIf(Role 1 Initials,'')))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><i>Target value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of documents in the Document Manager:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count({Description})</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Apply any entity and/or year-end filters to the widget, as necessary.</p>
+            </li>
+        </ul>
+        <h3>Breakdown of role-specific sign-offs</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Donut chart (<img src="../../Resources/Icons/donut-chart-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group/Color</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add one of the following:</p>
+                <ul>
+                    <li>
+                        <p><b>Role 1 Initials</b> for Role 1</p>
+                    </li>
+                    <li>
+                        <p><b>Role 2 Initials</b> for Role 2</p>
+                    </li>
+                    <li>
+                        <p>…</p>
+                    </li>
+                    <li>
+                        <p><b>Role 8 Initials</b> for Role 8</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>If you want to exclude documents with no sign-offs:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the selected Group/Color field (for example: Role 1 Initials, Role 2 Initials, etc.).</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol>
+                            <li>
+                                <p>On the first drop-down, select <b>Custom filter</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Exclude nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Apply any entity and/or year-end filters to the widget, as necessary.</p>
+            </li>
+        </ul>
+        <h3>Status of deliverables</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that provides the document number and name of a deliverable document:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation, which identifies a document that has a deliverable due date and returns its document number and name:</p>
+                        <p><code>ifelse(isNotNull(duedate), concat(toString(schedule), '-',{Description}), "Unknown")</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>duedate</b> - Displays the due date of the deliverable document.</p>
+            </li>
+            <li>
+                <p><b>Role 1 Initials</b> - (Optional) Displays the Role 1 sign-off name.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Document Manager</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>Line No</b> - Sorts the table to reflect the order in the Document Manager.</p>
+            </li>
+            <li>
+                <p><b>schedule</b> - Displays the completed document number.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Displays the document name.</p>
+            </li>
+            <li>
+                <p><b>Role 1 Initials</b> - Displays the Role 1 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 1</b> - Displays the Role 1 sign-off date.</p>
+            </li>
+            <li>
+                <p><b>Role 2 Initials</b> - Displays the Role 2 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 2</b> - Displays the Role 2 sign-off date.</p>
+            </li>
+            <li>
+                <p>…</p>
+            </li>
+            <li>
+                <p><b>Role 8 Initials</b> - Displays the Role 8 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 8</b> - Displays the Role 8 sign-off date.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Sort the table using the <b>Line No</b> field in ascending order. Once sorted, click on the column heading and hide the <b>Line No</b> field.</p>
+            </li>
+            <li>
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Summary of all engagement progress</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>filename</b> - Displays the engagement file name</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that determines the overall engagement progress:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that counts the total number of completed documents and divides it by the total number of documents.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},''))) / count({Description})</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Summary of all engagement progress (alternative table view)</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>filename</b> - Displays the engagement file name</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that determines the overall engagement progress:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that counts the total number of completed documents and divides it by the total number of documents.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},''))) / count({Description})</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>yearend</b> - Displays the year-end date of the file.</p>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: Quality and compliance</h2>
+        <p>The following widgets ensure that you catch errors early in the engagement process and complete high-quality engagements in full compliance.</p>
+        <h3>Order of completed documents</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>schedule</b> - Displays the completed document number.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Displays the document name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 1</b> - Displays the Role 1 sign-off date.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>If you want to exclude documents with no sign-offs:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the <b>Date of Completion 1</b> field.</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>On the first drop-down, select <b>Custom filter</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Exclude nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Users accessing an engagement</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that provides a list of users who have accessed an engagement:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation, which returns the recorded user with a file access activity type in the HI database:</p>
+                        <p><code>ifelse(type='FACCUSR', UserValue, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Add a custom calculation field that returns the date when the file access was recorded in the HI database:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>left(startdate,8)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Engagement lockdown status</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Metadata</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>filename</b> - Displays the engagement file name.</p>
+            </li>
+            <li>
+                <p><b>propertyname</b> - Displays all metadata properties associated with engagement files.</p>
+            </li>
+            <li>
+                <p><b>propertyvalue</b> - Displays the value of a given metadata property.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>After defining the field wells, select the widget and create a filter based on the <b>propertyname</b> field. Configure the filter to only include items with the <b>CWLockdownDate</b> property name.</p>
+            </li>
+            <li>
+                <p>Consider adding details to the engagement letter, for example, the signed/completed date, or if lockdown needs to be performed within a given timeframe. To retrieve the engagement letter:</p>
+                <ul>
+                    <li>
+                        <p>Use the document ID or number.</p>
+                    </li>
+                    <li>
+                        <p>Have users associate a specific document tag with their engagement letter then utilize it in your visualization.</p>
+                    </li>
+                    <li>
+                        <p>Include a mechanism in your template that saves the document number of the engagement letter as a metadata property.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Map number usage</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Pivot table (<img src="../../Resources/Icons/pivot-table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Rows</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>mapno</b> - Displays the map number used in engagements.</p>
+            </li>
+            <li>
+                <p><b>mapdesc</b> - Displays the mapping description used in engagements.</p>
+            </li>
+            <li>
+                <p><b>filename</b> - Displays the name of the file that's using the current map number.</p>
+            </li>
+            <li>
+                <p><b>class</b> - Displays the class assigned to the current map number.</p>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: Productivity and workload management</h2>
+        <h3>File activity</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Vertical bar chart (<img src="../../Resources/Icons/vertical-bar-chart-20x23.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>startdate</b> - Displays the date when an event occurred.</p>
+            </li>
+        </ul>
+        <p><i>Group/Color</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that lists the identifiers of all possible activity types in the HI database and converts them to a user-friendly description:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Building the following calculation:</p>
+                        <div><pre class="clipboard"><code>
+ifelse(
+type='AJECREAT', 'Adjustment created',
+type='DCHEKIN', 'Document checked in',
+type='DCHEKOUT', 'Document checked out',
+type='DOCAUSR', 'Document accessed',
+type='DOCCOPY', 'Document copied',
+type='DOCCREAT', 'Document created',
+type='DOCDEL', 'Document deleted',
+type='DOCDROP', 'Document dropped in',
+type='DOCMSAVE', 'Document saved',
+type='DOCPROP', 'Document properties changed',
+type='DOCSIGN1', 'Document signed off role 1',
+type='DOCSIGN2', 'Document signed off role 2',
+type='DOCSIGN3', 'Document signed off role 3',
+type='DOCSIGN4', 'Document signed off role 4',
+type='DOCSIGN5', 'Document signed off role 5',
+type='DOCSIGN6', 'Document signed off role 6',
+type='DOCSIGN7', 'Document signed off role 7',
+type='DOCSIGN8', 'Document signed off role 8',
+type='FACCUSR', 'Engagement file accessed',
+type='FCHEKIN', 'Engagement file checked in',
+type='FCHEKOUT', 'Engagement file checked out',
+type='FCREAFN', 'File created',
+type='FSIGNIN', 'File signed in',
+type='FSIGNOUT', 'File signed out',
+type='FYEC', 'Year end close performed',
+type='DOCRCYCL', 'Document moved to recycle bin',
+type='DOCREST', 'Document restored from recycle bin',
+type='DOCPASTE', 'Document pasted in document manager',
+type='DOCMOVE', 'Document moved in document manager',
+type='DOCTOPDF', 'Document converted to PDF',
+type='AJEDEL', 'Adjusting entry deleted',
+type='AJEIMPT', 'Adjusting entry imported',
+type='AJERENUM', 'Adjusting entry renumbered',
+type='UNDOSIGN', 'Signout undone',
+type='DOCLOCK', 'Document locked down',
+type='DOCLOCK2', 'Document milestones regenerated',
+type='DOCLOCK3', 'Document milestones converted',
+type='DOCSET', 'Document milestones set',
+type='FILELOCK', 'File locked down',
+type='FILEUNLK', 'File unlocked',
+type='LOCKSET', 'Future lockdown date set',
+type='LOCKREM', 'Pending lockdown removed',
+type='UNDOLOCK', 'Lockdown undone',
+type='LOCKMR', 'Lockdown milestones generated',
+type='LOCKMRA', 'Lockdown milestones generated (automatic documents)',
+type='FMSS', 'File milestones set',
+type='FCREAYEC', 'File created on year end close',
+type='FCREACT', 'File created from copy template',
+type='TEMPUPD', 'Template update initiated',
+type='("FCREACR")', 'Reviewer copy created',
+'Other'
+)</code></pre>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <p>You can modify the custom calculation to change the user-facing text or remove events that you don't want to display.</p>
+        <h3>Documents completed by a user</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-Axis</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>Role 1 Initials</b> - Displays the Role 1 sign-off name.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style:none;">
+                <p>Add a custom calculation field that counts the number of documents completed by a specific user:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},'')))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: IT&#160;administration</h2>
+        <h3>Engagement files and versions (Caseware Audit templates)</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Metadata</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that determines the functional version of Audit in an engagement file:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>ifelse(propertyname = 'CWCustomProperty.TEMPLATE_VERSION', propertyvalue, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>filename</b> - Displays the engagement file name.</p>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: Client profiling</h2>
+        <h3>Operating expenses by client</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-axis</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>entityname</b> - Displays a list of entities by name.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p><b>operatingexpenses</b> - Displays the operating expense value for each entity.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change how the operating expense is displayed:</p>
+                <ol>
+                    <li>
+                        <p>In the Field wells area, select the drop-down menu next to <b>operatingexpenses</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select how to aggregate the data (for example: sum, average, median, etc.).</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: Business advisory</h2>
+        <h3>Income statement - Revenue</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that filters the map numbers to only include revenue items:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that filters out map numbers that aren't associated with revenue map numbers.</p>
+                        <p>For example, for revenue map number 2.1, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='2.1' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> -Displays the mapping description used in engagements.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that determines whether a row contains zero balances across all of the final, prior year 1, and prior year 2 columns:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>ifelse(finalbalance+py1+py2 = 0, 1, 0)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Displays the final balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Displays the prior year 1 balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Displays the prior year 2 balance value of a given map number.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to hide zero balance rows from the table:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the "zero balance" calculation field (created above).</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>On the first drop-down, select <b>Sum</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>In the value field, enter <b>1</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Include nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Income statement - Expense</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that filters the map numbers to only include expense items:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that filters out map numbers that aren't associated with expense map numbers.</p>
+                        <p>For example, for revenue map number 2.5, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='2.5' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> -Displays the mapping description used in engagements.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that determines whether a row contains zero balances across all of the final, prior year 1, and prior year 2 columns:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>ifelse(finalbalance+py1+py2 = 0, 1, 0)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Displays the final balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Displays the prior year 1 balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Displays the prior year 2 balance value of a given map number.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to hide zero balance rows from the table:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the "zero balance" calculation field (created above).</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>On the first drop-down, select <b>Sum</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>In the value field, enter <b>1</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Include nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Income source breakdown</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Pie chart (<img src="../../Resources/Icons/pie-chart-20x22.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that filters the map numbers to only include revenue items:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that filters out map numbers that aren't associated with revenue map numbers.</p>
+                        <p>For example, for revenue map number 2.1, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='2.1' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Operating expense - Benchmark</h2>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Clustered bar combo chart (<img src="../../Resources/Icons/clustered-bar-chart-22x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Displays the year-end date when the revenue and expense was recorded.</p>
+            </li>
+        </ul>
+        <p><i>Bars</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>operatingexpenses</b> - Displays the operating expense value in a given year.</p>
+            </li>
+        </ul>
+        <p><i>Lines</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that calculates the average operating expense of all files and entities:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(avg(operatingexpenses))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If your intent is to display the benchmark of an entity across multiple other entities, ensure the widget is associated with an entity filter.</p>
+            </li>
+        </ul>
+        <h3>Debt ratio</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that calculates the debt ratio:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(liabilities/assets)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Consider using conditional formatting to visually indicate the ratio health.</p>
+            </li>
+        </ul>
+        <h3>Current ratio</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that calculates the current ratio:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(currentassets/currentliabilities)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Consider using conditional formatting to visually indicate the ratio health.</p>
+            </li>
+        </ul>
+        <h3>Debt-to-equity ratio</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that calculates the debt-to-equity ratio:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(liabilities/equity)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Consider using conditional formatting to visually indicate the ratio health.</p>
+            </li>
+        </ul>
+        <h3>Return on assets ratio</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that calculates the return on assets ratio:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(netincome/assets)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Consider using conditional formatting to visually indicate the ratio health.</p>
+            </li>
+        </ul>
+        <h3>Revenue and expenses by year</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Line chart (<img src="../../Resources/Icons/line-chart-25x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Displays the year-end date when the revenue and expense was recorded.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that calculates the revenue balances:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that calculates the balance of accounts associated with the revenue map numbers.</p>
+                        <p>For example, if the revenue map number is 2.1, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='2.1' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Add a custom calculation field that calculates the expenses balances:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that calculates the balance of accounts associated with the expense map numbers.</p>
+                        <p>For example, if the revenue map number is 2.5, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='2.5' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>If you want to display a year-over-year trend, ensure that only the <b>yearend</b> field is sorted in ascending order.</p>
+            </li>
+            <li>
+                <p>If you want to change the color of a chart, click the chart in the visualization to display a menu with a <b>Chart Color</b> option.</p>
+            </li>
+        </ul>
+        <h3>Balance sheet - Assets</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that filters the map numbers to only include asset items:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that filters out map numbers that aren't associated with asset map numbers.</p>
+                        <p>For example, if the asset map number is 1.1, the calculation would read:</p>
+                        <p><code>ifelse(substring(mapno,1,3)='1.1' AND strlen(mapno)&lt;9, mapno, NULL)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> - Displays the mapping description used in engagements.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that determines whether a row contains zero balances across all of the final, prior year 1 and prior year 2 columns:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>ifelse(finalbalance+py1+py2 = 0, 1, 0)</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Displays the final balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Displays the prior year 1 balance value of a given map number.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Displays the prior year 2 balance value of a given map number.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to hide zero balance rows from the table:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the "zero balance" calculation field (created above).</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>On the first drop-down, select <b>Sum</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>In the value field, enter <b>1</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Include nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                        <p>After the filter is set up, you can also use it to hide the "zero balance" column from the table.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Current assets — Benchmark</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Area line chart (<img src="../../Resources/Icons/area-line-chart-25x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Displays the year-end date when the current assets were recorded.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that calculates the average current assets of all files and entities:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(avg(currentassets))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>currentassets</b> - Displays the value of current assets in a given year.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If your intent is to display the benchmark of an entity across multiple other entities, ensure the widget is associated with an entity filter.</p>
+            </li>
+        </ul>
+        <h3>Current liabilities - Benchmark</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Vertical bar chart (<img src="../../Resources/Icons/vertical-bar-chart-20x23.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Displays the year-end date when the current liabilities were recorded.</p>
+            </li>
+        </ul>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that calculates the average current liabilities of all files and entities:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>abs(avg(currentliabilities))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>currentliabilities</b> - Displays the value of current liabilities in a given year.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If your intent is to display the benchmark of an entity across multiple other entities, ensure the widget is associated with an entity filter.</p>
+            </li>
+        </ul>
+        <h2>Customize an analysis for: Risks, controls and management letter points</h2>
+        <h3>Number of risks with no controls</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of risks with a blank associated control field:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count({assocd_ctrl}) - countIf({assocd_ctrl}, isNotNull(nullIf({assocd_ctrl},'')))</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Number of untested controls</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of untested controls:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count(testctrl) - countIf(testctrl, testctrl="No")</code>
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Risk report</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the risk fields that you want to display (for example: Name, Description, Inherent Risk, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Control matrix</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the control fields that you want to display (for example: Name, Description, Business Cycles, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Management letter report</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvmlp</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the management letter point fields that you want to display (for example: Name, Observation, Reason, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Commonly raised risks</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Word Cloud (<img src="../../Resources/Icons/word-cloud-35x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>name</b> - Identifies the most commonly raised risks based on the name field.</p>
+            </li>
+        </ul>
+        <h1>Sherlock Builder: Publish an analysis to a visualization</h1>
+        <p>Once you finalize an analysis, publish it to a visualization to share with other staff members and clients. Note that they can only view the visualization — they cannot modify it.</p>
+        <p class="note"><b>Note:</b> Purchased visualizations will display in the Dashboards tab if a license has been assigned to a Sherlock Builder user, but they cannot be modified or shared.</p>
+        <p><b>To publish a visualization:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the <b>Analyses</b> tab.</p>
+                <p>A list of existing analyses displays.</p>
+            </li>
+            <li>
+                <p>Select the analysis that you want to publish to a visualization.</p>
+            </li>
+            <li>
+                <p>Select <b>Share (<img src="../../Resources/Icons/share-icon-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Publish dashboard</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-dashboard-01.png" alt="The Publish a dashboard dialog with the Publish dashboard button highlighted." />
+                </p>
+            </li>
+            <li>In the Publish a dashboard dialog, select:<ul><li><p><b>Publish new dashboard as</b> to create a new visualization. Enter a title for the new visualization in the field.</p></li><li><p><b>Replace an existing dashboard</b> to overwrite a visualization while maintaining existing share settings. Select the visualization to replace from the drop-down menu.</p></li></ul></li>
+            <li>
+                <p>If required, apply any additional options from the <b>Advanced publish options</b> expandable menu.</p>
+            </li>
+            <li>
+                <p>Select <b>Publish dashboard</b>.</p>
+                <p>The Share dashboard dialog displays.</p>
+            </li>
+            <li>
+                <p>If you want to collaborate on the visualization with other Sherlock Builder users in your firm, enter each user's email and select <b>Share</b>.</p>
+                <p class="note"><b>Note:</b> Do not use the <b>Share with everyone in this account</b> option. It does not function correctly with Sherlock Builder.</p>
+                <p>
+                    <img src="../../Resources/Images/sherlock-bi-dashboard-02.png" alt="The Share dashboard dialog with the Share field and Share button highlighted." />
+                </p>
+            </li>
+        </ol>
+        <h1>Sherlock Reader: View a visualization</h1>
+        <p>Use the Sherlock Reader app to view and customize the visualizations that are available to your account. The icon preceding the visualization name indicates whether the visualization is purchased (<img src="../../Resources/Icons/purchased-dashboard-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) or shared (<img src="../../Resources/Icons/shared-dashboard-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <ul>
+                <li>
+                    <p>You can only view visualizations for which your firm has purchased licenses through <a href="https://my.caseware.com/">MyCaseware</a>, or visualizations that have been shared with you by other staff through Sherlock Builder.</p>
+                </li>
+                <li>
+                    <p>You can only view data from entities where you have the <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Setup/Users-and-Groups/Grant-users-and-groups-access-to-entities.htm">Viewer permission</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF"><b>Viewer</b> permission</MadCap:conditionalText>.</p>
+                </li>
+            </ul>
+        </div>
+        <p><b>To view a visualization:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that your firm administrator has <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Setup/Security/Enable-Cloud-apps.htm#Enable">assigned you licenses</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">assigned you licenses</MadCap:conditionalText> for the Sherlock Reader app and any applicable visualizations.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Sherlock Reader</b>.</p>
+                <p>A list of available visualizations displays.</p>
+            </li>
+            <li>
+                <p>From the list, select the visualization you want to view.<MadCap:conditionalText MadCap:conditions="General.Online"> For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/viewing-visual-data.html">Viewing Visual Data in Amazon QuickSight</a>.</MadCap:conditionalText></p>
+                <p class="note"><b>Note:</b> The Search function is not available in Sherlock Reader.</p>
+                <p>The visualization opens.</p>
+            </li>
+            <li>
+                <p>If required, apply filters or expand a widget to customize the visualization's appearance for <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Explore/Sherlock/Print-a-visualization.htm">printing</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">printing</MadCap:conditionalText>.</p>
+            </li>
+        </ol>
+        <h1>Sherlock&#160;Reader: Print a visualization</h1>
+        <p>When you <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Explore/Sherlock/View-a-visualization.htm">view a visualization</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">view a visualization</MadCap:conditionalText>, you can customize the data to display to make the visualization presentable for printing.</p>
+        <p><b>To print a visualization:</b>
+        </p>
+        <ol>
+            <li>
+                <p>On the visualization, select <b>Print Dashboard</b>.</p>
+                <p>A print preview displays.</p>
+            </li>
+            <li>
+                <p>Select <b>Configure</b> to customize the page size, orientation and background color.</p>
+            </li>
+            <li>
+                <p>Select <b>Print</b>.</p>
+                <p>The Print dialog displays.</p>
+            </li>
+            <li>
+                <p>Customize the print settings as required.</p>
+                <table class="table">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Destination</p>
+                            </td>
+                            <td>
+                                <p>Select a print method:</p>
+                                <ul>
+                                    <li>Local printer</li>
+                                    <li>Save as PDF</li>
+                                    <li>OneNote (Desktop)</li>
+                                    <li>Microsoft XPS Document Writer</li>
+                                    <li>Microsoft Print to PDF</li>
+                                    <li>Fax</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Pages</p>
+                            </td>
+                            <td>
+                                <p>Specify which pages to print.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Layout</p>
+                            </td>
+                            <td>
+                                <p>Specify the orientation of the document (portrait or landscape).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Color</p>
+                            </td>
+                            <td>
+                                <p>Specify the color of the document (full color or black and white).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Paper size</p>
+                            </td>
+                            <td>
+                                <p>Specify the paper size.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Pages per sheet</p>
+                            </td>
+                            <td>
+                                <p>Combine the specified number of pages onto a single sheet.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Margins</p>
+                            </td>
+                            <td>
+                                <p>Specify the margin size.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Scale</p>
+                            </td>
+                            <td>
+                                <p>Increase or decrease the size of the page content.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Options</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>Headers and footers:</b> Select to display or hide header or footer content on the page, including the visualization name, URL and time stamp.</li>
+                                    <li><b>Background graphics:</b> Select to display or hide background graphics (displayed in the preview window). Enabling this option may increase ink consumption on local printers.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Print using system dialog...</p>
+                            </td>
+                            <td>
+                                <p>Select the new window icon (<img src="../../Resources/Icons/new-window-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to launch your computer’s default printing dialog.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Select <b>Print</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

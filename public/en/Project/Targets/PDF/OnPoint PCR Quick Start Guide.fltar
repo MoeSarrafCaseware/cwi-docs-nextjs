@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Target for generating QuickStart Guide/checklist."
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/PDF/OnPoint PCR Quick Start Guide.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/Print.css"
+  MasterPageLayout="/Content/Resources/PageLayouts/Front-Page.flpgl"
+  ConditionTagExpression="exclude[General.Ignore] ">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <DocumentProperties
+    Author="CaseWare International Inc."
+    Subject="Quick Start Guide for OnPoint PCR"
+    Title="CaseWareCloud OnPoint PCR Quick Start Guide" />
+  <Variables>
+    <Variable
+      Name="General/Subtitle">OnPoint PCR</Variable>
+    <Variable
+      Name="General/Year">2024</Variable>
+    <Variable
+      Name="General/CityStateZip">Toronto ON, M5A 0L6 Canada</Variable>
+    <Variable
+      Name="General/CompanyName">CaseWare International Inc.</Variable>
+    <Variable
+      Name="General/Fax">Fax: 416-867-1906</Variable>
+    <Variable
+      Name="General/PhoneNumber">Tel: 416-867-9504</Variable>
+    <Variable
+      Name="General/ProductName">CaseWare Cloud</Variable>
+    <Variable
+      Name="General/StreetAddress">1100–351 King St East,</Variable>
+    <Variable
+      Name="General/Title">Quick Start Guide</Variable>
+    <Variable
+      Name="General/UserGuideTitle">Title</Variable>
+  </Variables>
+</CatapultTarget>

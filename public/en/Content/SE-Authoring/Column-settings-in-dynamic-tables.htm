@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Column settings in dynamic tables</h1>
+        <p>The following listing describes column settings in a dynamic table. </p>
+        <h2>Type</h2>
+        <p>Allows you to choose a column type. The following columns have predefined values:</p>
+        <ul>
+            <li><b>Prior year -</b> prior year balance.</li>
+            <li><b>Current year -</b> current year balance.</li>
+            <li><b>Current period -</b> balance for the current period (for interim engagements).</li>
+            <li><b>Comparative period -</b> the prior period balance that matches the current period (for interim engagements). For example, if the current period is March of 2019 then the comparative period is March of 2018. </li>
+            <li><b>Amount variance -</b> difference between prior year balance and current year balance.</li>
+            <li><b>Percent variance -</b> percentage difference between prior year balance and current year balance. If you choose this column type, you can also select the number of decimal places to display in the column. By default, percent variance columns will display values to 2 decimal places.</li>
+        </ul>
+        <p>You can also enter custom values for the following columns:</p>
+        <ul>
+            <li><b>Input -</b> enter text, numbers, currency values or percentages.</li>
+            <li><b>Custom calculation -</b> enter a calculation using the calculation editor. The calculation is applied to all column cells.</li>
+            <li><b>Note reference -</b> add references to existing notes in the financial statements.</li>
+            <li><b>Annotation -</b> add annotations column. Select <b>Add</b> (<img src="../Resources/Images/add-term.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in each cell in the column to add annotations.</li>
+        </ul>
+        <h2>Source Type</h2>
+        <p>Allows you to select the data source for the column. </p>
+        <p>Available options:
+</p>
+        <ul>
+            <li><b>Trial balance</b> - trial balance data displays in the column.
+</li>
+            <li><b>Sum of transactions</b> - the sum of transaction for the group displays in the column.</li>
+            <li><![CDATA[
+]]><b>Number of transactions</b> - the number of transactions for the group displays in the column.</li>
+        </ul>
+        <p class="note inline"><b>Note:</b><![CDATA[
+]]> <b>Sum of transactions</b> and <b>Number of transactions</b> are only functional if you enable the Data page (new design of Trial Balance page) so users can import transactions.</p>
+        <h2>Carry forward action</h2>
+        <p>
+
+Allows you to select the carry forward action.</p>
+        <p>Available options:
+</p>
+        <ul>
+            <li><b>None</b> - column data doesn't change in the next period file.
+</li>
+            <li><b>Move data</b> - column data is moved to the next period file.</li>
+            <li><b>Clear content</b> - column is empty and users need to add the data for the next period file.
+</li>
+        </ul>
+        <p class="note inline"><b>Note:</b> Carry forward action is only available if you select <b>Trial balance</b> in <b>Source Type.</b> </p>
+        <h2>Heading</h2>
+        <p>The column header text.</p>
+        <p>You can insert <a href="Add-a-data-link-in-the-financial-statements-text.htm#To_add_dynamic_text:">Dynamic Text or formula (fx)</a> for the header. You can also type simple text in the <b>Output</b> field or combine simple text with dynamic text.</p>
+        <h2>Dimension</h2>
+        <p>Allows you to select a <a href="Add-dimensions.htm#Add">dimension</a> to set the column to only display  data for that dimension only.</p>
+        <h2>Width</h2>
+        <p>Allows you to width for your column. The width options for all columns are <b>Narrow</b>, <b>Standard</b> and <b>Specific</b>, except for note reference, annotation and description columns, where the width options are <b>Small, Medium</b> and <b>Large.</b></p>
+        <p>If you select <b>Specific</b>, you can then specify the width of the column in centimeters or inches. The measurement unit  is determined by the unit selected in the <a href="Formatting-and-localization.htm#Customiz2">product settings</a>.</p>
+        <h2>Currency Symbol</h2>
+        <p>Allows you to select whether to display the currency symbol in the column header.</p>
+        <p>Available options:</p>
+        <ul>
+            <li>
+                <p><b>Use document default</b> - the table uses the default currency symbol settings for the financial statements. See <a href="Set-default-currency-symbol-options-dynamic-tables.htm">Set default currency symbols options for dynamic tables</a> to learn more.</p>
+            </li>
+            <li>
+                <p><b>Show in header</b> - the currency symbol displays in the column header.</p>
+            </li>
+            <li>
+                <p><b>Do not show in header</b>  - the currency symbol does not display in the header.</p>
+            </li>
+        </ul>
+        <h2>Format</h2>
+        <p>For input or custom calculation columns, you can choose one of the following formats for your cell values:</p>
+        <ul>
+            <li>Currency</li>
+            <li>Number</li>
+            <li>Percent</li>
+            <li>Text</li>
+        </ul>
+        <p>If you select <b>Number</b> or <b>Percent</b>, you can also choose the number of decimal places.</p>
+        <h2>Display options</h2>
+        <p>For some column types and formats, you can select one or more display options:</p>
+        <ul>
+            <li>
+                <p><b>Expand to fill the width of the page</b> - sets the column width so the dynamic table fits the full width of the page.</p>
+            </li>
+            <p class="note inline"><b>Note:</b> This setting is enabled in the <b>Description</b> column by default.</p>
+            <li>
+                <p><b>Display zero balances</b> - shows accounts with zero balances in the column.</p>
+            </li>
+            <li>
+                <p><b>Display opposite sign for balances</b> - displays the opposite sign (negative or positive) for the values in the column.</p>
+            </li>
+            <li>
+                <p><b>Exclude from totals</b> - excludes the values in this column from the calculation in the account group Total row.</p>
+            </li>
+            <li>
+                <p><b>Display symbol in heading</b> - displays the currency symbol or percentage sign at the top of the column.</p>
+            </li>
+            <li>
+                <p><b>Show year in heading</b> - adds the year to the heading of Current year or Prior year columns.  </p>
+            </li>
+            <li>
+                <p><b>Use non-consolidated data</b> - if this is a consolidated engagement, selecting this option removes consolidated data from the column and displays the non-consolidated data only. </p>
+            </li>
+        </ul>
+        <p>You can select the <b>Visibility</b> icon (<img src="../Resources/Images/icon-visibility-visible.png" alt=" " style="vertical-align: text-bottom;" />) to reveal a dropdown with the following options:</p>
+        <ul>
+            <li>
+                <p><b>Apply default behavior</b> - the default behavior is applied to the column. Note that the default behavior differs based on the column type.</p>
+                <ul>
+                    <li>
+                        <p><b>For trial balance columns:</b>
+                        </p>
+                        <p>The column always displays in the financial statements and the print copy (PDF) if the column contains data (at least one cell is not empty and its value is not zero). Note that this default behavior can be changed for an individual dynamic table from the <a href="Display-zero-balance-columns-in-dynamic-tables.htm">table settings</a>.</p>
+                        <p class="note"><b>Note:</b> Prior year columns do not display if there is no prior year data.</p>
+                    </li>
+                    <li>
+                        <p><b>For input and custom calculation columns:</b>
+                        </p>
+                        <p>The column always displays in the financial statements and displays in the print copy (PDF) if the column contains data (at least one cell is not empty and its value is not zero).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Always display this column</b> - the column is always displayed in the financial statements and in the print copy (PDF).</p>
+            </li>
+            <li>
+                <p><b>Always hide this column</b> - the column is always hidden in the financial statements and in the print copy (PDF).</p>
+            </li>
+        </ul>
+        <h2>Delete</h2>
+        <p>You can select the Delete icon (<img src="../Resources/Icons/delete-in-table.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to delete a column.</p>
+    </body>
+</html>

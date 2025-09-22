@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>You can upload a list of your staff members from a .csv file, shared data store (.cwc file) or <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Export_Users_Groups_Cloud" target="_blank">data store export file</a> to get them started with their own Cloud account. Note that each staff member added to Cloud will receive a registration email from <i>donotreply@casewarecloud.com</i>. We suggest whitelisting this email address to prevent your spam filters from blocking the email.</p>
+        <p>If you are preparing a .csv file, ensure that:</p>
+        <ul>
+            <li>
+                <p>Each staff member has at minimum a first name, last name and unique email address</p>
+            </li>
+            <li>
+                <p>Each row represents one staff member</p>
+            </li>
+            <li>
+                <p>Each column represents a property (e.g. first name, last name, email)</p>
+            </li>
+            <li>
+                <p>Multiple staff groups are separated with tildes (~)</p>
+            </li>
+        </ul>
+        <p>For example:</p>
+        <div style="font-size: 10pt;">
+            <table class="table">
+                <col style="width: 15%;" />
+                <col style="width: 15%;" />
+                <col style="width: 40%;" />
+                <col style="width: 15%;" />
+                <col style="width: 15%;" />
+                <thead>
+                    <tr>
+                        <th>Last name</th>
+                        <th>First name</th>
+                        <th>Email address</th>
+                        <th>Initials</th>
+                        <th>Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Barnett</td>
+                        <td>Betsy</td>
+                        <td>betsy.barnett@test.caseware.com</td>
+                        <td>BB</td>
+                        <td>G1</td>
+                    </tr>
+                    <tr>
+                        <td>Henry</td>
+                        <td>Isabel</td>
+                        <td>isabel.henry@test.caseware.com</td>
+                        <td>IH</td>
+                        <td>G1~G2</td>
+                    </tr>
+                    <tr>
+                        <td>Holt</td>
+                        <td>Ben</td>
+                        <td>ben.holt@test.caseware.com</td>
+                        <td>BH</td>
+                        <td>G2</td>
+                    </tr>
+                    <tr>
+                        <td>Nguyen</td>
+                        <td>Nicholas</td>
+                        <td>nicholas.nguyen@test.caseware.com</td>
+                        <td>NN</td>
+                        <td>G2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><b>To upload staff from a .csv file:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Right-click the <b>Migration Manager</b> executable and click <b>Run as administrator</b>.</p>
+            </li>
+            <li>
+                <p>On the main menu, click <b>Upload Staff</b>.</p>
+            </li>
+            <li>
+                <p>Next to the CSV file upload option, click <b>UPLOAD</b>.</p>
+            </li>
+            <li>
+                <p>The Staff app displays in Cloud. Click <b>New | Import | Staff</b>.</p>
+            </li>
+            <li>
+                <p>The Import Staff dialog displays. Click <b>Import from CSV</b> and browse for your .csv file, or copy and paste the content from your .csv file into the text box. Click <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>The list of staff from your .csv file display in a table. Assign the applicable heading for the data in each column. Note that columns with the Ignore heading will not be uploaded.</p>
+            </li>
+            <li>
+                <p>Click <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>The staff list is uploaded to Cloud. You can view all of the staff in your Cloud site by clicking <b>Staff</b> on the Cloud menu. Close the Import Staff dialog to return to the main menu.</p>
+        <p><b>To upload staff from a shared data store:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Right-click the <b>Migration Manager</b> executable and click <b>Run as administrator</b>.</p>
+            </li>
+            <li>
+                <p>On the main menu, click <b>Upload Staff</b>.</p>
+            </li>
+            <li>
+                <p>Click the file icon and browse for the folder containing the connection (.cwc) file. Select the file and click <b>Open</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>UPLOAD</b>.</p>
+            </li>
+            <li>
+                <p>A login dialog displays requesting administrator credentials for the shared data store. Enter the credentials and click <b>OK</b> to begin the upload.</p>
+            </li>
+        </ol>
+        <p>The staff list is uploaded to Cloud and the upload results display. For more detailed information, view the automated log file by clicking the link provided. Click <b>CLOSE</b> to return to the main menu.</p>
+        <p><b>To upload staff and groups from a data store export file:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Right-click the <b>Migration Manager</b> executable and click <b>Run as administrator</b>.</p>
+            </li>
+            <li>
+                <p>On the main menu, click <b>Upload Staff</b>.</p>
+            </li>
+            <li>
+                <p>Next to the DSAT upload option, click <b>UPLOAD</b>.</p>
+            </li>
+            <li>
+                <p>The Working Papers Security Import dialog displays in Cloud. Click <b>Select Files</b> and browse for your <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Export_Users_Groups_Cloud" target="_blank">export file</a>, or drag and drop the file into the dialog.</p>
+            </li>
+            <li>
+                <p>The Import Staff and Groups dialog displays with a list of your staff, staff groups and roles. Click <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>The staff list is uploaded to Cloud and the roles display in the Working Papers Security list. You can view all of the staff and groups in your Cloud site by clicking <b>Staff</b> and <b>Groups</b> on the Cloud menu. Close the Import Staff and Groups dialog to return to the main menu.</p>
+    </body>
+</html>

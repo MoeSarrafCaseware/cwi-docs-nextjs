@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.AUDITCAN,General.Cloud-Help">
+    <head><title>What's new - Caseware Audit</title>
+    </head>
+    <body>
+        <h1>What’s new in AiDA 2025-07</h1>
+        <p>Welcome to the Caseware AiDA 2025-07 release! AiDA 2025-07 introduces improvements in response quality and query handling.</p>
+        <h2>Smarter query handling</h2>
+        <p> As part of its prompt refinement process, AiDA now uses a language model to preprocess document-related queries. This enhancement enables AiDA to </p>
+        <ul>
+            <li>
+                <p>Clean and simplify user queries to improve handling of a wider variety of syntactic structures, vocabulary usage, and grammar while preserving semantic structure and intent. </p>
+            </li>
+            <li>
+                <p>Decide whether to use the full document or selected relevant sections using RAG (retrieval-augmented generation) based on the query and conversation history.</p>
+            </li>
+            <li>
+                <p>Incorporate conversation history to better understand user intent and retrieve more relevant information. </p>
+            </li>
+        </ul>
+        <p>These improvements help AiDA deliver more accurate, context-aware responses, especially when summarizing documents, answering complex questions, or supporting lengthy conversations. </p>
+        <h2>AiDA Enhanced model upgrades by region</h2>
+        <p>We’ve upgraded AiDA Enhanced to deliver higher-quality responses tailored to users in key regions.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Model version</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asia-Pacific (AP)</td>
+                    <td>Claude Sonnet 3.5 v2 </td>
+                </tr>
+                <tr>
+                    <td>European Union (EU)</td>
+                    <td>Claude Sonnet 3.7 </td>
+                </tr>
+                <tr>
+                    <td>United States (US)</td>
+                    <td>Claude Sonnet 4.0 </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Fixes in AiDA 2025-07</h2>
+        <h3>Improved document summarization for long PDFs</h3>
+        <p>Summarizing long documents, such as lease agreements, sometimes returned incomplete results, omitting key sections. In AiDA 2025-07, summarization now includes the full content of the document, providing more complete and reliable results.</p>
+        <h3>Citations no longer appear clickable when they aren’t</h3>
+        <p>Fixed an issue where some citations appeared clickable but didn’t navigate to the related content in the document.</p>
+        <h3>Document queries now return citations more reliably</h3>
+        <p>Fixed an issue where some document-related queries returned no citations.</p>
+    </body>
+</html>

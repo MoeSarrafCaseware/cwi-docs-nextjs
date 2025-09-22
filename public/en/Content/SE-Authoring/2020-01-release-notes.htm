@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>SE 2020-01 release notes</h1>
+        <p>Don't retire your Microsoft Excel skills just yet! Cloud Engagements is bringing in Cloud Connector - a MS Excel Add-in. Featuring graphs and charts in Financial Statements, transactions sampling and more, SE 2020-01 rings in the new year with exciting additions to the platform.</p>
+        <h2>Sample selection</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="End-user.htm">#enduser</a></p>
+        <p>The Data page now features a new tab: <b>Transactions</b>, solely dedicated to display account transactions, as well as support sample selection and report generation for verification testing.</p>
+        <p>
+            <img src="../Resources/Images/transactions-tab.PNG" alt="Transactions tab in the Data page." />
+        </p>
+        <p>In the <b>Transactions</b> tab, users can:</p>
+        <ul>
+            <li>
+                <p>analyze the data by sorting and filtering to create a sampling population.</p>
+            </li>
+            <li>
+                <p>generate a sample of the data using the available methods (Manual, Random, Monetary Unit or Systematic).</p>
+            </li>
+            <li>
+                <p>export the sample to a CSV file or copy it to clipboard for further analysis and documentation of test results. Users can also upload the sample file in the Documents page and reference it from a work-program procedure.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/systematic-sampling-generated.PNG" alt="Systematic sample selection." />
+        </p>
+        <p>You can enable sampling in your product by selecting the <b>Enable sampling</b> check box in the product settings.</p>
+        <p>
+            <img src="../Resources/Images/enable-sampling.PNG" alt="Enable sampling in the Data page." />
+        </p>
+        <h2>Analysis in Financial Statements</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a> <a href="End-user.htm">#enduser</a></p>
+        <p>A new content section <b>Analysis</b> is now available in Financial Statements. You can customize the types of graphs and charts, as well as the data they present in the product API. To learn more, see <a href="Add-an-analysis-section.htm">Add an analysis section.</a></p>
+        <p>Similar to the <b>Analysis</b> tab in checklists, the <b>Analysis</b> section in Financial Statements displays the selected graphs or charts for a specific group or the overall financial analysis. Users can resize graphs and charts to have them display in a full size across the section for better presentation. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Statements-and-Conclusions/Prepare-financial-statements.htm#Reviewaccountanalysis">Review account analysis in Financial Statements.</a></p>
+        <p>
+            <img src="../Resources/Images/analysis-in-FS.PNG" alt="Analysis section in Financial Statements." />
+        </p>
+        <h2>Formula builder in dynamic table cells</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a> <a href="End-user.htm">#enduser</a></p>
+        <p>A formula icon (<img src="../Resources/Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) is now available in dynamic table cells in Financial Statements to support scenarios that call for a need to have calculated values in cells, such as: movement rows in the Statement of Cash Flows or ratio analysis rows in the "Earnings per share" section in the Income Statement.</p>
+        <p class="note inline"><b>Note:</b> This option is only available for Input column and row types.</p>
+        <p>The calculation can include numbers, data sourced from the trial balance, data sourced from the financial statements, form values or a combination of all.</p>
+        <p class="note inline"><b>Note:</b> The <b>Forms value</b> option is only available if you have developed forms using SE Builder in your product.</p>
+        <p>
+            <img src="../Resources/Images/cell-calculation-PY.PNG" alt="Formula builder tab - the Calculation tab." />
+        </p>
+        <p>In the document, you can select the cell where you've added a calculation to view its details.</p>
+        <p>
+            <img src="../Resources/Images/view-calculation-Fs-doc-PA.PNG" alt="Popup showing the details of a calculation added in a table cell." />
+        </p>
+        <p>If users override  a predefined cell calculation (a calculation that's been added in the product template by authors), a Revert option displays in the formula builder - the <b>Calculation</b> tab - so they can always revert to the predefined calculation, if needed.</p>
+        <p>
+            <img src="../Resources/Images/revert-calculation.png" alt="Revert to predefined calculation. Option available for end users if they override a predefined cell calculation." />
+        </p>
+        <p>If users override a cell value, the Account Details popup displays the original calculated value and  formula, as well as presents a Revert option.</p>
+        <p>
+            <img src="../Resources/Images/calculation-popup=post-override.PNG" alt="User has overridden a cell that originates from a calculation. Account Details popup shows the details of the overridden value and presents a Revert option." />
+        </p>
+        <h2>Enhanced logic for Show/Hide in table rows</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a> <a href="End-user.htm">#enduser</a></p>
+        <p>The Show/Hide (<img src="../Resources/Images/icon-eye-03.png" style="vertical-align: text-bottom;height: 20px;" alt="" />/ <img src="../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) option for dynamic table rows now includes additional options. Selecting the icon opens a drop-down that presents either two or three options, based on the row type.</p>
+        <ul>
+            <li>
+                <p><b>Apply default behavior</b> - the default behavior is applied to the row. Note that the default behavior differs based on the row type:</p>
+                <ul>
+                    <li>
+                        <p>For input rows:</p>
+                    </li>
+                    <p>Always display in the financial statements.</p>
+                    <p>Display in the print copy of the document if the row has a balance (the cell is not empty and its value is not zero).</p>
+                    <li>
+                        <p>For custom group <b>Total</b> or <b>Title</b> rows:</p>
+                    </li>
+                    <p>Always display in the financial statements.</p>
+                    <p>Display in the print copy of the document if the group includes more than one account balance (the cells are not empty and their values are not zero).</p>
+                    <li>
+                        <p>For trial balance rows:</p>
+                    </li>
+                    <p>Display in the financial statements and in the print copy if the balances for current or prior year exist.</p>
+                </ul>
+            </li>
+            <li>
+                <p><b>Always display this row</b> - the row always displays in the financial statements and in the print copy (PDF).</p>
+            </li>
+            <li>
+                <p><b>Always hide this row</b> - the row is always hidden in the financial statements and in the print copy (PDF).</p>
+            </li>
+            <p class="note inline"><b>Note:</b> This option is only available for input rows and  groups (trial balance group rows and custom <b>Title</b> and <b>Total</b> rows).</p>
+        </ul>
+        <p>
+            <img src="../Resources/Images/new-show-hide-options.PNG" alt="New Show/Hide options for dynamic table rows." />
+        </p>
+        <p>To complement this feature, rows that display in the financial statements but will not print show in gray color in the document so you can easily spot them.</p>
+        <p>
+            <img src="../Resources/Images/grayed-out-input-rows.PNG" alt="Rows that will not print display in gray in the Financial Statements." />
+        </p>
+        <h2>New for authors</h2>
+        <p>Here is what's new for authors in SE 2020-01.</p>
+        <h3>Cloud Connector</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>Cloud Connector is a Microsoft Office Add-in that allows you to link data between your Cloud Engagement product and MS Excel. With that linkage in place, you can create excel files for financial statements, schedules or calculations customized to the needs of your solution.</p>
+        <p>Cloud Connector provides realtime update of the linked data in the excel file. If any value or information changes in the engagement file, it's automatically updated in the excel file - guaranteeing efficient and effective information transfer.</p>
+        <p>Users can also use Cloud Connector in excel files to create the Statement of Cash Flows proof in audits.</p>
+        <p>As shown in the figure below, Cloud Connector displays in excel files as <b>Datalink</b> in the ribbon.</p>
+        <p>
+            <img src="../Resources/Images/connector-plugged-in.PNG" alt="Cloud Connector Add-in." />
+        </p>
+        <p>To use Cloud Connector, you need to:</p>
+        <ol>
+            <li>
+                <p>have a local installation of <b>Microsoft Office 365</b> Desktop or online. Note that MS Office version 2019 or prior is not supported.</p>
+            </li>
+            <li>
+                <p>create a <b>MS Office 365 Desktop</b> excel file and upload it in your template or engagement file.</p>
+            </li>
+            <li>
+                <p>open the excel file from the Documents page in your template or engagement file.</p>
+            </li>
+            <li>
+                <p>get the <b>Datalink</b> Add-in from the Microsoft Add-ins Store.</p>
+            </li>
+            <p><i>The </i><b style="font-style: italic;">Datalink</b><i> Add-in will be available in the <img src="../Resources/Images/icon-admin-managed.png" style="vertical-align: text-bottom;height: 20px;" alt="" />section in the store.</i>
+            </p>
+            <li>
+                <p>use the <b>Datalink</b> Add-in to insert data from your template or engagement file in the excel file.</p>
+            </li>
+        </ol>
+        <div MadCap:conditions="General.Online">
+            <p>To learn more about the functionality, watch the Cloud Connector demo clip from our SE 2020-01 webinar.</p>
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span>
+                            </button>
+                            <h3 class="modalheading">Gain Access to More Content</h3>
+                            <p class="modalmaintext">Subscribe to receive updates on the latest articles and news for Caseware products.</p>
+                            <p class="modalsubtext">Your download will start immediately after you subscribe.</p>
+                            <p class="emailmodalinputlabel">Email:</p>
+                            <input type="text" id="email" />
+                            <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Subscribe</button><a class="modalnoemail" onclick="downloadFilenoemail()">No thanks. I just want to download the file.</a>
+                            <div id="emailerrormsg">
+                            </div>
+                        </div>
+                        <div class="modal-footer"><a href="https://casewarecloud.com">Don't have Cloud yet? Click here to learn more.</a>
+                        </div>
+                    </div>
+                </div>
+            </div><a class="downloadLink" data-toggle="modal" filename="Cloud-Connector-functionality-Demo.mp4" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Cloud Connector Demo Clip</a>
+        </div>
+        <h3>Components</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>A new product setting <b>Components</b> is introduced to support a more universal approach for visibility logic across the template content items. In this iteration of the Components setting, trial balance Financial groups are the only supported content items.</p>
+        <p>You can define Components that are relevant to your product or your market. For example, you can define components based on industry type, entity type or reporting framework. You can also set visibility logic for each component. For example, only display content relevant to a specific industry <i>Agriculture</i> if the entity operates within that industry.</p>
+        <p>
+            <img src="../Resources/Images/components.PNG" alt="Add Components in your product settings." />
+        </p>
+        <p>In this release, a new group property <b>Component</b> is now available in the Group Properties dialog so you can associate one or more component with a trial balance group.  </p>
+        <p>If you associate multiple components to a trial balance group and define visibility settings for each one of the components, then:</p>
+        <ul>
+            <li>
+                <p>the trial balance group is hidden in the engagement if all the associated components are hidden due to visibility conditions.</p>
+            </li>
+            <li>
+                <p>the trial balance group is visible in the engagement if  at least one of the associated components is visible due to visibility conditions.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/components-property.PNG" alt="The Component group property." />
+        </p>
+        <h3>Groupings</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>The Group ID field in the group properties takes up to 256 characters now to accommodate the need for longer IDs. For example, products with iXBRL enabled can have IDs up to 200 characters long.</p>
+        <h3>Visibility conditions</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>A new option is now available in the template <b>Information</b> (<img src="../Resources/Images/icon-information.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Export visibility conditions</b>, so you can directly export visibility conditions to a CSV file.</p>
+        <p>
+            <img src="../Resources/Images/export-visibility-conditions.png" alt="Export visiblity settings." />
+        </p>
+        <h3>New risk module</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>More customizations are available in <b>Risk</b> | <b>Assessment</b> options in the product settings. You can now customize the labels for inherent risks, control risks and risks of material misstatement for your product.</p>
+        <p>
+            <img src="../Resources/Images/IR-CR-RMM-label-customization.PNG" alt="Customize IR, CR and RMM labels." />
+        </p>
+        <h3>IFRS tables</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>You can now set dimension rows to include prior year data.</p>
+        <p>
+            <img src="../Resources/Images/prior-year-info-in-dimension-rows.PNG" alt="Prior year data in dimension rows (IFRS tables)." />
+        </p>
+        <h2>New for end users</h2>
+        <p>Here is what's new for <a href="End-user.htm">end users</a> in SE 2020-01.</p>
+        <h3>Accounts</h3>
+        <p>Users can now assign new accounts to groups without having to navigate to a different page. The Account dialog now features three group drop-downs (Financial, Tax Code and Chart of Accounts).</p>
+        <p> Note that if the account is assigned to a group that's linked to another group, it's automatically assigned to the linked group as well. For example, if the account is assigned to <i>Inventory</i> in Financial grouping that's linked to <i>Other inventories for sale</i> in Chart of Accounts, the account is automatically assigned to <i>Other inventories for sale</i> in Chart of Accounts as well.</p>
+        <p>
+            <img src="../Resources/Images/assign-account-to-group.PNG" alt="Assign an account to a group while creating it." />
+        </p>
+        <h3>Adjustments</h3>
+        <p>While posting adjustments, users can now create an account as they add the lines of the adjusting entry. </p>
+        <p>
+            <img src="../Resources/Images/add-account-in-adjustments.png" alt="Create an account while adding an adjusting entry line." />
+        </p>
+        <h3>Queries</h3>
+        <p>In this release, query documents have witnessed a few improvements to retain legacy behavior and improve scannability.</p>
+        <ul>
+            <li>To efficiently view and scan questions in queries, a filter now displays in the left side navigation in the document once it's sent to contacts.</li>
+        </ul>
+        <p>The figure below shows how staff can filter query questions by status.</p>
+        <p>
+            <img src="../Resources/Images/question-filters-queries.PNG" alt="Query question filters - Staff view." />
+        </p>
+        <p>The figure below shows how contacts can filter query questions by status.</p>
+        <p>
+            <img src="../Resources/Images/question-filters-contacts.PNG" alt="Query question filters - Contact view." />
+        </p>
+        <ul>
+            <li>Similar to the old query layout behavior, when users open a query document, its name now displays in the engagement's main navigation at the top.</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/query-name-in-main-nav.png" alt="Retaining legacy behavior in the old query layout, the document name now shows at the main navigation." />
+        </p>
+        <h3>New risk module</h3>
+        <p>Various UI enhancements have been incorporated in this release to improve the visual appeal, interaction and overall experience. As for new features,</p>
+        <ul>
+            <li>
+                <p>an export icon is now available in the <b>Assessments</b> tab so users can export risk assessments information to a PDF. </p>
+            </li>
+            <li>
+                <p>RMM values and risk information now flow to the <b>Risks</b> and <b>Risk Assessment</b> widgets in the Risk tab in checklists. </p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/RMM-risks-in-checklists.PNG" alt="RMM and Risks widgets in a checklist. Information sourced from the new risk layout." />
+        </p>
+        <h2>Fixes in SE 2020-01</h2>
+        <p>The following listing features a brief description of the bug fixes in SE 2020-01.</p>
+        <h3>New risk module</h3>
+        <p>Fixed issues in the new risk module where,</p>
+        <ul>
+            <li>attempting to resolve an Issue in the Assessments tab does not work as expected. </li>
+            <li>the message confirming risk creation remains in the page. </li>
+            <li>creating a reference link to the new risk module goes to the old risk layout. </li>
+            <li>the new risk page shows blank and fails to display existing risks. </li>
+        </ul>
+        <h3>The Data page</h3>
+        <p>Fixed issues in the Data page where,</p>
+        <ul>
+            <li>
+                <p>linking tax groupings to financial groupings does not work as expected. </p>
+            </li>
+            <li>
+                <p>unassigning accounts from a financial grouping unassigns it from the GIFI grouping as well. </p>
+            </li>
+            <li>
+                <p>when viewing issues in the <b>Issues</b> page, issues recorded on trial balance lines link to the old Trial Balance page instead of the Data page. </p>
+            </li>
+        </ul>
+        <h3>Queries</h3>
+        <p>Fixed issues in queries where,</p>
+        <ul>
+            <li>
+                <p>the <b>Select Destination</b> button is missing in query documents in the product template and the firm template. </p>
+            </li>
+            <li>
+                <p>the time to load a query document with more than 100 questions takes longer than expected. </p>
+            </li>
+            <li>
+                <p>translated error messages do not display properly in the <b>Create Query</b> page.</p>
+            </li>
+            <li>
+                <p>query documents in the product template and the firm template display the <b>Add contact</b> option within the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) menu. </p>
+            </li>
+        </ul>
+        <h3>Financial Statements</h3>
+        <p>Fixed issues in financial statement where,</p>
+        <ul>
+            <li>
+                <p>end users can revert the custom group titles created by the primary author in dynamic tables. </p>
+            </li>
+            <li>
+                <p>the print margin settings does not apply to certain pages. </p>
+            </li>
+            <li>
+                <p>dimensions do not display in the PDF generated print preview. </p>
+            </li>
+            <li>
+                <p>the Account Detail popup in dynamic tables displays zeros for <b>Preliminary</b> and <b>Previous</b> columns for custom groups. </p>
+            </li>
+        </ul>
+        <h3>Other fixes</h3>
+        <p>The following listing features general improvements in SE 2019-10.</p>
+        <ul>
+            <li>
+                <p>Fixed an issue where searching query templates in the left side navigation of the engagement file does not work as expected. </p>
+            </li>
+            <li>
+                <p>Fixed an issue in the <b>Documents</b> page where the issues indicator (<img src="../Resources/Images/icon-issues-showing-total-number.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) does not work as expected. </p>
+            </li>
+            <li>
+                <p>Fixed an issue where the <b>Form Value</b> tab in the <b>Data</b><b>Link</b> dialog is inaccessible although SE Builder forms are enabled in the product. </p>
+            </li>
+        </ul>
+    </body>
+</html>

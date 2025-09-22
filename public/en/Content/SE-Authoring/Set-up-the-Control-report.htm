@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Set up the Control report</h1>
+        <p class="note"><b>Note:</b> This topic is not applicable for Cloud apps that have the new risk module <a href="Enable-the-new-risk-module.htm">enabled</a>.</p>
+        <p>You can enable the Control report to allow users to add  controls that they've defined to mitigate the identified risks throughout the engagement workflow. You can enable a control report to support large and complex audits (if available in your product).</p>
+        <p>To enable the Control report in your product, specify the <code>com.caseware.ca.general.control-report</code> in the <code>form</code> property in the product.json file. To learn more, see <a href="Enable-or-disable-features-in-your-product.htm">Enable or disable features in your product.</a></p>
+        <p>Once you enable the report in your product, you can add it in your draft and set it up.</p>
+        <p>To add the control report, select <b>Add (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b> at the documents page, then choose <b>Control Report.</b></p>
+        <p style="font-weight: bold;">To set up the Control report:</p>
+        <ol>
+            <li>
+                <p>Add guidance information.</p>
+            </li>
+            <p>Select the text field to start adding content. The formatting toolbar displays. Use the toolbar to make the following changes:</p>
+        </ol>
+        <MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" />
+        <ol MadCap:continue="true">
+            <li>
+                <p>If you want to add default controls in the report, select<b> +Control.</b></p>
+                <ol MadCap:continue="true" style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Enter a name and a description for the control.</p>
+                    </li>
+                    <li>
+                        <p>Select the <b>Cycle</b> and <b>Area</b> associated with the control.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select a control to view its details.</p>
+            </li>
+            <li>
+                <p>Select <b>Edit (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b> to modify the control details if needed.</p>
+                <ol MadCap:continue="true" style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Associate it to a financial group at <b>FINANCIAL GROUPS.</b></p>
+                    </li>
+                    <li>
+                        <p>Add a document reference at <b>REFERENCES.</b></p>
+                    </li>
+                    <li>
+                        <p>Associate it to a risk by selecting one from the drop-down list at <b>RISKS.</b></p>
+                    </li>
+                    <li>
+                        <p>Associate it to a cycle or area by selecting one from the drop-down lists at <b>CYCLES</b> or <b>AREAS.</b></p>
+                    </li>
+                    <li>
+                        <p>Once you're done, select <b>Save.</b></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Add or remove a link in the guidance information</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" />
+    </body>
+</html>

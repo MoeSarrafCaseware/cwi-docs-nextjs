@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="As you work on your engagement, you may need to include documents that were not created in Smart Engagement, for example: additional records in a spreadsheet sent by your client; a pre-existing template for a client letter you want to add to new engagements; and a signed acceptance letter in PDF form sent by your client." />
+    </head>
+    <body>
+        <h1>Install Caseware WebDAV protocol unattended</h1>
+        <p>This article describes the specifics of installing the CasewareWebdavDocumentOpener.msi protocol application on Windows.</p>
+        <p>If you have not previously done so, download the Caseware Webdav protocol installer using this link:</p>
+        <div><a class="downloadLink" data-toggle="modal" filename="CasewareWebdavDocumentOpener.msi" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>CasewareWebdavDocumentOpener (.msi)</a>
+        </div>
+        <div> </div>
+        <div data-mc-conditions="General.Online">
+            <div class="modal" id="downloadModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Protocol app installation privileges</h2>
+        <p>The protocol application supports dual-mode installation, providing the <b>Only for me</b> option to perform per-user installation and the <b>Anyone who uses this computer</b> option for per-machine installation.</p>
+        <p>In the case of the <b>Only for me</b> option, the protocol application can be installed by the account with <b>Standard User</b> permissions. Administrative privileges are NOT required</p>
+        <p>In the case of the <b>Anyone who uses this computer</b> option, administrative privileges are required. </p>
+        <p class="note inline"><b>Note: </b>Administrative privileges are required only to install the protocol application. To use the installed application and open documents, administrative privileges are NOT required.</p>
+        <h2>Unattended installation</h2>
+        <p><b>To run an unattended installation:</b>
+        </p>
+        <p><b>To install for all users.</b> Administrative privileges are required. The below example installs the application for all users, starts the Web Client Windows service if stopped and configures Web Client service auto-start.</p>
+        <p>
+            <div><code>msiexec /i  casewareWebdavDocumentOpener.msi /qb MSIINSTALLPERUSER="" WEBCLIENTAUTOSTART="1"</code>
+            </div>
+        </p>
+        <p><b>To install with the Only for me option.</b> Administrative privileges are NOT required unless the Web Client service needs to be started. The example below installs the application for the current user, starts Web Client Windows service if stopped and configures Web Client service auto-start:</p>
+        <p>
+            <div><code>msiexec /i  casewareWebdavDocumentOpener.msi /qb MSIINSTALLPERUSER="1" WEBCLIENTAUTOSTART="1"</code>
+            </div>
+        </p>
+        <p class="note inline"><b>Note: </b> If Web Client service fails to start during installation for any reason, the installer completes successfully. The Web Client service can be started at any time after installation.</p>
+    </body>
+</html>

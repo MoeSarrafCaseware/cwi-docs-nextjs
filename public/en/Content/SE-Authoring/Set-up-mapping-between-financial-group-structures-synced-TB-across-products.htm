@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Set up mapping between financial group structures for synced trial balance across products</h1>
+        <p>To sync trial balances between two different financial grouping structures, a mapping file is required. Follow the steps below to set up and test the mapping file. </p>
+        <p class="note inline"><b>Note:</b> The mapping file must include the financial group IDs configured at the template level. If the financial grouping structure changes or IDs are updated in the application, the mapping file must also be manually updated to ensure alignment.</p>
+        <h2>File format</h2>
+        <p>The mapping file must be in CSV format with columns separated by semicolons. Mandatory columns, marked with an asterisk (*), cannot be left blank. The columns are as follows:</p>
+        <p><b>Clarifications</b>
+        </p>
+        <ol>
+            <li>
+                <p>Even though dimensions are not required, the columns still need to be present even if all the values are empty.</p>
+            </li>
+            <li>
+                <p>All headers must be present.</p>
+            </li>
+            <li>
+                <p>The key representing the source group ID and source dimension IDs must not be duplicated.</p>
+            </li>
+        </ol>
+        <p class="indent"><b>Source Financial Groups IDs *</b>
+        </p>
+        <p class="indent">Lists the original financial groups from the source product.</p>
+        <p class="indent"><b>Source Dimension IDs</b>
+        </p>
+        <p class="indent">If the source product includes dimensions, list their IDs here, uniquely associating each mapping with the destination product’s financial groups.</p>
+        <p class="indent"><b>Destination Financial Groups IDs *</b>
+        </p>
+        <p class="indent">Specify the financial groups from the destination product.</p>
+        <p class="indent"><b>Destination Dimension IDs</b>
+        </p>
+        <p class="indent">Include the destination dimension identifiers here.</p>
+        <p>Ensure that each row in the CSV accurately maps a source financial group to its corresponding destination financial group as in this example:</p>
+        <p>
+            <div><pre><code>Source Group Id;Source Dimension Ids;Dest Group Id;Dest Dimension Ids 
+
+						A.01.01.01.00.02;;A.01.01.01.00.01;q6gAkZiBRlqc-8C7CIesXA 
+
+						A.01.01.01.00.03;;A.01.01.01.00.01;swma4kz6RcqrcW9LkNnq7w 
+
+						A.01.01.01.00.04;;A.01.01.01.00.01;vDuM0kGkQvWj6c0WfGni0Q 
+
+						A.01.01.01.00.05;;A.01.01.01.00.01;bmFRG1Y4TuWjPffNcFi4Fw 
+
+						A.01.01.01.00.06;;A.01.01.01.00.01;9vpX5xBWT7Cur-GAXlUhvA 
+
+						A.01.01.01.00.07;;A.01.01.01.00.01;K_TRQJshQECnfhVcWzXUng 
+
+						A.01.01.01.00.08;;A.01.01.01.00.01;q6gAkZiBRlqc-8C7CIesXA 
+
+						A.01.01.01.00.10;;A.01.01.01.00.01;wu0la3OoQHC7ONRr5uvS9w 
+
+						A.01.01.01.00.11;;A.01.01.01.00.01;34A9Q9vCTa6m01MkZt63tw 
+
+						A.01.01.01.00.49;;A.01.01.01.00.01;s7HRj-LyTMKpy3nXHNHWBg </code></pre>
+            </div>
+        </p>
+        <h2>Select the destination product</h2>
+        <p>In the <a href="https://github.com/caseware/code">monorepo</a>, the file structure is organized as follows for <a href="https://github.com/caseware/code/tree/develop/apps/product">products</a>: </p>
+        <div>
+            <p>
+                <img src="../Resources/Images/ProductDir.png" alt="Product directory" />
+            </p>
+        </div>
+        <p>Navigate to the <code>product</code> folder to find your desired product. In this example, we’ll choose <code><b>app-micro-fs</b></code>. Once you find the correct folder, proceed to locate the <code>imports</code> directory within it:</p>
+        <p>
+            <img src="../Resources/Images/ProductDirStructure.png" alt="Product directory structure" />
+        </p>
+        <p class="note inline"><b>Note:</b> If the folder <code>account.assignment.mapping</code> folder does not exist, you’ll need to create it inside the product structure.</p>
+        <h2>Create the file in the correct location </h2>
+        <p>After locating the <code>account.assignment.mapping</code> folder, place your new mapping file (.csv) within the same folder. The structure must look like this:</p>
+        <div>
+            <p>
+                <img src="../Resources/Images/MappingFileLocation.png" alt="Location of the mapping file in the product directory structure." />
+            </p>
+        </div>
+        <h2>Create a pull request</h2>
+        <p>Create a pull request and follow your team standards to merge it. Ensure the pull request includes only this specific change.</p>
+        <p><b>Example pull request:</b><code><a href="https://github.com/caseware/code/pull/40350">https://github.com/caseware/code/pull/40350</a></code>
+        </p>
+        <p class="note inline"><b>Note: </b>When deploying products there is a known bug with SE and the products that creates a race condition with the deployment. If you are modifying both SE and the products, create separate pull requests. Otherwise, your changes in SE and the products won’t work together.</p>
+        <h2>Test the mapping process</h2>
+        <p>To ensure the files are correctly uploaded and the mapping process works as expected, we'll create two engagements: one as the source and the other as the destination. For this example, the source engagement will be created in the source product (a Financials product), and the destination engagement will be set up in the destination product (an Audit product). Let’s start by creating the source engagement: </p>
+        <h2>Create a source engagement</h2>
+        <ol>
+            <li>
+                <p>Create a source engagement in the source product.</p>
+            </li>
+            <li>
+                <p>Go to the <b>Data</b> page. The <b>Datasets</b> tab opens by default.</p>
+            </li>
+            <li>
+                <p>Upload a trial balance file. Refer to <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client's data from a CSV or Excel file</a> for more information.</p>
+            </li>
+            <li>
+                <p>Select <b>Configure</b> to navigate to the <b>Assign Fields</b> page.</p>
+            </li>
+            <li>
+                <p>Assign the data columns in the trial balance to Caseware fields and click <b>Import</b> to proceed.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/AssignFields.png" alt="Assigning columns in the trial balance to Caseware fields" />
+        </p>
+        <ol>
+            <li value="4">
+                <p>Assign accounts in the source engagement.</p>
+                <p>Navigate to the <b>Assign Accounts</b> tab and assign accounts based on the mapping file for your specific product. For example, we’ll use the account group A.01.02.01.00.49, which refers to the Financial Group of the source product.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/MappingExample.png" alt="Mapping file entry example" />
+        </p>
+        <p>
+            <img src="../Resources/Images/AssignAccountsExample.png" alt="Example of an account assignment to a financial group." />
+        </p>
+        <ol>
+            <li value="5">
+                <p>Verify in the <b>Financial Groups</b> tab.</p>
+                <p>Open the <b>Financial Groups</b> tab, where you should see the accounts that you assigned previously now grouped as specified in the <b>Assign Accounts</b> view.</p>
+            </li>
+        </ol>
+        <h2>Create a destination engagement</h2>
+        <ol>
+            <li>
+                <p>Create a destination engagement on the destination product.</p>
+                <p>We will use an Audit product to create a new destination engagement.</p>
+            </li>
+            <li>
+                <p>Navigate to <b>Data</b> page. The <b>Datasets</b> tab opens by default.</p>
+            </li>
+            <li>
+                <p>Select the <b>Import From Cloud Engagement</b> option.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/ImportfromEngagement.png" alt="Importing the trial balance from the source engagement." />
+        </p>
+        <ol>
+            <li value="4">
+                <p>Search for the source engagement, the one that you created in the source product, and import it. This import process may take up to a minute.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/SearchforSourceEngagement.png" alt="Searching for the source engagement to import a trial balance from. " />
+        </p>
+        <ol>
+            <li value="5">
+                <p>Verify the financial group mappings.</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p>After the import, go to the <b>Financial Groups</b> tab.</p>
+            </li>
+            <li>
+                <p>Check that the financial groupings align with those specified in the mapping file.</p>
+            </li>
+        </ul>
+        <p> <img src="../Resources/Images/CheckingAlignmentwithMappingFile.png" alt="Checking for alignment between the financial groups in the mapping file and those in the product." /></p>
+        <h2>Get the dimension list to create the mapping file</h2>
+        <p>These are two endpoints that can be used to get the whole list of dimensions.</p>
+        <ul>
+            <li>
+                <p><code>https://{host}/{firm}/e/eng/{engagementid}/api/tag.dimension/get</code> give a comprehensive list of dimensions of all categories.</p>
+            </li>
+            <li>
+                <p><code>https://{host}/{firm}/e/eng/{engagementid}/api/tag.dimension/getCategories</code> give a full list of the categories. Both of these endpoints contain only categories and tags of "subKind": "dimension".</p>
+            </li>
+        </ul>
+        <p>Use a tool like <a href="https://data.page/json/csv">https://data.page/json/csv</a> to convert the JSON response to a CSV file.</p>
+    </body>
+</html>

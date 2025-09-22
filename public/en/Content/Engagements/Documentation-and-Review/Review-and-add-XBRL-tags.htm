@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Review and add XBRL tags</h1>
+        <p class="note"><b>Note:</b> This feature is only available if it has been enabled in your product.</p>
+        <p>The XBRL review panel allows you to identify and review system tags, add custom tags, and activates the review highlighting for tagged XBRL facts in your financial statements</p>
+        <h2>Review XBRL tags</h2>
+        <p>You can launch the XBRL panel from the XBRL icon in the top menu and then begin reviewing your XBRL tags.</p>
+        <p><b>To review XBRL tags:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the <b>XBRL</b> (<img src="../../Resources/Images/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon from the top menu.</p>
+            </li>
+            <li>
+                <p>If there are multiple taxonomies available in your product, select the taxonomy you want to review.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-taxonomies.png" alt="XBRL taxonomies in the XBRL Review section." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Start Review</b>.</p>
+                <p>The XBRL review panel launches and displays on the right side of the page.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-review-panel-2.png" alt="The XBRL review panel." />
+                </p>
+            </li>
+            <li>
+                <p>You can now review the XBRL facts tagged in your financial statements and make edits as required. The tagged facts are highlighted with the following colors to indicate their tagging status:</p>
+                <ul>
+                    <li>
+                        <p><b>Green</b> - System tag which has not been edited</p>
+                    </li>
+                    <li>
+                        <p><b>Red</b> - System tag which has been edited</p>
+                    </li>
+                    <li>
+                        <p><b>Yellow</b> - Custom tag which has been created in the engagement</p>
+                    </li>
+                    <li>
+                        <p><b>Blue</b> - The currently selected tag. The border color of the currently selected tag will be green, red or yellow to indicate its tagging status</p>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/xbrl-tags-color-scheme.png" alt="The financial statements with multiple XBRL facts tagged." />
+                </p>
+            </li>
+        </ol>
+        <h2>Add custom tags</h2>
+        <p>If you need to tag additional XBRL facts, you can add custom tags from your XBRL taxonomy during the review process. Ensure you have launched the XBRL review panel before you add custom tags.</p>
+        <p style="font-weight: normal;"><b>To add a custom tag:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the paragraph or table you want to tag, and select <b>Add tag</b>.</p>
+                <p>If you need to tag a formula or placeholder in a paragraph, select the paragraph. You can specify the formula or placeholder you want to tag later in the tagging process.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-add-tag-2.png" alt="The Add tag option for an untagged fact." />
+                </p>
+            </li>
+            <li>
+                <p>Locate and select the tag from the taxonomy. You can use the search box to locate the correct tag.</p>
+                <p>If you have previously added custom tags, the taxonomy will open to display the last selected tag.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-add-tag-dialog.png" alt="The Add tag dialog." />
+                </p>
+            </li>
+            <li>
+                <p>When you select a tag, key information about it displays below the search bar, such as the element name, period and type. Review this information to ensure you have selected the correct tag and then select <b>Confirm</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-add-tag-dialog-2.png" alt="The Add tag dialog." />
+                </p>
+            </li>
+            <li>
+                <p>If you want to tag a specific data link or placeholder in a paragraph, select the item you want to tag from the <b>Content</b> dropdown.</p>
+                <p>You will then need to reselect the tag from the taxonomy by selecting the <b>Edit</b> (<img src="../../Resources/Images/icon-edit-18x18.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon next to the <b>Element</b> field.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-review-panel-content-dropdown.png" alt="The Content dropdown in the XBRL review panel." />
+                </p>
+            </li>
+            <li>
+                <p>Select a <b>Context</b> for your tag from the dropdown. If an appropriate context does not exist, you can <a href="Add-or-edit-a-context.htm">create one</a>.</p>
+                <p>If you select a context that will result in diagnostic errors when exporting XBRL reports, a message will display to indicate why the context cannot be chosen for the tag.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-context-warning.png" alt="A warning message for a context." />
+                </p>
+            </li>
+            <li>
+                <p>If required, select a numeric option. If an appropriate numeric does not exist, you can <a href="Add-or-edit-a-numeric.htm">create one</a>.</p>
+                <p>If you select a numeric that will result in diagnostic errors when exporting XBRL reports, a message will display to indicate why the context cannot be chosen for the tag.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-numeric-warning.png" alt="A warning message for a numeric." />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Apply tag</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-review-panel-apply-tag.png" alt="The Apply tag option in the XBRL review panel." />
+                </p>
+            </li>
+        </ol>
+        <p>Your content is now tagged and highlighted in yellow to indicate it is a custom tagged fact.</p>
+        <p>
+            <img src="../../Resources/Images/xbrl-custom-tagged-fact.png" alt="A custom tagged XBRL fact." />
+        </p>
+        <h2>Delete a custom tag</h2>
+        <p>You can delete custom tags you have added.</p>
+        <p class="note"><b>Note:</b> System tags cannot be deleted, but they can be edited</p>
+        <p><b>To delete a custom tag:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Select the XBRL fact that no longer requires a custom tag.</p>
+            </li>
+            <li>
+                <p>Select the <b>Delete</b> (<img src="../../Resources/Images/icon-delete.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon.</p>
+                <p>
+                    <img src="../../Resources/Images/xbrl-review-panel-delete-fact.png" alt="The Delete icon for an XBRL fact in the review panel." />
+                </p>
+            </li>
+            <li>
+                <p>In the confirmation dialog, select <b>Yes</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

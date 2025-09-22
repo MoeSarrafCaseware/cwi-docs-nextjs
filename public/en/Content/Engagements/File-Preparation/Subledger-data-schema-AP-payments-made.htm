@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Accounts payable—payments made described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement.  This topic details the fields in the Accounts payable—payments made subledger. </p>
+        <p>For more information on the subledger dataset descriptions, see  <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaction ID <br /><code>(ap_payment_made_transaction_id)</code></td>
+                    <td>
+                        <p>A cross-reference to the general ledger posting. It can contain many different levels to identify the transaction. Examples include cost centers such as company, division, region, group and branch/department.<![CDATA[
+]]></p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key:  The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Number
+<br /><code>(ap_payment_made_payment_id)</code></td>
+                    <td>
+                        <p>The unique identifier for each payment made. This identifier may need to be created by concatenating fields, for example, supplier and payment number to uniquely identify each transaction.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: Yes
+</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Payment Date<br /><code>(ap_payment_made_payment_date)</code></p>
+                    </td>
+                    <td>
+                        <p>The date the payment was made or credit was applied.</p>
+                        <p>Data type: Date</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Payment Year<br /><code>(ap_payment_made_fiscal_year)</code></p>
+                    </td>
+                    <td>
+                        <p>Fiscal year in which <b>Payment Date</b> occurs.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Primary key: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Period <br />(<code>ap_payment_made_payment_period</code>)</td>
+                    <td>
+                        <p>Fiscal period in which <b>Payment Date</b> occurs.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Primary key: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amount Type (Debit / Credit)<br /> (<code>ap_payment_made_amount_credit_debit_indicator</code>)</td>
+                    <td>
+                        <p>Indicates whether the amount is a credit or debit. </p>
+                        <p>
+
+Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Possible values:  <br /><code>C</code>=credit; <br /><code>D</code>=debit</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Type <br />(<code>ap_payment_made_payment_type</code>)</td>
+                    <td>
+                        <p>The code value or indicator of the method by which the transaction debit or credit amount was extinguished or apportioned to the debt by the supplier. Examples include checks, wire transfers, cash, and so on.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Amount<br /> (<code>ap_payment_made_payment_amount</code>)</td>
+                    <td>
+                        <p>Transaction monetary amount recorded in the functional or group currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reporting Payment Amount<br /> (<code>ap_payment_made_payment_amount_reporting</code>)</td>
+                    <td>
+                        <p>Transaction monetary amount recorded in the reporting currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local Payment Amount <br />(<code>ap_payment_made_payment_amount_local</code>)</td>
+                    <td>
+                        <p>Transaction monetary amount in the local currency.
+
+</p>
+                        <p>Data type: Money
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Posting Status <br />(<code>ap_payment_made_posting_status</code>)</td>
+                    <td>
+                        <p>Indicates whether the transaction has been posted to the General Ledger. </p>
+                        <p>
+
+Data type: Text
+</p>
+                        <p>Required: No
+</p>
+                        <p>Possible values: <code>Posted</code> or <code>Not Posted</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch Number <br />(<code>ap_payment_made_batch_id</code>)</td>
+                    <td>
+                        <p>A batch identifier generated by the source system.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Description <br />(<code>ap_payment_made_description</code>)</td>
+                    <td>
+                        <p>A description of the payment.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source ID <br />(<code>ap_payment_made_source_id</code>)</td>
+                    <td>
+                        <p>Posting source. The code for the source where the journal entry originated, such as sales journal, cash receipts journal, general journal, payroll journal, accountant manual entry, spreadsheet, and so on.</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier ID (<code>ap_payment_made_supplier_account_id</code>)</td>
+                    <td>
+                        <p>Identifier of the supplier to whom payment is received or from whom credits have been applied.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Name <br />(<code>ap_payment_made_supplier_account_name</code>)</td>
+                    <td>
+                        <p>The name of the supplier.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered By <br />(<code>ap_payment_made_entered_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who created the record.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered Date <br />(<code>ap_payment_made_entered_date</code>)</td>
+                    <td>
+                        <p>The date the transaction was entered into the source system. This is sometimes referred to as the creation date.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered Time <br />(<code>ap_payment_made_entered_time</code>)</td>
+                    <td>
+                        <p>The time this transaction was entered into the source system. </p>
+                        <p>
+
+Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approved By <br />(<code>ap_payment_made_approved_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who approved the entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approval Date <br />(<code>ap_payment_made_approved_by_date</code>)</td>
+                    <td>
+                        <p>The date the entry was approved.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approval Time <br />(<code>ap_payment_made_approved_by_time</code>)</td>
+                    <td>
+                        <p>The time the entry was approved.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified By <br />(<code>ap_payment_made_last_modified_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the last person to modify this entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Date <br />(<code>ap_payment_made_last_modified_date</code>)</td>
+                    <td>
+                        <p>The date the entry was last modified.
+</p>
+                        <p>
+Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Time <br />(<code>ap_payment_made_last_modified_time</code>)</td>
+                    <td>
+                        <p>The time the entry was last modified.
+
+</p>
+                        <p>Data type: Date/time
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Number <br />(<code>ap_payment_made_invoice_number</code>)</td>
+                    <td>
+                        <p>An identification number for an internally or externally generated transaction. Examples include check number, wire transfer number, or original document identifier.
+</p>
+                        <p>
+Data type: Text</p>
+                        <p>
+Required: No
+</p>
+                        <p>Primary key: Second alternate.  If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Date <br />(<code>ap_payment_made_invoice_date</code>)</td>
+                    <td>
+                        <p>The date on an externally generated transaction. Examples include check date or wire transfer date.
+
+</p>
+                        <p>Data type: Date
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Business Unit Code <br />(<code>ap_payment_made_business_unit_code</code>)</td>
+                    <td>
+                        <p>Used to identify the business unit, region, branch, and so on at the level that financial statements are being audited.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GL Debit Account Number <br />(<code>ap_payment_made_gl_debit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the debit side of the transaction has been posted.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GL Credit Account Number <br />(<code>ap_payment_made_gl_credit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the credit side of the transaction has been posted.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Line Detail - Account ID <br />(<code>ap_payment_made_line_account_id</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account code of the GL revenue account. This can include a subaccount identifier, as well as can many different levels to identify the Account, including cost centers, such as company, division, region, group and branch/department.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Line Detail - Account Description <br />(<code>ap_payment_made_line_account_description</code>)</td>
+                    <td>
+                        <p>A description of the account whose identifier appears in <b>Line Detail - Account ID</b>.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Currency <br />(<code>ap_payment_made_payment_amount_currency</code>)</td>
+                    <td>
+                        <p>The functional or group currency related to the payment amount.
+</p>
+                        <p>
+Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reporting Payment Currency <br />(<code>ap_payment_made_payment_amount_reporting_currency</code>)</td>
+                    <td>
+                        <p>The reporting currency related to the payment amount for nonconsolidated reporting.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local Payment Currency <br />(<code>ap_payment_made_payment_amount_local_currency</code>)</td>
+                    <td>
+                        <p>The currency for local reporting requirements.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entry ID <br />(<code>ap_payment_made_journal_id</code>)</td>
+                    <td>
+                        <p>The unique identifier for a journal entry.
+
+</p>
+                        <p>Data type: Text
+</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

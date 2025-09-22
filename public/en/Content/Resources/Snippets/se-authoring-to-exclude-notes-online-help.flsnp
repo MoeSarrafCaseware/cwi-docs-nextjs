@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>When a note is hidden in the financial statements, it's stored in the <a href="../../SE-Authoring/Set-up-the-notes-library.htm">Notes Library</a>. The Notes Library is only available if there are hidden notes. To populate the Notes Library with the notes you've created in Step 1, you need to hide them.</p>
+        <p><b>To automatically hide the notes, </b> <a href="../../SE-Authoring/Add-visibility-logic-in-the-financial-statements.htm#To2">set up visibility conditions</a> for each note. Once the conditions evaluate to <i>false</i> (conditions are not met), the note is automatically hidden and is stored in the Notes Library.</p>
+        <p>If you don't want to set up visibility conditions, you can manually hide the notes.</p>
+        <p style="font-weight: bold;">To manually hide a note:</p>
+        <ol>
+            <li>
+                <p>Go to the note that you want to hide.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | Exclude.</b></p>
+                <p>
+                    <img src="../Images/notes-exclude-note.png" alt="The Exclude option in the More Actions menu." />
+                </p>
+            </li>
+            <p>The note becomes hidden and is stored in the Notes Library.</p>
+        </ol>
+    </body>
+</html>

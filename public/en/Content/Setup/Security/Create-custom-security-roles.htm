@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create security roles to grant specific levels of access to Cloud content." />
+    </head>
+    <body>
+        <h1>Create custom security roles</h1>
+        <p>In the course of regular business for your organization, you need to control access to your client files. Different engagement teams require access to their specific client files, but they are restricted from accessing other clients' materials.  Some staff require access to all client files for an engagement, while others only need to access the documents assigned to them.</p>
+        <p>You can manage access to your organization's engagements and the related engagement material in Cloud  using security roles.</p>
+        <p>The <a href="Built-in-roles.htm">built-in</a> security roles cover the more common types of security access that you might want to give to your users. You can, however, also create custom roles for your organization.</p>
+        <p><b>To create custom security roles:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or the equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Security | Role Permissions</b>. </p>
+                <p>
+                    <img src="../../Resources/Images/settings-role-permissions.png" alt="Security Role Permissions" />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Add Role</b>. </p>
+            </li>
+            <li>
+                <p>In the New Role dialog, complete the fields as required.</p>
+                <p>
+                    <img src="../../Resources/Images/role-permissions-add-630x452.png" style="border:1px solid #3f66a3" alt="The New Role dialog." />
+                </p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <thead>
+                        <tr>
+                            <th>Scope</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organization-wide</td>
+                            <td>
+                                <p>Provides administrative privileges to the entire organization (all business units). This scope only differs from <b>System-wide</b> in firms <a href="../Organization/About-business-units.htm">utilizing business units</a>.</p>
+                                <p>Assignable only at the <b>Staff</b> level.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>System-wide</p>
+                            </td>
+                            <td>
+                                <p>Provides administrative and content privileges to an entire Cloud site (one business unit). This scope only differs from <b>Organization-wide</b> in firms <a href="../Organization/About-business-units.htm">utilizing business units</a>.</p>
+                                <p>Assignable only at the <b>Staff</b> level.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Content within entities</td>
+                            <td>
+                                <p>Provides content privileges to an individual entity.</p>
+                                <p>Assignable only at the <b>Entity</b> level</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>System-wide or content with entities</td>
+                            <td>
+                                <p>Provides content privileges to all entities (staff level) or individual entities (entity level) in a Cloud site (one business unit).</p>
+                                <p>Assignable at the <b>Staff</b> or <b>Entity</b> level.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>Select one or more permissions to add those permissions to the role. When you are finished, select <b>OK</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/role-permissions-select-630x219.png" style="border:1px solid #3f66a3" alt="The bottom of the Role Permissions dialog. The permissions to create, read, edit, delete and share files are all selected." />
+                </p>
+                <div class="bestpractice inline">
+                    <p><b>Best Practice:</b> Note that there are two <b>Share</b> permissions:&#160;<b>A</b> and <b>S</b>. The <b>Share (A)</b> permission allows the user to share all available entity or entity content permissions to themselves and other users, even if it would grant them a higher level of access than they currently possess.</p>
+                    <p>For example, if you create a custom system-wide role that has only the <b>Share (A)</b> permission for entities, users with this role will be able to grant themselves and other users the <i>Owner</i> role on any entity. </p>
+                    <p>If this is a security concern for your firm, we recommend using the <b>Share (S)</b>&#160;permission instead, which offers the same functionality but restricts the user from sharing entities or entity content that they cannot access. To learn more, see <a href="Built-in-roles.htm">Built-in roles</a>.</p>
+                </div>
+            </li>
+        </ol>
+    </body>
+</html>

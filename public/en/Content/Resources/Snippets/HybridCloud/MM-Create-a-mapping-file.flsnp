@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Prior to migration, you'll need to create a mapping file that assigns each engagement file to its applicable <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Upload-entities-to-Cloud">Cloud entity</a>.</p>
+        <p><b>To create a mapping file:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Right-click the <b>Migration Manager</b> executable and click <b>Run as administrator</b>.</p>
+            </li>
+            <li>
+                <p>On the main menu, click <b>Map Files</b>.</p>
+            </li>
+            <li>
+                <p>Click the folder icon and browse for the folder containing the files that you want to map. Click <b>Select Folder</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>AUTOMAP</b> to assign files to entities based on their <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Engagement_Properties" target="_blank">engagement properties</a>.</p>
+            </li>
+            <li>
+                <p>A list of each file and their proposed entities displays. If there are any unmapped or incorrectly mapped files, select the box next to the file name and click <b>MAP</b>. Select the applicable entity, then click <b>Apply</b>. Repeat this process until all engagement files are mapped to an entity.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Note:</b> Clicking <b>MAP ALL</b> will map all remaining unmapped files to a specified entity. Mapped files will not be changed.</p>
+        <p>A mapping file named <i>CWCloudMigrationMng.csv</i> is created in the folder containing the mapped files. If you intend to migrate files in stages, refer to this mapping file for the applicable range to migrate. Click <b>CLOSE</b> to return to the main menu.</p>
+    </body>
+</html>

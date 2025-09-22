@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A query is an interactive smart document that consists of the following components:</p>
+        <ul>
+            <li>
+                <p><b>Query questions -</b> The requests and inquiries that clients need to respond to.</p>
+            </li>
+            <li>
+                <p><b>Question sets</b> - To group related query questions.</p>
+            </li>
+            <li>
+                <p><b>Response types -</b>  To specify the expected user response. The following table describes the available response types:</p>
+                <table class="table">
+                    <col />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th>
+                                <p>Response type</p>
+                            </th>
+                            <th>
+                                <p>Expected user response</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>Text</p>
+                            </td>
+                            <td>
+                                <p>Enter the requested information.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Picklist</p>
+                            </td>
+                            <td>
+                                <p>Select one item from the drop-down list.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Multi Picklist</p>
+                            </td>
+                            <td>
+                                <p>Select one or more items from the drop-down list.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>File Upload</p>
+                            </td>
+                            <td>
+                                <p>Browse and add a requested file (or drag  the file).</p>
+                                <MadCap:snippetBlock src="executable-file-note.flsnp" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Date</p>
+                            </td>
+                            <td>
+                                <p>Select a date from the calendar.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Simple Electronic Signature</td>
+                            <td>
+                                <p>Choose whether to sign the document manually or accept it electronically.</p>
+                                <p>Note that:</p>
+                                <MadCap:snippetBlock src="simple-electronic-signature.flsnp" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Instructions</b> - To provide guidance information for the clients. For example, add the supported file types for a document request.</p>
+            </li>
+        </ul>
+    </body>
+</html>

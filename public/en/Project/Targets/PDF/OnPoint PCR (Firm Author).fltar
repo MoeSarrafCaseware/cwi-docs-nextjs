@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Firm Authoring Guide for OnPoint"
+  Type="PDF"
+  Destinations=""
+  ConditionTagExpression="exclude[General.Ignore or General.Online or PrintGuides.EndUser or PrintGuides.RCT or PrintGuides.Teacher] "
+  MasterToc="/Project/TOCs/PDF/OnPoint PCR (Firm Author).fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Front-Page.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/Print.css">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <DocumentProperties
+    Title="CaseWareCloud OnPoint PCR Firm Authoring DRAFT"
+    Author="CaseWare International Inc."
+    Subject="Training for OnPoint PCR" />
+  <PDF
+    PageLayout="OneColumn"
+    ShowUsedBookmarks="false" />
+  <Glossaries></Glossaries>
+  <Variables>
+    <Variable
+      Name="General/Title">Firm Author Guide</Variable>
+    <Variable
+      Name="General/CityStateZip">Toronto ON, M5A 0L6 Canada</Variable>
+    <Variable
+      Name="General/CompanyName">CaseWare International Inc.</Variable>
+    <Variable
+      Name="General/Fax">Fax: 416-867-1906</Variable>
+    <Variable
+      Name="General/PhoneNumber">Tel: 416-867-9504</Variable>
+    <Variable
+      Name="General/ProductName">CaseWare Cloud</Variable>
+    <Variable
+      Name="General/StreetAddress">1100–351 King St East,</Variable>
+    <Variable
+      Name="General/Subtitle">OnPoint PCR</Variable>
+    <Variable
+      Name="General/UserGuideTitle">User Training</Variable>
+    <Variable
+      Name="General/Year">2024</Variable>
+    <Variable
+      Name="General/VersionNumber">1.1</Variable>
+  </Variables>
+</CatapultTarget>

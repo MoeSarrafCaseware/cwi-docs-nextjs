@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Implement fund reporting</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresRCT.flsnp" />
+        <p>You can implement fund reporting in your financial statements when not-for-profit review engagements are performed for <b>Registered Charity</b> or <b>Not For Profit</b> organization types. To implement fund reporting, you must first add a set of dimensions, assign the financial groups, then modify your dynamic tables in the financial statements.</p>
+        <h2>Add a set of dimensions</h2>
+        <p>Dimensions are group properties that you can configure for groupings to provide further categorization for accounts. To start, select the <b>Information</b> icon (<img src="../../Resources/Icons/InformationIcon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) at the top menu, then <b>Settings</b>. The Engagement Settings dialog opens, where you can view and customize settings.</p>
+        <p><b>To add a set of dimensions:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Go to <b>Features | Dimensions</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>+ Category</b>, then add a name for the new dimension category.</p>
+            </li>
+            <li>
+                <p>Select <b>Add Dimension</b> (<img src="../../Resources/Icons/add-FS.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to add a dimension, then add a name for the new dimension.</p>
+                <p>You can add up to three dimension levels.</p>
+            </li>
+        </ol>
+        <p>In this example, we added the <b>Funds</b> category with <b>General</b> and <b>Reserve</b> dimensions. We can now assign the dimension categories to financial groups.</p>
+        <p>
+            <img src="../../Resources/Images/ReviewComp-dimensions.jpg" alt="Dimensions in the Engagement Settings." />
+        </p>
+        <p><b>To assign financial groups:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Go to the category in the Engagement Settings dialog. In this example, <b>Funds</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions (<img src="../../Resources/Icons/MoreActionsIcon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Assign Groups</b>.</p>
+            </li>
+            <li>
+                <p>Select all the applicable financial groups.</p>
+                <p>You can expand and collapse financial groups to view subgroups and use the search bar to find the appropriate groups.</p>
+            </li>
+        </ol>
+        <p>To learn more, see <a href="../../Engagements/Template-and-Authoring/Add-dimensions.htm">Add dimensions</a>.</p>
+        <h2>Assign accounts</h2>
+        <p>After you add a set of dimensions and assign financial groups, you can assign accounts from your imported client data.</p>
+        <p class="note"><b>Note:</b> If the account balances from your imported data are not separated by funds, an adjusting journal entry is required to allocate those balances across your dimensions.</p>
+        <p><b>To assign accounts:</b>
+        </p>
+        <ol>
+            <li>
+                <p>On the <b>Data</b> page, go to the <b>Assign Accounts</b> tab.</p>
+            </li>
+            <li>
+                <p>Assign your accounts. For the <b>Sales - Goods and services</b> account, you have the option to assign it to the <b>Trade sales of goods and services - General</b> or <b>Trade sales of goods and services - Reserve</b> fund account.</p>
+                <p>Note that in this example we created the <b>Funds</b> category and <b>General</b> and <b>Reserve</b> dimensions.</p>
+                <p>
+                    <img src="../../Resources/Images/ReviewComp-Assign-accounts.jpg" alt="Assign accounts." />
+                </p>
+            </li>
+        </ol>
+        <p>To learn more, see <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Assign accounts to groups in the Data page</a>.</p>
+        <h2><a name="Modify"></a>Modify dynamic tables in the financial statements</h2>
+        <p>After adding a set of dimensions, you can implement fund reporting in your financial statements by modifying your dynamic tables.</p>
+        <p><b>To modify a dynamic table:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>6-20 Financial statements</b>, navigate to the table where you want the fund reporting to appear.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../../Resources/Icons/MoreActionsIcon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), then <b>Edit Dynamic Table</b>.</p>
+                <p>The table opens in edit mode.</p>
+            </li>
+            <li>
+                <p>Select the existing Current Year balance column.</p>
+                <p>
+                    <img src="../../Resources/Images/ReviewComp-Fund-reporting-column.jpg" alt="Adding Dimensions to dynamic tables." />
+                </p>
+            </li>
+            <li>
+                <p>Select the dimension category from the Dimension drop-down.</p>
+                <p>The applicable dimension columns and the <b>Column Group Heading</b> are automatically added.</p>
+                <p>
+                    <img src="../../Resources/Images/ReviewComp-Fund-reporting-dimension.jpg" alt="Selecting the Dimensions in dynamic tables." />
+                </p>
+            </li>
+            <li>
+                <p>Once your changes are complete, select <b>DONE</b>.</p>
+            </li>
+        </ol>
+        <p>To learn more, see <a href="../../Engagements/Template-and-Authoring/Edit-table-columns-in-the-financial-statements.htm">Edit table columns in the financial statements</a> and <a href="../../Engagements/Template-and-Authoring/Group-columns-in-dynamic-tables.htm">Group columns in dynamic tables</a>.</p>
+    </body>
+</html>

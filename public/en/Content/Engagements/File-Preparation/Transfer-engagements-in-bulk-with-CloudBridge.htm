@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Transfer engagements in bulk with CloudBridge</h1>
+        <p>Use CloudBridge to transfer data from multiple Working Papers engagements to Cloud. If you haven't installed CloudBridge, see <a href="Get-CloudBridge.htm">Get CloudBridge</a>.</p>
+        <p>These instructions only apply to CloudBridge (All regions, Bulk). For individual transfer instructions, see <a href="Transfer-individual-engagements-with-CloudBridge.htm">Transfer individual engagements with CloudBridge</a>.</p>
+        <h2>What's new</h2>
+        <p>See what's new in the latest release of CloudBridge (All regions, Bulk).</p>
+        <p><b>Enhancements</b>
+        </p>
+        <ul>
+            <li>
+                <p>You can now use the <b>Browse</b> option to directly select your mapping file, instead of relying on the automatic selection of a specifically named file in the designated folder.</p>
+            </li>
+            <li>
+                <p>Added an option to exclude zero-balance entries from the imported trial balance data.</p>
+            </li>
+            <li>
+                <p>Added support for migrating internally consolidated engagements.</p>
+            </li>
+        </ul>
+        <p><b>Fixed issues</b>
+        </p>
+        <ul>
+            <li>
+                <p>Scroll bars are missing on certain pages, preventing access to all available options.</p>
+            </li>
+            <li>
+                <p>Adjustments are reapplied when trial balance data is uploaded to an existing file, resulting in incorrect balances.</p>
+            </li>
+        </ul>
+        <h2>Best practices</h2>
+        <p>Before you get started, we recommend performing the following best practices, based on your environment:</p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <thead>
+                <tr>
+                    <th>Environment</th>
+                    <th>Best practices</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Desktop / On-premises</td>
+                    <td>
+                        <ol>
+                            <li>
+                                <p><a href="../../Setup/Organization/Create-client-entities.htm">Create (or import) any required entities</a>.</p>
+                            </li>
+                            <li>
+                                <p>Organize the files on your local or network drive, for example:</p>
+                                <ul>
+                                    <li>
+                                        <p>alphabetically</p>
+                                    </li>
+                                    <li>
+                                        <p>by file type</p>
+                                    </li>
+                                    <li>
+                                        <p>by priority</p>
+                                    </li>
+                                    <li>
+                                        <p>by product</p>
+                                    </li>
+                                    <li>
+                                        <p>by upload sequence</p>
+                                    </li>
+                                </ul>
+                                <p>We recommend using <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Practice/Maintenance/CaseWare-Tracker/Manage-Files.htm">Caseware Tracker</a> as an efficient way to achieve this.</p>
+                            </li>
+                            <li>
+                                <p>Use <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Practice/Maintenance/CaseWare-Tracker/Manage-Files.htm">Caseware Tracker</a> to move any external files out of the engagement file folder to a backup location. Since CloudBridge only transfers the engagement file itself, moving these external files reduces the transfer process time.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hybrid Cloud</td>
+                    <td>
+                        <ol>
+                            <li>
+                                <p>Using the Caseware Batch Tool, create local sync copies of your Cloud engagements (<a href="https://documentation.caseware.com/latest/Audit/en/Content/Batch_Tool/Set_up_Batch_Tool.htm">To configure the Batch Tool: Step 3</a>).</p>
+                            </li>
+                            <li>
+                                <p>Organize the files on your local or network drive. for example:</p>
+                                <ul>
+                                    <li>
+                                        <p>alphabetically</p>
+                                    </li>
+                                    <li>
+                                        <p>by file type</p>
+                                    </li>
+                                    <li>
+                                        <p>by priority</p>
+                                    </li>
+                                    <li>
+                                        <p>by product</p>
+                                    </li>
+                                    <li>
+                                        <p>by upload sequence</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>After performing the setup and transfer procedures below, use the Caseware Batch Tool to delete the local sync copies (<a href="https://documentation.caseware.com/latest/Audit/en/Content/Batch_Tool/Set_up_Batch_Tool.htm">To configure the Batch Tool:&#160;Step 4</a>).</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Additionally, we recommend that you:</p>
+        <ul>
+            <li>
+                <p>Close any other applications while running CloudBridge.</p>
+            </li>
+            <li>
+                <p>Run Cloudbridge overnight or during off-hours.</p>
+            </li>
+            <li>
+                <p>Limit each upload to 500 engagements at a time.</p>
+            </li>
+        </ul>
+        <h2>Set up CloudBridge</h2>
+        <p>After you’ve installed CloudBridge, you’ll need to connect to the destination Cloud site where the engagement data will be transferred.</p>
+        <p><b>To set up CloudBridge:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Launch CloudBridge.</p>
+            </li>
+            <li>
+                <p>In the Edit servers dialog, enter the name and URL of the destination Cloud site where the engagement data will be transferred. You can add more Cloud sites by selecting <b>Add a server</b>, but note that data can only be transferred to one app in one Cloud site at a time. When finished, select <b>Done</b>.</p>
+            </li>
+            <li>
+                <p>From the Server drop-down menu, select the applicable Cloud site and select <b>Connect</b>.</p>
+            </li>
+            <li>
+                <p>The login prompt is displayed. Enter your credentials and select <b>Sign-in</b> to connect to the Cloud site.</p>
+            </li>
+        </ol>
+        <h2>Transfer engagement data</h2>
+        <p>Once you’ve connected CloudBridge to your destination Cloud site, you’re ready to begin transferring engagement data.</p>
+        <p class="note"><b>Note:</b> Accounts with zero balances will not be transferred. If you require zero-balance accounts in a destination Cloud engagement, you must manually add and assign them.</p>
+        <p><b>To transfer engagement data:</b>
+        </p>
+        <ol>
+            <li>
+                <p>On the CloudBridge main menu, select <b>New upload</b>.</p>
+            </li>
+            <li>
+                <p>On the General step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Enter a name for the transfer.</p>
+                    </li>
+                    <li>
+                        <p>Select the application where you’ll work with the transferred engagement data. Note that if you need to work with the data in another app, you must perform an additional, separate transfer.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Source file settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Specify the directory of the source Working Papers engagements with the data you want to transfer.</p>
+                    </li>
+                    <li>
+                        <p>(Optional) Filter the source Working Papers engagements by entering a start and end date. Only data from engagements within the range will be transferred.</p>
+                    </li>
+                    <li>
+                        <p>Select the applicable data points to transfer. The options include adjustments, general ledger, trial balance (multiple years), external documents/folders and risks and controls.</p>
+                    </li>
+                    <li>
+                        <p>If you select <b>Trial balance (multiple years)</b>, you can:</p>
+                        <ul>
+                            <li>
+                                <p> Use a custom mapping file (.ini). To create a custom mapping file, contact your local distributor or Caseware representative. Select <b>Browse</b> to select the .ini file.</p>
+                            </li>
+                            <li>
+                                <p>Import split-up accounts.</p>
+                            </li>
+                            <li>
+                                <p>Exclude zero-balance accounts.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Select the applicable external files to transfer. The options include Word, Excel, PowerPoint, PDF, CSV, Text, JPG, PNG or all external files.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Cloud file settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select a naming method for new engagements created using the transferred data. The options include Working Papers file name, operating name and Cloud entity.</p>
+                    </li>
+                    <li>
+                        <p>Select a year end date format to include in the name for new engagements.</p>
+                    </li>
+                    <li>
+                        <p>Select whether to include the year end date, or place it at the beginning (prefix) or end (suffix) of new engagement names.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Files to upload step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select the Cloud entity where you want to transfer the data (for each source file).</p>
+                    </li>
+                    <li>
+                        <p>Select the Cloud engagement where you want to transfer the data (for each source file). If no Cloud engagement is selected, a new engagement will be made in the selected entity.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Upload settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Specify the maximum duration of the transfer. The options include 1, 2, 3 and 4 hours. After the duration has elapsed, CloudBridge will close, even if the transfer is incomplete.</p>
+                    </li>
+                    <li>
+                        <p>Specify the timeout for each source engagement. The options include 5, 10, 15 and 20 minutes. After the duration has elapsed, the transfer will skip to the next source engagement, even if the previous is incomplete.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Summary step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Review all the settings you’ve selected. If you need to make additional changes, select <b>Previous</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Upload Files</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>The engagement data transfer begins. You’ll see the status of your transfer as it progresses and a final report when complete.</p>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <ul>
+                <li>
+                    <p>If any transfers failed, you can select <b>More actions</b> (<img src="../../Resources/Images/more-actions-vertical.png" style="vertical-align: text-bottom;width: 9px;height: 18px;" alt="" />) <b>| Rerun</b> to retry the transfer for that specific file.</p>
+                </li>
+                <li>
+                    <p>After the transfer is complete, Hybrid Cloud users should delete their local sync copies using the Caseware Batch&#160;Tool (<a href="https://documentation.caseware.com/latest/Audit/en/Content/Batch_Tool/Set_up_Batch_Tool.htm">To configure the Batch Tool:&#160;Step 4</a>).</p>
+                </li>
+                <li>
+                    <p>To perform another transfer, restart this procedure.</p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

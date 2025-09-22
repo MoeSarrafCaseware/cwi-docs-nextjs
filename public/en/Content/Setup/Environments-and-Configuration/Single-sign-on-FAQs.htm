@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Single sign-on: Frequently asked questions</h1>
+        <p>This section contains frequently asked questions about integrating single sign-on with Cloud.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">How secure is Cloud's SSO integration?</p>
+        <p>Any user information which is passed between your identity provider and CWI is encrypted via Secure Sockets Layer (SSL) protocol and signed using JSON Web Encryption. When users are signed into your firm's identity provider, the user's identity credentials (login, username and password) are never shared with Cloud. Only the user's basic profile information (their name and email address) is shared with us to authenticate the user.</p>
+        <hr>
+        </hr>
+        <p><b>What authorization protocol is used?</b>
+        </p>
+        <p>We use the OpenID Connect authorization protocol.</p>
+        <hr>
+        </hr>
+        <p><b>Can staff members still sign in using Cloud credentials after SSO is enabled?</b>
+        </p>
+        <p>After a staff member has used SSO to sign into Cloud, they will only be able to sign in via single sign-on. If a staff member attempts to sign in using their Cloud credentials, an error message is displayed, directing the staff member to use SSO.</p>
+        <hr>
+        </hr>
+        <p><b>After removing my identity provider and re-adding it, some users are unable to sign in. Why?</b>
+        </p>
+        <p>If you have removed your identity provider and re-added it, users authenticated before the removal will be unable to sign in. For those users to sign in again, create new credentials for them in Entra ID. This process will not be required in future releases.</p>
+        <hr>
+        </hr>
+        <p><b>Can contacts use SSO?</b>
+        </p>
+        <p>Currently, contacts don't have the ability to use SSO. </p>
+        <hr>
+        </hr>
+        <p><b>We've enabled two-factor authentication. What happens if we also enable SSO?</b>
+        </p>
+        <p>If SSO is enabled for a firm, SSO users will no longer be able to use Cloud's two-factor authentication feature. This is because it's best practice for your trusted identity provider to have control of the authentication process. If you want to enable two-factor authentication, we recommend doing so through your identity provider.</p>
+        <p>Two-factor authentication will still be available for non SSO users.</p>
+        <hr>
+        </hr>
+        <p><b>What happens if I add a staff member's account to Cloud before I add it to Entra ID?</b>
+        </p>
+        <p>If you have added a staff account to Cloud but not Entra ID, that user will not be able to sign in using SSO. To allow a staff member to sign in with SSO, add a new user to Entra ID using the email address associated with that staff member's Cloud account as the user name.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">What happens if I log out of my identity provider while I'm still signed into Cloud?</p>
+        <p>You will remain logged into Cloud as long as your session is active. When your session ends, you will be required to log in to your identity provider again before you can sign in to Cloud using SSO.</p>
+        <hr>
+        </hr>
+        <p><b>A staff member whose account status is Inactive is still able to sign in to Cloud. Why?</b>
+        </p>
+        <p>After enabling single sign-on, account access is managed through Entra ID. To prevent a user from accessing Cloud, you must delete their account. To learn more, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory">How to create, invite, and delete users</a>. </p>
+        <hr>
+        </hr>
+        <p><b>A staff member whose account has been deleted in Entra ID is still signed in to Cloud. Why?</b>
+        </p>
+        <p>If you delete a user's account in Entra ID while they are still signed in to Cloud, they will remain active in Cloud until their session times out or they sign out, after which they will no longer be able to sign in to Cloud.</p>
+        <hr>
+        </hr>
+        <p><b>Why can't I edit account names, email addresses or passwords in Cloud?</b>
+        </p>
+        <p>After enabling single sign-on, account names, email addresses and passwords are managed through Entra ID. To learn more, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal">Add or change profile information</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Our firm's email domain has changed, how can I update staff's email addresses in bulk?</b>
+        </p>
+        <p>Firms with SSO enabled cannot edit the email field for staff directly. If you need to update your staff's email addresses in bulk, contact <a href="mailto:support@caseware.com">Caseware Support</a> for assistance. We'll need to update the email addresses in Cloud at the same time as you update your Active Directory to ensure that your staff retain Cloud access.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">If our firm's identity provider is having an outage, how else can users sign into Cloud?</p>
+        <p>Users will be unable to sign in to Cloud if your identity provider is experiencing an outage. We recommend maintaining an admin account that does not use your identity provider to ensure access to Cloud in case of emergencies.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">What happens if my client secret expires?</p>
+        <p>If your client secret expires, SSO users will no longer be able to log in to Cloud. You must generate a new client secret and update your identity provider information in Cloud.</p>
+        <ol>
+            <li>
+                <p>Log into Cloud using your Cloud credentials.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings</b><b>| Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Edit</b> button(<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Enter the correct information for your identity provider in the <b>Identity provider metadata endpoint</b>, <b>Client ID</b>, and <b>Client secret</b> fields.</p>
+            </li>
+        </ol>
+        <p>We recommend selecting <b>Never expires</b> when generating your client secret to prevent unexpected loss of access for SSO users.</p>
+        <hr>
+        </hr>
+        <p><b>How can I restrict Cloud access so that staff can only access it from their work computers?</b>
+        </p>
+        <p>If you want to restrict Cloud access to work computers, consider adding <a href="https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-locations" target="_blank">trusted locations</a> to Entra ID. This enables you to restrict access based on IP addresses, such as the office or VPN IP.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">How can I disable SSO for my firm?</p>
+        <p>If you want to disable SSO for your firm, contact your local distributor.</p>
+        <p>After SSO is disabled, users can log in using their previous Cloud credentials. Users whose passwords have expired or who have only used SSO to log in to Cloud can use the <b>Forgot your password?</b> link to create a password for their account. If necessary, your firm administrator can also reset passwords for users.</p>
+        <hr>
+        </hr>
+        <h3><a name="Why"></a>Why am I receiving an error message?</h3>
+        <p>If Cloud or SSO is misconfigured, you may see one of the error messages listed below when you attempt to sign in.</p>
+        <hr>
+        </hr>
+        <p><b>Error message: "Please try again later! The server has encountered an unknown error. If the problem persists, contact your administrator."</b>
+        </p>
+        <p>This issue is most commonly caused by an expired client secret in the SSO provider. An admin user of the firm must update their SSO configuration.</p>
+        <ol>
+            <li>
+                <p>Regenerate the client secret. This can be completed through your SSO provider.</p>
+            </li>
+            <li>
+                <p>Log in to Caseware Cloud.</p>
+                <div class="note">
+                    <p><b>Note:</b> If you cannot login, contact your <a href="https://www.caseware.com/contact/">local distributor</a> and request that they disable SSO for your admin account. Include the following information in your request:</p>
+                    <ul>
+                        <li>
+                            <p>The full firm URL</p>
+                        </li>
+                        <li>
+                            <p>The email address of your admin account where SSO should be disabled</p>
+                        </li>
+                        <li>
+                            <p>Written client authorization to disable SSO for the admin account</p>
+                        </li>
+                    </ul>
+                    <p>Once SSO is disabled for the admin account, use the <b>Forgot Password</b> option on the login page to set a new password and login to Cloud.</p>
+                </div>
+            </li>
+            <li>
+                <p>Update the SSO configuration in Cloud with the new client secret. This will restore login access for other users.</p>
+            </li>
+            <li>
+                <p>If SSO was disabled for your admin account, log in again using SSO to re-enable it. Alternatively, you may want to leave SSO disabled for your account in case this issue arises in the future.</p>
+            </li>
+            <li>
+                <p>Set reminders/monitoring for the client secret expiry. The firm can prevent future lockouts by rotating the client secret prior to the next expiry date.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Error message: "We're sorry ... Unexpected error when authenticating with identity provider"
+</b>
+        </p>
+        <p>When configuring your identity provider, you may have entered an incorrect client secret or client ID. </p>
+        <ol>
+            <li>
+                <p>Log into Cloud using your Cloud credentials.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings</b><b>| Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Edit</b> button(<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Enter the correct information for your identity provider in the <b>Identity provider metadata endpoint</b>, <b>Client ID</b>, and <b>Client secret</b> fields.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Error message: "AADSTS70001: Application with identifier ...  was not found in the directory ..."</b>
+        </p>
+        <p>
+When configuring Entra ID, you may entered an incorrect identity provider. </p>
+        <ol>
+            <li>
+                <p>Log into Cloud using your Cloud credentials.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Edit</b> button(<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Enter the correct information for your identity provider in the <b>Identity provider metadata endpoint</b>, <b>Client ID</b>, and <b>Client secret</b> fields.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Error message: "AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application ..."</b>
+        </p>
+        <p>You may have entered an incorrect reply URL in Entra.</p>
+        <ol>
+            <li>
+                <p>From the left-hand navigation pane in Entra, select <b>Entra ID | App Registration.</b></p>
+            </li>
+            <li>
+                <p>Select your app, then select <b>Settings | Reply URLs</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Context menu</b> button next to your reply URL, then select <b>Delete</b>.</p>
+            </li>
+            <li>
+                <p>Add your reply URL again, then select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Error message: "AADSTS7000215: Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID"</b>
+        </p>
+        <p>When <a href="Generate-the-reply-URL-Azure-AD.htm">configuring Entra ID</a>, you may have entered the Client ID in the Client secret field.</p>
+        <ol>
+            <li>
+                <p>Verify if the client secret value is correct. If the value was copied <a href="Generate-a-client-secret.htm">as per the instructions</a>, locate the client secrets stored in Entra ID and confirm whether it matches any IDs. If the copied value matches an ID, or you did not copy the client secret value, delete the current secret and <a href="Generate-a-client-secret.htm">create a new one</a>. Ensure that you copy the client secret value.</p>
+            </li>
+            <li>
+                <p>Log into Cloud using your Cloud credentials.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Edit</b> button(<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Enter the correct information for your identity provider in the <b>Identity provider metadata endpoint</b>, <b>Client ID</b>, and <b>Client secret</b> fields. The Client ID field should match the Application ID, and the Client secret field should match the client secret value from step 1 (not the Secret ID).</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Error message: "No available Cloud access licenses. To obtain additional licenses, contact your administrator."</b>
+        </p>
+        <p>
+The number of users in your Active Directory domain exceeds the number of available Cloud licenses. When the number of users in your Active Directory domain exceeds the number of available licenses, some staff will be unable to sign in. To permit all staff members to sign in, purchase a license from MyCaseware for each staff member or contact your local distributor.</p>
+        <hr>
+        </hr>
+        <p><b>Error message: "Account already exists. User with email ... already exists. How do you want to continue?"</b>
+        </p>
+        <p>This error occurs after a user is removed from Entra and another user is added using the same email address. <br /></p>
+        <p>To work around this issue, delete the Cloud account associated with the email address displayed in the error message and have the user sign in again using SSO. <br /></p>
+        <p>This process will not be required in future releases.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Error message: "The received token is missing the following claims: email required for system access. Please contact your administrator."</p>
+        <p>The Caseware Cloud SSO integration is designed to recognize 'username' and 'email' claims as distinct claims. Our integration requires the 'email' claim to work properly. The 'email' claim is only provided by guest users and managed users integrated through Office365. If your firm's users are set up through Office365, please ensure to follow <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">Azure's instructions</a> to manage the 'email' claim through the Office admin portal.</p>
+        <hr>
+        </hr>
+    </body>
+</html>

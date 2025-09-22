@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>A new engagement is created based on a template. Templates are created and managed by authors.</p>
+        <p>Firm authors are staff members with the <b>Settings Admin</b> role or similar which allows them to customize the default product content to meet specific firm needs. For example, add the firm logo. <MadCap:conditionalText MadCap:conditions="General.Online">To learn more about roles, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a> and <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Assign security roles</a>.</MadCap:conditionalText></p>
+        <p>Firm customizations include adding content and modifying or suppressing the default content. </p>
+        <p MadCap:conditions="General.PDF,PrintGuides.Teacher" class="instNotes"><b>Instructor Note:</b> Make sure all the students  have the <b>Settings Admin</b> role so they can access the firm template mode.</p>
+        <h2 MadCap:conditions="General.Online"><a name="Concepts"></a>Concepts and workflow</h2>
+        <p>Before you begin, review the concepts and workflow of template management.</p>
+        <ul>
+            <li>
+                <p><b>Product template</b> - the template that contains the default content for your product.</p>
+            </li>
+            <li>
+                <p><b>Draft</b> - the template you're currently customizing for your firm (the work in progress template).</p>
+            </li>
+            <li>
+                <p><b>Archived template</b> - an archived template is automatically created when a draft  is published. To maintain a  record of all previously used templates, archived templates cannot be deleted.</p>
+            </li>
+            <li>
+                <p><b>Firm template</b> - the most recently published template (the template that's currently used by your firm to create engagements).</p>
+            </li>
+        </ul>
+        <p>The following figure shows the general workflow for managing the firm template.</p>
+        <p>
+            <img src="../Images/firm authoring-wf.PNG" />
+        </p>
+        <p>If you don't have a firm template, you need to <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create" MadCap:conditions="General.Online">create a draft</a><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Create5">create a draft</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Create5">create a draft</a></MadCap:conditionalText>, make your firm customizations, then review and <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Publish">publish.</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Publish">publish.</a></MadCap:conditionalText><a href="../../Engagements/Template-and-Authoring/Publish-a-draft.htm#Publish" MadCap:conditions="General.Online">publish.</a></p>
+        <p>If you already have a firm template, you can:</p>
+        <ul>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Edit-the-firm-template.htm#Edit">edit the template,</a> </MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">edit the template.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Edit">edit the template</a>.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT">edit the template.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Edit">edit the template</a>.</MadCap:conditionalText>
+                </p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/Template-and-Authoring/Revert-to-a-previous-template-version.htm#Revert"><MadCap:conditionalText MadCap:conditions="General.Online">revert to the product template</MadCap:conditionalText></a>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">revert to the firm template</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">revert to the default template</MadCap:conditionalText> instead of the firm template<MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">, or</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Use">revert to the product template</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT,PrintGuides.Teacher">To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Use">revert to the product template.</a></MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Update-the-firm-template.htm#Update">update</a>
+                    </MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT">update</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">update</MadCap:conditionalText> your template with the latest changes from the product template.<MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Update">update the firm template</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">To learn more, see <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Update">update the firm template.</a></MadCap:conditionalText></p>
+            </li>
+        </ul>
+        <p>If you're not satisfied with the draft you're working on, you can delete the draft and either:</p>
+        <ul>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Delete-a-draft.htm#Delete">start a new one</a>, or</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">start a new one.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">To learn more, see <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Delete">Create a draft</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">start a new one.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">To learn more, see <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create">Create a draft</a>.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Use-the-product-template.htm#Use">use the product template</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">use the product template.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">To learn more, see Use the product template.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">use the product template. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">To learn more, see Use the product template.</MadCap:conditionalText></p>
+            </li>
+        </ul>
+    </body>
+</html>

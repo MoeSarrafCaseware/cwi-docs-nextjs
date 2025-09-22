@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>View the client's general ledger and subledger data</h1>
+        <p>If you have <a href="../File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">imported your client's general ledger and subledger data</a>, on the <b>Datasets</b> tab, on the <b>Data</b> page, click <b>View data</b>.</p>
+        <p class="note inline"><b>Note:</b> The <b>View data</b> button is only visible on the <b>Datasets</b> tab if you've successfully imported data.</p>
+        <p style="font-weight: bold;">
+            <img src="../../Resources/Images/GL-ViewData.png" alt="Selecting to view data after importing it. " />
+        </p>
+        <h2>Sort data</h2>
+        <h3>Column sorting</h3>
+        <p> The columns by which the data in the dataset can be sorted are marked with an upward arrow (<img src="../../Resources/Icons/upward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to indicate the data is sorted ascendingly, or a downward arrow (<img src="../../Resources/Icons/downward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to indicate the data is sorted descendingly. Click the column header to change the direction of sorting.</p>
+        <h3>Multicolumn sorting</h3>
+        <p>A number and a sort arrow (<img src="../../Resources/Images/MulticolumnSortIndicator.png" alt="" style="vertical-align: text-bottom;" />)&#160;appears on multiple columns to indicate multicolumn sorting. In the example below, the data sorts by <b>Entry ID</b> and then <b>Line number</b> by default.</p>
+        <p><b>To change the column sorted first:</b>
+        </p>
+        <p>Hover over the column marked 2 and hold down <b>Shift</b> while clicking the column header.</p>
+        <p>
+            <img src="../../Resources/Images/MulticolumnSortExample.png" alt="Multiple column sort example showing two columns that can be used to sort the dataset." />
+        </p>
+        <h2>Column-level options</h2>
+        <p>Select the dropdown (<img src="../../Resources/Images/ColumnSortOptions-DataViewer.png" alt="" style="vertical-align: text-bottom;" />) on a column header to make a list of options appear.</p>
+        <p>Select <b>Pin column</b> to move the column to be the first column on the left.</p>
+        <p>
+            <img src="../../Resources/Images/PinColumn.png" alt="Selecting the Pin Column option to make the column appear first on the left." />
+        </p>
+        <ul>
+            <li>
+                <p>Select <b>Hide column</b> to hide the column.</p>
+            </li>
+            <li>
+                <p>Select <b>Filter by column</b> to filter rows in the data to show only those containing the value you specify. In the example below, only those data rows where the line number contains the value `96` will be shown.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/FilterColumn.png" alt="Filtering the Line number column." />
+        </p>
+        <h2>Filter the entire dataset</h2>
+        <p>You can filter the entire dataset by clicking <b>Filters</b> and then in the Filters panel, making selections for any of the columns in the dataset. All the column filters use the CONTAIN operator, whereas the entire set of filters use the AND operator.</p>
+        <p>In the example below, data rows will be retained by the filter if</p>
+        <p><code><b>Source</b> =  Xero — 11/14/24 4:40 pm</code>
+        </p>
+        <p>AND</p>
+        <p><code><b>Account number</b> =  *96*</code> (any account number containing the value `96`)</p>
+        <p>AND</p>
+        <p><code><b>Account name</b> = *Receivable*</code> (any account name containing the value `Receivable`</p>
+        <h2>Exclude columns from the view</h2>
+        <p>You can exclude columns from the data displayed by clicking <b>Columns</b>, and then selecting those you do not want to appear.</p>
+        <p>
+            <img src="../../Resources/Images/ExcludeColumnsFromDataViewer.png" alt="Filtering out entire columns by delecting them in the list of columns in the dataset." />
+        </p>
+    </body>
+</html>

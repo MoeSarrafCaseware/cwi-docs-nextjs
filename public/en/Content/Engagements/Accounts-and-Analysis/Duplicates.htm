@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Duplicates</h1>
+        <p>The Duplicates analytic test identifies duplicate or potentially fraudulent transactions or records within a company's financial statements or accounting records. This can be used to uncover errors, anomalies, or fraudulent activities such as double counting of revenue, expenses, or assets.</p>
+        <p>This analytic test can be useful to identify:</p>
+        <ul>
+            <li>
+                <p>Possible attempts to manipulate the financial statements</p>
+            </li>
+            <li>
+                <p>Financial reporting areas that have lower accuracy or precision</p>
+            </li>
+            <li>
+                <p>Fictitious transactions</p>
+            </li>
+            <li>
+                <p>Systemic issues in how a department processes transactions</p>
+            </li>
+            <li>
+                <p>Improperly configured system settings which may need improvement and further evaluation</p>
+            </li>
+            <li>
+                <p>Failure of the data validation process</p>
+            </li>
+            <li>
+                <p>Weak internal controls</p>
+            </li>
+            <li>
+                <p>Weak monitoring and detecting activities</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>A risk of material misstatement due to fraud</p>
+            </li>
+            <li>
+                <p>Transactions accidentally posted in duplicate</p>
+            </li>
+            <li>
+                <p>Redundant processes or lack of coordination among departments</p>
+            </li>
+            <li>
+                <p>Problems with reconciliations</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> -  Unique field(s) that are used to create a unique transaction ID such as the <b>Entry ID</b> field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Duplicate field(s)</b> - One or more fields that will be compared for duplicates.</p>
+            </li>
+            <li>
+                <p><b>Different field(s)</b> - One or more fields that must be different for the duplicate entries. These fields are optional and are only used for analytics where you are looking for duplicates with one field different. For example, if you are looking for the same payment made on different dates, the payment field would be the duplicate field and the date field would be the field that must be different.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>There are no user set parameters for this test.</p>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By Account ID, Identifier Type, Entry Number, Entered Date, Entered By and Amount</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By Originating Document Type and Originating Document Number</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By Document Type and Document Number</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By different Entered By User</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Amount by Identifier</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entered Date and Amount by Document Type</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By Description and Amount</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Different JEs: same Account Number, Amount and Entry date</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Entries - By Account Number, Amount, Document Number and Entry Date</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Different Entry Date : Same Account Number, Amount, Document Number</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Invoice Numbers</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Supplier Invoice Dates</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Cheque Numbers</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Supplier Invoice Amounts</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Transaction</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Transaction with different invoice date</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Duplicate Transaction different entered date</p>
+            </li>
+        </ul>
+        <h2>Technical specifications</h2>
+        <p>When you run the Duplicates analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis.  If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first. Note that the ability to set filters is not currently available and will be available in later versions of the test.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that at least one field has been selected to perform the duplicate analysis on.</p>
+            </li>
+            <li>
+                <p>Validate if an optional different field has been selected.</p>
+            </li>
+            <li>
+                <p>Validate if a date range field has been selected.</p>
+            </li>
+            <li>
+                <p>Core test:</p>
+                <ul>
+                    <li>
+                        <p>Only duplicate fields tagged - Perform the analysis looking for matches within the database and export any matches to the result file.</p>
+                    </li>
+                    <li>
+                        <p>Different field selected - Perform the analysis looking for matches in which the field selected as different does not match.  Export any matches to the result file.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Add an additional column that groups the duplicates together. For example, the first set of duplicates would be grouped as 1 in this column and the second set would be grouped as 2.</p>
+            </li>
+        </ol>
+    </body>
+</html>

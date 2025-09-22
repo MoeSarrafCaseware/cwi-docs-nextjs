@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Additional details described</h1>
+        <p>When <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions data display properly in the engagement. </p>
+        <p>This topic describes the fields within the <b>ADDITIONAL DETAILS</b> category  that appear in the General ledger dataset.</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Line Number (<code>line_number</code>)</h2>
+        <p>Identifier that is unique to each line of an entry. Identifier is auto generated if it was not tagged. </p>
+        <h3>Usage </h3>
+        <p>
+            <ul>
+                <li>If tagged, this is used as the transaction line identifier.</li>
+                <li>If line number is not tagged, each transaction line within each unique transaction is assigned a sequential number starting from 1.</li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>There must be no blank line number cells.</li>
+                <li>There must not be duplicate line numbers for any unique entry.</li>
+            </ul>
+        </p>
+        <h2>Entry ID (<code>entry_id</code>)</h2>
+        <p>Any identifer that is unique to each journal entry - does not have to be sequential.</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>If tagged, this is used to group transactions.</li>
+                <li>If Entry Number and Entry ID are not tagged, each transaction is assigned a random unique identifier.</li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>There must be no blank entry ID cells.</p>
+    </body>
+</html>

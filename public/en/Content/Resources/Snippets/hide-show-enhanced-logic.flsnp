@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p>
+                    <b>Apply default behavior</b>
+                </p>
+                <p>The default behavior differs based on the row type:</p>
+                <p>For input rows:</p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Always display this row in the financial statements.</p>
+                </li>
+                <li>
+                    <p>Display this row in the document PDF print copy if it has a non-zero balance (that is, the cell is not empty and its value is not zero) - otherwise, hide the row in the PDF print copy.</p>
+                </li>
+            </ul>
+            <p>For group rows (trial balance group and custom group <b>Total</b> or <b>Title</b>):</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Always display this row in the financial statements.</p>
+                </li>
+                <li>
+                    <p>Display this row in the document PDF print copy if the group includes more than one account with non-zero balance (that is, the cells are not empty and their values are not zero) - otherwise, hide this row in the PDF print copy.</p>
+                </li>
+            </ul>
+            <p>For trial balance rows:</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Display this row in the financial statements and in the document PDF print copy if the balances for current or prior years exist - otherwise, hide this row in both.</p>
+                </li>
+            </ul>
+            <li>
+                <p>
+                    <b>Always display this row</b>
+                </p>
+                <p>The row always displays in the financial statements and in the PDF print copy.</p>
+            </li>
+            <li>
+                <p>
+                    <b>Always hide this row</b>
+                </p>
+                <p>The row is always hidden in the financial statements and in the PDF print copy.</p>
+                <p class="note inline">
+                    <b>Note:</b> This option is only available for input rows and group rows (trial balance group rows,  custom group <b>Title</b> and <b>Total</b> rows).</p>
+            </li>
+        </ul>
+    </body>
+</html>

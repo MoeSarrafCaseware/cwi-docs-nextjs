@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Assign accounts to groups in the Data page</h1>
+        <p>On the <b>Data</b> page, the <b>Assign Accounts</b> icon can sometimes show a red badge ( <img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;" />) once you import the trial balance. This means that one or more accounts haven't been successfully mapped to groups. The same happens once you manually add one or more accounts. Note that the red badge shows the number of unassigned accounts. For example, if there is one unassigned account, the badge shows <b>1</b> (<img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;" />).</p>
+        <p>
+            <img src="../../Resources/Images/assign-accounts-screen2.png" alt="Assign accounts page." />
+        </p>
+        <p>You must manually map unassigned accounts to appropriate groups so that your financial data populates correctly throughout the engagement.</p>
+        <h2>Assign accounts to groups</h2>
+        <p style="font-weight: normal;">You can manually map unassigned accounts to groups from the <b>Assign Accounts</b> page.</p>
+        <p style="font-weight: bold;">To assign an account to a group:</p>
+        <ol>
+            <li>
+                <p>Select <b>Assign Accounts</b> icon (<img src="../../Resources/Images/icon-assign-account.PNG" style="width: 26px;height: 27px;vertical-align: text-bottom;" />) from the top right corner of the <b>Data</b> page.</p>
+            </li>
+            <p>You can also select the <b>Assign Accounts</b> tab from the left side panel.</p>
+            <p>In the <b>Assign Accounts</b> tab, the unassigned account displays at the <b>Unassigned</b> section. You can select the <b>Show Hidden</b> check box to view groups that have been hidden in the engagement due to irrelevance. For example, if your client's industry is technology, then all trial balance groups related to farming are automatically hidden in the engagement as they are irrelevant.</p>
+            <p>
+                <img src="../../Resources/Images/assign-accounts-tab.png" alt="Assign Accounts tab, unassigned account and how groups display." />
+            </p>
+        </ol>
+        <p>If you select <b>Show Hidden</b>, the invisible icon (<img src="../../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;" />) displays next to the hidden groups so you can spot them in the list. </p>
+        <p>
+            <img src="../../Resources/Images/irrelevant-groups-hidden.png" alt="Irrelevant groups are hidden.Notice the invisible eye icon." />
+        </p>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Select a group to assign the selected account to that group.</p>
+            </li>
+            <p>You can also drag the account from the <b>Unassigned</b> section and drop it in a group to map it. You can also search groups using the search field. Note that you need to <u>enter at least 3 characters</u> in the search field for matching results to display.</p>
+            <p>
+                <img src="../../Resources/Images/assign-accounts-search.PNG" alt="Search groups in Assign Accounts page." />
+            </p>
+        </ol>
+        <p class="note"><b>Note:</b> You can only assign accounts to a lower level group if there are no accounts assigned to its parent group. For example, let’s say you have two account groups, <i>Revenue income</i> and <i>Lease income</i>, that are both assigned to the <i>Income</i> parent group. If you assign an account to the <i>Income</i> group, you cannot assign any accounts to the <i>Revenue income</i> or <i>Lease income</i> groups. If you want to assign accounts to a lower level group, you must first manually unassign the accounts assigned to the parent group. To learn more, see <a href="#Unassign">Unassign accounts from groups</a>.</p>
+        <p>Once you select a group, a message displays at the bottom to confirm the account assignment. You can undo the account assignment by selecting <b>Undo</b> button in the confirmation message.</p>
+        <p class="note"><b>Note:</b> You can assign the account to a hidden group. In this case, the hidden group, its parent group and subgroups automatically become visible in the engagement.</p>
+        <p>
+            <img src="../../Resources/Images/undo-account-assignment.PNG" alt="Confirmation message after account is assigned to a group showing the Undo option." />
+        </p>
+        <h2><a name="Unassign"></a>Unassign accounts from groups</h2>
+        <p>You can manually unassign accounts from groups in the <b>Assign Accounts</b> tab.</p>
+        <p><b>To unassign an account from a group:</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the <b>Assign Accounts</b> tab, navigate to the group you want to unassign accounts from.</p>
+            </li>
+            <li>
+                <p>Select and drag the accounts assigned to the parent group to the <b>Unassigned</b> section.</p>
+                <p>
+                    <img src="../../Resources/Images/unassign-accounts.png" alt="The Unassigned section and account groups displayed in the Assign Accounts tab." />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

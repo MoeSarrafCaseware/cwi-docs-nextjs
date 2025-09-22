@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Rounding setup recommendations</h1>
+        <p>In Engagement Settings, where you have rounding set up in <b>Format | Numbers</b>, follow these recommendations for settings found in <b>Features | Financial Statements</b>.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/to-access-engagement-settings.flsnp" />
+        <p style="font-weight: bold;">To check your rounding setup:</p>
+        <ol>
+            <li>
+                <p>Go to <b>Format</b> | <b>Numbers</b>. Note the value that <b>Decimals</b> is set to.</p>
+            </li>
+            <li>
+                <p>Deselect the <b>Use decimal settings in dynamic tables</b> option if it is selected.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/EngagementSettings-Numbering.png" alt="Reviewing the settings related to rounding on the Format | Numbers tab of Engagement Settings. " />
+        </p>
+        <ol>
+            <li value="3">
+                <p>Go to <b>Features | Financial Statements</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Enable rounding in financial statements</b> if it is not selected.</p>
+            </li>
+            <li>
+                <p>The recommended setting for <b>Display decimal places</b> depends on your selection in <b>Round to whole numbers</b>:</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p class="indent">If you set <b>Round to whole numbers</b> to <b>Thousands (1 000)</b>, <b>Millions (1 000 000)</b> or <b>Billions (1 000 000 000)</b>, set <b>Display decimal places</b> to the same value that <b>Decimals</b> is set to on the Numbers tab. In our example, this would be 2.</p>
+            </li>
+            <li>
+                <p class="indent">If you set <b>Round to whole numbers</b> to Ones, <b>Display decimal places</b> is set to 0 by default.  In this case, set <b>Display decimal places</b> to Include decimals.</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/FinancialStatements-Thousands.png" alt="Coordinating rounding settings in the Financial Statements and Numbers on the Engagement Settings where the number of decimal places is set to 2, and rounding is to the nearest 1,000." />
+        </p>
+        <p>
+            <img src="../../Resources/Images/FinancialStatements-Ones.png" alt="Coordinating rounding settings in the Financial Statements and Numbers on the Engagement Settings where Display decimal places is set to Include decimals, and Rounding to whole numbers is to Ones. " />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/planning-balances-not-for-financials.flsnp" />
+        <p>
+            <img src="../../Resources/Images/DataLink.png" alt="Planning balances are not supported for custom calculations in the Data Link dialog. " />
+        </p>
+    </body>
+</html>

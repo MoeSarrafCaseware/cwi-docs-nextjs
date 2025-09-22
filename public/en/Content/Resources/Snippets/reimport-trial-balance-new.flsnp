@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>After you complete the import, you can reimport the trial balance data at any point in time or <a href="Import">import a new trial balance</a>:</p>
+        <p>When you reimport data,</p>
+        <ul>
+            <li>
+                <p>Account names and balances will be overwritten with the reimported data for accounts that already exist in the engagement</p>
+            </li>
+            <li>
+                <p>Any new accounts in the reimported data that do not already exist in the engagement will be added to the engagement.</p>
+            </li>
+            <li>
+                <p>Accounts that exist in the engagement that are not included in the reimported data will be deleted, unless:</p>
+                <ul>
+                    <li>
+                        <p>The existing account has a balance for a period, balance type or other entity that is not included in the reimported data. For example, if the existing account has a prior year balance but the reimported data only includes data for current year balances, the existing account will not be deleted.</p>
+                    </li>
+                    <li>
+                        <p>The existing account has a corresponding adjustment, issue or annotation.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Any adjustments, issues and annotations made prior to reimport will remain after the data is reimported.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note:</b> If you reimport the data from a different source (from a different file name, for example) and there are accounts in the existing data that are not in the new data, the balance of these existing accounts is set to 0.</p>
+        <p class="note inline"><b>Note:</b> In engagement files created from carry forward, account balances from prior years are not overwritten or deleted by the new data from reimport.</p>
+        <p><b>To reimport the trial balance:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Reassign the fields in the trial balance. Select <b>Options</b> (<img src="../Images/OptionsIcon.png" alt="" style="vertical-align: text-bottom;" />) | <b>Reassign fields</b> on the <b>Datasets</b> tab on the Data page.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Images/Reassign-fields-Datasets-tab.png" alt="Selecting the Reassign fields option with a view to reimport the trial balance." />
+        </p>
+        <ol>
+            <li value="2">
+                <p>In the dropdowns, make any necessary changes in how fields in the data file are assigned to Caseware fields. Select <b>Reimport</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Import a new trial balance </h2>
+        <p>In an engagement where you have already imported a trial balance, you can import a new trial balance. Delete the existing trial balance and then proceed to import the new trial balance.</p>
+        <p><b>To import a new trial balance:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Delete the existing trial balance. Select <b>Options</b> (<img src="../Images/OptionsIcon.png" alt="" />) | <b>Delete data</b> on the <b>Datasets</b> page.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Images/DeleteDataset.png" alt="Deleting a trial balance dataset on the Datasets page." />
+        </p>
+        <ol>
+            <li value="2">
+                <p>Proceed to import the new trial balance. Under DATA FILE UPLOAD, browse or drag the CSV or Excel file to the file upload area.</p>
+            </li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

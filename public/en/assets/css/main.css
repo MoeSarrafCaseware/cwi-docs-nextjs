@@ -1,0 +1,91 @@
+/* Global Docs stylesheet applied across all locales via index.html and injected topic styles */
+:root{
+  --brand: #FF6B35;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+}
+
+/* Body & typography */
+body{color:var(--text);background:var(--bg);} 
+
+h1,h2,h3,h4{color:var(--text);margin-top:1.4rem;margin-bottom:.75rem;}
+/* Blue underline under headings (production-like) */
+.topic-content h1,
+.topic-content h2{
+  position:relative;
+  padding-bottom:.4rem;
+  border-bottom:2px solid #0b5fff;
+}
+
+/* Code blocks */
+.topic-content pre,
+.topic-content code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.topic-content pre{
+  background:#f6f8fa; /* light theme background for readability */
+  color:#24292e;
+  border:1px solid #e1e4e8;
+  border-radius:6px;
+  padding:1rem;
+  overflow:auto;
+}
+.topic-content code{background:#f3f4f6;color:#111827;padding:.15rem .33rem;border-radius:4px;}
+.topic-content pre code{background:transparent;padding:0;color:inherit;}
+
+/* Links */
+.topic-content a{color:#1a73e8;text-decoration:none}
+.topic-content a:hover{text-decoration:underline}
+
+/* Ensure textual elements are readable even if injected topic CSS sets light-on-dark */
+.topic-content p,
+.topic-content li,
+.topic-content ol,
+.topic-content ul,
+.topic-content td,
+.topic-content th,
+.topic-content .MCDropDownBody p,
+.topic-content .MCExpandingBody p { color:#111827; }
+
+/* Tables */
+.topic-content table{border-collapse:collapse;width:100%;margin:1rem 0;border:1px solid var(--border)}
+.topic-content th, .topic-content td{border:1px solid var(--border);padding:.5rem;text-align:left}
+.topic-content thead th{background:#f9fafb}
+
+/* Images */
+.topic-content img{max-width:100%;height:auto}
+
+/* Callouts */
+.topic-content .note,.topic-content .warning,.topic-content .tip{border-left:4px solid var(--brand);background:#fff7f3;padding:.75rem 1rem;border-radius:4px;margin:1rem 0}
+.topic-content .warning{border-left-color:#ef4444;background:#fff5f5}
+
+/* Breadcrumb */
+#breadcrumb{display:flex;gap:.5rem;align-items:center}
+#breadcrumb a{color:#374151}
+#breadcrumb .breadcrumb-separator{color:#9ca3af}
+
+/* Homepage polish */
+.header-title{letter-spacing:-0.01em}
+
+/* PDF links: force download indicator icon via CSS (optional) */
+.topic-content a[href$=".pdf" i]{position:relative;padding-right:1.1em}
+.topic-content a[href$=".pdf" i]::after{content:"⬇";position:absolute;right:.1em;top:0}
+
+/* MadCap visibility fixes: ensure expanding/dropdown content shows without MadCap JS */
+.topic-content .MCDropDownBody,
+.topic-content .MCExpandingBody,
+.topic-content .MCTogglerBody{display:block !important;}
+.topic-content .MCDropDown_Closed .MCDropDownBody{display:block !important;}
+.topic-content .MCExpanding_Closed .MCExpandingBody{display:block !important;}
+.topic-content [data-mc-state="closed"]{display:block !important;}
+.topic-content .MCDropDownHead,.topic-content .MCExpandingHead{cursor:default;}
+
+/* Ensure Bootstrap-like accordions/collapses are visible inside topic pages */
+.topic-content .collapse{display:block !important; height:auto !important;}
+.topic-content .panel-collapse{display:block !important; height:auto !important;}
+.topic-content .accordion-collapse{display:block !important; height:auto !important;}
+.topic-content .panel-body, .topic-content .accordion-body{display:block !important;}
+.topic-content a[data-toggle="collapse"].collapsed,
+.topic-content button[data-bs-toggle="collapse"].collapsed{color:inherit;}

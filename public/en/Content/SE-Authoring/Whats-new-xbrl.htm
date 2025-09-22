@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>What's new in XBRL - August 2025</h1>
+        <p>The following lists describe the improvements and fixed issues in the August 2025 XBRL updates.</p>
+        <h2>XBRL Server (Ver 2.6.0.7)</h2>
+        <h3>Enhancements</h3>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57237">SE-57237</a>] - Added a new endpoint to retrieve the XBRL Microservice version.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57224">SE-57224</a>] - Reverted the Java version to Java 17 to restore compatibility with local development and UK taxonomy tests.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57238">SE-57238</a>] - Removed deprecated, unused, and redundant XBRL functionalities and endpoints.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57087">SE-57087</a>] - Reduced the maximum file size for gRPC snapshots from 512MB to 32MB to ensure appropriate limits for individual microservices.</p>
+            </li>
+        </ul>
+        <h3>Fixed issues</h3>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57047">SE-57047</a>] - (NL only) The validate endpoint returns inconsistent responses between development and production environments.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57284">SE-57284</a>] - Attempting to generate an iXBRL file results in an error indicating that the .xhtml file is too small.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-57068">SE-57068</a>] - Namespace handling in the ROI 102 product causes validation errors.</p>
+            </li>
+        </ul>
+    </body>
+</html>

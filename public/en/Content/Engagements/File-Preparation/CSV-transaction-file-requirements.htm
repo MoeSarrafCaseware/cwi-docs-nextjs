@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Prepare a CSV or Excel file to import transactions or subledger data</h1>
+        <p>You can import your transactions, general ledger or subledger data into a Cloud engagement from properly formatted CSV or Excel files.</p>
+        <p>For more information on importing transactions, general ledger or subledger data from a CSV or Excel file into Cloud engagements, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client's transactions and other subledger data from a CSV or Excel file</a>.</p>
+        <h2>CSV file requirements</h2>
+        <p>To ensure successful import: </p>
+        <ul>
+            <li>
+                <p>File must be a <b>.csv</b> with <b>UTF-8</b> encoding.</p>
+            </li>
+            <li>
+                <p>If the CSV file includes column headers with no data (only header values exist), the files are rejected and the upload fails.</p>
+            </li>
+            <li>
+                <p>File size must be less than 5 GB.</p>
+            </li>
+            <li>
+                <p>The first row in the CSV (the header row) is excluded from the import. Transactions should start on the second row.</p>
+            </li>
+            <li>If there is a value with quotation marks ("):<ul style="list-style-type: circle;"><li><p>Value must have  two quotation marks (an opening and closing quote). If a value has one quotation mark, either add another one or remove the quote.</p></li><li><p>Value must be escaped by enclosing it between additional pair of quotes or backslashes (\).</p></li><li><p>Values that consist of more than one word - where one or two of them have quotation marks - must be entirely enclosed between quotation marks.</p></li><p>Examples:</p><p>In the data below, the value <i>Definitely "real" cash</i> consists of one word between quotation marks:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,Definitely "real" cash,1000000</code></p><p>You must change it so it looks like this:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,"Definitely ""real"" cash",1000000</code></p><p>Or like this:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,"Definitely \"real\" cash",1000000</code></p><p>In the below data, the value <i>"cash"</i> is between quotation marks:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,"cash",1000000</code></p><p>You must change it so it looks like this:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,""cash"",1000000</code></p><p>Or like this:</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,\"real\",1000000</code></p></ul></li>
+        </ul>
+        <h2>Excel file requirements</h2>
+        <p>To ensure a  successful import:</p>
+        <ul>
+            <li>
+                <p>The file format must be <b>.xlsx</b>.</p>
+            </li>
+            <li>
+                <p>The file must not contain merged cells.</p>
+            </li>
+            <li>
+                <p>Data must exist on the first sheet, as only the first sheet is included in the import.</p>
+            </li>
+            <li>
+                <p>Data must start on the second row, as the first row (the header row) is excluded from the import.</p>
+            </li>
+            <li>
+                <p>At least one column must have data past row one.</p>
+            </li>
+            <li>
+                <p>There must be no empty rows.</p>
+            </li>
+        </ul>
+        <h2><a name="Mandator"></a>Mandatory fields for importing transactions</h2>
+        <p>To import transactions for viewing or performing <a href="../Accounts-and-Analysis/Sample-selection.htm">sample selection</a>, you must ensure the following fields are included in the import data: </p>
+        <ul>
+            <li><b>Posting date</b>
+            </li>
+            <li><b>Account number</b>
+            </li>
+            <li><b>Amount</b>
+            </li>
+        </ul>
+        <h2>Mandatory fields in the General ledger dataset for analytic tests</h2>
+        <p>Refer to <a href="Description-of-the-fields-in-the-Transaction-Details-category.htm">Transaction details described</a> and <a href="Description-of-the-fields-in-the-Account-Details-category.htm">Account details described</a> for fields that must be included in general ledger transaction data for analytic tests (embedded analytics).</p>
+    </body>
+</html>

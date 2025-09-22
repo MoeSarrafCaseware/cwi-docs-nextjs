@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Data linkage and real time updates in Cloud Connector</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/cloud-connector-note.flsnp" />
+        <p>If a data value changes in the engagement, the change is automatically reflected in the Excel file.</p>
+        <p class="note"><b>Note:</b> If you want to share a copy of the current Excel file and do not want the data to update as the engagement file is updated, you can use the <b>Duplicate &amp; Unlink</b> option. This will create a copy of the spreadsheets that does not include formulas which you can use to backup information or send it to clients. Note that protected sheets cannot be duplicated.</p>
+        <p><b>Example</b>:</p>
+        <ol>
+            <li>
+                <p>You insert the name for the trial balance group <i>Cash</i> in the Excel file using the <b>Caseware Cloud Connector</b> Add-in.</p>
+            </li>
+            <li>
+                <p>As you're working on your engagement, you modify the group name to be <i>Cash and cash equivalents.</i></p>
+            </li>
+            <li>
+                <p>You'll notice that <i>Cash</i> has automatically changed to <i>Cash and cash equivalents</i> automatically displays in the Excel file.</p>
+            </li>
+        </ol>
+        <p>However, if you modify a group number in your engagement, the change is not automatically reflected in data you've inserted the Excel file. You must re-insert the data in the Excel file.</p>
+        <p><b>Example:</b>
+        </p>
+        <ol>
+            <li>
+                <p>You insert the name of the trial balance group <i>Cash</i> in the Excel file using the <b>Caseware Cloud Connector</b> Add-in.</p>
+            </li>
+            <li>
+                <p>As you're working on your engagement, you modify the group number for <i>Cash</i>.</p>
+            </li>
+            <li>
+                <p>You'll notice that the cell now displays an incorrect name or no value.</p>
+            </li>
+            <p>To fix, delete the existing value and re-insert the name of the trial balance group <i>Cash</i> in the Excel file.</p>
+        </ol>
+        <h2>Hyperlink tab for syncing document urls to Excel</h2>
+        <p class="note in line"><b>Note:</b> This feature does not include linking to external documents such as an Excel, PDF or Word file.</p>
+        <p>You can now automate the process of adding document URLs from an engagement to an Excel spreadsheet with <b>Caseware Cloud Connector</b>. The connector will enable you to see the current list of Cloud Engagement documents that are available from a URL and add the URL as a link to the spreadsheet. The link, rather than being a long URL string, will retain the same name as in the engagement.</p>
+        <h3>Sync document urls with Cloud Connector</h3>
+        <ol>
+            <li>
+                <p>Ensure you have <b>Caseware Cloud Connector</b> installed on your version of MS Excel. To learn more about setting up <b>Cloud Connector</b>, refer to <a href="How-to-get-started-with-Cloud-Connector.htm">How to get started with Cloud Connector</a>.</p>
+            </li>
+            <li>
+                <p>Ensure your Excel file is attached to your engagement and open the file from your Caseware app.</p>
+            </li>
+            <li>
+                <p>Access <b>Caseware Cloud Connecto</b>r from the Data Link button [<img src="../../Resources/Icons/icon - datalink for cloud connector.png" alt="an icon for the data link button on Excel that connects MS Excel and Caseware. Illustrated as a blue square." style="vertical-align: bottom;" />] on the Home ribbon of your Excel file. The <b>Cloud Connector</b> dialog box will open.</p>
+            </li>
+            <li>
+                <p>Select the <b>Hyperlink</b> tab from the dialog box. You will see a full list of your engagement file documents and in the same structure as in your Caseware app.</p>
+            </li>
+            <li>
+                <p>Click a document within the <b>Caseware Cloud Connector</b> and click the Excel cell where you want to copy it. It will copy over the url to the Document page with the same filename. Clicking on this cell will open the url in your Caseware app.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/Cloud connector - hyperlink feature.png" alt="the dialog box of the Caseware Cloud Connector Hyperlink tab and a demonstration of a Caseware document url being copied into an Excel cell." />
+        </p>
+        <p><b>Caseware Cloud Connector</b> ignores documents inside the engagement files that are hidden. To show documents hidden in the documents page, users can check the filter Show hidden. These hidden documents can be inserted as links into the Excel spreadsheet. You will need to refresh or reopen Excel to update the links.</p>
+        <p>
+            <img src="../../Resources/Images/Cloud connector hyperlink feature show hidden.png" alt="The Caseware Cloud Connector dialog box displaying the Show hidden checkbox in the Hyperlink tab." />
+        </p>
+    </body>
+</html>

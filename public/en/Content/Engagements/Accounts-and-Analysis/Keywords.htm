@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Keywords</h1>
+        <p>The Keywords analytic test is designed to scan one or more fields for specific keywords. These keywords can be input manually, chosen from a predefined list of keywords or derived from a list of terms generated from the selected fields.</p>
+        <p>This test also includes a parameter that allows you to choose between exact matches and partial matches when searching for keywords.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Transactions that contain significant estimates</p>
+            </li>
+            <li>
+                <p>Fictitious transactions</p>
+            </li>
+            <li>
+                <p>Transactions that are complex or unusual in nature</p>
+            </li>
+            <li>
+                <p>Intercompany transaction</p>
+            </li>
+            <li>
+                <p>Transactions used to reconcile subledgers. For example, you can search for the keywords “reconcile subledger” or "balance subledger.”</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> -  Unique field(s) that are used to create a unique transaction ID such as the <b>Entry ID</b> field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Keyword field(s)</b> - The character fields which are searched for the selected keywords.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>The following parameters must be set to run this test:</p>
+        <ul>
+            <li>
+                <p><b>Keyword list</b> - A list of keywords saved as a text file.</p>
+            </li>
+            <li>
+                <p><b>Exact match</b> - Select whether the values have to match the keyword exactly. If you do not select to identify only exact matches, partial matches are also identified.</p>
+            </li>
+            <li>
+                <p><b>Ignore case</b> - Select whether or not the keyword matches are case sensitive</p>
+            </li>
+            <li>
+                <p><b>Create match word column</b> - Create an additional column that will list the words for which matches were found for this configuration.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p>The only configuration available for this test is <b>Keyword search</b>.</p>
+        <h2>Technical specifications</h2>
+        <p>When you run the Keywords analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that one or more character fields have been selected for the keyword search.</p>
+            </li>
+            <li>
+                <p>Obtain the list of words, depending on the interface it could come from several sources or a mix of one or more sources:</p>
+                <ul>
+                    <li>
+                        <p>A preprogrammed list of keywords.</p>
+                    </li>
+                    <li>
+                        <p>A list uploaded from the user of the keywords.</p>
+                    </li>
+                    <li>
+                        <p>The user entering the keywords directly into the interface.</p>
+                    </li>
+                    <li>
+                        <p>A combination of one or more of the above.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Allow the user to add or delete keywords from the list especially if it comes from 3a or 3b.</p>
+            </li>
+            <li>
+                <p>Obtain if the match is case-sensitive or not.</p>
+            </li>
+            <li>
+                <p>Depending on the selection of exact or partial matches perform the search of the keywords from step 3.</p>
+            </li>
+            <li>
+                <p>If a keyword match word column has been selected to add, only add one column even if there have been multiple columns selected to search in.</p>
+            </li>
+        </ol>
+    </body>
+</html>

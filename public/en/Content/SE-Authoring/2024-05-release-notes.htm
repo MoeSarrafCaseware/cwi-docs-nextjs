@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2024-05 release notes</h1>
+        <p>Welcome to the SE 2024-05 release! This release features major design updates for the Risk Library and the product settings, as well as updates to Cloud Connector, a new feature to allow users to sync trial balance data across engagements and more.
+</p>
+        <h2>Cloud Connector updates</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>
+            <img src="../Resources/Images/cloud-connector-redesign.png" style="width: 928px;height: 492px;" alt="A Microsoft Excel file with the Caseware Cloud Connector pane open." />
+        </p>
+        <p>A number of improvements have been made to Cloud Connector as part of this release:</p>
+        <ul>
+            <li>
+                <p>The Cloud Connector pane now features a new design.</p>
+            </li>
+            <li>
+                <p>A loading indicator has now been added to the pane so users are aware their data is still loading.</p>
+            </li>
+            <li>
+                <p>Accounts and groups with a zero balance are now hidden by default. You can select the <b>Include zero-balance items</b> checkbox to show these items.</p>
+            </li>
+            <li>
+                <p>Cloud Connector formulas now support using parent entity, subsidiary, and consolidated data for consolidation engagements.</p>
+            </li>
+            <li>
+                <p>When you add a group to your spreadsheet from the Cloud Connector pane, all visible subgroups of that group are now also added.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">See the following videos to view demos of the Cloud Connector updates:</p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1iHDeymHStT-lUZZESWOevLWEMqQ1T0-u/view?usp=sharing">Include zero-balance items</a>
+                </p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1UpQyffhD-igOQWHllPKj_GZUXo5Qofu9/view?usp=sharing">Consolidation data for Cloud Connector</a>
+                </p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/14uiWLYxecyNGoTas_BwrRG54jbnRM1E8/view?usp=sharing">Add all visible subgroups of a group</a>
+                </p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="Insert-data-using-the-right-pane.htm">Insert data using the right pane</a>.</p>
+        <h2>Bulk actions for documents</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The <b>Documents</b> page now features the option to make changes to multiple documents at once.</p>
+        <p>
+            <img src="../Resources/Images/documents-page-bulk-actions-setting.png" alt="The Bulk actions setting in the More actions menu for the Documents page." />
+        </p>
+        <p>When you turn on the <b>Bulk actions</b> option from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) menu on the <b>Documents</b> page, you can select multiple documents and then move, delete or sign off on all of those documents at once.</p>
+        <p>Note that:</p>
+        <ul>
+            <li>
+                <p>Firm authors cannot delete documents created by primary authors</p>
+            </li>
+            <li>
+                <p>End users cannot delete documents created by primary authors or firm authors</p>
+            </li>
+            <li>
+                <p>The option to bulk sign off on documents is only available in engagements</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/documents-page-bulk-actions.png" style="width: 1236px;height: 589px;" alt="The Documents page with Bulk actions turned on." />
+        </p>
+        <p>If users attempt to delete documents they don’t have permission to delete, a list of the documents that they cannot delete displays in the confirmation dialog.</p>
+        <p>
+            <img src="../Resources/Images/bulk-actions-delete-documents-dialog.png" style="width: 976px;height: 464px;" alt="The Delete documents confirmation dialog listing which documents cannot be deleted." />
+        </p>
+        <p>When users bulk sign off on documents, they can review the documents before they complete sign off. The <b>Status</b> column in the Review dialog informs users of additional information they may want to be aware of before they sign off on the documents. For example, if they are signing off on a checklist but not all the procedures have been signed off on, the <b>Status</b> column displays this information. They will also be informed if they have selected any documents that cannot be signed off on.</p>
+        <p>
+            <img src="../Resources/Images/bulk-actions-review-selected-documents.png" style="width: 507px;height: 417px;" alt="The Review selected documents dialog." />
+        </p>
+        <p>When you have completed the actions you want to take you can turn off <b>Bulk actions</b>  from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) menu or select the <b>Close</b> (<img src="../Resources/Images/icon-remove-from-chart.png" style="vertical-align: text-bottom;" alt=" " />) icon.</p>
+        <p>See <a href="https://drive.google.com/file/d/1O6xsiW3qsTI4WpA_0y1YMbSaIhbQ23Is/view?usp=sharing">Bulk actions</a> to view a video demo of this feature.</p>
+        <p>To learn more, see <a href="Finalize-your-draft.htm">Finalize your draft</a>.</p>
+        <p>
+            <img src="../Resources/Images/bulk-actions-close.png" style="width: 999px;height: 496px;" alt="The Close icon for Bulk actions in the top right corner of the Documents page." />
+        </p>
+        <h2>Risk Library design updates</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>A number of changes have been made to the design of the <b>Risk Library</b> page to improve usability, including:</p>
+        <ul>
+            <li>
+                <p>The <b>VIEW BY</b> filter is now set to <b>Indicators</b> by default. The <b>Categories</b> option for the filter has been renamed to <b>Cycles</b> or <b>Areas</b> depending on whether cycles or areas are used in the risk library. If indicators are not used in the risk library, the risks are displayed by cycles or areas instead.</p>
+            </li>
+            <li>
+                <p>Collapsed risk cards now display any assertions applied to the risk as well as the cycle or area associated with the risk, if applicable.</p>
+            </li>
+            <li>
+                <p>The number indicator for risk groups is now larger and displays next to the group name instead of on the far right side of the screen.</p>
+            </li>
+            <li>
+                <p>The <b>Category</b> dropdown is now the <b>Cycles</b> or <b>Areas</b> dropdown depending on whether cycles or areas are used in the risk library. Risk groups display as subcategories of the cycles or areas they’re associated with in the dropdown.</p>
+            </li>
+            <li>
+                <p>A <b>Cycles</b> filter is now available so you can filter risks by cycle.</p>
+            </li>
+            <li>
+                <p>You can now collapse and expand all cycles or all risk groups.</p>
+            </li>
+        </ul>
+        <h2>Hide zero balance columns in dynamic tables</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Dynamic table columns are now set to hide automatically if the column contains only zero balances from the table settings.</p>
+        <p>When you create a new dynamic table in a template or engagement, the <b>Hide zero balance columns</b> setting is turned on by default. For any existing dynamic tables created prior to this release, the setting is turned off.</p>
+        <p>To learn more, see <a href="Display-zero-balance-columns-in-dynamic-tables.htm">Display zero balance columns in dynamic tables</a>.</p>
+        <p>
+            <img src="../Resources/Images/dynamic-table-settings-hide-zero-balance-columns.png" style="width: 198px;height: 353px;" alt="The Hide zero balance columns setting in the dynamic table settings." />
+        </p>
+        <h2>Customize headings in financial statements</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The following updates have been made to give you more customization options for headings in financial statements:</p>
+        <ul>
+            <li>
+                <p>The Formatting Options dialog now includes a field to set the font size for area titles.</p>
+            </li>
+            <li>
+                <p>You can now add numbering for area titles in the Numbering Heading Options dialog. While previously the numbering was only displayed in the Document Map, it now also displays when you navigate to the area in the financial statements as well as in the table of contents</p>
+            </li>
+            <li>
+                <p>All five heading levels for areas and notes can now be displayed in the table of contents.</p>
+            </li>
+            <li>
+                <p>You can now hide individual headings for areas from the table of contents as well as hide the numbering for an individual heading from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) menu for an area.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">See <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Financial statements improvements</a> to view a video demo of this feature.</p>
+        <p MadCap:conditions="General.Online">To learn more, see <a href="Customize-font-sizes-and-spacing-in-financial-statements.htm">Customize font sizes and spacing in the financial statements</a> and <a href="Customize-numbered-headings-in-the-financial-statements.htm">Customize numbered headings in the financial statements</a>.</p>
+        <h2>Page numbering settings for financial statements</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The print settings for financial statement areas now include a <b>Page Numbering</b> section. You can choose whether to continue the page numbering from the previous area or restart the numbering.</p>
+        <p MadCap:conditions="General.Online">See <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Financial statements improvements</a> to view a video demo of this feature.</p>
+        <p MadCap:conditions="General.Online">To learn more, see <a href="Set-up-the-print-options-in-the-financial-statements.htm">Set up the print options in the financial statements</a>.</p>
+        <p>
+            <img src="../Resources/Images/fs-print-settings-page-numbering.png" style="width: 680px;height: 503px;" alt="The Page Numbering section in the print settings for the financial statements." />
+        </p>
+        <h2>Design update for the Product Settings dialog</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>This release features a brand new design for the Product Settings dialog to provide a consistent look and feel across each tab of the dialog.</p>
+        <p>
+            <img src="../Resources/Images/product-settings-redesign.png" style="width: 633px;height: 418px;" alt="The redesigned Product Settings dialog displaying the Fonts and Headings tab." />
+        </p>
+        <h2>Dimension numbers</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Dimensions now have a <b>Number</b> field so you can define a unique identifier for each dimension. This unique identifier can be used as a field when importing transactions to assign transactions to a dimension. To learn more, see the <a href="https://developers.caseware.com/developers_content/v1/Data-Analytics/Whats-new-data-analytics.htm#Dimensionsforgeneralledgerdatasets">Data Analytics 2024-02 release notes</a>.</p>
+        <p>If a user does not want to use dimension numbers, they can turn the <b>View numbers</b> option off and hide the <b>Number</b> column.</p>
+        <p>To learn more, see <a href="Add-dimensions.htm">Add dimensions</a>.</p>
+        <p>
+            <img src="../Resources/Images/product-settings-dimensions-number-column.png" style="width: 717px;height: 472px;" alt="The Dimensions tab of the Product Settings dialog. " />
+        </p>
+        <h2>Materiality form</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The following updates have been made to the Materiality form.</p>
+        <h3>Guidance information sections</h3>
+        <p>You can add guidance information for users to include special instructions, assumptions or any necessary information you need to communicate related to each of the Materiality document sections as well as to the overall document guidance area.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-guidance.png" alt="The Guidance tab of the materiality document." />
+        </p>
+        <p>Firm authors also have the ability to enable their own guidance information sections and can choose whether to retain guidance information sections added by primary authors.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-overall-materiality.png" alt="The Overall Materiality section of the materiality document with both primary author and firm author guidance sections." />
+        </p>
+        <h3>Qualitative disclosures section</h3>
+        <p>You can now enable a new section to document possible misstatements in qualitative disclosures.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-qualitative-disclosures.png" alt="The Qualitative Disclosures section of the materiality document." />
+        </p>
+        <h3>Performance materiality based on preset percentages</h3>
+        <p>You can now choose to define preset percentages to calculate the Performance Materiality levels. Firm authors can customize the percentage values. Any updates made to the product template in the future will not override the customizations made by the firm author.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-performance-materiality.png" alt="The Performance Materiality section of the materiality document." />
+        </p>
+        <p>End users can then use the predefined percentages when completing the materiality document.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-performance-materiality-end-user.png" alt="The end user view of the Performance Materiality section of the materiality document." />
+        </p>
+        <h3>Trivial misstatements amount calculated based on preset percentages</h3>
+        <p>You can now define preset percentages to calculate the amount below which misstatements would be clearly trivial.</p>
+        <p>Firm authors can customize the percentage values. Any updates made to the product template in the future will not override the customizations made by the firm author.</p>
+        <p>
+            <img src="../Resources/Images/materiality-document-trivial-misstatements.png" alt="The Trivial misstatement section of the materiality document." />
+        </p>
+        <h2>New for authors</h2>
+        <p>Here is what's new for authors in SE 2024-05.</p>
+        <h3>Dynamic account reassignment for secondary grouping structures</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauthor</a>
+        </p>
+        <p>The <b>Reassign target for contrary accounts</b> property is now available for financial groups in secondary grouping structures. This allows you to set up dynamic account reassignment for groups in these structures.</p>
+        <h3>Components for Risk Library content</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauthor</a>
+        </p>
+        <p>You can now assign components to the following content in your Risk Library:</p>
+        <ul>
+            <li>
+                <p>Risks</p>
+            </li>
+            <li>
+                <p>Risk groups</p>
+            </li>
+            <li>
+                <p>Procedures</p>
+            </li>
+            <li>
+                <p>Controls</p>
+            </li>
+            <li>
+                <p>Control objectives</p>
+            </li>
+        </ul>
+        <p>The Risk Library template file has been updated to include a sheet to define components. Columns have also been added to existing sheets so components can be assigned to content. Note that any components included in the risk library must already exist within your product template.</p>
+        <h3>Components for firm authors</h3>
+        <p><a href="Firm-author.htm">#firmauthor</a>
+        </p>
+        <p>Firm authors can now create their own components and component categories in the firm template. Once they’ve created their components, they can assign components to content in the firm template, including content created by the primary author. Note that firm authors do not have access to customize the Risk Library and cannot assign components to this content.</p>
+        <p>As part of this feature, firm authors can also view the components and component categories created by the primary author, any visibility logic associated with these components, and which components are assigned to content in the template.</p>
+        <p>Firm authors cannot modify or delete components, component categories or component assignments to content created by the primary author, but they can add their own components to categories created by the primary author.</p>
+        <p>Note that while firm authors can assign components to financial groups they create, they cannot assign any components to primary author created groups.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Define-components.htm">Define components</a> and <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Assign-components-to-items-in-your-template.htm">Assign components to items in your template</a>.</p>
+        <h3>Cut and paste dynamic tables</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a>
+        </p>
+        <p>You can now cut and paste dynamic tables. This feature allows you to easily move dynamic tables from one part of the financial statements to another.</p>
+        <p>To cut a dynamic table, select <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) | <b>Cut section</b>.</p>
+        <p>
+            <img src="../Resources/Images/fs-cut-dynamic-table.png" style="width: 145px;height: 297px;" alt="The Cut section option in the More actions menu for a dynamic table." />
+        </p>
+        <p>To paste the dynamic table, select to add a new section and then select <b>Paste section</b>.</p>
+        <p MadCap:conditions="General.Online">See <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Financial statements improvements</a> to view a video demo of this feature.</p>
+        <p MadCap:conditions="General.Online">To learn more, see <a href="Cut-and-paste-a-table.htm">Cut and paste a table</a>.</p>
+        <p>
+            <img src="../Resources/Images/fs-paste-dynamic-table.png" style="width: 741px;height: 308px;" alt="The Paste Section option available when adding a new section to a financial statements area." />
+        </p>
+        <h2>New for end users</h2>
+        <p>Here is what's new for end users in SE 2024-05.</p>
+        <h3>Sync trial balance across engagements</h3>
+        <p>When users import data into their engagement from another engagement, they can now select the <b>Sync Trial Balance</b> option to automatically sync data from the source engagement. This allows them to make changes to the data in the source engagement and automatically share those changes with synced engagements.</p>
+        <p>
+            <img src="../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="The Sync Trial Balance option in the Engagement Search dialog.">
+            </img>
+        </p>
+        <p>When engagement data is synced from another engagement:</p>
+        <ul>
+            <li>
+                <p>A link to the source engagement displays on the <b>Data</b> page.</p>
+            </li>
+            <li>
+                <p>Users cannot edit accounts, groups or adjustments synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>Users cannot assign accounts that have been synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>Users can create issues and annotations for synced accounts and groups but cannot create annotations for synced adjustments.</p>
+            </li>
+            <li>
+                <p>When changes are made to the source engagement, users in the destination engagement receive a notification to inform them that those changes have been applied to their file. Engagements are resynced every five minutes.</p>
+            </li>
+            <li>
+                <p>If users lock down an engagement that contains data synced from a source engagement, changes made in the source engagement are no longer synced.</p>
+            </li>
+            <li>
+                <p>If both the source and destination engagement are carried forward, the carried forward files are automatically linked so users can continue to sync data from the current year source engagement.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">See <a href="https://drive.google.com/file/d/1DkmhqiUR315uPJ-0hu_E3M7N7Hi6AWZc/view?usp=sharing">Sync trial balance</a> to view a video demo of this feature.</p>
+        <p MadCap:conditions="General.Online">To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Import-the-trial-balance-from-an-engagement-file.htm">Import the trial balance from an engagement file</a>.</p>
+        <h3>Financial groups in the Data page</h3>
+        <p>When users access the financial groups tabs of the <b>Data</b> page, they can now:</p>
+        <ul>
+            <li>
+                <p>Reorder groups</p>
+            </li>
+            <li>
+                <p>Expand and collapse groups</p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">View the client's trial balance data</a>.</p>
+        <h3>Review Tools enhancement</h3>
+        <p>When users select the number next to a review tool in the Review Tools popover, the document now automatically jumps to the next item flagged for that review tool. This improvement makes it easier for users to navigate through items that need review in a document.</p>
+        <p>Note that this enhancement is only available for checklists, risks and the financial statements.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Work with Review Tools</a>.</p>
+        <h3>Add accounts for internal subsidiaries</h3>
+        <p>In consolidation engagements, users can now manually add and edit accounts for internal subsidiaries.</p>
+        <h3>Carry forward for adjustments</h3>
+        <p>Users can now edit and delete prior year adjustments in engagements created from carry forward.</p>
+        <h3>Link annotations to checklist procedures</h3>
+        <p>Users can now link annotations to specific checklist procedures instead of the checklist document as a whole. Users can select a specific procedure after they select a checklist document from the <b>Link</b> dropdown. They can expand and collapse groups and procedures with subprocedures to find the procedure they’re looking for. The selected procedure displays in blue.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps//en/Engagements/Documentation-and-Review/Add-annotations.htm">Add annotations</a>.</p>
+        <p>
+            <img src="../Resources/Images/annotation-dialog-select-procedure.png" style="width: 264px;height: 382px;" alt="The Procedure section in the Create annotation dialog.">
+            </img>
+        </p>
+        <h3>Adjustments in the Data page</h3>
+        <p>The following changes have been made to how adjustments display on the <b>Data</b> page:</p>
+        <ul>
+            <li>
+                <p>Prior year adjustments now display on the <b>Data</b> page.</p>
+            </li>
+            <li>
+                <p>The <b>Split Adjustments</b> option is now available on the <b>Data</b> page. When users turn this option on, normal and reclassifying adjustments are displayed in separate columns. To make this option available for end users, select the <b>Enable split adjustment columns toggle</b> check box in the <b>Data Page</b> tab of your product settings.</p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">View the client's trial balance data</a>.</p>
+        <h3>Select how many rows to display on the Data page</h3>
+        <p>You can now select how many rows to display on the <b>Data</b> page from the <b>Rows per page</b> dropdown. You can choose to display 100, 200, 300, 400, or 500 rows per page. The default is 100.</p>
+        <p>
+            <img src="../Resources/Images/data-page-rows-per-page-dropdown.png" alt="The Rows per page dropdown on the Data page.">
+            </img>
+        </p>
+        <h3>Edit planning balances on the Data page</h3>
+        <p>Users can now edit planning balances on the <b>Data</b> page even after the final balance has been imported.</p>
+        <h3>Select multiple dimensions when posting adjustments</h3>
+        <p>When users post adjustments to groups, they can now select multiple dimensions for each group line in the adjustment.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm">Post adjustments to the trial balance</a>.</p>
+        <h1>Fixes in SE 2024-05</h1>
+        <p>The following list features a brief description of bugs that have been resolved in SE 2024-05.</p>
+        <ul>
+            <li>
+                <p>Display issues in the <b>Header</b> and <b>Footer</b> sections of the financial statement print settings.</p>
+            </li>
+            <li>
+                <p>Text responses in queries do not save.</p>
+            </li>
+            <li>
+                <p>When users use the print preview option, analysis graphs do not fit on the pages of the generated PDF.</p>
+            </li>
+            <li>
+                <p>In the financial statements, when users leave the <b>Table of contents description</b> field blank for an area, the field collapses and can no longer be edited.</p>
+            </li>
+            <li>
+                <p>In the financial statements, when users exclude a note and then refresh the page, the <b>Notes to the financial statements</b> section in the Document Map is no longer expanded.</p>
+            </li>
+            <li>
+                <p>In the financial statements, descriptions for page breaks do not display in the table of contents unless the area the page breaks are located in also has a description.</p>
+            </li>
+            <li>
+                <p>The <b>Expanded Groups</b> setting for dynamic tables does not work as expected. The financial groups are not fully expanded in the table.</p>
+            </li>
+            <li>
+                <p>In engagements created from carry forward, when users add new sections to financial statements, the section is added to the bottom of the document instead of at the location the user selected.</p>
+            </li>
+            <li>
+                <p>On the <b>Risks</b> page, links to document references in a risk card are not clickable after the engagement is locked down.</p>
+            </li>
+            <li>
+                <p>End users cannot create comprehensive income financial groups.</p>
+            </li>
+            <li>
+                <p>In products where the trial balance feature is not enabled, the <b>Risks</b> page displays trial balance information.</p>
+            </li>
+            <li>
+                <p>Planning balance columns display on the <b>Data</b> page in products where the planning balance is not enabled.</p>
+            </li>
+            <li>
+                <p>When users are on the <b>Data</b> page, the back button in their browser does not work.</p>
+            </li>
+            <li>
+                <p>When users add rows to tables in the materiality form, the table rows reorder automatically when the user refreshes the page or reopens the engagement.</p>
+            </li>
+            <li>
+                <p>The <b>Misstatement</b> field displays when users initially create an engagement if they change the type to Normal or Reclassifying.</p>
+            </li>
+            <li>
+                <p>Display issues when users open a dropdown field in the Edit Adjustment dialog.</p>
+            </li>
+            <li>
+                <p>In engagements created from carry forward, accepting all carry forward suggestions in a checklist does not work as expected.</p>
+            </li>
+            <li>
+                <p>In checklist procedures with contact information response types, when users click into and then out of the response field, the contact information fields display even though the user did not select a contact.</p>
+            </li>
+            <li>
+                <p>An error occurs when users attempt to accept carry forward suggestions in BGL360 engagements.</p>
+            </li>
+            <li>
+                <p>On the <b>Consolidation Hierarchy</b> page, if a user collapses the grid and then refreshes the page, the grid is no longer collapsed.</p>
+            </li>
+            <li>
+                <p>In the <b>Column</b> filter on the <b>Data</b> page, when users drag and drop the <b>Variance</b> column filter, the <b>$ Variance</b> and <b>% Variance</b> subfilters are reordered.</p>
+            </li>
+            <li>
+                <p>When users generate a sample on the <b>Transactions</b> tab of the <b>Data</b> page and then navigate away from the page, the confirmation dialog informing them that they are about to lose the generated sample does not display until after they have already navigated to a different page.</p>
+            </li>
+            <li>
+                <p>When users print preview the <b>Documents</b> page, folders that are collapsed on the page are not expanded in the print preview.</p>
+            </li>
+            <li>
+                <p>The constellation widget does not display as expected on the <b>Risks</b> page.</p>
+            </li>
+            <li>
+                <p>Newly imported data does not show in the <b>Data</b> page until the user refreshes the page.</p>
+            </li>
+            <li>
+                <p>On the <b>Transactions</b> tab of the <b>Data</b> page, the <b>Amount</b> column displays even when the column is set to not display.</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Sync a trial balance across engagements in different Cloud apps</h1>
+        <p>You can use the same trial balance across multiple engagements in different Caseware Cloud apps. This feature is particularly useful for serving the same client in various engagements, such as auditing and financial reporting. For example, an audit team can seamlessly pass client data to a financial reporting team working in a different app and engagement.</p>
+        <h2>Prerequisites</h2>
+        <p><b>Two different Cloud apps</b>: There should be at least two different Cloud apps, one as the source and the other as the destination. For example, Financials and Audit engagements apps. To import from an engagement file that belongs to a different Cloud app, you must have access to that app and the entity that the file belongs to. To learn more, refer to <a href="../../Setup/Users-and-Groups/Review-security-settings-for-the-default-groups.htm">Set staff access levels.</a></p>
+        <p><b>Source engagement</b>: The trial balance must be prepared and uploaded in the source engagement. Note that you cannot select consolidated engagements as source engagements.</p>
+        <p><b>Destination engagement</b>: An engagement must exist in the Cloud app where you want to import data from a source engagement in a different Cloud app.</p>
+        <h2>Workflow</h2>
+        <p>
+            <img src="../../Resources/Images/Sync-the-trial-balance.png" alt="Workflow for sharing a trial balance in engagements in different apps." />
+        </p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Workflow element</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Create the source engagement in Cloud app A. </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Trial balance. </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Import the trial balance into the source engagement. </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Create the destination engagement in Cloud app B.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>
+                        <p>In the destination engagement in Cloud app B, import the source engagement trial balance. </p>
+                        <ul>
+                            <li>
+                                <p>On the <b>Data</b> page, on the <b>Datasets</b> tab, use the <b>Import from Caseware Cloud Engagement</b> option.</p>
+                            </li>
+                            <li>
+                                <p>Select the <b>Sync trial balance</b> option and import the trial balance from the source engagement in Cloud app A.</p>
+                            </li>
+                            <li>
+                                <p>Any <b>accounts</b> present in the source engagement appear in the destination engagement and are assigned to financial groups where matches are found. Where no match is found, accounts from the source appear as unassigned accounts in the destination.</p>
+                            </li>
+                            <li>
+                                <p><b>Updates</b> made in the destination engagement will not flow back to the source engagement.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="collapsible">Initial setup of the destination trial balance</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Data-handling-notes-TB.flsnp" />
+        <h2>Manage synced data between source and destination engagements</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/ShareTrialBalance-Limitations.flsnp" />
+        <p style="font-weight: bold;">To import the trial balance from another engagement file:</p>
+        <ol>
+            <li>
+                <p>Open the destination engagement. Go to the <b>Data</b> page. The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+            </li>
+            <li>
+                <p>Select the <b>Import from Caseware Cloud Engagement</b> option</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/ImportFromClopudEngagement.png" alt="Selecting the Import from mCaseware Cloud Engagement option." />
+        </p>
+        <ul>
+            <li>
+                <p>The Import from Caseware Cloud Engagement dialog appears.</p>
+            </li>
+            <li>
+                <p>The engagements you have access to are listed.</p>
+            </li>
+        </ul>
+        <ol>
+            <li value="3">
+                <p>Select an engagement from the list or search for one in the Search box using values from any of the following engagement fields:</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Entity name</p>
+                </li>
+                <li>
+                    <p>Product</p>
+                </li>
+                <li>
+                    <p>Operating name</p>
+                </li>
+                <li>
+                    <p>Engagement</p>
+                </li>
+                <li>
+                    <p>Year end date</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="4">
+                <p>Select the <b>Sync trial balance</b> toggle.</p>
+            </li>
+            <li>
+                <p>By default, the <b>Same year end date only</b> option is selected. Deselect it to see source engagements whose year end date is not the same as the current engagement.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/SelectSourceEngagement.png" alt="Selecting the source engagement whose trial balance you want to share with the current engagement. " />
+        </p>
+        <ol>
+            <li value="6"> Select <b>Import</b>.  </li>
+        </ol>
+        <p class="indent">What happens at this point depends on whether the financial grouping structures between the two apps (source and destination) are the same or if different can be aligned through predefined logic: </p>
+        <p class="indent">
+            <h2 class="collapsible">Where the financial grouping structures are not the same, but predefined logic exists to align them</h2>
+            <p>The following dialog appears:</p>
+            <p>
+                <img src="../../Resources/Images/AssignmentsCopied.png" alt="Dialog informing users that the accounts and their assignments to financial groups will be from the source engagement, and that any changes to accounts in the source will flow to the destination engagement. Any changes in account assignment to financial groups in the source will not flow to the destination. " />
+            </p>
+            <p>Select <b>Import</b>. The <b>Accounts</b> tab appears showing the trial balance. Notice the TB SOURCE indicator shows the source engagement from where the trial balance originates.</p>
+            <ul>
+                <li>
+                    <p><b>An initial sync</b> aligns the financial grouping structures between the source and destination engagements. <b>Subsequent syncs</b> will only occur at the account level, not the financial grouping structure level.</p>
+                </li>
+                <li>
+                    <p>Any subsequent changes to accounts in the source engagement will be synced to this destination engagement and will appear as unassigned on the <b>Assign Accounts</b> tab.</p>
+                </li>
+                <li>
+                    <p>You can <b>unassign and reassign accounts</b> in the destination engagement, but these changes will not affect the source engagement.</p>
+                </li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/MappingFileExists.png" alt="Accounts tab appears after the trial balance import." />
+            </p>
+            <p>Select the <b>Assign Accounts</b> tab. Hover over the Accounts partially synced with field.</p>
+            <p>You cannot make any changes to account details in the destination engagement because the accounts in the source and destination engagements remain synced.</p>
+            <p>
+                <img src="../../Resources/Images/AssigningAccountsinDestination.png" alt="Assigning accounts to financial groups in the destination engagement." />
+            </p>
+            <h2 class="collapsible">Where the financial grouping structures do not match, and no predefined logic exists to align them</h2>
+            <p>The following dialog appears. Wherever possible accounts and their assignment to financial groups are copied to the destination engagement. Where financial groups and accounts cannot be matched, accounts appear as unassigned in the destination engagement. Any unassigned accounts will become locked, and you will not be able to assign them to financial groups. Any assigned accounts will not be reassignable. </p>
+            <p>
+                <img src="../../Resources/Images/Non-matching-FinancialGroupStructures.png" alt="Users are warned that the source engagement is from a product whose financial grouping structure is different from that used in the product containing the destination engagement. This may result in the locking of some accounts and make them unassignable to financial groups in the destination engagement." />
+            </p>
+            <p>In this example we will select <b>Import</b> to see the effect.</p>
+            <p>The <b>Accounts</b> tab appears. Select the <b>Assign Accounts</b> tab to view the account assignments. You are unable to change the account assignments that have been locked. See the example below.</p>
+            <p>
+                <img src="../../Resources/Images/LockedAccounts.png" alt="Accounts imported from a source engagement in a product whose financial grouping struicture is different from the product containing the destination engagement, and no predefined logic exists to align the financial grouping structures. As a result, the accounts can be locked with no way to assign them to financial groups in the destination engagement. " />
+            </p>
+            <h2 class="collapsible">Where there is no predefined logic, but the financial grouping structures are the same</h2>
+            <p>In the event there are unassigned accounts, you will not be able to assign or reassign accounts in the destination engagement.</p>
+        </p>
+    </body>
+</html>

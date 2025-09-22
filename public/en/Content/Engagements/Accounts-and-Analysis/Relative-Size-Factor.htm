@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Relative Size Factor</h1>
+        <p>The Relative Size Factor analytic test identifies anomalies where the largest amount for a subset in a given key is outside the norm for that subset. A key is a specific field or combination of fields that are used to group data into subsets for analysis.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Outliers or unusual patterns</p>
+            </li>
+            <li>
+                <p>Transactions that deviate significantly from the norm</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are used for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> -  Unique field(s) that are used to create a unique transaction ID such as the <b>Entry ID</b> field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Numeric field</b> - The field that is used to calculate the relative size factor (RSF).</p>
+            </li>
+            <li>
+                <p><b>Any field(s)</b> - One or more fields to be used to create the subsets that the RSF is generated on.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>The following parameters must be set to run this test:</p>
+        <ul>
+            <li>
+                <p><b>RSF Factor</b> - Enter the multiple between the largest and second largest amount in the subset. For example, if the RSF factor is set to two then the largest amount would have to be twice as large as the second largest to be selected.</p>
+            </li>
+            <li>
+                <p><b>Ignore small amounts</b> - Select whether to exclude small amounts.</p>
+            </li>
+            <li>
+                <p><b>Small amount</b> - If you selected to ignore small amounts, enter the value that would be considered the minimum value to be included in the test. For example, if you enter $100, then all transactions less than $100 would be excluded from the analytic.</p>
+            </li>
+            <li>
+                <p><b>Positive or negative values</b> - Select whether to perform the test on positive or negative values.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p>The only configuration available for this test is <b>Relative Size Factor</b>. This analytic test identifies anomalies where the largest amount for a subset in a given key is outside the norm for that subset.</p>
+        <h2>Technical specifications</h2>
+        <p class="note"><b>Note:</b> These technical specifications are based on the selection of positive numbers. For negative numbers the smallest number would be considered the largest number for the following steps.</p>
+        <p>When you run the Keywords analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis.  If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that an amount field has been selected.</p>
+            </li>
+            <li>
+                <p>Validate one or more fields (excluding the amount) that will be used for the creation of the subsets.</p>
+            </li>
+            <li>
+                <p>Summarize the file based on the fields that have been selected for the subset, these fields should be in order of selection, the summarize should include the number of records per subset.  During the selection, perform it only on negative or positive values based on the flag that indicates what type of values the analysis is to be performed on.</p>
+            </li>
+            <li>
+                <p>Extract all records in which the number of records is greater than 1 (this excludes all subsets in which there is only one transaction, for this analytic you need two or more transactions per subset).</p>
+            </li>
+            <li>
+                <p>Join back the file created in step 6 with the original file by the selected subset fields.  The original file should also be filtered on the amount field depending on the positive or negative flag, if the flag is positive then the filter should be amount &gt; 0 and if the flag is negative then it should be amount &lt; 0.  This step is creating a file of all the transactions that will be part of the RSF analysis.</p>
+            </li>
+            <li>
+                <p>Extract the top two transitions for each subset in step 7.  Only include the subset field(s), the amount field and the record key.</p>
+            </li>
+            <li>
+                <p>From step 8 extract the top record by amount for each subset.</p>
+            </li>
+            <li>
+                <p>Rename the amount field in step 8 to <b>Largest Amt</b>.</p>
+            </li>
+            <li>
+                <p>From step 7 extract all transactions except the ones that are in step 6 (top records).  This gives a list of transactions that exclude the highest value transaction.</p>
+            </li>
+            <li>
+                <p>From step 11 extract the largest value transaction per unique subset, this gives the second largest transaction for the subsets.</p>
+            </li>
+            <li>
+                <p>From step 11 rename the amount field to <b>Second Largest Amt</b>.</p>
+            </li>
+            <li>
+                <p>From step 9 calculate the average value for each unique key.  This average will exclude the largest amount for the unique subset that was extracted in step 9.</p>
+            </li>
+            <li>
+                <p>Rename the average value field in step 14 to <b>Average X Largest</b>.</p>
+            </li>
+            <li>
+                <p>Combine the transactions from step 9 (top values) and step 12 (second largest values) together.</p>
+            </li>
+            <li>
+                <p>Combine the transactions from step 16 (Top value and Second Largest value) with step 15 the Average X Largest.  The result should now contain the subset columns, Largest Amt column, Second Largest Amt column, Average X Largest column and Count column.</p>
+            </li>
+            <li>
+                <p>Create the Relative Size Factor column based Largest Amount / Second Largest Amt, generally use 4 decimals for display.</p>
+            </li>
+            <li>
+                <p>Extract all transactions that are equal to or greater than the RSF factor parameter.  If the parameter has been that small amounts should be ignored then also exclude any transactions where the largest Amount value is less than the small amount value included in the parameters.</p>
+            </li>
+            <li>
+                <p>Extract the RSF related transactions.</p>
+            </li>
+            <li>
+                <p>Join the original source file with the RSF file test.  The join would be matched only and the match would be based on the fields selected for the subset along with the amount field matching with the Largest Amount Field.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Change the default group for rounding differences</h1>
+        <p>In the financial statements tables, rounding differences are applied by default to the first non-zero account in the lowest child level that appears in the first group in the trial balance.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/Best-practice-rounding-product-settings.flsnp" />
+        <p>For example, if the first parent group in the trial balance is <i>Assets</i> and is structured as follows:</p>
+        <p>
+            <img src="../Resources/Images/show-default-plug-location.PNG" alt="Trial balance Assets group hierarchy" />
+        </p>
+        <p>Then once users import the trial balance data, the rounding differences apply to the first non-zero account in <i>Land</i>.</p>
+        <p>You can change the default group to ensure the rounding difference is applied to a frequently used financial statements line item in your market.</p>
+        <p>In dynamic tables, the row of the group where rounding differences apply is marked with an asterisk (<b>*</b>).</p>
+        <p style="font-weight: bold;">To change the group where rounding difference apply:</p>
+        <ol>
+            <li>
+                <p>Go to the dynamic table where you have the trial balance data.</p>
+            </li>
+            <p>For example, while setting up the Balance Sheet.</p>
+            <li>
+                <p>Select the row marked with an asterisk (*).</p>
+            </li>
+            <li>
+                <p>Select the group name at <b>Current year</b>.</p>
+            </li>
+            <p>A list showing the trial balance groups displays.</p>
+            <li>
+                <p>Select the desired group from the list.</p>
+            </li>
+            <li>
+                <p>Select the group name at <b>Prior year</b> to display a list of the trial balance groups.</p>
+            </li>
+            <li>
+                <p>Select the desired group from the list.</p>
+            </li>
+        </ol>
+        <p>Once users import the trial balance data in the engagement, rounding differences are automatically added to the first non-zero account in the groups you've selected for the current year and prior year respectively.</p>
+        <p> If you collapse the parent groups for the group you've selected for rounding differences, the asterisk relocates to the parent groups. This helps you spot where the selected group is located.</p>
+        <p>For example, let's assume the group selected for rounding differences is <i>Land.</i></p>
+        <p>
+            <img src="../Resources/Images/plug-in-land.PNG" alt="Selected group for rounding differences in Land" />
+        </p>
+        <p>Notice how the asterisk relocates to the parent groups when they're collapsed. When the parent group <i>Property, Plant and Equipment</i> group is collapsed, the asterisk relocates there.</p>
+        <p>
+            <img src="../Resources/Images/third-level-parent-plug-group.PNG" alt="Asterix next to Property, Plant and Equipment" />
+        </p>
+        <p>When the parent group <i>Non-current assets</i> is collapsed, the asterisk relocates there.</p>
+        <p>
+            <img src="../Resources/Images/second-level-parent-plug-group.PNG" alt="When the parent group Non-current assets is collapsed, the asterisk relocates there" />
+        </p>
+        <p>When the parent group <i>Assets</i> is collapsed, the asterisk relocates there.</p>
+        <p>
+            <img src="../Resources/Images/first-level-parent-plug-group.PNG" alt="An asterix marking Assets as collapsed" />
+        </p>
+    </body>
+</html>

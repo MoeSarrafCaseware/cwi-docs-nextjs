@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Review group and account balances in the financial statements</h1>
+        <p>You can review group and account balances in the financial statements document to understand how the numbers are calculated. Information about rounding and balance discrepancies is marked in the tables to help you produce reliable, accurate and high-quality financial statements.</p>
+        <h2><a name="View2"></a>View rounding details in financial statements</h2>
+        <p>To view rounding details in a table row, select the asterisk (*) next to the row. A popup displays showing:</p>
+        <ul>
+            <li>The total rounding differences for the current year and prior year.</li>
+            <li>The account where rounding differences apply for the current year and prior year.</li>
+        </ul>
+        <p>In this example, a total rounding difference of $3 is added to the balance of <i>1.2.120.500 Property, Plant and equipment - Accumulated depreciation and impairment</i> for the current year. For the prior year, a total rounding difference of $2 is added to the balance of <i>1.1.000.050</i> <i>Cash</i>.</p>
+        <p>
+            <img src="../../Resources/Images/rouding-details.PNG" alt="Rounding Details dialog" />
+        </p>
+        <p>If you select the balance of the account where rounding differences apply, the Account Details popup displays a highlighted line showing the rounding details.</p>
+        <p>
+            <img src="../../Resources/Images/account-details-popup-rounding.PNG" alt="Account Details popup showing rounding information in financial statements" />
+        </p>
+        <p class="note"><b>Note:</b>  If a trial balance value is rounded to zero, the table row displays in gray in the financial statements and is not included in print preview or in the PDF print copy. Note that this does not apply to parent level rows which always display in the financial statements and are included in the print preview and the PDF print copy.</p>
+        <p>To learn more about rounding logic in financial statements, see <a href="../Statements-and-Conclusions/Rounding-in-financial-statements.htm">Rounding in financial statements.</a></p>
+        <h2><a name="Change"></a>Change the account where rounding differences apply</h2>
+        <p>You can change the account where rounding differences apply to have them added to a financial statements line item that's frequently used in your market, for instance.</p>
+        <p style="font-weight: bold;">To change the account where rounding difference are applied:</p>
+        <ol>
+            <li>
+                <p>Select the row with an asterisk (*).</p>
+            </li>
+            <p>The Rounding Details popup opens.</p>
+            <p class="tip"><b>Tip:</b> If the row is an account, then the asterisk (*)  denotes that rounding differences are applied in this account. If the row is a group, then it denotes that rounding differences are applied to an account in this group.</p>
+            <li>
+                <p>Select the account name at <b>Current year</b>.</p>
+            </li>
+            <p>A list showing the trial balance groups and accounts displays.</p>
+            <li>
+                <p>Select the desired account from the list.</p>
+            </li>
+            <li>
+                <p>Select the account name at <b>Prior year</b> then select the desired account from the list.</p>
+            </li>
+            <p>Rounding differences for the current and prior years are now applied to the balances of the selected accounts respectively.</p>
+        </ol>
+        <h2><a name="View"></a>View balance discrepancies in financial statements</h2>
+        <p class="note inline"><b>Note:</b> This feature is only available if it's set up in your product.</p>
+        <p>To help you reconcile account balances, table rows can be compared to each other in the financial statements. For example, to assist accountants in reconciling statement line items with totals in the  notes section.</p>
+        <p>Upon comparison, a stop sign icon (<img src="../../Resources/Images/icon-discrepancy.PNG" style="width: 21px;height: 24px;vertical-align: text-bottom;" />) is available at each row where balance discrepancies have been identified. </p>
+        <p>Note that:
+			<ul><li><p>You cannot choose the rows that the application compares. They are predefined in your product.</p></li><li><p>The application compares the absolute values of the applicable rows. Sign differences are not flagged as balance discrepancies.</p></li></ul></p>
+        <p>To view balance discrepancies, select the stop sign icon (<img src="../../Resources/Images/icon-discrepancy.PNG" style="width: 21px;height: 24px;vertical-align: text-bottom;" />). A popup displays showing:</p>
+        <ul>
+            <li>The rows in other tables within the document that have been compared to the current row.</li>
+            <li>Balances that agree with the current row.</li>
+            <li>Balances that don't agree with the current row.</li>
+        </ul>
+        <p class="tip"><b>Tip:</b> You can also select the <b>View Row</b> icon (<img src="../../Resources/Images/icon-diagnostics-go-to-row.png" style="vertical-align: text-bottom;" />) to go to the specific row of each listed account and view its data.</p>
+        <p>
+            <img src="../../Resources/Images/balance-check.PNG" alt="Balance check showing a discrepancy." />
+        </p>
+        <h2><a name="Override"></a>Override balances in financial statements</h2>
+        <p>As you review the balances in the financial statements document, you might need to override trial balance values in the tables. For example, to modify a certain balance in the financial statements to reflect the exact balance that your clients had in their prior year financials.</p>
+        <p class="note"><b>Note:</b>  If you override a trial balance value to zero, the table row displays in gray in the financial statements and is not included in print preview or in the PDF print copy. Note that this does not apply to parent level rows which always display in the financial statements and are included in the print preview and the PDF print copy.</p>
+        <p style="font-weight: bold;">To override an account balance:</p>
+        <ol>
+            <li>
+                <p>Select the balance that you want to change.</p>
+            </li>
+            <li>
+                <p>Enter the new amount.</p>
+            </li>
+            <p>A dashed border displays to mark the cell as Balance Overridden.</p>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/balance-overriden-cell.PNG" alt="Trial balance cell with overidden balance in financial statements" />
+        </p>
+        <p style="font-weight: bold;">To override a group total:</p>
+        <ol>
+            <li>
+                <p>Select the group total that you want to change.</p>
+            </li>
+            <li>
+                <p>Enter the new amount.</p>
+                <ul>
+                    <li>
+                        <p>If there is one account in the group, the difference automatically applies to this account.</p>
+                    </li>
+                    <li>
+                        <p>If there is more than one account in the group, a dialog displays showing the difference (between the new amount and the old amount). It also prompts you to select the account where you want the difference to apply.</p>
+                        <p>
+                            <img src="../../Resources/Images/dialog-for-balance-override.PNG" alt="Dialog to select an account in the group where you want the difference to apply" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Note that if you select a cell with overridden balance, the Account Details popup displays a highlighted line showing the original balance for that cell (the trial balance amount).</p>
+        <p class="tip"><b>Tip:</b> To revert to the original amount, select  <b>Revert</b> (<img src="../../Resources/Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />).</p>
+        <p>
+            <img src="../../Resources/Images/account-details-popup-overridden-balance.PNG" alt="Account Details showing an overridden balance" />
+        </p>
+    </body>
+</html>

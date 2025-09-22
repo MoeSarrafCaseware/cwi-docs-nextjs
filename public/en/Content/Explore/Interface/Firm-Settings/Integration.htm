@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Firm settings - Integration</h1>
+        <h2 id="Settings">API Settings</h2>
+        <p>Integrate Cloud with external applications using API clients. You can create a maximum of 50 API clients for your firm. We recommend integrating one application per API client.</p>
+        <p>Client information from integrated applications is automatically updated in Cloud through the use of API tokens. API tokens are used by firm developers to authenticate the integration process.</p>
+        <p><b>To create a new API client:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Admin</i> role or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings | Integration | API Settings</b>.</p>
+            </li>
+            <li>
+                <p>In the <b>Client Alias</b> field, enter an identifying name for the API client, such as the name of the external application you are integrating.</p>
+                <p>
+                    <img src="../../../Resources/Images/api-client-1.png" />
+                </p>
+            </li>
+            <li>
+                <p>Select <b>Generate Client</b>.</p>
+                <p>Details of the new API client display.</p>
+                <p>
+                    <img src="../../../Resources/Images/api-client-2.png" />
+                </p>
+            </li>
+            <li>
+                <p>Ensure you copy the client ID and secret to a text document for later use. The client secret will not be displayed again. Select <b>Close</b>.</p>
+            </li>
+            <li>
+                <p>The API client is created.</p>
+                <p>
+                    <img src="../../../Resources/Images/api-client-3.png" />
+                </p>
+                <ul>
+                    <li><b>Edit:</b> Change the client alias.</li>
+                    <li><b>Delete:</b> Delete the API client.</li>
+                    <li><b>Reset Client Secret:</b> Generate a new client secret. We recommend resetting the secret after regular intervals for security purposes. Note that you’ll need to update any external applications that were using the previous secret.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Provide the API client ID and secret to your firm’s developers so that they can generate the API token.</p>
+            </li>
+        </ol>
+    </body>
+</html>
