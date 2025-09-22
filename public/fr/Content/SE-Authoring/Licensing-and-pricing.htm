@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Licences et prix</h1>
+        <p>Lorsque vous vendez votre produit SE, vous pouvez facturer vos clients en utilisant l&apos;une des méthodes suivantes :</p>
+        <ul>
+            <li>
+                <p>Entreprise (redevance unique)</p>
+                <p>Il s&apos;agit d&apos;une redevance unique qu&apos;une entreprise paie pour acheter votre produit SE.</p>
+                <p class="note inline"><b>Remarque :</b> Il s&apos;agit de la méthode de facturation par défaut du produit, aucune configuration n&apos;est nécessaire pour l&apos;activer.</p>
+            </li>
+            <li>
+                <p>Paiement par utilisateur</p>
+            </li>
+            <p>Cela signifie que vous facturez vos clients par membre du personnel. Pour activer la facturation par utilisateur, ajoutez la propriété <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;:true</span> au niveau racine du fichier collaborate.json de votre produit. Pour en savoir plus, consultez la <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-configure-your-se-product.html">documentation du SDK Smart Engagements.</a></p>
+            <p class="note inline"><b>Remarque :</b> Pour que la méthode de paiement par utilisateur soit facturée correctement, vous devez supprimer manuellement le produit du groupe <b>Tout le personnel</b> dans le nuage. Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Setup/Users-and-Groups/Set-staff-access-levels.htm#Enable-Cloud-apps">Activer les applications pour les utilisateurs et les groupes.</a></p>
+            <p><img src="../Resources/Images/remove-product-in-all-staff-group-cloud.PNG" alt="Activer ou désactiver votre produit SE pour le groupe Tout le personnel dans le Cloud" /></p>
+            <li>
+                <p>Paiement par engagement</p>
+                <p>Cela signifie que vous facturez vos clients par dossier d&apos;engagement. Pour activer la facturation par engagement, ajoutez la propriété <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot; : true</span> au niveau racine du fichier collaborate.json de votre produit. Pour en savoir plus, consultez la <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-configure-your-se-product.html">documentation du SDK Smart Engagements.</a></p>
+                <p class="note inline"><b>Remarque :</b> Pour que la méthode de paiement à l&apos;engagement soit correctement facturée, assurez-vous que le produit est disponible dans le groupe <b>&quot;Tout le personnel&quot;</b> dans le nuage. Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Setup/Users-and-Groups/Set-staff-access-levels.htm#Enable-Cloud-apps">Activer les applications pour les utilisateurs et les groupes</a>.</p>
+            </li>
+        </ul>
+        <p>La configuration des propriétés <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;</span> et <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot;</span> est effectuée par produit, il ne s&apos;agit pas d&apos;un paramètre universel pour tous les produits.</p>
+        <p class="warning"><b>Avertissement :</b><br />- You can only have one billing method enabled in your product at a time.<br />- Assurez-vous que la méthode de facturation ajoutée dans le fichier collaborate.json correspond à la méthode de facturation de la plateforme de back-office Caseware. Par exemple, si la plateforme de back-office Caseware a configuré votre solution pour facturer les clients par engagement, alors le fichier collaborate.json de votre produit SE doit avoir la propriété <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot; : true</span> ajoutée au niveau racine <u>pas le</u> <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;:true</span>.</p>
+    </body>
+</html>

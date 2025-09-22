@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Access management</h1>
+        <p>In order to optimize site performance, ensure that staff members and contacts are only granted the access rights they need, and that they are not assigned multiple security roles on the same items. We also recommend using staff and contact groups to assign roles to make it easier to track users and assign them the appropriate level of access.</p>
+        <h2>Manage staff access</h2>
+        <p>When granting access to staff members, you should consider the scope of access each staff member requires.</p>
+        <p>There are three levels of scope you can assign when you assign security roles: system-wide, entity-specific and item-specific. We recommend you keep in mind the following guidelines on role scope when you assign roles.</p>
+        <ul>
+            <li>
+                <p><b>Where possible, assign entity-specific roles instead of system-wide roles.</b></p>
+                <p>System-wide roles grant users access to all items across your Cloud site. If you have a large amount of data stored in your Cloud site, users with system-wide roles may experience slow loading times and decreased performance. In this case, you may want to consider granting entity-wide to users who do not require access to all items in your site to improve performance for those users. See <a href="../../Setup/Users-and-Groups/Grant-users-and-groups-access-to-entities.htm">Grant users and groups access to entities</a> for more information.</p>
+            </li>
+            <li>
+                <p><b>Avoid assigning item-specific roles.</b></p>
+                <p>Item-specific roles grant users access only on specific items, such as files or activities. Users with these roles will often experience slower performance compared to users with entity-wide roles, because in order to grant an item-specific role to a user, they must already have an entity-specific role for the entity the item is stored in. Granting users multiple roles on the same item often causes performance issues.</p>
+                <p>Note that if you create confidential items within entities, users will require an item-specific role to access the item. We recommend you minimize the use of confidential items within entities to avoid performance issues.</p>
+            </li>
+        </ul>
+        <h2>Optimize role assignment</h2>
+        <p>After you determine the level of access users require, you also need to ensure they aren&apos;t granted multiple roles on the same items.</p>
+        <p>When you assign roles to users, consider the following guidelines:</p>
+        <ul>
+            <li>
+                <p><b>Assign only the role with the highest level of access the user requires.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-1.jpg" style="width: 449px;height: 420px;" alt="The areas of overlap in this venn diagram indicate non-optimal role assignment." /></p>
+                <p><i><b>Hinweis:</b> The areas of overlap in this and the following diagrams indicate non-optimal role assignment.</i></p>
+                <p>For example, it&apos;s not necessary to assign a user the Viewer, Editor, and Owner roles on a file. The Owner role grants the highest level of access, so only that role is necessary.</p>
+            </li>
+            <li>
+                <p><b>Do not assign users to groups with duplicate permissions.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-2.jpg" style="width: 508px;height: 358px;" alt="The areas of overlap in this venn diagram indicate non-optimal role assignment." /></p>
+                <p>For example, staff members should not be assigned to two different staff groups that both grant the Owner role on the same set of entities or files.</p>
+            </li>
+            <li>
+                <p><b>Do not assign users system-wide, entity-specific, and item-specific roles on the same items.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-3.jpg" style="width: 421px;height: 399px;" alt="The entity owner role grants a user the highest level of access on files contained in the entity. Any permissions granted by item-specific roles are already covered by the entity owner role." /></p>
+                <p>For example, if a user is assigned the Entity - Owner role for a specific entity, this role will give them Owner-level access to all items within the entity. It is not necessary to also assign item-specific roles to this user for all the items within the entity.</p>
+            </li>
+        </ul>
+        <h2>Restrict contact access</h2>
+        <p>When granting access to contacts, ensure that you are only granting access to contacts who will need to log in to Cloud to respond to queries or file requests. If a contact does not need to log in, but you want to assign them to the entity to keep track of their contact information, you can assign them the <b>Associated</b> role on the entity. This role will ensure you can keep track of your contacts without granting them access to your Cloud site.</p>
+        <h2>Best practices for Share Entity permission assignment</h2>
+        <p>The <i>Admin</i>, <i>Entities Admin</i> and <i>Owner</i> built-in roles allow users to grant other staff or contacts access to an entity. In addition to these roles, you can also create custom roles with the <b>Share</b> permission for entities to assign users the ability to grant entity access. This custom role can be assigned to specific staff system-wide to manage all entities or at an entity level to manage specific entities.</p>
+        <p>Note that users that are assigned roles with the <b>Share</b> permission are able to grant themselves and others all available permissions on the entity. These users are not limited to the permissions they are currently assigned, which means they have the ability to perform actions such as granting unauthorized access to themselves or other users, and deleting entities. In order to ensure users are not taking unauthorized actions, you can monitor staff activity.</p>
+        <h3>Mitarbeiteraktivitäten beobachten</h3>
+        <p>You can use the <b>Activities</b> app to monitor staff activity. When permissions are assigned to any user, a system activity is generated and can be viewed in the <b>Activities</b> app. A system activity is also generated when entities are deleted. See <a href="../../Practice/Maintenance/Check-system-and-file-history.htm">Check system and file history</a> to learn how to view system activities.</p>
+        <h3>Subscribe to notification emails</h3>
+        <p>In addition to using system activities to monitor activity, we also encourage the firm administrator to subscribe to events that may violate your company policy. For example, the firm admin can select to be notified whenever access to an entity is shared with a user and when an entity is deleted. See <a href="../../Setup/Users-and-Groups/Change-notification-settings.htm">Change notification settings</a> for more information.</p>
+        <p>The notification emails include links to view the system active details in Cloud. If you want more detailed information about the system activity to be included in the email, such as the entity name, you can enable <b>Detailed Notifications</b> in your email settings. See <a href="../../Setup/Administration-and-Settings/Customize-system---generated-emails.htm">Customize system-generated emails</a> for instructions.</p>
+        <h3>Prevent deletion of entities</h3>
+        <p>If you want to ensure entities cannot be deleted, a workaround is available with Caseware Cloud Time invoices to block the deletion of entities.</p>
+        <p>Caseware Cloud does not allow entities to be deleted when the entity has pending unpaid invoices. In order to prevent entity deletion, you can set up a placeholder unpaid invoice for the entity. This invoice will prevent all staff from deleting the entity, even if they have the necessary permissions. We also recommend granting access to the Time app only to your firm admins. This will prevent other staff members from closing the invoice so they can delete the entity.</p>
+        <h2>Use staff groups to manage entity access</h2>
+        <p>We recommend using staff and contact groups to assign roles to make it easier to track users and assign them the appropriate level of access. Groups can be especially useful if you need to manage access permissions for a large number of staff members across different regions. Note that staff members will only be able to view and access entities they are assigned to. When you create and assign staff groups by region, you can ensure your staff members only have access to entities in their own region. This section will outline how to organize your staff groups by region and assign them to entities.</p>
+        <h3>Import entities and assign tags</h3>
+        <p>We recommend tagging entities by region so you can easily filter your client entities to find the correct entities and assign staff groups to them. You can create and assign tags to entities when you import them into Cloud.</p>
+        <p>CaseWare Cloud ermöglicht Ihnen das Hinzufügen von mehreren Kundenentitäten in einem einzigen Verfahren mit Hilfe einer .CSV Datei oder einer durch Trennzeichen unterteilten Datei oder eines durch Trennzeichen unterteilten Textblocks.</p>
+        <p>Bei beiden Methoden ist Folgendes sicherzustellen:</p>
+        <ul>
+            <li>Jede Zeile repräsentiert eine Kundenentität und</li>
+            <li>Jede Spalte repräsentiert eine Eigenschaft, wie z. B. Name, Startdatum und Tags. Um mehrere Tags zuzuweisen, setzen Sie die Tags zwischen Anführungszeichen und trennen Sie sie durch Kommas. Jeder Tag, der aktuell nicht in CaseWare Cloud existiert, wird bei Durchführung des Imports erstellt.</li>
+            <li>
+                <p>Die Datumsangaben in den Spalten <b>Mandant/Kunde seit</b> und <b>Deaktivierungsdatum</b> müssen das gleiche Format wie das in Ihren persönlichen Regionalen Einstellungen gesetzte Datum haben.</p>
+            </li>
+        </ul>
+        <p>We recommend adding tags to your csv that match the security groups (Country/Region) so you can easily filter your client entities and improve the efficiency of assigning staff groups to them.</p>
+        <p>In diesem Beispiel möchte ein Administrator zwei Kundenentitäten hinzufügen:</p>
+        <p><i>Name, Standort, Entitätsnummer, Mandant/Kunde seit</i><br style="font-style: italic;">
+            </br><i>Chockablock Industries, Johannesburg, 4829, 09/07/2012, December, Africa</i><br style="font-style: italic;">
+            </br><i>Superior Furniture, Singapore, 5937, 22 /08/2010, December, SIngapore</i></p><MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp"></MadCap:snippetBlock><p>Die Entitäten werden zu CaseWare Cloud hinzugefügt. Alle existierenden Entitäten mit der gleichen <b>Entitätsnummer</b> werden geändert.</p>
+        <h3>Create groups and assign staff</h3>
+        <p>You can now create your staff groups and assign staff members to them.</p>
+        <p><b>Eine neue Gruppe erstellen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Mitarbeiteradministrator</i> bzw. gleichwertige Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Hauptmenü den Eintrag <b>Gruppen</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New</b>, then choose <b>Staff Group</b>. Der Dialog Gruppe hinzufügen wird geöffnet.</p>
+                <p><img src="../../Resources/Images/New-group-795x447.png" alt="Der Dialog Mitarbeitergruppe hinzufügen"></img></p>
+            </li>
+            <li>
+                <p>Geben Sie <b>Name</b> und <b>Beschreibung</b> für Ihre neue Gruppe ein.</p>
+            </li>
+            <li>
+                <p>In der Seitenleiste wählen Sie <b>Mitglieder</b>. Wählen Sie die Benutzer, die Sie zu dieser Gruppe hinzufügen möchten.</p>
+            </li>
+            <li>
+                <p>From the sidebar, select Apps. Choose the apps the users in the group should have access to. You may choose all apps, or you may want to limit the apps to those that are specific to the region the staff are working in.</p>
+                <p><b>Note:</b> For a staff member to be assigned to an engagement, they need to have access to the app the engagement is based on. If you want to ensure users in the group cannot create any engagements, deselect the <b>Create</b> checkbox for the apps you&apos;re sharing.</p>
+                <p><img src="../../Resources/Images/assign-app-create.png" alt="Deselect the Create checkbox if you want to ensure users cannot create engagements." /></p>
+            </li>
+            <li>
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>Die neue Gruppe wurde erstellt. Die neue Gruppe wird auf der Seite <b>Gruppe</b> angezeigt.</p>
+        <h3>Grant entity access to groups</h3>
+        <p>The final step is to assign the groups you have created to the necessary entities. To make it easier to find the entities you require, you can use the region tags you created earlier to filter the entity list.</p>
+        <p style="font-weight: bold;">To grant entity access to groups:</p>
+        <ol>
+            <li>
+                <p>Bitte stellen Sie sicher, dass Sie über die Rolle <i>Eigentümer</i> oder über gleichwertige Berechtigungen für die betreffenden Entitäten verfügen.</p>
+            </li>
+            <li>
+                <p>Klicken Sie im Hauptmenü auf <b>Entitäten</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Filter</b> (<img src="../../Resources/Icons/filter-button-16x14.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in the search bar.</p>
+            </li>
+            <li>
+                <p>Under <b>Tags</b>, select the tag for the appropriate region.</p>
+                <p><img src="../../Resources/Images/region-tags.png" alt="Select the appropriate tags." /></p>
+                <p>The entity list will now only display entities in the region you have selected, so you can easily assign your groups to the correct entities.</p>
+            </li>
+            <li>
+                <p>Select the checkbox in the title bar to select all the entities in the filtered list.</p>
+                <p><img src="../../Resources/Images/select-all-entities.png" alt="Select the checkbox in the title bar." /></p>
+            </li>
+            <li>
+                <p>Select <b>More Actions | Share</b>.</p>
+                <p><img src="../../Resources/Images/entities-more-actions-multi-share.png" alt="Die Drop-down-Liste Weitere Aktionen nach Auswahl von mehreren Entitäten." style="width: 417px;height: 147px;" /></p>
+            </li>
+            <li>
+                <p>Select <b>Staff</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die passende Rolle aus der Drop-down-Liste.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the search field, enter the name of the group you want to grant access the role to.</p>
+            </li>
+            <p><img src="../../Resources/Images/entities-more-actions-multi-share-roles.png" alt="Rollen über die Drop-down-Liste zuweisen." /></p>
+            <li>
+                <p>Klicken Sie auf <b>Freigabe</b>.</p>
+            </li>
+        </ol>
+        <p>The selected staff groups now have access to the entities.</p>
+        <h3>Grant access to a specific entity</h3>
+        <p>There will be situations where you want to assign a specific person to an entity or engagement separate from the security groups you have created. This would occur when you need to share an engagement from one country with a user that is based in a different country.</p>
+        <p><b>Zugriff auf eine Entität gewähren:</b></p>
+        <ol>
+            <li>
+                <p>Bitte stellen Sie sicher, dass Sie über die Rolle <i>Eigentümer</i> oder über gleichwertige Berechtigungen für die Entität verfügen.</p>
+            </li>
+            <li>
+                <p><MadCap:snippetText src="../../Resources/Snippets/cloud-from-the-Cloud-menu.flsnp" /><b>Entitäten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die Entität, auf die Sie Zugriff gewähren möchten, und klicken Sie anschließend auf <b>Freigabe</b> (<img src="../../Resources/Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Internal-entity-share-633x104.png" alt="Das Symbol Freigabe auf der Seite Entitäten." style="width: 366px;height: 60px;" /></p>
+            </li>
+            <li>
+                <p>Search for the groups you want to grant access to, then select <b>Assign Roles to (#)</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die geeignete <a href="../../Setup/Security/Built-in-roles.htm#Regular">Mitarbeiterrolle</a>.</p>
+                <p>Rollen, über die Benutzer bereits aufgrund von früheren Einstellungen verfügen, werden unter <b>Geerbt</b> angezeigt.</p>
+            </li>
+            <p><img src="../../Resources/Images/Edit-Entity-Specific-Roles-630-369.png" style="border:1px solid #3f66a3" alt="Wählen Sie eine Rolle, die Sie Ihren Anwendern oder Gruppen zuweisen möchten." /></p>
+            <li>
+                <p>Klicken Sie auf <b>Freigabe</b>.</p>
+            </li>
+        </ol>
+        <p>Sie können auch Zugriff auf mehrere Entitäten auf einmal gewähren, indem Sie mehr als eine Entität auswählen. Note that if you grant access to multiple entities simultaneously, you can only assign one role for each group you select. Wenn Sie z. B. Entität A und Entität B wählen, können Sie für den ausgewählten Mitarbeiter die Rolle <b>Beobachter</b> für beide Entitäten nur allein vergeben. You cannot assign Viewer on one entity and Editor on the other, for instance.</p>
+        <h3>Benutzer zu Gruppe hinzufügen oder aus Gruppe entfernen</h3>
+        <p>Nach der Erstellung von Gruppen können Sie die Mitglieder der Gruppe verwalten, indem Sie Benutzer entsprechend hinzufügen oder entfernen.</p><MadCap:snippetBlock src="../../Resources/Snippets/To-add-or-remove-users-in-existing-group.flsnp"></MadCap:snippetBlock><p>Die Mitgliedschaft der Gruppe wird aktualisiert. Um die aktuellen Mitglieder der Gruppe anzeigen zu lassen, wählen Sie sie auf der Seite <b>Gruppen</b> aus.</p>
+        <h3>Create country/regional tags manually</h3>
+        <p>We recommend tagging clients by Country/Region so you can easily filter your client entities to find the correct entities and assign staff groups to them. If you did not create tags automatically during the client csv import, as shown in step 2, or if you need to add more tags after import, you can also create them manually.</p>
+        <p><b>To manually create a tag for a region:</b></p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Customization</b> | <b>Tag Management</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>Hinzufügen</b>, um den Dialog <b>Tag hinzufügen</b> zu öffnen.</p>
+            </li>
+            <li>
+                <p>Enter a <b>Name</b> and specify <b>Entities</b> from the <b>Tag Type</b> drop-down.</p>
+                <p><b>Note:</b> We recommend using the same names as the country/regions used to define the security grouping</p>
+                <p><img src="../../Resources/Images/add-entity-region-tag.png" alt="The Add Tag dialog." />.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>OK</b>.</p>
+            </li>
+        </ol>
+        <h3>Assign tags to entities (clients) manually</h3>
+        <p>You can manually assign tags to an entity, if necessary.</p>
+        <p style="font-weight: bold;">To manually assign a tag to an entity:</p>
+        <ol>
+            <li>
+                <p>Ensure you have the Entities Admin role or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select Entities.</p>
+            </li>
+            <li>
+                <p>Select the entities you want to tag for a specific region from the list.</p>
+            </li>
+            <li>
+                <p>Select Tag (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/assign-region-tag.png" alt="Select Tag to tag the selected entities." /></p>
+            </li>
+            <li>
+                <p>Select the appropriate tag from the Unassigned tags to assign them to the entities. You can also search for tags in the search box.</p>
+            </li>
+        </ol>
+    </body>
+</html>

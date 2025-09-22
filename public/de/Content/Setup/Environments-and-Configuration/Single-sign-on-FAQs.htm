@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Einmaliges Anmelden: Häufig gestellte Fragen</h1>
+        <p>Dieser Abschnitt enthält häufig gestellte Fragen zur Integration der Funktion Einmaliges Anmelden (Single Sign On) in Caseware Cloud.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Wie sicher ist die Integration von Einmaliges Anmelden (SSO) in Caseware Cloud?</p>
+        <p>Alle Benutzerinformationen, die zwischen Ihrem Identitätsanbieter und CWI weitergegeben werden, sind via Secure Sockets Layer (SSL) Protokoll verschlüsselt und mit JSON Web Encryption signiert. Wenn Benutzer beim Identitätsanbieter Ihrer Firma angemeldet sind, werden die Identitätsnachweise des Benutzers (Anmeldung, Benutzername und Kennwort) niemals mit Caseware Cloud geteilt. Nur die grundlegenden Profilinformationen des Benutzers (Name und E-Mail-Adresse) werden mit uns geteilt, um den Benutzer zu authentifizieren.</p>
+        <hr>
+        </hr>
+        <p><b>Welches Autorisierungsprotokoll wird verwendet?</b></p>
+        <p>Wir verwenden das OpenID Connect Autorisierungsprotokoll.</p>
+        <hr>
+        </hr>
+        <p><b>Können sich Mitarbeiter nach wie vor mit den Caseware Cloud Anmeldeinformationen anmelden, nachdem Einmaliges Anmelden aktiviert wurde?</b></p>
+        <p>Nachdem Mitarbeiter Einmaliges Anmelden verwendet haben, um sich bei Caseware Cloud anzumelden, können sie sich nur noch via Einmaliges Anmelden anmelden. Wenn ein Mitarbeiter versucht, sich mit seinen Caseware Cloud Anmeldeinformationen anzumelden, erscheint eine Fehlermeldung, die den Mitarbeiter darauf hinweist, Einmaliges Anmelden (SSO) zu verwenden.</p>
+        <hr>
+        </hr>
+        <p><b>Nach dem Entfernen meines Identitätsanbieters und dem erneuten Hinzufügen, können sich einige Benutzer nicht mehr anmelden. Warum?</b></p>
+        <p>Wenn Sie Ihren Identitätsanbieter entfernt und wieder hinzugefügt haben, können sich Benutzer, die vor dem Entfernen authentifiziert wurden, nicht mehr anmelden. Damit diese Benutzer sich wieder anmelden können, müssen Sie für diese Benutzer neue Zugangsdaten in Azure AD erstellen. Dieser Prozess ist für zukünftige Versionen nicht mehr erforderlich.</p>
+        <hr>
+        </hr>
+        <p><b>Können Kontakte Einmaliges Anmelden verwenden?</b></p>
+        <p>Aktuell können Kontakte Einmaliges Anmelden nicht verwenden.</p>
+        <hr>
+        </hr>
+        <p><b>Wir haben Zwei-Faktor-Authentifizierung aktiviert. Was passiert, wenn wir ebenfalls Einmaliges Anmelden aktivieren?</b></p>
+        <p>Wenn Einmaliges Anmelden für Ihr Unternehmen aktiviert wurde, ist es Benutzern des Features Einmaliges Anmelden nicht mehr länger möglich, die Caseware Cloud Zwei-Faktor-Authentifizierung zu verwenden. Dies ist der Fall, weil es eine empfohlene Vorgehensweise für vertrauenswürdige Identitätsanbieter ist, die Kontrolle über den Authentifizierungsprozess zu haben. Wenn Sie die Zwei-Faktor-Authentifizierung aktivieren möchten, empfehlen wir Ihnen, dies über Ihren Identitätsanbieter durchzuführen.</p>
+        <p>Die Zwei-Faktor-Authentifizierung steht weiterhin für Benutzer zur Verfügung, die nicht Einmaliges Anmelden verwenden.</p>
+        <hr>
+        </hr>
+        <p><b>Was passiert, wenn ich ein Benutzerkonto eines Mitarbeiters zu Caseware Cloud hinzufüge, bevor ich es zu Azure AD hinzufüge?</b></p>
+        <p>Wenn Sie ein Mitarbeiter-Benutzerkonto zu Caseware Cloud, aber nicht zu Azure AD hinzugefügt haben, kann dieser Benutzer Einmaliges Anmelden nicht verwenden. Um einem Mitarbeiter die Anmeldung via Einmaliges Anmelden zu ermöglichen, fügen Sie einen neuen Benutzer zu Azure AD hinzu, indem Sie eine E-Mail-Adresse, die mit dem Caseware Cloud Benutzerkonto verbunden ist, als Benutzernamen verwenden.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Was passiert, wenn ich mich bei meinem Identitätsanbieter abmelde, während ich immer noch bei Caseware Cloud angemeldet bin?</p>
+        <p>Sie bleiben bei Caseware Cloud angemeldet, solange Ihre Sitzung aktiv ist. Wenn Ihre Sitzung endet, werden Sie dazu aufgefordert, sich erneut bei Ihrem Identitätsanbieter anzumelden, bevor Sie sich via Einmaliges Anmelden bei Caseware Cloud anmelden können.</p>
+        <hr>
+        </hr>
+        <p><b>Ein Mitarbeiter, dessen Kontostatus nicht aktiv ist, kann sich immer noch bei Caseware Cloud anmelden. Warum?</b></p>
+        <p>Nach der Aktivierung von Einmaliges Anmelden wird der Kontozugriff über Azure AD verwaltet. Um einen Benutzer am Zugriff auf Caseware Cloud zu hindern, müssen Sie sein Benutzerkonto löschen. Weitere Informationen finden Sie <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory">hier</a>.<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory"> Benutzer mit Azure Active Directory</a> hinzufügen oder löschen.</p>
+        <hr>
+        </hr>
+        <p><b>Ein Mitarbeiter, dessen Benutzerkonto in Azure AD gelöscht wurde, ist immer noch in Caseware Cloud angemeldet. Warum?</b></p>
+        <p>Wenn Sie ein Benutzerkonto in Azure AD löschen, während es noch bei Caseware Cloud angemeldet ist, bleibt es in Caseware Cloud aktiv, bis die Sitzung abgelaufen oder der Benutzer abgemeldet ist, und danach kann er sich nicht mehr in Caseware Cloud anmelden.</p>
+        <hr>
+        </hr>
+        <p><b>Warum kann ich Benutzerkontennamen, E-Mail-Adressen oder Kennwörter in Caseware Cloud nicht bearbeiten?</b></p>
+        <p>Nach der Aktivierung von Einmaliges Anmelden werden Benutzerkontennamen, E-Mail-Adressen und Kennwörter in Azure AD verwaltet. Weitere Informationen finden Sie <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal">hier</a>.<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal"> Benutzerprofilinformation via Azure Active Directory hinzufügen oder aktualisieren</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Die E-Mail-Domäne unserer Firma hat sich geändert. Wie kann ich die E-Mail-Adressen der Mitarbeiter in großen Mengen aktualisieren?</b></p>
+        <p>Firmen mit aktiviertem SSO können das E-Mail-Feld für Mitarbeiter nicht direkt bearbeiten. Wenn Sie die E-Mail-Adressen Ihrer Mitarbeiter in großen Mengen aktualisieren müssen, wenden Sie sich bitte an den <a href="mailto:support@caseware.com">Caseware Support</a>, um Unterstützung zu erhalten. Wir müssen die E-Mail-Adressen in der Cloud zur gleichen Zeit aktualisieren, wie Sie Ihr Active Directory aktualisieren, um sicherzustellen, dass Ihre Mitarbeiter den Cloud Zugang behalten.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Wenn der Identitätsanbieter unserer Firma einen Ausfall hat, wie können sich Benutzer in Caseware Cloud anmelden?</p>
+        <p>Benutzer können sich nicht in Caseware Cloud anmelden, wenn Ihr Identitätsanbieter einen Ausfall hat. Wir empfehlen Ihnen, weiterhin ein Admin-Konto vorzuhalten, das Ihren Identitätsanbieter nicht verwendet, um den Zugriff auf Caseware Cloud im Falle eines Notfalls sicherzustellen.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Was passiert, wenn mein Geheimer Clientschlüssel abläuft?</p>
+        <p>Wenn Ihr Geheimer Clientschlüssel abläuft, ist es Benutzern von Einmaliges Anmelden nicht mehr länger möglich, sich in Caseware Cloud anzumelden. Sie müssen einen neuen Geheimen Clientschlüssel generieren und Ihre Identitätsanbieterinformationen in Caseware Cloud aktualisieren.</p>
+        <ol>
+            <li>
+                <p>Melden Sie sich in Caseware Cloud mit Ihren Cloud-Zugangsdaten an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem <b>Cloud</b> Hauptmenü (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Einstellungen| Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf das Symbol <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Geben Sie für Ihren Identitätsanbieter die korrekten Informationen in die Felder <b>Metadatenendpunkt des Identitätsanbieters</b>, <b>Kunden-ID</b> und <b>Geheimer Clientschlüssel</b> ein.</p>
+            </li>
+        </ol>
+        <p>Wir empfehlen die Auswahl von <b>Läuft nie ab</b> beim Generieren Ihres Geheimen Clientschlüssels, um einen unerwarteten Zugriffsverlust für Benutzer via Einmaliges Anmelden zu verhindern.</p>
+        <hr>
+        </hr>
+        <p><b>Wie kann ich den Caseware Cloud Zugriff einschränken, so dass Mitarbeiter nur von ihren Arbeitscomputern darauf zugreifen können?</b></p>
+        <p>Wenn Sie den Caseware Cloud Zugriff auf Arbeitscomputer begrenzen möchten, sollten Sie erwägen, <a href="https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-locations" target="_blank">vertrauenswürdige Standorte</a> zu Azure AD hinzuzufügen. Dies ermöglicht Ihnen, den Zugriff basierend auf IP-Adressen, wie z. B. die Büro-IP oder VPN IP einzuschränken.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Wie kann ich Einmaliges Anmelden für mein Unternehmen deaktivieren?</p>
+        <p>Wenn Sie Einmaliges Anmelden deaktivieren möchten, kontaktieren Sie bitte Ihren lokalen Distributor.</p>
+        <p>Nachdem Einmaliges Anmelden deaktiviert wurde, können sich die Benutzer mit ihren vorherigen Caseware Cloud Anmeldeinformationen anmelden. Benutzer, deren Kennwörter abgelaufen sind oder nur einmaliges Anmelden für Caseware Cloud verwendet haben, können den Link <b>Kennwort vergessen?</b> verwenden, um ein Kennwort für ihr Konto zu erstellen. Falls es erforderlich ist, kann Ihr Firmenadministrator auch die Kennwörter für Benutzer zurücksetzen.</p>
+        <hr>
+        </hr>
+        <h3><a name="Why"></a>Warum erhalte ich eine Fehlermeldung?</h3>
+        <p>Sind Caseware Cloud oder SSO nicht korrekt konfiguriert, kann eine der nachfolgend aufgelisteten Fehlermeldungen erscheinen, wenn Sie versuchen sich anzumelden.</p>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „Bitte versuchen Sie es später noch einmal! Der Server ist auf einen unbekannten Fehler gestoßen. Wenn das Problem weiterhin besteht, wenden Sie sich an Ihren Administrator.&quot;</b></p>
+        <p>Dieses Problem wird in den meisten Fällen durch einen abgelaufenen Geheimen Clientschlüssel im SSO-Anbieter verursacht. Ein Admin-Benutzer der Firma muss seine SSO-Konfiguration aktualisieren.</p>
+        <ol>
+            <li>
+                <p>Geheimen Clientschlüssel neu generieren. Dies kann über Ihren SSO-Anbieter durchgeführt werden.</p>
+            </li>
+            <li>
+                <p>Melden Sie sich bei Caseware Cloud an.</p>
+                <div class="note">
+                    <p><b>Bitte beachten Sie:</b> Wenn Sie sich nicht anmelden können, wenden Sie sich an Ihren <a href="https://www.caseware.com/contact/">lokalen Distributor</a> und bitten Sie ihn, SSO für Ihr Administratorkonto zu deaktivieren. Fügen Sie Ihrem Antrag die folgenden Informationen bei:</p>
+                    <ul>
+                        <li>
+                            <p>Die vollständige URL der Firma</p>
+                        </li>
+                        <li>
+                            <p>Die E-Mail-Adresse des Administratorkontos, in dem SSO deaktiviert werden soll</p>
+                        </li>
+                        <li>
+                            <p>Schriftliche Client-Autorisierung zur Deaktivierung von SSO für das Admin-Konto</p>
+                        </li>
+                    </ul>
+                    <p>Sobald SSO für das Administratorkonto deaktiviert ist, verwenden Sie die Option <b>Kennwort vergessen</b> auf der Anmeldeseite, um ein neues Passwort festzulegen und sich bei Cloud anzumelden.</p>
+                </div>
+            </li>
+            <li>
+                <p>Aktualisieren Sie die SSO-Konfiguration in der Cloud mit dem Geheimen Clientschlüssel. Dadurch wird der Anmeldezugang für andere Benutzer wiederhergestellt.</p>
+            </li>
+            <li>
+                <p>Wenn SSO für Ihr Administratorkonto deaktiviert war, melden Sie sich erneut mit SSO an, um es wieder zu aktivieren. Alternativ können Sie SSO für Ihr Konto auch deaktiviert lassen, falls dieses Problem in Zukunft auftritt.</p>
+            </li>
+            <li>
+                <p>Legen Sie Erinnerungen/Überwachungen für den Ablauf des Geheimen Clientschlüsses fest. Die Firma kann künftige Sperren verhindern, indem sie den Geheimen Clientschlüssel vor dem nächsten Ablaufdatum ändert.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „Entschuldigung ... (We&apos;re sorry ...) Bei der Authentifizierung mit dem Identitätsanbieter ist ein unerwarteter Fehler aufgetreten“ (Unexpected error when authenticating with identity provider) </b></p>
+        <p>Beim Konfigurieren Ihres Identitätsanbieters haben Sie vielleicht eine fehlerhafte Angabe zu den Einträgen Geheimer Clientschlüssel oder Kunden-ID gemacht.</p>
+        <ol>
+            <li>
+                <p>Melden Sie sich in Caseware Cloud mit Ihren Cloud-Zugangsdaten an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem <b>Cloud</b> Hauptmenü (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Einstellungen| Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf das Symbol <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Geben Sie für Ihren Identitätsanbieter die korrekten Informationen in die Felder <b>Metadatenendpunkt des Identitätsanbieters</b>, <b>Kunden-ID</b> und <b>Geheimer Clientschlüssel</b> ein.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „AADSTS70001: Anwendung mit Kennung ... konnte nicht im Verzeichnis gefunden werden ...“</b></p>
+        <p>Bei der Konfiguration von Azure AD könnten Sie einen nicht korrekten Identitätsanbieter eingegeben haben.</p>
+        <ol>
+            <li>
+                <p>Melden Sie sich in Caseware Cloud mit Ihren Cloud-Zugangsdaten an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem <b>Caseware Cloud</b> Hauptmenü (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) die Einträge <b>Einstellungen | Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf das Symbol <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Geben Sie für Ihren Identitätsanbieter die korrekten Informationen in die Felder <b>Metadatenendpunkt des Identitätsanbieters</b>, <b>Kunden-ID</b> und <b>Geheimer Clientschlüssel</b> ein.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „AADSTS50011: Die in der Anfrage angegebene Antwort-URL stimmt nicht mit den für die Anwendung konfigurierten Antwort-URLs überein ... (The reply url specified in the request does not match the reply urls configured for the application ...)“</b></p>
+        <p>Es könnte sein, dass Sie eine fehlerhafte Antwort-URL in Azure eingegeben haben.</p>
+        <ol>
+            <li>
+                <p>Wählen Sie aus dem linken Navigationsbereich in Azure <b>Azure Active Directory | App Registration.</b></p>
+            </li>
+            <li>
+                <p>Wählen Sie Ihre App und anschließend <b>Settings | Reply URLs</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>Context menu</b> neben Ihrer Antwort-URL und anschließend auf <b>Delete</b>.</p>
+            </li>
+            <li>
+                <p>Fügen Sie Ihre Antwort-URL erneut hinzu und wählen Sie anschließend <b>Save</b>.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „AADSTS7000215: Ungültiger Geheimer Clientschlüssel wurde angegeben. (Invalid client secret provided.) Stellen Sie sicher, dass es sich beim in der Abfrage gesendeten Clientschlüssel um den Wert für Geheimer Clientschlüssel und nicht um die ID Geheimer Clientschlüssel handelt. (Ensure the secret being sent in the request is the client secret value, not the client secret ID)“</b></p>
+        <p>Es wäre möglich, dass Sie beim <a href="Generate-the-reply-URL-Azure-AD.htm">Konfigurieren von Azure AD</a> die Kunden-ID im Feld Geheimer Clientschlüssel eingegeben haben.</p>
+        <ol>
+            <li>
+                <p>Prüfen Sie, ob der Wert für Geheimer Clientschlüssel korrekt ist. Wurde der Wert <a href="Generate-a-client-secret.htm">gemäß den Anweisungen</a> kopiert, lokalisieren Sie den in Azure AD gespeicherten Geheimen Clientschlüssel und prüfen Sie, ob er einer ID entspricht. Entspricht der kopierte Wert einer ID oder der Geheime Clientschlüssel ist nicht korrekt, können Sie den aktuellen Geheimen Clientschlüssel löschen und <a href="Generate-a-client-secret.htm">einen neuen erstellen</a>. Bitte stellen Sie sicher, dass Sie den Geheimen Clientschlüssel kopieren.</p>
+            </li>
+            <li>
+                <p>Melden Sie sich bei Caseware Cloud mit Ihren Cloud-Zugangsdaten an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem <b>Caseware Cloud</b> Hauptmenü (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) die Einträge <b>Einstellungen | Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf das Symbol <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Geben Sie für Ihren Identitätsanbieter die korrekten Informationen in die Felder <b>Metadatenendpunkt des Identitätsanbieters</b>, <b>Kunden-ID</b> und <b>Geheimer Clientschlüssel</b> ein. Das Feld Kunden-ID sollte dem Feld Anwendungs-ID entsprechen und das Feld Geheimer Clientschlüssel sollte dem Wert Geheimer Clientschlüssel aus Schritt 1 (nicht der ID) entsprechen.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: Caseware Cloud Zugangslizenzen nicht verfügbar. (No available Cloud access licenses.) Wenn Sie zusätzliche Lizenzen benötigen, wenden Sie sich an Ihren Administrator.“ (To obtain additional licenses, contact your administrator.)</b></p>
+        <p>Die Anzahl der Benutzer in Ihrer Active Directory-Domäne überschreitet die Anzahl der verfügbaren Caseware Cloud Lizenzen. Wenn die Anzahl der Benutzer in Ihrer Active Directory Domäne die Anzahl der verfügbaren Lizenzen überschreitet, können sich nicht alle Mitarbeiter anmelden. Um allen Mitarbeitern die Anmeldung zu ermöglichen, sollten Sie in MyCaseware für jeden Mitarbeiter eine Lizenz erwerben oder wenden Sie sich an Ihren lokalen Distributor.</p>
+        <hr>
+        </hr>
+        <p><b>Fehlermeldung: „Benutzerkonto existiert bereits. (Account already exists.) Benutzer mit dieser E-Mail-Adresse... existiert bereits. (User with email ... already exists.) Wie möchten Sie fortfahren?“ (How do you want to continue?)</b></p>
+        <p>Dieser Fehler tritt auf, nachdem ein Benutzer aus Azure entfernt wurde und ein anderer Benutzer mit der gleichen E-Mail-Adresse hinzugefügt wird. <br /></p>
+        <p>Um dieses Problem zu umgehen, löschen Sie das Cloud-Benutzerkonto, das mit der in der Fehlermeldung angezeigten E-Mail-Adresse verbunden ist, und lassen Sie den Benutzer eine erneute Anmeldung via Einmaliges Anmelden durchführen. <br /></p>
+        <p>Dieser Prozess ist für zukünftige Versionen nicht mehr erforderlich.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Fehlermeldung: „Dem empfangenen Token fehlen die folgenden Ansprüche: E-Mail für den Systemzugriff erforderlich. (The received token is missing the following claims: email required for system access.) Bitte wenden Sie sich an Ihren Administrator.“ (Please contact your administrator.)</p>
+        <p>Die Caseware Cloud Integration von Einmaliges Anmelden wurde so entwickelt, dass die Ansprüche &apos;username&apos; (Benutzername) und &apos;email&apos; (E-Mail-Adresse) als eigenständige Ansprüche erkannt werden. Unsere Integration erfordert, dass der Anspruch &apos;email&apos; korrekt ist. Der Anspruch &apos;email&apos; wird nur von Gastbenutzern und verwalteten Benutzern, die mit Office365 eingerichtet wurden, zur Verfügung gestellt. Wurden die Benutzer in Ihrem Unternehmen mit Office365 eingerichtet, folgen Sie bitte den <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">Anweisungen von Azure</a> hinsichtlich der Verwaltung des Anspruchs &apos;email&apos; durch das Office Verwaltungsportal.</p>
+        <hr>
+        </hr>
+    </body>
+</html>

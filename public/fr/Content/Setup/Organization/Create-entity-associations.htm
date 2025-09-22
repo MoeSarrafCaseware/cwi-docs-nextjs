@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Administrators can create associations so that files and activities can be shared between entities where appropriate" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entity associations to enable single workspaces for multiple internal or client entities" />
+    </head>
+    <body>
+        <h1>Créer des associations d&apos;entités</h1>
+        <p>Les associations regroupent deux ou plusieurs entités dans le nuage, offrant une vue consolidée des activités et des dossiers de chaque entité faisant partie de l&apos;association. Les entités des associations restent indépendantes les unes des autres.</p>
+        <h2 id="Possible-associations">Associations possibles</h2>
+        <p>Vous pouvez créer une association pour n&apos;importe quel type d&apos;entité, qu&apos;elle soit <b>interne</b>, <b>cliente</b> ou <b>autre</b>.</p>
+        <p>Par exemple, si vous travaillez pour plusieurs filiales d&apos;une même grande entreprise, vous pouvez représenter chaque filiale par une entité client distincte, puis créer une association pour chacune d&apos;entre elles.</p>
+        <p>Une association peut également contenir différents types d&apos;entités. Par exemple, si vous disposez d&apos;une entité interne pour votre équipe fiscale, vous pouvez l&apos;associer aux entités clientes pour lesquelles vous effectuez des travaux fiscaux.</p>
+        <p>Chaque entité ne peut faire partie que d&apos;une seule association. La tentative d&apos;association d&apos;une entité avec des entités déjà présentes dans une association aboutit à une association combinée.</p>
+        <p>Par exemple, supposons qu&apos;il existe deux associations, l&apos;une composée de l&apos;ensemble {A, B, C} et l&apos;autre {D, E, F}. L&apos;association d&apos;une entité d&apos;une association avec une entité de l&apos;autre association (par exemple, l&apos;association de l&apos;entité C avec l&apos;entité E) résulte en une association combinée de l&apos;ensemble {A, B, C, D, E, F}.</p>
+        <h2 id="Viewing-associations">Visualisation des associations</h2>
+        <p>Lors de la visualisation d&apos;une entité faisant partie d&apos;une association, une icône apparaît à côté du nom de l&apos;entité. Cette icône permet de basculer entre une <b>vue associée</b> (<img src="../../Resources/Icons/AssociationAll-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), qui affiche le contenu de toutes les entités associées, et une <b>vue d&apos;entité unique</b> (<img src="../../Resources/Icons/AssociationSingle-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), qui n&apos;affiche que le contenu de l&apos;entité sélectionnée.</p>
+        <p><img src="../../Resources/Images/Single-entity-association-view-857x370.png" alt="Vue d&apos;une seule entité ou vue d&apos;une association" /></p>
+        <p style="font-weight: bold;">Pour créer une entité :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle de <i>Staff Editor</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Entités</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez une entité que vous souhaitez associer à une autre entité et sélectionnez <b>Autres actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Associer</b>.</p>
+                <p><img src="../../Resources/Images/Associate-entity-630x150.png" alt="Sélectionnez le bouton Associer dans le menu de l&apos;entité pour commencer à créer une association" /></p>
+            </li>
+            <li>
+                <p>Recherchez les entités que vous souhaitez ajouter. Elles seront affichées dans la boîte de dialogue par type d&apos;entité.</p>
+                <p><img src="../../Resources/Images/Associate-entity-search-630x285.png" alt="Recherchez l&apos;entité avec laquelle vous souhaitez créer une association" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Fermer</b>.</p>
+            </li>
+        </ol>
+        <h2 id="Permissions-for-associations">Autorisations pour les associations</h2>
+        <p>Les utilisateurs peuvent visualiser, ajouter et supprimer des entités d&apos;une association. Il n&apos;y a pas d&apos;autorisations distinctes accordées pour les associations ; un utilisateur est autorisé à voir ou à modifier les entités d&apos;une association sur la base des autorisations accordées aux entités individuelles.</p>
+        <ul>
+            <li>
+                <p>Pour visualiser les entités d&apos;une association, le rôle de l&apos;utilisateur doit lui accorder une autorisation de <b>lecture</b> (R) sur l&apos;attribut <i>Summary</i> de chaque entité. Les utilisateurs qui n&apos;ont pas cette autorisation pour toutes les entités d&apos;une association ne peuvent voir que le sous-ensemble d&apos;entités pour lesquelles ils l&apos;ont.</p>
+                <p>Les utilisateurs ne peuvent pas voir les associations si leur rôle n&apos;accorde cette autorisation qu&apos;à une seule entité de l&apos;association.</p>
+            </li>
+            <li>
+                <p>Pour ajouter ou supprimer des entités dans une association, le rôle de l&apos;utilisateur doit lui accorder l&apos;autorisation de modifier (E) l&apos;attribut <i>Détails de</i> chaque entité. Les utilisateurs ne peuvent ajouter ou supprimer une entité dans une association que si l&apos;autorisation leur est accordée pour cette entité.</p>
+                <p>Bien que les utilisateurs puissent visualiser une entité, ils ne peuvent pas l&apos;ajouter ou la supprimer des associations sans autorisation de modification.</p>
+            </li>
+        </ul>
+        <p>Le tableau suivant résume les autorisations requises pour accéder aux entités dans les associations et propose des suggestions de rôles intégrés permettant d&apos;obtenir ces autorisations.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Accès</th>
+                    <th>Permissions requises</th>
+                    <th>Suggestions de rôles intégrés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><b>Visualiser les</b> entités d&apos;une association.</p>
+                    </td>
+                    <td>
+                        <p>Autorisation de<b>lecture (R)</b> sur l&apos;attribut <i>Résumé de</i> l&apos;entité.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Vues</i></p>
+                            </li>
+                            <li>
+                                <p><i>Accès aux entités</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entité Collaborateur</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Ajouter</b> ou <b>supprimer des</b> entités dans une association.</p>
+                    </td>
+                    <td>
+                        <p>Droit de<b>modification (E)</b> de l&apos;attribut <i>Détails de</i> l&apos;entité.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Éditeur</i></p>
+                            </li>
+                            <li>
+                                <p><i>•	Responsable</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

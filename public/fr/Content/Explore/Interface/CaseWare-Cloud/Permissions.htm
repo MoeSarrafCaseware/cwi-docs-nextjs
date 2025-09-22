@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Autorisations</h1>
+        <p>Les autorisations, accordées par les rôles et les applications, contrôlent la manière dont les utilisateurs accèdent au contenu dans le nuage.</p>
+        <h2 id="role-permissions">Permissions de rôle<br /></h2>
+        <p>Chaque rôle dispose d&apos;un ensemble de permissions qui définissent les droits disponibles pour ce rôle. Il existe cinq autorisations, chacune pouvant être appliquée à des objets du système.</p>
+        <h3>Types de permissions</h3>
+        <p>Les autorisations relatives aux objets comprennent la possibilité de créer (C), de lire (R), de modifier (E), de supprimer (D) et de partager (A &amp; S). Chaque type d&apos;objet possède son propre ensemble de permissions. Avec les rôles personnalisés, vous pouvez activer votre propre ensemble de types d&apos;autorisations pour chaque autorisation d&apos;objet.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Autorisation</th>
+                    <th>Droits accordés à l&apos;utilisateur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Créer (C)</td>
+                    <td>Créer un objet</td>
+                </tr>
+                <tr>
+                    <td>Lire (R)</td>
+                    <td>Voir l&apos;objet</td>
+                </tr>
+                <tr>
+                    <td>Editer (E)</td>
+                    <td>Modifier l&apos;objet</td>
+                </tr>
+                <tr>
+                    <td>Supprimer (D)</td>
+                    <td>Supprimer l&apos;objet</td>
+                </tr>
+                <tr>
+                    <td>Action (A)</td>
+                    <td>Attribuer ou supprimer tout rôle d&apos;utilisateur</td>
+                </tr>
+                <tr>
+                    <td>Part (S)</td>
+                    <td>Attribuer ou supprimer des rôles d&apos;utilisateurs propriétaires</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Objets</h3>
+        <p>Les objets sont nommés en fonction de leurs étiquettes d&apos;interface dans Caseware Cloud, telles que Activités, Contact, Entité, et Fichiers téléchargés.</p>
+        <p>Les tableaux suivants présentent toutes les autorisations d&apos;objets avec leur description (la liste complète des autorisations d&apos;objets est également disponible dans l&apos;interface d&apos;autorisation des rôles sur la page <b>Paramètres</b> ) :</p>
+        <ul>
+            <li><a href="#System_objects">Objets de l&apos;organisation</a></li>
+            <li><a href="#Entity_objects">Objets d&apos;entité</a></li>
+            <li><a href="#App_objects">Objets de contenu</a></li>
+        </ul>
+        <h3><a name="System_objects"></a>Objets de l&apos;organisation</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Autorisations</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contact</td>
+                    <td>C D</td>
+                    <td>Le contact lui-même, y compris toutes les informations pour <i>Contact - Détails</i> et <i>Contact - Résumé.</i></td>
+                </tr>
+                <tr>
+                    <td>Contact - Détails</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes proviennent du formulaire de contact :</p>
+                        <ul>
+                            <li>Numéro de téléphone (domicile, portable)</li>
+                            <li>Type</li>
+                            <li>Étiquettes</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact - Résumé</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes proviennent du formulaire de contact :</p>
+                        <ul>
+                            <li>Adresse électronique (nom d&apos;utilisateur)</li>
+                            <li>Nom (prénom, nom)</li>
+                            <li>Occupation</li>
+                            <li>Numéro de téléphone (professionnel)</li>
+                            <li>Rôles à l&apos;échelle du système (rôles attribués à partir de la page Personnes)</li>
+                            <li>Groupes du personnel</li>
+                            <li>Applications</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Groupe de contact</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Groupes de contacts, y compris l&apos;attribution et la suppression de contacts.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Organisation</td>
+                    <td>E R</td>
+                    <td>
+                        <p>L&apos;organisation elle-même et les domaines suivants :</p>
+                        <ul>
+                            <li>Paramètres</li>
+                        </ul>
+                        <p><b>Considérations temporelles</b></p>
+                        <ul>
+                            <li>Visualisation des codes de travail (R)</li>
+                            <li>Modification des codes de travail (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personnel</td>
+                    <td>C D</td>
+                    <td>Le membre du personnel lui-même, y compris toutes les informations pour <i>Personnel - Détails</i> et <i>Personnel - Résumé.</i></td>
+                </tr>
+                <tr>
+                    <td>Personnel - Détails</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes sont tirées du formulaire du personnel :</p>
+                        <ul>
+                            <li>Numéro de téléphone (domicile, portable)</li>
+                            <li>Étiquettes</li>
+                            <li>Attribution de rôles aux entités</li>
+                            <li>Rôles à l&apos;échelle du système (rôles attribués à partir de la page Personnes)</li>
+                        </ul>
+                        <p><b>Considérations temporelles</b></p>
+                        <ul>
+                            <li>Visualisation des taux de personnel pour les membres du personnel (R)</li>
+                            <li>Modification des taux de personnel pour les membres du personnel (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personnel - Résumé</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes sont tirées du formulaire du personnel :</p>
+                        <ul>
+                            <li>Nom (prénom, nom)</li>
+                            <li>Adresse électronique (nom d&apos;utilisateur)</li>
+                            <li>Type</li>
+                            <li>Titre</li>
+                            <li>Position</li>
+                            <li>Numéro de téléphone (professionnel)</li>
+                            <li>Statut</li>
+                            <li>Groupes du personnel</li>
+                            <li>Applications</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Groupe du personnel</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Groupes de personnel, y compris l&apos;affectation et la suppression de personnel.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Étiquette</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>L&apos;élément d&apos;étiquetage lui-même et les zones suivantes :</p>
+                        <ul>
+                            <li>Dans l&apos;interface de gestion des balises de la page Paramètres.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Entity_objects"></a>Objets d&apos;entité</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Autorisations</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entité</td>
+                    <td>C D A S</td>
+                    <td>L&apos;entité elle-même, y compris toutes les informations pour <i>Entité - Détails</i> et <i>Entité - Résumé.</i></td>
+                </tr>
+                <tr>
+                    <td>Entité - Détails</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes proviennent du formulaire de l&apos;entité :</p>
+                        <ul>
+                            <li>Statut</li>
+                            <li>Date de début</li>
+                            <li>Mois de fin d&apos;exercice</li>
+                            <li>Date d&apos;inactivité</li>
+                            <li>Numéros de téléphone (professionnel, fax professionnel, domicile et portable)</li>
+                            <li>Profil social (site web, Twitter, Facebook, LinkedIn)</li>
+                            <li>Courriel</li>
+                            <li>Mémo</li>
+                            <li>Étiquettes</li>
+                            <li>Codes de l&apos;industrie</li>
+                            <li>Informations fiscales</li>
+                            <li>L&apos;histoire</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entité - Résumé</td>
+                    <td>E R</td>
+                    <td>
+                        <p>Les informations suivantes proviennent du formulaire de l&apos;entité :</p>
+                        <ul>
+                            <li>Nom</li>
+                            <li>Type</li>
+                            <li>Nombre</li>
+                            <li>Adresse 1 (rue, ville, province, pays, code postal)</li>
+                            <li>Adresse 2 (rue, ville, province, pays, code postal)</li>
+                        </ul>
+                        <p><b>Considérations temporelles</b></p>
+                        <ul>
+                            <li>Saisie de temps ou de dépenses pour les clients (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="App_objects"></a>Objets de contenu</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Autorisations</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Activité</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>Les types d&apos;activités suivants :</p>
+                        <ul>
+                            <li>Discussions</li>
+                            <li>Tâches</li>
+                            <li>Demandes de dossier</li>
+                            <li>Commentaires (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activité - Commentaire</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Commentaires sur les types d&apos;activités suivants :</p>
+                        <ul>
+                            <li>Discussions</li>
+                            <li>Tâches</li>
+                            <li>Demandes de dossier</li>
+                            <li>Activités du système</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fichier</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>Les objets suivants se trouvent sur la page Fichiers :</p>
+                        <ul>
+                            <li>Dossiers</li>
+                            <li>Liens URL</li>
+                        </ul>
+                        <p>Pour les autres objets Fichier, l&apos;accès est accordé dans l&apos;onglet <b>Apps</b> lors de la création ou de la modification d&apos;un personnel, d&apos;un contact ou d&apos;un groupe.</p>
+                        <p class="note"><b>Remarque :</b> L&apos;autorisation de <b>modifier</b> les fichiers permet également aux utilisateurs de supprimer les dossiers vides.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="app-permissions">Permissions d&apos;utilisation</h2>
+        <p>Chaque application dispose d&apos;un ensemble d&apos;autorisations qui définissent les droits dont disposent les utilisateurs ou les groupes auxquels l&apos;accès à cette application a été accordé. Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur du personnel</i> pour permettre l&apos;accès aux membres du personnel ou aux groupes de personnel, ou le rôle d&apos; <i>administrateur des entités</i> pour permettre l&apos;accès à un contact ou à un groupe de contacts.</p><MadCap:snippetBlock src="../../../Resources/Snippets/To-set-app-access-for-a-user-or-group.flsnp" /><h3 id="time-app">Autorisations de l&apos;application Time</h3>
+        <p><img src="../../../Resources/Images/edit-staff-time-app-permissions.png" alt="Liste des autorisations disponibles associées à l&apos;application Time." /></p>
+        <p>Vous pouvez attribuer les autorisations suivantes à n&apos;importe quel groupe ou membre du personnel disposant d&apos;une licence Time valide.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Autorisation</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Traiter ses propres entrées</td>
+                    <td>Soumettre des données personnelles sur le temps et les dépenses</td>
+                </tr>
+                <tr>
+                    <td>Traiter toutes les entrées de personnel</td>
+                    <td>Soumettre des relevés de temps et de dépenses au nom d&apos;autres membres du personnel.</td>
+                </tr>
+                <tr>
+                    <td>Transférer toutes les entrées du personnel</td>
+                    <td>Transférer les entrées de temps et de dépenses entre les entités et les missions</td>
+                </tr>
+                <tr>
+                    <td>Processus</td>
+                    <td>Accéder à l&apos;application Facturation, visualiser les totaux de l&apos;encours et créer des factures</td>
+                </tr>
+                <tr>
+                    <td>Voir ses propres entrées</td>
+                    <td>Utiliser les entrées de temps et de dépenses personnelles pour générer des rapports d&apos;analyse</td>
+                </tr>
+                <tr>
+                    <td>Voir toutes les entrées du personnel</td>
+                    <td>Utiliser les entrées de temps et de dépenses de tous les membres du personnel pour générer des rapports d&apos;analyse</td>
+                </tr>
+                <tr>
+                    <td>Voir l&apos;encours et la facturation</td>
+                    <td>Utiliser les informations relatives à l&apos;encours de production et à la facturation pour générer des rapports d&apos;analyse</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

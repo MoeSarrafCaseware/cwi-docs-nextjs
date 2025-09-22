@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Relevantierangschikking journaalposten</h1>
+        <p>Het analysepakket Journal Entry Relevance Ranking (JERR) biedt een sorteervolgorde van aanbevelingen voor tests, afgestemd op wereldwijde auditnormen, als aanpak om op een efficiënte manier te voldoen aan de tests voor journaalposten (JE CAAT/JET).</p>
+        <p>Het verschilt van andere benaderingen door het verminderen van het risico op overselectie of waargenomen fout-positieven die extra ruis creëren, zoals een opsomming van regelgebaseerde tests of anomaliedetectie.</p>
+        <p>Het JERR analytisch pakket mag alleen gebruikt worden voor JE CAAT/JET testen met betrekking tot openbare boekhouding/auditing. Het is waarschijnlijk ongeschikt voor elk ander doel. Zorg ervoor dat je de JERR koppelt aan je aannameprocedures.</p>
+        <h2>Statistische benadering van relevantie rangschikken</h2>
+        <p>De rangschikkingsmethodologie die in dit analytische pakket wordt gebruikt, is gericht op de behoefte aan relevantie, in plaats van te vertrouwen op algemene anomaliedetectie die de verschillen tussen vergelijkbare transacties rangschikt, ook al is dit een gangbare praktijk. Het sluit direct aan op de auditvoorschriften en zorgt ervoor dat gemarkeerde boekingen zinvol zijn voor het testen van journaalposten, terwijl de verwerkingsefficiëntie wordt geoptimaliseerd.</p>
+        <h3>Processtappen:</h3>
+        <ul>
+            <li>
+                <p><b>Beperk de reikwijdte:</b></p>
+                <p>De gegevens worden zo gefilterd dat ze alleen journaalposten bevatten (bijv. algemene journaalposten) en geen bronnen zoals AR- en AP-modules, die buiten de focus van de regelgeving vallen. Deze stap vermindert de verwerkingsoverhead en richt de analyse op wettelijke vereisten, aangezien de procedure typisch gerelateerd is aan frauderisico (d.w.z. het hoogste risico in een grootboek binnen algemene journaals).</p>
+                <p>De gegevens kunnen handmatige en systeemjournalen bevatten, of alleen handmatige journalen, afhankelijk van de journaalmapping in het grootboek (GL). Als uw GL u toestaat om handmatig en door het systeem gecreëerde algemene journaals afzonderlijk te identificeren, breng deze dan in kaart voor de handmatig gecreëerde algemene journaals, aangezien deze het hoogste frauderisico vormen in overeenstemming met de verschillende wereldwijde controlenormen.</p>
+            </li>
+            <li>
+                <p><b>Testen op basis van regels:</b></p>
+                <p>Op de gefilterde dataset wordt een reeks regelgebaseerde tests toegepast op basis van voorbeelden die (per 30 augustus 2024) in de volgende relevante controlestandaarden worden geïdentificeerd:</p>
+                <ul>
+                    <li>
+                        <p>International Public and Private Company Audit (IAASB): ISA 240 par. 31-32, A41-44</p>
+                    </li>
+                    <li>
+                        <p>US Private Company Audit (ASB): AU-C 240 par. 31-32, A47-50</p>
+                    </li>
+                    <li>
+                        <p>US Public Company Audit (PCAOB); AS 2401 par. 57-62</p>
+                    </li>
+                </ul>
+                <p>Additionele controles zijn:</p>
+                <ul>
+                    <li>
+                        <p>JE - Transacties met een datumbereik</p>
+                    </li>
+                    <li>
+                        <p>JE - Zoeken op trefwoord</p>
+                    </li>
+                    <li>
+                        <p>JE - Percentage bedrag van hoge waarde</p>
+                    </li>
+                    <li>
+                        <p>JE - Niet-sluitende journaalposten</p>
+                    </li>
+                    <li>
+                        <p>JE - Bedragen met een terugkerend numeriek patroon</p>
+                    </li>
+                    <li>
+                        <p>JE - Complexe gebruikte rekeningen</p>
+                    </li>
+                    <li>
+                        <p>JE - Ontbrekende beschrijvingen</p>
+                    </li>
+                    <li>
+                        <p>JE - Ontbrekende ID</p>
+                    </li>
+                    <li>
+                        <p>JE - Ontbrekende codes</p>
+                    </li>
+                    <li>
+                        <p>JE - Ontbrekende datums</p>
+                    </li>
+                    <li>
+                        <p>JE - Complexe gebruikte rekeningen</p>
+                    </li>
+                </ul>
+                <p>Positieve resultaten van deze tests worden weergegeven als &quot;1&quot;, terwijl negatieve resultaten worden weergegeven als &quot;0&quot;.</p>
+            </li>
+            <li>
+                <p><b>Individuele regels wegen:</b></p>
+                <p>De basis van het JERR is gebaseerd op een concept dat elk testresultaat dynamisch weegt op basis van zijn prevalentie in het grootboek. Daarom worden de resultaten van elke regel gewogen naar zeldzaamheid, berekend als:</p>
+                <p>(1 - Aantal positieve gebeurtenissen / Totaal rijen in de gefilterde gegevensreeks)</p>
+                <p>Deze weging zorgt ervoor dat zeldzamere voorkomens een sterkere invloed hebben op de uiteindelijke relevantierangorde.</p>
+            </li>
+            <li>
+                <p><b>Resultaten samenvoegen voor relevantie:</b></p>
+                <p>Voor elke journaalpost worden de resultaten van alle tests met elkaar vermenigvuldigd:</p>
+                <p>[Positief resultaat x (1 - Zeldzaamheid)] x [Positief resultaat x (1 - Zeldzaamheid)] x ...</p>
+                <p>De uiteindelijke geaggregeerde waarde geeft de relevantie van elke logboekvermelding voor het testen aan, waarbij waarden dichter bij 1,0 duiden op een hogere relevantie. Door de nadruk te leggen op relevantie in plaats van zeldzaamheid alleen, zorgt JERR ervoor dat gemarkeerde boekingen zinvol en bruikbaar zijn voor het testen van journaalposten.</p>
+            </li>
+            <li>
+                <p><b>Selectie criteria</b></p>
+                <p>We raden elk bedrijf of organisatie aan om definitieve selectiecriteria toe te voegen aan de relevantieranglijst voor hun methodologieën. De selectiecriteria kunnen worden afgestemd op historische steekproeven die geschikt worden geacht voor JE CAAT/JET-tests, bijvoorbeeld &quot;selecteer de top 25 van de ranglijst&quot;.</p>
+                <p>Deze aanpak maakt gebruik van historisch geschikte methodologieën met betrekking tot bemonstering en biedt tegelijkertijd een sorteervolgorde voor aanbevelingen om te bemonsteren op basis van een directe koppeling met normen. Het zorgt ook voor een hogere kwaliteit in vergelijking met historische steekproefmethoden, dankzij de uitgebreide ondervraging van de gegevensset en de relevantiescore die wordt afgeleid uit de prevalentie van het kenmerk.</p>
+                <p>Andere benaderingen kunnen gebaseerd zijn op alles boven een ingestelde relevantiedrempel of percentage van scores zonder nul. Echter, door de variabele aard van dynamische weging en de verscheidenheid aan grootboeken over sectoren en klanten heen, kan dit leiden tot extreme diversiteit in uitkomsten met weinig koppeling aan een reden voor selectie.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Let op:</b> De relevantierangorde mag niet worden verward met een risicoscore of andere soortgelijke concepten. De relevantierangorde is uitsluitend een sorteervolgorde die specifiek is ontworpen voor openbare JE CAAT/JET-tests, in overeenstemming met de eerder genoemde standaarden vanaf de datum van die standaarden en is uitsluitend geschikt voor dit gebruik.</p>
+    </body>
+</html>

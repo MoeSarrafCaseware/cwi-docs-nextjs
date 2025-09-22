@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Fixes in SE 2025-02</h1>
+        <p>Welcome to SE 2025-02! Deze release introduceert nieuwe genummerde kopopties voor financiële overzichten, de mogelijkheid om PDF&apos;s lokaal te openen en te bewerken en terug te synchroniseren naar de Document Manager en de mogelijkheid om de <b>Synchroniseer proefbalansfunctie</b> in de workflow voor het importeren van gegevens in of uit te schakelen.</p>
+        <p>Zie het volgende om de meest recente fixes in deze release te bekijken:</p>
+        <ul>
+            <li>
+                <p><a href="Fixes-in-the-latest-SE-release.htm">Fixes in SE 2025-02</a></p>
+            </li>
+        </ul>
+        <h2>Opties voor genummerde rubrieken in financiële overzichten</h2>
+        <p><a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a> <a href="end-user.htm">#eindgebruiker</a></p>
+        <p>Gebruikers kunnen nu kiezen of notitiekoppen en gebiedskoppen genummerd worden. Bovendien kan de stijl van nummering worden aangepast voor elk afzonderlijk gebied of worden toegepast op het hele financiële overzicht. De nieuwe optie is beschikbaar in het menu <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) voor elk Gebied.</p>
+        <p><img src="../Resources/Images/numbered-heading-feature.png" alt="De kopopties voor Gebied in Caseware Cloud." /></p>
+        <p><img src="../Resources/Images/numbered-heading-feature enabledisable.png" alt="Genummerde koppen in gebiedstabblad" /></p>
+        <p>Naast de mogelijkheid om koppen te verbergen, kunnen gebruikers nu ook nummers verbergen die worden toegepast op koppen, inclusief automatische nummering, voor een individuele kop. Deze functie is beschikbaar via het menu <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) voor elke rubriek voor de noten en tekstgebieden in de jaarrekening. Het nummer wordt ook verborgen in de inhoudsopgave als de koptekst wordt weergegeven.</p>
+        <p><img src="../Resources/Images/numbered-heading-feature3.png" alt="Dialoogvenster Zichtbaarheidsopties." /></p>
+        <h2>PDF&apos;s lokaal openen/bewerken vanuit Document Manager</h2>
+        <p><a href="end-user.htm">#eindgebruiker</a></p>
+        <p class="note inline"><b>Let op:</b> Deze functie vereist een eenmalige protocolinstallatie en is mogelijk niet beschikbaar in uw product.</p>
+        <p>Gebruikers kunnen PDF-bestanden die zijn toegevoegd aan de engagement nu openen met een standaard PDF-viewer of editor-app die op je computer is geïnstalleerd. Dit omvat de mogelijkheid om PDF&apos;s te becommentariëren en te markeren, zodat je beter kunt samenwerken aan je opdrachten. Zodra je het bestand opslaat, worden de bewerkingen die je hebt gemaakt gesynchroniseerd met het bestand in je engagement. Raadpleeg <a href="../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Open">PDF&apos;s lokaal openen en bewerken</a>voor meer informatie.</p>
+        <p><img src="../Resources/Images/Open_PDF.png" alt="Schermafbeelding van het menu &apos;Openen&apos; naar de optie &apos;Bestand lokaal openen&apos;." /></p>
+        <h2>In-/uitschakelen Proefbalans synchroniseren vanuit de importstroom van het opdrachtbestand</h2>
+        <p><a href="Primary-author.htm">#primaryauteur</a></p><div class="note"><p><b>Let op:</b> Om deze functie op te nemen, voeg je het volgende toe aan de features array in de <i>product.json</i>:</p>
+            <p><code>Functie {</code></p>
+            <p><code>&quot;syncTrialBalance&quot;: false,</code></p>
+            <p>Zie <a href="https://developers.caseware.com/se-authoring/31/List-of-product-features-(API).htm#Trial">Lijst met productfuncties / Proefbalans</a>voor meer informatie.</p></div><p>Primaire auteurs kunnen nu de optie <b>Synchroniseer proefbalans</b> in- of uitschakelen vanuit de importworkflow van het opdrachtbestand.</p>
+        <p><img src="../Resources/Images/disable_sync_trial_balance.png" alt="Een screenshot van een venster voor het importeren van gegevens met een schakeloptie voor het in- en uitschakelen van de Synchroniseer proefbalans." /></p>
+        <p>De functie <b>Synchroniseer proefbalans</b> is standaard ingeschakeld op alle Caseware producten die import van engagement bestanden ondersteunen. Omdat deze functie in sommige gevallen niet moet worden gebruikt, kan de primaire auteur met deze verbetering de functie verbergen voor de eindgebruiker in het dialoogvenster Opdrachtbestand importeren.</p>
+        <h2>Aanbevelingen voor afrondingsinstellingen</h2>
+        <p>Als je afronding hebt ingesteld in <b>Formaat | Getallen</b> op Productinstellingen, dan zijn er aanbevelingen voor instellingen op het tabblad <b>Functies | Financiële overzichten</b> . To learn more, see <a href="Rounding-recommendations-author-side.htm">Rounding setup recommendations</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Administrators can create associations so that files and activities can be shared between entities where appropriate" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entity associations to enable single workspaces for multiple internal or client entities" />
+    </head>
+    <body>
+        <h1>Entitätsverbund erstellen</h1>
+        <p>Entitätsverbünde gruppieren zwei oder mehr Entitäten in Caseware Cloud und bieten Ihnen damit eine konsolidierte Ansicht der Aktivitäten und Dateien für jede Entität, die ein Bestandteil des Verbunds ist. Entitäten in Entitätsverbünden verbleiben unabhängig voneinander.</p>
+        <h2 id="Possible-associations">Mögliche Entitätsverbünde</h2>
+        <p>Sie können einen Verbund für jeden Entitätstyp erstellen - <b>Mandanten</b>, <b>Interne Entitäten</b> oder <b>Andere Entitäten</b>.</p>
+        <p>Wenn Sie z. B. Aufgaben für verschiedene Niederlassungen eines großen Unternehmens ausführen, kann jede Niederlassung durch eine separate Mandantenentität repräsentiert werden und Sie erstellen anschließend daraus einen Entitätsverbund.</p>
+        <p>Ein Verbund darf auch unterschiedliche Entitätstypen umfassen. Sollten Sie z. B. eine interne Entität für Ihr Steuer-Team haben, können Sie sie mit den Mandanten-Entitäten, für die Sie Steuerdienstleistungen anbieten, verbinden.</p>
+        <p>Jede Entität kann nur Bestandteil eines Entitätsverbunds sein. Beim Versuch eine Entität mit Entitäten zu verbinden, die sich bereits in einem Verbund befinden, führt dies zu einem kombinierten Entitätsverbund.</p>
+        <p>Nehmen Sie zum Beispiel an, dass es zwei Entitätsverbünde gibt; einer besteht aus {A, B, C} und der andere aus {D, E, F}. Wenn Sie nun eine Entität aus dem einen Entitätsverbund mit einer Entität aus dem anderen verbinden (zum Beispiel wird die Entität C mit der Entität E verbunden), führt dies zu einem kombinierten Entitätsverbund {A, B, C, D, E, F}.</p>
+        <h2 id="Viewing-associations">Entitätsverbünde anzeigen</h2>
+        <p>Bei der Anzeige einer Entität, die Bestandteil eines Entitätsverbundes ist, erscheint ein Symbol neben dem Entitätsnamen. Dieses Symbol verhält sich wie ein Schalter, der zwischen einer <b>Anzeige Entitätsverbund</b> (<img src="../../Resources/Icons/AssociationAll-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), die den Inhalt aller verbundenen Entitäten umfasst, und einer <b>Anzeige einzelne Entität</b> (<img src="../../Resources/Icons/AssociationSingle-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), die nur den Inhalt der ausgewählten Einheit anzeigt, wechselt.</p>
+        <p><img src="../../Resources/Images/Single-entity-association-view-857x370.png" alt="Anzeige einzelne Entität vs. Anzeige Entitätsverbund" /></p>
+        <p style="font-weight: bold;">Einen Entitätsverbund erstellen:</p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Mitarbeiteradministrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Klicken Sie im Caseware Cloud Hauptmenü auf den Eintrag <b>Entitäten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie eine Entität, die Sie mit einer anderen Entität in einem Verbund zusammenfassen möchten und wählen Sie <b>Weitere Aktionen</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Verbund zuweisen</b>.</p>
+                <p><img src="../../Resources/Images/Associate-entity-630x150.png" alt="Wählen Sie die Option Verbund zuweisen aus dem Entitäts-Menü, um mit der Erstellung eines Verbunds zu beginnen." /></p>
+            </li>
+            <li>
+                <p>Suchen Sie nach den Entitäten, die Sie hinzufügen möchten. Sie werden im Dialog entsprechend ihres Entitätstyps angezeigt.</p>
+                <p><img src="../../Resources/Images/Associate-entity-search-630x285.png" alt="Suchen Sie nach der Entität, mit der Sie einen Verbund erstellen möchten" /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Schließen</b>.</p>
+            </li>
+        </ol>
+        <h2 id="Permissions-for-associations">Berechtigungen Entitätsverbünde</h2>
+        <p>Benutzer können Entitäten in einem Entitätsverbund anzeigen, hinzufügen und entfernen. Es werden keine separaten Berechtigungen für Entitätsverbünde gewährt; ein Benutzer darf basierend auf den Berechtigungen für die individuellen Entitäten die Entitäten innerhalb des Entitätsverbunds anzeigen oder bearbeiten.</p>
+        <ul>
+            <li>
+                <p>Zur Anzeige von Entitäten innerhalb eines Entitätsverbunds muss ein Benutzer über die Berechtigung <b>Lesen</b> in der <i>Zusammenfassung</i> der Attribute für jede Entität verfügen. Benutzer, die nicht für alle Entitäten in einem Entitätsverbund über diese Berechtigung verfügen, können nur die Teilmenge der Entitäten sehen, für die sie diese Berechtigung haben.</p>
+                <p>Benutzer, die diese Berechtigung nur für eine Entität im  Entitätsverbund  haben, können den Entitätsverbund nicht sehen.</p>
+            </li>
+            <li>
+                <p>Zur Anzeige und zum Entfernen von Entitäten innerhalb eines Entitätsverbunds muss ein Benutzer über die Berechtigung Bearbeiten in den <i>Details</i> der Attribute für jede Entität verfügen. Eine Entität in einem Entitätsverbund kann nur von einem Benutzer hinzugefügt oder entfernt werden, wenn die Berechtigung für diese Entität gewährt wurde.</p>
+                <p>Obwohl Benutzer möglicherweise in der Lage sind, eine Entität anzuzeigen, kann es sein, dass sie sie in Entitätsverbünden ohne die Berechtigung Bearbeiten nicht hinzufügen oder entfernen dürfen.</p>
+            </li>
+        </ul>
+        <p>In der nachfolgenden Tabelle sind die benötigten Berechtigungen für den Zugriff auf Entitäten in Entitätsverbünden zusammengefasst, und sie beinhaltet Vorschläge für integrierte Rollen, die diese Berechtigungen bieten.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Zugriff</th>
+                    <th>Benötigte Berechtigungen</th>
+                    <th>Integrierte Rollen - Vorschläge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><b>Anzeige</b> der Entitäten in einem Entitätsverbund.</p>
+                    </td>
+                    <td>
+                        <p><b>Lesen</b> Berechtigung in <i>Zusammenfassung</i> der Attribute der Entität.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Beobachter</i></p>
+                            </li>
+                            <li>
+                                <p><i>Zugriff auf Entität</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entitätsmitarbeiter</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Hinzufügen</b> oder <b>Entfernen</b> von Entitäten in einem Entitätsverbund.</p>
+                    </td>
+                    <td>
+                        <p><b>Bearbeiten</b> Berechtigung in <i>Details</i> der Attribute der Entität.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Editor</i></p>
+                            </li>
+                            <li>
+                                <p><i>Eigentümer</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Entradas de fecha</h1>
+        <p>The Date entries analytic identifies transactions with certain date values. See the <a href="#Test">Test configurations</a> section to view a full list of the types of date values that can be identified.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Posibles intentos de manipulación de estados financieros.</p>
+            </li>
+            <li>
+                <p>Financial reporting areas that have lower accuracy or precision</p>
+            </li>
+            <li>
+                <p>Transacciones que contienen estimaciones significativas</p>
+            </li>
+            <li>
+                <p>Improperly configured system settings which may need improvement and further evaluation</p>
+            </li>
+            <li>
+                <p>Reconocimiento inadecuado de transacciones en el período contable correcto</p>
+            </li>
+            <li>
+                <p>Weak internal controls</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de las actividades de supervisión y detección</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>Las desviaciones en el intervalo de fechas esperado puede indicar problemas de corte</p>
+            </li>
+            <li>
+                <p>Un intervalo extenso de días entre las fechas de creación y la de registro, o cuando la fecha de creación es anterior a la fecha de registro, podría ser una indicación de que se ha puesto una fecha anterior o posterior</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> - Unique field(s) that are used to create a unique transaction ID such as the <b>Entry ID</b> field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Core field(s)</b> - One or two date fields.</p>
+            </li>
+        </ul>
+        <h2>Parámetros</h2>
+        <p>The following parameters must be set to run this test:</p>
+        <ul>
+            <li>
+                <p><b>Date</b> - Select one or more dates that the analysis will be performed on.</p>
+            </li>
+            <li>
+                <p><b>Entered time period</b> - If your test configuration looks for date ranges, enter the number of periods that will be used. For example, if you select 2 and you select <b>Weeks</b> as the period type and <b>Between as</b> the range type, the test will look for dates 2 weeks before and after your selected date.</p>
+            </li>
+            <li>
+                <p><b>Select period type</b> - Select the period type, such as days, weeks or months.</p>
+            </li>
+            <li>
+                <p><b>Range type</b> - For some configurations of this test, you must indicate whether you are looking for transactions on dates before, after or between the specified date range.</p>
+            </li>
+        </ul>
+        <h2><a name="Test"></a>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Transactions around a certain date</b> - Lists transactions around a certain date.</p>
+            </li>
+            <li>
+                <p>El análisis que extrae transacciones dentro de un intervalo de fechas permite la extracción de transacciones entre dos fechas especificadas.</p>
+            </li>
+            <li>
+                <p><b>Transactions with two dates within a certain date range</b> - Lists transactions with two dates within a certain date range.</p>
+            </li>
+            <li>
+                <p><b>Transactions in which two dates are around a certain date</b> - Lists transactions with two dates within a certain date range.</p>
+            </li>
+            <li>
+                <p><b>Transactions on a certain date</b> - Lists transactions posted on certain day(s) of the year.</p>
+            </li>
+            <li>
+                <p><b>Transactions posted on a certain day(s) of the week</b> - Lists transactions posted on specific day(s) of the week.</p>
+            </li>
+            <li>
+                <p><b>Transactions posted on a certain day(s) of the year</b> - Lists transactions posted on certain day(s) of the year.</p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Date Entries analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first. Note that the ability to set filters is not currently available and will be available in later versions of the test.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Obtain which configuration of the test will be performed:</p>
+                <ul>
+                    <li>
+                        <p style="font-weight: bold;">Look for transactions around a certain date.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Look for transactions within a date range.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ: Transacciones con dos fechas dentro de un determinado intervalo de fechas</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ: Transacciones en las que dos fechas están alrededor de una determinada fecha</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">ASIENTO publicado en una fecha específica</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ: Transacciones registradas en determinados días de la semana</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ: Transacciones registradas en determinados días del año</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>For the <b>Transactions around a certain date</b> test:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected a date.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has input the number of periods.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected if the number of periods is days, weeks or months.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected one of the following:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p><b>Greater than (&gt;=)</b> - Indicates that the date field value is greater (after) the selected date.</p>
+                            </li>
+                            <li>
+                                <p><b>Less than (&lt;=)</b> - Indicates that the date field value is less than (before) the selected date.</p>
+                            </li>
+                            <li>
+                                <p><b>Between</b> - Indicates that the date field value is between the selected dates.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extract all transactions in which the date column selected is within the period defined by the user. Examples would be:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>The user selects 1 week with a date of Dec 31, 2023. The test extracts all transactions that fall between Dec 31, 2023 and Jan 7, 2024.</p>
+                            </li>
+                            <li>
+                                <p>The user selects between then all transactions between Dec 23, 2023 and Jan 7, 2024 would be selected.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>For the <b>Look for transactions within a date range</b> test:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has entered both a lower and an upper date.</p>
+                    </li>
+                    <li>
+                        <p>Extract all transactions where the date field falls between the lower and upper dates, including transactions that occur on the lower and upper dates.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ: Transacciones con dos fechas dentro de un determinado intervalo de fechas</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that a second date field that is different from the first date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has input the number of periods.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected if the number of periods is days, weeks or months.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected one of the following:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;=</p>
+                            </li>
+                            <li>
+                                <p>&lt;=</p>
+                            </li>
+                            <li>
+                                <p>Between</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extract the transactions based on the following:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;= - Extract transactions in which date2 is after date1 based on the selected period.</p>
+                            </li>
+                            <li>
+                                <p>&lt;= - Extract transactions in which date2 is before date1 based on the selected period.</p>
+                            </li>
+                            <li>
+                                <p>Between - Extract transactions in which date2 is either before or after date1 based on the selected period.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ: Transacciones en las que dos fechas están alrededor de una determinada fecha</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that a second date field which is different from the first date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has entered a date.</p>
+                    </li>
+                    <li>
+                        <p>Validate that the user has selected the date field.</p>
+                    </li>
+                    <li>
+                        <p>Extract transactions in which the user selected date field is prior to the user entered date and the unselected date field is after the user entered date.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ: Transacciones registradas en determinados días de la semana</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate that one or more days of the week have been selected.</p>
+                    </li>
+                    <li>
+                        <p>Extract transactions which fall on the day(s) of the week selected by the user for the selected date field.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ: Transacciones registradas en determinados días del año</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Validate that a date field has been selected.</p>
+                    </li>
+                    <li>
+                        <p>Validate one or more days of the year have been selected.</p>
+                    </li>
+                    <li>
+                        <p>Extract transactions which fall on the day(s) of the year selected by the user for the selected date field.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

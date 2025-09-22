@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><b>Dag</b></p>
+        <p>D Eén cijfer voor dagen onder de 10 (bijvoorbeeld 2 voor de 2e dag van de maand)</p>
+        <p>DD Twee cijfers (bijvoorbeeld 02 voor de 2e dag van de maand)</p>
+        <p>DDD Dag van het jaar (bijvoorbeeld 365 voor 31 december)</p>
+        <p>DDDD Driecijferige dag van het jaar (bijvoorbeeld 002 voor 2 januari)</p>
+        <p><b>Maand</b></p>
+        <p>M Eén cijfer voor maanden onder 10 (bijvoorbeeld 4 voor april)</p>
+        <p>MM Twee cijfers (bijvoorbeeld 04 voor april)</p>
+        <p>MMM Afkorting van drie letters (bijvoorbeeld Apr voor april)</p>
+        <p>MMMM Volledige maandnaam (bijvoorbeeld april)</p>
+        <p style="font-weight: bold;">Jaar</p>
+        <p>YY Twee cijfers (bijvoorbeeld 19 voor 2019)</p>
+        <p>YYYY Vier cijfers (bijvoorbeeld 2019)</p>
+        <p><b>Tijd</b></p>
+        <p>H HH: Uren in 24-uurs tijd (bijvoorbeeld 0 voor middernacht, 23 voor 23 uur)</p>
+        <p>h hh: Uren in 12-uurs tijd gebruikt met AM/PM (bijvoorbeeld 1 voor 1 AM, 12 voor middag)</p>
+        <p>k kk: Uren in 24-uurs tijd van 1 tot 24 (bijvoorbeeld 1 voor 1 AM, 24 voor middernacht)</p>
+        <p>a A: Post of ante meridiem (bijvoorbeeld am voor ochtend, pm voor middag)</p>
+        <p>m mm: Minuten (bijvoorbeeld 0 voor het begin van het uur, 59 voor de laatste minuut van het uur)</p>
+        <p>s ss: Seconden (bijvoorbeeld 0 voor het begin van de minuut, 59 voor de laatste seconde van de minuut)</p>
+        <p>S SS SSS ... SSSSSSSSS: Fractionele seconden (bijvoorbeeld 0 voor geen fractionele seconde, 999999999 voor de laatste fractionele seconde)</p>
+        <p>Z ZZ: Offset van UTC als +-HH:mm, +-HHmm, of Z (bijvoorbeeld +12:00 voor 12 uur voor UTC)</p>
+        <h4>Voorbeeld transactie</h4>
+        <p>Laten we zeggen dat we een transactie hebben die plaatsvond op 2 april 2019, om 1:30:45 PM met 123 milliseconden, en de UTC-offset is +02:00. Hier zie je hoe het eruit zou zien in verschillende formaten:</p>
+        <ul>
+            <li>
+                <p>Datum: 2/4/19 of 02/04/2019</p>
+            </li>
+            <li>
+                <p>Tijd: 1-123-+02-00</p>
+            </li>
+        </ul>
+    </body>
+</html>

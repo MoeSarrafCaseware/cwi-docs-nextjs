@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Information about how administrators and partners can control access to content on Cloud. " />
+    </head>
+    <body>
+        <h1>Beveiligingsoverwegingen</h1>
+        <h2 id="roles-and-sharing">Rollen en delen</h2>
+        <p>Een beveiligingsrol is een set machtigingen die je kunt toewijzen aan je gebruikers op Cloud. Elke rol stelt je personeel in staat om een of meer van de volgende dingen te doen:</p>
+        <ul>
+            <li>
+                <p>inhoud bekijken</p>
+            </li>
+            <li>
+                <p>bestaande inhoud bijwerken</p>
+            </li>
+            <li>
+                <p>Nieuwe dashboards maken</p>
+            </li>
+            <li>
+                <p>inhoud verwijderen</p>
+            </li>
+            <li>
+                <p>inhoud delen met andere gebruikers</p>
+            </li>
+        </ul>
+        <p>Uw gebruikers hebben toegang tot informatie op basis van de rollen die aan hen zijn toegewezen. Je kunt deze rollen heel breed toepassen, waardoor je een beveiligingsarchitectuur creëert die weinig onderhoud nodig heeft. Je kunt deze rollen ook selectiever toewijzen, zodat je betere controle hebt over wie toegang heeft tot elk bestand of elke activiteit op Cloud.</p>
+        <h2 id="firm-wide-role">Systeembrede rollen toewijzen</h2>
+        <p>Dit is de breedste manier om toegang te verlenen tot inhoud op Cloud. Op het profiel van een gebruiker kun je beveiligingsrollen toekennen voor alle relevante inhoud in de hele organisatie.</p>
+        <p><img src="../../Resources/Images/cloud-model-partner-630x240.png" alt="Bedrijfsbrede rollen geven deze gebruiker rechten voor alle entiteiten in een bedrijf en voor alle inhoud binnen deze entiteiten." /></p>
+        <p>Abco Smith heeft bijvoorbeeld de <i>Settings Admin</i> rol en de <i>Viewer</i> rol toegepast als systeembrede rollen.</p>
+        <p><img src="../../Resources/Images/staff-edit-abco-smith-1021x344.png" alt="Bedrijfsbrede rollen kunnen worden toegekend via de pagina Personeel." /></p>
+        <p>Met de rol <i>Settings Admin</i> kan Abco de <b>instellingenpagina</b> openen en wijzigen. Met de rol <i>Viewer</i> kan hij de details zien voor alle entiteiten in zijn organisatie en kan hij ook alle bestanden en activiteiten voor die entiteiten bekijken.</p>
+        <h2 id="entity-wide-role">Entiteiten delen</h2>
+        <p>Als je niet wilt dat een gebruiker alle inhoud in een organisatie kan bekijken, kun je in plaats daarvan toegang tot informatie verlenen op klant- of afdelingsbasis. Wanneer u een entiteit deelt, kent u een beveiligingsrol toe aan de entiteit zelf en aan alle bestanden of activiteiten onder die entiteit.</p>
+        <p><img src="../../Resources/Images/cloud-model-manager-630x240.png" alt="Entiteitsbrede rollen geven deze gebruiker toegang tot deze entiteit en tot alle inhoud ervan." /></p>
+        <p>Jenkins Smith heeft bijvoorbeeld de rol van <i>redacteur</i> gekregen voor de klantentiteit <b>Diamond Jewelers</b>.</p>
+        <p><img src="../../Resources/Images/security-considerations-entitywide-630x409.png" style="border:1px solid #3f66a3" alt="Deze gebruiker heeft de rol Editor gekregen voor een specifieke entiteit." /></p>
+        <p>Wanneer Jenkins Cloud opent, kan hij de klantentiteit voor Diamond Jewelers zien. Met de rol <i>Redacteur</i> kan hij de details voor deze entiteit bewerken en hij kan ook bestanden en activiteiten onder deze entiteit maken en bewerken.</p>
+        <h2 id="content-specific-role">Bestanden en activiteiten delen</h2>
+        <p>Als je weet dat gebruikers geen toegang mogen hebben tot alle inhoud onder een entiteit, kun je in plaats daarvan toegang verlenen tot elk bestand of activiteit afzonderlijk. Hierdoor kun je heel specifiek bepalen tot welke informatie je gebruikers toegang hebben.</p>
+        <p><img src="../../Resources/Images/cloud-model-associate-630x240.png" alt="Deze gebruiker kan deze entiteit zien, maar heeft slechts toegang tot één van de bestanden erin." /></p>
+        <p>Carl John werkt bijvoorbeeld aan de audit voor Superior Furniture. Zijn manager zal hem een aantal bestanden voor deze klant toewijzen, maar ze wil niet dat John toegang heeft tot alle klantbestanden.</p>
+        <p>Eerst wijst ze Carl de rol <i>Entity Access</i> toe op Superior Furniture. Hiermee kan Carl de entiteit zien, maar het geeft geen toegang tot bestanden of activiteiten onder de entiteit.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-630x299.png" style="border:1px solid #3f66a3" alt="Deze gebruiker heeft de rol Entiteitstoegang voor de geselecteerde entiteit." /></p>
+        <p>Vervolgens deelt ze het bestand VarianceAnalysis.xlsx en wijst ze de rol <i>Owner</i> toe aan Carl.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-2-630x272.png" style="border:1px solid #3f66a3" alt="Deze gebruiker heeft de rol Eigenaar voor het geselecteerde bestand." /></p>
+        <p>Carl heeft nu toegang tot dit bestand op Cloud. Met de rol <i>Eigenaar</i> kan hij het bestand bekijken, bewerken of zelfs verwijderen en kan hij dit bestand delen met andere Cloud-gebruikers.</p>
+        <h2 id="limited-content">Beperkte inhoud</h2>
+        <p>Normaal gesproken, wanneer je nieuwe activiteiten maakt of bestanden toevoegt aan Cloud, krijgen gebruikers met een systeembrede rol voor dit type content standaard toegang tot deze nieuwe items. Gebruikers die rollen hebben op de entiteit voor de nieuwe activiteiten of bestanden zullen ook toegang krijgen.</p>
+        <p>Je kunt ervoor kiezen om de toegang tot bestanden, activiteiten of entiteiten verder te beperken door ze <i>Limited</i>te maken. Beperkte inhoud is alleen zichtbaar voor de eigenaar en medewerkers met de rol <i>Beheerder</i> . De eigenaar kan de inhoud delen door rollen toe te kennen aan andere medewerkers, maar het zal niet zichtbaar zijn voor andere gebruikers.</p>
+        <p>Beperkte inhoud heeft een klein slotpictogram in het naamveld.</p>
+        <p><img src="../../Resources/Images/create-private-file-5-630x171.png" style="border:1px solid #3f66a3" alt="Dit document op de Bestanden pagina is beperkt. Gebruikers zullen dit bestand niet kunnen zien tenzij de eigenaar hen een specifieke rol voor het bestand toewijst." /></p>
+    </body>
+</html>

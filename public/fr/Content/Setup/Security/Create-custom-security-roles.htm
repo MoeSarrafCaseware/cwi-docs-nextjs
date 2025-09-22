@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create security roles to grant specific levels of access to Cloud content." />
+    </head>
+    <body>
+        <h1>Créer des rôles de sécurité personnalisés</h1>
+        <p>Dans le cadre des activités courantes de votre organisation, vous devez contrôler l&apos;accès aux dossiers de vos clients. Les différentes équipes de mission doivent avoir accès aux dossiers de leurs clients respectifs, mais elles ne peuvent pas accéder aux documents des autres clients. Certains membres du personnel ont besoin d&apos;accéder à tous les dossiers des clients pour une mission, tandis que d&apos;autres n&apos;ont besoin d&apos;accéder qu&apos;aux documents qui leur sont attribués.</p>
+        <p>Vous pouvez gérer l&apos;accès aux missions de votre organisation et aux documents relatifs à la mission dans le nuage à l&apos;aide de rôles de sécurité.</p>
+        <p>Les rôles de sécurité <a href="Built-in-roles.htm">intégrés</a> couvrent les types d&apos;accès à la sécurité les plus courants que vous pourriez souhaiter accorder à vos utilisateurs. Toutefois, vous pouvez également créer des rôles personnalisés pour votre organisation.</p>
+        <p><b>Créer des rôles de sécurité personnalisés</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Sécurité | Permissions de rôle</b>.</p>
+                <p><img src="../../Resources/Images/settings-role-permissions.png" alt="Permissions des rôles de sécurité" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter un rôle</b>.</p>
+            </li>
+            <li>
+                <p>Complétez les champs suivants :</p>
+                <ul>
+                    <li>
+                        <p><b>Nom</b></p>
+                    </li>
+                    <li>
+                        <p><b>Description</b></p>
+                    </li>
+                    <li>
+                        <p><b>S&apos;applique à :</b> <b>(Personnel</b> ou <b>contacts</b>)</p>
+                    </li>
+                    <li>
+                        <p><b>Portée</b> <b>(à l&apos;échelle du système</b>, <b>contenu au sein des entités</b> ou les deux)</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/role-permissions-add-630x452.png" style="border:1px solid #3f66a3" alt="La boîte de dialogue Nouveau rôle." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez une ou plusieurs autorisations pour les ajouter au rôle. Lorsque vous avez terminé, sélectionnez <b>OK.</b></p>
+                <p><img src="../../Resources/Images/role-permissions-select-630x219.png" style="border:1px solid #3f66a3" alt="Le bas de la boîte de dialogue Permissions de rôle. Les autorisations de création, de lecture, de modification, de suppression et de partage des fichiers sont toutes sélectionnées." /></p>
+                <p class="bestpractice inline"><b>Meilleure pratique :</b> Notez qu&apos;il existe deux autorisations de <b>partage</b> : <b>A</b> et <b>S</b>. L&apos;autorisation <b>Partager (A)</b> permet à l&apos;utilisateur de partager toutes les autorisations d&apos;entité ou de contenu d&apos;entité disponibles avec lui-même et d&apos;autres utilisateurs, même si cela lui confère un niveau d&apos;accès supérieur à celui qu&apos;il possède actuellement. Par exemple, si vous créez un rôle personnalisé à l&apos;échelle du système qui ne possède que l&apos;autorisation <b>Partager (A)</b> pour les entités, les utilisateurs ayant ce rôle pourront s&apos;octroyer à eux-mêmes et à d&apos;autres utilisateurs le rôle <i>Propriétaire</i> sur n&apos;importe quelle entité. Si cela pose un problème de sécurité pour votre entreprise, nous vous recommandons d&apos;utiliser plutôt l&apos;autorisation <b>Partager (S)</b> , qui offre les mêmes fonctionnalités mais empêche l&apos;utilisateur de partager des entités ou du contenu d&apos;entité auxquels il n&apos;a pas accès. Pour en savoir plus, voir <a href="Built-in-roles.htm">Rôles intégrés.</a></p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Gestion de l&apos;accès</h1>
+        <p>Afin d&apos;optimiser les performances du site, veillez à ce que les membres du personnel et les contacts ne se voient accorder que les droits d&apos;accès dont ils ont besoin et à ce qu&apos;ils ne se voient pas attribuer plusieurs rôles de sécurité pour les mêmes éléments. Nous recommandons également d&apos;utiliser des groupes de personnel et de contacts pour attribuer des rôles afin de faciliter le suivi des utilisateurs et de leur attribuer le niveau d&apos;accès approprié.</p>
+        <h2>Gérer l&apos;accès du personnel</h2>
+        <p>Lorsque vous accordez l&apos;accès aux membres du personnel, vous devez tenir compte de l&apos;étendue de l&apos;accès dont chaque membre du personnel a besoin.</p>
+        <p>Vous pouvez attribuer trois niveaux d&apos;étendue lorsque vous attribuez des rôles de sécurité : à l&apos;échelle du système, à l&apos;échelle de l&apos;entité et à l&apos;échelle de l&apos;élément. Nous vous recommandons de garder à l&apos;esprit les lignes directrices suivantes sur l&apos;étendue des rôles lorsque vous les attribuez.</p>
+        <ul>
+            <li>
+                <p><b>Dans la mesure du possible, attribuer des rôles spécifiques à l&apos;entité plutôt que des rôles à l&apos;échelle du système.</b></p>
+                <p>Les rôles à l&apos;échelle du système permettent aux utilisateurs d&apos;accéder à tous les éléments de votre site Cloud. Si vous avez une grande quantité de données stockées dans votre site Cloud, les utilisateurs ayant des rôles à l&apos;échelle du système peuvent avoir des temps de chargement lents et des performances réduites. Dans ce cas, vous pouvez envisager d&apos;accorder l&apos;accès à l&apos;ensemble de l&apos;entité aux utilisateurs qui n&apos;ont pas besoin d&apos;accéder à tous les éléments de votre site afin d&apos;améliorer les performances pour ces utilisateurs. Pour plus d&apos;informations, voir <a href="../../Setup/Users-and-Groups/Grant-users-and-groups-access-to-entities.htm">Autoriser les utilisateurs et les groupes à accéder aux entités</a> .</p>
+            </li>
+            <li>
+                <p><b>Évitez d&apos;attribuer des rôles spécifiques à un élément.</b></p>
+                <p>Les rôles spécifiques aux éléments permettent aux utilisateurs d&apos;accéder uniquement à des éléments spécifiques, tels que des fichiers ou des activités. Les utilisateurs dotés de ces rôles verront souvent leurs performances ralenties par rapport à celles des utilisateurs dotés de rôles pour l&apos;ensemble de l&apos;entité, car pour pouvoir attribuer un rôle spécifique à un élément à un utilisateur, celui-ci doit déjà disposer d&apos;un rôle spécifique à l&apos;entité dans laquelle l&apos;élément est stocké. L&apos;attribution de plusieurs rôles à un même élément entraîne souvent des problèmes de performance.</p>
+                <p>Notez que si vous créez des éléments confidentiels au sein des entités, les utilisateurs devront avoir un rôle spécifique pour accéder à l&apos;élément. Nous vous recommandons de minimiser l&apos;utilisation d&apos;éléments confidentiels au sein des entités afin d&apos;éviter les problèmes de performance.</p>
+            </li>
+        </ul>
+        <h2>Optimiser l&apos;attribution des rôles</h2>
+        <p>Après avoir déterminé le niveau d&apos;accès dont les utilisateurs ont besoin, vous devez également vous assurer qu&apos;ils ne se voient pas attribuer plusieurs rôles pour les mêmes éléments.</p>
+        <p>Lorsque vous attribuez des rôles aux utilisateurs, tenez compte des lignes directrices suivantes :</p>
+        <ul>
+            <li>
+                <p><b>Attribuez uniquement le rôle correspondant au niveau d&apos;accès le plus élevé dont l&apos;utilisateur a besoin.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-1.jpg" style="width: 449px;height: 420px;" alt="Les zones de chevauchement dans ce diagramme de Venn indiquent que l&apos;attribution des rôles n&apos;est pas optimale." /></p>
+                <p><i><b>Remarque :</b> Les zones de chevauchement dans ce diagramme et dans les suivants indiquent que l&apos;attribution des rôles n&apos;est pas optimale.</i></p>
+                <p>Par exemple, il n&apos;est pas nécessaire d&apos;attribuer à un utilisateur les rôles de visualiseur, d&apos;éditeur et de propriétaire d&apos;un fichier. Le rôle Propriétaire octroie le niveau d&apos;accès le plus élevé, c&apos;est pourquoi seul ce rôle est nécessaire.</p>
+            </li>
+            <li>
+                <p><b>N&apos;affectez pas d&apos;utilisateurs à des groupes ayant des autorisations en double.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-2.jpg" style="width: 508px;height: 358px;" alt="Les zones de chevauchement dans ce diagramme de Venn indiquent une attribution non optimale des rôles." /></p>
+                <p>Par exemple, les membres du personnel ne doivent pas être affectés à deux groupes de personnel différents qui accordent tous deux le rôle de propriétaire sur le même ensemble d&apos;entités ou de fichiers.</p>
+            </li>
+            <li>
+                <p><b>N&apos;attribuez pas aux utilisateurs des rôles à l&apos;échelle du système, de l&apos;entité et de l&apos;élément pour les mêmes éléments.</b></p>
+                <p><img src="../../Resources/Images/non-optimal-role-assignment-3.jpg" style="width: 421px;height: 399px;" alt="Le rôle de propriétaire de l&apos;entité accorde à l&apos;utilisateur le plus haut niveau d&apos;accès aux fichiers contenus dans l&apos;entité. Toutes les autorisations accordées par les rôles spécifiques aux éléments sont déjà couvertes par le rôle de propriétaire de l&apos;entité." /></p>
+                <p>Par exemple, si un utilisateur se voit attribuer le rôle Entité - Propriétaire pour une entité spécifique, ce rôle lui donnera un accès de niveau Propriétaire à tous les éléments de l&apos;entité. Il n&apos;est pas nécessaire d&apos;attribuer à cet utilisateur des rôles spécifiques pour tous les éléments de l&apos;entité.</p>
+            </li>
+        </ul>
+        <h2>Restreindre l&apos;accès aux contacts</h2>
+        <p>Lorsque vous accordez l&apos;accès à des contacts, assurez-vous que vous n&apos;accordez l&apos;accès qu&apos;aux contacts qui devront se connecter à Cloud pour répondre à des requêtes ou à des demandes de fichiers. Si un contact n&apos;a pas besoin de se connecter, mais que vous souhaitez l&apos;affecter à l&apos;entité afin de garder une trace de ses informations de contact, vous pouvez lui attribuer le rôle d&apos; <b>associé</b> dans l&apos;entité. Ce rôle vous permettra de suivre vos contacts sans leur donner accès à votre site Cloud.</p>
+        <h2>Bonnes pratiques pour l&apos;attribution des autorisations de partage d&apos;entités</h2>
+        <p>Les rôles intégrés d&apos; <i>administrateur</i>, d&apos; <i>administrateur d&apos;entité</i> et de <i>propriétaire</i> permettent aux utilisateurs d&apos;accorder à d&apos;autres membres du personnel ou à des contacts l&apos;accès à une entité. En plus de ces rôles, vous pouvez également créer des rôles personnalisés avec l&apos;autorisation <b>Partager</b> pour les entités afin d&apos;attribuer aux utilisateurs la capacité d&apos;accorder l&apos;accès aux entités. Ce rôle personnalisé peut être attribué à un membre du personnel à l&apos;échelle du système pour gérer toutes les entités ou au niveau d&apos;une entité pour gérer des entités spécifiques.</p>
+        <p>Notez que les utilisateurs auxquels sont attribués des rôles avec l&apos;autorisation <b>Partager</b> peuvent s&apos;accorder à eux-mêmes et aux autres toutes les autorisations disponibles sur l&apos;entité. Ces utilisateurs ne sont pas limités aux autorisations qui leur sont actuellement attribuées, ce qui signifie qu&apos;ils ont la possibilité d&apos;effectuer des actions telles que l&apos;octroi d&apos;un accès non autorisé à eux-mêmes ou à d&apos;autres utilisateurs, et la suppression d&apos;entités. Afin de vous assurer que les utilisateurs ne prennent pas de mesures non autorisées, vous pouvez surveiller l&apos;activité du personnel.</p>
+        <h3>Contrôler l&apos;activité du personnel</h3>
+        <p>Vous pouvez utiliser l&apos;application <b>Activités</b> pour contrôler l&apos;activité du personnel. Lorsque des autorisations sont attribuées à un utilisateur, une activité système est générée et peut être consultée dans l&apos;application <b>Activités.</b>  Une activité système est également générée lorsque des entités sont supprimées. Voir <a href="../../Practice/Maintenance/Check-system-and-file-history.htm">Vérifier l&apos;historique du système et des fichiers</a> pour savoir comment visualiser les activités du système.</p>
+        <h3>S&apos;abonner aux courriels de notification</h3>
+        <p>En plus d&apos;utiliser les activités du système pour surveiller l&apos;activité, nous encourageons également l&apos;administrateur de l&apos;entreprise à s&apos;abonner aux événements susceptibles d&apos;enfreindre la politique de l&apos;entreprise. Par exemple, l&apos;administrateur de l&apos;entreprise peut choisir d&apos;être notifié lorsque l&apos;accès à une entité est partagé avec un utilisateur et lorsqu&apos;une entité est supprimée. See <a href="../../Setup/Users-and-Groups/Change-notification-settings.htm">Change notification settings</a> for more information.</p>
+        <p>Les courriels de notification contiennent des liens permettant de consulter les détails du système actif dans le nuage. Si vous souhaitez que des informations plus détaillées sur l&apos;activité du système soient incluses dans l&apos;e-mail, telles que le nom de l&apos;entité, vous pouvez activer les <b>notifications détaillées</b> dans vos paramètres d&apos;e-mail. Voir <a href="../../Setup/Administration-and-Settings/Customize-system---generated-emails.htm">Personnaliser les courriels générés par le système</a> pour plus d&apos;informations.</p>
+        <h3>Empêcher la suppression d&apos;entités</h3>
+        <p>Si vous voulez vous assurer que les entités ne peuvent pas être supprimées, une solution de contournement est disponible avec les factures Caseware Cloud Time pour bloquer la suppression des entités.</p>
+        <p>Caseware Cloud ne permet pas de supprimer des entités qui ont des factures impayées en attente. Afin d&apos;empêcher la suppression de l&apos;entité, vous pouvez créer une facture impayée fictive pour l&apos;entité. Cette facture empêchera tout le personnel de supprimer l&apos;entité, même s&apos;il dispose des autorisations nécessaires. Nous recommandons également de n&apos;accorder l&apos;accès à l&apos;application Time qu&apos;aux administrateurs de votre entreprise. Cela empêchera d&apos;autres membres du personnel de fermer la facture afin de pouvoir supprimer l&apos;entité.</p>
+        <h2>Utiliser les groupes de personnel pour gérer l&apos;accès aux entités</h2>
+        <p>Nous recommandons d&apos;utiliser les groupes de personnel et de contact pour attribuer les rôles afin de faciliter le suivi des utilisateurs et de leur attribuer le niveau d&apos;accès approprié. Les groupes peuvent être particulièrement utiles si vous devez gérer les autorisations d&apos;accès pour un grand nombre de membres du personnel dans différentes régions. Notez que les membres du personnel ne pourront voir et accéder qu&apos;aux entités auxquelles ils sont affectés. Lorsque vous créez et affectez des groupes de personnel par région, vous pouvez vous assurer que les membres de votre personnel n&apos;ont accès qu&apos;aux entités de leur propre région. Cette section explique comment organiser vos groupes de personnel par région et les affecter à des entités.</p>
+        <h3>Importation d&apos;entités et attribution d&apos;étiquettes</h3>
+        <p>Nous vous recommandons d&apos;étiqueter les entités par région afin que vous puissiez facilement filtrer vos entités clientes pour trouver les bonnes entités et leur assigner des groupes de personnel. Vous pouvez créer et attribuer des étiquettes aux entités lorsque vous les importez dans Cloud.</p>
+        <p>Cloud vous permet d&apos;ajouter plusieurs entités clientes en une seule procédure à l&apos;aide d&apos;un fichier .csv ou d&apos;un bloc de texte délimité.</p>
+        <p>Si vous utilisez l&apos;une ou l&apos;autre de ces méthodes, assurez-vous que</p>
+        <ul>
+            <li>Chaque ligne représente une entité client</li>
+            <li>Chaque colonne représente une propriété, telle que le nom, l&apos;adresse électronique et le groupe d&apos;utilisateurs. Pour attribuer plusieurs balises, placez les balises entre guillemets et séparez-les par des virgules. Toutes les étiquettes qui n&apos;existent pas encore dans le nuage seront créées lors de l&apos;importation.</li>
+            <li>
+                <p>Les dates figurant dans les colonnes &quot; <b>Depuis&quot;</b> et &quot; <b>Date d&apos;inactivité</b> &quot; doivent être dans le même format que celui défini dans vos paramètres régionaux personnels.</p>
+            </li>
+        </ul>
+        <p>Nous vous recommandons d&apos;ajouter à votre fichier csv des balises correspondant aux groupes de sécurité (pays/région) afin de pouvoir filtrer facilement vos entités clientes et d&apos;améliorer l&apos;efficacité de l&apos;affectation des groupes de personnel à ces entités.</p>
+        <p>Dans cet exemple, un administrateur souhaite ajouter deux entités clientes :</p>
+        <p><i>Nom, localisation, numéro d&apos;entité, client depuis, fin d&apos;exercice, étiquettes</i><br style="font-style: italic;">
+            </br><i>Chockablock Industries, Johannesburg, 4829, 09/07/2012, Décembre, Afrique</i><br style="font-style: italic;">
+            </br><i>Superior Furniture, Singapour, 5937, 22 /08/2010, Décembre, SIngapour</i></p><MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp"></MadCap:snippetBlock><p>Les entités sont téléchargées dans le nuage. Toutes les entités existantes ayant la même valeur de numéro d&apos;entité seront modifiées.</p>
+        <h3>Créer des groupes et affecter du personnel</h3>
+        <p>Vous pouvez maintenant créer vos groupes de personnel et y affecter des membres du personnel.</p>
+        <p><b>Pour créer un nouveau groupe :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur du personnel</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Groupes</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau</b>, puis choisissez <b>Groupe de personnel</b> ou Groupe de contacts. La boîte de dialogue Nouveau groupe s&apos;ouvre.</p>
+                <p><img src="../../Resources/Images/New-group-795x447.png" alt="La boîte de dialogue Ajouter un groupe de personnel"></img></p>
+            </li>
+            <li>
+                <p>Saisissez un <b>nom</b> et une <b>description</b> pour votre groupe.</p>
+            </li>
+            <li>
+                <p>Dans la barre latérale, sélectionnez <b>Membres.</b> Choisissez les utilisateurs que vous souhaitez ajouter à ce groupe.</p>
+            </li>
+            <li>
+                <p>Dans la barre latérale, sélectionnez Membres. Choisissez les applications auxquelles les utilisateurs du groupe doivent avoir accès. Vous pouvez choisir toutes les applications ou limiter les applications à celles qui sont spécifiques à la région dans laquelle le personnel travaille.</p>
+                <p><b>Remarque :</b> Pour qu&apos;un membre du personnel soit affecté à une mission, il doit avoir accès à l&apos;application sur laquelle la mission est basée. Si vous voulez vous assurer que les utilisateurs du groupe ne peuvent pas créer d&apos;engagements, décochez la case <b>Créer</b> pour les applications que vous partagez.</p>
+                <p><img src="../../Resources/Images/assign-app-create.png" alt="Désélectionnez la case Créer si vous voulez vous assurer que les utilisateurs ne peuvent pas créer d&apos;engagements." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p>Le nouvel engagement est créé. You can see the new group on the <b>Groups</b> page.</p>
+        <h3>Accorder l&apos;accès des entités aux groupes</h3>
+        <p>La dernière étape consiste à affecter les groupes que vous avez créés aux entités nécessaires. Pour faciliter la recherche des entités dont vous avez besoin, vous pouvez utiliser les étiquettes de région que vous avez créées précédemment pour filtrer la liste des entités.</p>
+        <p style="font-weight: bold;">Pour accorder l&apos;accès des entités aux groupes :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle de <i>propriétaire</i> ou des privilèges équivalents pour les entités appropriées.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Entités</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Filtre</b> (<img src="../../Resources/Icons/filter-button-16x14.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la barre de recherche.</p>
+            </li>
+            <li>
+                <p>Sous <b>Étiquettes</b>, sélectionnez l&apos;étiquette correspondant à la région appropriée.</p>
+                <p><img src="../../Resources/Images/region-tags.png" alt="Sélectionnez l&apos;option appropriée." /></p>
+                <p>La liste des entités n&apos;affiche désormais que les entités de la région sélectionnée, ce qui vous permet d&apos;affecter facilement vos groupes aux entités appropriées.</p>
+            </li>
+            <li>
+                <p>Cochez la case dans la barre de titre pour sélectionner toutes les entités de la liste filtrée.</p>
+                <p><img src="../../Resources/Images/select-all-entities.png" alt="Sélectionnez la case à cocher dans la barre de titre." /></p>
+            </li>
+            <li>
+                <p>Select <b>More Actions | Share</b>.</p>
+                <p><img src="../../Resources/Images/entities-more-actions-multi-share.png" alt="Le menu déroulant Autres actions après la sélection de plusieurs entités." style="width: 417px;height: 147px;" /></p>
+            </li>
+            <li>
+                <p>Sélectionner le <b>personnel</b>.</p>
+            </li>
+            <li>
+                <p>Choisissez le rôle approprié dans la liste déroulante.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans le champ de recherche, saisissez le nom du groupe, du membre du personnel ou du contact auquel vous souhaitez accorder l&apos;accès au rôle.</p>
+            </li>
+            <p><img src="../../Resources/Images/entities-more-actions-multi-share-roles.png" alt="Attribution de rôles à l&apos;aide du menu déroulant." /></p>
+            <li>
+                <p>Sélectionnez <b>Partager</b>.</p>
+            </li>
+        </ol>
+        <p>Les groupes de personnel sélectionnés ont maintenant accès aux entités.</p>
+        <h3>Accorder l&apos;accès à une entité spécifique</h3>
+        <p>Il peut arriver que vous souhaitiez affecter une personne spécifique à une entité ou à une mission distincte des groupes de sécurité que vous avez créés. C&apos;est le cas lorsque vous devez partager un engagement d&apos;un pays avec un utilisateur basé dans un autre pays.</p>
+        <p><b>Pour accorder l&apos;accès à une entité :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle de <i>propriétaire</i> ou des privilèges équivalents pour l&apos;entité.</p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/cloud-from-the-Cloud-menu.flsnp" /><b>Entités</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;entité à laquelle vous souhaitez accorder l&apos;accès, puis sélectionnez <b>Partager</b> (<img src="../../Resources/Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Internal-entity-share-633x104.png" alt="L&apos;icône Partager s&apos;affiche sur la page Entités." style="width: 366px;height: 60px;" /></p>
+            </li>
+            <li>
+                <p>Recherchez les contacts auxquels vous souhaitez accorder un accès, puis sélectionnez <b>Attribuer des rôles à (#)</b>.</p>
+            </li>
+            <li>
+                <p>Choisissez le rôle du <a href="../../Setup/Security/Built-in-roles.htm#Regular">personnel</a> approprié.</p>
+                <p>Les rôles que les utilisateurs possèdent déjà en raison de paramètres antérieurs apparaissent sous <b>Hérités</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/Edit-Entity-Specific-Roles-630-369.png" style="border:1px solid #3f66a3" alt="Sélectionnez un rôle pour l&apos;attribuer à votre utilisateur ou groupe." /></p>
+            <li>
+                <p>Sélectionnez <b>Partager</b>.</p>
+            </li>
+        </ol>
+        <p>Vous pouvez également accorder l&apos;accès à plusieurs entités simultanément en sélectionnant plusieurs entités. Notez que si vous accordez l&apos;accès à plusieurs entités simultanément, vous ne pouvez attribuer qu&apos;un seul rôle pour chaque groupe sélectionné. Par exemple, si vous sélectionnez l&apos;entité A et l&apos;entité B, vous ne pouvez attribuer au membre du personnel sélectionné que le rôle de <b>visualiseur</b> sur ces deux entités. Il n&apos;est pas possible d&apos;affecter un visualiseur à une entité et un éditeur à l&apos;autre, par exemple.</p>
+        <h3>Pour ajouter ou supprimer des utilisateurs dans un groupe existant :</h3>
+        <p>Une fois les groupes créés, vous pouvez en gérer l&apos;appartenance en ajoutant ou en supprimant des utilisateurs.</p><MadCap:snippetBlock src="../../Resources/Snippets/To-add-or-remove-users-in-existing-group.flsnp"></MadCap:snippetBlock><p>La composition du groupe est mise à jour. Pour connaître la composition actuelle du groupe, sélectionnez-le dans la page <b>Groupes</b> .</p>
+        <h3>Créer manuellement des étiquettes pays/région</h3>
+        <p>Nous vous recommandons d&apos;étiqueter les clients par pays/région afin que vous puissiez facilement filtrer vos entités clients pour trouver les entités correctes et leur assigner des groupes de personnel. Si vous n&apos;avez pas créé de balises automatiquement lors de l&apos;importation du fichier csv du client, comme indiqué à l&apos;étape 2, ou si vous devez ajouter des balises après l&apos;importation, vous pouvez également les créer manuellement.</p>
+        <p><b>Pour créer manuellement une balise pour une région :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> , sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Personnalisation | Gestion des balises</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter</b> pour ouvrir la boîte de dialogue Ajouter une balise.</p>
+            </li>
+            <li>
+                <p>Saisissez un <b>nom</b> et spécifiez les <b>entités</b> dans le menu déroulant <b>Type de balise</b> .</p>
+                <p><b>Remarque :</b> Il est recommandé d&apos;utiliser les mêmes noms que les pays/régions utilisés pour définir le groupement de sécurité</p>
+                <p><img src="../../Resources/Images/add-entity-region-tag.png" alt="The Add Tag dialog." />.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>OK</b>.</p>
+            </li>
+        </ol>
+        <h3>Attribuer manuellement des étiquettes aux entités (clients)</h3>
+        <p>Si nécessaire, vous pouvez attribuer manuellement des balises à une entité.</p>
+        <p style="font-weight: bold;">Pour attribuer manuellement une balise à une entité :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; administrateur des entités ou des droits équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez Entités.</p>
+            </li>
+            <li>
+                <p>Sélectionnez dans la liste les entités que vous souhaitez baliser pour une région spécifique.</p>
+            </li>
+            <li>
+                <p>Sélectionnez Tag (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/assign-region-tag.png" alt="Sélectionnez Étiquette pour étiqueter les entités sélectionnées." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez la balise appropriée dans la liste des balises non attribuées pour les affecter aux entités. Vous pouvez également rechercher des étiquettes dans le champ de recherche.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { readHTMLFile, ParsedHTMLContent } from '@/utils/htmlReader';
+import { ParsedHTMLContent } from '@/utils/htmlReader';
 
 interface HTMLContentProps {
   href: string;
   fallbackTitle?: string;
 }
 
-export default function HTMLContent({ href, fallbackTitle = "Loading..." }: HTMLContentProps) {
+export default function HTMLContent({ href }: HTMLContentProps) {
   const [content, setContent] = useState<ParsedHTMLContent | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -75,7 +75,7 @@ export default function HTMLContent({ href, fallbackTitle = "Loading..." }: HTML
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-8 py-10 text-gray-300">
+    <div className="max-w-4xl mx-auto px-8 py-10">
       <article className="prose prose-invert max-w-none">
         <div 
           className="html-content"

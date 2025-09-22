@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Résoudre les conflits liés à l&apos;importation de données</h1>
+        <p class="note inline"><strong>Remarque :</strong> Les données de la balance de vérification ne peuvent pas être fusionnées au cours d&apos;une même période comptable. Lors de l&apos;importation d&apos;une nouvelle balance de vérification contenant des numéros de compte déjà présents dans les données existantes pour la même période, les montants de la nouvelle balance remplaceront complètement les montants de la balance existante. Tous les numéros de compte qui ne figuraient pas dans le système seront ajoutés en tant que nouveaux comptes</p>
+        <p>Pour chaque ligne de données que vous importez dans Caseware Cloud, un identifiant unique est créé automatiquement en utilisant les valeurs d&apos;un ou plusieurs champs présents dans la ligne de données. Lorsque la source de données est un fichier CSV ou Excel, des conflits de données peuvent être détectés après l&apos;affectation des champs des données entrantes aux champs Caseware. Voir les scénarios ci-dessous et la manière de résoudre les conflits de données dans chacun d&apos;entre eux. Pour plus d&apos;informations sur l&apos;importation de données du grand livre à partir de fichiers CSV ou Excel, voir <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <p>Voir <a href="Understand-subledger-data.htm">Comprendre les ensembles de données du livre auxiliaire</a> pour plus d&apos;informations sur la façon dont les identifiants uniques sont formés dans les ensembles de données du livre auxiliaire.</p>
+        <p>Voir <a href="Understand-genledger-data.htm">Comprendre l&apos;ensemble de données du grand livre</a> pour plus d&apos;informations sur la façon dont les identifiants uniques sont formés dans l&apos;ensemble de données du grand livre.</p>
+        <h2>Conflit de données dans le même fichier CSV ou Excel</h2>
+        <p>Des conflits de données se produisent dans un fichier CSV ou Excel si plusieurs lignes de données ont le même identifiant unique :</p>
+        <ul>
+            <li>Une icône d&apos;avertissement et un bouton <strong>Réassigner</strong> apparaissent dans la section Fichiers téléchargés de la fenêtre Importer des données.</li>
+            <li>Si vous survolez l&apos;icône d&apos;avertissement, le message suivant apparaît : &quot;Résolvez les conflits dans la source de données avant de procéder à la réimportation&quot;</li>
+        </ul>
+        <p><img src="../../Resources/Images/ResolveConflictsInDataSource-da-2024-09.png" alt="Résoudre les conflits message d&apos;erreur qui apparaît si plusieurs lignes de données dans le fichier CSV ou Excel ont le même identifiant." /></p>
+        <p><strong>Pour résoudre les conflits de données dans le même fichier d&apos;importation :</strong></p>
+        <ol>
+            <li>Vous avez les possibilités suivantes :<ol style="list-style-type: lower-alpha;"><li>Supprimez le fichier de la section Fichiers téléchargés en cliquant sur (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" /> ).</li><li>Assurez-vous que vous affectez la bonne colonne au champ Caseware utilisé comme clé primaire en cliquant sur <b>Réaffecter</b>. Voir la <a href="#Quick">référence rapide aux conflits par type de</a>données, qui répertorie les champs utilisés pour former l&apos;identifiant unique par défaut dans chaque type d&apos;ensemble de données.</li></ol></li>
+            <li>Ouvrez le fichier et supprimez ou modifiez les lignes de données en double. Vous trouverez ci-dessous une <a href="#Quick">référence rapide</a> aux champs dont les valeurs peuvent entraîner des conflits de données si elles sont identiques dans deux lignes de données ou plus.</li>
+            <li>Réimporter le fichier corrigé.</li>
+        </ol>
+        <h2><a name="Data"></a>Conflit de données entre le jeu de données importé et un jeu de données existant</h2>
+        <p>Si l&apos;ensemble de données contient déjà une ligne ayant le même identifiant unique que la ligne que vous essayez d&apos;importer, il y a un conflit de données. La<a href="#Quick">référence rapide aux conflits par type de jeu de données</a> répertorie les champs qui provoquent des conflits de données si leurs valeurs sont identiques dans le fichier que vous importez et dans le jeu de données existant. En outre, les conflits de données ne se produisent jamais que dans le même type d&apos;ensemble de données. Par exemple, il n&apos;y aura jamais de conflit de données entre un jeu de données de grand livre nouvellement importé et un jeu de données de grand livre auxiliaire existant.</p>
+        <p>Dans ce cas, une icône d&apos;avertissement et un bouton <strong>Résoudre les conflits</strong> apparaissent dans la section Fichiers téléchargés de la fenêtre Importer des données.</p>
+        <p><img src="../../Resources/Images/ResolveConflictNewFilevsExisting.png" alt="Conflit de données entre le jeu de données importé et un jeu de données existant" /></p>
+        <p><strong>Pour résoudre un conflit d&apos;importation de données entre le fichier entrant et un jeu de données existant :</strong></p>
+        <ol>
+            <li>Dans la fenêtre Importer des données, dans la section Fichiers téléchargés, vous pouvez soit supprimer la source de données que vous venez d&apos;importer en cliquant sur (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" /> ) et importer un autre fichier, soit cliquer sur <strong>Résoudre les conflits</strong> pour utiliser l&apos;une des options de résolution des conflits de données. Si vous cliquez sur <b>Résoudre les conflits</b>, passez à l&apos;étape suivante.</li>
+            <li>Vous avez les possibilités suivantes :<ol style="list-style-type: lower-alpha;"><li><strong>Résoudre les conflits en utilisant les données de &lt;nom du fichier d&apos;importation de données&gt;. </strong><ol style="list-style-type: lower-roman;"><li>Sélectionnez cette option pour remplacer les lignes de données de l&apos;ensemble de données existant par les lignes de données dont les identifiants sont les mêmes dans le fichier de données nouvellement importé. Cliquez sur <strong> Suivant.</strong></li><li>Vous êtes invité à confirmer. Cliquez sur <strong>Continuer</strong>.</li></ol></li><li><strong>Résoudre les conflits en utilisant les données de &lt;nom de l&apos;ensemble de données existant&gt;. </strong><ol style="list-style-type: lower-roman;"><li>Sélectionnez cette option pour ignorer les lignes de données du fichier de données nouvellement importé dont les identifiants sont les mêmes que ceux de l&apos;ensemble de données existant. Toutes les autres lignes de données dont les identifiants ne sont pas en conflit avec l&apos;ensemble de données existant sont importées. <strong>Cliquez sur Suivant.</strong></li><li>Vous êtes invité à confirmer. Cliquez sur <strong>Continuer</strong>.</li></ol></li><li><strong>Télécharger le fichier CSV des conflits</strong></li><p class="indent">Cliquez sur ce lien pour télécharger un fichier CSV des lignes de données où des conflits se sont produits. Analysez le fichier et choisissez l&apos;une des options suivantes :</p><ol style="list-style-type: lower-roman;"><li>Si vous décidez d&apos;utiliser les données de l&apos;ensemble de données existant, sélectionnez <b>Résoudre les conflits en utilisant les données de </b>&lt;nom de<b>l&apos;ensemble de données existant&gt;</b>. Les lignes de données comportant des conflits dans le fichier d&apos;importation ne sont pas importées. Toutes les autres données du fichier d&apos;importation sont importées.</li><li>Si vous décidez d&apos;utiliser les données du fichier d&apos;importation, conservez le fichier d&apos;importation de données tel quel et sélectionnez l&apos;option <b>Résoudre les conflits à l&apos;aide des données de &lt;data import file name&gt;</b> . Toutes les données du fichier d&apos;importation sont importées. Les lignes de données de l&apos;ensemble de données existant contenant des conflits sont écrasées.</li><li><p>Supprimez la source de données que vous venez d&apos;importer, corrigez le fichier d&apos;importation en supprimant les lignes de données dont les identifiants uniques sont identiques à ceux de l&apos;ensemble de données existant et réimportez le fichier.</p></li></ol></ol></li>
+        </ol>
+        <h2>Résoudre les conflits de données en utilisant les données d&apos;un fichier nouvellement importé</h2>
+        <p>Lorsque vous choisissez de résoudre les conflits d&apos;importation de données en utilisant les données d&apos;un fichier nouvellement importé, et que vous supprimez ensuite ce fichier, les lignes de données conflictuelles sont entièrement supprimées de l&apos;ensemble de données.</p>
+        <p>Le cas suivant peut se produire en fonction du degré de chevauchement entre le fichier nouvellement importé qui a été supprimé et les lignes de données existantes dans l&apos;ensemble de données.</p>
+        <h3>Le fichier nouvellement importé est un surensemble d&apos;un fichier de données précédemment importé</h3>
+        <p>Dans ce cas, un fichier de données est importé dans un ensemble de données.</p>
+        <p><img src="../../Resources/Images/ImportFile1.png" alt="Data file is imported into a dataset" /></p>
+        <p>Un deuxième fichier comprenant toutes les lignes de données du premier fichier ainsi que de nouvelles données est importé dans le même ensemble de données. Un conflit de données est détecté parce que certaines lignes de données de l&apos;ensemble de données et du fichier de deuxième importation entrant ont les mêmes identifiants uniques.</p>
+        <p><img src="../../Resources/Images/ResolveConflictsImport2.png" alt="Un conflit de données est détecté parce que certaines lignes de données de l&apos;ensemble de données et du fichier de deuxième importation entrant ont les mêmes identifiants uniques." /></p>
+        <p>L&apos;utilisateur choisit de cliquer sur <b>Résoudre les conflits</b>, puis sélectionne l&apos;option <b>Résoudre les conflits à l&apos;aide des données de &lt;data import file name&gt;</b> .</p>
+        <p><img src="../../Resources/Images/ResolveConflictsUsingDataFile2.png" alt="Résoudre les conflits de données en utilisant les données du deuxième fichier d&apos;importation pour écraser toutes les lignes de données du premier fichier d&apos;importation ayant les mêmes identifiants. " /></p>
+        <p>Les données du fichier nouvellement importé remplacent le fichier précédemment importé. L&apos;ensemble de données résultant ne contient plus que les données du fichier nouvellement importé.</p>
+        <p><img src="../../Resources/Images/ResultConflictResolved.png" alt="Le dataset résultant ne contient que les données du deuxième fichier d&apos;importation (GeneralLedger_ImportFile2_Superset.csv)" /></p>
+        <p>Cependant, le fichier nouvellement importé, <code>GeneralLedger_ImportFile2_Superset.csv</code>, est supprimé par erreur.</p>
+        <p><img src="../../Resources/Images/FIle2Deleted.png" alt="Le deuxième fichier d&apos;importation est supprimé par erreur, ce qui fait que l&apos;ensemble de données est vide." /></p>
+        <p>Il en résulte un ensemble de données vide. Sur la page Datasets, vous remarquerez que seul le premier fichier importé est répertorié, à savoir, dans cet exemple, <code>GeneralLedger_ImportFile1.csv</code>. Si vous exportez le jeu de données, un avertissement s&apos;affiche.</p>
+        <p><img src="../../Resources/Images/ExportDataset.png" alt="Tentative d&apos;exportation des données supprimées." /></p>
+        <p>La manière dont vous résolvez l&apos;ensemble de données vide dépend de ce que vous souhaitez obtenir :</p>
+        <h4>Vous souhaitez que l&apos;ensemble de données contienne les données du deuxième fichier d&apos;importation, plus volumineux, que vous avez importé en dernier lieu</h4>
+        <ul>
+            <li>Dans la colonne Source, supprimez le fichier que vous avez importé en premier, qui dans cet exemple est <code>GeneralLedger_ImportFile1.csv</code>.</li>
+            <li>Réimporter le deuxième fichier de données dans le dataset, qui dans cet exemple est <code>GeneralLedger_ImportFile2_Superset.csv</code>.</li>
+        </ul>
+        <h4>Vous souhaitez que l&apos;ensemble de données ne contienne que les données du premier fichier d&apos;importation</h4>
+        <ul>
+            <li>Dans la colonne Source, supprimez le fichier que vous avez importé en premier, qui dans cet exemple est <code>GeneralLedger_ImportFile1.csv</code>.</li>
+            <li>Réimporter le premier fichier de données dans l&apos;ensemble de données.</li>
+        </ul>
+        <h2><a name="Quick"></a>Référence rapide aux conflits de données par type de jeu de données <a href="#Footnote">*</a></h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Type d&apos;ensemble de données</th>
+                    <th>Il y a conflit lorsque ce champ a la même valeur dans deux lignes de données ou plus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grand livre</td>
+                    <td>ID d&apos;entrée<code>(entry_id</code>) - Numéro de ligne<code>(line_number)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes fournisseurs – Factures</td>
+                    <td>ID de la transaction<code>(ap_invoice_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes fournisseurs – Paiements effectués</td>
+                    <td>ID de la transaction<code>(ap_payment_made_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes fournisseurs – Fournisseurs</td>
+                    <td>ID du fournisseur<code>(ap_supplier_supplier_account_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Comptes fournisseurs – Soldes non utilisés</td>
+                    <td>ID de la transaction<code>(ap_open_balance_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes fournisseurs – Factures</td>
+                    <td>ID de la transaction<code>(ap_invoice_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes clients – Encaissements</td>
+                    <td>ID de la transaction<code>(ar_cash_received_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes clients – Clients</td>
+                    <td>Identifiant du compte client<code>(ar_customer_customer_account_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Comptes clients – Solde non utilisé</td>
+                    <td>ID de la transaction<code>(ar_open_balance_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Mouvements de stock</td>
+                    <td>ID de la transaction<code>(inventory_transaction_transaction_id)</code></td>
+                </tr>
+                <tr>
+                    <td>Stock disponible</td>
+                    <td>ID de transaction<code>(inventory_on_hand_transaction_id)</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <p><a name="Footnote"></a><b>*</b> Dans le <i><a href="#Quick">Référence rapide aux conflits de données par type de jeu de données</a></i> il est supposé que vous avez assigné un champ dans le fichier d&apos;importation au champ Caseware indiqué. Par défaut, ce champ est la clé primaire de l&apos;ensemble de données et sa valeur est utilisée pour générer automatiquement l&apos;identifiant unique de chaque ligne de données. Lorsque vous n&apos;attribuez pas de champ au champ désigné comme clé primaire de l&apos;ensemble de données, d&apos;autres champs désignés comme clés primaires alternatives sont utilisés pour générer automatiquement un identifiant unique. Pour plus d&apos;informations, voir les descriptions des champs pour le type de jeu de données en question : <a href="Understand-subledger-data.htm">Comprendre</a><a href="Understand-genledger-data.htm">l&apos;ensemble de données du grand livre</a> ou <a href="Understand-subledger-data.htm">Comprendre les ensembles de données du livre auxiliaire</a>.</p>
+    </body>
+</html>

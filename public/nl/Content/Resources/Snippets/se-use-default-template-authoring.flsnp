@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="instNotes">Als je geen sjabloon wilt aanpassen voor je bedrijf, kun je instellen dat je bedrijfssjabloon de productsjabloon gebruikt. De productsjabloon bevat de standaardinhoud voor uw product.</p>
+        <p class="instNotes" MadCap:conditions="General.PDF"><b>Tip:</b> Om informatie over uw huidige productversie te bekijken, selecteert u <b>Informatie</b> (<img src="../Images/icon-i.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Over.</b></p>
+        <p MadCap:conditions="General.Online" class="tip"><b>Tip:</b> Om informatie over uw huidige productversie te bekijken, selecteert u <b>Informatie</b> (<img src="../Images/icon-i.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Over.</b></p>
+        <p class="instNotes">Het voordeel van het gebruik van de productsjabloon is dat je de firmasjabloon niet handmatig hoeft bij te werken wanneer er nieuwe productupdates zijn. Zie <a href="#Update">De bedrijfssjabloon bijwerken</a>voor meer informatie.</p>
+        <p class="instNotes" style="font-weight: bold;">De productsjabloon gebruiken</p>
+        <ol>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">Zorg ervoor dat u de <b>beheerdersrol voor instellingen</b> of gelijkwaardige rechten hebt. Zie voor meer informatie <a href="../../Setup/Security/Built-in-roles.htm">Ingebouwde rollen</a> en <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Beveiligingsrollen toewijzen</a>.</p>
+            </li>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">Selecteer in het menu Cloud (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) <b>Instellingen</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Sjabloon beheren.</b></p>
+            </li>
+            <li MadCap:conditions="General.PDF">
+                <p class="instNotes">Selecteer in het Cloud-menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) <b>Instellingen</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>OnPoint PCR</b></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT"><b>Caseware ReviewComp</b></MadCap:conditionalText> | <b>Sjabloon beheren </b><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>Primair</b></MadCap:conditionalText><b>.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Selecteer <b>Standaard gebruiken.</b></p>
+            </li>
+        </ol>
+        <p class="instNotes">De huidige sjabloon wordt gearchiveerd en uw bedrijf gebruikt nu de productsjabloon. De optie die nu beschikbaar is op de pagina <b>Sjabloon beheren</b> is <b>Concept maken.</b></p>
+        <p class="instNotes">Als je de productsjabloon wilt aanpassen aan specifieke bedrijfsvereisten, selecteer je <b>Ontwerp maken.</b></p>
+    </body>
+</html>

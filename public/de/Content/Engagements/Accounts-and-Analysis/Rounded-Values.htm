@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gerundete Werte</h1>
+        <p>Die Analyse Gerundete Werte identifiziert numerische Werte, die möglicherweise gerundet wurden, z. B. 10, 500 oder 9000. In Rechnungslegungsdaten ist das Vorhandensein von gerundeten Beträgen in der Regel unüblich und kann auf eine mögliche Datenmanipulation hindeuten.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Aufdeckung von möglichen Versuchen zur Manipulation von Jahresabschlüssen</p>
+            </li>
+            <li>
+                <p>Geringere Genauigkeit und Präzision von Bereichen der Rechnungslegung</p>
+            </li>
+            <li>
+                <p>Transaktionen, die signifikante Schätzungen enthalten</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Hinweis:</b> In einigen Branchen oder Unternehmen kann es aufgrund der Art ihrer Tätigkeit zu vielen gerundeten Transaktionen kommen.</p>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Dieser Test verwendet ein oder mehrere numerische Felder, um gerundete Beträge oder gerundete Mengenwerte zu ermitteln. Sie können festlegen, welche Felder verwendet werden sollen, indem Sie den Parameter <b>Felder auswählen</b> ändern.</p>
+        <h2>Parameter</h2>
+        <p>Es gibt drei Parameter, die für die Durchführung dieses Tests festgelegt werden müssen:</p>
+        <ul>
+            <li>
+                <p><b>Felder auswählen</b> - Wählen Sie ein oder mehrere numerische Felder aus der Liste aus, die für die Durchführung des Tests verwendet werden sollen.</p>
+            </li>
+            <li>
+                <p><b>Gerundeter Wert</b> - Geben Sie einen gerundeten ganzzahligen Wert ein, z. B. 10, 100 oder 1000, der für die Suche nach gerundeten Werten verwendet werden soll. Wenn Sie z. B. 10 eingeben, sucht der Test nach allen Werten, die ein Vielfaches von 10 sind, z. B. 10, 20 und 30. Dieser Test ist nicht auf Vielfache von 10 beschränkt. Sie können auch 5, 50, 500 oder einen anderen ganzzahligen Wert eingeben. Der Standardwert ist 100.</p>
+            </li>
+            <li>
+                <p><b>Dezimale ignorieren</b> - Legen Sie fest, ob Dezimalwerte ignoriert werden sollen oder nicht. Dieses Feld legt fest, ob Dezimalwerte als gerundete Werte betrachtet werden. Wenn Sie z. B. Dezimalstellen ignorieren, wird der Wert 100,99 als gerundeter Wert betrachtet, aber wenn Sie die Dezimalstellen nicht ignorieren, handelt es sich nicht um einen gerundeten Wert. Der Standardwert ist so eingestellt, dass Dezimalstellen ignoriert werden.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p><b>Gerundete Beträge</b> - Listet Transaktionszeilen auf, bei denen der Betrag gerundet ist.</p>
+            </li>
+            <li>
+                <p><b>Gerundete Menge</b> - Listet Transaktionszeilen auf, bei denen die Menge gerundet ist.</p>
+            </li>
+            <li>
+                <p><b>Gerundete Werte</b> - Listet Transaktionszeilen auf, bei denen der Wert gerundet ist.</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analyse Gerundete Beträge ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob das/die analytische(n) Kernfeld(er) numerisch ist/sind; falls nicht, beenden Sie den Test.</p>
+            </li>
+            <li>
+                <p>Legen Sie fest, ob Dezimalzahlen in die Analyse einbezogen werden sollen.</p>
+            </li>
+            <li>
+                <p>Sie erhalten vom Benutzer den numerischen Wert, der für die Rundung verwendet wird, führen den Test durch und extrahieren alle Transaktionen, die gerundete Werte des numerischen Wertes für das Ergebnis sind. Berücksichtigen Sie, ob der Benutzer Dezimalstellen ein- oder ausgeschlossen hat. Wenn mehrere Spalten ausgewählt wurden und eine beliebige Spalte fehlschlägt, schlägt die Zeile beim Test fehl und wird in die Ergebnisse eingetragen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

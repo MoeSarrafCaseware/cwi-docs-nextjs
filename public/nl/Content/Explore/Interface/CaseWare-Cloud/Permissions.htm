@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Permissions</h1>
+        <p>Machtigingen, toegekend door rollen en door apps, bepalen hoe gebruikers toegang krijgen tot content binnen Cloud.</p>
+        <h2 id="role-permissions">Rolbevoegdheden<br /></h2>
+        <p>Elke rol heeft een set rechten die bepalen welke rechten beschikbaar zijn voor die rol. Er zijn vijf machtigingen en elke machtiging kan worden toegepast op objecten in het systeem.</p>
+        <h3>Typen toestemmingen</h3>
+        <p>Objectmachtigingen omvatten de mogelijkheid om te maken (C), lezen (R), bewerken (E), verwijderen (D) en delen (A &amp; S). Elk objecttype heeft zijn eigen set objectrechten. Met aangepaste rollen kunt uw eigen unieke set toestemmingen inschakelen voor elke objecttoestemming.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Permissions</th>
+                    <th>Rechten verleend aan gebruiker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aanmaken (C)</td>
+                    <td>Object maken</td>
+                </tr>
+                <tr>
+                    <td>Lezen (R)</td>
+                    <td>Object bekijken</td>
+                </tr>
+                <tr>
+                    <td>Bewerken (E)</td>
+                    <td>Object wijzigen</td>
+                </tr>
+                <tr>
+                    <td>Verwijderen (D)</td>
+                    <td>Object verwijderen</td>
+                </tr>
+                <tr>
+                    <td>Aandeel (A)</td>
+                    <td>Een gebruikersrol toewijzen of verwijderen</td>
+                </tr>
+                <tr>
+                    <td>Aandeel (S)</td>
+                    <td>Eigen gebruikersrollen toewijzen of verwijderen</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Objecten</h3>
+        <p>Objecten krijgen de naam van hun interface labels in Caseware Cloud, zoals Activiteiten, Contact, Entiteit en Geüploade bestanden.</p>
+        <p>De volgende tabellen geven een overzicht van alle objectmachtigingen met hun beschrijvingen (de volledige lijst van objectmachtigingen is ook beschikbaar via de interface Rollenmachtigingen op de <b>Instellingenpagina</b> ):</p>
+        <ul>
+            <li><a href="#System_objects">Organisatie objecten</a></li>
+            <li><a href="#Entity_objects">Entiteitsobjecten</a></li>
+            <li><a href="#App_objects">Objecten met inhoud</a></li>
+        </ul>
+        <h3><a name="System_objects"></a>Organisatie objecten</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Permissions</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>contactpersoon</td>
+                    <td>D</td>
+                    <td>Het contact zelf, inclusief alle informatie voor <i>Contact - Details</i> en <i>Contact - Samenvatting</i>.</td>
+                </tr>
+                <tr>
+                    <td>Contact - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie uit het contactformulier:</p>
+                        <ul>
+                            <li>Telefoonnummer (thuis, mobiel)</li>
+                            <li>Type</li>
+                            <li>tag</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact - Samenvatting</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie uit het contactformulier:</p>
+                        <ul>
+                            <li>E-mailadres (Gebruikersnaam)</li>
+                            <li>Naam (Voor- en achternaam)</li>
+                            <li>Beroep</li>
+                            <li>Telefoonnummer (zakelijk)</li>
+                            <li>Systeembrede rollen (rollen toegewezen vanaf de pagina Personen)</li>
+                            <li>Personeelsgroepen</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contactgroep</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Contactgroepen, inclusief het toewijzen en verwijderen van contactpersonen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Onderneming</td>
+                    <td>R</td>
+                    <td>
+                        <p>De organisatie zelf en de volgende gebieden:</p>
+                        <ul>
+                            <li>Instellingen</li>
+                        </ul>
+                        <p><b>Tijdsoverwegingen</b></p>
+                        <ul>
+                            <li>Werkcodes bekijken (R)</li>
+                            <li>Werkcodes bewerken (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeel</td>
+                    <td>D</td>
+                    <td>Het personeelslid zelf, inclusief alle informatie voor <i>Personeel - Details</i> en <i>Personeel - Samenvatting</i>.</td>
+                </tr>
+                <tr>
+                    <td>Personeel - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie uit het personeelsformulier:</p>
+                        <ul>
+                            <li>Telefoonnummer (thuis, mobiel)</li>
+                            <li>tag</li>
+                            <li>Rollen toewijzen aan entiteiten</li>
+                            <li>Systeembrede rollen (rollen toegewezen vanaf de pagina Personen)</li>
+                        </ul>
+                        <p><b>Tijdsoverwegingen</b></p>
+                        <ul>
+                            <li>Personeelstarieven voor personeelsleden bekijken (R)</li>
+                            <li>Bewerkingstarieven voor personeelsleden (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeel - Samenvatting</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie uit het personeelsformulier:</p>
+                        <ul>
+                            <li>Naam (Voor- en achternaam)</li>
+                            <li>E-mailadres (Gebruikersnaam)</li>
+                            <li>Type</li>
+                            <li>Titel</li>
+                            <li>Positie</li>
+                            <li>Telefoonnummer (zakelijk)</li>
+                            <li>Status</li>
+                            <li>Personeelsgroepen</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeelsgroep</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Personeelsgroepen, inclusief het toewijzen en verwijderen van personeel.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>tag</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Het tag-item zelf en de volgende gebieden:</p>
+                        <ul>
+                            <li>Tag Management interface op de Instellingen pagina.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Entity_objects"></a>Entiteitsobjecten</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Permissions</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entiteit</td>
+                    <td>C D A S</td>
+                    <td>De entiteit zelf, inclusief alle informatie voor <i>Entiteit - Details</i> en <i>Entiteit - Samenvatting</i>.</td>
+                </tr>
+                <tr>
+                    <td>Entiteit - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie van het entiteitsformulier:</p>
+                        <ul>
+                            <li>Status</li>
+                            <li>Startdatum</li>
+                            <li>Einddatum boekjaar</li>
+                            <li>Inactieve datum</li>
+                            <li>Telefoonnummers (zakelijk, zakelijk faxnummer, thuis en mobiel)</li>
+                            <li>Sociaal profiel (website, Twitter, Facebook, LinkedIn)</li>
+                            <li>E-mail</li>
+                            <li>MEMO</li>
+                            <li>tag</li>
+                            <li>Industrie Codes</li>
+                            <li>Belasting</li>
+                            <li>Historie</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entiteit - Samenvatting</td>
+                    <td>R</td>
+                    <td>
+                        <p>De volgende informatie van het entiteitsformulier:</p>
+                        <ul>
+                            <li>Naam</li>
+                            <li>Type</li>
+                            <li>Aantal</li>
+                            <li>Adres 1 (straat, stad, provincie, land, postcode)</li>
+                            <li>Adres 2 (straat, stad, provincie, land, postcode)</li>
+                        </ul>
+                        <p><b>Tijdsoverwegingen</b></p>
+                        <ul>
+                            <li>Tijd- of onkostenboekingen voor klanten invoeren (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="App_objects"></a>Objecten met inhoud</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Permissions</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Activiteiten</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>De volgende soorten activiteiten:</p>
+                        <ul>
+                            <li>Discussies</li>
+                            <li>Taken</li>
+                            <li>Bestandsaanvragen</li>
+                            <li>Opmerkingen (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activiteit - Opmerking</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Opmerkingen over de volgende activiteitstypen:</p>
+                        <ul>
+                            <li>Discussies</li>
+                            <li>Taken</li>
+                            <li>Bestandsaanvragen</li>
+                            <li>Systeem Activiteiten</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestand</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>De volgende objecten op de pagina Bestanden:</p>
+                        <ul>
+                            <li>Mappen</li>
+                            <li>URL-koppelingen</li>
+                        </ul>
+                        <p>Voor andere Bestandsobjecten wordt toegang verleend op het tabblad <b>Apps</b> bij het maken of wijzigen van Personeel, Contactpersonen of Groepen.</p>
+                        <p class="note"><b>Let op:</b> Met de rechten voor het <b>bewerken van</b> bestanden kunnen gebruikers ook lege mappen verwijderen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="app-permissions">App-machtigingen</h2>
+        <p>Elke app heeft een set machtigingen die de rechten definiëren die beschikbaar zijn voor gebruikers of groepen die toegang hebben gekregen tot die app. Zorg ervoor dat u de rol <i>Medewerker Beheerder</i> hebt om toegang te verlenen aan medewerkers of personeelsgroepen, of de rol <i>Entiteiten Beheerder</i> om toegang te verlenen aan een contactpersoon of contactgroep.</p><MadCap:snippetBlock src="../../../Resources/Snippets/To-set-app-access-for-a-user-or-group.flsnp" /><h3 id="time-app">Tijd app machtigingen</h3>
+        <p><img src="../../../Resources/Images/edit-staff-time-app-permissions.png" alt="Een lijst met beschikbare machtigingen voor de Time-app." /></p>
+        <p>U kunt de volgende app-rechten toewijzen aan elke groep of elk personeelslid met een geldige Time-licentie.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Permissions</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Eigen invoer verwerken</td>
+                    <td>Persoonlijke tijd- en onkostenregistraties indienen</td>
+                </tr>
+                <tr>
+                    <td>Alle personeelsgegevens verwerken</td>
+                    <td>Tijd- en onkostendeclaraties indienen namens andere medewerkers.</td>
+                </tr>
+                <tr>
+                    <td>Alle personeelsgegevens overzetten</td>
+                    <td>Tijd- en kostenboekingen overdragen tussen entiteiten en opdrachten</td>
+                </tr>
+                <tr>
+                    <td>Proces</td>
+                    <td>De factureringsapplicatie openen, WIP-totalen bekijken en facturen maken</td>
+                </tr>
+                <tr>
+                    <td>Eigen inzendingen bekijken</td>
+                    <td>Persoonlijke tijd- en onkostenregistraties gebruiken om analyserapporten te genereren</td>
+                </tr>
+                <tr>
+                    <td>Alle inzendingen van medewerkers bekijken</td>
+                    <td>Tijd- en onkostenregistraties van alle medewerkers gebruiken om analyserapporten te genereren</td>
+                </tr>
+                <tr>
+                    <td>WIP en facturen bekijken</td>
+                    <td>WIP- en factuurinformatie gebruiken om analyserapporten te genereren</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

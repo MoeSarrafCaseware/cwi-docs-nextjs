@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Doublures</h1>
+        <p>De analysetest voor duplicaten identificeert dubbele of mogelijk frauduleuze transacties of records in de financiële overzichten of boekhouding van een bedrijf. Dit kan worden gebruikt om fouten, afwijkingen of frauduleuze activiteiten aan het licht te brengen, zoals het dubbel tellen van inkomsten, uitgaven of activa.</p>
+        <p>Deze analytische test kan nuttig zijn om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Mogelijke pogingen tot manipulatie van financiële overzichten.</p>
+            </li>
+            <li>
+                <p>Financiële rapportagegebieden die minder nauwkeurig of precies zijn</p>
+            </li>
+            <li>
+                <p>Fictieve transacties</p>
+            </li>
+            <li>
+                <p>Systemische problemen in de manier waarop een afdeling transacties verwerkt</p>
+            </li>
+            <li>
+                <p>Onjuist geconfigureerde systeeminstellingen die mogelijk moeten worden verbeterd en verder geëvalueerd</p>
+            </li>
+            <li>
+                <p>Falen van gegevensvalidatie</p>
+            </li>
+            <li>
+                <p>Zwakke interne controles</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de monitoring- en opsporingsactiviteiten</p>
+            </li>
+            <li>
+                <p>Slechte training</p>
+            </li>
+            <li>
+                <p>Beoordelen van risico&apos;s op afwijkingen van materieel belang als gevolg van mogelijke fraude.</p>
+            </li>
+            <li>
+                <p>Transacties per ongeluk dubbel geboekt</p>
+            </li>
+            <li>
+                <p>Overlappende processen of gebrek aan coördinatie tussen afdelingen</p>
+            </li>
+            <li>
+                <p>Problemen met afstemmingen</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>Referentieveld(en)</b> - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld <b>Entry ID</b> voor de grootboekdataset. Deze kolommen maken geen deel uit van het resultaat, maar worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Dit veld is al gedefinieerd in de test en kan niet worden gewijzigd.</p>
+            </li>
+            <li>
+                <p><b>Duplicaatveld(en)</b> - Een of meer velden die worden vergeleken op duplicaten.</p>
+            </li>
+            <li>
+                <p><b>Verschillende veld(en)</b> - Een of meer velden die verschillend moeten zijn voor de dubbele vermeldingen. Deze velden zijn optioneel en worden alleen gebruikt voor analyses waarbij je zoekt naar duplicaten met één veld anders. Als je bijvoorbeeld dezelfde betaling zoekt die op verschillende data is gedaan, dan is het veld betaling het duplicaatveld en het veld datum het veld dat verschillend moet zijn.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>Er zijn geen door de gebruiker ingestelde parameters voor deze test.</p>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op rekening-ID, Type identifier, Boekingsnummer, Geboekte datum, Geboekt op en bedrag</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op oorspronkelijk documenttype en oorspronkelijk documentnummer</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op documenttype en documentnummer</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op verschillende Geboekt door gebruiker</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Dubbel bedrag per identifier</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Dubbele geboekte datum en bedrag in een dagboek</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op omschrijving en bedrag</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Verschillende JE’s zelfde Rekeningnummer, Bedrag en Boekingsdatum</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE - Dubbele boekingen - Op rekeningnummer, bedrag, documentnummer en boekingsdatum</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Andere ingangsdatum : Zelfde rekeningnummer, bedrag, documentnummer</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">dubbele facturen.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">PJ - Dubbel aankoopdata factuur</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">dubbele facturen.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">PJ - Dubbel aankoopbedragen factuur</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">PJ - Dubbele transactie</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">PJ - Dubbele transactie met verschillende factuurdatum</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">PJ - Dubbele transactie verschillende ingevoerde datum</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analysetest voor duplicaten uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste. Merk op dat de mogelijkheid om filters in te stellen momenteel nog niet beschikbaar is en in latere versies van de test beschikbaar zal zijn.</p>
+            </li>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Controleer of er ten minste één veld is geselecteerd om de duplicaatanalyse op uit te voeren.</p>
+            </li>
+            <li>
+                <p>Valideer of een optioneel ander veld is geselecteerd.</p>
+            </li>
+            <li>
+                <p>Valideer of een datumbereikveld is geselecteerd.</p>
+            </li>
+            <li>
+                <p>Kerntest:</p>
+                <ul>
+                    <li>
+                        <p>Alleen dubbele velden getagd - Voer de analyse uit op zoek naar overeenkomsten binnen de database en exporteer alle overeenkomsten naar het resultaatbestand.</p>
+                    </li>
+                    <li>
+                        <p>Ander veld geselecteerd - Voer de analyse uit op zoek naar overeenkomsten waarin het veld dat als anders is geselecteerd niet overeenkomt. Exporteer alle overeenkomsten naar het resultatenbestand.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Voeg een extra kolom toe die de duplicaten groepeert. Bijvoorbeeld, de eerste set duplicaten zou gegroepeerd worden als 1 in deze kolom en de tweede set zou gegroepeerd worden als 2.</p>
+            </li>
+        </ol>
+    </body>
+</html>

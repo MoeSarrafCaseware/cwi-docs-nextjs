@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Échantillonnage</h1>
+        <p>La sélection de l&apos;échantillon est le processus de création d&apos;un sous-ensemble du total des transactions disponibles pour analyser les données et tirer des conclusions. Si la sélection d&apos;échantillons est activée dans votre produit, l&apos;option <b>Sélection d&apos;échantillons</b> est disponible dans l&apos;onglet <b>Transactions</b> de la page <b>Données.</b> <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Les transactions de votre client</a> constituent la population à partir de laquelle vous pouvez générer un échantillon.</p>
+        <p><img src="../../Resources/Images/sample-selection.png" style="width: 842px;height: 293px;" alt="L&apos;option Sélection de l&apos;échantillon dans l&apos;onglet Transactions de la page Données." /></p>
+        <p>Vous avez le choix entre quatre méthodes de sélection des échantillons :</p>
+        <ul>
+            <li>
+                <p><b>Aléatoire</b> - Les transactions sont sélectionnées de manière aléatoire.</p>
+            </li>
+            <li>
+                <p><b>Systématique</b> - Les transactions sont sélectionnées à partir d&apos;un point de départ aléatoire mais avec un intervalle fixe et périodique. L&apos;intervalle est déterminé par la taille de la population totale divisée par la taille de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p><b>Unité monétaire</b> - Les transactions sont sélectionnées à partir d&apos;un point de départ aléatoire mais sur la base d&apos;un intervalle de montants. L&apos;intervalle est déterminé par la quantité absolue de la population divisée par la taille de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p><b>Manuel</b> - Les transactions sont sélectionnées manuellement.</p>
+            </li>
+        </ul>
+        <h2>Générer un échantillon à l&apos;aide de la méthode Random</h2>
+        <p>La méthode aléatoire génère un échantillon basé sur une sélection aléatoire de transactions.</p>
+        <p><b>Pour générer un échantillon à l&apos;aide de la méthode Random :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> , sélectionnez <b>Sélection d&apos;échantillons.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez la méthode <b>aléatoire</b> .</p>
+                <p><img src="../../Resources/Images/sample-random.png" alt="Sélectionnez la méthode aléatoire." /></p>
+            </li>
+            <li>
+                <p>Saisissez la <b>taille de l&apos;échantillon</b> ou le <b>pourcentage</b>souhaité.</p>
+                <p>Vous pouvez saisir une valeur allant jusqu&apos;à 1000 ou 100%.</p>
+            </li>
+            <li>
+                <p>Si vous souhaitez inclure certains montants élevés dans le résultat de la sélection de l&apos;échantillon, vous pouvez également saisir un <b>seuil de montant élevé</b> .</p>
+                <p>Par exemple, si vous entrez un seuil de montant élevé de 500 $, les transactions supérieures ou égales à 500 $ (jusqu&apos;à un maximum de 1 000 transactions) sont exclues de la population échantillonnée et ajoutées au résultat de la sélection de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>GENERER</b>.</p>
+                <p class="note inline"><b>Remarque :</b> Si vous avez saisi un <b>seuil de montant élevé</b>, l&apos;icône d&apos;étoile (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) s&apos;affiche à côté des lignes qui ont été incluses dans l&apos;échantillon en raison du seuil.</p>
+                <p><img src="../../Resources/Images/sample-high-value-threshold.png" alt="Les transactions dont les montants sont élevés (sur la base d&apos;un seuil de 10) ont été incluses dans le résultat de la sélection de l&apos;échantillon marqué par l&apos;icône d&apos;une étoile." /></p>
+            </li>
+        </ol>
+        <h2>Générer un échantillon à l&apos;aide de la méthode systématique</h2>
+        <p>La méthode systématique génère un échantillon basé sur :</p>
+        <ul>
+            <li>
+                <p>Un intervalle périodique fixe déterminé en divisant le nombre de transactions totales dans la population par le nombre de transactions dans la taille de l&apos;échantillon</p>
+            </li>
+            <li>
+                <p>Un point de départ aléatoire qui est une ligne entre un et la valeur de l&apos;intervalle</p>
+            </li>
+        </ul>
+        <p>Par exemple, si la population compte 500 transactions et que la taille de l&apos;échantillon est de 50, l&apos;intervalle est de 500/50 = 10 et le point de départ est une ligne aléatoire entre les lignes un et dix. Si la première ligne sélectionnée est la ligne 2, la ligne suivante sera la ligne 12, puis la ligne 22 et ainsi de suite jusqu&apos;à la fin de la population.</p>
+        <p><b>Générer un échantillon à l&apos;aide de la méthode systématique :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> , sélectionnez <b>Sélection d&apos;échantillons.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez la méthode <b>systématique</b> .</p>
+                <p><img src="../../Resources/Images/sample-systematic.png" alt="Sélectionnez la méthode systématique." /></p>
+            </li>
+            <li>
+                <p>Saisir la <b>taille de l&apos;échantillon</b>souhaitée.</p>
+                <p>Vous pouvez saisir une valeur allant jusqu&apos;à 1000. L&apos;intervalle périodique fixe est calculé en divisant la taille de la population par la taille de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p>Si vous souhaitez inclure certains montants élevés dans le résultat de la sélection de l&apos;échantillon, vous pouvez également saisir un <b>seuil de montant élevé</b> .</p>
+                <p>Par exemple, si vous saisissez un seuil de montant élevé de 500 $, les transactions supérieures ou égales à 500 $ (jusqu&apos;à un maximum de 1 000 transactions) sont exclues de la population et ajoutées au résultat de la sélection de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>GENERER</b>.</p>
+                <p class="note inline"><b>Remarque :</b> Si vous avez saisi un <b>seuil de montant élevé</b>, l&apos;icône d&apos;étoile (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) s&apos;affiche à côté des lignes qui ont été incluses dans l&apos;échantillon en raison du seuil.</p>
+            </li>
+        </ol>
+        <h2>Générer un échantillon à l&apos;aide de la méthode des unités monétaires</h2>
+        <p>La méthode des unités monétaires génère un échantillon basé sur :</p>
+        <ul>
+            <li>
+                <p>Un intervalle de quantité déterminé en divisant la quantité absolue de la population par la taille de l&apos;échantillon</p>
+            </li>
+            <li>
+                <p>Un montant de départ aléatoire qui est une valeur comprise entre 1 $ et le montant de l&apos;intervalle</p>
+            </li>
+            <li>
+                <p>Un point de départ qui est la première ligne de la population dont le solde absolu cumulé est supérieur ou égal au montant de départ.</p>
+            </li>
+            <li>
+                <p>Les lignes sélectionnées suivantes sont celles dont les soldes absolus cumulés sont supérieurs ou égaux au montant de l&apos;intervalle plus le montant de la ligne sélectionnée précédemment</p>
+            </li>
+        </ul>
+        <p>Dans cette méthode, chaque dollar de la population est considéré comme une unité d&apos;échantillonnage, de sorte que les transactions dont la valeur est élevée ont proportionnellement plus de chances d&apos;être sélectionnées. Les transactions peuvent être incluses plusieurs fois dans la sélection si les montants des transactions sont supérieurs au montant de l&apos;intervalle.</p>
+        <p>Par exemple, si vous avez une population dont le montant absolu total est de 300 000 $ et que vous entrez une taille d&apos;échantillon de 100, l&apos;intervalle de quantité est de 300 000/100 = 3 000 $. Le montant de départ est un montant aléatoire compris entre 1 et 3 000 $. Le point de départ est la première ligne de la population dont le solde absolu cumulé est supérieur ou égal au montant de départ. Supposons que le montant de départ sélectionné soit de 2 125 $, que la ligne 1 ait un solde de 500 $ et que la ligne 2 ait un solde absolu cumulé de 2 625 $. La première ligne sélectionnée dans ce cas est la ligne 2. La ligne sélectionnée suivante est celle dont le solde absolu cumulé est supérieur ou égal à 5 125 $ (2 125 $ + 3 000 $) et ainsi de suite jusqu&apos;à la fin de la population.</p>
+        <p>N&apos;oubliez pas que les transactions peuvent être incluses plusieurs fois dans la sélection. Supposons que la deuxième ligne sélectionnée présente un solde absolu cumulé de 10 250 $. La ligne sélectionnée suivante est celle dont le solde absolu cumulé est supérieur ou égal à 8125 $ (5125 $ + 3000 $). Puisque la ligne sélectionnée actuelle répond aux critères de sélection, la transaction est à nouveau incluse dans la sélection. En d&apos;autres termes, la ligne dont le solde absolu cumulé est de 10 250 $ est sélectionnée pour les intervalles de 5 125 $ et 8 125 $.</p>
+        <p>La colonne <b>Intervalle d&apos;occurrence</b> indique combien de fois une transaction a été sélectionnée.</p>
+        <p><img src="../../Resources/Images/sampling-interval-occurence.png" alt="La colonne Occurrence de l&apos;intervalle." /></p>
+        <p><b>Pour générer un échantillon à l&apos;aide de la méthode des unités monétaires :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> , sélectionnez <b>Sélection d&apos;échantillons.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez la méthode de l&apos; <b>unité monétaire</b> .</p>
+                <p><img src="../../Resources/Images/sample-monetary-unit.png" alt="Sélectionnez la méthode de l&apos;unité monétaire." /></p>
+            </li>
+            <li>
+                <p>Saisir la <b>taille de l&apos;échantillon</b>souhaitée.</p>
+                <p>Vous pouvez saisir une valeur allant jusqu&apos;à 1000. Le montant est calculé en divisant la quantité absolue de la population par la taille de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p>Si vous souhaitez inclure certains montants élevés dans le résultat de la sélection de l&apos;échantillon, vous pouvez également saisir un <b>seuil de montant élevé</b> .</p>
+                <p>Par exemple, si vous saisissez un seuil de montant élevé de 500 $, les transactions supérieures ou égales à 500 $ (jusqu&apos;à un maximum de 1 000 transactions) sont exclues de la population et ajoutées au résultat de la sélection de l&apos;échantillon.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>GENERER</b>.</p>
+                <p class="note inline"><b>Remarque :</b> Si vous avez saisi un <b>seuil de montant élevé</b>, l&apos;icône d&apos;étoile (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) s&apos;affiche à côté des lignes qui ont été incluses dans l&apos;échantillon en raison du seuil.</p>
+            </li>
+        </ol>
+        <h2>Générer un échantillon à l&apos;aide de la méthode manuelle</h2>
+        <p>La méthode manuelle génère un échantillon basé sur une sélection manuelle des transactions.</p>
+        <p><b>Pour générer un échantillon à l&apos;aide de la méthode manuelle :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> , sélectionnez <b>Sélection d&apos;échantillons.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez la méthode <b>manuelle.</b></p>
+                <p><img src="../../Resources/Images/sample-manual.png" alt="Sélectionnez la méthode manuelle." /></p>
+            </li>
+            <li>
+                <p>Dans la liste des transactions, cochez la case de chaque transaction à inclure dans l&apos;échantillon.</p>
+                <p><img src="../../Resources/Images/sample-manual-selection.png" alt="Cochez la case d&apos;une transaction pour l&apos;inclure dans l&apos;échantillon." /></p>
+                <p>Vous pouvez sélectionner la colonne <b>Date comptable</b> ou <b>Montant</b> pour trier la liste par date comptable ou par montant au fur et à mesure de vos sélections. Une flèche s&apos;affiche à côté de la colonne pour indiquer que la liste est triée par ordre croissant (<img src="../../Resources/Images/icon-sample-filter-ascend.png" style="vertical-align: text-bottom;" />) ou décroissant (<img src="../../Resources/Images/icon-sample-filter-descend.png" style="vertical-align: text-bottom;" />). Notez que vos sélections ne sont pas effacées si vous effectuez un tri. Pour effacer vos sélections, cliquez sur le bouton <b>Effacer la sélection</b> .</p>
+            </li>
+        </ol>
+        <h2>Exporter un échantillon</h2>
+        <p>Après avoir généré un échantillon de données, vous pouvez l&apos;exporter vers un fichier CSV ou le copier dans le presse-papiers.</p>
+        <p><b>Pour exporter un échantillon :</b></p>
+        <ol>
+            <li>
+                <p>Générer un échantillon.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le bouton <b>EXPORT</b> .</p>
+                <p><img src="../../Resources/Images/sample-export.png" alt="Sélectionnez le bouton EXPORT après avoir généré un échantillon." /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Exportation d&apos;échantillon, sélectionnez la méthode d&apos;exportation.</p>
+                <p>Si vous sélectionnez <b>Exporter vers CSV</b>, saisissez un nom pour le fichier CSV.</p>
+                <p><img src="../../Resources/Images/sample-export-dialog.png" alt="Sélectionnez une méthode d&apos;exportation dans la boîte de dialogue Exportation d&apos;échantillons. Si vous sélectionnez Exporter vers CSV, saisissez un nom pour le fichier." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez la <b>nature du test</b> dans la liste déroulante.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>CONTINUE</b>.</p>
+                <p>L&apos;échantillon est exporté sous forme de fichier CSV ou copié dans le presse-papiers en fonction de votre sélection.</p>
+            </li>
+        </ol>
+    </body>
+</html>

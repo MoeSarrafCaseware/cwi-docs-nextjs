@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="Import2"></a>Importer les transactions du client et d&apos;autres données du grand livre auxiliaire à partir d&apos;un fichier CSV ou Excel</h1>
+        <p>Si votre logiciel de comptabilité n&apos;est pas pris en charge par l&apos;un de nos utilitaires d&apos;importation, vous pouvez exporter les données de vos clients dans un fichier CSV (valeurs séparées par des virgules) ou Excel, puis effectuer l&apos;importation à l&apos;aide de ce fichier. Le format du fichier peut être .xlsx ou .csv et doit répondre aux exigences du fichier pour que l&apos;importation soit réussie. Pour en savoir plus, voir <a href="CSV-transaction-file-requirements.htm">Préparer un fichier CSV ou Excel pour importer des transactions ou des données de comptabilité auxiliaire</a>.</p>
+        <p>Après avoir téléchargé le fichier, vous devez affecter les champs de données du fichier aux champs cibles prédéfinis de l&apos;ensemble de données pour terminer l&apos;importation. Pour en savoir plus sur les options des jeux de données, voir <a href="Import-and-manage-data.htm#Dataset">Types de jeux de données</a>. Tous les types de jeux de données ne sont pas disponibles s&apos;ils n&apos;ont pas été activés dans votre produit.</p>
+        <h2 class="collapsible"><a name="Date"></a>Format de la date</h2>
+        <p>Dans les champs où une date est requise, le format de la date doit être correctement défini :</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Importation de données du client</h2>
+        <p><b>Pour importer les données d&apos;un client à partir d&apos;un fichier Excel ou CSV :</b></p>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> . Les paramètres du produit s&apos;ouvrent sur l&apos;onglet <b>Zones</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="2">
+                <p>Dans la boîte de dialogue Ajouter un nouveau jeu de données, parcourez ou faites glisser le fichier CSV ou Excel dans la zone de téléchargement de fichiers.</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Configurer un nouveau jeu de données</b> , sélectionnez le <b>type de jeu de données</b> dans la liste déroulante.</p>
+                <p>Pour en savoir plus sur les options des jeux de données, voir <a href="Import-and-manage-data.htm#Dataset">Types de jeux de données</a>. Tous les types de jeux de données ne sont pas disponibles s&apos;ils n&apos;ont pas été activés dans votre produit.</p>
+                <p>Si vous importez une balance générale, dans <b>Type de données</b>, sélectionnez Balance générale. Si les balances de planification sont activées dans votre produit, sélectionnez si vous importez la balance de <a href="../../Glossary/F/final-balance.htm">vérification finale</a> ou une <a href="../../Glossary/P/planning-balance.htm">balance de vérification de planification</a> , puis sélectionnez <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>Examinez la ligne d&apos;en-tête sélectionnée automatiquement pour vous assurer que l&apos;en-tête correct a été sélectionné. Si vous souhaitez sélectionner manuellement la ligne d&apos;en-tête, sélectionnez <b>Ajuster la ligne d&apos;en-tête</b> et sélectionnez la ligne correcte.</p>
+                <p>Si vous importez un fichier CSV et que vous souhaitez remplacer le délimiteur par une autre valeur que la virgule par défaut (<b>,</b>), sélectionnez <b>Ajuster la ligne d&apos;en-tête</b> et sélectionnez le délimiteur correct.</p>
+                <p class="note"><b>Remarque :</b> La détection automatique des en-têtes et la sélection manuelle des en-têtes ne prennent en compte que les 30 premières lignes du fichier importé. Les lignes au-delà des 30 premières lignes ne peuvent pas être sélectionnées comme en-tête.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ConfigureNewDataset.png" alt="Visualisation de l&apos;aperçu de la ligne d&apos;en-tête." /></p>
+        <ol>
+            <li value="5">
+                <p>Select <b>Upload</b>.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;onglet <b>Jeux de données</b> , cliquez sur <b>Configurer</b> pour affecter les colonnes des données importées aux champs Caseware.</p>
+                <p><img src="../../Resources/Images/ConfigureDataset.png" alt="Cliquez sur Configurer pour affecter les champs des données importées aux champs Caseware." /></p>
+            </li>
+        </ol>
+        <ol>
+            <li value="7">
+                <p>On the <b>Assign Fields</b> page,</p>
+                <ul>
+                    <li>
+                        <p>Utilisez les menus déroulants pour attribuer manuellement un champ à chaque colonne du fichier importé</p>
+                    </li>
+                    <li>
+                        <p>Utilisez le menu déroulant <b>Sélectionner une présentation de</b> données pour appliquer une présentation de données précédemment enregistrée et attribuer automatiquement les rubriques. Pour en savoir plus, voir <a href="Manage-your-imported-data.htm#Save">Sauvegarder une présentation de données</a>.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p class="indent">S&apos;il y a des erreurs, un indicateur s&apos;affiche pour les colonnes qui contiennent des erreurs. Vous pouvez ensuite sélectionner l&apos;indicateur et l&apos;erreur pour obtenir plus d&apos;informations sur l&apos;erreur et les lignes spécifiques qui ont été marquées.</p>
+        <p class="indent"><img src="../../Resources/Images/ImportErrorExample.png" alt="Indicateur d&apos;erreur d&apos;importation" /></p>
+        <ol>
+            <li value="8">
+                <p>Sélectionnez <b>Inclure les comptes à solde nul</b> si vous souhaitez inclure les comptes à solde nul dans l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p><img src="../../Resources/Images/ViewData-TrialBalance.png" alt="La sélection du bouton Voir les données permet d&apos;afficher les données importées" /></p>
+        <p class="indent"> </p>
+        <p>Si vous avez importé une balance de vérification, l&apos;onglet <b>Comptes</b> apparaît. Si le grand livre ou l&apos;un des grands livres auxiliaires est sélectionné, une nouvelle page s&apos;affiche et présente l&apos;ensemble de données.</p>
+        <p>Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p>Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p>Pour plus d&apos;informations, voir <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client</a>.</p>
+        <h2>Réimporter la balance de vérification</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

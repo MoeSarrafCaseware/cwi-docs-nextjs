@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Troubleshooting for Caseware Cloud Connector</h1>
+        <p>This section outlines possible solutions for common issues users may encounter while using Caseware Cloud Connector.</p>
+        <h2>Cloud Connector pane is blank</h2>
+        <p>There are several reasons why the contents of the Cloud Connector pane may not display:</p>
+        <ul>
+            <li>
+                <p>Page loading time</p>
+                <p>You may occasionally need to wait longer than usual for the page to load.</p>
+            </li>
+            <li>
+                <p>When new updates are released for Cloud Connector, the add-in does not always immediately update. Complete the following steps to resolve the issue:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>From the <b>Home</b> toolbar of your Excel document, select <b>Add-ins</b> | <b>More Add-ins</b> | <b>My Add-ins</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the dialog, select <b>Refresh</b>.</p>
+                    </li>
+                    <li>
+                        <p>Close and reopen Excel.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>A known Excel bug that prevents the pane from loading</p>
+                <p>If the pane still does not load, select the Cloud Connector drop-down and select <b>Resize</b>.</p>
+                <p><img src="../../Resources/Images/cloud-connector-resize.png" alt="The Resize option in the Cloud Connector drop-down." /></p>
+            </li>
+            <li>
+                <p>A runtime error that prevents the pane from loading</p>
+                <p>If the previous troubleshooting tips don’t resolve the issue, complete the following steps before contacting our support team.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Right-click on the pane and select <b>Inspect</b>. The developer tools window opens.</li>
+                    <li>Select the <b>Console</b> tab at the top of the window.</li>
+                    <li>Take a screenshot of the <b>Console</b> tab contents and send it to our support team to help identify and resolve the issue.</li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Invalid firm message</h2>
+        <p>If you receive an invalid firm message, you may have the wrong version of the Caseware Cloud Connector add-in installed.</p>
+        <p><b>To confirm which version of the add-in is installed:</b></p>
+        <ol>
+            <li>
+                <p>Select the drop-down at the top of the Cloud Connector pane and select <b>Security Info</b>.</p>
+            </li>
+            <li>
+                <p>If the URL contains “cwcloudpartner”, you have the incorrect version installed.</p>
+                <p><img src="../../Resources/Images/cloud-connector-partner-url.png" alt="The Security Info dialog." /></p>
+            </li>
+        </ol>
+        <p><b>To uninstall the add-in:</b></p>
+        <ol>
+            <li>
+                <p>On the Excel ribbon, select <b>My Add-ins</b> from the <b>Insert</b> tab.</p>
+            </li>
+            <li>
+                <p>Select Caseware Cloud Connector, then <b>Remove</b>.</p>
+            </li>
+        </ol>
+        <p>To re-install the add-in, see <a href="How-to-get-started-with-Cloud-Connector.htm">Get started with Caseware Cloud Connector</a>.</p>
+        <h2>Multiple versions of Cloud Connector installed</h2>
+        <p>If you have multiple versions of Caseware Cloud Connector installed, Cloud Connector will not work as expected.</p>
+        <p>To confirm how many versions of Cloud Connector you have installed, select <b>My Add-ins</b> from the <b>Insert</b> tab.</p>
+        <p><img src="../../Resources/Images/cloud-connector-addins.png" alt="The Insert tab of an Excel file." /></p>
+        <p>If you have multiple Cloud Connector add-ins installed, uninstall the add-ins.</p>
+        <p><b>To uninstall the add-in:</b></p>
+        <ol>
+            <li>
+                <p>Select <b>My Add-ins</b> from the <b>Insert</b> tab.</p>
+            </li>
+            <li>
+                <p>Select Caseware Cloud Connector, then <b>Remove</b>.</p>
+            </li>
+        </ol>
+        <p>After you uninstall the add-ins, copy your sheets to a new Excel workbook and reupload it to your engagement file to replace the old file. You can then re-install the correct version of Cloud Connector. For more information, see <a href="How-to-get-started-with-Cloud-Connector.htm">Get started with Caseware Cloud Connector</a>.</p>
+        <h2>General troubleshooting</h2>
+        <p>For general issues that are not covered in the previous sections, try clearing your cache and re-installing the add-in.</p>
+        <p style="font-weight: bold;">To uninstall the add-in:</p>
+        <ol>
+            <li>
+                <p>On the Excel ribbon, select <b>My Add-ins</b> from the <b>Insert</b> tab.</p>
+            </li>
+            <li>
+                <p>Select Caseware Cloud Connector, then <b>Remove</b>.</p>
+            </li>
+            <li>
+                <p>Clear your Excel cache. For more information, see <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">Clear the Office cache</a>.</p>
+            </li>
+        </ol>
+        <p>You can then re-install the correct version of Cloud Connector. For more information, see <a href="How-to-get-started-with-Cloud-Connector.htm">Get started with Caseware Cloud Connector</a>.</p>
+    </body>
+</html>

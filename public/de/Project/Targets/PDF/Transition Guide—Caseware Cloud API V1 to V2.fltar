@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Target for generating User Guide PDF"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/PDF/Transition Guide—Caseware Cloud API V1 to V2.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Front-Page.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/Print.css"
+  ConditionTagExpression="exclude[General.Online]"
+  OutputFile="Transition-Guide-CasewareCloudAPI-V1-V2.pdf">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="doc" />
+  <Variables>
+    <Variable
+      Name="General/StreetAddress">1100–351 King St East,</Variable>
+    <Variable
+      Name="General/ProductName">Caseware Cloud</Variable>
+    <Variable
+      Name="General/UserGuideTitle">Title</Variable>
+    <Variable
+      Name="General/VersionNumber">1.0</Variable>
+    <Variable
+      Name="General/CityStateZip">Toronto ON, M5A 0L6 Canada</Variable>
+    <Variable
+      Name="General/CompanyName">Caseware International Inc.</Variable>
+    <Variable
+      Name="General/Fax">Fax: 416-867-1906</Variable>
+    <Variable
+      Name="General/PhoneNumber">Tel: 416-867-9504</Variable>
+    <Variable
+      Name="General/Year">2024</Variable>
+    <Variable
+      Name="General/GuideTitle">Subtitle</Variable>
+    <Variable
+      Name="General/ProductTitle">Title</Variable>
+    <Variable
+      Name="General/Subtitle">Caseware Cloud API V1 to V2</Variable>
+    <Variable
+      Name="General/Title">Transition Guide</Variable>
+  </Variables>
+  <Glossaries />
+  <PDF
+    Tagged="false" />
+</CatapultTarget>

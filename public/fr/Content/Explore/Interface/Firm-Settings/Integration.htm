@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Paramètres du cabinet – Intégration</h1>
+        <h2 id="Settings">Paramètres de l&apos;API</h2>
+        <p>Intégrer le nuage avec des applications externes à l&apos;aide de clients API. Vous pouvez créer un maximum de 50 clients API pour votre entreprise. Nous recommandons d&apos;intégrer une application par client API.</p>
+        <p>Les informations sur les clients provenant d&apos;applications intégrées sont automatiquement mises à jour dans le nuage grâce à l&apos;utilisation de jetons API. Les jetons API sont utilisés par les développeurs de l&apos;entreprise pour authentifier le processus d&apos;intégration.</p>
+        <p><b>Pour créer un nouveau client API :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur</i> ou des autorisations équivalentes.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), sélectionnez <b>Paramètres | Intégration | Paramètres API.</b></p>
+            </li>
+            <li>
+                <p>Dans le champ <b>Alias de client</b> , saisissez un nom d&apos;identification pour le client API, tel que le nom de l&apos;application externe que vous intégrez.</p>
+                <p><img src="../../../Resources/Images/api-client-1.png" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Générer un client</b>.</p>
+                <p>Détails de l&apos;affichage du nouveau client API.</p>
+                <p><img src="../../../Resources/Images/api-client-2.png" /></p>
+            </li>
+            <li>
+                <p>Veillez à copier l&apos;identifiant et le secret du client dans un document texte pour une utilisation ultérieure. Le secret du client ne sera plus affiché. Sélectionnez <b>Fermer</b>.</p>
+            </li>
+            <li>
+                <p>Le client API est créé.</p>
+                <p><img src="../../../Resources/Images/api-client-3.png" /></p>
+                <ul>
+                    <li><b>Editer :</b> Modifier l&apos;alias du client.</li>
+                    <li><b>Supprimer :</b> Supprimer le client API.</li>
+                    <li><b>Réinitialiser le secret du client :</b> Générer un nouveau secret client. Nous recommandons de réinitialiser le secret à intervalles réguliers pour des raisons de sécurité. Notez que vous devrez mettre à jour toutes les applications externes qui utilisaient le secret précédent.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Fournissez l&apos;identifiant et le secret du client API aux développeurs de votre entreprise afin qu&apos;ils puissent générer le jeton API.</p>
+            </li>
+        </ol>
+    </body>
+</html>

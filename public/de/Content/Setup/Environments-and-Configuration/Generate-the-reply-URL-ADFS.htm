@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Antwort-URL generieren (ADFS)</h1>
+        <p>ADFS verwendet Ihre Antwort-URL, um Benutzer zurück zu Caseware Cloud zu leiten, nachdem sie sich angemeldet haben.</p>
+        <p><b>Eine Antwort-URL in Caseware Cloud generieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. gleichwertige Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem Hauptmenü (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Einstellungen | Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Vervollständigen Sie die folgenden Felder auf der Seite Identitätsanbieter:</p>
+                <ul>
+                    <li>
+                        <p><b>Name des Identitätsanbieters:</b> Geben Sie einen aussagekräftigen Namen für Ihren Identitätsanbieter ein. Zum Beispiel ADFS. Dieser Name wird neben der Antwort-URL angezeigt, um diese zu identifizieren.</p>
+                        <p class="note"><b>Hinweis:</b> Dieser Name darf nicht mehr als 32 Zeichen umfassen und es dürfen nur Buchstaben, Zahlen, Unterstriche, Plus- und Minuszeichen enthalten sein.</p>
+                    </li>
+                    <li>
+                        <p><b>Metadatenendpunkt des Identitätsanbieters:</b> Geben Sie Ihren Metadatenendpunkt im folgenden Format ein:</p>
+                        <p>https://your-adfs.com/adfs/.well-known/openid-configuration</p>
+                        <p>Ersetzen Sie <i>your-adfs.com</i> mit Ihrem ADFS Hostname.</p>
+                    </li>
+                    <li>
+                        <p><b>Kunden-ID:</b> Fügen Sie die <b>Kunden-ID</b> ein, die Sie zuvor <a href="Create-a-new-application-group.htm">zuvor in ein Textdokument kopiert haben</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Geheimer Clientschlüssel:</b> Fügen Sie den <b>Geheimen Clientschlüssel</b> ein, den Sie <a href="Create-a-new-application-group.htm">zuvor in ein Textdokument kopiert haben</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="Die Seite Einstellungen für Einmaliges Anmelden." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>. Ihre Antwort-URL wird angezeigt.</p>
+                <p class="warning"><b>Hinweis:</b> Klicken Sie auf das Symbol <b>In Zwischenablage kopieren</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) und fügen Sie die Antwort-URL zur späteren Verwendung in ein Textdokument ein. Beschriften Sie es mit <b>Antwort-URL</b>.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Verwenden Sie das Symbol In Zwischenablage kopieren, um Ihre Antwort-URL zu kopieren." /></p>
+            </li>
+        </ol>
+        <h2>Stellen Sie Ihre Antwort-URL in ADFS</h2>
+        <p>Nachdem Sie eine Antwort-URL erstellt haben, müssen Sie diese zu ADFS hinzufügen, um sicherzustellen, dass die Benutzer sich erfolgreich anmelden können.</p>
+        <p><b>Ihre Antwort-URL in ADFS festlegen:</b></p>
+        <ol>
+            <li>
+                <p>Klicken Sie in der ADFS-Verwaltungskonsole auf den Ordner <b>Application Groups</b> und führen Sie danach einen Doppelklick auf Ihrer <a href="Create-a-new-application-group.htm">neuen Anwendungsgruppe</a> aus.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Führen Sie im Dialog Eigenschaften einen Doppelklick auf der Serveranwendung aus.</p>
+                <p><img src="../../Resources/Images/adfs-reply-url-01.png" /></p>
+            </li>
+            <li>
+                <p>Entfernen Sie im Dialog Server application Properties den Inhalt des Felds Redirect URI und fügen Sie die <b>Antwort-URL</b> ein, die Sie zuvor in einem Textdokument dokumentiert/gespeichert haben. Klicken Sie auf <b>Hinzufügen</b> und dann auf <b>OK</b>.</p>
+                <p><img src="../../Resources/Images/adfs-reply-url-02.png" /></p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Test-your-single-sign-on-integration.htm">Integration Einmaliges Anmelden testen</a></p>
+    </body>
+</html>

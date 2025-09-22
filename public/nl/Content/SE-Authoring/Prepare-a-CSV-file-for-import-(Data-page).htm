@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Prepare"></a>Een CSV-bestand voorbereiden voor import (gegevenspagina)</h1>
+        <p>Het CSV-bestand moet de volgende kolommen bevatten Ze mogen lege waarden hebben, maar elke kolom moet beschikbaar zijn in het bestand:</p>
+        <ul>
+            <li>Kaartnummer.</li>
+            <li>Rekeningnaam</li>
+            <li>Verzendbaar</li>
+            <li>Type</li>
+            <li>Aanmelden</li>
+        </ul>
+        <p>Je kunt optioneel de volgende kolommen opnemen:</p>
+        <ul>
+            <li>Gewicht</li>
+            <li>Sta  toe</li>
+            <li>Tegenstrijdige naam</li>
+            <li>Inconsistente naam</li>
+            <li>Afmeting Categorie</li>
+            <li>Uitgesloten Afmetingen</li>
+            <li>Doel opnieuw toewijzen voor tegengestelde accounts</li>
+            <li>Groepsindeling</li>
+            <li>Koppeling naar een belastinggroep</li>
+            <li>Koppeling naar een rekeningstelselgroep</li>
+            <li>Fiets</li>
+            <li>Gebied</li>
+            <li>Onderdelen</li>
+            <li>Standaardgroep</li>
+        </ul>
+        <p>U kunt deze kolommen gebruiken om <a href="Set-up-automapping-(Data-page).htm">automapping</a> (automatische toewijzing van rekeningen aan groepen) in te <a href="Set-up-automapping-(Data-page).htm">stellen</a> wanneer gebruikers een nieuwe proefbalans importeren.</p>
+        <p><a name="csv-columns-and-values"></a>De volgende lijst beschrijft de kolommen en de verwachte waarde voor elke kolom.</p>
+        <h2>Map Number (mandatory)</h2>
+        <p>Voer een kaartnummer in voor de groepering. Ook bekend als <i>groepsnummer</i> in SE.</p>
+        <p><b>Verwachte waarde:</b></p>
+        <p><i>Getal</i> - kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+        <h2>Rekeningnaam</h2>
+        <p>Voer de naam voor de map in. Ook bekend als <i>groepsnaam</i> in SE.</p>
+        <p><b>Verwachte waarde:</b></p>
+        <p><i>Tekst</i> - kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+        <p>Als dit veld leeg blijft, wordt <b>&quot;[Naamloos]&quot;</b> weergegeven als groepsnaam.</p>
+        <h2>Verzendbaar</h2>
+        <p>Geef aan of accounts kunnen worden toegewezen aan de groep.</p>
+        <p><b>Verwachte waarde:</b></p>
+        <ul>
+            <li><b>Y</b> of <b>1</b> of <b>WAAR-</b>accounts kunnen niet worden toegewezen aan de groep</li>
+            <li><b>N</b> of <b>0</b> of <b>FALSE</b> - accounts kunnen worden toegewezen aan de groep</li>
+        </ul>
+        <p>Als dit veld leeg blijft, gaat het systeem ervan uit dat de accounts aan een groep kunnen worden toegewezen en wordt een van deze waarden toegevoegd<b>(N</b> of <b>0</b> of <b>FALSE</b>).</p>
+        <h2>Type (verplicht)</h2>
+        <p>Geeft aan of de groep behoort tot de balans, winst- en verliesrekening, gerealiseerde en niet-gerealiseerde resultaten of het nettoresultaat.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <ul>
+            <li><![CDATA[
+]]>Balans</li>
+            <li><![CDATA[
+]]><b>I</b> - voor resultatenrekening</li>
+            <li><![CDATA[
+]]><b>C</b> - voor gerealiseerde en niet-gerealiseerde resultaten</li>
+            <li><![CDATA[
+]]><b>N</b> - voor netto-inkomen</li>
+        </ul>
+        <h2>Aanmelden</h2>
+        <p>Geef aan of de groepering voor debetrekeningen of creditrekeningen moet zijn.</p>
+        <p>Verwachte waarde:</p>
+        <ul>
+            <li><b>D=debet</b></li>
+            <li><b>C=credit</b>;</li>
+        </ul>
+        <p>Als dit veld leeg blijft, gaat het systeem ervan uit dat debet het groeperingsteken is en wordt de waarde <b>D</b> toegepast.</p>
+        <h2>Groepsindeling</h2>
+        <p>Voer de automatiseringsclassificatie voor de groepering in.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p><i>Tekst </i></p>
+        <p>Kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+        <h2>Gewicht</h2>
+        <p>Voer een beschrijving voor het veld in.</p>
+        <p>Als meerdere groepen dezelfde classificatie hebben, wordt elke account met die classificatie toegewezen aan de groep met het hoogste wegingsnummer. Groepen met een positief gewicht krijgen bijvoorbeeld de voorkeur boven groepen waaraan geen gewicht is toegekend.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Numerieke waarde tussen -1 en +1.</p>
+        <p>Als dit veld leeg blijft, krijgt het gewicht de waarde <b>0</b>.</p>
+        <h2>Sta  toe</h2>
+        <p>Geef aan of de groep beperkingen heeft voor het rekeningsaldo.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <ul>
+            <li>* (Rekeningen met een toe te wijzen saldo)</li>
+            <li><b>+</b> (Alleen rekeningen met een debetsaldo (positief) worden toegewezen)</li>
+            <li><![CDATA[
+]]>- (Alleen rekeningen met een creditsaldo (negatief) worden toegewezen)</li>
+        </ul>
+        <p>Als dit veld leeg wordt gelaten, gaat het systeem ervan uit dat de rekeningen met een willekeurig saldo kunnen worden toegewezen aan de groep en wordt de waarde <b>*</b> toegepast.</p>
+        <h2>Koppeling naar een belastinggroep</h2>
+        <p>Voer een groepnummer in uit het vervolgkeuzemenu <b>Koppeling naar een groep in de</b> groepstructuur van <b>de Belastingcode in</b> het dialoogvenster Groepseigenschappen.</p>
+        <p>Hierdoor kun je accounts automatisch toewijzen aan groepen in andere groeperingsstructuren op basis van hun initiële groepstoewijzing.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p><i>Tekst</i></p>
+        <h2>Koppeling naar een rekeningstelselgroep</h2>
+        <p>Voer een groepnummer in uit het vervolgkeuzemenu <b>Koppeling naar een groep in de voorgeschreven</b> groeperingsstructuur in het dialoogvenster Groepseigenschappen.</p>
+        <p>Hierdoor kun je accounts automatisch toewijzen aan groepen in andere groeperingsstructuren op basis van hun initiële groepstoewijzing.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p><i>Tekst</i></p>
+        <h2>Fiets</h2>
+        <p>Voer een cyclus in voor de groep (zoals gedefinieerd in de <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Productinstellingen</a>).</p>
+        <p>Als je Cloud app een risicobeoordelingsdocument bevat, worden items in die groep automatisch onder deze cyclus weergegeven in het document wanneer je een groep toewijst aan een bedrijfscyclus.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Gebied</h2>
+        <p style="font-style: normal;">Voer een gebied in voor de groep (zoals gedefinieerd in de <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Productinstellingen</a>).</p>
+        <p style="font-style: normal;">Als je Cloud app een risicobeoordelingsdocument bevat, worden items in die groep automatisch onder deze cyclus weergegeven in het document wanneer je een groep toewijst aan een bedrijfscyclus.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Onderdelen</h2>
+        <p>Componenten helpen je bij het opzetten van een markt- of regio-gestuurde zichtbaarheidslogica voor balansgroepen. Als de entiteit bijvoorbeeld actief is in de landbouwsector, geef dan proefbalansgroepen weer die relevant zijn voor de landbouw. Voor meer informatie, zie:</p>
+        <p>Voer een of meer onderdelen in om toe te wijzen aan de groep (zoals gedefinieerd in de <a href="Define-components.htm">Productinstellingen</a>).</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <p>Gebruik een dubbele punt om meerdere componenten te scheiden die zijn gekoppeld aan een groep (voorbeeld: component1;component2;component3).</p>
+        <h2>Tegenstrijdige naam</h2>
+        <p>Weergave voor groepsbedragen die tegenovergesteld zijn aan het normale teken van de groep.</p>
+        <p>Er verschijnt bijvoorbeeld &quot;Bank Overdraft&quot; in plaats van &quot;Bank&quot; als het saldo een krediet is.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Inconsistente naam</h2>
+        <p>Voer, indien van toepassing, een alternatieve beschrijving voor de groep in die moet worden weergegeven wanneer het huidige en het vorige jaar tegenovergestelde tekens hebben.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Afmeting Categorie</h2>
+        <p>Voer een dimensiecategorie in voor de groep (kies uit de lijst die is gedefinieerd in <a href="Add-dimensions.htm#Add">Productinstellingen</a>).</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Uitgesloten Afmetingen</h2>
+        <p>Voer de dimensies in die zijn uitgesloten van de geselecteerde categorie.</p>
+        <p class="note inline"><b>Let op:</b> Deze eigenschap is alleen beschikbaar als er een waarde voor <b>Dimension Category</b> bestaat.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <p>Gebruik een dubbele punt om meerdere uitgesloten dimensies te scheiden (voorbeeld: dimensie1;dimensie2)</p>
+        <h2>Doel opnieuw toewijzen voor tegengestelde accounts</h2>
+        <p>If applicable, enter a group from the Financials grouping structure for accounts with a contrary balance.</p>
+        <p>Als een rekening automatisch aan deze groep zou worden toegewezen, maar niet overeenkomt met het geselecteerde teken (debet of credit) voor deze groep, dan wordt deze automatisch toegewezen aan het <b>doel van het opnieuw toewijzen</b>.<b> </b>Bijvoorbeeld, negatief <b>actief</b> --&gt; positief <b>passief </b></p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <p style="font-style: italic;">Tekst</p>
+        <h2>Standaardgroep</h2>
+        <p style="font-style: normal;">Specify whether or not the group is a default group. Zie <a href="Group-properties.htm#Default">Gebieden toevoegen</a>voor meer informatie.</p>
+        <p style="font-weight: bold;">Verwachte waarde:</p>
+        <ul>
+            <li><b>Y</b> of <b>1</b> of <b>WAAR</b></li>
+            <li><![CDATA[
+]]><b>N</b> of <b>0</b> of <b>FALSE</b></li>
+        </ul>
+    </body>
+</html>

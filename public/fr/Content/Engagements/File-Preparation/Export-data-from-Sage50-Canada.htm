@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Exporter des données à partir de Sage 50 Canada vers Caseware Cloud</h1>
+        <p>Les données que vous devez exporter de Sage 50 Canada varient selon le type de jeu de données Caseware dans lequel vous voulez importer des données. Consultez le tableau ci-dessous pour passer aux instructions permettant d&apos;exporter les données dont vous avez besoin. Les données de Caseware Cloud sont organisées en plusieurs ensembles de données standard en fonction de l&apos;objectif des données, telles que la balance de vérification, le grand livre et les données de comptabilité auxiliaire, entre autres.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données dans Caseware Cloud, ainsi que sur les descriptions des types de données, voir <a href="Import-and-manage-data.htm">Importer et gérer des données</a>.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Si vous avez besoin de ce type de données dans Caseware Cloud</th>
+                    <th>Importation de ce fichier à partir de Sage 50 Canada</th>
+                    <th>Ce fichier Sage 50 est facultatif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Understand-genledger-data.htm#General">Grand livre</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions par compte</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Trial-balance-described.htm">Balance</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions par compte</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-invoices.htm">Comptes fournisseurs – Factures</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Enregistrement dans le grand livre des fournisseurs</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Enregistrement dans le grand livre des fournisseurs</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-payments-made.htm">Comptes fournisseurs – Paiements effectués</a></td>
+                    <td><a href="#Export_Vendor_Purchases_Detail_report">Détail des achats du fournisseur</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Enregistrement dans le grand livre des fournisseurs</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-suppliers.htm">Comptes fournisseurs – Fournisseurs</a></td>
+                    <td><a href="#Export_the_Payments_Transactions_record">Opérations de paiement</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-open-balances.htm">Comptes fournisseurs – Soldes non utilisés</a></td>
+                    <td><a href="#Export_the_Aged_Overdue_Purchase_Invoices_Detail_report">Détail des factures d&apos;achat échues et périmées</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-customers.htm">Comptes clients – Clients</a></td>
+                    <td><a href="#Export_the_Customer_Ledger_record">Enregistrement dans le grand livre des clients</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-invoices.htm">Comptes clients – Factures</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions par compte</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Détail de l&apos;ancienneté du client</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-cash-received.htm">Comptes clients – Encaissements</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions par compte</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Détail de l&apos;ancienneté du client</a><br />
+                    </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-open-balances.htm">Comptes clients – Soldes non utilisés</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions par compte</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Détail de l&apos;ancienneté du client</a><br /><a href="#Export_the_Aged_Overdue_Sales_Invoices_Detail_report">Détail des factures de vente échues et périmées</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-transactions.htm">Mouvements de stock</a></td>
+                    <td><a href="#Export_the_Transaction_Detail_report">Détails des transactions</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-on-hand.htm">Stock disponible</a></td>
+                    <td><a href="#Export_the_Quantity_report">Quantité</a></td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export_Transactions_by_Account_report"></a>Rapport d&apos;exportation des transactions par compte</h2>
+        <p><b>Pour exporter le rapport Transactions par compte de Sage 50 Canada : </b></p>
+        <ol>
+            <li>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></li>
+            <li>Dans la boîte de dialogue <b>Centre de rapports</b> , sous <b>Sélectionner un type de rapport</b>, sélectionnez <b>Finances</b> | <b>Transactions par compte.</b></li>
+            <li>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera exporté s&apos;affiche.</li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionsbyAccount-Sage50.png" alt="Aperçu du rapport sur les transactions par compte" /></p>
+        <p class="note inline"><b>Remarque :</b> Le <b>Centre de rapport</b> exporte par défaut les données de l&apos;exercice en cours. Si vos dates de mission se rapportent à l&apos;exercice précédent, vous pouvez cliquer sur l&apos;option <b>Modifier ce rapport</b> et, dans la liste déroulante <b>Rapport sur l&apos;exercice</b> , sélectionner l&apos; <b>année précédente (AAAA).</b></p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modification du rapport Transactions par compte" /></p>
+        <p><img src="../../Resources/Images/SelectAccounts-TransactionsbyAccount-Sage50.png" alt="Modification de l&apos;année fiscale dans le rapport Transactions par compte." /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter...</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+        <h2><a name="Export_the_Customer_Ledger_record"></a>Exporter l&apos;enregistrement du grand livre des clients</h2>
+        <p><strong>Pour exporter l&apos;enregistrement du grand livre des clients de Sage 50 Canada : </strong></p>
+        <ol>
+            <li>Dans le menu <strong>Fichier</strong> , sélectionnez <strong>Import/Export | Exporter les enregistrements..</strong></li>
+            <li>Dans la boîte de dialogue <strong>Assistant d&apos;exportation d&apos;enregistrements</strong> , sous <strong>Sélectionner un type de rapport</strong>, sélectionnez <strong>Exporter les enregistrements vers un format de fichier Sage 50 Import.</strong> Cliquez sur <strong>Suivant.</strong></li>
+            <li>Dans <strong>Sélectionner le type d&apos;enregistrements à exporter</strong>, sélectionnez <strong>Clients</strong>.</li>
+            <li>Spécifiez un nom et un emplacement pour le fichier d&apos;exportation et cliquez sur <strong>Suivant.</strong></li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerLedgerRecord-Sage50.png" alt="Sélection des enregistrements clients à exporter" /></p>
+        <ol>
+            <li value="3">Dans la zone <strong>Sélectionner les clients à exporter</strong> , sélectionnez les clients dont vous souhaitez exporter les enregistrements de grand livre ou cliquez sur <strong>Sélectionner tout</strong> pour exporter tous les enregistrements de grand livre des clients.</li>
+            <li>Cliquez sur <strong>Suivant.</strong></li>
+            <li>Affichez le résumé des enregistrements d&apos;exportation et cliquez sur <strong>OK</strong>.</li>
+            <li>Cliquez sur <strong>Terminer</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Customer_Aged_Detail_report"></a>Exporter le rapport détaillé sur l&apos;ancienneté des clients</h2>
+        <p><strong>Pour exporter le rapport Détail cumulé client de Sage 50 Canada : </strong></p>
+        <ol>
+            <li>Dans le menu <strong>Rapports</strong> , sélectionnez <strong>Centre de rapports.</strong></li>
+            <li>Dans la boîte de dialogue <b>Centre de rapports</b> , sous <strong>Sélectionner un type de rapport</strong>, sélectionnez <strong>Clients et ventes | Détail cumulé client.</strong></li>
+            <li>Cliquez sur <strong>Créer</strong>. Un aperçu du rapport qui sera exporté s&apos;affiche.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerAgedDetail-Sage50.png" alt="Sélection de l&apos;état Détail ancienneté client" /></p>
+        <p class="note inline"><strong>Remarque : </strong>Le Centre de rapport exporte par défaut toutes les factures payées au cours des 999 derniers jours à compter de la date de clôture de l&apos;exercice fiscal en cours. Vous pouvez modifier la date de clôture <strong>en</strong> cliquant sur l&apos;option <strong>Modifier ce rapport.</strong> Assurez-vous que la date sélectionnée est postérieure ou égale à la date de fin de votre engagement Caseware.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyCustomerAgedReport-Sage50.png" alt="Modification de l&apos;état Détail ancienneté client." /></p>
+        <p> </p>
+        <ol>
+            <li value="4">Dans le menu <strong>Fichier</strong> , sélectionnez <strong>Exporter..</strong></li>
+            <li>Dans <strong>Nom du fichier</strong>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <strong>Enregistrer.</strong></li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Sales_Invoices_Detail_report"></a>Exporter le rapport détaillé des factures de vente échues et périmées</h2>
+        <p><strong>Pour exporter le rapport Détail des factures de vente en souffrance de Sage 50 Canada :</strong></p>
+        <ol>
+            <li>Dans le menu <strong>Rapports</strong> , sélectionnez <strong>Centre de rapports.</strong></li>
+            <li>Dans la boîte de dialogue <b>Centre de rapport</b> , sous <strong>Sélectionner un type de rapport</strong>, sélectionnez <strong>Clients et ventes | </strong><strong>Factures</strong> <strong>en souffrance vieillies </strong><strong> - Détail.</strong></li>
+            <li>Cliquez sur <strong>Créer</strong>. Un aperçu du rapport qui sera exporté s&apos;affiche.</li>
+        </ol>
+        <p><img src="../../Resources/Images/OverdueSalesInvoicesDetail-Sage50.png" alt="Sélection de l&apos;état Détail Factures de vente échues et périmées. " /></p>
+        <p class="note inline"><strong>Remarque : </strong>Le Centre de rapport exporte par défaut les paiements effectués au cours des 999 derniers jours à la date de clôture de l&apos;exercice fiscal en cours. Vous pouvez modifier la date de <strong>clôture</strong> en sélectionnant l&apos;option <strong>Modifier ce rapport.</strong> Assurez-vous que la date que vous sélectionnez est égale à la date de fin de votre engagement Caseware.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverdueSalesInvoicesReport-Sage50.png" alt="Modification du rapport Factures de vente échues et périmées." /></p>
+        <ol>
+            <li value="4">Dans le menu <strong>Fichier</strong> , sélectionnez <strong>Exporter..</strong></li>
+            <li>Dans <strong>Nom du fichier</strong>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <strong>Enregistrer.</strong></li>
+        </ol>
+        <h2><a name="Export_the_Vendor_Ledger_record"></a>Exporter l&apos;enregistrement du grand livre des fournisseurs</h2>
+        <p><b>Pour exporter l&apos;enregistrement du grand livre des fournisseurs de Sage 50 Canada :</b></p>
+        <ol>
+            <li>Dans le menu <b>Fichier</b> , sélectionnez <b>Import/Export | Exporter les enregistrements..</b></li>
+            <li>Dans la boîte de dialogue <b>Assistant d&apos;exportation d&apos;enregistrements</b> , sous <b>Sélectionner un</b> type de <b>rapport</b> , sélectionnez <b>Exporter les enregistrements vers un</b> format de <b>fichier Sage 50 Import.</b> Cliquez sur <b>Suivant.</b></li>
+            <li>Dans <b>Sélectionner le type d&apos;enregistrements à exporter</b>, sélectionnez <b>Fournisseurs</b>.</li>
+            <li>Spécifiez un nom et un emplacement pour le fichier d&apos;exportation et cliquez sur <b>Suivant.</b></li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorLedger-Sage50.png" alt="Sélection des enregistrements du grand livre des fournisseurs à exporter de Sage 50 Canada." /></p>
+        <ol><li value="5">Dans la zone <b>Sélectionner les fournisseurs à exporter</b> , sélectionnez les clients dont vous souhaitez exporter les enregistrements du grand livre ou cliquez sur <b>Sélectionner tout</b> pour exporter tous les enregistrements du grand livre des fournisseurs.</li><li>Cliquez sur <b>Suivant.</b></li><li>Affichez le résumé des enregistrements d&apos;exportation et cliquez sur <b>OK</b>.</li><li>Cliquez sur <b>Terminer</b>.</li></ol>
+        <h2><a name="Export_the_Payments_Transactions_record"></a>Exporter le rapport sur les opérations de paiement</h2>
+        <p><b>Pour exporter le rapport Opérations de paiement de Sage 50 Canada :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></p>
+            </li>
+            <li>
+                <p>Dans <b>Sélectionner un type de rapport</b>, sélectionnez <b>Fournisseurs et achats | Opérations de paiement.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera exporté s&apos;affiche.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/PaymentTransactions-Sage50.png" alt="Sélection du rapport sur les opérations de paiement." /></p>
+        <p class="note inline"><b>Remarque :</b> Le Centre de rapport exporte par défaut les données de l&apos;exercice en cours. Si vos dates de mission se rapportent à l&apos;exercice précédent, cliquez sur l&apos;option <b>Modifier ce rapport.</b> Sélectionnez la liste déroulante <b>Rapport sur l&apos;année fiscale</b> , puis l&apos;option <b>Année précédente (AAAA)</b> .</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyingPaymentTransactions.png" alt="Modification du rapport sur les opérations de paiement." /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter..</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+        <h2><a name="Export_Vendor_Purchases_Detail_report"></a>Exportation du rapport détaillé sur les achats des fournisseurs</h2>
+        <p><b>Pour exporter le rapport Détail des achats du fournisseur :</b></p>
+        <ol>
+            <li>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Centre de rapport</b> , sous <b>Sélectionner un type de rapport</b>, sélectionnez <b>Fournisseurs et achats | Détail des achats du fournisseur.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera généré s&apos;affiche.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorPurchaseDetail-Sage50.png" alt="Sélection de l&apos;état Détail des achats du fournisseur. " /></p>
+        <p class="note inline"><b>Remarque :</b> Le Centre de rapport exporte par défaut les données de l&apos;exercice en cours. Si vos dates de mission datent de l&apos;exercice précédent, vous pouvez cliquer sur l&apos;option <b>Modifier ce rapport</b> et modifier les dates de <b>début</b> et de <b>fin</b> .</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p><img src="../../Resources/Images/ModifyVendorPurchases-Sage50.png" alt="Modification du rapport Achats du fournisseur." /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter..</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Purchase_Invoices_Detail_report"></a>Exporter le rapport détaillé sur les factures d&apos;achat échues et périmées</h2>
+        <p><b>Pour exporter le rapport Détail des factures d&apos;achat en souffrance vieillies dans le formulaire Sage 50 Canada :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Centre de rapport</b> , sous Sélectionner un type de rapport, sélectionnez <b>Fournisseurs et achats | Factures d&apos;achat échues détaillées.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera exporté s&apos;affiche.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/AgedOverduePurchaseInvoicesDetail.png" alt="Modification du rapport Détail des factures d&apos;achat échues et périmées. " /></p>
+        <p class="note inline"><b>Remarque :</b> Le Centre de rapport exporte par défaut les paiements effectués au cours des 999 derniers jours à la date de clôture de l&apos;exercice fiscal en cours. Vous pouvez modifier la date de <b>clôture</b> en sélectionnant l&apos;option <b>Modifier ce rapport.</b> Assurez-vous que la date sélectionnée est égale à la date de fin de votre engagement Caseware.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverduePurchaseInvoices-Sage50.png" alt="Modification du rapport sur les factures d&apos;achat en souffrance." /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter..</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+        <h2><a name="Export_the_Quantity_report"></a>Exporter le rapport sur les quantités</h2>
+        <p><b>Pour exporter le rapport sur les quantités à partir de Sage 50 Canada :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Centre de rapport</b> , sous <b>Sélectionner un type de rapport</b>, sélectionnez <b>Inventaire et services | Quantité.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera exporté s&apos;affiche.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/QuantityReport-Sage50.png" alt="Sélection du rapport Quantité." /></p>
+        <p class="note inline"><b>Remarque :</b> Vous pouvez modifier les paramètres par défaut du rapport en sélectionnant l&apos;option <b>Modifier ce rapport.</b> Apportez les modifications nécessaires et cliquez sur <b>OK.</b></p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter..</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+        <h2><a name="Export_the_Transaction_Detail_report"></a>Exporter le rapport détaillé des transactions</h2>
+        <p><b>Pour exporter le rapport détaillé des transactions :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Rapports</b> , sélectionnez <b>Centre de rapports.</b></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Centre de rapport</b> , sous <b>Sélectionner un type de rapport</b>, sélectionnez <b>Inventaire et services | Détail de la transaction.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Créer</b>. Un aperçu du rapport qui sera exporté s&apos;affiche.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionDetail-Sage50.png" alt="Modification de l&apos;état détaillé des transactions." /></p>
+        <p class="note inline"><b>Remarque :</b> Le Centre de rapport exporte par défaut les données de l&apos;exercice en cours. Si vos dates de mission datent de l&apos;exercice précédent, sélectionnez l&apos;option <b>Modifier ce rapport</b> et modifiez les dates de <b>début</b> et de <b>fin</b> .</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifier cette option de rapport" /></p>
+        <p><img src="../../Resources/Images/ModifyingTransactionDetail=Sage50.png" alt="Modification de l&apos;état détaillé des transactions. " /></p>
+        <ol>
+            <li value="4">Dans le menu <b>Fichier</b> , sélectionnez <b>Exporter..</b></li>
+            <li>Dans <b>Nom du fichier</b>, spécifiez un nom pour le rapport que vous reconnaîtrez lorsque vous l&apos;importerez dans Caseware Cloud et cliquez sur <b>Enregistrer.</b></li>
+        </ol>
+    </body>
+</html>

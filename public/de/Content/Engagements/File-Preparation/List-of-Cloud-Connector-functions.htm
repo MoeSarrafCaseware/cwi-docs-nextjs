@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Liste der Cloud Connector Funktionen</h1><MadCap:snippetBlock src="../../Resources/Snippets/cloud-connector-note.flsnp" /><p>Die folgende Liste beschreibt die Cloud Connector Funktionen, die Sie verwenden können, um Daten aus Ihrem Engagement in Excel-Dateien einzufügen.</p>
+        <table>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Funktion</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>CWI.ACCOUNTBALANCE<a name="ACCOUNTBALANCE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Saldo eines Kontos in der Hauptabschlussübersicht.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Number</b> - Die Kontonummer. Schließen Sie die Kontonummer in Anführungszeichen ein.</p>
+                            </li>
+                            <li>
+                                <p><b>Year_offset</b> - Die Vorjahreszahl. Um den Saldo des laufenden Jahres zu erhalten, geben Sie 0 als year_offset ein. Für das Vorjahr geben Sie 1 ein.</p>
+                                <li>
+                                    <p style="font-weight: normal;"><b>Balance_type</b> - Der Bilanztyp. Um den Endsaldo zu erhalten, geben Sie als Balance_type 0 ein. Für den Planungssaldo geben Sie 1 ein.</p>
+                                </li>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ACCOUNTNAME<a name="ACCOUNTNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Namen eines Kontos in der Hauptabschlussübersicht.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Number</b> - Die Kontonummer. Schließen Sie die Kontonummer in Anführungszeichen ein.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.BUSINESSFAX<a name="BUSINESSFAX"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die Faxnummer der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.BUSINESSNUMBER<a name="BUSINESSNUMBER"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die Geschäftsnummer der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.BUSINESSPHONE<a name="BUSINESSPHONE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die geschäftliche Telefonnummer der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CLIENTSINCE<a name="CLIENTSINCE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Datum, an dem die Entität ein Kunde geworden ist.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.COUNTRYNAME<a name="COUNTRYNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Land, in dem die Entität registriert ist.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENCY<a name="CURRENCY"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Code für die ausgewählte Währung des Engagements.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENCYNAME<a name="CURRENCYNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Namen der für das Engagement ausgewählten Währung.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENCYSYMBOL<a name="CURRENCYSYMBOL"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Symbol der für das Engagement ausgewählten Währung.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENTPERIODEND<a name="CURRENTPERIODEND"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das aktuelle Periodenenddatum für das Engagement.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENTPERIODSTART<a name="CURRENTPERIODSTART"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das aktuelle Periodenstartdatum für das Engagement.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.CURRENTYEAR<a name="CURRENTYEAR"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das aktuelle Jahr des Engagements.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.DISSOLUTIONDATE<a name="DISSOLUTIONDATE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Auflösungsdatum für die Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.EMAIL<a name="EMAIL"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die E-Mail-Adresse der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYADDRESSLINE1<a name="ENTITYADDRESSLINE1"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 1 der Adresse des Unternehmens.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Index</b> - Die Kennung, die angibt, welche der Adressen der Entität zu verwenden ist. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYADDRESSLINE2<a name="ENTITYADDRESSLINE2"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 2 der Adresse des Unternehmens.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Index</b> - Die Kennung, die angibt, welche der Adressen der Entität zu verwenden ist. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYADDRESSLINE3<a name="ENTITYADDRESSLINE3"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 3 der Adresse des Unternehmens.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>index</b> - Die Kennung, die angibt, welche Adressen der Entität verwendet werden sollen. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYCITY<a name="ENTITYCITY"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die Stadt der Adresse des Unternehmens.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Index</b> - Die Kennung, die angibt, welche der Adressen der Entität zu verwenden ist. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYCOUNTRY<a name="ENTITYCOUNTRY"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Land der Entitätsadresse.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>index</b> - Die Kennung, die angibt, welche Adressen der Entität verwendet werden sollen. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYPOSTALCODE<a name="ENTITYPOSTALCODE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die Postleitzahl der Entitätsadresse.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Index</b> - Die Kennung, die angibt, welche der Adressen der Entität zu verwenden ist. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ENTITYPROVINCE<a name="ENTITYPROVINCE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Bundesland der Adresse der Entität.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Index</b> - Die Kennung, die angibt, welche der Adressen der Entität zu verwenden ist. Beginnt mit 1.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FACEBOOK<a name="FACEBOOK"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die URL des Facebook-Kontos der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMADDRESSLINE1<a name="FIRMADDRESSLINE1"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 1 der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMADDRESSLINE2<a name="FIRMADDRESSLINE2"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 2 der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMADDRESSLINE3<a name="FIRMADDRESSLINE3"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert Zeile 3 der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMCITY<a name="FIRMCITY"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Wert für Stadt aus der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMCOUNTRY<a name="FIRMCOUNTRY"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Wert für Land aus der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMNAME<a name="FIRMNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Namen Ihrer Firma.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMPOSTALCODE<a name="FIRMPOSTALCODE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Wert für die Postleitzahl aus der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.FIRMPROVINCE<a name="FIRMPROVINCE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Wert für das Bundesland aus der Firmenadresse.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.FIRSTNAME<a name="FIRSTNAME"></a></td>
+                    <td>Liefert den Vornamen der Entität.</td>
+                </tr>
+                <tr>
+                    <td>CWI.FORMVALUE<a name="FORMVALUE"></a></td>
+                    <td>
+                        <p>Gibt einen Wert aus einem Formular im verknüpften Engagement zurück.</p>
+                        <p><b>Parameter:</b></p>
+                        <ul>
+                            <li>
+                                <p><b>value_key</b> - Die Kennung des Formularwerts.</p>
+                            </li>
+                            <li>
+                                <p><b>sub_fields</b> - Die Liste der Eigenschaftsnamen, die erforderlich sind, um vom Basiswert zu einem Unterwert zu navigieren.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.GROUPBALANCE<a name="GROUPBALANCE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Saldo einer Gruppe in der Hauptabschlussübersicht.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Number</b> - Die Kontonummer. Schließen Sie die Kontonummer in Anführungszeichen ein.</p>
+                            </li>
+                            <li>
+                                <p><b>Year_offset</b> - Die Vorjahreszahl. Um den Saldo des laufenden Jahres zu erhalten, geben Sie 0 als year_offset ein. Für das Vorjahr geben Sie 1 ein.</p>
+                                <li>
+                                    <p style="font-weight: normal;"><b>Balance_type</b> - Der Bilanztyp. Um den Endsaldo zu erhalten, geben Sie als Balance_type 0 ein. Für den Planungssaldo geben Sie 1 ein.</p>
+                                </li>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.GROUPNAME<a name="GROUPNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Namen einer Gruppe in der Hauptabschlussübersicht.</p>
+                        <p style="font-weight: bold;">Parameter:</p>
+                        <ul>
+                            <li>
+                                <p><b>Number</b> - Die Kontonummer. Schließen Sie die Kontonummer in Anführungszeichen ein.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.HOMEPHONE<a name="HOMEPHONE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die private Telefonnummer der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.INCORPORATIONDATE<a name="INCORPORATIONDATE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Gründungsdatum der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.LASTNAME<a name="LASTNAME"></a></td>
+                    <td>Liefert den Nachnamen der Entität.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.LEGALNAME<a name="LEGALNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den rechtlichen Namen der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.LINKEDIN<a name="LINKEDIN"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die URL des LinkedIn-Kontos der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.MATERIALITY<a name="MATERIALITY"></a></td>
+                    <td>
+                        <p>Liefert die Informationen zur Wesentlichkeit.</p>
+                        <p><b>Parameter:</b></p>
+                        <ul>
+                            <li>
+                                <p><b>Materiality_type</b> - Der Wesentlichkeitstyp. Um die Wesentlichkeit für den Abschluss als Ganzes zu erhalten, geben Sie 0 ein. Um die Toleranzwesentlichkeit zu erhalten, geben Sie 0 ein.</p>
+                            </li>
+                            <li>
+                                <p><b>Materiality_workflow</b> - Der Wesentlichkeits-Workflow. Um zum Planungs-Workflow zurückzukehren, geben Sie 0 ein. Für den überarbeiteten Workflow geben Sie 1 ein.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.MEMO<a name="MEMO"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Inhalt des Feldes Memo in den Entitätsdetails.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.MIDDLENAME<a name="MIDDLENAME"></a></td>
+                    <td>Liefert den mittleren Namen der Entität.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.MOBILEPHONE<a name="MOBILEPHONE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die Mobiltelefonnummer der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.OPERATINGNAME<a name="OPERATINGNAME"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Firmennamen der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.ORGANIZATIONTYPE<a name="ORGANIZATIONTYPE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Unternehmenstyp der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.PRIMARYINDUSTRYCODE<a name="PRIMARYINDUSTRYCODE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den primären Branchencode der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.PRIORPERIODEND<a name="PRIORPERIODEND"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Enddatum der ersten Vorperiode des Engagements</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.PRIORPERIODSTART<a name="PRIORPERIODSTART"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Startdatum der ersten Vorperiode des Engagements</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.PRIORYEAR<a name="PRIORYEAR"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Vorjahr des Engagements. Wenn es mehrere Vorjahre gibt, liefert diese Funktion das erste Vorjahr.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.REPORTINGFRAMEWORK<a name="REPORTINGFRAMEWORK"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Regelwerk der Rechnungslegung der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.STATUS<a name="STATUS"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Status der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.SUBTYPE<a name="SUBTYPE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Untertyp der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.TRIVIALMATERIALITY</td>
+                    <td>Liefert Clearly Trivial (Materiality) Wesentlichkeit.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.TWITTER<a name="TWITTER"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert URL des Twitter-Kontos der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.TYPE<a name="TYPE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert den Unternehmenstyp der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.WEBSITE<a name="WEBSITE"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert die URL der Website der Entität.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.YEAREND<a name="YEAREND"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Jahresabschlussdatum für das Engagement.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.YEARENDCHANGEDATE<a name="YEARENDCHANGEDATE"></a></p>
+                    </td>
+                    <td>
+                        <p>Wenn sich das Jahresabschlussdatum des Engagements ändert, liefert diese Funktion das Datum, an dem diese Änderung stattgefunden hat.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CWI.YEARENDMONTH<a name="YEARENDMONTH"></a></td>
+                    <td>Liefert den Monat des Jahresabschlussdatums des Engagements</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CWI.YEARSTART<a name="YEARSTART"></a></p>
+                    </td>
+                    <td>
+                        <p>Liefert das Jahresanfangsdatum für das Engagement.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

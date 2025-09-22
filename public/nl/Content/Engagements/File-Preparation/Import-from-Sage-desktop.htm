@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importeren vanuit Sage-desktop</h1>
+        <p>Je kunt gegevens importeren uit Sage door een zipbestand te genereren met de Caseware Cloud Import Utility en dit vervolgens te importeren in je engagement. We ondersteunen momenteel de volgende boekhoudsoftware van Sage:</p>
+        <ul>
+            <li>
+                <p>Importeren vanuit Sage 50 Accounts (Sage-Line50)</p>
+            </li>
+            <li>
+                <p>Importeren vanuit Sage 50 Accounting CDN Edition (eenvoudig)</p>
+            </li>
+        </ul>
+        <p>Zie <a href="Supported-third-party-accounting-packages.htm">Ondersteunde boekhoudpakketten van derden</a>voor een lijst met versies die we ondersteunen.</p>
+        <p class="note"><b>Let op:</b> Rekeningen met een nulsaldo worden niet automatisch geïmporteerd in Caseware Cloud apps, met uitzondering van <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Om rekeningen met een nulsaldo op te nemen, moet je ze handmatig <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">toevoegen</a> en <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">toewijzen</a> aan de juiste financiële groepen.</p>
+        <h2><a name="Generate"></a>Genereer het importbestand voor Sage 50 Accounts (Sage-Line50)</h2>
+        <p>Voordat je begint, moet je ervoor zorgen dat je de benodigde importbestanden hebt:</p>
+        <ul>
+            <li>
+                <p>Profiel informatie: ACCDATA\ACCOUNT.DTA</p>
+            </li>
+            <li>
+                <p>Rekeningschema: ACCDATA\NOMINAL.DTA</p>
+            </li>
+            <li>
+                <p>CoA-index: ACCDATA\NOMINDEX.DTA</p>
+            </li>
+            <li>
+                <p>GL-detail: ACCDATA-SPLITSINGEN.DTA</p>
+            </li>
+            <li>
+                <p>Bedrijfsinformatie: ACCDATA.DTA</p>
+            </li>
+            <li>
+                <p>Account Type ACCDATA</p>
+            </li>
+            <li>
+                <p>Bankgegevens: ACCDATA\BANK.DTA</p>
+            </li>
+            <li>
+                <p>Grootboekindex: ACCDATAHEADER.DTA</p>
+            </li>
+            <li>
+                <p>Afdeling Informatie: DEPARTM.DTA</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Het importbestand voor Sage 50 Accounts (Sage-Line50) genereren:</p>
+        <ol>
+            <li>
+                <p>Download het hulpprogramma Caseware Cloud importeren.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware hulpprogramma voor cloudimport (.exe)</a></p>
+            <li>
+                <p>Open het hulpprogramma, selecteer <b>Andere gegevensbron</b> en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Selecteer in de vervolgkeuzelijsten <b>Importeren van</b> en <b>Versie</b>  <b>Sage 50 Accounts</b> en de versie waaruit u importeert.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Browse</b> in <b>Import Path</b>en navigeer naar de map met de map ACCDATA, waar de .DTA-bestanden die je wilt importeren zich bevinden.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage50.png" alt="Cloud Importhulpprogramma" /></p>
+            </li>
+            <li>
+                <p>Bepaal de resterende instellingen voor het importeren.</p>
+                <p>De instellingen variëren afhankelijk van de versie die je eerder hebt geselecteerd.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>en vervolgens <b>Voltooien</b>.</p>
+            </li>
+            <li>
+                <p>Sla het gegenereerde zipbestand op met behulp van de weergegeven prompt.</p>
+                <p>Zie De gegevens importeren in je engagement om het importproces voort te zetten.</p>
+            </li>
+        </ol>
+        <h2><a name="Generate2"></a>Genereer het importbestand voor Sage 50 Accounting CDN Edition (Eenvoudig)</h2>
+        <p>Voordat u begint, moet u ervoor zorgen dat u Sage 50 Accounting (CDN Edition) of het hulpprogramma Sage 50 Connection Manager van <a href="https://my.caseware.com/">MyCaseware</a>installeert. U moet een van deze toepassingen hebben om de import uit te voeren; installeer ze echter niet allebei.</p>
+        <p style="font-weight: bold;">Om het importbestand voor Sage 50 Accounting CDN Edition (Simply) te genereren:</p>
+        <ol>
+            <li>
+                <p>Download het hulpprogramma Caseware Cloud importeren.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware hulpprogramma voor cloudimport (.exe)</a></p>
+            <li>
+                <p>Open het hulpprogramma, selecteer <b>Andere gegevensbron</b> en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Selecteer in de vervolgkeuzelijsten <b>Importeren vanaf</b> en <b>Versie</b>  <b>Sage 50 Accounting CDN Edition (Simply)</b> en de versie waarvan u importeert.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Browse</b> in <b>Import Path</b>en navigeer naar de map met het clientbestand dat je wilt importeren. Clientbestanden voor Sage hebben de extensie .SAI.</p>
+                <p>Het veld <b>Client ID</b> wordt automatisch gevuld met de naam van het clientbestand.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage-simply.png" alt="Cloud Importhulpprogramma" /></p>
+            </li>
+            <li>
+                <p>Bepaal de resterende instellingen voor het importeren.</p>
+                <p>De instellingen variëren afhankelijk van de versie die je eerder hebt geselecteerd.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>en vervolgens <b>Voltooien</b>.</p>
+            </li>
+            <li>
+                <p>Sla het gegenereerde zipbestand op met behulp van de weergegeven prompt.</p>
+            </li>
+        </ol>
+        <h2>Importeer de gegevens in je engagement</h2>
+        <p>Nadat je het zipbestand hebt gegenereerd met de Caseware Cloud Import Utility, kun je de gegevens importeren in je engagement.</p>
+        <p><b>De gegevens importeren in je engagement:</b></p>
+        <ol>
+            <li>
+                <p>Open je Caseware Cloud engagement bestand. Wanneer je de engagement voor het eerst opent, verschijnt het pop-upvenster met de eigenschappen van de engagement. Stel <b>de einddatum van het jaar</b> in op dezelfde datum als de gegevens die je gaat importeren.</p>
+                <p>De eindejaarsdatum is het laatste element van de naam van het zipbestand dat u hebt gegenereerd in <a href="#Generate">Het importbestand voor Sage 50 Accounts genereren (Sage-Line50)</a> of <a href="#Generate2">Het importbestand voor Sage 50 Accounting CDN Edition genereren (Simply)</a>. Voor het bestand met de naam UNIVERSAL CONSTRUCTION 2025-06-30.zip is de einddatum bijvoorbeeld 30 juni 2025.</p>
+            </li>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De gegevenspagina wordt geopend op het tabblad Datasets.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                </li>
+                <li>
+                    <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Selecteer <b>Sage 50 - Canada</b> in de lijst met gegevensbronnen en selecteer <b>Volgende</b>.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SageDesktopDataConnector.png" alt="De gegevensconnector Sage 50 - Canada selecteren op de pagina Datasets." /></p>
+        <ol>
+            <li value="4">
+                <p>Selecteer in de Upload-fase van de importwizard het zip-bestand dat u hebt gegenereerd met de Caseware Cloud Import Utility of sleep het naar een andere locatie en selecteer vervolgens <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>In het stadium Gegevens configureren van de importwizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Rapportageperiode</b> wordt automatisch gevuld met de rapportageperiode van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Kies bij <b>Select dataset type</b>het type dat je importeert. Selecteer <b>Proefbalans</b> als je een proefbalans importeert en <b>Grootboek</b> als je transacties importeert.</p>
+            </li>
+            <li>
+                <p>Als je <b>Proefbalans</b>hebt geselecteerd, vouw je de lijst met datasets samen door het pictogram <b>Samenvouwen</b> (<img src="../../Resources/Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />) te selecteren. De optie<b>De laatste 5 jaar TB importeren</b> verschijnt. Selecteer deze optie om tot vijf jaar proefbalansgegevens te importeren als deze beschikbaar zijn in het gegenereerde zip-bestand.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Bekijk de informatie in de fase Bevestiging van de importwizard en selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p class="indent">Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p class="indent">Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p class="indent">Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p class="indent">Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+    </body>
+</html>

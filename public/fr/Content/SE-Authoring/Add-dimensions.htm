@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Add"></a>Ajouter des dimensions</h1>
+        <p>Une dimension est une propriété de groupe. Un compte peut être affecté à une dimension au sein d&apos;un groupe spécifique pour un tri et une catégorisation plus poussés.</p>
+        <p>Vous pouvez créer une ou plusieurs catégories de dimensions, puis les remplir de dimensions. Par exemple, vous pouvez créer une catégorie de dimension appelée Emplacement, puis créer une dimension pour chaque emplacement de votre client. Une fois les dimensions créées, vous pouvez les affecter à des groupes financiers.</p>
+        <p>Notez que les auteurs et les utilisateurs finaux ont également la possibilité de créer des dimensions et de les affecter à des groupes financiers, avec les restrictions suivantes :</p>
+        <p><b>Dimensions et catégories primaires créées par l&apos;auteur :</b></p>
+        <ul>
+            <li>Les auteurs de l&apos;entreprise et les utilisateurs finaux peuvent :<ul><li><p>Affectation à des groupes financiers</p></li><li><p>Renommer</p></li><li><p>Réorganiser</p></li><li><p>Ajouter de nouvelles dimensions aux catégories existantes. Les auteurs des entreprises ont toutes les autorisations pour les dimensions qu&apos;ils créent.</p></li></ul></li>
+        </ul>
+        <p><b>Dimensions et catégories créées par l&apos;auteur de la firme :</b></p>
+        <ul>
+            <li>Les utilisateurs finaux peuvent :<ul><li><p>Affectation à des groupes financiers</p></li><li><p>Renommer</p></li><li><p>Réorganiser</p></li><li><p>Ajouter de nouvelles dimensions aux catégories existantes. Les auteurs des entreprises ont toutes les autorisations pour les dimensions qu&apos;ils créent.</p></li></ul></li>
+        </ul><MadCap:snippetBlock src="../Resources/Snippets/to-access-the-product-settings.flsnp" /><p class="note" MadCap:conditions="General.SE-Authoring"><b>Remarque :</b> Assurez-vous que les dimensions sont activées dans le fichier product.json, sinon l&apos;onglet <b>Dimensions</b> ne sera pas disponible. Pour en savoir plus, voir <a href="Enable-or-disable-features-in-your-product.htm">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+        <p style="font-weight: bold;">Pour ajouter un ensemble de dimensions :</p>
+        <ol>
+            <li>
+                <p>Aller à <b>Caractéristiques | Dimensions.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>+ Catégorie</b>, puis ajoutez un nom pour la nouvelle catégorie de dimension.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>+ Dimension</b> pour ajouter une dimension à la nouvelle catégorie.</p>
+            </li>
+            <li>
+                <p>Saisissez un nom pour la nouvelle dimension.</p>
+                <p>Si vous souhaitez utiliser des numéros de dimension pour attribuer un identifiant unique à chaque dimension, saisissez une valeur dans le champ <b>Numéro.</b>  Le numéro peut être composé de lettres ou de chiffres. Ces numéros de dimension peuvent être utilisés pour associer des dimensions à des transactions.</p>
+                <p>Vous pouvez faire glisser et déposer les dimensions pour les réorganiser au sein d&apos;une catégorie et utiliser les flèches vers le haut et vers le bas pour développer et réduire les catégories. Vous pouvez également sélectionner <b>Supprimer la dimension</b> (<img src="../Resources/Images/icon-delete.png" style="vertical-align: text-bottom;" />) pour supprimer une dimension.</p>
+                <p>Vous pouvez sélectionner <b>Ajouter</b> (<img src="../Resources/Images/icon-add-15x15.png" style="vertical-align: text-bottom;" />) pour ajouter une dimension de second niveau à votre dimension primaire. Vous pouvez également ajouter des dimensions de troisième niveau aux dimensions de deuxième niveau.</p>
+                <p>Vous pouvez définir n&apos;importe quelle dimension sans enfant comme dimension par défaut pour la catégorie. Les comptes des groupes auxquels s&apos;applique cette catégorie seront automatiquement affectés à cette dimension. Pour les catégories de dimensions sans jeu de dimensions par défaut, les comptes ne seront pas automatiquement mis en correspondance avec une dimension.</p>
+                <p><img src="../Resources/Images/product-settings-dimensions.png" alt="L&apos;onglet Dimensions dans les paramètres du produit." /></p>
+            </li>
+        </ol>
+        <p>Lorsque vous avez créé vos dimensions, vous pouvez ensuite affecter les catégories de dimensions à des groupes financiers. Notez que vous pouvez attribuer plusieurs catégories de dimensions à un seul groupe.</p>
+        <p><b>Pour affecter une catégorie de dimension à un groupe financier :</b></p>
+        <ol>
+            <li>
+                <p>Accédez à la catégorie dans les paramètres du produit.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Autres actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Attribuer des groupes</b>.</p>
+            </li>
+            <li>
+                <p>Si votre produit possède plusieurs structures de regroupement financier, sélectionnez la structure de regroupement souhaitée dans la liste déroulante.</p>
+            </li>
+            <li>
+                <p>Sélectionnez tous les groupes financiers applicables.</p>
+                <p>Vous pouvez développer et réduire les groupes financiers pour afficher les sous-groupes et utiliser la barre de recherche pour trouver les groupes appropriés.</p>
+            </li>
+        </ol>
+        <p>Notez que vous pouvez également affecter des catégories de dimensions à un groupe à partir de la boîte de dialogue Propriétés du groupe.</p>
+    </body>
+</html>

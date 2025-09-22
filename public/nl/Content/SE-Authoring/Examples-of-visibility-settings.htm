@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Voorbeelden van zichtbaarheidsinstellingen</h1>
+        <p>Hier zijn enkele voorbeelden van hoe je zichtbaarheidslogica kunt instellen.</p>
+        <h2>Voorbeeld 1: Eén voorwaarde</h2>
+        <p>De volgende zichtbaarheidsinstellingen maken een document zichtbaar als het boekjaar begint na 30 november 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-01.PNG" alt="Zichtbaarheidsinstellingen" /></p>
+        <p>Als de begindatum van het jaar voor de opdracht december-20-2018 is, dan is de voorwaarde waar en is het document beschikbaar (weergegeven) in het opdrachtbestand.</p>
+        <p>Als de begindatum van het jaar voor de opdracht 15 mei-2018 is, evalueert de voorwaarde onwaar en is het document niet beschikbaar (verborgen) in het opdrachtbestand.</p>
+        <h2>Voorbeeld 2: Twee voorwaarden</h2>
+        <p>De volgende zichtbaarheidsinstellingen maken een document zichtbaar als de opdracht een Beoordelingsopdracht is met een boekjaar dat begint na 30 november 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-02.PNG" style="width: 933px;height: 281px;" alt="Zichtbaarheidsinstellingen" /></p>
+        <p>Als het type opdracht Compilatie is en de begindatum van het opdrachtjaar is december-15-2018, dan is het eindresultaat onwaar en is het document niet beschikbaar (verborgen) in het bestand.</p>
+        <h2>Voorbeeld 3: Eén voorwaarde en een groep voorwaarden</h2>
+        <p>Laten we een groepsconditie toevoegen voor een geneste opstelling. Met een groepsconditie kun je meer dan één conditie groeperen en ze samen laten evalueren. Het resultaat wordt vervolgens vergeleken met andere beschikbare condities.</p>
+        <p>De volgende zichtbaarheidsinstellingen zorgen ervoor dat een document niet zichtbaar is als de opdracht een Voorbereidingsopdracht is of als de entiteit een Canadese Private Corporation is met een boekjaar dat begint na 31 december-2018.</p>
+        <p><img src="../Resources/Images/visbility settings-03.PNG" style="width: 568px;height: 321px;" /></p>
+        <p>Als de begindatum van het opdrachtjaar december-20-2018 is, het organisatietype Canadian Controlled Private Corporation is en het opdrachttype Review is, is het eindresultaat onwaar en is het document niet beschikbaar (verborgen) in het bestand.</p>
+        <h2>Voorbeeld 4: Twee groepen voorwaarden</h2>
+        <p>De volgende instellingen maken een document zichtbaar voor boekjaren die beginnen na 15 december 2019 en tussentijdse perioden binnen boekjaren die beginnen na 15 december 2020.</p>
+        <p><img src="../Resources/Images/visbility settings-04.PNG" alt="Zichtbaarheidsinstellingen die een document zichtbaar maken voor boekjaren die beginnen na 15 december 2019" /></p>
+        <p>Laten we aannemen dat de rapportageperiode Jaarlijks is, de begindatum van het jaar voor die periode 30 november 2018 is, de tussentijdse periode Maandelijks is en de begindatum van het jaar voor die periode 30 december 2019 is.</p>
+        <p>Het systeem evalueert de eerste groepsconditie - en het resultaat is onwaar omdat aan een van de voorwaarden niet is voldaan. Dan wordt de tweede groepsconditie geëvalueerd en het resultaat is waar, omdat aan beide voorwaarden is voldaan.</p>
+        <p>Ten slotte evalueert het de resultaten voor de twee groepscondities op basis van de zichtbaarheidslogica bovenaan (die stelt dat het document wordt weergegeven als een van de condities waar is) - om uiteindelijk als eindresultaat te krijgen dat het document beschikbaar is (wordt weergegeven) in het bestand.</p>
+    </body>
+</html>

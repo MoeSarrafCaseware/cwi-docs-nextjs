@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWareCloud Time." />
+    </head>
+    <body>
+        <h1>Bekende problemen in CasewareCloud Time</h1>
+        <p>De volgende bekende problemen hebben invloed op de huidige versie van CasewareCloud Time.</p>
+        <h2 id="Errors">Fouten met verwijderde Time-gebruikers</h2>
+        <p>Als je bent aangemeld en je Time-toegang is ingetrokken door een beheerder, krijg je meerdere foutmeldingen als je Time probeert te openen.</p>
+        <p MadCap:conditions="General.Ignore"><a href="https://bugs.caseware.com/browse/CORE-46707">CORE-46707</a></p>
+        <h2>Aan facturen die naar QuickBooks Online worden geëxporteerd, kunnen inactieve belastingen worden toegewezen</h2>
+        <p>Tijdens het exportproces kunnen facturen ten onrechte niet-actieve belastingen toegewezen krijgen. Om dit probleem te omzeilen, kun je handmatig een nieuwe belasting selecteren in QuickBooks Online voor elke betrokken factuur.</p>
+        <h2>Fout bij het ophalen van gegevens na wijzigen Xero-account</h2>
+        <p>Er treedt een fout op bij het ophalen van gegevens als je een Xero-account loskoppelt van Time en vervolgens koppelt aan een ander account. De pagina verversen lost de fout niet op. Om dit probleem te omzeilen, kun je organisaties rechtstreeks in je Xero-account beheren in plaats van ze te koppelen aan een nieuwe account. De mogelijkheid om de Xero-account die je hebt gekoppeld aan Time te wijzigen is momenteel niet beschikbaar.</p>
+        <h2>Kan geen nieuwe facturen exporteren naar gekoppelde Xero-account</h2>
+        <p>Het exporteren van een nieuwe factuur naar Xero mislukt als de account vóór augustus 2021 is gekoppeld.</p>
+        <p><b>Oplossingen</b> Koppel je Xero-account opnieuw. Selecteer in Xero <b>Instellingen | Aangesloten apps</b>. Selecteer naast de Caseware ImportHub app <b>Verbinding verbreken</b>. Selecteer in Caseware Cloud het menu <b>Cloud</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)<b> | Instellingen | Tijd | Integratie boekhoudsoftware</b>en selecteer vervolgens <b>Xero ontkoppelen</b>. Selecteer daarna <b>Koppelen aan Xero</b> en meld je aan met je account.</p>
+        <h2>fout &quot;Gebruikersnaam moet uniek zijn&quot; bij het maken van nieuwe Contactpersonen</h2>
+        <p>Als er een e-mailadres ontbreekt bij bestaande contactpersonen in een Cloud-geïntegreerd Time Desktop-bestand, wordt de fout &quot;Gebruikersnaam moet uniek zijn&quot; weergegeven bij het maken van een nieuw contactpersoon. Als tijdelijke oplossing kun je &apos;placeholder&apos; e-mailadressen invoeren om deze fout te omzeilen.</p>
+    </body>
+</html>

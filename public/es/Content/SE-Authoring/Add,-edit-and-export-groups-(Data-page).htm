@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Add, edit and export groups (Data page)</h1><MadCap:snippetBlock src="../Resources/Snippets/se-disclaimer-for-data-page.flsnp" /><p>You can add groups or edit the properties of existing groups. You can also export groups to a CSV file to review their properties or make changes easily.</p>
+        <h2>Add a group (Data page)</h2>
+        <p>You can manually add groups to define a grouping.</p>
+        <p style="font-weight: bold;">Para agregar un grupo:</p>
+        <ol>
+            <li>
+                <p>Go to the <b>Data</b> page, then select <b>Add</b> (<img src="../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Add group.</b></p>
+            </li>
+            <p>The Group Properties dialog displays.</p>
+            <li>
+                <p>Set the properties for the new group.</p>
+                <p>Refer to <a href="Group-properties.htm">Group properties</a> for a description of each group property.</p>
+            </li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Select <b>Save</b> to add the group.</p>
+            </li>
+        </ol>
+        <h2><a name="Edit"></a>Edit a group (Data page)</h2>
+        <p>You can edit the properties of a group in the structure.</p>
+        <p style="font-weight: bold;">Para editar el nombre de un grupo:</p>
+        <ol>
+            <li>
+                <p>Go to the <b>Data</b> page, then select the grouping structure from the left pane:</p>
+            </li>
+            <ul>
+                <li>Grupos de contabilidad</li>
+                <li>Grupos de impuestos</li>
+                <li>Grupos prescritos</li>
+            </ul>
+            <li>
+                <p>Select the group you want to edit, then select <b>Edit</b> (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to open the Group Properties dialog.</p>
+            </li>
+            <p class="tip"><b>Tip:</b> You can search groups using the Search field on the top right corner of the page.</p>
+            <li>
+                <p>Edit the group properties as needed.</p>
+            </li>
+            <p>Refer to <a href="Group-properties.htm">Group properties</a> for a description of each group property.</p>
+            <li>
+                <p>Once you&apos;re done, select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Reorder"></a>Reorder a group (Data page)</h2>
+        <p>You can drag and drop groups in the Data page to reorder them. Navigate to the grouping structure in the Data page and drag the group you want to reorder to the desired location.</p>
+        <p>Note that you can only use drag and drop to reorder groups under the following conditions:</p>
+        <ul>
+            <li>
+                <p>The groups you are reordering are all sibling groups in the grouping structure. You cannot drag and drop a child group to be the same level as or higher level than the parent group.</p>
+            </li>
+            <li>
+                <p>All the sibling groups are collapsed or do not have any child groups.</p>
+            </li>
+        </ul>
+        <h2>Export groups to a CSV file</h2>
+        <p>You can export groups to a CSV file to review the properties. You can also export them to have all the groups lined up so you can easily make changes, then save the file and import it.</p>
+        <p>Reimporting groups retains any existing group properties. Only updates to existing properties and adding values to empty properties take effect.</p>
+        <p>For example, you can export groups to a CSV and easily add the value &apos;<b>Y</b>&apos; for the <b>Default Group</b> property for 15 groups by copy-pasting &apos;<b>Y</b>&apos; across 15 rows. Once you&apos;re done, save the file and <a href="Import-groupings-from-a-CSV-or-an-Excel-(Data-page).htm">reimport</a> it.</p>
+        <p class="note inline"><b>Note:</b> When you export groups, the order of the groups in the structure upon export is maintained when you import them again. In the CSV file, however, the groups will be displayed in alphabetical or numerical order based on the values in the first column. See <a href="#Reorder">Reorder a group</a> to learn how to reorder your grouping structure in the <b>Data</b> page.</p>
+        <p>The exported CSV file shows 19 columns for the group properties and their values in the following order:</p>
+        <ol>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Number">Número</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Consiste">Nombre coherente:</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Allow">Permitir asignación de cuenta</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Type">Tipo</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Sign">Signo</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Classifi">Clasificación de grupo</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Adjust">Ajustar preferencia de grupo</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Account">Restricciones al saldo de cuenta</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Link">Enlazar a un grupo en la estructura de grupos de códigos de impuestos</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Link">Enlazar a un grupo en la estructura de grupos prescritos </a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Cycle">Ciclo</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Cycle">Área</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Contrary">Nombre de contrapartida</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Inconsis">Nombre inconsistente</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Breakdow">Desglose por dimensión</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Include">Incluir dimensiones</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Reassign">Reasignar objetivo para cuentas de contrapartida</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Default">Grupo predeterminado</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Componen">Componentes</a></li>
+        </ol>
+    </body>
+</html>

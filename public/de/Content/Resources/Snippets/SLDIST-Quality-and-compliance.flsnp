@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>The following widgets ensure that you catch errors early in the engagement process and complete high-quality engagements in full compliance.</p>
+        <h3>Order of completed documents</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p><b>schedule</b> - Displays the completed document number.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Displays the document name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 1</b> - Displays the Role 1 sign-off date.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>If you want to exclude documents with no sign-offs:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the <b>Date of Completion 1</b> field.</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>On the first drop-down, select <b>Custom filter</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Exclude nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../Images/format-visual-16x17.png" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Users accessing an engagement</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that provides a list of users who have accessed an engagement:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation, which returns the recorded user with a file access activity type in the HI database:</p>
+                        <p><code>ifelse(type=&apos;FACCUSR&apos;, UserValue, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Add a custom calculation field that returns the date when the file access was recorded in the HI database:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>left(startdate,8)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Engagement lockdown status</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Metadata</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p><b>filename</b> - Displays the engagement file name.</p>
+            </li>
+            <li>
+                <p><b>propertyname</b> - Displays all metadata properties associated with engagement files.</p>
+            </li>
+            <li>
+                <p><b>propertyvalue</b> - Displays the value of a given metadata property.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>After defining the field wells, select the widget and create a filter based on the <b>propertyname</b> field. Configure the filter to only include items with the <b>CWLockdownDate</b> property name.</p>
+            </li>
+            <li>
+                <p>Consider adding details to the engagement letter, for example, the signed/completed date, or if lockdown needs to be performed within a given timeframe. To retrieve the engagement letter:</p>
+                <ul>
+                    <li>
+                        <p>Use the document ID or number.</p>
+                    </li>
+                    <li>
+                        <p>Have users associate a specific document tag with their engagement letter then utilize it in your visualization.</p>
+                    </li>
+                    <li>
+                        <p>Include a mechanism in your template that saves the document number of the engagement letter as a metadata property.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Map number usage</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Mappings</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Pivot table (<img src="../Images/pivot-table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Rows</i></p>
+        <ul>
+            <li>
+                <p><b>mapno</b> - Displays the map number used in engagements.</p>
+            </li>
+            <li>
+                <p><b>mapdesc</b> - Displays the mapping description used in engagements.</p>
+            </li>
+            <li>
+                <p><b>filename</b> - Displays the name of the file that&apos;s using the current map number.</p>
+            </li>
+            <li>
+                <p><b>class</b> - Displays the class assigned to the current map number.</p>
+            </li>
+        </ul>
+    </body>
+</html>

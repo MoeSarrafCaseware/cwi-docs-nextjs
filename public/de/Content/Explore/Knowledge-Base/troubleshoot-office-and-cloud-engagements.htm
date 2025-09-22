@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Lösung von Problemen im Zusammenhang mit Microsoft Office und Cloud Engagements</h1>
+        <p><b>Veröffentlicht:</b> Mittwoch, 10. Januar 2024</p>
+        <hr />
+        <p>Benötigen Sie Hilfe beim Hochladen von Office-Dokumenten in Caseware Cloud? Lösungen finden Sie unten.</p>
+        <h2>Überprüfen Sie die Richtlinie für das formularbasierte Anmeldeverhalten, die im Microsoft Trust Center eingerichtet wurde</h2>
+        <p>Bei diesem Verfahren wird davon ausgegangen, dass Sie ein Administrator sind und eine Abonnementversion von Microsoft Office haben, wie z. B. Microsoft 365 Apps für Unternehmen, um die Registerkarte <strong>Formularbasiertes Anmeldeverhalten</strong> im Microsoft Trust Center anzuzeigen.</p>
+        <p>Um die Richtlinie für das formularbasierte Anmeldeverhalten zu überprüfen:</p>
+        <ol>
+            <li>
+                <p>Öffnen Sie eine beliebige Office-Anwendung, z. B. Word oder Excel.</p>
+            </li>
+            <li>
+                <p>Gehen Sie zu <b>Datei | Optionen | Trust Center</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Trust Center-Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Formularbasierte Anmeldung</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie unter <b>Sign-in prompt behavior (Verhalten bei der Anmeldeaufforderung)</b> die Option <b>Ask me what to do for each host (Fragen Sie mich, was ich für jeden Host tun soll)</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>OK</b>, um die Änderungen zu speichern.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Microsoft Office wird zukünftige Anmeldeaufforderungen nicht blockieren.</li>
+                <li>Die Liste der <strong> Hosts, die Anmeldeaufforderungen anzeigen dürfen</strong> wird auf der Grundlage Ihrer zukünftigen Aktionen automatisch ausgefüllt.</li>
+            </ul>
+        </p>
+        <ol>
+            <li value="7">Führen Sie auf der Seite Dokumente eines Auftrags einen der folgenden Schritte aus: <ul><li>Öffnen Sie eine vorhandene Microsoft Office-Datei. Weitere Informationen finden Sie unter <a href="../../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Access2">Zugriff auf ein hochgeladenes Word- oder Excel-Dokument</a>.</li><li>Oder fügen Sie eine neue Word- oder Excel-Datei hinzu. Weitere Informationen finden Sie unter <a href="../../Engagements/Documentation-and-Review/Add-new-Word-and-Excel-documents.htm">Neue Word- und Excel-Dokumente hinzufügen</a>.</li></ul></li>
+            <li>Nehmen Sie eine Änderung im Dokument vor, speichern Sie es und schließen Sie es.</li>
+            <li>Aktualisieren Sie die Engagement-Seite in Ihrem Browser.</li>
+            <li>Öffnen Sie das von Ihnen geänderte Microsoft Office-Dokument und rufen Sie die Trust Center-Einstellungen auf, wie zuvor in diesem Verfahren beschrieben.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Der folgende Eintrag sollte automatisch für Caseware Cloud in der Liste <strong>Hosts, die Anmeldeaufforderungen anzeigen dürfen</strong>:</li>
+            </ul>
+        </p>
+        <p class="indent"><code>app.casewarecloud.com</code></p>
+        <h2>Überprüfen Sie, ob Add-Ins die Cloud beeinträchtigen</h2>
+        <p>Beheben Sie Probleme mit Add-Ins, indem Sie sie nacheinander deaktivieren.</p>
+        <p><strong>So deaktivieren Sie Add-Ins nacheinander:</strong></p>
+        <ol>
+            <li>Öffnen Sie Excel.</li>
+            <li>Wählen Sie <strong>Datei | Optionen | Add-ins</strong>.</li>
+            <li>Wählen Sie in der Drop-down-Liste <strong>Verwalten</strong> die Option „Excel-Add-Ins“ und klicken Sie auf <strong>Los...</strong>.</li>
+            <li>Wenn Sie in der Liste Verwalten keine Add-Ins-Option für die Office-Anwendung finden können, wählen Sie stattdessen COM-Add-Ins.</li>
+            <li>Deaktivieren Sie eines der Add-Ins in der Liste und klicken Sie auf <strong>OK</strong>.</li>
+            <li>Versuchen Sie, unterstützende Word- oder Excel-Dokumente in ein Cloud-Engagement hochzuladen, und prüfen Sie, ob das Problem gelöst ist.</li>
+            <li>Wiederholen Sie diese Schritte, bis Sie das Add-In gefunden haben, das das Problem verursacht.</li>
+        </ol>
+        <h2>Überprüfen des HttpClient unter Windows</h2>
+        <p>HttpClient ist eine Klasse im .NET-Framework, die zum Senden von HTTP-Anforderungen und Empfangen von HTTP-Antworten von einer durch einen URI identifizierten Ressource verwendet wird und in verschiedenen Arten von Anwendungen zum Einsatz kommt. Sie kann den Informationsaustausch zwischen Microsoft Office und Cloud-Engagements beeinträchtigen.</p>
+        <p><b>So überprüfen Sie, ob der HttpClient ein Problem beim Informationsaustausch verursacht:</b></p>
+        <ol>
+            <li>Geben Sie in das Windows-Suchfeld services.msc ein</li>
+            <li>Select <strong>Dienste</strong>.</li>
+            <li>Suchen Sie unter <strong>Name</strong> nach <strong>WebClient</strong>.</li>
+            <li>Führen Sie einen rechten Mausklick darauf aus und wählen Sie <strong>Eigenschaften</strong>.</li>
+            <li>Wählen Sie bei <strong>Starttyp</strong> die Option <strong>Automatisch.</strong></li>
+            <li>Klicken Sie auf <strong>Übernehmen</strong> und anschließend auf <strong>OK</strong>.</li>
+            <li>Verlassen Sie den Dialog.</li>
+            <li>Überprüfen Sie, ob das Problem dadurch behoben wird.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AutomaticStartupHttpClient.png" alt="Der Starttyp des WebClient-Dienstes wurde geändert und kann auch wieder rückgängig gemacht werden. " /></p>
+        <h2>Fehlerbehebung beim Speichern von Office-Dokumenten in Cloud Engagements</h2>
+        <h3>Überprüfen Sie, ob die automatische Speicherung deaktiviert wurde</h3>
+        <p>Die automatische Speicherung muss deaktiviert werden, damit die Interaktion zwischen Microsoft Office und der Cloud ordnungsgemäß funktioniert.</p>
+        <p class="note inline"><b>Bitte beachten Sie:</b> Sie dürfen keine Website eines Drittanbieters verwenden, um ein Microsoft Office-Dokument zu speichern oder zu sichern, das an ein Cloud-Engagement angehängt wurde.</p>
+        <p><strong>So überprüfen Sie, ob die automatische Speicherung deaktiviert wurde:</strong></p>
+        <ol>
+            <li>Öffnen Sie eine beliebige Office-Anwendung, z. B. Word oder Excel.</li>
+            <li>Wählen Sie <strong>Datei | Optionen | Speichern</strong>.</li>
+            <li>Deaktivieren Sie die Option <strong>Automatisch in der Cloud gespeicherte Dateien standardmäßig in Excel speichern</strong>.</li>
+        </ol>
+        <h3>Vergewissern Sie sich, dass Sie die Office-Dateien nicht aus dem standardmäßigen lokalen Dateispeicher hochladen</h3>
+        <p>Für Office-Anwendungen ist der standardmäßige lokale Dateispeicherort wie folgt:</p>
+        <p><code>C:\Benutzer\{benutzer.name}\Dokumente</code></p>
+        <p><strong>Standardspeicherort Ihrer lokalen Datei überprüfen:</strong></p>
+        <ol>
+            <li>Öffnen Sie Excel.</li>
+            <li>Wählen Sie <strong>Datei | Optionen | Speichern</strong>.</li>
+            <li>Suchen Sie den Eintrag zu <strong>Lokaler Standardspeicherort für Datei</strong> und überprüfen Sie den Pfad. Stellen Sie sicher, dass Sie keine Dateien von diesem Speicherort in die Cloud hochladen.</li>
+        </ol>
+        <h3>Stellen Sie sicher, dass Sie oder andere Cloud Engagement-Benutzer die Freigabefunktion in Microsoft Office nicht verwenden</h3>
+        <p>Vergewissern Sie sich, dass Sie oder andere Benutzer nicht die Microsoft Office-Freigabefunktion in Microsoft Office-Dokumenten verwenden, die Sie in Cloud-Engagements hochladen oder erstellen. Die Microsoft Office-Freigabefunktion wird in Verbindung mit Caseware Cloud nicht unterstützt:</p>
+        <p><img src="../../Resources/Images/ShareFeature.png" alt="Freigabefunktion in Microsoft Office-Anwendungen" /></p>
+        <ul>
+            <li>
+                <p>Wenn zwei Benutzer auf dieselben Office-Dokumente zugreifen und diese gemeinsam nutzen, kann es zu Wettlaufsituationen kommen, die zu unerwarteten Ergebnissen führen.</p>
+            </li>
+            <li>
+                <p>Wenn ein Benutzer ein Office-Dokument über die Office-Freigabefunktion freigibt, ist eine Website erforderlich, um Synchronisierungsvorgänge zu unterstützen. Folglich müssen die Synchronisierungsvorgänge auf dem Computer des Benutzers stattfinden, der die Freigabe initiiert hat. Beim Speichern des gemeinsamen Dokuments können mehrere Szenarien eintreten, die alle zum Verlust der gespeicherten Informationen führen.</p>
+            </li>
+        </ul>
+        <p><strong>Um dies zu beheben:</strong></p>
+        <ol>
+            <li>Entfernen Sie alle Freigaben für aktuelle Dokumente, indem Sie das Dokument an einen anderen Ort kopieren.</li>
+            <li>Nehmen Sie alle erforderlichen Aktualisierungen an den Dokumenten vor, z. B. alle Änderungen, die bei aktivierter Freigabe nicht vorgenommen werden konnten.</li>
+            <li>Ersetzen Sie die Datei, indem Sie die nicht freigegebene gespeicherte Version hochladen.</li>
+        </ol>
+        <h2>Bereitstellung von Protokollen auf Anfrage des technischen Supports</h2>
+        <p>Die Bereitstellung dieser Protokolle hilft uns bei der weiteren Fehlersuche, wenn Sie sich an den technischen Support wenden.</p>
+        <h3>Mac</h3>
+        <p>Wenn Sie oder Ihr Kunde Mac OS verwenden und wir die Protokolle überprüfen müssen, benötigt unser technischer Support Ihre Hilfe, um sie zu sammeln.</p>
+        <p><b>Pfad, unter dem Sie die Protokolle finden können</b></p>
+        <p>
+            <div><pre><code>/Users/user_name/Library/Containers/com.microsoft.Excel/Data/Library/Logs/Diagnostics</code></pre>
+            </div>
+        </p>
+        <p>Um die Protokolle zu finden, müssen Sie möglicherweise die Protokolldateien ausblenden. Drücken Sie gleichzeitig die Tasten Shift + (⌘) + (.).</p>
+        <p> </p>
+        <p><img src="../../Resources/Images/LogsonMac.png" alt="Suchen Sie Microsoft Office-Dokumentprotokolle auf einem Mac." /></p>
+        <p> </p>
+        <p>Weitere Informationen finden Sie unter <a href="https://support.apple.com/en-gb/guide/console/cnsl9361/mac">Protokolldatei mit der Konsole auf dem Mac suchen</a>.</p>
+        <h3>Windows</h3>
+        <p>Die folgenden Anweisungen gelten für Windows 10.</p>
+        <ol>
+            <li>Öffnen Sie den Windows Explorer.</li>
+            <li>Navigieren Sie zu C:\Benutzer\{benutzer.name}\AppData\Local\Temp</li>
+            <li>Suchen Sie den Ordner Diagnostics.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Suchen Sie den Ordner, der nach der Anwendung benannt ist, mit der Sie Probleme haben.</li>
+            </ul>
+            <p><img src="../../Resources/Images/WindowsOfficeLogs.png" alt="Protokolle für Microsoft Office-Anwendungen suchen. " /></p>
+        </p>
+        <h2>Löschen Sie den Microsoft Office-Cache</h2>
+        <p>Siehe die Anweisungen für Ihr Betriebssystem:</p>
+        <h3>Windows</h3>
+        <ol>
+            <li>Löschen Sie die zwischengespeicherten Dateien manuell, und öffnen Sie die Dateien erneut.</li>
+        </ol>
+        <p class="note inline"><b>Hinweis:</b> Die aktuell in Excel geöffnete Datei wird ausgeschlossen. Dies sollte einen Download aus der Caseware Cloud auslösen.</p>
+        <ol>
+            <li value="2">Wählen Sie in Ihrer Office App <b>Datei | Optionen | Speichern</b>.</li>
+            <li>In <b>Cache Settings</b>, select <b>Delete files from the Office Document cache when they are closed</b>. This clears the file&apos;s cache when it is closed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CacheSettingsOfficeDocs.png" alt="Select the Delete files from the Office Document Cache when they are closed setting. " /></p>
+        <h3>Mac OS</h3>
+        <p>Go to the following location, which will change slightly depending on whether you use Excel or Word:</p>
+        <p>
+            <div><pre xml:space="preserve"><code>~/Library/Containers/MicrosoftExcel/Data/Library/Caches</code></pre>
+            </div>
+        </p>
+        <p>For more information, see <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">Clear the Office cache</a>.</p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ClearCacheinMac.png" alt="Location of Office Document cache on computers running Mac OS." /></p>
+        <p> </p>
+    </body>
+</html>

@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Considerations"></a>Consideraciones</h1>
+        <p>If your firm meets one of the aforementioned scenarios, consider the following before you request the merge:</p>
+        <ul>
+            <li>
+                <p><b>Which Cloud site is the “Primary” and which are “Secondary”?</b></p>
+                <p>To determine the flow of merged settings between the Cloud sites, one must be designated the “Primary” and the others “Secondary”. This designation is only relevant during the merge and will not exist afterward.</p>
+            </li>
+            <li>
+                <p><b>Who is the “Primary Administrator”?</b></p>
+                <p>You will need to select an administrator of the “Primary” Cloud site to receive administrator permissions across all business units and the ability to create new business units.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>During the <a href="#MergeProcess">merge process</a>, the new “Primary Administrator” must create a business unit that will be promoted to the “Admin” business unit after the merge. This “Admin” business unit will be used solely for administrator-level changes and should not contain any entities or engagements.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites use single sign-on (SSO)?</b></p>
+                <ul>
+                    <li>
+                        <p>If only one Cloud site uses SSO, its SSO configuration will be applied to all other Cloud sites (that do not currently use SSO), regardless of whether they are the “Primary” or a “Secondary” site.</p>
+                    </li>
+                    <li>
+                        <p>If all, or more than one Cloud site uses SSO, ensure the configurations match before the merge. This requires you to migrate all user emails to a single SSO provider. If the configurations do not match, the “Primary” site’s SSO configuration will be used.</p>
+                    </li>
+                </ul>
+                <p>After the merge, we recommend that you make any further modifications to the SSO configuration in the “Admin” business unit.</p>
+            </li>
+            <li>
+                <p><b>Do any of your staff work in a hybrid (Working Papers + Cloud) environment?</b></p>
+                <p>To support business unit functionality, administrators must ensure that all staff utilizing Hybrid Cloud update to Working Papers 2023: Update 1 and add the following line to the CV.VER file of each Working Papers instance:</p>
+                <p>AllowOpeningFilesConnectedToDifferentFirms=1</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>After the merge, staff must change their Cloud integration URL in Working Papers to the “Admin” business unit’s URL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites contain any duplicate staff or contact email addresses?</b></p>
+                <p>During the merge, staff or contact accounts with duplicate email addresses between Cloud sites will be merged. If you do not want a staff or contact account to merge, ensure it has a unique email address.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>If a duplicate email address exists in one Cloud site as a staff account and another as a contact account, the staff account will remain accessible after the merge. A “placeholder” contact account will remain in any activities, engagements, logs, etc. where it was previously, but it cannot be accessed going forward.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites contain staff groups with the same names?</b></p>
+                <p>Groups do not merge and will remain unique to the business unit of their previous Cloud site; however, if an entity was assigned a group and then moved to a different business unit, it will be automatically assigned a group with the same name (if it exists) in the new business unit. If this result is not desired, we recommend that you rename any groups with duplicate names before the merge.</p>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites use different default languages?</b></p>
+                <p>If any of the Cloud sites use different default languages, they must be aligned by <a href="mailto:support@caseware.com">Caseware Support</a> before the merge.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Additional languages (beyond the default) are not copied between business units during the merge. If you have additional languages in any of the Cloud sites, <a href="mailto:support@caseware.com">Caseware Support</a> will need to enable these languages in all sites before the merge.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites use custom workflows?</b></p>
+                <p>If any of the Cloud sites use custom workflows, they will be added to the “Primary” and “Secondary” business units. We recommend that you rename any custom workflows with duplicate names before the merge to prevent confusion. If you do not rename these workflows, the names of the duplicates from any “Secondary” business units will be automatically appended with the business unit name (e.g. Workflow_BU2).</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>The selected workflows from each of the previous Cloud sites will remain selected in their associated business unit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites use custom entity properties?</b></p>
+                <p>If any of the Cloud sites use custom entity properties, they will be added to the “Primary” and “Secondary” business units. We recommend that you rename any custom entity properties with duplicate names before the merge to prevent confusion.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>If a custom entity property is a required field in one of the Cloud sites before the merge, it will be required in all business units afterward.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites use custom roles?</b></p>
+                <p>If any of the Cloud sites use custom roles, they will be added to the “Primary” and “Secondary” business units. We recommend that you rename any custom roles with duplicate names before the merge to prevent confusion.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Custom roles with duplicate names will merge if they have identical permissions. Staff with a merged role will continue to have the role after the merge.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Do any of the Cloud sites contain Cloud (SE) engagements?</b></p>
+                <p>Business units have not been optimized to work with Cloud (SE) engagements; however, we are making iterative improvements to support Cloud (SE) engagements as part of our roadmap. If any of your Cloud sites contain Cloud (SE) engagements, contact your Caseware representative and ask if business units are recommended for your firm.</p>
+            </li>
+        </ul>
+        <h2>Firm Settings</h2>
+        <p>The merge process combines most settings from the existing Cloud sites and applies them to each business unit; however, some settings cannot be merged, or overwrite other settings. Refer to the following table to see how specific settings are handled during the merge:</p>
+        <table style="width: 100%;">
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <tbody>
+                <tr>
+                    <th>
+                        <p>Configuración</p>
+                    </th>
+                    <th>
+                        <p>Merge Details</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Organization | Profile</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Organization | Sign-in Page Customization</p>
+                    </td>
+                    <td>
+                        <p>Copied from &quot;Primary&quot; to &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email | Settings</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Integration | API</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Security | Role Permissions</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Security | Password Settings</p>
+                    </td>
+                    <td>
+                        <p>Copied from &quot;Primary&quot; to &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Security | Authentication and Session Management</p>
+                    </td>
+                    <td>
+                        <p>Copied from &quot;Primary&quot; to &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Single Sign-On | Identity Provider</p>
+                    </td>
+                    <td>
+                        <p>Copied from &quot;Primary&quot; to &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Views Management</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Personalizar terminología:</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Positions</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Tag Management</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Links Management</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Enable/Disable Features</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Regional Settings</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Custom Entity Properties</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Workflow Management</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Working Papers | Working Papers Security</p>
+                    </td>
+                    <td>
+                        <p>Combined &quot;Primary&quot; and &quot;Secondary&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Groups and Group Settings</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>App Settings (Template)</p>
+                    </td>
+                    <td>
+                        <p>Not merged</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Cloud 33.0</h2>
+        <p>In preparation for the release of Cloud 33.0, firms who intend to utilize business units should consider the following changes:</p>
+        <ul>
+            <li>
+                <p>Existing system-wide roles (Admin, Staff Admin, Entity Admin, Settings Admin and custom roles with a system-wide scope) will be converted to <b>organization roles</b>. These function similar to system-wide roles, but their permissions also apply to all <u>unidades empresariales</u> in the organization, with the exception of the Entity Admin role (or custom roles with equivalent permissions), where the permissions only apply to business units where the user is assigned.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Users that inherit an organization role, whether through a converted system-wide role or a group, will have that role’s privileges across all business units, even if the role is inherited from a group that is only assigned to a few business units. This means that <u>some users could potentially have administrator privileges in more business units than they did prior to Cloud 33.0</u>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Existing entity and content roles (Owner, Editor, Viewer, Entity Access and custom roles with an entity and content scope) will be converted to <b>content roles</b>. The permissions from these roles only apply to business units where the user is assigned.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Users that inherit a content role through a group will only have that role’s privileges in the business units where the group is assigned.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Groups will be managed from a centralized location, rather than each individual business unit. This means that the <b>All Staff</b> groups from each business unit will be merged into a single group.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>If your firm uses the <b>All Staff</b> groups to manage permissions at the business unit level, you will need to move any organization-wide permissions to the <b>All Staff</b> group in the “Admin” business unit, and any permissions for select users to a new custom group.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <p>Firms utilizing business units prior to the release of Cloud 33.0 <u>will need to review and update their staff-level and group-level roles upon its release</u>.</p><div class="pagebreak"></div><h1><a name="MergeProcess"></a>Merge Process</h1>
+        <p>After you have read through the <a href="#Considerations">considerations</a>, you can request the merge.</p>
+        <ol>
+            <li>
+                <p>Contact your Caseware representative and confirm that you have read through the <a href="#Considerations">considerations</a> in this guide.</p>
+            </li>
+            <li>
+                <p>Your Caseware representative will issue you a questionnaire document. Complete the questionnaire and return it to them. Include proof of the merge request by an authorizing executive of the firm.</p>
+            </li>
+            <li>
+                <p>Your Caseware representative will review the questionnaire document and determine whether business units are recommended for your firm.</p>
+                <ul>
+                    <li>
+                        <p>If business units are recommended, your Caseware representative will schedule the first of two downtimes for your Cloud sites.</p>
+                    </li>
+                    <li>
+                        <p>If there is an alternative solution, your Caseware representative will inform you of the option and how to proceed.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>After the first downtime, your Caseware representative will issue you a merge report that details any potential conflicts that must be resolved before the merge.</p>
+            </li>
+            <li>
+                <p>After you resolve the potential conflicts, select an administrator of the “Primary” Cloud site to receive administrator permissions across all business units and the ability to create new ones. The new “Primary Administrator” must create a business unit that will be promoted to the “Admin” business unit after the merge. This “Admin” business unit will be used solely for administrator-level changes and should not contain any entities or engagements.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>From the Cloud menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Organization | Business Units</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>New Business Unit</b>.</p>
+                    </li>
+                    <li>
+                        <p>Especifique el nombre para la base de datos de salida. Note that the name <u>cannot be changed</u> after the business unit is created. The content of this field will automatically generate a URL for the business unit.</p>
+                    </li>
+                    <li>
+                        <p>Enter a display label for the business unit. This is the name that will be displayed to your staff.</p>
+                    </li>
+                    <li>
+                        <p>Seleccione <b>Guardar</b>. Note that it can take up to 5 minutes to create the business unit. Do not navigate away from the page until it is complete (i.e. your cursor finishes its loading animation).</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Contact your Caseware representative and confirm that you have created the new business unit. They will schedule the second downtime for your Cloud sites.</p>
+            </li>
+            <li>
+                <p>After the second downtime, the merge is complete.</p>
+            </li>
+        </ol><div class="pagebreak"></div><h1>Post-Merge</h1>
+        <p>After completing the <a href="#MergeProcess">merge process</a>, consider the following:</p>
+        <p><b>Administrador</b></p>
+        <ul>
+            <li>
+                <p>The previous “Primary” and “Secondary” designations no longer exist. These business units are equal in the hierarchy.</p>
+            </li>
+            <li>
+                <p>The additional business unit (created as part of the <a href="#MergeProcess">merge process</a>) is promoted to the top of the hierarchy as the “Admin” business unit and can be used to make organization-wide changes to all other business units. The “Admin” business unit should not contain any entities or engagements.</p>
+            </li>
+            <li>
+                <p>An administrator must import all users to the “Admin” business unit. Going forward, any new users must be imported to the “Admin” business unit in addition to the business units they will access.</p>
+            </li>
+            <li>
+                <p>Administrators should perform an audit of the staff and their roles to ensure that they have access to the correct business units with the correct account privileges. They can update staff roles in the <b>Staff</b> app and import staff to new business units by selecting <b>New | Import | Staff to Business Units</b>.</p>
+            </li>
+            <li>
+                <p>Administrators must ensure that all staff utilizing Hybrid Cloud update to Working Papers 2023: Update 1 and add the following line to the CV.VER file of each Working Papers instance:</p>
+                <p>AllowOpeningFilesConnectedToDifferentFirms=1</p>
+            </li>
+            <li>
+                <p>Administrators can begin <a href="https://docs.caseware.com/latest/webapps/en/Setup/Organization/Create-client-entities.htm">moving entities between business units</a> as required. If they are moving entities in bulk, we recommend doing so over a weekend or off-hours and preferably in batches. Note that entities containing Cloud (SE) engagements, files and related content <u>cannot be moved</u>. Attempting to move an entity that contains Cloud (SE) engagements will <u>permanently</u> lock users out of the Cloud (SE) engagements, while moving the rest of the entity.</p>
+            </li>
+        </ul>
+        <p><b>Staff and Contacts</b></p>
+        <ul>
+            <li>
+                <p>All users must access Cloud from the “Admin” business unit and switch between business units using the selector at the top of the Cloud menu.</p>
+            </li>
+            <li>
+                <p>Staff utilizing a Hybrid Cloud environment must change their Cloud integration URL in Working Papers to the “Admin” business unit’s URL.</p>
+            </li>
+            <li>
+                <p>Staff from the previous “Primary” site who had contact accounts on the previous “Secondary” site will no longer have access to their contact account. If they require access to the entities or engagements from the previous “Secondary” site, they must be granted staff-level access to the new business unit and assigned the necessary role to do so. Additionally, they will need to re-subscribe to any items they previously had as a contact.</p>
+            </li>
+        </ul>
+    </body>
+</html>

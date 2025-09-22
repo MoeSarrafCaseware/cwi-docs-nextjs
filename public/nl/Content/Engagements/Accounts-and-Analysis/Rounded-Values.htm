@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Afgeronde waarde</h1>
+        <p>Deze analytische test identificeert numerieke waarden die afgerond mogen worden, zoals 10.500 of 9000. In boekhoudgegevens is de aanwezigheid van afgeronde bedragen meestal ongewoon en kan dit wijzen op mogelijke gegevensmanipulatie.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Mogelijke pogingen tot manipulatie van financiële overzichten.</p>
+            </li>
+            <li>
+                <p>Minder accuraatheid en precisie in gebieden van financiële verslaggeving</p>
+            </li>
+            <li>
+                <p>Transacties die belangrijke schattingen bevatten</p>
+            </li>
+            <li>
+                <p>Beoordelen van risico&apos;s op afwijkingen van materieel belang als gevolg van mogelijke fraude.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Let op:</b> Sommige industrieën of bedrijven kunnen veel afgeronde transacties hebben vanwege de aard van hun activiteiten.</p>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>Deze test gebruikt een of meer numerieke velden om afgeronde bedragen of afgeronde hoeveelheidswaarden te detecteren. Je kunt instellen welke velden je wilt gebruiken door de parameter <b>Selecteer velden</b> aan te passen.</p>
+        <h2>Parameters</h2>
+        <p>Er zijn drie parameters die moeten worden ingesteld om de test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Selecteer velden</b> - Selecteer een of meer numerieke velden uit de lijst om te gebruiken om de test uit te voeren.</p>
+            </li>
+            <li>
+                <p><b>Afrondingswaarde</b> - Voer een afgeronde gehele getalswaarde in, zoals 10, 100 of 1000, die moet worden gebruikt om naar afgeronde waarden te zoeken. Als je bijvoorbeeld 10 invoert, zoekt de test naar alle waarden die een veelvoud van 10 zijn, zoals 10, 20 en 30. Deze test is niet beperkt tot veelvouden van 10. Je kunt ook 5, 50, 500 of een andere gehele waarde invoeren. De standaardwaarde is 100.</p>
+            </li>
+            <li>
+                <p><b>Decimalen negeren</b> - Selecteer of decimale waarden wel of niet moeten worden genegeerd. Dit veld bepaalt of decimale waarden als afgeronde waarden worden beschouwd. Als je er bijvoorbeeld voor kiest om decimalen te negeren, dan wordt de waarde 100,99 beschouwd als een afgeronde waarde, maar als je ervoor kiest om decimalen niet te negeren, dan is het geen afgeronde waarde. De standaardwaarde is ingesteld om decimalen te negeren.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Afgeronde bedragen</b> - Toont transactieregels waarbij het bedrag is afgerond.</p>
+            </li>
+            <li>
+                <p><b>Afgeronde hoeveelheid</b> - Geeft een overzicht van transactieregels waarbij de hoeveelheid is afgerond.</p>
+            </li>
+            <li>
+                <p><b>Afgeronde waarden</b> - Toont transactieregels waarbij de waarde is afgerond.</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test Afgeronde bedragen uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Bevestig dat het (de) analytische kernveld(en) numeriek is (zijn), zo niet, verlaat dan de test.</p>
+            </li>
+            <li>
+                <p>Bepaal of decimalen worden meegenomen in de analyse.</p>
+            </li>
+            <li>
+                <p>Verkrijg van de gebruiker de numerieke waarde die zal worden gebruikt voor de afronding, voer de test uit en extraheer alle transacties die ronde waarden zijn van de numerieke waarde voor het resultaat. Controleer of de gebruiker decimalen heeft toegevoegd of uitgesloten. Als er meerdere kolommen zijn geselecteerd en een kolom faalt, zal de regel de test niet doorstaan en in de resultaten worden geplaatst.</p>
+            </li>
+            <li>
+                <p>Extraheer de resultaatvelden die door de gebruiker zijn geselecteerd. Alle velden worden standaard geëxtraheerd.</p>
+                <p class="note"><b>Let op:</b> De mogelijkheid om resultaatvelden te selecteren is momenteel nog niet beschikbaar en zal in een latere release worden toegevoegd.</p>
+            </li>
+        </ol>
+    </body>
+</html>

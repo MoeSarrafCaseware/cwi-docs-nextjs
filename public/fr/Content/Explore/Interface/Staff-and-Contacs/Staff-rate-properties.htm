@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1017" MadCap:lastWidth="744" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Propriétés du taux du personnel</h1><MadCap:snippetBlock src="../../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Des taux peuvent être attribués aux membres du personnel sur la base des <b>codes de travail</b> définis pour l&apos;entreprise. Cela permet à l&apos;entreprise d&apos;attribuer des taux individuels aux membres du personnel tout en maintenant un ensemble standard de codes de travail dans l&apos;ensemble de l&apos;entreprise.</p>
+        <p>Vous pouvez également définir des codes de travail à un taux zéro (0) pour enregistrer le temps sans frais.</p>
+        <p class="note"><b>Remarque :</b> Les membres du personnel ne bénéficiant pas d&apos;un taux standard peuvent toujours enregistrer des entrées à temps. Leur taux sera de zéro.</p>
+        <p>Les taux de personnel ont les propriétés suivantes :</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Taux</th>
+                    <th>Propriétés</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr MadCap:conditions="">
+                    <td>Taux standard et taux du code du travail</td>
+                    <td>Statut</td>
+                    <td>
+                        <p>L&apos;état actuel du taux standard ou du taux de code de travail :</p>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><b>Actif</b> (<img src="../../../Resources/Icons/Active-work-code-19x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                                <p>Le taux actuel pour ce membre du personnel. Voir la date d&apos;entrée en vigueur ci-dessous.</p>
+                            </li>
+                            <li>
+                                <p><b>Historique</b> (<img src="../../../Resources/Icons/Historical-work-code-19x21.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                                <p>Le taux pour ce membre du personnel au cours d&apos;une période antérieure.</p>
+                                <p class="note"><b>Note:</b>;Un taux de période antérieure ne peut être ni modifié ni supprimé.</p>
+                            </li>
+                            <li>
+                                <p><b>Futur</b> (<img src="../../../Resources/Icons/Future-work-code-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                                <p>Un taux futur pour ce membre du personnel. Un taux est un taux futur si la date d&apos;entrée en vigueur est postérieure à la période en cours.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Tarif normal</td>
+                    <td>Date d&apos;entrée en vigueur</td>
+                    <td>
+                        <p>Date d&apos;entrée en vigueur du taux standard.</p>
+                        <p>La date d&apos;entrée en vigueur ne peut être antérieure à la date de début de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Taux</td>
+                    <td>
+                        <p>Le taux standard (par défaut) pour ce membre du personnel. Le taux standard est appliqué lorsqu&apos;il n&apos;y a pas de taux correspondant défini pour le code de travail spécifique.</p>
+                        <p>Par exemple, un membre du personnel saisit du temps en utilisant le code de travail 100. Si aucun taux correspondant n&apos;est défini pour ce code de travail, le taux standard est appliqué pour cette saisie de temps.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Code de travail Taux</td>
+                    <td>Code du travail</td>
+                    <td>Code de travail prédéfini pour les saisies de temps. Pour plus d&apos;informations, voir <a href="../../../Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm#Creating-a-new-work-code">Création de nouveaux codes de travail</a> .</td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;entrée en vigueur</td>
+                    <td>
+                        <p>Date d&apos;entrée en vigueur du taux pour le code de travail spécifié.</p>
+                        <p>La date d&apos;entrée en vigueur ne peut être antérieure à la date de début de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Taux</td>
+                    <td>
+                        <p>Le taux pour le code de travail spécifié pour ce membre du personnel. S&apos;il est défini, ce taux est appliqué lors de la saisie du temps à l&apos;aide du code de travail spécifié.</p>
+                        <p>Par exemple, un membre du personnel saisit du temps en utilisant le code de travail 100. Un taux de 100,00 $ est défini pour ce code de travail. Ce taux est ensuite appliqué pour les entrées de temps utilisant le code de travail 100.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

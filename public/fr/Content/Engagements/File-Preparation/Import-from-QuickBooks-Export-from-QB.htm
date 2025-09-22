@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importer à partir de QuickBooks Desktop (exporter à partir de QB)</h1>
+        <p>Vous pouvez importer des données de QuickBooks desktop (Export from EB) en utilisant le module d&apos;exportation, puis en important le fichier dans votre engagement.</p>
+        <p class="note"><b>Remarque :</b> Les comptes avec un solde nul ne sont pas automatiquement importés dans les applications Caseware Cloud. Si vous souhaitez inclure des comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> manuellement aux groupes désignés.<br /> Les comptes à solde nul <i>sont</i> importés dans les fichiers <a href="https://www.caseware.com/ca/products/idea/">IDEA</a> .</p>
+        <p>Avant de commencer, veillez à créer un fichier d&apos;exportation à partir de QuickBooks à l&apos;aide du module d&apos;exportation.</p>
+        <p style="font-weight: bold;">Pour importer les données exportées dans votre engagement :</p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <p></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans les menus déroulants <b>Importer de</b> et <b>Version</b> , sélectionnez <b>QuickBooks (Exporter de QB).</b></p>
+                <p class="note"><b>Remarque :</b> Pour connaître la liste des versions prises en charge, reportez-vous à la rubrique <a href="Supported-third-party-accounting-packages.htm">Logiciels comptables tiers pris en charge</a> . Si vous trouvez des versions obsolètes dans la liste, signalez le problème à Caseware pour enquête.</p>
+            </li>
+            <li>
+                <p>Naviguez jusqu&apos;au <b>chemin d&apos;importation</b> du fichier client que vous souhaitez importer.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans <b>Fichiers texte exportés de QuickBooks</b>, parcourez et sélectionnez le fichier du plan comptable.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Suivant</b>, puis <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>Enregistrez le fichier zip généré à l&apos;aide de l&apos;invite affichée.</p>
+            </li>
+            <li>
+                <p>In your engagement file, go to the <b>Data</b> page. The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="9">
+                <p>Sous IMPORTATION DEPUIS UN CONNECTEUR DE DONNÉES, sélectionnez <b>QuickBooks Desktop</b> dans la liste des sources de données, puis cliquez sur <b>Suivant.</b></p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+            <li>
+                <p>Sélectionnez ou déposez par glisser-déposer le fichier zip que vous avez enregistré à l&apos;étape 7.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+    </body>
+</html>

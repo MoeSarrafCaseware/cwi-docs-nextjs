@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes fournisseurs – Soldes non utilisés décrits</h1>
+        <p>Lors de l&apos;importation de transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier source aux champs Caseware dans le type de jeu de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du grand livre auxiliaire Comptes fournisseurs - Soldes ouverts.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID de la transaction <br /><code>(ap_open_balance_transaction_id)</code></td>
+                    <td>
+                        <p>L&apos;identificateur unique pour les transactions de solde ouvert des comptes fournisseurs. Il s&apos;agit notamment des factures et des paiements en espèces.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la transaction<br /><code>(ap_open_balance_transaction_date)</code></td>
+                    <td>
+                        <p>La date de la transaction, indépendamment de la date de création de la transaction. Il s&apos;agit de la date à partir de laquelle la date d&apos;échéance est calculée sur la base des conditions de la facture.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date de la facture <br /><code>(ap_open_balance_invoice_date)</code></p>
+                    </td>
+                    <td>
+                        <p>La date de la facture, quelle que soit la date de saisie de la facture. Il s&apos;agit de la date à partir de laquelle la date d&apos;échéance est calculée sur la base des conditions de la facture.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Troisième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Solde Montant <br /><code>(ap_open_balance_balance_amount)</code></p>
+                    </td>
+                    <td>
+                        <p>Le montant monétaire du solde enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde déclaratif Montant <br /><code>(ap_open_balance_balance_amount_reporting)</code></td>
+                    <td>
+                        <p>Le montant monétaire du solde enregistré dans la devise de référence.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde local Montant <br /><code>(ap_open_balance_balance_amount_local)</code></td>
+                    <td>
+                        <p>Le montant monétaire du solde dans la devise locale.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant original <br /><code>(ap_open_balance_original_balance_amount)</code></td>
+                    <td>
+                        <p>Le montant monétaire du solde initial (montant de la facture initiale) enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du projet <br /><code>(ap_open_balance_project_id)</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique du projet, à partir duquel les comptes fournisseurs (AP) sont dérivés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année fiscale <code>(ap_open_balance_fiscal_year)</code></td>
+                    <td>
+                        <p>L&apos;année fiscale au cours de laquelle <b>la date de transaction</b> a lieu.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Période comptable<br /> <code>(ap_open_balance_accounting_period)</code></td>
+                    <td>
+                        <p>La période comptable au cours de laquelle la <b>date de transaction</b> a lieu.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;échéance de la transaction<br /> <code>(ap_open_balance_transaction_due_date)</code></td>
+                    <td>
+                        <p>Date à laquelle le paiement est dû par le fournisseur. Toutes les transactions n&apos;ont pas de date d&apos;échéance.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description<br /> <code>(ap_open_balance_remark)</code></td>
+                    <td>
+                        <p>Une description sous forme de texte libre.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de la facture <br /><code>(ap_open_balance_invoice_number)</code></td>
+                    <td>
+                        <p>Numéro d&apos;une transaction générée en interne ou en externe. Il s&apos;agit par exemple du numéro de chèque, du numéro de virement ou de l&apos;identifiant du document original.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;échéance de la facture <br /><code>(ap_open_balance_invoice_due_date)</code></td>
+                    <td>
+                        <p>Date à laquelle le paiement est dû au fournisseur. Toutes les transactions n&apos;ont pas de date d&apos;échéance, par exemple les notes de crédit.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(ap_open_balance_business_unit_code)</code></td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données :</p>
+                        <p>Texte requis : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde Montant Devise <br /><code>(ap_open_balance_balance_montant_devise)</code></td>
+                    <td>
+                        <p>La devise fonctionnelle ou de groupe liée au montant du solde.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Balance de déclaration Monnaie <br /><code>(ap_open_balance_balance_reporting_currency)</code></td>
+                    <td>
+                        <p>La devise de reporting liée au montant de reporting du solde pour le reporting non consolidé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde local Monnaie <br /><code>(ap_open_balance_balance_local_currency)</code></td>
+                    <td>
+                        <p>La devise pour les exigences locales en matière de déclaration.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID d&apos;entrée <br /><code>(ap_open_balance_journal_id)</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique de l&apos;écriture au journal.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du fournisseur <br /><code>(ap_open_balance_supplier_account_id)</code></td>
+                    <td>
+                        <p>L&apos;identifiant du fournisseur à qui le paiement est attendu ou à qui des crédits non utilisés ont été appliqués.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du fournisseur <br /><code>(ap_open_balance_ upplier_account_name)</code></td>
+                    <td>
+                        <p>Le nom du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

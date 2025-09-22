@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Les liens de données (<img src="../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) permettent de récupérer et d&apos;insérer dans les champs de texte des informations et des propriétés relatives à l&apos;engagement.</p>
+        <p>Vous pouvez ajouter les liens de données suivants :</p>
+        <ul>
+            <li>
+                <p><b>Propriétés d&apos;engagement</b></p>
+            </li>
+            <p>Permet de récupérer et d&apos;insérer des informations dans la boîte de dialogue Propriétés de l&apos;engagement et dans les propriétés de l&apos;entité.</p>
+            <p>L&apos;image suivante montre la boîte de dialogue Propriétés de l&apos;engagement. Pour ouvrir cette boîte de dialogue, sélectionnez le titre de l&apos;engagement en haut de la page.</p>
+            <p><img src="../Images/engagement-properties-dialog.PNG" alt="Boîte de dialogue Propriétés de l&apos;engagement" /></p>
+            <p>L&apos;image suivante montre les propriétés de l&apos;entité. Pour afficher les propriétés de l&apos;entité, allez dans le menu Cloud (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Entités</b>. Localisez l&apos;entité souhaitée et sélectionnez-la.</p>
+            <p><img src="../Images/entity-properties.PNG" alt="Propriétés des entités" /></p>
+            <p>Si la valeur de la propriété est disponible (c&apos;est-à-dire qu&apos;elle n&apos;est pas vide), elle s&apos;affiche dans la boîte de dialogue Liaison de données afin que vous puissiez prévisualiser ce qui sera inséré dans le champ de texte.</p>
+            <p><img src="../Images/data-link-values-dispay-in-dialog.PNG" alt="Data Link indique la valeur de chaque bien - si elle est disponible." /></p>
+            <p>Les liens de données sur les propriétés d&apos;engagement comprennent :<ul style="list-style-type: circle;"><li><p>Nom d&apos;exploitation</p><p>Il s&apos;agit du champ <b>Nom d&apos;exploitation</b> saisi par les utilisateurs dans la boîte de dialogue Créer une entité (lorsqu&apos;ils créent l&apos;entité). Si les utilisateurs mettent à jour le nom d&apos;exploitation dans la boîte de dialogue Propriétés de l&apos;engagement, la liaison de données récupère cette valeur.</p><p>Exemple : Les utilisateurs créent une entité avec un nom d&apos;exploitation <i>GreenLight Inc.</i> Après avoir créé le premier engagement, ils mettent à jour le nom opérationnel de l&apos;entité dans la boîte de dialogue Propriétés de l&apos;engagement en <i>GreenLight Holding</i>. S&apos;ils insèrent une liaison de données (fx) et sélectionnent Nom de l&apos;exploitation, <i>GreenLight Holding</i> est inséré dans le champ de texte.</p></li><li><p>Nom légal</p><p>Il s&apos;agit du champ <b>Nom</b> saisi par les utilisateurs dans la boîte de dialogue Créer une entité (lorsqu&apos;ils créent l&apos;entité).</p></li><li><p>Date de fin d&apos;année</p><p>Il s&apos;agit du champ <b>Date de fin d&apos;année</b> dans la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs modifient la période ou les dates, puis tentent d&apos;ajouter un lien de données, la date la plus récente est récupérée.</p></li><li><p>Date de début de l&apos;année</p><p>Il s&apos;agit du champ <b>Date de début de l&apos;année</b> dans la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs modifient la période ou les dates puis tentent d&apos;ajouter ce lien de données, la date la plus récente est récupérée.</p></li><li><p>Année en cours</p><p>Récupère l&apos;année dans le champ <b>Date de fin d&apos;année de</b> la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs modifient la période ou les dates puis tentent d&apos;ajouter ce lien de données, l&apos;année la plus récente est récupérée.</p></li><li><p>Site web</p><p>Récupère le champ <b>Site web</b> dans les propriétés de l&apos;entité que les utilisateurs saisissent dans l&apos;onglet <b>Informations générales</b> | <b>Profil social</b> . Si les utilisateurs mettent à jour le site web, puis tentent d&apos;ajouter ce lien de données, la dernière entrée est récupérée.</p></li><li><p>Année précédente</p><p>Récupère l&apos;année dans le champ <b>Date de fin d&apos;année de</b> la boîte de dialogue Propriétés de l&apos;engagement et soustrait un (c&apos;est-à-dire la date de fin d&apos;année - 1). Si les utilisateurs modifient la période ou les dates, puis tentent d&apos;ajouter ce lien de données, la valeur de l&apos;année précédente est recalculée.</p></li><li><p>Code devise</p><p>Récupère le code de la devise dans le champ <b>Devise</b> de la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs mettent à jour la devise sélectionnée dans les propriétés de l&apos;engagement, le dernier code de devise sélectionné est récupéré.</p></li><li><p>Nom de la monnaie</p><p>Récupère le nom de la devise dans le champ <b>Devise</b> de la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs mettent à jour la devise sélectionnée dans les propriétés de l&apos;engagement, le nom de la dernière devise sélectionnée est récupéré.</p></li><li><p>Symbole de la monnaie</p><p>Récupère le symbole de la devise dans le champ <b>Devise</b> de la boîte de dialogue Propriétés de l&apos;engagement. Si les utilisateurs mettent à jour la devise sélectionnée dans les propriétés de l&apos;engagement, le dernier symbole de devise sélectionné est récupéré.</p></li><li><p>Adresse de l&apos;entité</p><p>Récupère les valeurs de la section <b>Adresses</b> dans les propriétés de l&apos;entité.</p></li></ul></p>
+            <li>
+                <p style="font-weight: bold;">Balance</p>
+                <p>Éléments de la balance générale dans la mission, tels que : nom du compte, nom du groupe ou valeurs de l&apos;année en cours ou de l&apos;année précédente. Une case à cocher <b>Afficher le signe opposé</b> permet d&apos;afficher le solde du compte en face (solde). Si plusieurs structures de regroupement financier sont activées dans votre produit, vous pouvez filtrer les comptes et les groupes par structure de regroupement. Si les dimensions sont activées dans votre produit, vous pouvez filtrer les comptes et les groupes par dimension.</p>
+                <p>Si la mission est consolidée, vous pouvez choisir d&apos;utiliser les données de l&apos;entité mère ou d&apos;une filiale, ainsi que la valeur consolidée ou non consolidée du compte ou du groupe. Vous pouvez également choisir d&apos;utiliser la valeur par défaut selon que le document est configuré pour utiliser des données consolidées ou non consolidées.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Propriétés fermes</p>
+                <p>Propriétés fermes telles que définies dans le Cloud :</p>
+                <ul style="list-style-type: circle;">
+                    <li>Nom du cabinet</li>
+                    <li>Adresse du cabinet</li>
+                </ul>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Réponses</p>
+                <p>Réponses aux procédures à partir de listes de contrôle. Une fois que vous avez sélectionné un document de la liste de contrôle dans la liste, sélectionnez la réponse que vous souhaitez récupérer et insérer dans la section texte.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Matérialité</p>
+                <p>Valeurs définies dans le document de <a href="../../SE-Authoring/Set-up-the-Materiality-document.htm">matérialité</a> .</p>
+            </li>
+            <li>
+                <p><b>Glossaire de l&apos;engagement</b></p>
+                <p>Ajouter un terme du <a href="../../SE-Authoring/What's-the-engagement-glossary.htm">glossaire de</a>l&apos; <a href="../../SE-Authoring/What's-the-engagement-glossary.htm">engagement.</a></p>
+                <p>Voir <a href="#To_add_an_Engagement_Glossary_term:">Ajouter un terme dans le glossaire de l&apos;engagement</a>.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Texte dynamique</p>
+                <p>Un texte dynamique est un texte conditionnel. Il s&apos;agit d&apos;un champ dans lequel un texte différent s&apos;affiche en fonction d&apos;une condition ou d&apos;un ensemble de conditions.</p>
+                <p>Voir <span><a href="#To_add_dynamic_text:">Ajout d&apos;un texte dynamique.</a></span></p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Valeur des formulaires</p>
+                <p>Insérer la valeur d&apos;un champ de formulaire spécifique. Lorsque vous sélectionnez un formulaire et un champ, la valeur du champ sélectionné est insérée dans le champ de texte.</p>
+                <p class="note inline"><b>Remarque :</b> Cette option n&apos;est disponible dans la boîte de dialogue Data Link que si vous avez développé des formulaires à l&apos;aide de SE Builder dans votre produit. Pour en savoir plus, voir <a href="../../SE-Authoring/Develop-custom-forms.htm">Développer des formulaires personnalisés.</a></p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>De metadata-URI kopiëren (Okta)</h1>
+        <p>Een metadata URI levert de nodige gegevens voor de werking van SSO. Je zult het gebruiken wanneer je SSO configureert in Cloud.</p>
+        <p><b>Om de metadata URI te kopiëren:</b></p>
+        <ol>
+            <li>
+                <p>Log in op het Okta-dashboard van uw bedrijf met een <b>beheerdersaccount</b> .</p>
+            </li>
+            <li>
+                <p>Vouw het vervolgkeuzemenu voor accounts uit en beweeg je cursor over de URI voor metagegevens. Er wordt een klembordpictogram weergegeven. Selecteer deze om de metadata URI te kopiëren.</p>
+                <p><img src="../../Resources/Images/okta-10.png" /></p>
+            </li>
+            <li>
+                <p>Plak de URI van de metagegevens in een tekstdocument. Het zal in dit formaat zijn:</p>
+                <p>&lt;account&gt;.okta.com</p>
+            </li>
+            <li>
+                <p>Pas de metadata URI aan zodat deze voldoet aan de volgende opmaak:</p>
+                <p>https://$&lt;account<b>&gt;.okta.com/</b>.well-known/openid-configuratie</p>
+            </li>
+            <li>
+                <p>Geef het het label <b>Metadata URI</b> en sla het tekstdocument op voor later gebruik.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Manage-authorization-servers.htm">(Optioneel) Autorisatieservers beheren</a></p>
+    </body>
+</html>

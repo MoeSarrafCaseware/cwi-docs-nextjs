@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="CaseWare Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. CaseWare Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region." />
+    </head>
+    <body>
+        <h1>Recuperar una versión anterior o un archivo eliminado</h1>
+        <p>Caseware Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. Caseware Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region.</p>
+        <p>Caseware Cloud utilizes Amazon Glacier for backup storage. Glacier data is specific to a single region <a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-data-model.html">[1]</a> <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#glacier_region">[2]</a> and is not automatically replicated anywhere else. So, if you have legal requirements that your data must be geographically stored in Australia (for example), your data will only be stored there.</p>
+        <h2 id="Recovering-previous-versions-of-uploaded-files">Recuperar una versión anterior o un archivo eliminado</h2>
+        <p>When you replace an uploaded file on Cloud, you can easily recover previous versions of that file. Access the file details to find previous copies of your document.</p>
+        <p style="font-weight: bold;">To recover a previous version of an uploaded file:</p>
+        <ol>
+            <li>
+                <p>Open the <b>Files</b> page and select an entity from the Entity Selector.</p>
+            </li>
+            <li>
+                <p>Selecciónelo.</p>
+            </li>
+            <li>
+                <p>On the <b>File Details</b> pane, under the <b>Previous Versions</b> menu, select the previous version of the file.</p>
+            </li>
+            <li>
+                <p>Select the <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />):</p>
+                <p><img src="../../Resources/Images/Previous-version-630x530.png" alt="Recover a previous version of an uploaded file -- Previous versions of a file" /></p>
+                <ul>
+                    <li>
+                        <p><b>Download</b> - Download the file to your computer</p>
+                    </li>
+                    <li>
+                        <p><b>View</b> - View the file in Caseware Cloud</p>
+                    </li>
+                    <li>
+                        <p><b>Delete</b> - Delete the previous version permanently. This file will not appear in the Recycle Bin.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2 id="Recovering-folders-and-files-from-the-Recycle-bin"><a name="Recoveri"></a>Recovering folders and files from the Recycle Bin</h2>
+        <p>When you delete a file or folder, it is sent to the Recycle Bin. You can retrieve any deleted folder or file from the Recycle Bin.</p>
+        <p style="font-weight: bold;">To recover folders and files from the Recycle Bin:</p>
+        <ol>
+            <li>
+                <p>Ensure you have <i>Admin</i>, <i>Entity Admin</i>, or <i>Owner</i> role, or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud menu</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Files</b>.</p>
+                <p>If you want to recover a Working Papers file, select <b>Working Papers</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Recycle Bin</b> from the left pane to access your deleted files.</p>
+                <p><img src="../../Resources/Images/Recycle-Bin630x350.png" alt="Papelera de reciclaje" /></p>
+            </li>
+            <li>
+                <p>Seleccione los nombres de usuario que desea incluir</p>
+            </li>
+            <li>
+                <p>In the <b>File details</b> pane, select <b>More Actions</b>(<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Restore</b> to move this file back to its original entity.</p>
+                <p><img src="../../Resources/Images/Restore-630x480.png" alt="Restore files from recycle bin" /></p>
+            </li>
+        </ol>
+        <p>If you are still having problems recovering your files, you can send a data recovery request to our support team. For more information, see <a href="Data-recovery-limitations.htm">Data recovery limitations</a>.</p>
+    </body>
+</html>

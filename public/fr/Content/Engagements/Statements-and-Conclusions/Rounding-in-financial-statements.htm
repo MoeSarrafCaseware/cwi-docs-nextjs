@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Rounding"></a>Arrondissement dans les états financiers</h1>
+        <p class="note inline"><b>Remarque :</b> Si la balance de vérification est déséquilibrée (l&apos;actif n&apos;est pas égal au passif + les capitaux propres), le processus d&apos;application des différences d&apos;arrondi ne peut pas être suivi. En outre, un indicateur de <b>déséquilibre</b> s&apos;affiche dans la page <b>Balance de vérification</b> (<img src="../../Resources/Images/icon-out-of-balance-TB.png" style="vertical-align: text-bottom;" />) pour indiquer les colonnes en déséquilibre.</p>
+        <p>L&apos;arrondi des soldes des comptes dans les tableaux des états financiers obéit à des règles spécifiques :</p>
+        <ul>
+            <li>
+                <p>Le total des différences d&apos;arrondi de tous les soldes est appliqué au premier compte dont le solde n&apos;est pas nul dans le groupe par défaut prédéfini dans votre produit.</p>
+            </li>
+            <p>Notez que &quot;appliqué au premier compte&quot; signifie &quot;ajouté au solde du premier compte&quot;.</p>
+            <p><b>Exemple :</b></p>
+            <p>Supposons que :</p>
+            <ul style="list-style-type: circle;">
+                <li>le total des écarts d&apos;arrondis de l&apos;année en cours est de 3 $,</li>
+                <li>le groupe par défaut de votre produit est la <i>trésorerie et les équivalents de trésorerie</i>,</li>
+                <li>et le premier compte avec un solde non nul dans ce groupe est <i>Cash</i> avec un solde de $12,400</li>
+            </ul>
+            <p>Dans ce cas, les différences d&apos;arrondi s&apos;appliquent à l&apos; <i>encaisse</i> et le nouveau solde de l&apos; <i>encaisse</i> devient 12 403 $.</p>
+            <li>
+                <p>Les différences d&apos;arrondi ne peuvent s&apos;appliquer qu&apos;aux comptes.</p>
+            </li>
+            <li>
+                <p>Vous pouvez modifier le compte où s&apos;appliquent les différences d&apos;arrondi et sélectionner un autre compte.</p>
+            </li>
+        </ul>
+        <p>Dans les tableaux des états financiers, la ligne où les différences d&apos;arrondi sont appliquées est marquée d&apos;un astérisque (*).</p>
+        <p>Dans cette figure, l&apos;astérisque (*) marque la ligne &quot; <i>Immobilisations corporelles</i> &quot; pour indiquer que des différences d&apos;arrondi s&apos;appliquent à un compte de ce groupe.</p>
+        <p><img src="../../Resources/Images/PPE-group-rounding-applied.PNG" alt="L&apos;astérisque (*) qui apparaît à la rubrique Immobilisations corporelles indique que des différences d&apos;arrondi s&apos;appliquent à un compte de ce groupe" /></p>
+        <p>Au fur et à mesure que vous agrandissez le groupe, l&apos;astérisque (*) se déplace jusqu&apos;à ce que vous atteigniez le compte où les différences d&apos;arrondi s&apos;appliquent.</p>
+        <p><img src="../../Resources/Images/PPE-account-rounding-applied.PNG" alt="L&apos;astérisque (*) se rétracte jusqu&apos;à ce que vous atteigniez le compte où les différences d&apos;arrondi s&apos;appliquent" /></p>
+        <h2><a name="Rounding2"></a>Arrondi et report</h2>
+        <p>En cas de report, les différences d&apos;arrondi s&apos;appliquent aux mêmes comptes des années précédentes (c&apos;est-à-dire qu&apos;il n&apos;y a pas de changement pour les années précédentes). Comme pour l&apos;année en cours, les différences d&apos;arrondi s&apos;appliquent au compte de l&apos;année précédente la plus récente. En voici un exemple :</p>
+        <p>si vous reportez des données pour 2018, 2017 et 2016, où,</p>
+        <ul style="list-style-type: circle;">
+            <li>Différences d&apos;arrondi pour 2018 appliquées à la <i>trésorerie</i></li>
+            <li>Différences d&apos;arrondi pour 2016 et 2017 appliquées au <i>passif</i></li>
+        </ul>
+        <p>ensuite,</p>
+        <ul style="list-style-type: circle;">
+            <li>Les différences d&apos;arrondi pour 2019 s&apos;appliquent à la <i>trésorerie</i> (même compte pour l&apos;année précédente la plus récente - 2018)</li>
+            <li>Les différences d&apos;arrondi en 2018 s&apos;appliquent à la <i>trésorerie</i> (pas de changement)</li>
+            <li>Les différences d&apos;arrondi en 2016 et 2017 s&apos;appliquent au <i>passif</i> (pas de changement)</li>
+        </ul>
+    </body>
+</html>

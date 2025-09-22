@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cuentas por pagar - proveedores</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts payable—suppliers subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id. del proveedor <br />(<code>ap_supplier_supplier_account_id</code>)</td>
+                    <td>
+                        <p>El Id. del proveedor al que se debe el pago o cuyos créditos no usados se han aplicado.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre de proveedor<br />(<code>ap_supplier_supplier_account_name</code>)</td>
+                    <td>
+                        <p>El nombre del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: First alternate. If <b>Supplier ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de grupo de proveedores <br />(<code>ap_supplier_supplier_group</code>)</td>
+                    <td>
+                        <p>Si la organización divide a los proveedores en grupos, el grupo en el que está asignado este proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dirección postal 1 del proveedor <br />ap_supplier_supplier_physical_street_address1</td>
+                    <td>
+                        <p>La línea 1 de la dirección postal física del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dirección postal 2 del proveedor <br />ap_supplier_supplier_physical_street_address2</td>
+                    <td>
+                        <p>La línea 2 de la dirección postal física del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciudad del proveedor<br /><code>ap_supplier_supplier_physical_city</code>)</td>
+                    <td>
+                        <p>La ciudad física en la que se encuentra el proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Estado del proveedor <br />(<code>ap_supplier_supplier_physical_state_province</code>)</td>
+                    <td>
+                        <p>El estado o provincia físicos donde se encuentra el proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código postal del proveedor <br />(<code>ap_supplier_supplier_physical_zip_postal_code</code>)</td>
+                    <td>
+                        <p>El código postal de la ciudad en la que se encuentra físicamente el proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>País del proveedor <br />(<code>ap_supplier_supplier_physical_country</code>)</td>
+                    <td>
+                        <p>El código de país en el que se encuentra físicamente el proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nº de seguro social del proveedor <br />(<code>ap_supplier_supplier_tin</code>)</td>
+                    <td>
+                        <p>El número de identificación fiscal del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dirección 1 de facturación <br />ap_supplier_supplier_billing_address1</td>
+                    <td>
+                        <p>La línea 1 de la dirección de facturación del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dirección 2 de facturación <br />ap_supplier_supplier_billing_address2</td>
+                    <td>
+                        <p>La línea 2 de la dirección de facturación del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciudad de facturación <br />(<code>ap_supplier_supplier_billing_city</code>)</td>
+                    <td>
+                        <p>La ciudad de facturación del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing State (<code>ap_supplier_supplier_billing_state_province</code>)</td>
+                    <td>
+                        <p>El estado o provincia de facturación del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Billing Zip <br />(<code>ap_supplier_supplier_billing_zip_postal_code</code>)</td>
+                    <td>
+                        <p>El código postal de facturación de la ciudad del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>País de facturación <br />(<code>ap_supplier_supplier_billing_country</code>)</td>
+                    <td>
+                        <p>El código de país de facturación del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha activa <br />(<code>ap_supplier_active_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se declaró activo el proveedor.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha inactiva <br />(<code>ap_supplier_inactive_date</code>)</td>
+                    <td>
+                        <p>Fecha en la que se declaró inactivo el proveedor.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Límite de crédito de transacciones <br />(<code>ap_supplier_transaction_credit_limit</code>)</td>
+                    <td>
+                        <p>El límite de crédito por factura establecido con este proveedor.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Límite de crédito general <br />(<code>ap_supplier_overall_credit_limit</code>)</td>
+                    <td>
+                        <p>El límite de crédito para el saldo total pendiente aprobado para el proveedor.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Porcentaje de descuento de las condiciones de la factura <br />(<code>ap_supplier_terms_discount_percentage</code>)</td>
+                    <td>
+                        <p>El porcentaje de descuento que el proveedor puede ofrecer si la factura se paga antes de que se cumpla cierto plazo.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Días de descuento de las condiciones de la factura <br />(<code>ap_supplier_terms_discount_days</code>)</td>
+                    <td>
+                        <p>El número de días desde la fecha de la factura durante los que el proveedor permite aprovechar las condiciones de descuento.</p>
+                        <p>Data type: Integer</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Días de vencimiento de las condiciones de la factura <br />(<code>ap_supplier_terms_due_days</code>)</td>
+                    <td>
+                        <p>El número de días permitido para cumplir las obligaciones antes de que una factura venza.</p>
+                        <p>Data type: Integer</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre del contacto principal <br />(<code>ap_supplier_primary_contact_name</code>)</td>
+                    <td>
+                        <p>El nombre del principal contacto del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Teléfono del contacto principal <br />(<code>ap_supplier_primary_contact_phone</code>)</td>
+                    <td>
+                        <p>El número de teléfono del contacto principal del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico del contacto principal<br /><code>ap_supplier_primary_contact_email</code>)</td>
+                    <td>
+                        <p>La dirección de correo electrónico del contacto principal del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Creado por <br />(<code>ap_supplier_entered_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que creó el registro.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha creación: <br />(<code>ap_supplier_entered_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que la transacción se creó en el sistema. Se conoce también como fecha de creación.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Created Time <br />(<code>ap_supplier_entered_time</code>)</td>
+                    <td>
+                        <p>La hora en la que esta transacción se creó en el sistema.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprobado por <br />(<code>ap_supplier_approved_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que aprobó el asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de aprobación <br />(<code>ap_supplier_approved_by_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se aprobó el asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de aprobación <br />(<code>ap_supplier_approved_by_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se aprobó el asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Última modificación realizada por: <br />(<code>ap_supplier_last_modified_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la última persona que modificó este asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la última modificación <br />(<code>ap_supplier_last_modified_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se realizó la última modificación del asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de la última modificación <br />(<code>ap_supplier_last_modified_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se realizó la última modificación del asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table class="table table-striped">
+            <col>
+            </col>
+            <col MadCap:conditions="General.SE-Authoring">
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Dataset-Typ</th>
+                    <th>Schema ID</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Understand-genledger-data.htm?region=int#General">Hauptbuch</a></td>
+                    <td>cwi.schema.general_ledger</td>
+                    <td>General ledger transactions</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Trial-balance-described.htm">Hauptabschlussübersicht</a></td>
+                    <td>cwi.schema.accounts</td>
+                    <td>A worksheet in which all ledgers are compiled into debit and credit columns in order to ensure a company&apos;s bookkeeping system is mathematically correct.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-invoices.htm">Accounts payable - invoices </a></td>
+                    <td>cwi.schema.ap_invoices</td>
+                    <td>
+                        <p>The Accounts payable—invoices dataset contains all invoices received during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-payments-made.htm">Accounts payable - payments made</a></td>
+                    <td>cwi.schema.ap_payments_made</td>
+                    <td>
+                        <p>The Accounts payable—payments Made dataset contains all payment transactions (check, wire transfer, cash, and so on) made during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-suppliers.htm">Accounts payable - suppliers</a></td>
+                    <td>cwi.schema.ap_suppliers</td>
+                    <td>
+                        <p>The Accounts payable—suppliers dataset contains all details related to the Supplier such as Contact details, address, credit limit and so on.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-open-balances.htm">Accounts payable - open balances</a></td>
+                    <td>cwi.schema.ap_open_balances</td>
+                    <td>
+                        <p>The Open accounts payable dataset contains details regarding all open, unpaid, or unresolved payable transactions as of the close of business on a specified date.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-invoices.htm">Accounts receivable - invoices</a></td>
+                    <td>cwi.schema.ar_invoices</td>
+                    <td>
+                        <p>The Accounts receivable—invoice dataset contains all invoices generated during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-cash-received.htm">Accounts receivable - cash received</a></td>
+                    <td>cwi.schema.ar_cash_received</td>
+                    <td>
+                        <p>The Accounts receivables—cash received dataset contains all payment transactions (check, wire transfer, cash, and so on) received during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-customers.htm">Accounts receivable - customers</a></td>
+                    <td>cwi.schema.ar_customers</td>
+                    <td>The Accounts receivable—customers dataset contains all details related to the customer, such as contact details, address, credit limit and so on.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-open-balances.htm">Accounts receivable - open balances</a></td>
+                    <td>cwi.schema.ar_open_balances</td>
+                    <td>The Accounts receivable—open balances dataset contains details regarding all open, unpaid, or unresolved customer transactions as of the close of business on a specified date.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-transactions.htm">Bestandstransaktionen</a></td>
+                    <td>cwi.schema.inventory_transactions</td>
+                    <td>Captures all transactions affecting inventory accounts during the time period specified (for example, receipts, shipments, transfers, returns, and adjustments).</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-on-hand.htm">Aktueller Bestand</a></td>
+                    <td>cwi.schema.inventory_on_hand</td>
+                    <td>Captures the on-hand inventory quantities of items by location and amounts as of the specified date.</td>
+                </tr>
+                <tr>
+                    <td>Andere</td>
+                    <td>To enable this dataset type, add <code>&quot;schemaless&quot;: true</code> to the &quot;feature&quot; section in the product.json file.</td>
+                    <td>Unstructured transaction data that does not follow a predefined schema. <MadCap:conditionalText MadCap:conditions="General.Cloud-Help">Select this option to import data that does not correspond to any of the dataset types described here. Each file you import using this dataset type is considered its own dataset.</MadCap:conditionalText></td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+    </body>
+</html>

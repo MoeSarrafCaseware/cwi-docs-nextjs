@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: normal;">Maintenant, configurons la bibliothèque de notes pour créer un pool de notes pour les utilisateurs.</p>
+        <ol>
+            <li>
+                <p>Créez une note et ajoutez le contenu de la note.</p>
+                <p>Vous pouvez éventuellement créer une hiérarchie de notes en ajoutant des sous-titres à la note.</p>
+                <p>Pour ajouter des sous-titres :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez la zone <b>Notes relatives aux informations financières sur</b> la carte du document.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez la note pour laquelle vous souhaitez créer une hiérarchie, puis sélectionnez <b>Ajouter</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>L&apos;intitulé applicable s&apos;affiche sous <b>Intitulé</b>.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez la rubrique concernée.</p>
+                        <p>Une note de sous-catégorie est ajoutée dans le document avec un titre par défaut <b>Titre de la note.</b> Vous pouvez sélectionner le titre par défaut et le modifier.</p>
+                    </li>
+                </ol>
+                <p>Vous pouvez également définir une association à la note. Une association fait référence aux groupes de la balance de vérification auxquels une note spécifique est liée. Les associations permettent de mieux catégoriser les notes en les associant à des groupes de balances de vérification spécifiques.</p>
+                <p style="font-weight: normal;">Pour associer une note à un groupe de balances de vérification :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez la note que vous souhaitez associer à un groupe de balances de vérification.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Autres actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Associations.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Ajouter des groupes financiers (<img src="../Icons/financial-stat-add1.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) pour alimenter les données de la balance de vérification.</p>
+                    </li>
+                    <li>
+                        <p>Choisissez un groupe de balances de vérification auquel associer la note.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Enregistrer.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Exclure la note.</p>
+                <p>Lorsqu&apos;une note est exclue du document, elle est stockée dans la bibliothèque de notes. Pour qu&apos;une note soit automatiquement exclue du document, définissez des conditions de visibilité pour chaque note dans le document des états financiers. Lorsque les conditions sont remplies, la note est automatiquement exclue du document et stockée dans la bibliothèque de notes.</p>
+                <p class="note"><b>Remarque :</b> La bibliothèque de notes n&apos;est disponible que si le document contient des notes exclues.</p>
+                <p style="font-weight: normal;">Pour exclure manuellement une note :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Accédez à la note que vous souhaitez exclure.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Autres actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Exclure</b>.</p>
+                    </li>
+                    <p>La note est exclue du document et stockée dans la bibliothèque des notes.</p>
+                </ol>
+            </li>
+            <li>
+                <p>Répétez les étapes ci-dessus jusqu&apos;à ce que vous ayez un ensemble de notes dans la bibliothèque de notes.</p>
+            </li>
+        </ol>
+        <p>Si vous sélectionnez l&apos;icône <b>Ajouter</b> (<img src="../Icons/add-FS.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la <b>carte du document</b> , vous verrez qu&apos;une autre option <b>Insérer à partir de la bibliothèque</b> est disponible. Toutes les missions <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT">Caseware ReviewCompOnPoint</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint">PCR </MadCap:conditionalText>nouvellement créées auront également cette option disponible pour les utilisateurs, afin qu&apos;ils puissent ajouter des notes à partir de la bibliothèque de notes.</p>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="instNotes">If you don&apos;t want to customize a template for your firm, you can set your firm template to use the product template. The product template contains the default content for your product.</p>
+        <p class="instNotes" MadCap:conditions="General.PDF"><b>Tip:</b> To view information about your current product version, select <b>Information</b> (<img src="../Images/icon-i.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>About.</b></p>
+        <p MadCap:conditions="General.Online" class="tip"><b>Tip:</b> To view information about your current product version, select <b>Information</b> (<img src="../Images/icon-i.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>About.</b></p>
+        <p class="instNotes">The advantage of using the product template is that you don&apos;t need to manually update the firm template whenever there are new product updates. To learn more, see <a href="#Update">Update the firm template.</a></p>
+        <p class="instNotes" style="font-weight: bold;">Utilizar la plantilla de productos</p>
+        <ol>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">Ensure that you have the <b>Settings Admin</b> role or similar. For more information, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a> and <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Assign security roles</a>.</p>
+            </li>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Manage Template.</b></p>
+            </li>
+            <li MadCap:conditions="General.PDF">
+                <p class="instNotes">From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>OnPoint PCR</b></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT"><b>Caseware ReviewComp</b></MadCap:conditionalText> | <b>Manage Template </b><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>Primary</b></MadCap:conditionalText><b>.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Select <b>Use Default.</b></p>
+            </li>
+        </ol>
+        <p class="instNotes">The current template is archived and your firm now uses the product template. The option now available to you on the <b>Manage Template</b> page is <b>Create Draft.</b></p>
+        <p class="instNotes">If you want to customize the product template to meet specific firm requirements, select <b>Create Draft.</b></p>
+    </body>
+</html>

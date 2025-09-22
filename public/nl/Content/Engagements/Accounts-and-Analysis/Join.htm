@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Combineren</h1>
+        <p>Deze analytische test combineert twee afzonderlijke datasets tot één enkele dataset. Deze test is handig als je twee datasets moet combineren, omdat de ene dataset stamgegevens bevat die de inzichten verrijken die je kunt afleiden uit de tweede transactionele dataset. Je kunt deze test bijvoorbeeld gebruiken om verkopers zonder transacties te identificeren.</p>
+        <p>Merk op dat de twee datasets waarnaar wordt samengevoegd, dataset A (het primaire bestand) en dataset B (het secundaire bestand) worden genoemd.</p>
+        <p>Deze test ondersteunt de volgende verbindingen:</p>
+        <ul>
+            <li>
+                <p>Inner Join (Behoudt alleen de rijen met overeenkomsten in beide datasets A en B)</p>
+            </li>
+            <li>
+                <p>Outer Join (Behoudt alle rijen met overeenkomsten in dataset A of B, of in beide)</p>
+            </li>
+            <li>
+                <p>Left Outer Join (Behoudt alle rijen van dataset A en de overeenkomende rijen van B)</p>
+            </li>
+            <li>
+                <p>Right Outer Join (Behoudt alle rijen van dataset B en de overeenkomende rijen van A)</p>
+            </li>
+            <li>
+                <p>Records zonder overeenstemmend record</p>
+            </li>
+            <li>
+                <p>Records zonder primair record</p>
+            </li>
+        </ul>
+        <p>Deze analytische test kan worden gebruikt om:</p>
+        <ul>
+            <li>
+                <p>Verifieer dat alle leverancierstransacties correct geboekt worden. Een stamgegevensbestand van de leverancier zorgt ervoor dat alle leveranciers gedocumenteerd zijn, waardoor het risico op ontbrekende transacties afneemt.</p>
+            </li>
+            <li>
+                <p>Bevestigen dat leveranciersgegevens accuraat zijn. Dit helpt ervoor te zorgen dat betalingen afkomstig zijn van legitieme leveranciers en dat fouten in leveranciersgegevens tot een minimum worden beperkt.</p>
+            </li>
+            <li>
+                <p>Het is cruciaal voor compliance-doeleinden om ervoor te zorgen dat het stamgegevensbestand van de leverancier wordt bijgehouden in overeenstemming met de wettelijke vereisten en het bedrijfsbeleid. Auditors controleren of de relevante wet- en regelgeving en het interne beleid worden nageleefd.</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <p>Kolommen bevriezen</p>
+        <ul>
+            <li>
+                <p>Primair bestand:</p>
+                <ul>
+                    <li>
+                        <p>Een of meer velden die worden gebruikt als match</p>
+                    </li>
+                    <li>
+                        <p>Een of meer velden die moeten worden opgenomen in het samengevoegde resultaat.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Secundair bestand:</p>
+                <ul>
+                    <li>
+                        <p>Een of meer velden die worden gebruikt als overeenkomst.</p>
+                    </li>
+                    <li>
+                        <p>Een of meer velden die moeten worden opgenomen in het samengevoegde resultaat.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Voor de twee join velden moet er ook een indicator zijn of de join in oplopende of aflopende volgorde moet worden uitgevoerd. De velden uit het primaire en secundaire bestand moeten overeenkomen, omdat ze worden gebruikt als sleutel voor de join.</p>
+        <h2>Parameters</h2>
+        <p>Er moet één parameter worden ingesteld om de test uit te voeren:</p>
+        <p><b>Type lid worden</b>:</p>
+        <ul>
+            <li>
+                <p><b>Inner Join</b> (Behoudt alleen de rijen met overeenkomsten in beide datasets A en B)</p>
+            </li>
+            <li>
+                <p><b>Outer Join</b> (Behoudt alle rijen met overeenkomsten in dataset A of B, of in beide)</p>
+            </li>
+            <li>
+                <p><b>Left Outer Join</b> (Behoudt alle rijen van dataset A en de overeenkomende rijen van B)</p>
+            </li>
+            <li>
+                <p><b>Right Outer Join</b> (Behoudt alle rijen van dataset B en de overeenkomende rijen van A)</p>
+            </li>
+            <li>
+                <p><b>Records zonder overeenstemmend record</b></p>
+            </li>
+            <li>
+                <p><b>Records zonder primair record</b></p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p>De enige beschikbare configuratie voor deze test is <b>Transacties zonder leveranciersaccount</b>.</p>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analysetest voor duplicaten uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Controleer of dit een definitief resultaat of een tussentijds resultaat is.</p>
+            </li>
+            <li>
+                <p>Bepaal het type verbinding dat wordt uitgevoerd uit de volgende types:</p>
+                <ul>
+                    <li>
+                        <p>Inner Join (Behoudt alleen de rijen met overeenkomsten in beide datasets A en B)</p>
+                    </li>
+                    <li>
+                        <p>Outer Join (Behoudt alle rijen met overeenkomsten in dataset A of B, of in beide)</p>
+                    </li>
+                    <li>
+                        <p>Left Outer Join (Behoudt alle rijen van dataset A en de overeenkomende rijen van B)</p>
+                    </li>
+                    <li>
+                        <p>Right Outer Join (Behoudt alle rijen van dataset B en de overeenkomende rijen van A)</p>
+                    </li>
+                    <li>
+                        <p>Records zonder overeenstemmend record</p>
+                    </li>
+                    <li>
+                        <p>Records zonder primair record</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Verkrijg het primaire bestand:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Verkrijg het (de) overeenkomende veld(en)</p>
+                    </li>
+                    <li>
+                        <p>Verkrijg de lijst met velden die worden opgenomen in het resultaat</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Verkrijg het secundaire bestand:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Verkrijg het (de) overeenkomende veld(en)</p>
+                    </li>
+                    <li>
+                        <p>Verkrijg de lijst met velden die worden opgenomen in het resultaat</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Verkrijg of de overeenkomsten in oplopende of aflopende volgorde zijn of een mix.</p>
+            </li>
+            <li>
+                <p>Voer de juiste join uit op basis van de gebruikersselecties.</p>
+            </li>
+        </ol>
+    </body>
+</html>

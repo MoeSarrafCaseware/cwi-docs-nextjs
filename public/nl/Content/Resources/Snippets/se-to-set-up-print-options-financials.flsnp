@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="instNotes"><b>Afdrukopties instellen:</b></p>
+        <ol>
+            <li>
+                <p class="instNotes">Ga naar de Documentmap en selecteer <b>Meer acties</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Afdrukinstellingen</b>.</p>
+                <p class="instNotes">Je hebt alleen toegang tot deze optie voor de inhoud die je toevoegt aan de financiële overzichten - niet voor de voorgedefinieerde inhoud. Voor meer informatie, zie <a href="../../Engagements/Template-and-Authoring/Add-content-areas-in-the-financial-statements.htm">Inhoudelijke wijzigingen in de jaarrekening beoordelen.</a></p>
+                <p class="note"><b>Let op:</b> Voor de voorgedefinieerde inhoud in het document heb je alleen toegang tot de afdrukinstellingen als je de bedrijfssjabloon aanpast. Om toegang te krijgen tot de firmasjabloon moet je de rol <b>Settings Admin</b> of een vergelijkbare rol hebben. Zie <a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">De bedrijfssjabloon beheren</a> voor meer informatie.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online" class="instNotes">Als je andere instellingen voor notities wilt, ga je naar de Document Map en selecteer <b>je Instellingen</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Instellingen voor het afdrukken van notities</b></p>
+                <p>Als u andere instellingen wilt voor een gebied, gaat u naar het gewenste gebied in het document en selecteert u <b>Meer acties (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Afdrukinstellingen bewerken.</b></p>
+                <p>Als je andere instellingen wilt voor een specifieke pagina, ga dan naar het pagina-einde voor die pagina en selecteer <b>Meer acties (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Afdrukinstellingen.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Geef de voorkeursinstellingen op voor <b>Briefhoofd</b>, <b>Paginaformaat</b> en <b>Marges.</b></p>
+                <p>Let op: briefhoofden in financiële overzichten worden niet beïnvloed door paginamarges en worden niet inline met de tekst weergegeven. Je moet de paginamarges handmatig aanpassen om ervoor te zorgen dat de inhoud van het document niet overlapt met het briefhoofd.</p>
+                <p>Om de juiste grootte voor de paginamarges in inches te bepalen, moet je de pixelgrootte van je briefhoofd door 96 delen. Als je briefhoofd bijvoorbeeld 100px hoog is, kun je 100 delen door 96 om de grootte van je bovenmarge te bepalen. In dit geval moet de marge minstens 1,04 inch zijn om ervoor te zorgen dat het briefhoofd niet overlapt met de inhoud van je document.</p>
+                <p>Als je briefhoofd alleen op de eerste pagina van je document wordt weergegeven, kun je <a href="../../Engagements/Template-and-Authoring/Add-a-page-break-in-the-financial-statements.htm#Add">een pagina-einde toevoegen</a> om andere marges in te stellen voor de andere pagina&apos;s.</p>
+            </li>
+            <li>
+                <p>Selecteer onder <b>Dynamische tabellen</b>de optie <b>Kolomkoppen op volgende pagina&apos;s weergeven</b> als je wilt dat dynamische tabellen de kolomkoppen op volgende pagina&apos;s herhalen.</p>
+            </li>
+            <li>
+                <p>Selecteer onder <b>Samen houden</b>de optie <b>Notitiekoppen bij alinea&apos;s houden en alinea&apos;s bij elkaar houden</b> als je ervoor wilt zorgen dat notitiekoppen niet op aparte pagina&apos;s worden afgedrukt met de inhoud van de notitie en dat alinea&apos;s niet over meerdere pagina&apos;s worden verdeeld.</p>
+                <p>Paragrafen die langer zijn dan een pagina worden nog steeds gesplitst.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Watermerk toepassen</b> om een watermerk in het document aan te brengen.</p>
+                <p>U kunt de inhoud van het watermerk invoeren in het bijbehorende tekstveld.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Liggend</b> om de paginastand te wijzigen.</p>
+                <p>The default is <b>Portrait.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Schakel het selectievakje <b>Tellen in paginanummering</b> uit als je wilt dat de paginanummering begint na de pagina <b>met de inhoudsopgave</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer onder <b>Paginanummering</b> <b>Begin pagina bij</b> en voer een paginanummer in het tekstveld in als je de paginanummering wilt laten beginnen bij een aangepast paginanummer.</p>
+                <p>Standaard begint de paginanummering bij 1 voor de jaarrekening en worden de paginanummers van een afzonderlijk gebied voortgezet vanaf het vorige gebied. Je kunt de paginanummering meerdere keren opnieuw starten in de jaarrekening door de afdrukinstellingen voor individuele gebieden aan te passen.</p>
+            </li>
+            <li>
+                <p>In de <b>Afdrukinstellingen voor notities</b>:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer <b>Verberg koppen op subniveau met slechts één notitie</b> als je automatisch koppen op subniveau voor notities wilt verbergen wanneer er geen volgende notities in de groep zijn.</p>
+                        <p>Als notitie 1 bijvoorbeeld een subnotitie 1.a bevat en er zijn geen notities 1.b, 1.c, enz., dan kunt u de notitietitel van subnotitie 1.a in de PDF-uitvoer verbergen en alleen de inhoud van die notitie weergeven. Alleen de inhoud van die notitie wordt weergegeven.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Enable continued header text</b> if you want to enter a custom suffix for headers for notes that span multiple pages.</p>
+                        <p>Als je bijvoorbeeld het achtervoegsel &quot;vervolg&quot; invoert, wordt een opmerking met de kop &quot;Belangrijke grondslagen voor financiële verslaggeving&quot; op volgende pagina&apos;s weergegeven als &quot;Belangrijke grondslagen voor financiële verslaggeving vervolg&quot;.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

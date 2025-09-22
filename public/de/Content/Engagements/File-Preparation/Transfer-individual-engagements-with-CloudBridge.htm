@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Transfer individual engagements with CloudBridge</h1>
+        <p>Use CloudBridge to transfer data from an individual Working Papers engagement to Cloud. If you haven&apos;t installed CloudBridge, see <a href="Get-CloudBridge.htm">Get CloudBridge</a>.</p>
+        <h2><a name="Setup"></a>Set up CloudBridge</h2>
+        <p>Before you can transfer data from a Working Papers engagement to Cloud, you need to set up CloudBridge by adding the CloudBridge (CLBG) document to the Document Manager in Working Papers.</p>
+        <p><b>To add the CLBG document to Working Papers:</b></p>
+        <ol>
+            <li>
+                <p>Ensure your copy of Working Papers is integrated with your Cloud firm. To learn more, see <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Integrate Working Papers with Caseware Cloud</a>.</p>
+            </li>
+            <li>
+                <p>Ensure that you have installed CloudBridge.</p>
+            </li>
+            <li>
+                <p>Open your client file in Working Papers.</p>
+            </li>
+            <li>
+                <p>From the <b>Document</b> tab, click <b>From Library | CloudBridge</b>. The Document Library dialog is displayed.</p>
+            </li>
+            <li>
+                <p>Click <b>CLBG</b> and click <b>Add</b>.</p>
+            </li>
+        </ol>
+        <p>The CLBG document is displayed in the Document Manager.</p>
+        <h2><a name="Transfer"></a>Transfer engagement data</h2>
+        <p>After you add the CLBG document to a Working Papers engagement, you can transfer your trial balance and general ledger tax data to your Cloud engagement (adjustments posted to groups are not supported, only account balances).</p>
+        <div class="note">
+            <p><b>Note:</b></p>
+            <p>You can also include your client&apos;s financial data in the transfer. To do so, complete the following prerequisites:</p>
+            <ol>
+                <li>
+                    <p>Ensure that <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Working Papers is integrated with your Cloud site</a>.</p>
+                </li>
+                <li>
+                    <p><a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32.htm#CSHID=YEC">Carry forward</a> your Working Papers engagement file.</p>
+                </li>
+                <li>
+                    <p>(Optional) If you&apos;re transferring data from an unlicensed version of Working Papers, copy and paste <b>cw:program/scripts/cloudbridge/index.html</b> into the URL field on the Working Papers toolbar, then press <b>Enter</b> on your keyboard to launch CloudBridge.</p>
+                </li>
+                <li>
+                    <p>Complete the transfer process below.</p>
+                </li>
+            </ol>
+            <p>Note that accounts with zero balances will not be automatically transferred. If you want to include zero-balance accounts, you must manually <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> them and <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the designated groups.</p>
+        </div>
+        <p><b>To transfer engagement data to Cloud:</b></p>
+        <ol>
+            <li>
+                <p>In the Document Manager, double-click <b>CLBG</b>. The CLBG document is displayed.</p>
+            </li>
+            <li>
+                <p>In the Step 1 section, choose an appropriate entity and engagement.</p>
+            </li>
+            <li>
+                <p>In the Step 2 section, choose the appropriate trial balance data to export.</p>
+            </li>
+            <li>
+                <p>In the Step 2 section, select the <b>Use remap file</b> check box. The remap file is used to transfer the current account mapping structure in Working Papers to your Cloud engagement.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p><b>Canada:</b> If your engagement uses the default Working Papers mapping or was created with the PEG template, use the remap file located in the folder where you installed CloudBridge (<b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge</b>). If your engagement uses a custom mapping structure specific to your firm, <a href="#Remap">create a custom remap file</a>, then add it.</p>
+                    </li>
+                    <li>
+                        <p><b>USA:</b> If your engagement uses the default Working Papers mapping, use the remap file located in the folder where you installed OnPoint CloudBridge (<b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge</b>). If your engagement uses a custom mapping structure specific to your firm, you&apos;ll need to edit the default remap file manually in a text editor (e.g. Notepad).</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select <b>Choose file</b> to browse and add the remap file.</p>
+            </li>
+            <li>
+                <p><b>Canada:</b> (Optional) If you have other journal entries related to donations, meals and entertainment expenses or foreign advertising, the <b>Step 3</b> section will display in the page. <b>Step 3</b> allows you to transfer GL data to the appropriate Tax Worksheet in the Caseware ReviewComp engagement. For example, we&apos;ll add <b>Gifts to Client</b> to the <b>Donations</b> worksheet.</p>
+            </li>
+            <li>
+                <p>Once you&apos;re done, select <b>Transfer Data</b>.</p>
+            </li>
+        </ol>
+        <h3><a name="Remap"></a>Create a custom remap file (Canada only)</h3>
+        <p>If your firm uses a custom mapping structure, you need to create your own remap file (.ini) file based on your custom mapping structure.</p>
+        <p><b>To create a custom remap file:</b></p>
+        <ol>
+            <li>
+                <p>Copy components.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Open your Working Papers file.</p>
+                    </li>
+                    <li>
+                        <p>We recommend that you create a backup copy of your file before you proceed (<b>File | Back Up</b>).</p>
+                    </li>
+                    <li>
+                        <p>On the ribbon, click <b>File | Copy Components</b>. The Copy Components Wizard is displayed.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Copy Into This File</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Select Source page, click the <b>File</b> tab, then click <b>Browse</b>.</p>
+                    </li>
+                    <li>
+                        <p>Navigate to <b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge\Caseware ReviewComp</b> and select <b>Caseware ReviewComp.ac</b>, then click <b>Next</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the <b>Copy Components</b> page, select <b>Groupings/Mapping</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Mapping</b> and click <b>Options</b>. The Mapping Copy Options dialog is displayed.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Remap numbers.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click <b>Remap</b>. The Remap dialog is displayed.</p>
+                    </li>
+                    <li>
+                        <p>Drag a mapping number from the <b>Destination File Mapping Numbers</b> list and drop it into the appropriate mapping number in the <b>Source File Mapping Numbers</b> list.</p>
+                    </li>
+                    <li>
+                        <p>Repeat the process to assign additional mapping numbers.</p>
+                    </li>
+                    <li>
+                        <p>Once you&apos;re done, click <b>Apply</b> to save your settings, then click <b>OK</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Generate the .ini file.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the Mapping Copy Options dialog, click <b>Cancel</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the Copy Components Wizard, click <b>Cancel</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>A remap file with the name <b>copy.ini</b> is created in the folder of your Working Papers file (<b>C:\Program Files (x86)\Caseware\Data</b>).</p>
+        <p>You can now use this remap file in CloudBridge to transfer your Working Papers data to your engagement.</p>
+    </body>
+</html>

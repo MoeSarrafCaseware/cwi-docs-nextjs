@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Datuminvoeren</h1>
+        <p>De Date entries analyse identificeert transacties met bepaalde datumwaarden. Zie het gedeelte <a href="#Test">Testconfiguraties</a> voor een volledige lijst van de typen datumwaarden die kunnen worden geïdentificeerd.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Mogelijke pogingen tot manipulatie van financiële overzichten.</p>
+            </li>
+            <li>
+                <p>Financiële rapportagegebieden die minder nauwkeurig of precies zijn</p>
+            </li>
+            <li>
+                <p>Transacties die belangrijke schattingen bevatten</p>
+            </li>
+            <li>
+                <p>Onjuist geconfigureerde systeeminstellingen die mogelijk moeten worden verbeterd en verder geëvalueerd</p>
+            </li>
+            <li>
+                <p>Onjuiste opname van transacties in de juiste boekhoudperiode</p>
+            </li>
+            <li>
+                <p>Zwakke interne controles</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de monitoring- en opsporingsactiviteiten</p>
+            </li>
+            <li>
+                <p>Slechte training</p>
+            </li>
+            <li>
+                <p>Afwijkingen in het verwachte datumbereik kunnen duiden op afsluitingsproblemen</p>
+            </li>
+            <li>
+                <p>Als er veel dagen verstrijken tussen de ingevoerde en de boekingsdatum of als de ingevoerde datum eerder is dan de boekingsdatum, kan dit een indicatie zijn van een datering naar achteren of naar voren.</p>
+            </li>
+            <li>
+                <p>Beoordelen van risico&apos;s op afwijkingen van materieel belang als gevolg van mogelijke fraude.</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>Referentieveld(en)</b> - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld <b>Entry ID</b> voor de grootboekdataset. Deze kolommen maken geen deel uit van het resultaat, maar worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Dit veld is al gedefinieerd in de test en kan niet worden gewijzigd.</p>
+            </li>
+            <li>
+                <p><b>Kernveld(en)</b> - Een of twee datumvelden.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om deze test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Datum</b> - Selecteer een of meer datums waarop de analyse wordt uitgevoerd.</p>
+            </li>
+            <li>
+                <p><b>Ingevoerde tijdsperiode</b> - Als je testconfiguratie zoekt naar datumbereiken, voer dan het aantal perioden in dat zal worden gebruikt. Als je bijvoorbeeld 2 selecteert en je kiest <b>Weken</b> als periodetype en <b>Tussen als</b> bereiktype, dan zoekt de test naar datums die 2 weken voor en na de geselecteerde datum liggen.</p>
+            </li>
+            <li>
+                <p><b>Selecteer type periode</b> - Selecteer het type periode, zoals dagen, weken of maanden.</p>
+            </li>
+            <li>
+                <p><b>Bereiktype</b> - Voor sommige configuraties van deze test moet je aangeven of je zoekt naar transacties op data voor, na of tussen het opgegeven datumbereik.</p>
+            </li>
+        </ul>
+        <h2><a name="Test"></a>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Transacties rond een bepaalde datum</b> - Toont transacties rond een bepaalde datum.</p>
+            </li>
+            <li>
+                <p>Met de analyse die transacties eruit haalt binnen een datumbereik kunnen transacties tussen twee specifieke datums eruit worden gehaald.</p>
+            </li>
+            <li>
+                <p><b>Transacties met twee data binnen een bepaald datumbereik</b> - Toont transacties met twee data binnen een bepaald datumbereik.</p>
+            </li>
+            <li>
+                <p><b>Transacties met twee data rond een bepaalde datum</b> - Toont transacties met twee data binnen een bepaald datumbereik.</p>
+            </li>
+            <li>
+                <p><b>Transacties geboekt op een bepaalde dag(en) van het jaar</b> - Toont transacties geboekt op bepaalde dag(en) van het jaar.</p>
+            </li>
+            <li>
+                <p><b>Transacties die op een bepaalde dag(en) van de week zijn geboekt</b> - Toont transacties die op een bepaalde dag(en) van de week zijn geboekt.</p>
+            </li>
+            <li>
+                <p><b>Transacties geboekt op een bepaalde dag(en) van het jaar</b> - Toont transacties geboekt op bepaalde dag(en) van het jaar.</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test Datum invoer uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste. Merk op dat de mogelijkheid om filters in te stellen momenteel nog niet beschikbaar is en in latere versies van de test beschikbaar zal zijn.</p>
+            </li>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Verkrijg welke configuratie van de test wordt uitgevoerd:</p>
+                <ul>
+                    <li>
+                        <p style="font-weight: bold;">Look for transactions around a certain date.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Look for transactions within a date range.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ - Transacties met twee datums binnen een bepaald datumbereik</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ - Transacties waarin twee datums rond een bepaalde datum liggen</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transacties die op een bepaalde datum zijn geboekt.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ - Transacties geboekt op (een) bepaalde dag(en) van de week</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">PJ - Transacties geboekt op (een) bepaalde dag(en) van de week</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Voor de <b>Transacties rond een bepaalde datum</b> test:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer dat de gebruiker een datum heeft geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer dat de gebruiker het aantal perioden heeft ingevoerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer of de gebruiker heeft geselecteerd of het aantal perioden dagen, weken of maanden is.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of de gebruiker een van de volgende opties heeft geselecteerd:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p><b>Groter dan (&gt;=)</b> - Geeft aan dat de waarde van het datumveld groter is (na) de geselecteerde datum.</p>
+                            </li>
+                            <li>
+                                <p><b>Minder dan (&lt;=)</b> - Geeft aan dat de waarde van het datumveld minder is dan (vóór) de geselecteerde datum.</p>
+                            </li>
+                            <li>
+                                <p><b>Tussen</b> - Geeft aan dat de waarde van het datumveld tussen de geselecteerde datums ligt.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extraheer alle transacties waarin de geselecteerde datumkolom binnen de door de gebruiker gedefinieerde periode valt. Voorbeelden zijn:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>De gebruiker selecteert 1 week met als datum 31 december 2023. De test haalt alle transacties eruit die tussen 31 december 2023 en 7 januari 2024 vallen.</p>
+                            </li>
+                            <li>
+                                <p>Als de gebruiker tussen selecteert, worden alle transacties tussen 23 december 2023 en 7 januari 2024 geselecteerd.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Voor de test <b>Zoeken naar transacties binnen een datumbereik</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer of de gebruiker zowel een onderste als bovenste datum heeft ingevoerd.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer alle transacties waarbij het datumveld tussen de onderste en bovenste datum valt, inclusief transacties die plaatsvinden op de onderste en bovenste datum.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ - Transacties met twee datums binnen een bepaald datumbereik</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of er een tweede datumveld is geselecteerd dat verschilt van het eerste datumveld.</p>
+                    </li>
+                    <li>
+                        <p>Valideer dat de gebruiker het aantal perioden heeft ingevoerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer of de gebruiker heeft geselecteerd of het aantal perioden dagen, weken of maanden is.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of de gebruiker een van de volgende opties heeft geselecteerd:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;=</p>
+                            </li>
+                            <li>
+                                <p>&lt;=</p>
+                            </li>
+                            <li>
+                                <p>Tussen</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extraheer de transacties op basis van het volgende:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;= - Extraheer transacties waarin datum2 na datum1 ligt op basis van de geselecteerde periode.</p>
+                            </li>
+                            <li>
+                                <p>&lt;= - Extraheer transacties waarin datum2 voor datum1 ligt op basis van de geselecteerde periode.</p>
+                            </li>
+                            <li>
+                                <p>Tussen - Extraheer transacties waarin datum2 voor of na datum1 ligt op basis van de geselecteerde periode.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ - Transacties waarin twee datums rond een bepaalde datum liggen</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of er een tweede datumveld is geselecteerd dat verschilt van het eerste datumveld.</p>
+                    </li>
+                    <li>
+                        <p>Valideer dat de gebruiker een datum heeft ingevoerd.</p>
+                    </li>
+                    <li>
+                        <p>Valideer dat de gebruiker het datumveld heeft geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer transacties waarbij het door de gebruiker geselecteerde datumveld vóór de door de gebruiker ingevoerde datum is en het niet-geselecteerde datumveld na de door de gebruiker ingevoerde datum is.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ - Transacties geboekt op (een) bepaalde dag(en) van de week</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of een of meer dagen van de week zijn geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer transacties die vallen op de dag(en) van de week die de gebruiker heeft geselecteerd voor het geselecteerde datumveld.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>PJ - Transacties geboekt op (een) bepaalde dag(en) van de week</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Valideer dat een datumveld is geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Controleer of een of meer dagen van het jaar zijn geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer transacties die vallen op de dag(en) van het jaar die de gebruiker heeft geselecteerd voor het geselecteerde datumveld.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

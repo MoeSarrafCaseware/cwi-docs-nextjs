@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWare Cloud." />
+    </head>
+    <body>
+        <h1>Bekannte Punkte in Caseware Cloud</h1>
+        <p>In diesem Thema werden bekannte Punkte bei der Verwendung von Caseware Cloud beschrieben.</p>
+        <h2>Aktivitätsbenachrichtigungs-E-Mails für SSO-Benutzer</h2>
+        <p>Links zu Aktivitäten in Benachrichtigungs-E-Mails funktionieren für SSO-Benutzer. Wenn Sie zum Zeitpunkt der Auswahl des Links nicht angemeldet sind, werden Sie nach der Anmeldung zu einem defekten Link weitergeleitet und können die Aktivität nicht sehen. Um auf die Aktivität zuzugreifen, können Sie nach der Anmeldung in der Cloud erneut den Link in der E-Mail auswählen.</p>
+        <h2>Aktivitätsbenachrichtigungen unterstützen keinen Rich Text</h2>
+        <p>Aktivitätsbenachrichtigungs-E-Mails, die an Kontakte gesendet werden, unterstützen keinen Rich Text. Das bedeutet, dass Zeilenumbrüche und andere Formatierungen wie Fett- oder Kursivschrift, die Sie auf den Text in der Benachrichtigungsbeschreibung anwenden, nicht in der E-Mail angezeigt werden.</p>
+        <p>Beachten Sie außerdem, dass der Inhalt beider Felder als einzelner Absatz angezeigt wird, wenn Sie Text sowohl in das Feld Beschreibung als auch in das Feld <b>Zusätzliche Nachricht</b> eingeben. Wir empfehlen, dass Sie Inhalte nur in eines dieser Felder eingeben, wenn Sie eine Aktivitätsbenachrichtigung an Kontakte senden.</p>
+        <h2>Manuelle Datumseingabe</h2>
+        <p>Wenn Sie Daten manuell in Datumsfelder eingeben, wie z. B. bei den Feldern für das Start- und Enddatum im Dialog zur Erstellung eines Engagements/Auftrags und das Gründungsdatum im Dialog zur Erstellung einer Entität, wird das Feld automatisch auf das Datum vor dem ausgewählten Datum zurückgesetzt. Beachten Sie, dass dieses Problem nur auftritt, wenn Ihre Ortszeit auf UTC oder eine beliebige UTC+-Zeitzone eingestellt ist. Um dieses Problem zu vermeiden, empfehlen wir Ihnen, das Datum mithilfe der Kalenderdatumsauswahl auszuwählen.</p>
+        <h2>Chat-Benachrichtigungen werden nicht angezeigt, wenn der Browser inaktiv ist</h2>
+        <p>Wenn Sie bei Ihrer Cloud Instanz angemeldet sind, Ihr Browser jedoch inaktiv ist oder sich Ihr Computer im Energiesparmodus befindet, werden keine Benachrichtigungen aus dem Chat angezeigt und Sie verpassen möglicherweise neue Nachrichten von anderen Benutzern. Wir empfehlen Ihnen, die Seite zu schließen, wenn Sie wissen, dass Sie nicht an Ihrem Computer sind, oder die Seite zu aktualisieren, um den Inhalt zu aktualisieren.</p>
+        <h2>Verknüpfen vorhandener Google-Dateien aus einem freigegebenen Laufwerk</h2>
+        <p>Beim Versuch, eine Verknüpfung zu einer vorhandenen Google-Datei herzustellen, die auf einem freigegebenen Laufwerk gespeichert ist, gibt Cloud eine Fehlermeldung zurück, die besagt, dass die Datei in Google Drive nicht vorhanden ist. Dies wird durch eine Diskrepanz zwischen den Sicherheitseinstellungen im freigegebenen Laufwerk und dem Sicherheitssystem der Cloud verursacht. Um dieses Problem zu umgehen, können Sie die Google-Datei auf ein nicht freigegebenes Laufwerk, z. B. „Mein Laufwerk“, verschieben und von dort aus einen Link zur Datei erstellen.</p>
+        <h2>Multi-Tenant Xero Integration</h2>
+        <p>Wenn Sie aus einer Multi-Tenant-Umgebung auf Ihr Xero-Konto zugreifen, können Sie es nicht mit Caseware Cloud integrieren. Derzeit wird die Xero-Integration nur in einer Single-Tenant-Umgebung unterstützt.</p>
+        <h2>Fehler &quot;Benutzername muss eindeutig sein&quot; bei der Erstellung von neuen Kontakten</h2>
+        <p>Wenn Sie versuchen, einen neuen Kontakt zu erstellen, ohne eine E-Mail-Adresse anzugeben, wird die Fehlermeldung &quot;Benutzername muss eindeutig sein&quot; angezeigt. Ein ähnliches Problem tritt in Cloud-integrierten Time Desktop-Dateien auf: Wenn bei vorhandenen Kontakten eine E-Mail-Adresse fehlt, wird beim Erstellen eines neuen Kontakts der Fehler &quot;Benutzername muss eindeutig sein&quot; angezeigt. Als vorübergehende Abhilfe können Sie &quot;Platzhalter&quot;-E-Mail-Adressen eingeben, um den Fehler sowohl in Cloud als auch in Time Desktop zu umgehen.</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3>Engagement files and versions (Caseware Audit templates)</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Metadata</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that determines the functional version of Audit in an engagement file:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>ifelse(propertyname = &apos;CWCustomProperty.TEMPLATE_VERSION&apos;, propertyvalue, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>filename</b> - Displays the engagement file name.</p>
+            </li>
+        </ul>
+    </body>
+</html>

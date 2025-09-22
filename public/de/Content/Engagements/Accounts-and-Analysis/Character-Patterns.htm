@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Zeichenmuster</h1>
+        <p>Mit der Analyse für Zeichenmuster wird festgestellt, ob Elemente wie Telefonnummern oder Postleitzahlen dem erwarteten Muster entsprechen. Die Analyse für Zeichenmuster verwendet die Regexp-Sprache und muss der Python Regexp-Syntax entsprechen.</p>
+        <p>Mit dieser Analyse lassen sich Zeichenmuster erkennen, die zur Überprüfung der Datenintegrität beitragen können. So kann zum Beispiel die Überprüfung von Telefonnummern, E-Mail-Adressen oder Postleitzahlen anhand erwarteter Muster dabei helfen, potenzielle Fehler in den Daten zu identifizieren.</p>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <ul>
+            <li>
+                <p><b>Referenzfeld(er)</b> - Eindeutige(s) Feld(er), das/die zur Erstellung einer eindeutigen Transaktions-ID verwendet wird/werden, wie z. B. das Feld <b>Eintrags-ID</b> für den Hauptbuch-Datensatz. Diese Spalten sind nicht Teil des Ergebnisses, sondern dienen der Identifizierung der Transaktionen, die Teil des Ergebnisses sind. Dieses Feld wurde bereits im Test definiert und kann nicht geändert werden.</p>
+            </li>
+            <li>
+                <p><b>Kernfeld(er)</b> - Ein oder mehrere Felder mit String-Werten, die zur Durchführung des Tests verwendet werden. Wenn mehrere Felder ausgewählt sind, wird bei jedem Test nach demselben Zeichenmuster gesucht.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <ul>
+            <li>
+                <p><b>Muster einschließen oder ausschließen</b> - Wählen Sie aus, ob Felder identifiziert werden sollen, die dem angegebenen Muster entsprechen oder nicht.</p>
+            </li>
+            <li>
+                <p><b>Zeichenmuster</b> - Geben Sie das richtige Python-Regex-Muster an, das zur Analyse der ausgewählten Felder verwendet werden soll.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p>Die folgende Konfiguration ist für diesen Test verfügbar:</p>
+        <p><b>Zeichenmuster</b> - Benutzerdefiniertes Zeichenmuster auf der Grundlage eines Python-Regex-Musters.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analyse Zeichenmuster ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Legen Sie bei Bedarf Filter über die Daten, damit eine Teilmenge für die Analyse verwendet wird. Wenn kein Filter gesetzt ist, wird die Analyse für die gesamte Datei durchgeführt. Dieser Schritt kann auch als letzter statt als erster Schritt durchgeführt werden. Beachten Sie, dass die Möglichkeit, Filter zu setzen, derzeit nicht verfügbar ist und erst in späteren Versionen des Tests verfügbar sein wird.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Bestätigen Sie, dass ein oder mehrere Zeichenfelder für die Analyse ausgewählt wurden. Wenn mehrere Felder ausgewählt wurden, wird für jedes Feld die gleiche Regexp verwendet.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob der Benutzer angegeben hat, ob er nach Zeilen sucht, die dem Muster folgen oder nicht.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie Regexp. Dies sollte als regulärer Ausdruck formatiert werden, der in Python verwendet werden kann. Siehe <a href="https://docs.python.org/3/library/re.html">re — Operationen mit regulären Ausdrücken</a>, um mehr zu erfahren.</p>
+            </li>
+            <li>
+                <p>Je nachdem, ob der Benutzer ausgewählt hat, Werte zu identifizieren, die dem Muster entsprechen oder nicht, werden die Werte, die den Kriterien entsprechen, auf der Grundlage der angegebenen Regexp extrahiert.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Wenn es mehrere Felder gibt und der Benutzer ausgewählt hat, Werte zu identifizieren, die nicht dem Muster entsprechen, dann wird die Transaktionszeile extrahiert, wenn mindestens eine der Spalten nicht wahr ist.</p>
+                    </li>
+                    <li>
+                        <p>Wenn es mehrere Felder gibt und der Benutzer ausgewählt hat, Werte zu identifizieren, die nicht dem Muster entsprechen, wird die Transaktionszeile nur extrahiert, wenn alle Felder dem Muster entsprechen.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert. Beachten Sie, dass die Möglichkeit, Ergebnisfelder auszuwählen, derzeit nicht verfügbar ist und erst in späteren Versionen des Tests verfügbar sein wird.</p>
+            </li>
+        </ol>
+    </body>
+</html>

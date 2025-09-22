@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gérer les tests analytiques dans l&apos;Analytics Hub</h1>
+        <p class="note"><b>Remarque :</b> Cette fonction n&apos;est disponible que si elle a été activée dans votre produit.</p>
+        <p>Le centre d&apos;analyse est un emplacement central que vous pouvez utiliser pour visualiser et gérer tous les tests d&apos;analyse disponibles dans votre engagement. From the Analytics Hub, you can</p>
+        <ul>
+            <li>
+                <p>Voir tous les tests analytiques disponibles dans votre engagement</p>
+                <p class="note"><b>Remarque :</b> Les tests liés à des procédures de listes de contrôle cachées ne sont pas affichés dans le centre d&apos;analyse</p>
+            </li>
+            <li>
+                <p>Visualiser l&apos;état et les résultats des tests</p>
+            </li>
+            <li>
+                <p>Tests des filtres</p>
+            </li>
+            <li>
+                <p>Ajustement des configurations de test</p>
+            </li>
+            <li>
+                <p>Naviguer vers les procédures de la liste de contrôle liée</p>
+            </li>
+        </ul>
+        <p>Pour ouvrir le Hub analytique, sélectionnez <b>Hub analytique</b> dans le menu supérieur. Lorsque vous ouvrez la page, la liste de tous les tests disponibles dans votre engagement s&apos;affiche sur la gauche. Vous pouvez effectuer une recherche ou utiliser les filtres pour trouver le test que vous recherchez.</p>
+        <p><img src="../../Resources/Images/analytics-hub-multiple-tests-selected.png" alt="Le centre d&apos;analyse." /></p>
+        <p>Une fois que vous avez ouvert un test, vous pouvez ajuster la configuration ou naviguer vers les procédures de la liste de contrôle dans l&apos;onglet <b>Paramètres du test.</b>  Pour exécuter le test, vous pouvez sélectionner le bouton <b>Exécuter</b> , puis afficher les résultats dans l&apos;onglet <b>Résultats</b> du test. Notez que vous pouvez également sélectionner plusieurs tests à l&apos;aide des cases à cocher et les exécuter en même temps.</p>
+        <p><img src="../../Resources/Images/analytics-hub-test-opened.png" alt="Le hub analytique avec un test ouvert sur la droite." /></p>
+        <p>Pour ouvrir la page des <b>résultats agrégés</b> , sélectionnez le bouton <b>Résultats</b> en haut de la page. Cette page affiche toutes les transactions signalées à la suite de tous les tests que vous avez effectués. Vous pouvez utiliser les options <b>Colonnes</b> et <b>Filtres</b> pour filtrer les résultats affichés et utiliser le bouton <b>Exporter</b> pour exporter les résultats vers un fichier CSV.</p>
+        <p><img src="../../Resources/Images/analytics-hub-aggregated-results-page.png" alt="La page Résultats agrégés." /></p>
+        <h2>Filtrer dynamiquement les données pour les tests analytiques</h2>
+        <p>Vous pouvez filtrer l&apos;ensemble de données source pour un test analytique, puis exécuter le test sur le sous-ensemble de données identifié par le filtre.</p>
+        <p><b>Filtrer dynamiquement les données pour un test analytique :</b></p>
+        <ol>
+            <li>
+                <p>Dans le Hub Analytique, sélectionnez le test analytique dont vous souhaitez filtrer l&apos;ensemble des données d&apos;entrée.</p>
+            </li>
+            <li>
+                <p>Dans <b>Filter dataset</b>, ils sélectionnent <b>+ Add filter</b> pour créer une condition de filtrage qui sera appliquée à une seule colonne de l&apos;ensemble de données d&apos;entrée.</p>
+            </li>
+            <li>
+                <p>Select the column where you want to apply a filter.</p>
+            </li>
+        </ol>
+        <p class="indent"><ul><li><p>Une ou plusieurs conditions de filtrage sont prises en charge dans un filtre.</p></li><li><p>Les conditions de filtrage multiples peuvent être reliées par des connecteurs logiques tels que AND, OR ou NOT.</p></li><li><p>Chaque condition de filtrage ne s&apos;applique qu&apos;à une seule colonne de l&apos;ensemble de données d&apos;entrée.</p></li><li><p>Les arguments conditionnels varient selon le format des données. Par exemple, dans une colonne de date, vous pouvez spécifier un intervalle.</p></li></ul></p>
+        <p><img src="../../Resources/Images/Step1-AnalyticFilter.png" alt="Sélectionnez une colonne où appliquer une condition de filtrage." /></p>
+        <ol>
+            <li value="4">Créez la condition de filtrage et sélectionnez <b>Filtre</b> pour l&apos;exécuter.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step2-Filtering.png" alt="Créez une condition de filtrage pour isoler le sous-ensemble de données sur lequel vous souhaitez effectuer le test analytique." /></p>
+        <p class="indent">Le nombre de lignes de données correspondant à la condition s&apos;affiche.</p>
+        <ol>
+            <li value="5">Vous pouvez ensuite exécuter le test analytique sur ce sous-ensemble de données en cliquant sur <b>Exécuter</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step3-RunAnalyticTestonFilteredSubset.png" alt="Exécutez le test analytique sur le sous-ensemble de données d&apos;entrée que vous avez créé avec le filtre." /></p>
+    </body>
+</html>

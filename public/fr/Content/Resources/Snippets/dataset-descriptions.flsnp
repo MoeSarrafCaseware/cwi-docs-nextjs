@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table class="table table-striped">
+            <col>
+            </col>
+            <col MadCap:conditions="General.SE-Authoring">
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Type d&apos;ensemble de données</th>
+                    <th>ID du schéma</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Understand-genledger-data.htm?region=int#General">Grand livre</a></td>
+                    <td>cwi.schema.general_ledger</td>
+                    <td>Opérations du grand livre</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Trial-balance-described.htm">Balance</a></td>
+                    <td>cwi.schema.accounts</td>
+                    <td>Une feuille de travail dans laquelle tous les grands livres sont compilés en colonnes de débit et de crédit afin de s&apos;assurer que le système comptable d&apos;une entreprise est mathématiquement correct.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-invoices.htm">Comptes fournisseurs – Factures </a></td>
+                    <td>cwi.schema.ap_invoices</td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes fournisseurs-factures contient toutes les factures reçues au cours de la période examinée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-payments-made.htm">Comptes fournisseurs – Paiements effectués</a></td>
+                    <td>cwi.schema.ap_payments_made</td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes fournisseurs - Paiements effectués contient toutes les transactions de paiement (chèque, virement, espèces, etc.) effectuées au cours de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-suppliers.htm">Comptes fournisseurs – Fournisseurs</a></td>
+                    <td>cwi.schema.ap_suppliers</td>
+                    <td>
+                        <p>Le jeu de données Comptes fournisseurs contient tous les détails relatifs au fournisseur, tels que les coordonnées, l&apos;adresse, la limite de crédit, etc.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-open-balances.htm">Comptes fournisseurs – Soldes non utilisés</a></td>
+                    <td>cwi.schema.ap_open_balances</td>
+                    <td>
+                        <p>Le jeu de données Comptes créditeurs ouverts contient des détails concernant toutes les transactions créditeurs ouvertes, non payées ou non résolues à la clôture des activités à une date donnée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-invoices.htm">Comptes clients – Factures</a></td>
+                    <td>cwi.schema.ar_invoices</td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes débiteurs-factures contient toutes les factures générées au cours de la période examinée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-cash-received.htm">Comptes clients – Encaissements</a></td>
+                    <td>cwi.schema.ar_cash_received</td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes débiteurs-espèces reçues contient toutes les transactions de paiement (chèque, virement, espèces, etc.) reçues au cours de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-customers.htm">Comptes clients – Clients</a></td>
+                    <td>cwi.schema.ar_customers</td>
+                    <td>L&apos;ensemble de données Accounts receivable-customers contient tous les détails relatifs au client, tels que ses coordonnées, son adresse, sa limite de crédit, etc.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-open-balances.htm">Comptes clients – Soldes non utilisés</a></td>
+                    <td>cwi.schema.ar_open_balances</td>
+                    <td>Le jeu de données Comptes clients - soldes ouverts contient des détails concernant toutes les transactions clients ouvertes, non payées ou non résolues à la clôture des activités à une date donnée.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-transactions.htm">Mouvements de stock</a></td>
+                    <td>cwi.schema.inventory_transactions</td>
+                    <td>Capture toutes les transactions affectant les comptes d&apos;inventaire pendant la période spécifiée (par exemple, les réceptions, les expéditions, les transferts, les retours et les ajustements).</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-on-hand.htm">Stock disponible</a></td>
+                    <td>cwi.schema.inventory_on_hand</td>
+                    <td>Saisit les quantités d&apos;articles en stock, par emplacement et par montant, à la date spécifiée.</td>
+                </tr>
+                <tr>
+                    <td>Autres</td>
+                    <td>Pour activer ce type de jeu de données, ajoutez <code>&quot;schemaless&quot; : true</code> à la section &quot;feature&quot; du fichier product.json.</td>
+                    <td>Données transactionnelles non structurées qui ne suivent pas un schéma prédéfini. <MadCap:conditionalText MadCap:conditions="General.Cloud-Help">Sélectionnez cette option pour importer des données qui ne correspondent à aucun des types d&apos;ensembles de données décrits ici. Chaque fichier importé à l&apos;aide de ce type de dataset est considéré comme un dataset à part entière.</MadCap:conditionalText></td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+    </body>
+</html>

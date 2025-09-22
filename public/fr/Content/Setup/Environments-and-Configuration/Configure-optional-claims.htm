@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configurer les réclamations facultatives (Azure AD)</h1>
+        <p>Avant de terminer le processus d&apos;intégration SSO, vous devez modifier le manifeste pour y inclure les revendications given_name et family_name. Lorsqu&apos;un membre du personnel utilise le SSO, ces demandes fourniront leur prénom et leur nom à Cloud.</p>
+        <p style="font-weight: bold;">Pour configurer les réclamations facultatives :</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre portail Azure.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>Dans le volet de navigation de gauche, sélectionnez <b>Enregistrements d&apos;applications.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez la bonne application dans la liste.</p>
+            </li>
+            <li>
+                <p>Dans le volet de navigation de gauche, sélectionnez <b>Manifeste</b>.</p>
+            </li>
+            <li>
+                <p>Modifiez la propriété <b>optionalClaims</b> comme suit :</p>
+                <p><pre xml:space="preserve"><code class="language-python">&quot;optionalClaims&quot; : {<br />
+	&quot;idToken&quot; : [<br />
+		{<br />
+			&quot;nom&quot; : &quot;prénom&quot;,<br />
+			&quot;essentiel&quot; : vrai<br />
+		},<br />
+		{<br />
+			&quot;nom&quot; : &quot;nom_de_famille&quot;,<br />
+			&quot;essentiel&quot; : vrai<br />
+		}<br />
+	]<br />
+},</code></pre>
+                </p>
+                <p class="note"><b>Remarque :</b> Vous devez recopier exactement les informations ci-dessus pour configurer correctement les réclamations facultatives.</p>
+                <p><img src="../../Resources/Images/azure-optional-claims.png" alt="La propriété optionalClaims configurée." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Generate-the-reply-URL-Azure-AD.htm">Générer l&apos;URL de réponse (Okta)</a></p>
+    </body>
+</html>

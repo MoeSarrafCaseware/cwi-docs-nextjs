@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Prepare"></a>Préparer un fichier CSV pour l&apos;importation (page Données)</h1>
+        <p>Le fichier CSV doit comprendre les colonnes suivantes Elles peuvent avoir des valeurs vides mais chaque colonne doit être disponible dans le fichier :</p>
+        <ul>
+            <li>Map number</li>
+            <li>Nom du compte</li>
+            <li>Postable</li>
+            <li>Type</li>
+            <li>Signe</li>
+        </ul>
+        <p>Vous pouvez éventuellement inclure les colonnes suivantes :</p>
+        <ul>
+            <li>Poids</li>
+            <li>Autoriser</li>
+            <li>Nom contraire</li>
+            <li>Nom incohérent</li>
+            <li>Catégorie de dimension</li>
+            <li>Dimensions exclues</li>
+            <li>Réaffectation de l&apos;objectif pour les comptes contraires</li>
+            <li>Classification des groupes</li>
+            <li>Lien vers un groupe fiscal</li>
+            <li>Lien vers un groupe de plans comptables</li>
+            <li>Cycle</li>
+            <li>Zone</li>
+            <li>Composants</li>
+            <li>Groupe par défaut</li>
+        </ul>
+        <p>Vous pouvez utiliser ces colonnes pour faciliter la <a href="Set-up-automapping-(Data-page).htm">mise en place de l&apos;automapping</a> (affectation automatique des comptes aux regroupements) lorsque les utilisateurs importent une nouvelle balance générale.</p>
+        <p><a name="csv-columns-and-values"></a>La liste suivante décrit les colonnes et la valeur attendue pour chaque colonne.</p>
+        <h2>Map Number (mandatory)</h2>
+        <p>Saisir un numéro de carte pour le groupement. Également connu sous le nom de <i>numéro de groupe</i> dans le SE.</p>
+        <p><b>Valeur attendue</b></p>
+        <p><i>Nombre</i> - peut contenir des caractères alphanumériques, des points décimaux, des traits d&apos;union et des traits de soulignement.</p>
+        <h2>Nom du compte</h2>
+        <p>Saisissez un nom pour le formulaire. Également connu sous le nom de <i>nom de groupe</i> dans le SE.</p>
+        <p><b>Valeur attendue</b></p>
+        <p><i>Texte</i> - peut contenir des caractères alphanumériques, des points décimaux, des traits d&apos;union et des traits de soulignement.</p>
+        <p>Si ce champ n&apos;est pas renseigné, le nom du groupe est <b>&quot;[Sans titre]&quot;.</b> </p>
+        <h2>Postable</h2>
+        <p>Indiquer si des comptes peuvent être affectés au groupe.</p>
+        <p><b>Valeur attendue</b></p>
+        <ul>
+            <li><b>Y</b> ou <b>1</b> ou <b>VRAI-</b>les comptes ne peuvent pas être affectés au groupe</li>
+            <li><b>N</b> ou <b>0</b> ou <b>FALSE</b> - les comptes peuvent être affectés au groupe</li>
+        </ul>
+        <p>Si ce champ n&apos;est pas renseigné, le système suppose que les comptes peuvent être affectés à un groupe et l&apos;une de ces valeurs est ajoutée<b>(N</b> ou <b>0</b> ou <b>FAUX</b>).</p>
+        <h2>Type (obligatoire)</h2>
+        <p>Indique si le regroupement appartient au bilan, au compte de résultat, au résultat global ou au résultat net.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <ul>
+            <li><![CDATA[
+]]><b>B</b> - Bilan</li>
+            <li><![CDATA[
+]]><b>I</b> - pour Compte de résultat</li>
+            <li><![CDATA[
+]]><b>C</b> - pour Résultat global</li>
+            <li><![CDATA[
+]]><b>N</b> - pour revenu net</li>
+        </ul>
+        <h2>Signe</h2>
+        <p>Indiquer si le regroupement doit se faire pour les comptes de débit ou les comptes de crédit.</p>
+        <p>Valeur attendue</p>
+        <ul>
+            <li><b>D=débit</b></li>
+            <li><b>C=crédit</b>;</li>
+        </ul>
+        <p>Si ce champ n&apos;est pas renseigné, le système considère que le débit est le signe de regroupement et la valeur <b>D</b> est appliquée.</p>
+        <h2>Classification des groupes</h2>
+        <p>Saisir la classification de l&apos;automapping pour le groupement.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p><i>Texte </i></p>
+        <p>Peut contenir des caractères alphanumériques, des points décimaux, des traits d&apos;union et des traits de soulignement.</p>
+        <h2>Poids</h2>
+        <p>Saisissez un nom pour le formulaire.</p>
+        <p>Dans les cas où plusieurs groupes ont la même classification, tout compte ayant cette classification sera affecté au groupe ayant le numéro de pondération le plus élevé. Par exemple, les groupes ayant une pondération positive seront préférés aux groupes sans pondération.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Valeur numérique comprise entre -1 et +1.</p>
+        <p>Si ce champ est laissé vide, la valeur <b>0</b>est attribuée au poids.</p>
+        <h2>Autoriser</h2>
+        <p>Indiquer si le groupement est soumis à des restrictions de solde de compte.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <ul>
+            <li>* (Comptes avec solde à céder)</li>
+            <li><b>+</b> (Seuls les comptes ayant un solde débiteur (positif) doivent être affectés)</li>
+            <li><![CDATA[
+]]>- (Seuls les comptes avec un solde créditeur (négatif) doivent être affectés)</li>
+        </ul>
+        <p>Si ce champ n&apos;est pas renseigné, le système considère que les comptes ayant un solde quelconque peuvent être affectés au groupe et la valeur <b>*</b> est appliquée.</p>
+        <h2>Lien vers un groupe fiscal</h2>
+        <p>Saisissez un numéro de groupe dans la liste déroulante <b>Lien vers un groupe dans la</b> structure de regroupement du <b>code fiscal de</b> la boîte de dialogue Propriétés du groupe.</p>
+        <p>Cela vous permet d&apos;affecter automatiquement des comptes à des groupes dans d&apos;autres structures de regroupement sur la base de leur affectation initiale à un groupe.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p><i>Texte</i></p>
+        <h2>Lien vers un groupe de plans comptables</h2>
+        <p>Saisissez un numéro de groupe dans la liste déroulante <b>Lien vers un groupe dans la</b> structure de regroupement <b>prescrite</b> de la boîte de dialogue Propriétés du groupe.</p>
+        <p>Cela vous permet d&apos;affecter automatiquement des comptes à des groupes dans d&apos;autres structures de regroupement sur la base de leur affectation initiale à un groupe.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p><i>Texte</i></p>
+        <h2>Cycle</h2>
+        <p>Saisissez un cycle pour le groupe (tel que défini dans les <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">paramètres du produit)</a>.</p>
+        <p>Si votre application Cloud comprend un document d&apos;évaluation des risques, lorsque vous affectez un groupe à un cycle d&apos;activité, les éléments de ce groupe seront automatiquement affichés sous ce cycle dans le document, ce qui facilitera l&apos;audit par cycle d&apos;activité.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Zone</h2>
+        <p style="font-style: normal;">Saisissez une zone pour le groupe (telle que définie dans les <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">paramètres du produit)</a>.</p>
+        <p style="font-style: normal;">When you assign a group to an area, items in that group will automatically be shown under this area in the <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">Risk Assessment</a> document, making it easier to audit by area.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Composants</h2>
+        <p>Components provide a more market-driven, region-driven or product-driven visibility logic for trial balance groups. Par exemple, si l&apos;entité opère dans le secteur de l&apos;agriculture, affichez les groupes de balances de vérification qui sont pertinents pour l&apos;agriculture. Pour en savoir plus, voir <a href="Group-properties.htm#Componen">iXBRL</a>.</p>
+        <p>Saisissez un ou plusieurs composants à affecter au groupe (tel que défini dans les <a href="Define-components.htm">paramètres du produit)</a>.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <p>Utilisez deux points pour séparer plusieurs composants associés à un groupe (exemple : composant1;composant2;composant3).</p>
+        <h2>Nom contraire</h2>
+        <p>Affiche les montants du groupe qui sont opposés au signe normal du groupe.</p>
+        <p>Par exemple, &quot;Découvert bancaire&quot; apparaîtra à la place de &quot;Banque&quot; lorsque le solde est créditeur.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Nom incohérent</h2>
+        <p>Le cas échéant, saisissez une description alternative pour le groupe à afficher lorsque l&apos;année en cours et l&apos;année précédente ont des signes opposés.</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Catégorie de dimension</h2>
+        <p>Saisissez une catégorie de dimension pour le groupe (sélectionnez-la dans la liste définie dans les <a href="Add-dimensions.htm#Add">paramètres du produit</a>).</p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Dimensions exclues</h2>
+        <p>Saisissez les dimensions qui sont exclues de la catégorie sélectionnée.</p>
+        <p class="note inline"><b>Remarque :</b> Cette propriété n&apos;est disponible que s&apos;il existe une valeur pour la <b>catégorie de dimension.</b> </p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <p>Utilisez deux points pour séparer plusieurs dimensions exclues (exemple : dimension1;dimension2)</p>
+        <h2>Réaffectation de l&apos;objectif pour les comptes contraires</h2>
+        <p>If applicable, enter a group from the Financials grouping structure for accounts with a contrary balance.</p>
+        <p>Si un compte est automatiquement affecté à ce groupe mais qu&apos;il ne correspond pas au signe sélectionné (débit ou crédit) pour ce groupe, il sera automatiquement affecté à la <b>cible de réaffectation. </b>Par exemple, <b>actif</b> négatif --&gt; <b>passif</b>positif<b> </b></p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <p style="font-style: italic;">Texte</p>
+        <h2>Groupe par défaut</h2>
+        <p style="font-style: normal;">Indiquer si le groupe est un groupe par défaut ou non. Pour en savoir plus, voir <a href="Group-properties.htm#Default">Types de réponses.</a></p>
+        <p style="font-weight: bold;">Valeur attendue</p>
+        <ul>
+            <li><b>Y</b> ou <b>1</b> ou <b>VRAI</b></li>
+            <li><![CDATA[
+]]><b>N</b> ou <b>0</b> ou <b>FAUX</b></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>Eine neue App für Einmaliges Anmelden in Azure AD registrieren:</b></p>
+        <ol>
+            <li>
+                <p>Melden Sie sich an Ihrem Azure Portal an. Wenn Sie Zugriff auf mehr als ein Portal haben, können Sie Ihr Benutzerkonto in der rechten oberen Ecke wählen und anschließend den gewünschten Tenant (-Mandanten).</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>App registrations</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>New registration</b>.</p>
+                <p><img src="../Images/azure-app-registration.png" alt="Auswahl von New registration." /></p>
+            </li>
+            <li>
+                <p>Geben Sie auf der Seite <b>Register an application</b> Ihre Registrierungsdaten ein:</p>
+                <ul>
+                    <li>
+                        <p><b>Name</b>: Geben Sie einen passenden Namen ein.</p>
+                    </li>
+                    <li>
+                        <p><b>Supported account types</b>: Wählen Sie <b>Accounts in this organizational directory only (Default Directory only - Single tenant)</b>.</p>
+                    </li>
+                    <li>
+                        <p><b>Redirect URI</b>: Wählen Sie <b>Web</b>. Sie müssen keine URL eingeben.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Nach Eingabe Ihrer Informationen wählen Sie <b>Register</b>. Ihre Anwendungsdetails werden angezeigt.</p>
+                <p class="warning"><b>Hinweis:</b> Kopieren Sie die Anwendungs-ID und fügen Sie sie zur späteren Verwendung in ein Textdokument ein. Nennen Sie das Textdokument <b>Anwendungs-ID</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

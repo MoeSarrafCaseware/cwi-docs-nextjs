@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Transférer les données de Caseware Working Papers vers Caseware ReviewComp</h1>
+        <p>Après avoir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Add-the-CloudBridge-document-to-the-Working-Papers-file.htm">ajouté le document CLBG à un engagement Working Papers</a>, vous pouvez transférer votre balance de vérification et les données fiscales du grand livre vers Caseware ReviewComp.</p>
+        <p><b>Pour exporter vos données d&apos;engagement vers un engagement Cloud à l&apos;aide de CloudBridge :</b></p>
+        <ol>
+            <li>
+                <p>Dans le gestionnaire de documents, double-cliquez sur <b>CLBG</b>. Le document CLBG s&apos;affiche.</p>
+                <p><img src="../../Resources/Images/working-papers-CLBG-document.png" alt="Le document CLBG s&apos;affiche dans le gestionnaire de documents de travail." /></p>
+            </li>
+            <li>
+                <p>Dans la section Étape 1, choisissez une entité et un engagement appropriés.</p>
+            </li>
+            <li>
+                <p>Dans la section Étape 2, sélectionnez les données de balance de vérification appropriées à exporter.</p>
+            </li>
+            <li>
+                <p>Dans la section Étape 2, cochez la case <b>Utiliser un fichier de remappage</b> .</p>
+                <p>Le fichier de remappage est utilisé pour transférer la structure de mappage des comptes actuels dans les Working Papers vers votre engagement Cloud. Si votre engagement utilise le mappage par défaut des documents de travail ou a été créé avec le modèle PEG, utilisez le fichier de remappage situé dans le dossier où vous avez installé CloudBridge<b>(C:\NProgram Files (x86)\NCaseware\NScripts\Ncloudbridge</b>).</p>
+                <p class="note"><b>Remarque :</b> Si votre mission utilise une structure de mappage personnalisée propre à votre entreprise, <a href="#Create">créez un fichier de remappage personnalisé</a> , puis ajoutez-le.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Choisir un fichier</b> pour rechercher et ajouter le fichier de remappage.</p>
+            </li>
+            <li>
+                <p>(Facultatif) Si vous avez d&apos;autres écritures de journal relatives aux dons, aux frais de repas et de représentation ou à la publicité étrangère, la section <b>Étape 3</b> est disponible sur la page. La section<b>Étape 3</b> vous permet de transférer les données GL à la feuille de calcul fiscale appropriée dans l&apos;engagement Caseware ReviewComp.</p>
+                <p class="note"><b>Remarque : </b> La section<b>Étape 3</b> n&apos;est disponible sur la page que si votre dossier d&apos;engagement contient d&apos;autres entrées.</p>
+                <p>Dans cet exemple, nous ajouterons les dons aux clients à la feuille de calcul Donations.</p>
+                <p><img src="../../Resources/Images/transfer-GL-data.PNG" alt="Étape 3 : Comprendre les données du grand livre général" /></p>
+            </li>
+            <li>
+                <p>Une fois que vous avez terminé, sélectionnez <b>Transférer les données</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Create"></a>Créer un fichier de remappage personnalisé (.ini)</h2>
+        <p>Si votre entreprise utilise une structure de mappage personnalisée, vous devez créer votre propre fichier de remappage (.ini) basé sur la structure de mappage de Caseware ReviewComp.</p><MadCap:snippetBlock src="../../Resources/Snippets/RCT-to-create-custom-remap-file.flsnp" /><p>Vous pouvez maintenant utiliser ce fichier de remappage dans Cloudbridge pour transférer vos données de Working Papers vers Caseware ReviewComp.</p>
+    </body>
+</html>

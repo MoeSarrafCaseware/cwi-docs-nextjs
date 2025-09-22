@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Autorisatieservers beheren (Okta)</h1>
+        <p>Gebruikers van de single sign-on integratie van je bedrijf passeren een authenticatieserver. Okta biedt een standaardverificatieserver die u kunt aanpassen aan de vereisten van uw bedrijf. Indien nodig kunt u ook <a href="#Add">autorisatieservers toevoegen</a>.</p>
+        <p class="note"><b>Let op:</b> Deze stap is optioneel en vereist een licentie voor de autorisatieserverfunctionaliteit van Okta. Als je geen toegang hebt tot deze functionaliteit, of als je de autorisatieservers niet hoeft aan te passen, ga dan verder naar <a href="Generate-the-Reply-URL-Okta.htm">De antwoord-URL genereren</a>.</p>
+        <p><b>Authenticatieservers beheren:</b></p>
+        <ol>
+            <li>
+                <p>Log in op het Okta-dashboard van uw bedrijf met een <b>beheerdersaccount</b> .</p>
+            </li>
+            <li>
+                <p>Vouw in het hoofdmenu het vervolgkeuzemenu <b>Beveiliging</b> uit en selecteer <b>API</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer op de API-pagina het tabblad <b>Authorization Servers</b> . Op dit tabblad kunt u <a href="#Add">authenticatieservers</a>bewerken of <a href="#Add">toevoegen</a>. Selecteer naast de standaard autorisatieserver het pictogram <b>Bewerken</b> .</p>
+                <p><img src="../../Resources/Images/okta-03.png" /></p>
+            </li>
+            <li>
+                <p>Selecteer op de pagina van de standaard autorisatieserver het tabblad <b>Toegangsbeleid</b> . Op dit tabblad kunt u toegangsbeleid bewerken of toevoegen. Selecteer <b>Bewerken</b>naast het standaardbeleid.</p>
+                <p><img src="../../Resources/Images/okta-04.png" /></p>
+            </li>
+            <li>
+                <p>Je kunt optioneel de naam en beschrijving voor het beleid bewerken en ervoor kiezen om het toe te wijzen aan alle clients of aan specifieke clients. Als je wijzigingen hebt aangebracht, selecteer je <b>Beleid bijwerken</b> om ze toe te passen.</p>
+            </li>
+            <li>
+                <p>Je kunt ook beleidsregels bewerken of toevoegen. Selecteer naast de standaardbeleidsregel het pictogram <b>Bewerken</b> .</p>
+                <p><img src="../../Resources/Images/okta-05.png" /></p>
+            </li>
+            <li>
+                <p>Je kunt de regel naar wens bewerken. Voor integratie met Caseware Cloud moet je ervoor zorgen dat de optie <b>Autorisatiecode</b> is geselecteerd.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+        </ol>
+        <h2><a name="Add"></a>Autorisatieservers toevoegen:</h2>
+        <p>Als je de standaard autorisatieserver niet wilt gebruiken, of gewoon een andere autorisatieserver wilt toevoegen om aan te passen aan de vereisten van je bedrijf, kun je deze toevoegen in het vervolgkeuzemenu <b>Beveiliging</b> .</p>
+        <p><b>Autorisatieservers toevoegen:</b></p>
+        <ol>
+            <li>
+                <p>Log in op het Okta-dashboard van uw bedrijf met een <b>beheerdersaccount</b> .</p>
+            </li>
+            <li>
+                <p>Vouw in het hoofdmenu het vervolgkeuzemenu <b>Beveiliging</b> uit en selecteer <b>API</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer op de API-pagina het tabblad <b>Authorization Servers</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Autorisatieserver toevoegen</b>.</p>
+                <p><img src="../../Resources/Images/okta-06.png" /></p>
+            </li>
+            <li>
+                <p>Voer een naam, doelgroep en beschrijving in voor de nieuwe machtigingsserver. Selecteer <b>Opslaan</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer op de pagina van de autorisatieserver het tabblad <b>Toegangsbeleid</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Voorwaarde toevoegen.</b></p>
+            </li>
+            <li>
+                <p>Voer een naam en beschrijving in voor het beleid en kies om het toe te wijzen aan alle clients of aan specifieke clients. Selecteer <b>Query maken</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Regel toevoegen</b>op de beleidspagina.</p>
+            </li>
+            <li>
+                <p>Voer een naam in voor de regel en pas de regelopties naar wens aan. Voor integratie met Caseware Cloud moet je ervoor zorgen dat de optie <b>Autorisatiecode</b> is geselecteerd.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Query maken</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Generate-the-Reply-URL-Okta.htm">De antwoord-URL genereren (Okta)</a></p>
+    </body>
+</html>

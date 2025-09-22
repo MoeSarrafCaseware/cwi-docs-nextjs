@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Mise en place du document &quot;Résumé des anomalies&quot; (Summary of Misstatements)</h1>
+        <p>Vous pouvez activer le document de synthèse des inexactitudes qui résume l&apos;impact des inexactitudes (omissions) d&apos;informations dans les domaines des états financiers et présente une conclusion (si les inexactitudes sont considérées comme significatives ou non significatives).</p>
+        <p>Pour activer le rapport Résumé des inexactitudes dans votre produit, spécifiez la propriété <code>com.caseware.ca.general.misstatements-summary</code> dans la propriété <code>form</code> du fichier product.json. Pour en savoir plus, voir <a href="Enable-or-disable-features-in-your-product.htm">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+        <p>Une fois que vous avez activé le document dans votre produit, vous pouvez l&apos;ajouter à votre brouillon et le configurer.</p>
+        <p>Pour ajouter le résumé des anomalies, sélectionnez <b>Ajouter (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) sur la page des documents, puis choisissez<b> Résumé des anomalies.</b></p>
+        <p style="font-weight: bold;">Mettre en place le document &quot;Résumé des anomalies&quot; :</p>
+        <ol>
+            <li>
+                <p>Pour ajouter des informations d&apos;orientation :</p>
+            </li>
+            <p>Sélectionnez le champ de texte pour commencer à ajouter du contenu. La barre d&apos;outils de formatage s&apos;affiche. Utilisez la barre d&apos;outils pour effectuer les modifications suivantes :</p>
+        </ol><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" /><ol MadCap:continue="true">
+            <li>
+                <p>Utilisez la case à cocher <b>Applicable</b> (<img src="../Resources/Icons/applicable-toggle.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour spécifier quelles sections sont incluses ou exclues du document.</p>
+            </li>
+            <li>
+                <p>Dans les <b>écritures au journal réelles et proposées</b>, sélectionnez l&apos;option <b>Spécifier les groupes de</b> classification pour spécifier les groupes de balance de vérification de la classification pour les écritures au journal réelles et proposées.</p>
+                <p class="note inline"><b>Remarque :</b> L&apos;option de <b>classification des groupes d&apos;utilisation</b> n&apos;est actuellement pas fonctionnelle.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>+Nouveau groupe</b>, puis sélectionnez le champ de texte pour afficher la liste des groupes de balances de vérification. Sélectionnez le groupe souhaité pour les <b>actifs</b>, les <b>passifs</b>, les <b>capitaux propres</b>, les <b>recettes</b> et les <b>dépenses</b>.</p>
+            </li>
+            <li>
+                <p>Renommez les éléments sous <b>Données clés</b> pour personnaliser les termes si nécessaire.</p>
+            </li>
+            <p>Une fois que vous avez renommé un élément, l&apos;icône <b>Revert</b> (<img src="../Resources/Icons/override-summary-of-misstatements.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) est disponible pour vous permettre de revenir au nom d&apos;origine.</p>
+            <li>
+                <p>Ajoutez les champs suivants :</p>
+                <ul>
+                    <li>
+                        <p>Évaluation qualitative</p>
+                    </li>
+                    <li>
+                        <p>Résumé des informations omises (description de l&apos;omission ou de l&apos;inexactitude, autre domaine concerné, discussion avec le client, raison de l&apos;omission)</p>
+                    </li>
+                    <li>
+                        <p>Évaluation</p>
+                    </li>
+                    <li>
+                        <p>Conclusion</p>
+                    </li>
+                    <li>
+                        <p>Approuver</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Sélectionnez le champ de texte pour commencer à ajouter du contenu. La barre d&apos;outils de formatage s&apos;affiche. Utilisez la barre d&apos;outils décrite à l&apos;étape 1 pour mettre en forme et modifier le texte.</p>
+        <p>La figure ci-dessous montre un exemple de l&apos;affichage du résumé des anomalies pour les utilisateurs finaux. Dans l&apos;exemple, les utilisateurs ont importé la balance de vérification et comptabilisé des écritures de régularisation non corrigées. Les ajustements sont affichés par domaine financier dans un tableau. Les utilisateurs peuvent visualiser le taux d&apos;imposition appliqué à la colonne <b>Total non corrigé</b> et l&apos;utiliser pour calculer les valeurs de l <b>&apos;impôt sur le revenu</b> et du <b>Total non corrigé après impôt</b> .</p>
+        <p><img src="../Resources/Images/misstatements-setup-example.PNG" alt="Exemple de vue de l&apos;utilisateur final pour le rapport de synthèse des anomalies." /></p>
+        <h2>Ajouter ou supprimer un lien dans la description de la procédure</h2><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" /></body>
+</html>

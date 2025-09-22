@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>To import multiple time or expense entries using a .csv file:</b></p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role and the <i>Process all entries</i> permission.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time | Time and Expense Entries Import | Import Entries</b>.</p>
+            </li>
+            <li>
+                <p>Select the entry type you are importing:</p>
+                <ul>
+                    <li>
+                        <p><b>Time</b></p>
+                    </li>
+                    <li>
+                        <p><b>Expense</b></p>
+                    </li>
+                    <li>
+                        <p><b>Time &amp; Expense</b></p>
+                    </li>
+                </ul>
+                <p><img src="../Images/firm-settings-time-and-expense-import-entry-type.png" alt="Time, Expense, and Time &amp; Expense entry types on the Import Time and Expense Entries page" /></p>
+            </li>
+            <li>
+                <p>Select <b>Import from CSV</b>, or paste the contents of the CSV file into the provided text box. Wählen Sie <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>Select a type for each column (such as <b>Work Code</b> or <b>Staff Email</b>), or select <b>Ignore</b> to omit it.</p>
+                <p><img src="../Images/firm-settings-time-csv-import-column.png" alt="Selecting a column type in the Import Time and Expense Entries dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>Import</b>, then choose one of the following options:</p>
+                <ul>
+                    <li>
+                        <p><b>Save entries that failed to import as a .csv file</b> - Choosing this option will create a CSV file containing any entries that failed to import, along with the relevant error messages.</p>
+                    </li>
+                    <li>
+                        <p><b>Save all entries as a .csv file</b> - This option saves all imported entries, both successful and unsuccessful, to a new .csv file.</p>
+                    </li>
+                    <li>
+                        <p><b>Do not save any entries</b> - No entries are saved.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>OK</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Crear una aplicación Web API (ADFS)</h1>
+        <p>Create a Web API application for your firm&apos;s Cloud site and define the application permissions.</p>
+        <p style="font-weight: bold;">Crear una aplicación Web API (ADFS)</p>
+        <ol>
+            <li>
+                <p>In the ADFS Administration Console, click the <b>Application Groups</b> folder, then double-click your <a href="Create-a-new-application-group.htm">new application group</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>In the Properties dialog, click <b>Add Application</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-02.png" /></p>
+            </li>
+            <li>
+                <p>In the Template list, select <b>Web API</b>. Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-03.png" /></p>
+            </li>
+            <li>
+                <p>In the Identifier field, paste the <b>Client Identifier</b> that you copied to a text document previously. Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-04.png" /></p>
+            </li>
+            <li>
+                <p>In the list of access control policies, select the policy that best applies to your firm. Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-05.png" /></p>
+            </li>
+            <li>
+                <p>In the Permitted scopes list, select the following scopes:</p>
+                <ul>
+                    <li>
+                        <p>allatclaims</p>
+                    </li>
+                    <li>
+                        <p>Correo electrónico:</p>
+                    </li>
+                    <li>
+                        <p>openid</p>
+                    </li>
+                    <li>
+                        <p>Perfil</p>
+                    </li>
+                </ul>
+                <p>Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-06.png" /></p>
+            </li>
+            <li>
+                <p>Haga clic en <b>Sí</b> para completar la configuración.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Create-an-Issuance-Transform-rule.htm">Create an Issuance Transform rule</a></p>
+    </body>
+</html>

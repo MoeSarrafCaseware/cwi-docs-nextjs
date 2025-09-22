@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Accounts payable—payments made described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts payable—payments made subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Feld</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaktions-ID <br /><code>(ap_payment_made_transaction_id)</code></td>
+                    <td>
+                        <p>A cross-reference to the general ledger posting. Kann viele verschiedene Ebenen beinhalten, um die Transaktion zu identifizieren. Examples include cost centers such as company, division, region, group and branch/department.<![CDATA[
+]]></p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsnummer<br /><code>(ap_payment_made_payment_id)</code></td>
+                    <td>
+                        <p>The unique identifier for each payment made. This identifier may need to be created by concatenating fields, for example, supplier and payment number to uniquely identify each transaction.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Ja</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Zahlungsdatum<br /><code>(ap_payment_made_payment_date)</code></p>
+                    </td>
+                    <td>
+                        <p>Datum, an dem die Zahlung geleistet oder die Gutschrift vorgenommen wurde.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Zahlungsjahr<br /><code>(ap_payment_made_fiscal_year)</code></p>
+                    </td>
+                    <td>
+                        <p>Fiscal year in which <b>Payment Date</b> occurs.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsperiode <br />(<code>ap_payment_made_payment_period</code>)</td>
+                    <td>
+                        <p>Fiscal period in which <b>Payment Date</b> occurs.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betragstyp (Soll/Haben)<br /> (<code>ap_payment_made_amount_credit_debit_indicator</code>)</td>
+                    <td>
+                        <p>Kennzeichen, ob es sich bei dem Betrag um einen Soll- oder Habenposten handelt.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Possible values: <br /><code>C</code>=credit; <br /><code>D</code>=debit</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsart <br />(<code>ap_payment_made_payment_type</code>)</td>
+                    <td>
+                        <p>Codewert oder Indikator für die Methode, mit der der Soll- oder Habenbetrag der Transaktion vom Lieferanten getilgt oder mit der Schuld verrechnet wurde. Beispiele sind Scheck, Überweisung, Bargeld usw.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsbetrag<br /> (<code>ap_payment_made_payment_amount</code>)</td>
+                    <td>
+                        <p>Transaktionsbetrag in der Haus- oder Konzernwährung.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsbetrag (Berichtswährung)<br /> (<code>ap_payment_made_payment_amount_reporting</code>)</td>
+                    <td>
+                        <p>Transaktionsbetrag in der Berichtswährung.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Local Payment Amount <br />(<code>ap_payment_made_payment_amount_local</code>)</td>
+                    <td>
+                        <p>Transaction monetary amount in the local currency.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Buchungsstatus <br />(<code>ap_payment_made_posting_status</code>)</td>
+                    <td>
+                        <p>Indicates whether the transaction has been posted to the General Ledger.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Possible values: <code>Posted</code> or <code>Not Posted</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Chargennummer <br />(<code>ap_payment_made_batch_id</code>)</td>
+                    <td>
+                        <p>A batch identifier generated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungsbeschreibung <br />(<code>ap_payment_made_description</code>)</td>
+                    <td>
+                        <p>Beschreibung der Zahlung.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Herkunfts-ID <br />(<code>ap_payment_made_source_id</code>)</td>
+                    <td>
+                        <p>Buchungsquelle. Kennzeichnung des Systems, das den Buchungseintrag ursprünglich erzeugt hat (z. B. Verkaufsjournal, Kassenbuch, Hauptbuch, Lohnjournal, manuelle Eingabe durch den Buchhalter, Tabellenkalkulation und so weiter).</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier ID (<code>ap_payment_made_supplier_account_id</code>)</td>
+                    <td>
+                        <p>Identifikator des Lieferanten, bei dem die Zahlung eingegangen ist oder von dem die Gutschrift erfolgt ist.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Name <br />(<code>ap_payment_made_supplier_account_name</code>)</td>
+                    <td>
+                        <p>Name des Lieferanten.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfasser <br />(<code>ap_payment_made_entered_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who created the record.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungsdatum <br />(<code>ap_payment_made_entered_date</code>)</td>
+                    <td>
+                        <p>The date the transaction was entered into the source system. Dies wird gelegentlich auch als Erstellungsdatum bezeichnet.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungszeit <br />(<code>ap_payment_made_entered_time</code>)</td>
+                    <td>
+                        <p>The time this transaction was entered into the source system.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigt von <br />(<code>ap_payment_made_approved_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who approved the entry.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigungsdatum <br />(<code>ap_payment_made_approved_by_date</code>)</td>
+                    <td>
+                        <p>Datum, an dem der Eintrag freigegeben wurde.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigungszeit <br />(<code>ap_payment_made_approved_by_time</code>)</td>
+                    <td>
+                        <p>Uhrzeit, zu der der Eintrag freigegeben wurde.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geändert von <br />(<code>ap_payment_made_last_modified_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the last person to modify this entry.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Änderungsdatum <br />(<code>ap_payment_made_last_modified_date</code>)</td>
+                    <td>
+                        <p>Datum, an dem der Eintrag zum letzten Mal geändert wurde.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Änderungszeit <br />(<code>ap_payment_made_last_modified_time</code>)</td>
+                    <td>
+                        <p>Uhrzeit, zu der der Eintrag zum letzten Mal geändert wurde.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rechnungsnummer <br />(<code>ap_payment_made_invoice_number</code>)</td>
+                    <td>
+                        <p>Identifikationsnummer einer intern oder extern erzeugten Transaktion. Examples include check number, wire transfer number, or original document identifier.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rechnungsdatum <br />(<code>ap_payment_made_invoice_date</code>)</td>
+                    <td>
+                        <p>Datum einer extern erzeugten Transaktion. Beispiele sind Scheckdatum oder Überweisungsdatum.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geschäftseinheitencode <br />(<code>ap_payment_made_business_unit_code</code>)</td>
+                    <td>
+                        <p>Dient zur Identifizierung der Geschäftseinheit, Region, Niederlassung usw. auf der Ebene, auf der der Jahresabschluss geprüft wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sachkonto (Soll) Hauptbuch <br />(<code>ap_payment_made_gl_debit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the debit side of the transaction has been posted.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sachkonto (Haben) Hauptbuch <br />(<code>ap_payment_made_gl_credit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the credit side of the transaction has been posted.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeilendetail - Konto-ID <br />(<code>ap_payment_made_line_account_id</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account code of the GL revenue account. This can include a subaccount identifier, as well as can many different levels to identify the Account, including cost centers, such as company, division, region, group and branch/department.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeilendetail - Kontobeschreibung <br />(<code>ap_payment_made_line_account_description</code>)</td>
+                    <td>
+                        <p>A description of the account whose identifier appears in <b>Line Detail - Account ID</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungswährung <br />(<code>ap_payment_made_payment_amount_currency</code>)</td>
+                    <td>
+                        <p>Die Haus- oder Konzernwährung des Zahlungsbetrags.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungswährung (Berichtswährung) <br />(<code>ap_payment_made_payment_amount_reporting_currency</code>)</td>
+                    <td>
+                        <p>Berichtswährung bezogen auf den Zahlungsbetrag für die nicht konsolidierte Berichterstattung.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zahlungswährung (lokale Währung) <br />(<code>ap_payment_made_payment_amount_local_currency</code>)</td>
+                    <td>
+                        <p>Währung für lokale Berichtsanforderungen.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eintrags-ID <br />(<code>ap_payment_made_journal_id</code>)</td>
+                    <td>
+                        <p>Eindeutiger Identifikator eines Buchungseintrags.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

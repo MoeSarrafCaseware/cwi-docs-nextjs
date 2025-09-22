@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Copy the metadata URI (Okta)</h1>
+        <p>A metadata URI provides the necessary data for SSO to function. Er wird verwendet, wenn Sie Einmaliges Anmelden (SSO) in Caseware Cloud konfigurieren.</p>
+        <p><b>To copy the metadata URI:</b></p>
+        <ol>
+            <li>
+                <p>Log in to your firm&apos;s Okta dashboard with an <b>Admin</b> account.</p>
+            </li>
+            <li>
+                <p>Expand the account drop-down menu and hover your cursor over the metadata URI. A clipboard icon displays. Select it to copy the metadata URI.</p>
+                <p><img src="../../Resources/Images/okta-10.png" /></p>
+            </li>
+            <li>
+                <p>Paste the metadata URI to a text document. It will be in this format:</p>
+                <p>&lt;account&gt;.okta.com</p>
+            </li>
+            <li>
+                <p>Modify the metadata URI so that it fits the following format:</p>
+                <p>https://$<b>&lt;account&gt;.okta.com</b>/.well-known/openid-configuration</p>
+            </li>
+            <li>
+                <p>Label it <b>Metadata URI</b> and save the text document for later use.</p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Manage-authorization-servers.htm">(Optional) Manage authorization servers</a></p>
+    </body>
+</html>

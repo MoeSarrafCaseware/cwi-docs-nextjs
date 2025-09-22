@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p><b>Query document</b> - titel van de query.</p>
+            </li>
+            <li MadCap:conditions="Product.SE">
+                <p><b>Status</b> - status van de query. Beschikbare opties zijn onder andere:</p>
+                <table>
+                    <col />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th>Optie</th>
+                            <th>Omschrijving</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p><img src="../Images/icon-query-dash-draft-status.PNG" style="vertical-align: text-bottom;" alt="" /></p>
+                            </td>
+                            <td>Je hebt de query nog niet naar de klant gestuurd.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../Images/icon-query-dash-reopened-status.PNG" style="vertical-align: text-bottom;" alt="" /></td>
+                            <td>Je hebt het verzoek heropend om wijzigingen aan te brengen of om meer informatie of verduidelijkingen te vragen.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../Images/icon-query-dash-responded-status.PNG" style="vertical-align: text-bottom;" alt="" /></td>
+                            <td>Contactpersonen hebben alle vragen in de query beantwoord.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../Images/icon-query-dash-awaiting-response-status.PNG" style="vertical-align: text-bottom;" alt="" /></td>
+                            <td>Je hebt de vraag naar contactpersonen gestuurd en ze hebben nog niet gereageerd.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../Images/icon-query-dash-complete-status.PNG" style="vertical-align: text-bottom;" alt="" /></td>
+                            <td>Je hebt de query gemarkeerd als voltooid.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../Images/icon-query-dash-cancelled-status.PNG" style="vertical-align: text-bottom;" alt="" /></td>
+                            <td>Je hebt de query geannuleerd.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Progress</b> - tracker of the contacts progress. Het toont het aantal beantwoorde query&apos;s van het totale aantal query&apos;s in het verzoek.</p>
+            </li>
+            <li>
+                <p><b>Vervaldatum</b> - toont de vervaldatum van de query.</p>
+            </li>
+            <li>
+                <p><b>Contactpersonen</b> - toont het aantal toegewezen contactpersonen aan elk query-document in het dashboard. Je kunt ook een nummer selecteren om een pop-up weer te geven met contactgegevens. Het pop-upvenster bevat ook de knop <b>Contacten toevoegen</b> waarmee je indien nodig een contactpersoon kunt maken.</p>
+            </li>
+        </ul>
+    </body>
+</html>

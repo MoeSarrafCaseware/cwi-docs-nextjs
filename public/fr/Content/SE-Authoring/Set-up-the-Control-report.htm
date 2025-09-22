@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Mise en place du rapport de contrôle</h1>
+        <p class="note"><b>Remarque :</b> Cette rubrique ne s&apos;applique pas aux applications en nuage pour lesquelles le nouveau module de risque <a href="Enable-the-new-risk-module.htm">est activé</a>.</p>
+        <p>Vous pouvez activer le rapport de contrôle pour permettre aux utilisateurs d&apos;ajouter des contrôles qu&apos;ils ont définis pour atténuer les risques identifiés tout au long du déroulement de la mission. Vous pouvez activer un rapport de contrôle pour prendre en charge des audits importants et complexes (si votre produit le permet).</p>
+        <p>Pour activer le rapport de contrôle dans votre produit, spécifiez la propriété <code>com.caseware.ca.general.control-report</code> dans la propriété <code>form</code> du fichier product.json. Pour en savoir plus, voir <a href="Enable-or-disable-features-in-your-product.htm">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+        <p>Une fois que vous avez activé le rapport dans votre produit, vous pouvez l&apos;ajouter à votre projet et le configurer.</p>
+        <p>Pour ajouter une liste de contrôle, sélectionnez <b>Ajouter (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) dans la page des documents, puis choisissez <b>Liste de contrôle.</b></p>
+        <p style="font-weight: bold;">Pour définir les propriétés de l&apos;engagement :</p>
+        <ol>
+            <li>
+                <p>Pour ajouter des informations d&apos;orientation :</p>
+            </li>
+            <p>Sélectionnez le champ de texte pour commencer à ajouter du contenu. La barre d&apos;outils de formatage s&apos;affiche. Utilisez la barre d&apos;outils pour effectuer les modifications suivantes :</p>
+        </ol><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" /><ol MadCap:continue="true">
+            <li>
+                <p>Si vous souhaitez ajouter des contrôles par défaut dans le rapport, sélectionnez<b> +Contrôle.</b></p>
+                <ol MadCap:continue="true" style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Saisissez un nom et une description pour le dossier.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez le <b>cycle</b> et la <b>zone</b> associés au contrôle.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Sélectionnez un contrôle pour l&apos;ouvrir.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Editer (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) pour modifier les détails du contrôle si nécessaire.</p>
+                <ol MadCap:continue="true" style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Associez-le à un groupe financier sous <b>GROUPES FINANCIERS</b>.</p>
+                    </li>
+                    <li>
+                        <p>Add a document reference at <b>REFERENCES.</b></p>
+                    </li>
+                    <li>
+                        <p>Associez-le à un risque en le sélectionnant dans la liste déroulante <b>RISQUES</b>.</p>
+                    </li>
+                    <li>
+                        <p>Associez-le à un cycle ou à un domaine en le sélectionnant dans les listes déroulantes <b>CYCLES</b> ou <b>DOMAINES</b>.</p>
+                    </li>
+                    <li>
+                        <p>Une fois que vous avez terminé, sélectionnez <b>Enregistrer.</b></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Ajouter ou supprimer un lien dans la description de la procédure</h2><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" /></body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Un nouvel engagement est créé sur la base d&apos;un modèle. Les modèles sont créés et gérés par les auteurs.</p>
+        <p>Les auteurs de l&apos;entreprise sont des membres du personnel ayant le rôle d&apos; <b>administrateur des paramètres</b> ou un rôle similaire, ce qui leur permet de personnaliser le contenu du produit par défaut pour répondre aux besoins spécifiques de l&apos;entreprise. Par exemple, ajouter le logo de l&apos;entreprise. <MadCap:conditionalText MadCap:conditions="General.Online">Pour en savoir plus sur les rôles, voir <a href="../../Setup/Security/Built-in-roles.htm">Rôles intégrés</a> et <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Attribuer des rôles de sécurité</a>.</MadCap:conditionalText></p>
+        <p>Les personnalisations fermes comprennent l&apos;ajout de contenu et la modification ou la suppression du contenu par défaut.</p>
+        <p MadCap:conditions="General.PDF,PrintGuides.Teacher" class="instNotes"><b>Note à l&apos;attention de l&apos;instructeur :</b> Assurez-vous que tous les étudiants ont le rôle d&apos; <b>administrateur des paramètres</b> afin qu&apos;ils puissent accéder au mode modèle d&apos;entreprise.</p>
+        <h2 MadCap:conditions="General.Online"><a name="Concepts"></a>Concepts et flux de travail</h2>
+        <p>Avant de commencer, passez en revue les concepts et le flux de travail de la gestion des modèles.</p>
+        <ul>
+            <li>
+                <p><b>Modèle de produit</b> - le modèle qui contient le contenu par défaut de votre produit.</p>
+            </li>
+            <li>
+                <p><b>Brouillon</b> - le modèle que vous êtes en train de personnaliser pour votre entreprise (le modèle en cours d&apos;élaboration).</p>
+            </li>
+            <li>
+                <p><b>Modèle archivé</b> - un modèle archivé est automatiquement créé lorsqu&apos;un projet est publié. Afin de conserver une trace de tous les modèles précédemment utilisés, les modèles archivés ne peuvent pas être supprimés.</p>
+            </li>
+            <li>
+                <p><b>Modèle du cabinet</b> - le dernier modèle publié (le modèle actuellement utilisé par votre cabinet pour créer des missions).</p>
+            </li>
+        </ul>
+        <p>La figure suivante montre le processus général de gestion du modèle d&apos;entreprise.</p>
+        <p><img src="../Images/firm authoring-wf.PNG" /></p>
+        <p>Si vous n&apos;avez pas de modèle de cabinet, vous devez <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create" MadCap:conditions="General.Online">créer un projet</a><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Create5">créer un brouillon</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Create5">créer un projet</a></MadCap:conditionalText>vous pouvez personnaliser votre entreprise, puis réviser et publier <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Publish">publier.</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Publish">publier.</a></MadCap:conditionalText><a href="../../Engagements/Template-and-Authoring/Publish-a-draft.htm#Publish" MadCap:conditions="General.Online">publier.</a></p>
+        <p>Si vous disposez déjà d&apos;un modèle d&apos;entreprise, vous pouvez le faire :</p>
+        <ul>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Edit-the-firm-template.htm#Edit">éditer le modèle,</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">modifier le modèle.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Edit">modifier le modèle</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT">modifier le modèle.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Edit">modifier le modèle</a>.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/Template-and-Authoring/Revert-to-a-previous-template-version.htm#Revert"><MadCap:conditionalText MadCap:conditions="General.Online">revenir au modèle de produit</MadCap:conditionalText></a> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">revenir au</MadCap:conditionalText> modèle de l<MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">&apos;entreprise</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">revenir au modèle par défaut</MadCap:conditionalText> au lieu du modèle de l&apos;entreprise<MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">., ou</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Use">revenir au modèle de produit</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT,PrintGuides.Teacher">Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Use">Revenir au modèle de produit.</a></MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Update-the-firm-template.htm#Update">mise à jour</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">update met à jour</MadCap:conditionalText> votre modèle avec les dernières modifications apportées au modèle de produit.<MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Update">mettre à jour le modèle d&apos;entreprise</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Pour en savoir plus, voir <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Update">mettre à jour le modèle d&apos;entreprise.</a></MadCap:conditionalText></p>
+            </li>
+        </ul>
+        <p>Si vous n&apos;êtes pas satisfait du projet sur lequel vous travaillez, vous pouvez l&apos;effacer et le supprimer :</p>
+        <ul>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Delete-a-draft.htm#Delete">en commencer une nouvelle</a>, ou</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">en commencer une nouvelle.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Delete">Créer un brouillon</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">commencer un nouveau brouillon.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create">Créer un brouillon</a>.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Use-the-product-template.htm#Use">utiliser le modèle de produit</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">utiliser le modèle de produit.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Pour en savoir plus, voir Utiliser le modèle de produit.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">utiliser le modèle de produit. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">Pour en savoir plus, voir Utiliser le modèle de produit.</MadCap:conditionalText></p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger-gegevensreeksen beschreven</h1>
+        <p>Als je grootboektransacties <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importeert</a> vanuit een CSV- of Excel-bestand, moet je de velden in kaart brengen, zodat de transactiegegevens goed worden weergegeven in de overeenkomst.</p>
+        <p>Dit onderwerp beschrijft de velden binnen de categorie <b>SUBLEDGER DETAILS</b> die verschijnen in de grootboekdataset.</p>
+        <p>Merk op dat sommige velden verplicht zijn om goed te functioneren bij specifieke tests voor gegevensanalyse. Zie voor meer informatie <a href="CSV-transaction-file-requirements.htm#Mandator2">Verplichte velden voor gegevensanalyse</a>.</p>
+        <h2>Type identificatiemiddel<code>(identifier_type</code>)</h2>
+        <p>Identificatiecode voor gegevens binnen het subgrootboek.</p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Minder dan 2.500 unieke waarden. Deze waarden moeten gelabeld zijn aan een van:<ul><li>CU - Customers</li><li>Vooruitbetaalde kosten</li><li>SU - Suppliers</li><li>EM - Employees</li><li>Beleggingsactiva</li><li>OT - Andere</li><li>Vaste activa (CA)</li><li>IN - Inventory</li><li>Uitstaande schulden</li></ul></li>
+            </ul>
+        </p>
+        <h2>Identificatiecode<code>(identifier_code</code>)</h2>
+        <p>Identificatiecode voor gegevens binnen het subgrootboek. <br />Voorbeeld: klantnummer, leveranciersnummer, personeelsnummer. <br />Voorbeelden: &quot;C123&quot;, &quot;V6589&quot;, &quot;6597&quot;.</p>
+        <h3>Benodigd</h3>
+        <p>Als het identificatietype getagd is, moet dit ook getagd zijn.</p>
+        <h2>Identifier beschrijving<code>(identifier_description</code>)</h2>
+        <p>Naam gekoppeld aan ID-code. <br />Voorbeelden: &quot;Klant ABC b.v.&quot;, &quot;Klant DEF vof&quot;, &quot;Pieter Pietersen&quot;.</p>
+        <h2>Identificator actief<code>(identifier_active</code>)</h2>
+        <p>Geeft aan of de groep actief of inactief is.</p>
+        <h2>Identifier Street (<code>identifier_street</code>)</h2>
+        <p>Identifier&apos;s street - line 1. <br />Voorbeelden: &quot;Amersfoortseweg 1&quot;.</p>
+        <h2>Adresregel 2</h2>
+        <p>Adres van de ID - regel 2. <br />Voorbeelden: &quot;Kamer 1100&quot;, &quot;Appartement 02B&quot;.</p>
+        <h2>Identificatiestad<code>(identifier_city</code>)</h2>
+        <p>Plaats waar de ID is gevestigd. <br />Voorbeelden: &quot;Amsterdam&quot;, &quot;Londen&quot;.</p>
+        <h2>Provincie</h2>
+        <p>Staat of provincie waar de ID is gevestigd. <br />Voorbeelden: &quot;Gelderland&quot;.</p>
+        <h2>Postcode</h2>
+        <p>Postcode waar de ID is gevestigd. <br />Voorbeelden: &quot;94704&quot;, &quot;M5A 0L6&quot;.</p>
+        <h2>Land van identificatie<code>(identifier_country</code>)</h2>
+        <p>Land of landcode.</p>
+        <h2>Documentnummer<code>(document_number</code>)</h2>
+        <p>ID van het brondocument. Dit is het document dat de transactie ondersteunt die in het ERP is ingevoerd. <br />Voorbeelden: &quot;PO4569&quot; voor inkooporder, &quot;7956&quot; voor cheque.</p>
+        <h2>Boekstuknummer</h2>
+        <p>Documentnummer gekoppeld aan het brondocument dat wordt gebruikt om debet- en creditbedragen te verrekenen. Wordt gebruikt om het openstaande saldo te berekenen wanneer betaling, voorschot, credit/debetnota niet volledig zijn toegepast, zodat de openstaande post kan worden berekend. <br />Voorbeelden: &quot;INV-001&quot;, &quot;121296&quot;.</p>
+    </body>
+</html>

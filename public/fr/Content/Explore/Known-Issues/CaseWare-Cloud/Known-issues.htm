@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWare Cloud." />
+    </head>
+    <body>
+        <h1>Problèmes connus dans Caseware Cloud</h1>
+        <p>Cette rubrique décrit les problèmes connus lors de l&apos;utilisation de Caseware Cloud.</p>
+        <h2>Courriels de notification d&apos;activité pour les utilisateurs SSO</h2>
+        <p>Les liens vers les activités dans les courriels de notification ne fonctionnent pas comme prévu pour les utilisateurs SSO. Si vous n&apos;êtes pas connecté lorsque vous sélectionnez le lien, vous serez redirigé vers un lien brisé une fois connecté et vous ne pourrez pas voir l&apos;activité. Pour accéder à l&apos;activité, vous pouvez sélectionner le lien dans l&apos;e-mail après vous être connecté à Cloud.</p>
+        <h2>Les notifications de demande de fichier ne prennent pas en charge le texte enrichi</h2>
+        <p>L&apos;e-mail de notification de demande de fichier envoyé aux contacts ne prend pas en charge le texte enrichi. Cela signifie que les sauts de ligne et autres mises en forme, telles que le gras ou l&apos;italique, que vous appliquez au texte de la description de l&apos;avis ne s&apos;afficheront pas dans l&apos;e-mail.</p>
+        <p>En outre, si vous saisissez du texte à la fois dans le champ de description de l&apos;avis et dans le champ <b>Message supplémentaire</b> , le contenu des deux champs s&apos;affichera sous la forme d&apos;un seul paragraphe. Nous vous recommandons de ne remplir qu&apos;un seul de ces champs lorsque vous envoyez une notification de demande de fichier à des contacts.</p>
+        <h2>Saisie manuelle de la date</h2>
+        <p>Lorsque vous saisissez manuellement des dates dans des champs de date, tels que les champs de date de début et de fin dans la boîte de dialogue de création de mission et le champ de date d&apos;incorporation dans la boîte de dialogue de création d&apos;entité, le champ revient automatiquement à la date antérieure à celle qui a été sélectionnée. Notez que ce problème ne se produit que si votre heure locale est réglée sur UTC ou sur un fuseau horaire UTC+. Nous vous recommandons de sélectionner la date à l&apos;aide du sélecteur de date du calendrier pour éviter ce problème.</p>
+        <h2>Les notifications de chat ne s&apos;affichent pas si le navigateur est inactif</h2>
+        <p>Si vous êtes connecté à votre site Cloud, mais que votre navigateur est inactif ou que votre ordinateur est en mode veille, les notifications du chat ne s&apos;afficheront pas et vous risquez de manquer les nouveaux messages des autres utilisateurs. Nous vous recommandons de fermer la page si vous savez que vous serez absent de votre ordinateur ou d&apos;actualiser la page pour mettre à jour le contenu.</p>
+        <h2>Lier des fichiers Google existants à partir d&apos;un lecteur partagé</h2>
+        <p>Lorsque l&apos;on tente de créer un lien vers un fichier Google existant qui est stocké sur un lecteur partagé, Cloud renvoie une erreur indiquant que le &quot;fichier n&apos;existe pas dans Google Drive&quot;. Ce problème est dû à une incompatibilité entre les paramètres de sécurité du lecteur partagé et le système de sécurité de Cloud. Pour contourner le problème, vous pouvez déplacer le fichier Google vers un disque non partagé, tel que votre &quot;My Drive&quot;, et créer un lien vers le fichier à partir de ce disque.</p>
+        <h2>Intégration de Xero à plusieurs locataires</h2>
+        <p>Si vous accédez à votre compte Xero via un environnement multi-tenant, vous ne pouvez pas l&apos;intégrer à Caseware Cloud. Actuellement, l&apos;intégration de Xero n&apos;est possible que dans un environnement à locataire unique.</p>
+        <h2>erreur &quot;User Name must be unique&quot; lors de la création de nouveaux contacts</h2>
+        <p>Si vous tentez de créer un nouveau contact sans fournir d&apos;adresse électronique, l&apos;erreur &quot;Le nom d&apos;utilisateur doit être unique&quot; s&apos;affiche. Un problème similaire se produit dans les fichiers Time Desktop intégrés dans le cloud : si l&apos;adresse électronique d&apos;un contact existant fait défaut, l&apos;erreur &quot;User Name must be unique&quot; s&apos;affiche lors de la création d&apos;un nouveau contact. Pour contourner temporairement le problème, vous pouvez saisir des adresses électroniques fictives pour éviter l&apos;erreur dans Cloud et Time Desktop.</p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Examples of visibility settings</h1>
+        <p>Here are some examples of how you can set up visibility logic.</p>
+        <h2>Example 1: One condition</h2>
+        <p>The following visibility settings make a document visible if the fiscal year starts after November 30, 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-01.PNG" alt="Sichtbarkeitseinstellungen" /></p>
+        <p>If the year start date for the engagement is December-20-2018, the condition evaluates true and the document is available (shown) in the engagement file.</p>
+        <p>If the year start date for the engagement is May-15-2018, the condition evaluates false and the document is not available (hidden) in the engagement file.</p>
+        <h2>Example 2: Two conditions</h2>
+        <p>The following visibility settings make a document visible if the engagement is a Review engagement with a fiscal year that starts after November-30-2018.</p>
+        <p><img src="../Resources/Images/visbility settings-02.PNG" style="width: 933px;height: 281px;" alt="Sichtbarkeitseinstellungen" /></p>
+        <p>If the type of the engagement is Compilation and the engagement year start date is December-15-2018, the final result is false and the document is not available (hidden) in the file.</p>
+        <h2>Example 3: One condition and a group of conditions</h2>
+        <p>Let&apos;s add a Group condition to have a nested setup. A Group condition allows you to group more than one condition and have them evaluated together. The result is then compared to other available conditions.</p>
+        <p>The following visibility settings make a document not visible if the engagement is a Preparation engagement or if the entity is a Canadian Private Corporation with a fiscal year that starts after December-31-2018.</p>
+        <p><img src="../Resources/Images/visbility settings-03.PNG" style="width: 568px;height: 321px;" /></p>
+        <p>If the engagement year start date is December-20-2018, the organization type is Canadian Controlled Private Corporation and the engagement type is Review, the final result is false and the document is not available (hidden) in the file.</p>
+        <h2>Example 4: Two groups of conditions</h2>
+        <p>The following settings make a document visible for fiscal years beginning after December 15, 2019, and interim periods within fiscal years beginning after December 15, 2020.</p>
+        <p><img src="../Resources/Images/visbility settings-04.PNG" alt="Visibility settings that make a document visible for fiscal year beginning after December 15, 2019" /></p>
+        <p>Let&apos;s assume that the reporting period is Annual, year start date for that period is November-30-2018, the interim period is Monthly and the year start date for that period December- 30-2019.</p>
+        <p>The system evaluates the first group condition - and the result is false because one of the conditions is not met. Then it evaluates the second group condition and the result is true, because both conditions are met.</p>
+        <p>Lastly, it evaluates the results for the two group conditions based on the visibility logic at the top (which states that the document shows if any of the conditions is true) - to finally have an end result that the document is available (shows) in the file.</p>
+    </body>
+</html>

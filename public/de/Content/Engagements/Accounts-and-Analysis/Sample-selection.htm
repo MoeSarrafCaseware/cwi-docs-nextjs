@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Stichprobenauswahl</h1>
+        <p>Sampling selection is the process of creating a subset of the total transactions available to analyze the data and draw conclusions. If sample selection is enabled in your product, the <b>Sample Selection</b> option is available in the <b>Transactions</b> tab in the <b>Data</b> page. Your <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">client&apos;s transactions</a> become the population from which you can generate a sample.</p>
+        <p><img src="../../Resources/Images/sample-selection.png" style="width: 842px;height: 293px;" alt="The Sample Selection option on the Transactions tab of the Data page." /></p>
+        <p>There are four sample selection methods that you can choose from:</p>
+        <ul>
+            <li>
+                <p><b>Random</b> - Transactions are selected randomly.</p>
+            </li>
+            <li>
+                <p><b>Systematic</b> - Transactions are selected from a random starting point but with a fixed, periodic interval. The interval is determined by the total population size divided by the sample size.</p>
+            </li>
+            <li>
+                <p><b>Monetary Unit</b> - Transactions are selected from a random starting point but based on an amount interval. The interval is determined by the absolute amount of the population divided by the sample size.</p>
+            </li>
+            <li>
+                <p><b>Manual</b> - Transactions are selected manually.</p>
+            </li>
+        </ul>
+        <h2>Generate a sample using the Random method</h2>
+        <p>The Random method generates a sample based on random selection of transactions.</p>
+        <p><b>To generate a sample using the Random method:</b></p>
+        <ol>
+            <li>
+                <p>On the <b>Transactions</b> tab in the <b>Data</b> page, select <b>Sample Selection</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Random</b> method.</p>
+                <p><img src="../../Resources/Images/sample-random.png" alt="Select the Random method." /></p>
+            </li>
+            <li>
+                <p>Enter the desired <b>Sample size</b> or <b>Percentage</b>.</p>
+                <p>You can enter a value up to 1000 or 100%.</p>
+            </li>
+            <li>
+                <p>Optionally, enter a <b>High amount threshold</b> if you want to include certain high amounts in the sample selection result.</p>
+                <p>For example, if you enter a high amount threshold $500, then transactions that are greater than or equal to (&gt;=) $500 (to a maximum of 1000 transactions) are excluded from the population being sampled and added to the sample selection result.</p>
+            </li>
+            <li>
+                <p>Select <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Note:</b> If you have entered a <b>High amount threshold</b>, the star icon (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) displays next to the rows that have been included in the sample due to the threshold.</p>
+                <p><img src="../../Resources/Images/sample-high-value-threshold.png" alt="Transactions with high amounts (based on a threshold of 10) have been included in the sample selection result marked by the star icon." /></p>
+            </li>
+        </ol>
+        <h2>Generate a sample using the Systematic method</h2>
+        <p>The Systematic method generates a sample based on:</p>
+        <ul>
+            <li>
+                <p>A fixed periodic interval determined by dividing the number of total transactions in the population by the number of transactions in the sample size</p>
+            </li>
+            <li>
+                <p>A random starting point that is a row between one and the interval value</p>
+            </li>
+        </ul>
+        <p>For example, if there are 500 transactions in the population and the sample size is 50, the interval is 500/50 = 10 and the starting point is a random row between rows one and ten. If the first row selected is row 2, then the next row will be 12, then row 22 and so on until the end of the population.</p>
+        <p><b>To generate a sample using the Systematic method:</b></p>
+        <ol>
+            <li>
+                <p>On the <b>Transactions</b> tab in the <b>Data</b> page, select <b>Sample Selection</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Systematic</b> method.</p>
+                <p><img src="../../Resources/Images/sample-systematic.png" alt="Select the Systematic method." /></p>
+            </li>
+            <li>
+                <p>Enter the desired <b>Sample size</b>.</p>
+                <p>You can enter a value up to 1000. The fixed periodic interval is calculated by dividing the population size by the sample size.</p>
+            </li>
+            <li>
+                <p>Optionally, enter a <b>High amount threshold</b> if you want to include certain high amounts in the sample selection result.</p>
+                <p>For example, if you enter a high amount threshold $500, then transactions that are greater than or equal to (&gt;=) $500 (to a maximum of 1000 transactions) are excluded from the population and added to the sample selection result.</p>
+            </li>
+            <li>
+                <p>Select <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Hinweis:</b> If you have entered a <b>High amount threshold</b>, the star icon (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) displays next to the rows that have been included in the sample due to the threshold.</p>
+            </li>
+        </ol>
+        <h2>Generate a sample using the Monetary Unit method</h2>
+        <p>The Monetary Unit method generates a sample based on:</p>
+        <ul>
+            <li>
+                <p>An amount interval determined by dividing the absolute amount of the population by the sample size</p>
+            </li>
+            <li>
+                <p>A random starting amount that is a value between $1 and the interval amount</p>
+            </li>
+            <li>
+                <p>A starting point that is the first row in the population with a cumulative absolute balance greater than or equal to the starting amount.</p>
+            </li>
+            <li>
+                <p>Subsequent selected rows are ones with cumulative absolute balances greater than or equal to the interval amount plus the amount for the previously selected row</p>
+            </li>
+        </ul>
+        <p>In this method, each individual dollar in the population is considered a sampling unit, so transactions with a higher value have a proportionally higher value of being selected. Transactions may be included multiple times in the selection if the transaction amounts are greater than the interval amount.</p>
+        <p>For example, if you have a population with a total absolute amount of $300,000 and you enter a sample size of 100, then the amount interval is 300000/100 = $3000. The starting amount is a random amount between $1 and $3000. The starting point is the first row in the population with a cumulative absolute balance greater than or equal to the starting amount. Let&apos;s say the starting amount selected is $2125 and row 1 has a balance of $500 and row 2 has a cumulative absolute balance of $2625. The first row selected in this case is row 2. The next selected row is the row with a cumulative absolute balance greater than or equal to $5125 ($2125 + $3000) and so on until the end of the population.</p>
+        <p>Remember that transactions may be included multiple times in the selection. Let&apos;s say the second selected row has a cumulative absolute balance of $10,250. The next selected row after that is the row with a cumulative absolute balance greater than or equal to $8125 ($5125 + $3000). Since the current selected row meets the selection criteria, the transaction is included in the selection again. That is, the row with the cumulative absolute balance of $10,250 is selected for the intervals of $5125 and $8125.</p>
+        <p>The <b>Interval Occurrence</b> column indicates how many times a transaction has been selected.</p>
+        <p><img src="../../Resources/Images/sampling-interval-occurence.png" alt="The Interval Occurence column." /></p>
+        <p><b>To generate a sample using the Monetary Unit method:</b></p>
+        <ol>
+            <li>
+                <p>On the <b>Transactions</b> tab in the <b>Data</b> page, select <b>Sample Selection</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Monetary Unit</b> method.</p>
+                <p><img src="../../Resources/Images/sample-monetary-unit.png" alt="Select the Monetary Unit method." /></p>
+            </li>
+            <li>
+                <p>Enter the desired <b>Sample size</b>.</p>
+                <p>You can enter a value up to 1000. The amount is calculated by dividing the absolute amount of the population by the sample size.</p>
+            </li>
+            <li>
+                <p>Optionally, enter a <b>High amount threshold</b> if you want to include certain high amounts in the sample selection result.</p>
+                <p>For example, if you enter a high amount threshold $500, then transactions that are greater than or equal to (&gt;=) $500 (to a maximum of 1000 transactions) are excluded from the population and added to the sample selection result.</p>
+            </li>
+            <li>
+                <p>Select <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Note:</b> If you have entered a <b>High amount threshold</b>, the star icon (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) displays next to the rows that have been included in the sample due to the threshold.</p>
+            </li>
+        </ol>
+        <h2>Generate a sample using the Manual method</h2>
+        <p>The Manual method generates a sample based on manual selection of transactions.</p>
+        <p><b>To generate a sample using the Manual method:</b></p>
+        <ol>
+            <li>
+                <p>On the <b>Transactions</b> tab in the <b>Data</b> page, select <b>Sample Selection</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Manual</b> method.</p>
+                <p><img src="../../Resources/Images/sample-manual.png" alt="Select the Manual method." /></p>
+            </li>
+            <li>
+                <p>In the list of transactions, select the check box for each transaction you want to include in the sample.</p>
+                <p><img src="../../Resources/Images/sample-manual-selection.png" alt="Select the check box for a transaction to include it in the sample." /></p>
+                <p>You can select the <b>Posting Date</b> or <b>Amount</b> column to sort the list by posting date or amount as you make your selections. An arrow displays next to the column to denote that the list is sorted ascendingly (<img src="../../Resources/Images/icon-sample-filter-ascend.png" style="vertical-align: text-bottom;" />) or descendingly (<img src="../../Resources/Images/icon-sample-filter-descend.png" style="vertical-align: text-bottom;" />). Note that your selections are not cleared if you sort it. To clear your selections, select the <b>Clear Selection</b> button.</p>
+            </li>
+        </ol>
+        <h2>Export a sample</h2>
+        <p>After you generate a data sample, you can export the sample to a CSV file or copy it to clipboard.</p>
+        <p><b>To export a sample:</b></p>
+        <ol>
+            <li>
+                <p>Generate a sample.</p>
+            </li>
+            <li>
+                <p>Select the <b>EXPORT</b> button.</p>
+                <p><img src="../../Resources/Images/sample-export.png" alt="Select the EXPORT button after you generate a sample." /></p>
+            </li>
+            <li>
+                <p>In the Sample Export dialog, select the export method.</p>
+                <p>If you select <b>Export to CSV</b>, enter a name for the CSV file.</p>
+                <p><img src="../../Resources/Images/sample-export-dialog.png" alt="Select an export method in the Sample Export dialog. If you select Export to CSV, enter a name for the file." /></p>
+            </li>
+            <li>
+                <p>Select the <b>Nature of test</b> from the drop-down.</p>
+            </li>
+            <li>
+                <p>Select <b>CONTINUE</b>.</p>
+                <p>The sample is exported as a CSV file or copied to clipboard based on your selection.</p>
+            </li>
+        </ol>
+    </body>
+</html>

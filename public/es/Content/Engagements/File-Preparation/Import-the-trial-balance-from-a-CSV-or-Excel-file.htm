@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="Import2"></a>Importar las transacciones del cliente y otros datos del libro auxiliar de un archivo CSV o Excel</h1>
+        <p>If the accounting software package you have is not supported by any of our import utilities, you can export your client data to a CSV (comma-separated value) or Excel file and then import it using this file. The format of the file can be either .xlsx or .csv and must meet the file requirements for successful import. To learn more, see <a href="CSV-transaction-file-requirements.htm">Prepare a CSV or Excel file to import transactions or subledger data</a> and <a href="#Date">Date format</a>.</p>
+        <p>After you upload the file, you need to assign the data fields in the file to predefined target fields in a Casware dataset, to complete the import. To learn more about the dataset options, see <a href="Import-and-manage-data.htm#Dataset">Dataset types described</a>. Not all dataset types may be available if they have not been enabled in your product.</p>
+        <h2 class="collapsible"><a name="Date"></a>Formato de fecha</h2>
+        <p>In fields where a date is required, date format must be properly set:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Importar datos del cliente</h2>
+        <p><b>To import client data from an Excel or CSV file:</b></p>
+        <ol>
+            <li>
+                <p>Vaya a la página <b>Datos</b> . The Data page opens to the <b>Datasets</b> tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                </li>
+                <li>
+                    <p>If your engagement is consolidated and has internal subsidiary entities, select the entity for which you want to import data from the list.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="2">
+                <p>UNDER DATA FILE UPLOAD, browse or drag the CSV or Excel file to the file upload area.</p>
+            </li>
+            <li>
+                <p>In the <b>Configure new dataset</b> dialog, select the <b>Dataset type</b> from the dropdown.</p>
+                <p>To learn more about the dataset options, see <a href="Import-and-manage-data.htm#Dataset">Dataset types described</a>. Not all dataset types may be available if they have not been enabled in your product.</p>
+                <p>If you are importing a trial balance, in <b>Dataset type</b>, select Trial balance. If planning balances are enabled in your product, select whether you are importing the <b><a href="../../Glossary/F/final-balance.htm">Final trial balance</a></b> or a <b><a href="../../Glossary/P/planning-balance.htm">Planning trial balance</a></b>.</p>
+            </li>
+            <li>
+                <p>Review the automatically selected header row to ensure the correct header has been selected. If you want to manually select the header row, select <b>Adjust header row</b> and select the correct row.</p>
+                <p>If you are importing a CSV file and want to change the delimiter to something other than the default comma (<b>,</b>), select <b>Adjust header row</b> and select the correct delimiter.</p>
+                <p class="note"><b>Note:</b> Both the automatic header detection and manual header selection only take into account the first 30 rows of the imported file. Rows beyond the first 30 rows cannot be selected as a header.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ConfigureNewDataset.png" alt="Vista previa de fila de encabezado" /></p>
+        <ol>
+            <li value="5">
+                <p>Select <b>Upload</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Datasets</b> tab, click <b>Configure</b> to assign columns in the imported data to Caseware fields.</p>
+                <p><img src="../../Resources/Images/ConfigureDataset.png" alt="Click Configure to assign fields in the imported data to Caseware fields." /></p>
+            </li>
+        </ol>
+        <ol>
+            <li value="7">
+                <p>On the <b>Assign Fields</b> page,</p>
+                <ul>
+                    <li>
+                        <p>Use the dropdowns to manually assign a field to each column in the imported file.</p>
+                    </li>
+                    <li>
+                        <p>Use the <b>Select data layout</b> dropdown to apply a previously saved data layout and automatically assign the fields. To learn more, see <a href="Manage-your-imported-data.htm#Save">Save a data layout</a>.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p class="indent">If there are any errors, an indicator displays for the columns that contain the errors. You can then select the indicator and the error to view more information about the error and the specific rows that have been flagged.</p>
+        <p class="indent"><img src="../../Resources/Images/ImportErrorExample.png" alt="Import error indicator" /></p>
+        <ol>
+            <li value="8">
+                <p>If you are importing a trial balance, select <b>Include zero-balance accounts</b> if you want to include accounts with a balance of zero in the import.</p>
+            </li>
+            <li>
+                <p>Select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p><img src="../../Resources/Images/ViewData-TrialBalance.png" alt="Selecting the View data button to display imported data" /></p>
+        <p class="indent"> </p>
+        <p>If you imported a trial balance, the <b>Accounts</b> tab appears. If general ledger or any of the subledgers, a new page appears displaying the dataset.</p>
+        <p>By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p>Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p>See <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>, for more information.</p>
+        <h2>Reimportar balance de comprobación</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

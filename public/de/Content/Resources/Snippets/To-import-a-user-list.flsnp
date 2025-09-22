@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>Eine Benutzerliste importieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie für <i>Mitarbeiter: Administrator</i>-Rolle oder gleichwertige Berechtigungen haben.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Hauptmenü den Eintrag <b>Mitarbeiter</b> oder <b>Kontakte</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Neu</b> und wählen Sie unter Import die Option <b>Mitarbeiter</b> oder <b>Kontakte</b>.</p>
+                <p class="note"><b>Hinweis:</b> Verwendet Ihr Unternehmen <a href="../../Explore/Interface/Firm-Settings/Firm.htm#Business-Units">Business Units</a>, können Sie den Standard-<b>Mitarbeiter</b>-Import einsetzen, um Mitarbeiter in den aktuellen Geschäftsbereich zu importieren. Wenn Sie Mitarbeiter in andere Business Units bzw. mehrere Business Units importieren oder Mitarbeiter zwischen Business Units verschieben, wählen Sie <b>Mitarbeiter zu Business Units</b>.</p>
+            </li>
+            <li>
+                <p>Vervollständigen Sie die Importoptionen nach Bedarf.</p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <tbody>
+                        <tr>
+                            <th>Option</th>
+                            <th>Beschreibung</th>
+                        </tr>
+                        <tr>
+                            <td>Bestehende Mitarbeiterinformationen aktualisieren</td>
+                            <td>Wählen Sie diese Option, um bestehende Mitarbeiter mit Details aus einer CSV-Datei zu aktualisieren.</td>
+                        </tr>
+                        <tr>
+                            <td>(Standard) Mitarbeiter, die nicht in der Liste vorhanden sind, deaktivieren und neue Mitarbeiter aktivieren.</td>
+                            <td>
+                                <p>Wählen Sie diese Option, um alle Mitarbeiter zu deaktivieren, die in der Cloud-Instanz existieren, aber nicht in der CSV-Datei vorhanden sind. Neue Mitarbeiter in der Mitarbeiterliste werden aktiviert.</p>
+                                <p>Wählen Sie diese Option nur, wenn Sie eine komplette Mitarbeiter- oder Kontaktliste importieren.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>(Business Units) Mitarbeiter in nicht gelisteten Business Units deaktivieren</td>
+                            <td>
+                                <p>Wählen Sie diese Option, um alle Mitarbeiter zu deaktivieren, die in Business Units existieren, aber nicht in der CSV-Datei vorhanden sind.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Enthält Kopfzeile</td>
+                            <td>Geben Sie an, ob Ihre CSV-Datei eine Kopfzeile hat.</td>
+                        </tr>
+                        <tr>
+                            <td>Trennzeichen</td>
+                            <td>Wählen Sie das Trennzeichen, das in der CSV-Datei verwendet wird, um die Spalten zu trennen (z. B. , ; | ).</td>
+                        </tr>
+                        <tr>
+                            <td>Definieren Sie, wie das erste Kennwort festgelegt werden soll.</td>
+                            <td>Wählen Sie, ob das erste Kennwort vom Benutzer selbst festgelegt werden sollte, oder vom Identitätsanbieter (Admin).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Option <b>Import aus CSV-Datei</b> und navigieren Sie zum Verzeichnis mit Ihrer Datei im CSV-Format oder fügen Sie Ihren durch Trennzeichen unterteilten Textblock in das Textfeld ein. Klicken Sie anschließend auf <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>Ordnen Sie jeder Spalte die jeweilige Eigenschaft zu.</p>
+                <p><img src="../Images/Staff-Contacts-Import-3-829x595.png" style="border:1px solid #3f66a3" alt="Ordnen Sie die Spalten Ihrer Entitätsliste zu, bevor Sie den Prozess abschließen." /></p>
+                <div class="note">
+                    <p><b>Hinweise:</b></p>
+                    <ul>
+                        <li>Haben existierende Benutzer die gleiche <b>E-Mail-Adresse</b>, werden sie aktualisiert.</li>
+                        <li>Wenn Sie Mitarbeiter in Business Units importieren, müssen alle nicht leeren Werte in der Spalte Business Units einem Namen einer Business Unit entsprechen. Mehrere Business Units können mit Tilden (~) getrennt werden.</li>
+                        <li>Wenn Sie eine Liste mit Kontakten importieren, sollten Sie das Feld E-Mail-Adresse für alle Kontakte leer lassen, die kein Benutzerkonto in Caseware Cloud erhalten sollen.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Import</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

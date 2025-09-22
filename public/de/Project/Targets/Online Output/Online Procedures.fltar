@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="CleanXHTML"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Online Procedures.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/CWI.css"
+  ConditionTagExpression="exclude[General.Ignore or General.PDF] "
+  MoveOutputContentToRoot="true"
+  ExcludeUnreferencedContent="true"
+  UseEmptyAltText="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <RelationshipTables />
+  <Glossaries />
+</CatapultTarget>

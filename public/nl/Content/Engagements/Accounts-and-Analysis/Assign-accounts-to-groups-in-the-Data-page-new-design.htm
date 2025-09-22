@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Rekeningen toewijzen aan groepen</h1>
+        <p>Het kan soms gebeuren dat het icoon voor <b>Rekeningen toewijzen</b> een waarschuwing geeft () als u de saldibalans heeft geïmporteerd. De waarschuwing geeft aan dat er een of meerdere rekeningen niet goed zijn toegewezen aan de groepen. Deze melding komt ook op als u handmatig een of meer rekeningen toevoegt. Merk op dat de rode badge het aantal niet-toegewezen accounts weergeeft. Als er bijvoorbeeld drie niet-toegewezen accounts zijn, toont de badge <b>3</b> (<img src="../../Resources/Images/AssignAccountsBadge.png" alt="" style="vertical-align: text-bottom;" />).</p>
+        <p><img src="../../Resources/Images/AccountsTab-AccountsUnassigned.png" alt="Tabblad Rekeningen met een badge voor niet-toegewezen rekeningen die het aantal rekeningen aangeeft dat nog moet worden toegewezen." /></p>
+        <p>Rekeningen die niet toegewezen zijn moeten handmatig worden gemapt aan de juiste groep zodat uw financiële gegevens over de gehele opdracht correct worden weergegeven. Als er meerdere groeperingsstructuren beschikbaar zijn, wordt een account door het toewijzen aan een groep in de standaardstructuur automatisch toegewezen aan gekoppelde groepen in andere structuren.</p>
+        <h2>Rekeningen toewijzen aan groepen</h2>
+        <p style="font-weight: normal;">Rekeningen kunnen handmatig worden toegewezen aan groepen via de pagina <b>Rekeningen toewijzen</b> op de Datapagina.</p>
+        <p style="font-weight: bold;">Een rekening toewijzen aan een groep:</p>
+        <ol>
+            <li>
+                <p>Klik op het icoontje <b>Rekeningen toewijzen</b> () rechts bovenin de pagina.</p>
+                <p>U kunt u naar de pagina gaan door op het tabblad in het linkerpaneel te klikken.</p>
+                <p>Op de pagina worden de niet-toegewezen rekeningen getoond onder <b>Niet-toegewezen</b>.</p>
+                <p>Als je overeenkomst geconsolideerd is, kun je de entiteit-selector dropdown gebruiken om te selecteren voor welke entiteit je rekeningen toewijst.</p>
+                <p>De financiële groepen worden weergegeven in de lijst <b>Groepen</b> . Als je product meerdere groeperingsstructuren heeft, kun je de vervolgkeuzelijst gebruiken om de groeperingsstructuur te selecteren waaraan je accounts wilt toewijzen.</p>
+                <p>Sommige groepen worden verborgen omdat ze niet relevant zijn. Vink de optie <b>Toon verborgen</b> aan om deze groepen te tonen. Als u de optie <b>Toon verborgen</b> aanvinkt wordt het icoon () weergegeven naast de verborgen groepen zodat u ze makkelijk kunt zien.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/AssignAccounts-DA-2024-09.png" alt="Rekeningen toewijzen aan groepen" /></p>
+        <ol><li value="2"><p>Selecteer de groep waar u de rekening aan wilt toewijzen.</p><p>Je kunt de account ook uit de lijst met <b>niet-toegewezen accounts</b> slepen en in een groep neerzetten om hem toe te wijzen.</p><p>Je kunt het zoekvak of de filters gebruiken om de account te vinden die je wilt toewijzen. Met het zoekvak kun je naar accounts zoeken op basis van het nummer of de naam. Met de beschikbare filters kun je de niet-toegewezen rekeningen filteren op credit- of debetsaldo en op het saldo.</p></li></ol>
+        <p><img src="../../Resources/Images/FiltersUnassignedAccounts.png" alt="Niet-toegewezen accounts filteren." /></p>
+        <p class="indent">Als er dimensies beschikbaar zijn in uw product, kunt u de account toewijzen aan dimensies nadat u deze hebt toegewezen aan een groep door het <b>Dropdown-pictogram</b> (<img src="../../Resources/Images/icon-assign-accounts-dropdown.png" style="width: 40px;height: 23px;vertical-align: text-bottom;" alt=" " />) te selecteren en vervolgens <b>Dimensies toewijzen</b>. Merk op dat, hoewel je een account aan meerdere dimensies kunt toewijzen, je maar één dimensie per dimensiecategorie kunt toewijzen.</p>
+        <p><img src="../../Resources/Images/ShowingDimensions-AssignAccounts.png" alt="Een rekening toewijzen aan een groep:" /></p>
+        <p class="note"><b>Let op:</b> U kunt alleen accounts toewijzen aan een groep van een lager niveau als er geen accounts zijn toegewezen aan de bovenliggende groep. Stel bijvoorbeeld dat je twee rekeninggroepen hebt, <i>Inkomsten</i> en <i>Lease-inkomsten</i>, die beide zijn toegewezen aan de hoofdgroep <i>Inkomsten</i> . Als een rekening wordt toegewezen aan de groep <i>Inkomen</i> kunnen er geen rekeningen meer worden toegewezen aan <i>Omzet</i> of <i>Lease-baten</i>. Maak de toewijzing aan de hoofdgroep handmatig ongedaan en dan kunt u weer rekeningen toewijzen aan de onderliggende groepen. Voor meer informatie, zie <a href="#Unassign">Toewijzingen ongedaan maken</a>.</p>
+        <p>Nadat u een account hebt toegewezen, kunt u indien nodig <b>Ongedaan maken</b> (<img src="../../Resources/Images/icon-undo-assign-accounts.png" style="vertical-align: text-bottom;" />) selecteren om het account opnieuw toe te wijzen.</p>
+        <p><img src="../../Resources/Images/assign-accounts-undo.png" /></p>
+        <h2>Meerdere proefbalansen bekijken en vergelijken</h2>
+        <p>Je kunt proefbalansen met maximaal vier verschillende data bekijken en vergelijken terwijl je rekeningen toewijst. Enkele veelvoorkomende voorbeelden zijn de volgende:</p>
+        <ul>
+            <li>
+                <p>Lopend jaar (planning en definitief)</p>
+            </li>
+            <li>
+                <p>Vorig jaar (planning en definitief)</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Let op:</b> Niet alle producten voorzien in het importeren van planningsbalansen.</p>
+        <p>Merk op dat er ander gedrag is op het tabblad Rekeningen toewijzen als er saldi zijn op meer dan één datum. Het onderstaande voorbeeld toont het tabblad Rekeningen toewijzen na het importeren van een proefbalans met:</p>
+        <ul>
+            <li>
+                <p>Huidig jaar - planning saldibalans</p>
+            </li>
+            <li>
+                <p>Eindsaldo voorgaand jaar-12/31/2023</p>
+            </li>
+            <li>
+                <p>Voorgaand jaar - planning saldibalans</p>
+            </li>
+        </ul>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomie van het tabblad Rekeningen toewijzen als een proefbalans meer dan één einddatum heeft." /></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Resterende niet-toegewezen rekeningen: </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Balansselector voor de lijst met niet-toegewezen rekeningen</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Groepen lijst</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Alternatieve proefbalanskolom</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>Kolom hoofdbalans</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Balansselector voor de kolom Alternatieve balans</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Data worden gesynchroniseerd van links naar rechts. Als je een andere datum<b>(2</b>) kiest in de lijst met <b>rekeningen zonder bestemming</b> <b>(1</b>), worden de saldi in de kolom Alternatieve proefbalans<b>(4</b>) in de lijst <b>Groepen</b> automatisch aangepast. In het onderstaande voorbeeld selecteren we het planningsaldo van het voorgaande jaar-9/30/2023<b>(2</b>).</p>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomie van het tabblad Rekeningen toewijzen als een proefbalans meer dan één einddatum heeft." /></p>
+        <p>Hierdoor wordt de kolom Alternatieve proefbalans<b>(4</b>) op de <b>Groepenlijst</b> hetzelfde.</p>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs-part2.png" alt="Bekijken hoe saldi van links naar rechts worden gesynchroniseerd, afhankelijk van de einddatum van het saldo dat is geselecteerd in de lijst met niet-toegewezen rekeningen." /></p>
+        <p>Het kiezen van de saldi op een andere datum<b>(6</b>) in de kolom Alternatieve proefbalans in de lijst <b>Groepen</b> heeft geen effect op de saldi in de lijst <b>Rekeningen zonder bestemming</b> <b>(1</b>).</p>
+        <h3>Voorrang van weergave</h3>
+        <p>Als u een proefbalans vanaf twee of meer datums in de opdracht importeert, worden er twee kolommen weergegeven in de lijst <b>Groepen</b> , waarbij de saldi met de hoogste prioriteit worden weergegeven in de kolom Hoofdbalans en de andere saldi in de kolom Alternatieve proefbalans.</p>
+        <p><b>Volgorde van prioriteit</b></p>
+        <ul>
+            <li>
+                <p>Huidig jaar - bovenliggende balans</p>
+            </li>
+            <li>
+                <p>Huidig jaar - planning saldibalans</p>
+            </li>
+            <li>
+                <p>Eindsaldo voorgaand jaar-12/31/2023</p>
+            </li>
+            <li>
+                <p>Voorgaand jaar - planning saldibalans</p>
+            </li>
+        </ul>
+        <h2>Rekeningtoewijzing kopiëren uit een andere opdracht</h2>
+        <p>Om het accounttoewijzingsproces te vereenvoudigen, kun je de structuur van de accounttoewijzing uit een andere overeenkomst kopiëren. Hierdoor kun je profiteren van overeenkomsten die dezelfde financiële groeperingsstructuur en groepsnummers gebruiken, zodat je automatisch rekeningen kunt toewijzen in je huidige overeenkomst zodat ze overeenkomen met de overeenkomst waaruit je kopieert.</p>
+        <p><b>Let op:</b> De stappen om een overeenkomst te selecteren om van te kopiëren verschillen enigszins als de overeenkomst die je selecteert om van te kopiëren een geconsolideerde overeenkomst is.</p>
+        <p>Wanneer je een opdracht selecteert om uit te kopiëren, worden rekeningen in je huidige opdracht met hetzelfde rekeningnummer als de rekeningen in de andere opdracht toegewezen aan de juiste financiële groepen.</p>
+        <p class="note"><b>Let op:</b> Je kunt alleen accountopdrachten kopiëren van opdrachten waartoe je toegang hebt.</p>
+        <p style="font-weight: bold;">Rekeningtoewijzing kopiëren uit een andere opdracht</p>
+        <ol>
+            <li>
+                <p>Selecteer op de pagina <b>Rekeningen toewijzen</b>  <b>Meer acties</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Accounttoewijzing van andere opdracht kopiëren</b>.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/CopyAssignment-DA-2024-09.png" alt="De optie selecteren om een accounttoewijzing van een andere opdracht te kopiëren naar de huidige opdracht." /></p>
+        <ol>
+            <li value="2">
+                <p>Selecteer in het dialoogvenster <b>Opdracht van opdracht kopiëren</b> bij <b>Entiteit</b>de entiteit die de opdracht bevat waaruit u wilt kopiëren.</p>
+            </li>
+            <li>
+                <p>Selecteer in <b>Opdracht</b>de opdracht van waaruit je de accounttoewijzing wilt kopiëren.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectingEntitySuccess-AssignAccounts.png" alt="De entiteit selecteren die de opdracht bevat waarvan je de accounttoewijzing wilt kopiëren. " /></p>
+        <p class="indent"><ol style="list-style-type: lower-alpha;"><li><p>Als u kopieert vanuit een geconsolideerde opdracht, wordt u gevraagd om de entiteit te selecteren waartoe de geconsolideerde opdracht behoort:</p></li></ol></p>
+        <p><img src="../../Resources/Images/Copying-assignment-consolidated-DA-2024-09.png" alt="Als je de accounttoewijzing van een geconsolideerde opdracht kopieert, wordt je gevraagd om de entiteit te selecteren waartoe de geconsolideerde opdracht behoort. " /></p>
+        <p class="indent">Je kunt ook rekeningtoewijzingen kopiëren vanuit meerdere financiële groepsstructuren door de financiële groepen te selecteren in de bronopdracht die je wilt kopiëren, in <b>Groeperingsstructuur</b>.</p>
+        <p class="note inline"><b>Let op:</b> Als de bronopdracht meerdere financiële groepen beschikbaar heeft in <b>Groeperingsstructuur</b>en je maakt geen selectie, dan wordt de primaire financiële groep standaard geselecteerd en weergegeven in <b>Groeperingsstructuur</b>.</p>
+        <p class="note inline"><b>Let op:</b> Voor bronopdrachten met één financiële groep wordt standaard de enige beschikbare financiële groep geselecteerd en kun je de selectie niet ongedaan maken of wijzigen.</p>
+        <p class="indent">Als de groeperingsstructuur voor accounts overeenkomt met de huidige opdracht, verschijnt er een succesindicator en de naam van de groeperingsstructuur in <b>Groeperingsstructuur</b>.</p>
+        <p><img src="../../Resources/Images/Copying-account-assignments-from-multiple-financial-groups.png" alt="Meerdere financiële groepen selecteren van waaruit rekeningtoewijzingen moeten worden gekopieerd." /></p>
+        <ol>
+            <li value="4">
+                <p>Selecteer in <b>Engagemententiteit</b> onder Bestemming de engagement waarop je de accounttoewijzing wilt toepassen. Je kunt accounttoewijzingen van een andere overeenkomst kopiëren naar meerdere entiteiten in je huidige overeenkomst door de bestemmingsentiteiten te selecteren in de vervolgkeuzelijst.</p>
+            </li>
+        </ol>
+        <p class="indent">Als je bestaande accounttoewijzingen die je hebt gemaakt wilt opheffen, selecteer je <b>Bestaande accounttoewijzing opheffen</b>. Als je deze optie niet selecteert, blijven je bestaande accounttoewijzingen ongewijzigd en worden alleen accounts toegewezen die momenteel nog niet zijn toegewezen.</p>
+        <ol>
+            <li value="5">
+                <p>Niets selecteren.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Toewijzingen ongedaan maken</h2>
+        <p>Toegewezen rekeningen kunnen handmatig ongedaan gemaakt worden via de pagina <b>Rekeningen toewijzen</b> op de Datapagina.</p>
+        <p><b>Een toewijzing ongedaan maken:</b></p>
+        <ol>
+            <li>
+                <p>Ga in het tabblad <b>Rekeningen toewijzen</b> naar de groep waar u een rekening van wilt halen.</p>
+            </li>
+            <li>
+                <p>Selecteer en sleep de rekening van de hoofdgroep naar de sectie <b>Niet-toegewezen</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can import a large number of users at once using a .csv file or block of delimited text; recommended for large firms" />
+    </head>
+    <body>
+        <h1>Création en masse de comptes d&apos;utilisateurs</h1>
+        <p>Au lieu de créer des comptes d&apos;utilisateur individuels, l&apos;option d&apos; <b>importation</b> est disponible dans les pages <b>Personnel</b> et <b>Contact.</b> </p>
+        <p><img src="../../Resources/Images/import-users.png" alt="Création en masse de comptes d&apos;utilisateurs Notez que cette option est disponible pour le personnel et les contacts." style="border:1px solid #3f66a3" /></p>
+        <p>Pour les entreprises de grande taille, il est préférable d&apos;utiliser l&apos;option d&apos;importation pour créer en masse des comptes d&apos;utilisateurs en important les informations relatives aux utilisateurs à partir d&apos;une liste. Cela se fait en deux étapes :</p>
+        <ol>
+            <li>Préparer la liste des informations sur l&apos;utilisateur.</li>
+            <li>Importer la liste.</li>
+        </ol>
+        <p>Notez que :</p>
+        <ul>
+            <li>
+                <p>Pour créer en masse des comptes d&apos;utilisateurs pour le personnel et les contacts de l&apos;entreprise, vous devez créer deux listes distinctes, l&apos;une pour le personnel de l&apos;entreprise et l&apos;autre pour les contacts de l&apos;entreprise</p>
+            </li>
+            <li>
+                <p>Vous pouvez utiliser l&apos;option d&apos;importation pour mettre à jour en masse les informations relatives aux comptes d&apos;utilisateurs existants</p>
+            </li>
+            <li>
+                <p>Si votre entreprise utilise des <a href="../Organization/About-business-units.htm">unités commerciales</a>, vous pouvez utiliser l&apos;importation standard de <b>personnel</b> pour importer du personnel dans l&apos;unité commerciale actuelle. Si vous importez du personnel vers d&apos;autres unités d&apos;entreprise, vers plusieurs unités d&apos;entreprise ou si vous déplacez du personnel entre des unités d&apos;entreprise, sélectionnez <b>Personnel vers unités d&apos;entreprise</b>. Pour cette option, un champ d&apos;unité commerciale est requis dans la liste d&apos;importation. Les membres du personnel qui se trouvent déjà sur le site principal du nuage peuvent continuer à utiliser les mêmes identifiants de connexion et le sélecteur d&apos;unité opérationnelle pour naviguer entre les sites.</p>
+            </li>
+            <li>
+                <p>Après avoir importé avec succès une liste d&apos;utilisateurs, Cloud envoie une notification par courriel à chaque utilisateur créé. Pour en savoir plus, consultez la section <a href="#What">Ce qui se passe après l&apos;importation de la liste.</a></p>
+            </li>
+        </ul>
+        <p>Caseware Cloud propose deux méthodes pour ajouter du personnel ou des contacts à votre organisation : importer une liste en utilisant un fichier .csv ou un bloc de texte délimité ou ajouter des utilisateurs individuellement dans Cloud. Si votre organisation compte plus de 50 employés ou contacts, nous vous recommandons d&apos;importer une liste d&apos;utilisateurs.</p>
+        <h2>Étape 1 : Préparer la liste des informations sur l&apos;utilisateur</h2>
+        <p>L&apos;ajout d&apos;utilisateurs à partir d&apos;une liste permet d&apos;ajouter un grand nombre d&apos;utilisateurs en une seule procédure. Le fichier de liste ou le texte peut ajouter ou modifier le profil et les coordonnées des utilisateurs, ainsi que leur affectation à un groupe. Si un groupe saisi n&apos;existe pas dans Cloud, l&apos;importation du répertoire le créera.</p>
+        <p>Vous aurez besoin d&apos;une liste d&apos;utilisateurs dans un <b>fichier .csv</b> ou un <b>bloc de texte délimité</b>.</p>
+        <p>Si vous utilisez l&apos;une ou l&apos;autre de ces méthodes, assurez-vous que</p>
+        <ul>
+            <li>Chaque ligne représente un utilisateur, et</li>
+            <li>Chaque colonne représente une propriété, telle que le nom, l&apos;adresse électronique et le groupe d&apos;utilisateurs. Pour inclure un utilisateur dans plusieurs groupes, placez un tilde (~) entre chaque nom de groupe.</li>
+        </ul>
+        <p>Par exemple, un administrateur souhaite ajouter quatre membres du personnel à Cloud. Pour chaque méthode, la liste des utilisateurs pourrait ressembler à ce qui suit :</p>
+        <p><b>fichier .csv :</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-csv.png" alt="Tableau CSV des informations sur les utilisateurs" /></p>
+        <p><b>Bloc délimité de texte brut :</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-plain-text.png" alt="Liste en texte brut des informations sur l&apos;utilisateur, séparées par des virgules" /></p>
+        <h2 id="Importing-the-list-to-Cloud">Étape 2 : Importer la liste</h2>
+        <p>Une fois la liste préparée, vous êtes prêt à importer vos utilisateurs dans Cloud.</p>
+        <p><b>Pour importer une liste d&apos;utilisateurs :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous disposez du <i>personnel : </i>Rôle d&apos;<i>administrateur</i> ou droits équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Nuage, sélectionnez <b>Personnel</b> ou <b>Contacts</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau</b> et, sous Importation, sélectionnez <b>Personnel</b> ou <b>Contacts</b>.</p>
+                <p class="note"><b>Remarque :</b> Si votre entreprise utilise des <a href="../Organization/About-business-units.htm">unités commerciales</a>, vous pouvez utiliser l&apos;importation standard de <b>personnel</b> pour importer du personnel dans l&apos;unité commerciale actuelle. Si vous importez du personnel vers d&apos;autres unités d&apos;entreprise, vers plusieurs unités d&apos;entreprise ou si vous déplacez du personnel entre des unités d&apos;entreprise, sélectionnez <b>Personnel vers unités d&apos;entreprise</b>.</p>
+            </li>
+            <li>
+                <p>Complétez les options d&apos;importation si nécessaire.</p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <tbody>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Mise à jour des informations sur le personnel existant</td>
+                            <td>Sélectionnez cette option pour mettre à jour le personnel existant avec les détails du fichier CSV.</td>
+                        </tr>
+                        <tr>
+                            <td>(Standard) Désactiver le personnel non listé et activer le nouveau personnel</td>
+                            <td>
+                                <p>Sélectionnez cette option pour désactiver tout personnel existant dans le site Cloud, mais non inclus dans le fichier CSV. Les nouveaux membres du personnel figurant dans la liste du personnel seront activés.</p>
+                                <p>Ne sélectionnez cette option que si vous importez une liste complète de collaborateurs ou de contacts.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>(Unités opérationnelles) Désactiver le personnel des unités opérationnelles non répertoriées</td>
+                            <td>
+                                <p>Cochez cette case pour désactiver tout personnel existant dans les unités d&apos;affaires qui ne sont pas incluses dans le fichier CSV.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Contient l&apos;en-tête</td>
+                            <td>Sélectionnez si votre fichier CSV contient une ligne d&apos;en-tête.</td>
+                        </tr>
+                        <tr>
+                            <td>Délimiteur</td>
+                            <td>Sélectionnez le délimiteur utilisé dans le fichier CSV pour séparer les lignes (par exemple , ; | ).</td>
+                        </tr>
+                        <tr>
+                            <td>Spécifier comment le mot de passe initial doit être défini</td>
+                            <td>Choisissez si le mot de passe initial doit être défini par les utilisateurs eux-mêmes ou par le fournisseur d&apos;identité (admin).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Importer à partir de CSV</b> et naviguez jusqu&apos;à votre fichier de répertoire .csv, ou collez le texte de votre liste délimitée dans la zone de texte, puis sélectionnez <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>Mettez en correspondance la propriété qui correspond à chaque colonne.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-3-829x595.png" style="border:1px solid #3f66a3" alt="Mettez en correspondance les colonnes de votre liste d&apos;importation de personnel pour compléter le processus" /></p><div class="note"><p><b>Notes :</b></p>
+                    <ul>
+                        <li>Si des utilisateurs existants ont la même <b>adresse électronique</b>, ils seront mis à jour.</li>
+                        <li>Si vous importez du personnel vers des unités d&apos;entreprise, toute valeur non vide dans la colonne unité d&apos;entreprise doit correspondre à un nom d&apos;unité d&apos;entreprise. Les unités commerciales multiples peuvent être délimitées à l&apos;aide de tildes (~).</li>
+                        <li>Si vous importez une liste de contacts, laissez le champ de l&apos;adresse e-mail vide pour tous les contacts pour lesquels vous ne voulez pas avoir de compte dans Cloud.</li>
+                    </ul></div></li>
+            <li>
+                <p>Sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p>Une boîte de dialogue de confirmation apparaît, indiquant le nombre d&apos;utilisateurs ajoutés ou modifiés avec succès. Si vous avez saisi des groupes, ils seront également ajoutés ou modifiés.</p>
+        <h2 id="After-the-import"><a name="What"></a>Que se passe-t-il après l&apos;importation de la liste ?</h2>
+        <p>Après avoir importé une liste d&apos;utilisateurs, Cloud leur enverra automatiquement un courriel avec un lien vers leur page de connexion. Un enregistrement de cet e-mail peut être trouvé dans <b>Paramètres | Email | Journal des e-mails.</b></p>
+        <p>Sur l&apos;écran de connexion, il leur sera demandé d&apos;entrer leur adresse électronique et de saisir et confirmer un mot de passe. Les normes relatives à la difficulté des mots de passe et à la fréquence à laquelle ils doivent être modifiés peuvent être définies dans <b>Paramètres | Sécurité | Paramètres des mots de passe.</b></p>
+    </body>
+</html>

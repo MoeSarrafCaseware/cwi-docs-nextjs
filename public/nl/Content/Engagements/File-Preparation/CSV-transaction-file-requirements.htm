@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Een CSV- of Excel-bestand maken om transacties of subgrootboekgegevens te importeren</h1>
+        <p>Je kunt je transacties, grootboek- of subgrootboekgegevens importeren in een Cloud-engagement vanuit correct opgemaakte CSV- of Excel-bestanden.</p>
+        <p>Voor meer informatie over het importeren van transacties, grootboek- of subgrootboekgegevens uit een CSV- of Excel-bestand in Cloud-opdrachten, zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">De transacties en andere subgrootboekgegevens van de klant importeren uit een CSV- of Excel-bestand</a>.</p>
+        <h2>Vereisten voor CSV-bestanden</h2>
+        <p>Het importbestand moet aan deze voorwaarden voldoen:</p>
+        <ul>
+            <li>
+                <p>Bestand moet het .csv-formaat met UTF-8-codering hebben</p>
+            </li>
+            <li>
+                <p>Als het CSV-bestand kolomkoppen bevat zonder gegevens (er bestaan alleen koptekstwaarden), worden de bestanden geweigerd en mislukt het uploaden.</p>
+            </li>
+            <li>
+                <p>Het bestand is kleiner dan 5 GB</p>
+            </li>
+            <li>
+                <p>De eerste rij in de CSV (de header-rij) wordt uitgesloten van het importeren. Transacties moeten beginnen op de tweede rij.</p>
+            </li>
+            <li>Als er een waarde tussen aanhalingstekens (&quot;) staat:<ul style="list-style-type: circle;"><li><p>De waarde moet twee aanhalingstekens hebben (een aanhalingsteken aan het begin en een aanhalingsteken aan het einde). Als een waarde één aanhalingsteken heeft, voeg er dan nog een toe of verwijder het aanhalingsteken.</p></li><li><p>De waarde moet geëscaped worden door deze tussen een extra paar aanhalingstekens of backslashes (▶) te zetten.</p></li><li><p>Waarden die uit meer dan één woord bestaan - waarbij één of twee woorden tussen aanhalingstekens staan - moeten volledig tussen aanhalingstekens staan.</p></li><p>Voorbeelden:</p><p>In de onderstaande gegevens bestaat de waarde <i>Definitely &quot;real&quot; cash</i> uit één woord tussen aanhalingstekens:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123,Zeker &quot;echt&quot; geld,1000000</code></p><p>Je moet het veranderen zodat het er zo uitziet:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123,&quot;Absoluut &quot;echt&quot; geld&quot;,1000000</code></p><p>Of zo:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123,&quot;Absoluut contant&quot;,1000000</code></p><p>In de onderstaande gegevens staat de waarde <i>&quot;contant geld&quot;</i> tussen aanhalingstekens:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123,&quot;contant&quot;,1000000</code></p><p>Je moet het veranderen zodat het er zo uitziet:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123,&quot;&quot;contant&quot;&quot;,1000000</code></p><p>Of zo:</p><p><code>rekeningId,rekeningBeschrijving,bedrag</code></p><p><code>123, 10000, 1000000</code></p></ul></li>
+        </ul>
+        <h2>Vereisten voor Excel-bestanden</h2>
+        <p>Het importbestand moet aan deze voorwaarden voldoen:</p>
+        <ul>
+            <li>
+                <p>Het bestandsformaat moet <b>.xlsx</b>zijn.</p>
+            </li>
+            <li>
+                <p>Het bestand mag geen samengevoegde cellen bevatten.</p>
+            </li>
+            <li>
+                <p>De gegevens moeten op het eerste blad staan, omdat alleen het eerste blad wordt meegenomen in het importeren.</p>
+            </li>
+            <li>
+                <p>De gegevens moeten beginnen op de tweede rij, omdat de eerste rij (de header-rij) wordt uitgesloten van de import.</p>
+            </li>
+            <li>
+                <p>Ten minste één kolom moet gegevens voorbij rij één hebben.</p>
+            </li>
+            <li>
+                <p>Er mogen geen lege rijen zijn.</p>
+            </li>
+        </ul>
+        <h2><a name="Mandator"></a>Verplichte velden voor het importeren van transacties</h2>
+        <p>Als je transacties wilt importeren om <a href="../Accounts-and-Analysis/Sample-selection.htm">ze te bekijken</a> of om <a href="../Accounts-and-Analysis/Sample-selection.htm">een voorbeeldselectie</a>uit te voeren, moet je ervoor zorgen dat de volgende velden in de importgegevens zijn opgenomen:</p>
+        <ul>
+            <li><b>Boekingsdatum</b></li>
+            <li><b>Rekeningnummer</b></li>
+            <li><b>Bedrag</b></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Er wordt een nieuwe afspraak gemaakt op basis van een sjabloon. Sjablonen worden gemaakt en beheerd door auteurs.</p>
+        <p>Firma-auteurs zijn medewerkers met de <b>Settings Admin-beveiligingsrol</b> of een vergelijkbare rol die hen in staat stelt om de standaardcontent in de Cloud App die hun bedrijf gebruikt aan te passen aan specifieke bedrijfsbehoeften. Voeg bijvoorbeeld het bedrijfslogo toe. <MadCap:conditionalText MadCap:conditions="General.Online">Zie <a href="../../Setup/Security/Built-in-roles.htm">Ingebouwde rollen</a> en <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Beveiligingsrollen toewijzen</a>voor meer informatie over rollen.</MadCap:conditionalText></p>
+        <p>Bedrijfsaanpassingen omvatten het toevoegen van inhoud, het instellen van een bedrijfslogo en het wijzigen of onderdrukken van de standaard inhoud.</p>
+        <p MadCap:conditions="General.PDF,PrintGuides.Teacher" class="instNotes"><b>Opmerking voor de docent:</b> Zorg ervoor dat alle leerlingen de <b>beheerdersrol voor de instellingen</b> hebben, zodat ze toegang hebben tot de sjabloonmodus van de onderneming.</p>
+        <h2 MadCap:conditions="General.Online"><a name="Concepts"></a>Concepten en workflow</h2>
+        <p>Bekijk voordat u begint de concepten en workflow van sjabloonbeheer.</p>
+        <ul>
+            <li>
+                <p><b>Productsjabloon</b> - de sjabloon die de standaardinhoud voor je product bevat.</p>
+            </li>
+            <li>
+                <p><b>Draft</b> - de sjabloon die je op dit moment aan het aanpassen bent voor je bedrijf (de sjabloon voor werk in uitvoering).</p>
+            </li>
+            <li>
+                <p><b>Gearchiveerd sjabloon</b> - een gearchiveerd sjabloon wordt automatisch aangemaakt wanneer een concept wordt gepubliceerd. Om alle eerder gebruikte sjablonen te bewaren, kunnen gearchiveerde sjablonen niet worden verwijderd.</p>
+            </li>
+            <li>
+                <p><b>Firmasjabloon</b> - de meest recent gepubliceerde sjabloon (de sjabloon die op dit moment door jouw bedrijf wordt gebruikt om opdrachten te maken).</p>
+            </li>
+        </ul>
+        <p>De volgende afbeelding toont de algemene workflow voor het beheren van het firmasjabloon.</p>
+        <p><img src="../Images/firm authoring-wf.PNG" /></p>
+        <p>Als je geen vast sjabloon hebt, moet je <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create" MadCap:conditions="General.Online">een concept maken</a><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Create5">een concept maken</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Create5">een ontwerp maken</a></MadCap:conditionalText>maken, uw bedrijf aanpassen, herzien en <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Publish">publiceren.</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,General.PDF"><a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Publish">publiceren.</a></MadCap:conditionalText><a href="../../Engagements/Template-and-Authoring/Publish-a-draft.htm#Publish" MadCap:conditions="General.Online">publiceren.</a></p>
+        <p>Als je al een stevig sjabloon hebt, kun je dat doen:</p>
+        <ul>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Edit-the-firm-template.htm#Edit">bewerk de sjabloon,</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">de sjabloon bewerken.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> Zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Edit">De bedrijfssjabloon bewerken</a>voor meer informatie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Edit">.</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT">de sjabloon bewerken.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> Zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Edit">De bedrijfssjabloon bewerken</a>voor meer informatie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Edit">.</a></MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/Template-and-Authoring/Revert-to-a-previous-template-version.htm#Revert"><MadCap:conditionalText MadCap:conditions="General.Online">terugkeren naar de productsjabloon</MadCap:conditionalText></a> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">terugkeren naar de bedrijfssjabloon</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">Terugkeren naar de standaardsjabloon</MadCap:conditionalText> in plaats van de bedrijfssjabloon<MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">..</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">, of</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint,PrintGuides.Teacher,General.PDF"> Voor meer informatie, zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Use">Terugkeren naar de productsjabloon</a>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT,PrintGuides.Teacher">Zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Use">De bedrijfssjabloon bewerken</a>voor meer informatie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Use">.</a></MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Update-the-firm-template.htm#Update">update</a></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.RCT">update</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">update</MadCap:conditionalText> your template with the latest changes from the product template.<MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF"> Zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-RCT.htm#Update">De bedrijfssjabloon bijwerken</a>voor meer informatie.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Zie <a href="../../Print Only Topics/Firm Author Training/Manage-the-firm-template-OnPoint.htm#Update">De bedrijfssjabloon bijwerken</a>voor meer informatie.</MadCap:conditionalText></p>
+            </li>
+        </ul>
+        <p>Als je niet tevreden bent met het ontwerp waar je aan werkt, kun je het ontwerp verwijderen:</p>
+        <ul>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Delete-a-draft.htm#Delete">een nieuwe beginnen</a>, of</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">een nieuwe beginnen.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Zie <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Delete">Een klad maken</a>voor meer informatie.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">een nieuwe beginnen.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">Zie <a href="../../Engagements/Template-and-Authoring/Create-a-draft.htm#Create">Cliententiteiten maken</a>voor meer informatie.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><MadCap:conditionalText MadCap:conditions="General.Online">De productsjabloon gebruiken</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint">De productsjabloon gebruiken</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF,PrintGuides.OnPoint,PrintGuides.Teacher">Zie De productsjabloon gebruiken voor meer informatie.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,General.PDF">de productsjabloon gebruiken. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT,PrintGuides.Teacher,General.PDF">Zie De bedrijfssjabloon bijwerkenvoor meer informatie.</MadCap:conditionalText></p>
+            </li>
+        </ul>
+    </body>
+</html>

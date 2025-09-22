@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Add"></a>Dimensies toevoegen</h1>
+        <p>Een dimensie is een groepseigenschap. Een account kan worden toegewezen aan één dimensie binnen een specifieke groep voor verdere sortering en categorisatie.</p>
+        <p>U kunt een of meer dimensiecategorieën maken en vervolgens de categorieën vullen met dimensies. Je kunt bijvoorbeeld een dimensiecategorie genaamd Locatie maken en vervolgens een dimensie maken voor elke locatie die je klant heeft. Zodra u dimensies hebt gemaakt, kunt u ze toewijzen aan financiële groepen.</p>
+        <p>Merk op dat bedrijfsauteurs en eindgebruikers ook de mogelijkheid hebben om dimensies te creëren en toe te wijzen aan financiële groepen, met de volgende beperkingen:</p>
+        <p><b>Primaire door de auteur gecreëerde dimensies en categorieën:</b></p>
+        <ul>
+            <li>Firmaschrijvers en eindgebruikers kunnen:<ul><li><p>Toewijzen aan financiële groepen</p></li><li><p>Naam wijzigen</p></li><li><p>Nabestellen</p></li><li><p>Nieuwe dimensies toevoegen aan bestaande categorieën. Firma-auteurs hebben volledige rechten voor de dimensies die ze creëren.</p></li></ul></li>
+        </ul>
+        <p><b>Vaste door de auteur gemaakte dimensies en categorieën:</b></p>
+        <ul>
+            <li>End users can:<ul><li><p>Toewijzen aan financiële groepen</p></li><li><p>Naam wijzigen</p></li><li><p>Nabestellen</p></li><li><p>Nieuwe dimensies toevoegen aan bestaande categorieën. Firma-auteurs hebben volledige rechten voor de dimensies die ze creëren.</p></li></ul></li>
+        </ul><MadCap:snippetBlock src="../Resources/Snippets/to-access-the-product-settings.flsnp" /><p class="note" MadCap:conditions="General.SE-Authoring"><b>Let op:</b> Zorg ervoor dat afmetingen zijn ingeschakeld in het bestand product.json, anders is het tabblad <b>Afmetingen</b> niet beschikbaar. Om de functie Balansdimensies in te schakelen, stelt u beide <code><b>afmetingen</b></code> en <code><b>proefbalansDimensies</b></code> op waar. Zie <a href="Enable-or-disable-features-in-your-product.htm">Functies in uw product in- of uitschakelen</a>voor meer informatie <a href="Enable-or-disable-features-in-your-product.htm">.</a></p>
+        <p style="font-weight: bold;">Een set afmetingen toevoegen:</p>
+        <ol>
+            <li>
+                <p>Ga naar <b>Functies | Fasen.</b></p>
+            </li>
+            <li>
+                <p>Selecteer <b>+ Categorie</b>en voeg een naam toe voor de nieuwe dimensiecategorie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>+ Dimensie</b> om een dimensie toe te voegen voor de nieuwe categorie.</p>
+            </li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Voer een naam voor het nieuwe veld in.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Nummers weergeven</b> om unieke dimensienummers te zien die automatisch worden gegenereerd voor elke dimensie. In <b>Number</b>kunnen gebruikers de unieke ID voor elke dimensie wijzigen, in plaats van de automatisch gegenereerde ID te gebruiken. Gebruikers kunnen bijvoorbeeld de ID willen wijzigen in 100/101/200/201/ of in een andere alfanumerieke combinatie.</p>
+                <p><img src="../Resources/Images/Add dimensions product settings view numbers.png" /></p>
+            </li>
+        </ol>
+        <p>Deze dimensienummers kunnen gebruikt worden om dimensies aan transacties te koppelen.</p>
+        <p>U kunt dimensies slepen en neerzetten om ze binnen een categorie te herschikken en de pijlen omhoog en omlaag gebruiken om categorieën uit te vouwen en in te klappen. Je kunt ook <b>Dimensie verwijderen</b> () selecteren om een dimensie te verwijderen.</p>
+        <p>U kunt Toevoegen () selecteren om een dimensie op het tweede niveau toe te voegen aan uw primaire dimensie. Je kunt ook dimensies van het derde niveau toevoegen aan dimensies van het tweede niveau.</p>
+        <p>Je kunt elke dimensie zonder kinderen instellen als standaarddimensie voor de categorie. Accounts in groepen met deze categorie worden automatisch toegewezen aan deze dimensie. Voor dimensiecategorieën zonder standaard dimensieset worden accounts niet automatisch toegewezen aan een dimensie.</p>
+        <p>Wanneer u uw dimensies hebt gemaakt, kunt u de dimensiecategorieën toewijzen aan financiële groepen. In OnPoint Audit kunt u nu meerdere dimensiecategorieën toewijzen aan één financiële groep.</p>
+        <p><b>Om een dimensiecategorie toe te wijzen aan een financiële groep:</b></p>
+        <ol>
+            <li>
+                <p>Ga naar de categorie in de productinstellingen.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Meer acties</b> (<img src="../Resources/Images/kebab menu.png" />) | <b>Groepen toewijzen</b>.</p>
+            </li>
+            <li>
+                <p>Als uw product meerdere financiële groeperingsstructuren heeft, selecteert u de gewenste groeperingsstructuur in het vervolgkeuzemenu.</p>
+            </li>
+            <li>
+                <p>Selecteer alle financiële groepen die van toepassing zijn.</p>
+                <p>Je kunt financiële groepen uitvouwen en samenvouwen om subgroepen te bekijken en de zoekbalk gebruiken om de juiste groepen te vinden.</p>
+                <p>Merk op dat je ook dimensiecategorieën kunt toewijzen aan een groep vanuit het dialoogvenster Groepseigenschappen. <img src="../Resources/images/Add dimensions Engagement Settings.png" /></p>
+            </li>
+        </ol>
+        <p> </p>
+    </body>
+</html>

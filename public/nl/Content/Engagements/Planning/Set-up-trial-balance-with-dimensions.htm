@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Een proefbalans met afmetingen instellen en importeren</h1>
+        <p class="note inline"><b>Let op:</b> Deze functie is mogelijk niet beschikbaar in uw product.</p>
+        <p>Je kunt dimensies toewijzen aan accounts op basis van spreadsheetkolommen in een CSV- of Excel-bestand. Dit biedt een gestroomlijnde aanpak voor het toewijzen van meerdere dimensies als onderdeel van een Excel/CSV importstroom, in plaats van ze handmatig te moeten toewijzen.</p>
+        <p><b>Dimensies toewijzen aan accounts:</b></p>
+        <ol>
+            <li>
+                <p>In de proefbalansspreadsheet:</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p>Zorg ervoor dat er een kolom is voor het nummer van de financiële groep voor elke rekening. De financiële groep moet overeenkomen met een van de financiële groepen in de financiële groeperingsstructuur die is gedefinieerd voor de productsjabloon.</p>
+                <p><img src="../../Resources/Images/Set up trial balance with spreadsheet.png" /></p>
+            </li>
+            <li>
+                <p>Als er een enkele dimensiecategorie is en meerdere dimensies, maak dan een enkele kolom voor de dimensiecategorie waarvan de waarden de dimensienummers weergeven. In ons voorbeeld vertegenwoordigt de kolom Locatie de dimensiecategorie Locatie. De waarden zijn de unieke ID-nummers van de dimensie die ook worden gedefinieerd in de instellingen van de opdracht onder <b>Functies | Dimensies</b>.</p>
+                <p><img src="../../Resources/Images/Set up trial balance with spreadsheet2.png" /></p>
+            </li>
+            <li>
+                <p>Als er meerdere dimensiecategorieën zijn, maak dan een kolom voor elke dimensiecategorie. Het wordt aanbevolen dat de kolomkoppen overeenkomen met de categorienaam van de dimensie. De kop van de kolom moet de dimensiecategorie zijn en de i-waarden moeten de unieke dimensie-ID&apos;s in die categorie zijn.</p>
+                <p><img src="../../Resources/Images/Set up trial balance with spreadsheet3.png" /></p>
+            </li>
+        </ul>
+        <ol start="2">
+            <li>
+                <p>Voer een engagement in en stel de dimensiestructuur in het <b>dialoogvenster Engagementinstellingen</b>in, waarbij er minstens 1 dimensiecategorie is met meerdere gerelateerde dimensies.</p>
+            </li>
+            <li>
+                <p>Selecteer het Informatiepictogram () in het bovenste menu en kies vervolgens <b>Instellingen.</b> Het dialoogvenster Checklistinstellingen verschijnt.</p>
+            </li>
+            <li>
+                <p>Ga naar <b>Functies | Fasen.</b></p>
+            </li>
+            <li>
+                <p>Selecteer <b>+ Categorie</b>en voeg een naam toe voor de nieuwe dimensiecategorie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>+ Dimensie</b> om een dimensie toe te voegen voor de nieuwe categorie.</p>
+            </li>
+            <li>
+                <p>Voer een naam voor het nieuwe veld in.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Nummers weergeven</b> om unieke dimensienummers te zien die automatisch worden gegenereerd voor elke dimensie. In <b>Number</b>kunnen gebruikers de unieke ID voor elke dimensie wijzigen, in plaats van de automatisch gegenereerde ID te gebruiken. Gebruikers kunnen bijvoorbeeld de ID willen wijzigen in 100/10/200/23/ of in een andere combinatie van letters en cijfers.</p>
+                <p><img src="../../Resources/Images/Set up trial balance with spreadsheet Engagement Settings.png" /></p>
+            </li>
+        </ol>
+        <ol start="10">
+            <li>
+                <p>Nadat dimensiecategorieën en hun gerelateerde dimensies zijn gemaakt, wijst u elke dimensiecategorie toe aan de respectievelijke financiële groepen in de dimensie-instellingen binnen Engagement Settings:</p>
+            </li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                <p>Selecteer <b>Meer acties (<img src="../../Resources/Images/kebab menu.png" style="font-weight: bold;" />) | Groepen toewijzen</b>.</p>
+                <p><img src="../../Resources/Images/set up trial balance with spreadsheet Engagement Settings2.png" /></p>
+            </li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;" MadCap:continue="true">
+            <li>
+                <p>Als uw product meerdere financiële groeperingsstructuren heeft, selecteert u de gewenste groeperingsstructuur in het vervolgkeuzemenu.</p>
+            </li>
+            <li>
+                <p>Selecteer alle financiële groepen die van toepassing zijn.</p>
+            </li>
+            <li>
+                <p>Je kunt financiële groepen uitvouwen en samenvouwen om subgroepen te bekijken en de zoekbalk gebruiken om de juiste groepen te vinden.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/Set up trial balance with spreadsheet4.png" /></p>
+        <p class="note inline"><b>Let op:</b> De exacte maatnummers vermeld in <b>Aantal</b> moeten overeenkomen met de maatnummers die al zijn gedefinieerd in de proefbalansgegevens.</p>
+        <p><img src="../../Resources/Images/Set up trial balance with spreadsheet5.png" /></p>
+        <p><b>Let op:</b> Je kunt een account maar aan één dimensie binnen een categorie toewijzen. Om een account toe te wijzen aan meerdere dimensies, moet elke dimensie onder een andere categorie vallen.</p>
+        <h2>Saldibalans importeren</h2>
+        <ol>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De gegevenspagina wordt geopend op het tabblad <b>Datasets</b> .</p>
+                <ul>
+                    <li>
+                        <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                    </li>
+                    <li>
+                        <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteert u de entiteit waarvoor u gegevens wilt importeren in de lijst.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="indent">
+                    <p>ONDER DATA FILE UPLOAD bladert u door het CSV- of Excel-bestand of sleept u het naar het gebied voor het uploaden van bestanden. Als het bestand al is geüpload naar het tabblad <b>Documenten</b> , selecteer dan <b>Importeren uit documenten</b>en selecteer het uit de lijst met beschikbare documenten in de opdracht.</p>
+                </p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster Nieuwe dataset configureren <b>Proefbalans</b> in de vervolgkeuzelijst <b>Type dataset</b> .</p>
+            </li>
+            <li>
+                <p>Als planningsbalansen zijn ingeschakeld in uw product, selecteert u of u de Definitieve proefbalans of een Planningstestbalans.</p>
+            </li>
+            <li>
+                <p>Controleer de automatisch geselecteerde kopregel om er zeker van te zijn dat de juiste kop is geselecteerd. Als je de koprij handmatig wilt selecteren, selecteer je <b>Koprij aanpassen</b> en selecteer je de juiste rij.</p>
+            </li>
+            <li>
+                <p>Als je een CSV-bestand importeert en het scheidingsteken wilt wijzigen in iets anders dan de standaard komma (,), selecteer dan <b>Aanpassen kopregel</b> en selecteer het juiste scheidingsteken.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Let op:</b> Zowel de automatische kopdetectie als de handmatige kopselectie houden alleen rekening met de eerste 30 rijen van het geïmporteerde bestand. Rijen voorbij de eerste 30 rijen kunnen niet worden geselecteerd als koptekst.</p>
+        <p><img src="../../Resources/Images/Set up trial balance Configure new dataset.png" /></p>
+        <ol start="8">
+            <li>
+                <p>Selecteer <b>Uploaden</b>.</p>
+            </li>
+            <li>
+                <p>Klik op het tabblad Datasets op <b>Configureren</b> om kolommen in de geïmporteerde gegevens toe te wijzen aan Caseware velden.</p>
+            </li>
+            <li>
+                <p>Wijs de kolom met het nummer van de financiële groep toe aan het veld <b>Nummer financiële groep</b> . <img src="../../Resources/Images/Set up trial balance Assign Fields for Final Balance.png" /></p>
+            </li>
+            <li>
+                <p>Wijs op de pagina <b>Velden toewijzen</b> de kolom met het afmetingsnummer toe aan <b>Dimensie</b>. U wordt gevraagd om de dimensiecategorie te selecteren.</p>
+                <p>In het voorbeeld dat we hebben gebruikt, wordt de kolom Locatie in het CSV-bestand met de proefbalans toegewezen aan het veld <b>Dimensie</b> .</p>
+                <p>Vervolgens wordt u gevraagd om de dimensiecategorie te selecteren. In dit voorbeeld is dat Locatie. <img src="../../Resources/Images/Set up trial balance Assign Fields for Final Balance2.png" /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

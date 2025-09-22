@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Nicht ausgeglichene Einträge</h1>
+        <p>Die Analyse Nicht ausgeglichene Einträge generiert eine Liste von Journaleinträgen, bei denen der Gesamtbetrag für jeden Journaleintrag nicht gleich null ist.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Aufdeckung von möglichen Versuchen zur Manipulation von Jahresabschlüssen</p>
+            </li>
+            <li>
+                <p>Geringere Genauigkeit und Präzision der Finanzberichterstattung</p>
+            </li>
+            <li>
+                <p>Systemische Probleme bei der Verarbeitung von Transaktionen in einer Abteilung</p>
+            </li>
+            <li>
+                <p>Systemeinstellungen, die nicht richtig konfiguriert sind</p>
+            </li>
+            <li>
+                <p>Fehlschlagen des Datenvalidierungsprozesses</p>
+            </li>
+            <li>
+                <p>Unzureichende interne Kontrollen</p>
+            </li>
+            <li>
+                <p>Schwache Überwachung und Aufdeckung von Aktivitäten</p>
+            </li>
+            <li>
+                <p>Mangelhafte Ausbildung</p>
+            </li>
+            <li>
+                <p>Konten, die nicht rechtzeitig abgestimmt worden sind oder nicht abgestimmte Differenzen enthalten</p>
+            </li>
+            <li>
+                <p>Einseitige Transaktionen</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder werden für diese Analyse verwendet:</p>
+        <ul>
+            <li>
+                <p>Ein Feld, das eine eindeutige Transaktions-ID enthält, wie z. B. das Feld <b>Eintrags-ID</b> für den Hauptbuch-Datensatz. Dieses Feld wird verwendet, um den Saldo der Transaktion zu ermitteln und zu beurteilen, ob er ausgeglichen ist oder nicht. Bei doppelten Buchungen müssen Sie das Feld auswählen, das als eindeutige Kennzeichnung verwendet werden soll. Dies ist der Parameter <b>Gruppierungsfeld</b>.</p>
+            </li>
+            <li>
+                <p>Das Feld, das den Betrag für die Transaktionszeile enthält. Beachten Sie, dass positive Werte als Soll-Transaktionen und negative Werte als Haben-Transaktionen betrachtet werden.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Es gibt einen Parameter, der für die Durchführung dieses Tests festgelegt werden muss:</p>
+        <p><b>Gruppierungsfeld</b> - Wählen Sie das Feld, das als eindeutige Kennzeichnung für doppelte Buchungen verwendet werden soll, z. B. das Feld <b>Eintrags-ID</b> oder <b>Eintragsnummer</b>. Standardmäßig wird für diesen Parameter das Feld <b>Eintragsnummer</b> verwendet.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analyse Gerundete Beträge ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Fassen Sie den Betrag für jeden eindeutigen Transaktionskennzeichnung zusammen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie alle Positionen, bei denen die zusammengefasste Summe ungleich Null ist.</p>
+            </li>
+            <li>
+                <p>Verbinden Sie die Beträge, die nicht Null sind, mit der Originaldatei unter Verwendung des eindeutigen Bezeichners für die Transaktion und exportieren Sie sie als Testergebnis.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><b>Jour</b></p>
+        <p>D Un chiffre pour les jours inférieurs à 10 (par exemple, 2 pour le 2e jour du mois)</p>
+        <p>jj Deux chiffres (par exemple, 02 pour le 2e jour du mois)</p>
+        <p>jjj Jour de l&apos;année (par exemple, 365 pour le 31 décembre)</p>
+        <p>DDDD Jour de l&apos;année à trois chiffres (par exemple, 002 pour le 2 janvier)</p>
+        <p><b>Mois</b></p>
+        <p>M Un chiffre pour les mois inférieurs à 10 (par exemple, 4 pour avril)</p>
+        <p>mm Deux chiffres (par exemple, 04 pour avril)</p>
+        <p>MMM Abréviation de trois lettres (par exemple, Apr pour April)</p>
+        <p>mmmm Nom complet du mois (par exemple, avril)</p>
+        <p style="font-weight: bold;">Année</p>
+        <p>aa Deux chiffres (par exemple, 19 pour 2019)</p>
+        <p>aaaa Quatre chiffres (par exemple, 2019)</p>
+        <p><b>L&apos;heure</b></p>
+        <p>H HH: Heures en 24 heures (par exemple, 0 pour minuit, 23 pour 23 heures)</p>
+        <p>h hh: Heures en 12 heures utilisées avec AM/PM (par exemple, 1 pour 1 AM, 12 pour midi)</p>
+        <p>k kk : Heures en 24 heures de 1 à 24 (par exemple, 1 pour 1 heure du matin, 24 pour minuit)</p>
+        <p>a A : Post ou ante meridiem (par exemple, am pour le matin, pm pour l&apos;après-midi)</p>
+        <p>m mm: Minutes (par exemple, 0 pour le début de l&apos;heure, 59 pour la dernière minute de l&apos;heure)</p>
+        <p>s ss: Secondes (par exemple, 0 pour le début de la minute, 59 pour la dernière seconde de la minute)</p>
+        <p>S SS SSS ... SSSSSSSSS : Fractions de secondes (par exemple, 0 pour aucune fraction de seconde, 999999999 pour la dernière fraction de seconde)</p>
+        <p>Z ZZ: Décalage par rapport à l&apos;UTC en +-HH:mm, +-HHmm, ou Z (par exemple, +12:00 pour 12 heures d&apos;avance sur l&apos;UTC)</p>
+        <h4>Exemple de transaction</h4>
+        <p>Disons que nous avons une transaction qui s&apos;est produite le 2 avril 2019, à 13:30:45 PM avec 123 millisecondes, et que le décalage UTC est +02:00. Voici ce que cela donnerait dans différents formats :</p>
+        <ul>
+            <li>
+                <p>Date : 2/4/19 ou 02/04/2019</p>
+            </li>
+            <li>
+                <p>Heure: 13:30:45.123 +02:00</p>
+            </li>
+        </ul>
+    </body>
+</html>

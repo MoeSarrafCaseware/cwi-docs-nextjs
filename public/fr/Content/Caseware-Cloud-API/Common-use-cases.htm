@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Cas d&apos;utilisation courants</h1>
+        <p>Dans l&apos;API Caseware Cloud, de nombreux cas d&apos;utilisation courants impliquent l&apos;utilisation du paramètre de requête de <code>recherche</code> dans les requêtes GET pour filtrer les objets que vous souhaitez récupérer. Voir les exemples de requêtes couramment utilisées ci-dessous. Pour la syntaxe des requêtes, voir <a href="query-data-using-get-requests.htm">Syntaxe des requêtes GET</a>.</p>
+        <h2>Filtrer par GUID</h2>
+        <p>Le<code>CWGuid</code> est un identifiant unique au niveau mondial qui permet d&apos;identifier les objets dans les différentes unités commerciales. Il est disponible en tant que paramètre de chemin pour les objets récupérables dans plusieurs points de terminaison de la V2 de l&apos;API Cloud. Vous pouvez récupérer le <code>CWGuid</code> après avoir créé un objet, tel qu&apos;une entité ou une personne, ou en récupérant une liste d&apos;objets. Vous pouvez également extraire le <code>CWGuid</code> des résultats de la recherche en utilisant un autre champ. Par exemple, si vous recherchez des entités, effectuez une recherche par nom ou par numéro.</p>
+        <h3>Récupérer le CWGuid dans les résultats de la recherche</h3>
+        <p>Si vous ne connaissez pas le <code>CWGuid</code> de l&apos;objet que vous souhaitez récupérer, utilisez une demande de liste filtrée GET pour effectuer une recherche sur un champ différent. Dans cet exemple, le paramètre de <code>recherche</code> est utilisé pour rechercher un objet <code>Entité</code> dont le <code>nom</code> est &quot;Canada <code>Tiny Homes Ltd&quot;</code></p>
+        <p>Avant l&apos;encodage de l&apos;URL, l&apos;exemple ci-dessous se présente comme suit :</p><div><pre><code>https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/entities?search=Name = &apos;Canada Tiny Homes Ltd.&apos;</code></pre></div><p><b>Dont vous avez besoin pour cet exemple : GET /api/v2/entités</b></p>
+        <p style="font-weight: bold;">Exemple de requête curl</p>
+        <p><div><pre><code>
+                curl --location &apos;https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/entities?search=Name = &apos;Canada Tiny Homes Ltd.&apos;=null&apos; \ --header &apos;Authorization : Bearer ZjlhMDUxMTUtZTU1Ny00MWU5LWY1MzQtZDNkYWJlOTU3OTljOjZlYzExMTZlLTdlOWEtOTQ5Mi01ODFkLWI3ZWJmYWQ3ZDU2YjpiYTIxYWRhOC05NzdlLTRkZjgtYWY0Ny03ZTQ3M2IxNDMzNzg&apos;</code></pre></div></p>
+        <h3>Récupérer un objet à l&apos;aide de son CWGuid</h3>
+        <p>Lorsque vous connaissez le <code>CWGuid</code> de l&apos;objet que vous souhaitez récupérer, il existe des points de terminaison pour lesquels <code>cwGuid</code> est un paramètre de chemin.</p>
+        <p>Avant l&apos;encodage de l&apos;URL, l&apos;exemple ci-dessous se présente comme suit :</p>
+        <p><div><pre xml:space="preserve"><code>https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/entities/208e79df-851f-4be7-93f6-25d54fccb6b2</code></pre></div></p>
+        <p><b>Dont vous avez besoin pour cet exemple : GET /api/v2/entities/{entityId}</b></p>
+        <p><b>Exemple de requête curl</b></p><div><pre><code>curl --location &apos;https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/{version-number}/entities/208e79df-851f-4be7-93f6-25d54fccb6b2 &apos; \ --header &apos;Authorization : Bearer NTVjY2EyNjEtYTJhZi05NzNhLWRiMWMtZDFiZWVkM2M0YmJhOmNlMTYxMDE1LWJlMGQtN2I2ZS0yYzFlLTQyNDA0YjNkMjJiNTpiYTIxYWRhOC05NzdlLTRkZjgtYWY0Ny03ZTQ3M2IxNDMzNzg&apos;</code></pre></div><h2><a name="Filter-entities-by-entityNo"></a>Filtrer toutes les entités en utilisant EntityNo</h2>
+        <p><b>Dont vous avez besoin pour cet exemple :</b> <b><code>GET /api/{numéro de version}/entités</code></b></p>
+        <p>Les valeurs spécifiées pour <code>EntityNo</code> doivent comporter 10 caractères. Si un <code>EntityNo n</code> &apos;a pas 10 caractères, vous devez l&apos;aligner à droite et le remplir d&apos;espaces vides. Par exemple, si l&apos;EntitéNo est définie sur <code>A2</code> , votre requête doit être <code>EntityNo=&apos; A2&apos;.</code> Des modifications de la requête API sont en cours afin que les développeurs n&apos;aient plus besoin de remplir les données avec des espaces vides. Cette documentation sera mise à jour dès qu&apos;elle sera disponible.</p>
+        <p class="tip"><b>Conseil :</b> La plupart des champs qui peuvent être utilisés pour formuler des requêtes (spécifiés comme valeur du paramètre de requête de recherche) sont décrits dans les exemples de réponses pour l&apos;objet que vous interrogez. Par exemple, si vous interrogez des entités, les champs qui peuvent être interrogés sont énumérés dans l&apos;exemple de réponse de code 200 :</p>
+        <p><div><code>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk/caseware-cloud#tag/Entities</code></div></p>
+        <p><img src="../Resources/Images/FilteredListEntities.png" /></p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre xml:space="preserve"><code>curl -X &apos;GET&apos; \
+                &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/entities?search=EntityNo%3D%271234567890%27&amp;page=1&amp;pageSize=50&apos; \
+                -H &apos;accept: application/json&apos; \
+                -H &apos;Authorization: Bearer YmFjMGU4MDgtZmFjMC1kMmQzLTZkNjEtZGRmNjdiNWQzMTY5OjczOGYyZGU1LTc2YTctMzRjNC00NzhkLWQ3NGQ1ZTY5MTRhZDo1&apos;</code></pre></div></p>
+        <h2><a name="Filter-entities-by-entity- metadata"></a>Filtre sur les métadonnées de l&apos;entité</h2>
+        <p><b>Dont vous avez besoin pour cet exemple : <code>GET /api/{numéro de version}/entités</code></b></p>
+        <p>Vous pouvez définir le paramètre de <code style="font-weight: bold;">recherche</code> pour filtrer les entités en fonction de leurs métadonnées personnalisées. Le format de la requête de recherche de métadonnées d&apos;entité change en fonction de l&apos;endroit où elle a été créée :</p>
+        <h3>Propriétés d&apos;entités personnalisées créées dans les paramètres de l&apos;entreprise</h3>
+        <p>Rappelons que la syntaxe des requêtes utilisant le paramètre search query est la suivante :</p>
+        <p><div><pre><code>&lt;Nom du champ&gt;&lt;opérateur&gt;&lt;valeur du champ&gt;</code></pre></div></p>
+        <p>Remplacer <code>&lt;nom du champ&gt;</code> par <code>métadonnées[{nom}]</code></p>
+        <ul>
+            <li>Où <code>{Nom}</code> est le GUID qui est généré par Caseware Cloud lorsque vous créez une propriété d&apos;entité personnalisée dans <b>Paramètres | Personnalisation | Propriétés d&apos;entités personnalisées</b>. Pour plus d&apos;informations, voir <a href="#Retrieve">Récupérer le GUID d&apos;une propriété d&apos;entité personnalisée créée dans les paramètres de l&apos;entreprise</a> .</li>
+        </ul>
+        <h3><a name="Retrieve"></a>Récupérer le GUID d&apos;une propriété d&apos;entité personnalisée créée dans les paramètres de l&apos;entreprise</h3>
+        <ol>
+            <li>Connectez-vous à votre entreprise Caseware Cloud.</li>
+            <li>Affichez les outils de développement dans votre navigateur. Par exemple, dans Google Chrome, tapez <b>Ctrl + Shift + C.</b></li>
+            <li>From the Cloud menu (<img src="../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Customization | Custom Entity Properties</b>. Voir <a href="../Explore/Interface/Firm-Settings/Customization.htm#Custom">Propriétés du groupe</a> pour plus d&apos;informations.</li>
+            <li>Sélectionnez un champ d&apos;entité personnalisé existant ou ajoutez-en un.</li>
+            <li>Sélectionnez <b>Réseau</b> , puis le filtre <b>Fetch/XHR</b> .</li>
+            <li>Localisez l&apos;appel API <code>GetEntityMetadataGroupAndDisplay</code> et sélectionnez le filtre <b>Response</b> pour afficher le message de réponse en JSON.</li>
+            <li>Localisez l&apos;attribut <code>Name</code> . Sa valeur est un GUID. Dans l&apos;exemple de format ci-dessus, remplacez <code>Nom</code> par ce GUID. Voir l&apos;exemple ci-dessous.</li>
+        </ol>
+        <p><img src="../Resources/Images/MetadataFirmSettingsExample.png" alt="Localisation de l&apos;attribut Name pour une propriété d&apos;entité personnalisée afin d&apos;obtenir son GUID" /></p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre><code>curl --request GET \ --url &apos;https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/{version-number}/entities?search=metadata[eb367d1d-1634-416b-bcba-b748ec8146e4]=&apos;\&apos;&apos;2024-02-08&apos;\&apos;&apos;&apos; \N- --header &apos;Authorization : Bearer OTY5OGVkMmUtZGY1NC0xYTE5LWU0YjYtNzkyNzVlY2I3Y2I0OmY0YWY5ZTZmLTA3YzQtZWU3Mi05MjczLWE1M2M5Y2Q3NTkwYjpmMWVlODEwMy1mMGYwLTRkNDItYmZmZC0zMWVjYTNkMDkyNTA&apos; </code></pre></div></p>
+        <h3><a name="ObtainContext"></a>Obtenir la chaîne de contexte pour mettre à jour les métadonnées de l&apos;entité</h3>
+        <p>La méthode suivante s&apos;applique lorsqu&apos;un champ d&apos;entité personnalisé a été créé dans Caseware Cloud :</p>
+        <ol>
+            <li>Connectez-vous à votre entreprise Caseware Cloud.</li>
+            <li>From the Cloud menu (<img src="../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Customization | Custom Entity Properties</b>. Voir <a href="../Explore/Interface/Firm-Settings/Customization.htm#Custom">Propriétés du groupe</a> pour plus d&apos;informations.</li>
+            <li>Sélectionnez un champ d&apos;entité personnalisé existant ou ajoutez-en un.</li>
+            <li>Sélectionnez <b>Réseau</b> , puis le filtre <b>Fetch/XHR</b> .</li>
+            <li>Localisez l&apos;appel API <code>GetEntityMetadataGroupAndDisplay</code> et sélectionnez le filtre <b>Response</b> pour afficher le message de réponse en JSON.</li>
+            <li>Identifier la valeur de <code>Contexte</code> et l&apos;utiliser dans la requête <code>PUT /entities/{entityId}/metadata/{context}</code> .</li>
+        </ol>
+        <p><b>Exemple de réponse pour GetEntityMetadataGroupAndDisplay</b></p>
+        <p><div><pre><code>j {
+						&quot;result&quot;: [ { &quot;DefaultDisplayName&quot; : &quot;Champ personnalisé&quot;, &quot;Ordre&quot; : 1, &quot;EntityMetadataDisplayList&quot; : Type: &quot;Case à cocher&quot;, &quot;MultipleChoiceItems&quot; : { &quot;@context&quot; : &quot;dfc67a64-2797-4d92-ac0a-47111594f61f&quot;, &quot;Name&quot;: &quot;f5c4f531-f947-40c2-9ce4-05a09c6b143d&quot;, &quot;DefaultDisplayName&quot;: &quot;Case à cocher&quot;, &quot;Ordre&quot; : 1, &quot;MultiValueByDate&quot; : false, &quot;IsRequired&quot; : false } ], &quot;EntityType&quot; : &quot;Client&quot; } ], &quot;error&quot; : [],
+						&quot;Errors&quot;: [],
+						&quot;warning&quot;: []
+						}
+						}</code></pre></div></p>
+        <h2><a name="Filter-entities-by-id"></a>Filtrer les entités par entityId</h2>
+        <p>Dans Caseware Cloud, vous pouvez obtenir l&apos;ID de l&apos;entité dans laquelle vous vous trouvez actuellement à partir de l&apos;URL de votre entreprise. Dans l&apos;exemple ci-dessous, entityId = 4 :</p>
+        <p><img src="../Resources/Images/URLEntitiesId.png" alt="Obtenir l&apos;identifiant de l&apos;entité à partir de l&apos;URL de votre entreprise." /></p>
+        <p><b>Dont vous avez besoin pour cet exemple : <code>GET /api/v1/entities/{entityId}</code></b></p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre xml:space="preserve"><code>curl -X &apos;GET&apos; \
+        &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/entities/4&apos; \
+        -H &apos;accept: application/json&apos; \
+        -H &apos;Authorization: Bearer MDdiZTQ1ZjUtZDY0NC1jZDI3LTZlZGQtOWYyZTFkYjQwNjY4OjEwNTUyYzFhLTU0MGItMTM3Ny0yYzA3LTRhYThhZjYwNGFlNTo1&apos;</code></pre></div></p>
+        <h2><a name="Filter-users-by-email"></a> Filtrer les utilisateurs par courriel</h2>
+        <p><b>Dont vous avez besoin pour cet exemple :</b> <b><code>GET /api/{numéro de version}/utilisateurs</code></b></p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre xml:space="preserve"><code>curl -X &apos;GET&apos; \
+        &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/users?search=Email%3D%27domain.admin%40yourfirm.com%27&amp;page=1&amp;pageSize=50&apos; \
+        -H &apos;accept: application/json&apos; \
+        -H &apos;Authorization: Bearer YzZhZGUxNjItZDQ1MS01MjYyLWUyZjEtYjgwYWYxNTdhYmEwOmRjNmI3YWRhLTAxM2ItMmMyNi1iZjhhLTY4ODEyZjc0OTI3ZTo1&apos;</code></pre></div><p class="Tip"><b>Conseil :</b> Conseil La plupart des champs qui peuvent être utilisés pour formuler des requêtes (spécifiés comme valeur du paramètre de requête de recherche) sont décrits dans le schéma du corps de la requête dans l&apos;opération POST Create pour l&apos;objet que vous interrogez. Par exemple, si vous interrogez des utilisateurs, consultez l&apos;opération POST Create pour les utilisateurs :</p>
+        </p>
+        <p><div><code>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk/caseware-cloud#tag/Users/operation/createUser</code></div></p>
+        <p><img src="../Resources/Images/CreateUser.png" alt="Demande POST pour créer un utilisateur" /></p>
+        <h2><a name="Filter-users-by-id"></a>Filtrer les utilisateurs par ID</h2>
+        <p><b>Dont vous avez besoin pour cet exemple : <code>GET /api/v1/users/{userId}</code></b></p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre><code>curl -X &apos;GET&apos; \
+        &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/users/2&apos; \
+        -H &apos;accept: application/json&apos; \
+        -H &apos;Authorization: Bearer YWJhZDE3MmQtMGIyOC1hZWVlLWZjM2EtY2VmZjBlYjUwZWNiOjJkODdiODY1LTY0NTUtNjgwNS0xMDQ5LWFjZWMzMWI5ZTZkNTo1&apos;</code></pre></div></p>
+        <h2><a name="Filter-roles-based-on-role-name"></a>Filtrer les rôles sur la base du nom (du rôle)</h2>
+        <p><b>Dont vous avez besoin pour cet exemple : <code>GET /api/{numéro de version}/rôles</code></b></p>
+        <p class="Tip"><b>Conseil :</b> La plupart des champs (ou paramètres de requête) qui peuvent être utilisés pour former des requêtes dans les requêtes GET sont décrits dans le schéma du corps de la requête dans l&apos;opération POST ou PATCH pour l&apos;objet que vous interrogez. Par exemple, si vous interrogez des rôles, consultez l&apos;opération PATCH Update pour les affectations de rôles :</p>
+        <p><div><code>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk/caseware-cloud#tag/Role-Assignment/operation/updateUserRoles</code></div><p><img src="../Resources/Images/FilteringRole.png" alt="Voir l&apos;exemple de demande pour l&apos;opération PATCH afin de mettre à jour les attributions de rôles" /></p>
+        </p>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre xml:space="preserve"><code>curl -X &apos;GET&apos; \
+        &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/roles?search=Name%3D%27Contact%20-%20Entity%20Access%27&amp;page=1&amp;pageSize=50&apos; \
+        -H &apos;accept: application/json&apos; \
+        -H &apos;Authorization: Bearer YWJhZDE3MmQtMGIyOC1hZWVlLWZjM2EtY2VmZjBlYjUwZWNiOjJkODdiODY1LTY0NTUtNjgwNS0xMDQ5LWFjZWMzMWI5ZTZkNTo1&apos;</code></pre></div></p>
+        <h2><a name="Filter-confidential-WP-bundles"></a>Filtrer toutes les offres de documents de travail confidentiels</h2>
+        <p><b>Dont vous avez besoin pour cet exemple : <code>GET /api/{numéro de version}/engagements</code></b></p>
+        <p><b>Champs utilisés pour créer la requête dans l&apos;exemple de demande</b></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Type de données</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Confidentiel</td>
+                    <td>Booléen</td>
+                    <td>
+                        <p>Le caractère confidentiel ou non de la mission.</p>
+                        <p>Valeur par défaut : <code>true</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>Chaîne</td>
+                    <td>
+                        <p>Spécifie le type de liasse :</p>
+                        <p><code><b>Documents de travail</b></code></p>
+                        <p>Généralement un objet qui représente un engagement du Working Papers.</p>
+                        <p><code><b>CustomBundle</b></code></p>
+                        <p>Il s&apos;agit généralement d&apos;un objet qui représente un engagement dans le nuage, mais qui peut être utilisé de différentes manières par des applications personnalisées :</p>
+                        <ul>
+                            <li>Horaires</li>
+                            <li>Soumissions fiscales</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>Entier</td>
+                    <td>
+                        <p>Par défaut : 1</p>
+                        <p>Précisez la page demandée, en commençant par la page 1.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>taille de la page</td>
+                    <td>Entier [1..50]</td>
+                    <td>
+                        <p>Par défaut : 50</p>
+                        <p>Spécifiez le nombre d&apos;engagements listés par page.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Exemple de requête curl</strong></p>
+        <p><div><pre xml:space="preserve"><code>curl -X &apos;GET&apos; \
+        &apos;https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/ms/caseware-cloud/api/v1/engagements?search=Confidential%3D%27true%27&amp;itemType=WorkingPapersBundle&amp;page=1&amp;pageSize=50&apos; \
+        -H &apos;accept: application/json&apos; \
+        -H &apos;Authorization: Bearer NTliMDQ5ZjMtZmVkYi0xMDYwLWViYjItMTFkZTM1MjI2YTA2OjAxMTUzNzVkLWJhOTctOGQwMy0wNTY3LTVkODBhZDBjODgzMzo1&apos;</code></pre></div></p>
+    </body>
+</html>

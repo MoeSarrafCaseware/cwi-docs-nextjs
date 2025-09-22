@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Single Sign-On Veelgestelde vragen</h1>
+        <p>Dit gedeelte bevat veelgestelde vragen over het integreren van single sign-on met Cloud.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Hoe veilig is de SSO-integratie van Cloud?</p>
+        <p>Alle gebruikersgegevens die worden doorgegeven tussen uw identiteitsleverancier en CWI worden versleuteld via het SSL-protocol (Secure Sockets Layer) en ondertekend met behulp van JSON Web Encryption. Wanneer gebruikers zijn aangemeld bij de identity provider van je bedrijf, worden de identiteitsgegevens van de gebruiker (login, gebruikersnaam en wachtwoord) nooit gedeeld met Cloud. Alleen de basisprofielgegevens van de gebruiker (naam en e-mailadres) worden met ons gedeeld om de gebruiker te verifiëren.</p>
+        <hr>
+        </hr>
+        <p><b>Welk autorisatieprotocol wordt gebruikt?</b></p>
+        <p>We gebruiken het autorisatieprotocol OpenID Connect.</p>
+        <hr>
+        </hr>
+        <p><b>Kunnen medewerkers zich nog steeds aanmelden met Cloud-referenties nadat SSO is ingeschakeld?</b></p>
+        <p>Nadat een medewerker SSO heeft gebruikt om zich aan te melden bij Cloud, kan hij of zij zich alleen nog aanmelden via single sign-on. Als een medewerker zich probeert aan te melden met zijn Cloud-referenties, wordt er een foutbericht weergegeven met de instructie om SSO te gebruiken.</p>
+        <hr>
+        </hr>
+        <p><b>Nadat ik mijn identity provider heb verwijderd en opnieuw heb toegevoegd, kunnen sommige gebruikers zich niet aanmelden. Waarom?</b></p>
+        <p>Als je je identity provider hebt verwijderd en opnieuw hebt toegevoegd, kunnen gebruikers die zich voor de verwijdering hebben geverifieerd zich niet aanmelden. Om deze gebruikers weer aan te laten melden, moet je nieuwe referenties voor ze aanmaken in Azure AD. Dit proces zal in toekomstige versies niet meer nodig zijn.</p>
+        <hr>
+        </hr>
+        <p><b>Kunnen contactpersonen SSO gebruiken?</b></p>
+        <p>Op dit moment hebben contactpersonen niet de mogelijkheid om SSO te gebruiken.</p>
+        <hr>
+        </hr>
+        <p><b>We&apos;ve enabled two-factor authentication. Wat gebeurt er als we ook SSO inschakelen?</b></p>
+        <p>Als SSO is ingeschakeld voor een bedrijf, kunnen SSO-gebruikers geen gebruik meer maken van de twee-factor authenticatiefunctie van Cloud. Het is namelijk best practice dat je vertrouwde identiteitsleverancier de controle heeft over het authenticatieproces. Als je tweefactorauthenticatie wilt inschakelen, raden we je aan dit te doen via je identiteitsprovider.</p>
+        <p>Tweefactorauthenticatie blijft beschikbaar voor niet-SSO-gebruikers.</p>
+        <hr>
+        </hr>
+        <p><b>Wat gebeurt er als ik het account van een medewerker toevoeg aan Cloud voordat ik het toevoeg aan Azure AD?</b></p>
+        <p>Als je een personeelsaccount hebt toegevoegd aan Cloud maar niet aan Azure AD, kan die gebruiker zich niet aanmelden met SSO. Om een medewerker in staat te stellen zich aan te melden met SSO, voeg je een nieuwe gebruiker toe aan Azure AD met als gebruikersnaam het e-mailadres dat is gekoppeld aan het Cloud-account van die medewerker.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Wat gebeurt er als ik uitlog bij mijn identity provider terwijl ik nog steeds ben aangemeld bij Cloud?</p>
+        <p>Je blijft ingelogd in Cloud zolang je sessie actief is. Als je sessie eindigt, moet je opnieuw inloggen bij je identity provider voordat je je kunt aanmelden bij Cloud met SSO.</p>
+        <hr>
+        </hr>
+        <p><b>Een medewerker met de accountstatus Inactief kan zich nog steeds aanmelden bij Cloud. Waarom?</b></p>
+        <p>Na het inschakelen van single sign-on wordt accounttoegang beheerd via Azure AD. Om te voorkomen dat een gebruiker toegang krijgt tot Cloud, moet je zijn account verwijderen. Zie <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory">Gebieden toevoegen</a>voor meer informatie.<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory"> Gebruikers toevoegen of verwijderen met Azure Active Directory</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Een medewerker wiens account is verwijderd in Azure AD is nog steeds aangemeld bij Cloud. Waarom?</b></p>
+        <p>Als je een gebruikersaccount in Azure AD verwijdert terwijl ze nog zijn aangemeld bij Cloud, blijven ze actief in Cloud totdat hun sessie afloopt of ze zich afmelden, waarna ze zich niet meer kunnen aanmelden bij Cloud.</p>
+        <hr>
+        </hr>
+        <p><b>Waarom kan ik accountnamen, e-mailadressen of wachtwoorden niet bewerken in Cloud?</b></p>
+        <p>Na het inschakelen van single sign-on worden accountnamen, e-mailadressen en wachtwoorden beheerd via Azure AD. Zie <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal">Gebieden toevoegen</a>voor meer informatie.<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal"> Voeg profielinformatie van een gebruiker toe of werk deze bij met behulp van Azure Active Directory</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Het e-maildomein van ons bedrijf is veranderd, hoe kan ik de e-mailadressen van het personeel in bulk bijwerken?</b></p>
+        <p>Bedrijven met SSO ingeschakeld kunnen het e-mailveld voor medewerkers niet rechtstreeks bewerken. Als je de e-mailadressen van je medewerkers in bulk moet bijwerken, neem dan contact op met <a href="mailto:support@caseware.com">Caseware Support</a> voor hulp. We moeten de e-mailadressen in Cloud bijwerken op hetzelfde moment dat je je Active Directory bijwerkt om ervoor te zorgen dat je personeel toegang tot Cloud behoudt.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Als de identity provider van ons bedrijf een storing heeft, hoe kunnen gebruikers zich anders aanmelden bij Cloud?</p>
+        <p>Gebruikers kunnen zich niet aanmelden bij Cloud als er een storing is bij je identity provider. We raden aan om een beheerdersaccount aan te houden dat geen gebruik maakt van je identiteitsprovider om toegang tot Cloud te garanderen in geval van nood.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Wat gebeurt er als mijn klantgeheim verloopt?</p>
+        <p>Als je clientgeheim verloopt, kunnen SSO-gebruikers niet meer inloggen op Cloud. Je moet een nieuw clientgeheim genereren en je identiteitsgegevens bijwerken in Cloud.</p>
+        <ol>
+            <li>
+                <p>Log in bij Cloud met je Cloud-referenties.</p>
+            </li>
+            <li>
+                <p>Selecteer in het <b>cloudmenu</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen|</b><b>Enkelvoudige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer het pictogram <b>XBRL</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Voer de juiste informatie in voor je identity provider in de velden <b>Identity provider metadata endpoint</b>, <b>Client ID</b>en <b>Client secret</b> .</p>
+            </li>
+        </ol>
+        <p>We raden aan om <b>Nooit verloopt</b> te selecteren bij het genereren van je cliëntgeheim om onverwacht verlies van toegang voor SSO-gebruikers te voorkomen.</p>
+        <hr>
+        </hr>
+        <p><b>Hoe kan ik de toegang tot de Cloud beperken zodat medewerkers er alleen vanaf hun werkcomputers toegang toe hebben?</b></p>
+        <p>Als je Cloud-toegang wilt beperken tot werkcomputers, overweeg dan om <a href="https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-locations" target="_blank">vertrouwde locaties</a> toe te voegen aan Azure AD. Hiermee kun je toegang beperken op basis van IP-adressen, zoals het kantoor- of VPN-IP.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Hoe kan ik SSO uitschakelen voor mijn bedrijf?</p>
+        <p>Als je SSO voor jouw bedrijf wilt uitschakelen, neem dan contact op met je lokale distributeur.</p>
+        <p>Nadat SSO is uitgeschakeld, kunnen gebruikers inloggen met hun vorige Cloud-referenties. Gebruikers van wie het wachtwoord is verlopen of die alleen SSO hebben gebruikt om in te loggen bij Cloud, kunnen de link <b>Wachtwoord vergeten?</b> gebruiken om een wachtwoord voor hun account aan te maken. Indien nodig kan de bedrijfsbeheerder ook wachtwoorden voor gebruikers opnieuw instellen.</p>
+        <hr>
+        </hr>
+        <h3><a name="Why"></a>Waarom krijg ik een foutmelding?</h3>
+        <p>Als Cloud of SSO verkeerd is geconfigureerd, kunt u een van de onderstaande foutmeldingen zien wanneer u zich probeert aan te melden.</p>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: Probeer het later opnieuw. De server is een onbekende fout tegengekomen. Als het probleem zich blijft voordoen, neem dan contact op met onze supportafdeling.</b></p>
+        <p>Dit probleem wordt meestal veroorzaakt door een verlopen clientgeheim in de SSO-provider. Een admin-gebruiker van het bedrijf moet zijn SSO-configuratie bijwerken.</p>
+        <ol>
+            <li>
+                <p>Het clientgeheim opnieuw genereren. Dit kan worden gedaan via je SSO-provider.</p>
+            </li>
+            <li>
+                <p>Log in to Caseware Cloud.</p><div class="note"><p><b>Let op:</b> Als u niet kunt inloggen, neem dan contact op met uw <a href="https://www.caseware.com/contact/">lokale distributeur</a> en vraag of hij SSO voor uw beheerdersaccount kan uitschakelen. Voeg de volgende informatie toe aan je verzoek:</p>
+                    <ul>
+                        <li>
+                            <p>De volledige URL van het bedrijf</p>
+                        </li>
+                        <li>
+                            <p>Het e-mailadres van uw beheerdersaccount waar SSO moet worden uitgeschakeld</p>
+                        </li>
+                        <li>
+                            <p>Schriftelijke clientmachtiging om SSO voor het beheerdersaccount uit te schakelen</p>
+                        </li>
+                    </ul>
+                    <p>Als SSO is uitgeschakeld voor het beheerdersaccount, gebruik dan de optie <b>Wachtwoord vergeten</b> op de inlogpagina om een nieuw wachtwoord in te stellen en in te loggen bij Cloud.</p></div></li>
+            <li>
+                <p>Werk de SSO-configuratie in Cloud bij met het nieuwe clientgeheim. Hierdoor wordt de inlogtoegang voor andere gebruikers hersteld.</p>
+            </li>
+            <li>
+                <p>Als SSO was uitgeschakeld voor je beheerdersaccount, log dan opnieuw in met SSO om het weer in te schakelen. U kunt SSO ook uitgeschakeld laten voor uw account voor het geval dit probleem zich in de toekomst voordoet.</p>
+            </li>
+            <li>
+                <p>Herinneringen/bewaking instellen voor het verlopen van het cliëntgeheim. Het bedrijf kan toekomstige lock-outs voorkomen door het klantgeheim te roteren vóór de volgende vervaldatum.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: &quot;Het spijt ons ... Onverwachte fout bij verificatie met identiteitsprovider&quot; </b></p>
+        <p>Bij het configureren van je identity provider heb je mogelijk een verkeerde client secret of client ID ingevoerd.</p>
+        <ol>
+            <li>
+                <p>Log in bij Cloud met je Cloud-referenties.</p>
+            </li>
+            <li>
+                <p>Selecteer in het <b>cloudmenu</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen|</b><b>Enkelvoudige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer het pictogram <b>XBRL</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Voer de juiste informatie in voor je identity provider in de velden <b>Identity provider metadata endpoint</b>, <b>Client ID</b>en <b>Client secret</b> .</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: AADSTS70001 Toepassing met identificator ... werd niet gevonden in de map ...&quot;</b></p>
+        <p>Bij het configureren van Azure AD heb je mogelijk een onjuiste identiteitsprovider ingevoerd.</p>
+        <ol>
+            <li>
+                <p>Log in bij Cloud met je Cloud-referenties.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Eenmalige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer het pictogram <b>XBRL</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Voer de juiste informatie in voor je identity provider in de velden <b>Identity provider metadata endpoint</b>, <b>Client ID</b>en <b>Client secret</b> .</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: AADSTS50011 De antwoord-url in het verzoek komt niet overeen met de antwoord-url&apos;s die zijn geconfigureerd voor de applicatie ...&quot;</b></p>
+        <p>Mogelijk heb je een onjuiste antwoord-URL ingevoerd in Azure.</p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Azure Active Directory | App Registration</b>in het linker navigatiedeelvenster in Azure <b>.</b></p>
+            </li>
+            <li>
+                <p>Selecteer je app en vervolgens <b>Instellingen | URL&apos;s beantwoorden</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Contextmenu</b> naast je antwoord-URL en selecteer vervolgens <b>Verwijderen</b>.</p>
+            </li>
+            <li>
+                <p>Voeg je antwoord-URL opnieuw toe en selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: AADSTS7000215 Ongeldig clientgeheim opgegeven. Zorg ervoor dat het geheim dat in het verzoek wordt verzonden de waarde van het cliëntgeheim is, niet de ID van het cliëntgeheim</b></p>
+        <p>Bij het <a href="Generate-the-reply-URL-Azure-AD.htm">configureren van Azure AD</a>heb je mogelijk de Client ID ingevuld in het veld Client secret.</p>
+        <ol>
+            <li>
+                <p>Controleer of de waarde van het cliëntgeheim correct is. Als de waarde is gekopieerd <a href="Generate-a-client-secret.htm">volgens de instructies</a>, zoek dan de clientgeheimen die zijn opgeslagen in Azure AD en controleer of deze overeenkomen met ID&apos;s. Als de gekopieerde waarde overeenkomt met een ID of als je de waarde van het cliëntgeheim niet hebt gekopieerd, verwijder dan het huidige geheim en <a href="Generate-a-client-secret.htm">maak een nieuwe aan</a>. Zorg ervoor dat je de geheime waarde van de client kopieert.</p>
+            </li>
+            <li>
+                <p>Log in bij Cloud met je Cloud-referenties.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Eenmalige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer het pictogram <b>XBRL</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Voer de juiste informatie in voor je identity provider in de velden <b>Identity provider metadata endpoint</b>, <b>Client ID</b>en <b>Client secret</b> . Het veld Client ID moet overeenkomen met de Application ID en het veld Client secret moet overeenkomen met de waarde van het clientgeheim uit stap 1 (niet met de Secret ID).</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: &quot;Geen beschikbare licenties voor cloud-toegang. Neem contact op met uw beheerder om extra licenties te verkrijgen.&quot;</b></p>
+        <p>Het aantal gebruikers in je Active Directory-domein is groter dan het aantal beschikbare Cloud-licenties. Als het aantal gebruikers in uw Active Directory-domein groter is dan het aantal beschikbare licenties, kunnen sommige medewerkers zich niet aanmelden. Om het voor alle medewerkers mogelijk te maken zich aan te melden, schaft u voor elk personeelslid een licentie aan bij MyCaseware of neemt u contact op met uw lokale distributeur.</p>
+        <hr>
+        </hr>
+        <p><b>Foutbericht: &quot;Account bestaat al. Gebruiker met e-mail ... bestaat al. Hoe wil je verder?&quot;</b></p>
+        <p>Deze fout treedt op nadat een gebruiker is verwijderd uit Azure en een andere gebruiker is toegevoegd met hetzelfde e-mailadres. <br /></p>
+        <p>Om dit probleem op te lossen, verwijdert u het Cloud-account dat is gekoppeld aan het e-mailadres dat in de foutmelding wordt weergegeven en laat u de gebruiker zich opnieuw aanmelden met SSO. <br /></p>
+        <p>Dit proces zal in toekomstige versies niet meer nodig zijn.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Foutbericht: &quot;Het ontvangen token mist de volgende beweringen: e-mail vereist voor systeemtoegang. Neem contact op met uw beheerder.&quot;</p>
+        <p>De Caseware Cloud SSO-integratie is ontworpen om &apos;gebruikersnaam&apos; en &apos;e-mail&apos; als verschillende claims te herkennen. Onze integratie vereist de &apos;e-mail&apos;-claim om goed te werken. De &apos;e-mail&apos;-claim wordt alleen geleverd door gastgebruikers en beheerde gebruikers die zijn geïntegreerd via Office365. Als de gebruikers van je bedrijf zijn ingesteld via Office365, volg dan <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">de instructies van Azure</a> om de &apos;e-mail&apos; claim te beheren via het Office admin portaal.</p>
+        <hr>
+        </hr>
+    </body>
+</html>

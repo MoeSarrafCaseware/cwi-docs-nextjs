@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gegevens exporteren van Sage 50 Canada naar Caseware Cloud</h1>
+        <p>De gegevens die je moet exporteren vanuit Sage 50 Canada variëren afhankelijk van het Caseware dataset type waarin je gegevens wilt importeren. Raadpleeg de onderstaande tabel om verder te gaan naar de instructies voor het exporteren van de gegevens die je nodig hebt. Caseware Cloud data is georganiseerd in verschillende standaard datasets afhankelijk van het doel van de data, zoals onder andere proefbalans, grootboek en subgrootboek data.</p>
+        <p>Zie Gegevens importeren en beheren voor meer informatie over het importeren van gegevens in Caseware Cloud, evenals beschrijvingen van datasetsoorten <a href="Import-and-manage-data.htm">.</a></p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Als je dit type dataset nodig hebt In Caseware Cloud</th>
+                    <th>Exporteer dit bestand vanuit Sage 50 Canada</th>
+                    <th>Dit Sage 50-bestand is optioneel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Understand-genledger-data.htm#General">Grootboek</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transacties per rekening</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Trial-balance-described.htm">Saldibalans</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transacties per rekening</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-invoices.htm">Crediteuren - facturen</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Verkoper Grootboekrecord</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Verkoper Grootboekrecord</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-payments-made.htm">Crediteuren — gemaakte betalingen</a></td>
+                    <td><a href="#Export_Vendor_Purchases_Detail_report">Detail aankopen leverancier</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Verkoper Grootboekrecord</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-suppliers.htm">Crediteuren — leveranciers</a></td>
+                    <td><a href="#Export_the_Payments_Transactions_record">Betalingstransacties</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-open-balances.htm">Crediteuren - openstaande saldi</a></td>
+                    <td><a href="#Export_the_Aged_Overdue_Purchase_Invoices_Detail_report">Detail achterstallige inkoopfacturen</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-customers.htm">Debiteuren — klanten</a></td>
+                    <td><a href="#Export_the_Customer_Ledger_record">Klantgrootboekrecord</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-invoices.htm">Debiteuren — facturen</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transacties per rekening</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Detail ouderdom klant</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-cash-received.htm">Debiteuren — ontvangen betalingen</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transacties per rekening</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Detail ouderdom klant</a><br />
+                    </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-open-balances.htm">Debiteuren — openstaande saldi</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transacties per rekening</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Detail ouderdom klant</a><br /><a href="#Export_the_Aged_Overdue_Sales_Invoices_Detail_report">Detail achterstallige verkoopfacturen</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-transactions.htm">Voorraadtransacties</a></td>
+                    <td><a href="#Export_the_Transaction_Detail_report">Transactiegegevens</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-on-hand.htm">Beschikbare voorraad</a></td>
+                    <td><a href="#Export_the_Quantity_report">Aantal</a></td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export_Transactions_by_Account_report"></a>Rapport Transacties exporteren per rekening</h2>
+        <p><b>Om het rapport Transacties per rekening te exporteren vanuit Sage 50 Canada: </b></p>
+        <ol>
+            <li>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</li>
+            <li>Selecteer in het dialoogvenster <b>Rapportcentrum</b> bij <b>Selecteer een rapporttype</b>de optie <b>Financieel</b> | <b>Transacties per rekening</b>.</li>
+            <li>Klik op <b>Aanmaken...</b> Er wordt een voorbeeld van het rapport weergegeven.</li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionsbyAccount-Sage50.png" alt="Voorbeeld van rapport Transacties per rekening" /></p>
+        <p class="note inline"><b>Let op:</b> Het <b>Rapportcentrum</b> exporteert standaard gegevens voor het huidige boekjaar. Als je opdrachtdatums van het vorige boekjaar zijn, kun je op de optie <b>Dit rapport wijzigen</b> klikken en in de vervolgkeuzelijst <b>Rapport over boekjaar</b> de optie <b>Vorig jaar (YYYY)</b>selecteren.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Het rapport Transacties per rekening wijzigen" /></p>
+        <p><img src="../../Resources/Images/SelectAccounts-TransactionsbyAccount-Sage50.png" alt="Het wijzigen van het fiscale jaar in het rapport Transacties per rekening." /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren...</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Customer_Ledger_record"></a>Het klantengrootboekrecord exporteren</h2>
+        <p><strong>Het klantengrootboekrecord exporteren vanuit Sage 50 Canada: </strong></p>
+        <ol>
+            <li>Selecteer in het menu <strong>Bestand</strong> de optie <strong>Importeren/Exporteren | Records exporteren..</strong></li>
+            <li>Selecteer in het dialoogvenster <strong>Wizard Records exporteren</strong> bij <strong>Selecteer een rapporttype</strong>de optie <strong>Records exporteren naar een Sage 50 Import-bestandsindeling</strong>. Klik op <strong>Volgende</strong>.</li>
+            <li>Selecteer bij <strong>Selecteer het type records dat u wilt exporteren</strong>de optie <strong>Klanten.</strong></li>
+            <li>Geef een naam en locatie op voor het exportbestand en klik op <strong>Volgende</strong>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerLedgerRecord-Sage50.png" alt="Klantrecords selecteren om te exporteren" /></p>
+        <ol>
+            <li value="3">Selecteer in het vak <strong>Selecteer de klanten die je wilt exporteren</strong> de klanten waarvan je de grootboekrecords wilt exporteren of klik op <strong>Alles selecteren</strong> om alle grootboekrecords van klanten te exporteren.</li>
+            <li>Klik op <strong>Volgende</strong>.</li>
+            <li>Bekijk het Overzicht exportrecords en klik op <strong>OK</strong>.</li>
+            <li>Klik op <strong>Voltooien</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Customer_Aged_Detail_report"></a>Het rapport Klant ouderdom exporteren</h2>
+        <p><strong>Om het rapport Transacties per rekening te exporteren vanuit Sage 50 Canada: </strong></p>
+        <ol>
+            <li>Selecteer <strong>Rapportencentrum</strong>in het menu <strong>Rapporten</strong> .</li>
+            <li>In het dialoogvenster <b>Rapportcentrum</b>  <strong>selecteert</strong>u bij <strong>Selecteer een rapporttype</strong>de optie <strong>Klanten &amp; verkoop | Klant ouderdom gedetailleerd</strong>.</li>
+            <li>Klik op <strong>Aanmaken...</strong> A preview of the report that will be exported is displayed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerAgedDetail-Sage50.png" alt="Het rapport Klant ouderdom gedetailleerd selecteren" /></p>
+        <p class="note inline"><strong>Let op: </strong>Het Rapportcentrum exporteert standaard alle facturen die in de laatste 999 dagen zijn betaald vanaf de sluitingsdatum van het huidige boekjaar. Je kunt de datum <strong>Vanaf</strong> wijzigen door op de optie <strong>Dit rapport wijzigen</strong> te klikken. Zorg ervoor dat de geselecteerde datum later is dan of gelijk is aan de Einddatum van je Caseware overeenkomst.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyCustomerAgedReport-Sage50.png" alt="Het rapport Customer Aged Detail wijzigen." /></p>
+        <p> </p>
+        <ol>
+            <li value="4">Selecteer in het menu <strong>Bestand</strong> de optie <strong>Exporteren..</strong></li>
+            <li>Geef bij <strong>Bestandsnaam</strong>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <strong>Opslaan</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Sales_Invoices_Detail_report"></a>Het rapport Achterstallige verkoopfacturen exporteren</h2>
+        <p><strong>Het rapport Aged Overdue Sales Invoices Detail exporteren vanuit Sage 50 Canada:</strong></p>
+        <ol>
+            <li>Selecteer <strong>Rapportencentrum</strong>in het menu <strong>Rapporten</strong> .</li>
+            <li>Selecteer in het dialoogvenster <b>Rapportcentrum</b> bij <strong>Selecteer een rapporttype</strong>de optie <strong>Klanten &amp; verkoop | Achterstallige </strong><strong>verkoopfacturen</strong><strong> gedetailleerd</strong>.</li>
+            <li>Klik op <strong>Aanmaken...</strong> A preview of the report that will be exported is displayed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/OverdueSalesInvoicesDetail-Sage50.png" alt="Het rapport Achterstallige verkoopfacturen selecteren. " /></p>
+        <p class="note inline"><strong>Let op: </strong>Het Rapportcentrum exporteert standaard de betalingen die zijn gedaan in de laatste 999 dagen op de sluitingsdatum van het huidige boekjaar. Je kunt de Datum wijzigen <strong>door</strong> de optie <strong>Dit rapport wijzigen</strong> te selecteren. Zorg ervoor dat de datum die je selecteert gelijk is aan de Einddatum van je Caseware overeenkomst.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverdueSalesInvoicesReport-Sage50.png" alt="Het rapport Ouderdom te laat betaalde verkoopfacturen wijzigen." /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <strong>Bestand</strong> de optie <strong>Exporteren..</strong></li>
+            <li>Geef bij <strong>Bestandsnaam</strong>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <strong>Opslaan</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Vendor_Ledger_record"></a>Het crediteurengrootboekrecord exporteren</h2>
+        <p><b>Om het crediteurengrootboekrecord uit Sage 50 Canada te exporteren:</b></p>
+        <ol>
+            <li>Selecteer in het menu <b>Bestand</b> de optie <b>Importeren/Exporteren | Records exporteren..</b></li>
+            <li>Selecteer in het dialoogvenster <b>Wizard Records exporteren</b> bij <b>Selecteer een rapporttype</b> de optie <b>Records exporteren naar een Sage 50 Import-bestandsindeling</b> . Klik op <b>Volgende</b>.</li>
+            <li>Selecteer bij <b>Selecteer het type records dat u wilt exporteren</b>de optie <b>Verkopers</b>.</li>
+            <li>Geef een naam en locatie op voor het exportbestand en klik op <b>Volgende</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorLedger-Sage50.png" alt="Verkopergrootboekrecords selecteren om te exporteren vanuit Sage 50 Canada." /></p>
+        <ol><li value="5">Selecteer in het vak <b>Selecteer de verkopers die je wilt exporteren</b> de klanten waarvan je de grootboekrecords wilt exporteren of klik op <b>Alles selecteren</b> om alle grootboekrecords van verkopers te exporteren.</li><li>Klik op <b>Volgende</b>.</li><li>Bekijk het Overzicht exportrecords en klik op <b>OK</b>.</li><li>Klik op <b>Voltooien</b>.</li></ol>
+        <h2><a name="Export_the_Payments_Transactions_record"></a>Het rapport Betalingstransacties exporteren</h2>
+        <p><b>Om het rapport Transacties per rekening te exporteren vanuit Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer in <b>Selecteer een rapporttype</b>de optie <b>Leveranciers en inkopen | Betalingstransacties</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmaken...</b> A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/PaymentTransactions-Sage50.png" alt="Het rapport Betalingstransacties selecteren." /></p>
+        <p class="note inline"><b>Let op:</b> Het Rapportcentrum exporteert standaard gegevens voor het huidige boekjaar. Als je opdrachtdatums van het vorige boekjaar zijn, klik je op de optie <b>Dit rapport wijzigen</b> . Selecteer de vervolgkeuzelijst <b>Rapportage over boekjaar</b> en vervolgens de optie <b>Vorig jaar (YYYY)</b> .</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyingPaymentTransactions.png" alt="Het rapport Betalingstransacties wijzigen." /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren..</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+        <h2><a name="Export_Vendor_Purchases_Detail_report"></a>Rapport Aankopen leveranciers exporteren</h2>
+        <p><b>Om het rapport Verkoperinkopen Detail te exporteren:</b></p>
+        <ol>
+            <li>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</li>
+            <li>
+                <p>In het dialoogvenster <b>Rapportcentrum</b>  <b>selecteert</b>u bij <b>Selecteer een rapporttype</b> <b>Vendors &amp; Purchases | Vendor Purchases Detail</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmaken...</b> A preview of the report that will be generated is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorPurchaseDetail-Sage50.png" alt="Het rapport Vendor Purchases Detail selecteren. " /></p>
+        <p class="note inline"><b>Let op:</b> Het Rapportcentrum exporteert standaard gegevens voor het huidige boekjaar. Als je opdrachtdatums van het vorige boekjaar zijn, kun je op de optie <b>Dit rapport wijzigen</b> klikken en de <b>begin-</b> en <b>einddatum</b> wijzigen.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p><img src="../../Resources/Images/ModifyVendorPurchases-Sage50.png" alt="Het rapport Aankopen leverancier wijzigen." /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren..</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Purchase_Invoices_Detail_report"></a>Het rapport Achterstallige inkoopfacturen exporteren</h2>
+        <p><b>Het rapport Achterstallige inkoopfacturen exporteren uit Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster <b>Rapportcentrum</b> bij Selecteer een rapporttype de optie <b>Leveranciers en inkopen | Achterstallige inkoopfacturen gedetailleerd</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmaken...</b> A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/AgedOverduePurchaseInvoicesDetail.png" alt="Het rapport Achterstallige inkoopfacturen detail wijzigen. " /></p>
+        <p class="note inline"><b>Let op:</b> Het Rapportcentrum exporteert standaard Betalingen die zijn gedaan in de laatste 999 dagen vanaf de sluitingsdatum van het huidige boekjaar. Je kunt de Datum wijzigen <b>door</b> de optie <b>Dit rapport wijzigen</b> te selecteren. Zorg ervoor dat de geselecteerde datum gelijk is aan de Einddatum van je Caseware overeenkomst.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverduePurchaseInvoices-Sage50.png" alt="Het rapport Te laat betaalde inkoopfacturen wijzigen." /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren..</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Quantity_report"></a>Het rapport Hoeveelheid exporteren</h2>
+        <p><b>Om het rapport Transacties per rekening te exporteren vanuit Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster <b>Rapportcentrum</b> bij <b>Selecteer een rapporttype</b>de optie <b>Inventaris en services | Hoeveelheid</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmaken...</b> A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/QuantityReport-Sage50.png" alt="Het rapport Hoeveelheid selecteren." /></p>
+        <p class="note inline"><b>Let op:</b> Je kunt de standaardinstellingen van het rapport wijzigen door de optie <b>Dit rapport wijzigen</b> te selecteren. Breng de nodige wijzigingen aan en klik op <b>OK</b>.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifythis report option" /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren..</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Transaction_Detail_report"></a>Het rapport Transactiegegevens exporteren</h2>
+        <p><b>Om het rapport Transactiegegevens te exporteren:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Rapportencentrum</b>in het menu <b>Rapporten</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster <b>Rapportcentrum</b> bij <b>Selecteer een rapporttype</b>de optie <b>Inventaris en services | Transactiegegevens</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmaken...</b> A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionDetail-Sage50.png" alt="Het rapport Transactiegegevens wijzigen." /></p>
+        <p class="note inline"><b>Let op:</b> Het Rapportcentrum exporteert standaard gegevens voor het huidige boekjaar. Als je opdrachtdatums van het vorige boekjaar zijn, selecteer dan de optie <b>Wijzig dit rapport</b> en wijzig de <b>begin-</b> en <b>einddatum</b> .</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Deze rapportoptie wijzigen" /></p>
+        <p><img src="../../Resources/Images/ModifyingTransactionDetail=Sage50.png" alt="Het rapport Transactiegegevens wijzigen. " /></p>
+        <ol>
+            <li value="4">Selecteer in het menu <b>Bestand</b> de optie <b>Exporteren..</b></li>
+            <li>Geef bij <b>Bestandsnaam</b>een naam op voor het rapport die je herkent wanneer je het importeert in Caseware Cloud en klik op <b>Opslaan</b>.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2021-06</h1>
+        <p>Prenez un verre de limonade et installez-vous pour l&apos;été avec SE 2021-06 ! Cette version introduit de nouvelles fonctionnalités intéressantes telles que la bibliothèque des risques, les signatures multiples, les outils de révision pour le nouveau module de risque et bien plus encore.</p>
+        <h2>Signatures multiples pour un rôle</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>L&apos;option de <b>signature multiple</b> est désormais disponible pour les rôles de signature personnalisés.</p>
+        <p><img src="../Resources/Images/multiple-signoff.png" style="width: 926px;height: 658px;" alt="L&apos;option de signature multiple dans les paramètres du produit."></img></p>
+        <p>When the <b>Multiple Signoff</b> option for a role is enabled, more than one user can sign off on the role for a document. Les signatures sont affichées dans l&apos;ordre chronologique (la signature la plus récente apparaît en bas).</p>
+        <p>Pour en savoir plus, voir <a href="Define-signoff-roles.htm">Définir les rôles d&apos;approbation.</a></p>
+        <h2>Masquer les intitulés de sous-niveaux pour les notes dans les états financiers</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Dans le document 6-20 États financiers , les <b>paramètres d&apos;impression des notes</b> comprennent désormais une option permettant de masquer automatiquement les en-têtes de sous-niveaux des notes dans la sortie PDF s&apos;il n&apos;y a pas de notes ultérieures dans ce groupe.</p>
+        <p>Par exemple, si la note 1 comprend une sous-note 1.a et qu&apos;il n&apos;y a pas de notes 1.b, 1.c, etc., l&apos;en-tête de la sous-note 1.a ne s&apos;affiche pas dans la sortie PDF. Seul le contenu de cette note s&apos;affiche.</p>
+        <p><img src="../Resources/Images/note-print-settings-hide-heading.png" style="width: 911px;height: 536px;" alt="L&apos;option Masquer les titres de sous-niveaux dans les paramètres d&apos;impression des notes."></img></p>
+        <p>L&apos;option de masquer les titres de sous-niveaux dans la sortie PDF est également disponible pour les notes individuelles dans le menu <b>Plus d&apos;actions</b> s&apos;il n&apos;y a pas de notes ultérieures dans ce groupe.</p>
+        <p>Pour en savoir plus, voir <a href="Set-up-the-print-options-in-the-financial-statements.htm">Paramétrer les options d&apos;impression des états financiers</a> et <a href="Hide-sub-level-headings-for-notes.htm">Masquer les intitulés de sous-niveaux des notes</a>.</p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2021-06.</p>
+        <h3>Bibliothèque des risques</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>La bibliothèque des risques est désormais disponible pour faciliter le déroulement des missions d&apos;audit. Cette bibliothèque vous permet de créer une liste prédéfinie de risques. Vous pouvez sélectionner les risques applicables et pertinents dans la bibliothèque et les ajouter aux missions.</p>
+        <p class="note"><b>Remarque :</b> La bibliothèque des risques n&apos;est disponible que pour les distributeurs dans le cadre de tests bêta. Il ne sera pas déployé dans des environnements de partenariat ou de production. Pour activer la bibliothèque des risques pour votre site bêta, envoyez un ticket DIST avec votre demande.</p>
+        <p>Une fois la bibliothèque de risques activée pour votre site, la page Bibliothèque de risques est disponible dans les paramètres de votre entreprise. Pour créer une bibliothèque de risques, téléchargez un fichier Excel contenant le contenu de votre bibliothèque. Vous pouvez ajouter plusieurs bibliothèques de risques afin de répondre aux différentes exigences en matière de documentation des risques pour différents produits.</p>
+        <p><img src="../Resources/Images/risk-library-create.png" style="width: 1189px;height: 549px;" alt="La boîte de dialogue Créer une bibliothèque de risques."></img></p>
+        <p>Lorsque vous êtes prêt, vous pouvez publier la bibliothèque en tant que version majeure, puis lier cette version à un produit à partir de l&apos;onglet <b>Risk</b> | <b>General</b> dans les paramètres du produit.</p>
+        <p>Notez que :</p>
+        <ul>
+            <li>
+                <p>Le module des nouveaux risques doit être activé dans le produit auquel vous souhaitez associer une bibliothèque de risques.</p>
+            </li>
+            <li>
+                <p>Vous ne pouvez lier un produit qu&apos;à une seule bibliothèque de risques à la fois.</p>
+            </li>
+            <li>
+                <p>Vous pouvez lier la version publiée de la bibliothèque des risques à plusieurs produits.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/risk-library-product-settings.png" style="width: 915px;height: 654px;" alt="La section Gestion de la bibliothèque dans l&apos;onglet Risque | Général."></img></p>
+        <p>Si vous devez apporter des modifications à une bibliothèque de risques publiée, vous pouvez sélectionner l&apos;ajout d&apos;un nouveau fichier Excel et choisir s&apos;il s&apos;agit d&apos;une version <b>mineure</b> ou d&apos;une version <b>corrective</b> de la bibliothèque. Vous pouvez ajouter des versions mineures afin de les utiliser pour les mises à jour planifiées de la bibliothèque, tandis que des versions correctives peuvent être ajoutées pour les mises à jour urgentes.</p>
+        <p>Une fois que vous avez publié une version de la bibliothèque de risques et que vous l&apos;avez liée à un produit, les utilisateurs peuvent ajouter des risques prédéfinis à partir de la bibliothèque au lieu de les créer manuellement.</p>
+        <p>Lorsque les utilisateurs sélectionnent l&apos;option <b>Risque de la bibliothèque</b> dans la boîte de dialogue Ajouter, ils sont dirigés vers la bibliothèque de risques où ils peuvent utiliser les filtres et l&apos;option de recherche de la bibliothèque pour trouver les risques appropriés.</p>
+        <p><img src="../Resources/Images/risk-library-end-user-UI.png" style="width: 1103px;height: 512px;" alt="Le point de vue de l&apos;utilisateur final sur la bibliothèque des risques."></img></p>
+        <p>Les types suivants sont disponibles :</p>
+        <ul>
+            <li>
+                <p><b>Type</b> - Filtre les risques affichés en fonction du type de risque</p>
+            </li>
+            <li>
+                <p><b>Statut</b> - Filtre les risques affichés selon qu&apos;ils ont été ajoutés ou non à la mission</p>
+            </li>
+            <li>
+                <p><b>Type</b> - Filtre les risques affichés en fonction du type de risque Ce filtre n&apos;est disponible que pour les risques au niveau de l&apos;assertion.</p>
+            </li>
+            <li>
+                <p><b>Assertions</b> - Filtre les risques affichés en fonction des assertions associées. Ce filtre n&apos;est disponible que pour les risques au niveau de l&apos;assertion.</p>
+            </li>
+        </ul>
+        <p>Dans le panneau de gauche, vous pouvez également choisir de visualiser les risques par <b>indicateurs</b> ou par <b>catégories</b>.</p>
+        <p>Pour en savoir plus, voir :</p>
+        <ul>
+            <li><a href="Create-a-risk-library.htm">Créer une bibliothèque de risques</a></li>
+            <li><a href="Add-a-risk-library-version.htm">Ajouter une version de la bibliothèque des risques</a></li>
+            <li><a href="Publish-a-risk-library-version.htm">Publier une version de la bibliothèque des risques</a></li>
+            <li><a href="Associate-a-risk-library-to-a-product.htm">Associer une bibliothèque de risques à un produit</a></li>
+        </ul>
+        <h3>Marquage XBRL</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Les capacités de marquage XBRL ont été étendues pour permettre aux auteurs et aux utilisateurs finaux d&apos;ajouter des marquages pour les faits XBRL directement dans le modèle ou le fichier d&apos;engagement.</p>
+        <p class="note"><b>Remarque :</b> Cette fonctionnalité n&apos;est disponible que pour les distributeurs dans le cadre de tests bêta. Il ne sera pas déployé dans des environnements de partenariat ou de production. Pour visualiser cette fonctionnalité, ouvrez un modèle ou un fichier d&apos;engagement et apportez la modification suivante à votre URL : <code>https://&lt;nom du serveur de votre site partenaire&gt;/&lt;nom de l&apos;entreprise où vous rédigez vos textes&gt;/e/eng/&lt;identifiant&gt;/index.jsp?enable-features=customXbrlTagging</code></p>
+        <p>Lorsque le mode de révision XBRL est activé, les éléments non marqués sont surlignés en jaune. Vous pouvez sélectionner l&apos;option <b>Ajouter une balise XBRL</b> pour un élément spécifique afin de créer une balise pour celui-ci.</p>
+        <p><img src="../Resources/Images/xbrl-add-tag.png" style="width: 1166px;height: 549px;" alt="L&apos;option Add XBRL Tag pour les éléments non étiquetés."></img></p>
+        <p>Vous pouvez ensuite sélectionner les informations relatives à l <b>&apos;élément</b> et au <b>contexte de</b> la balise parmi les options disponibles dans le panneau de révision.</p>
+        <p>To learn more, see <a href="Test-custom-XBRL-tags.htm">Test custom XBRL tags</a>.</p>
+        <h3>Espacement des paragraphes dans les états financiers</h3>
+        <p><a href="Primary-author.htm">#primaryauthor </a></p>
+        <p>Le paramètre <b>Utiliser un espacement cohérent des paragraphes entre les zones de contenu</b> est désormais disponible pour permettre aux auteurs primaires d&apos;appliquer un espacement cohérent des paragraphes entre les zones de contenu dans les états financiers imprimés.</p>
+        <p>Pour en savoir plus, voir <a href="Customize-the-financial-statements-settings.htm">Imprimer les états financiers.</a></p>
+        <p><img src="../Resources/Images/product-settings-paragraph-spacing.png" style="width: 1006px;height: 710px;" alt="L&apos;option Utiliser un espacement cohérent entre les paragraphes dans les paramètres du produit."></img></p>
+        <h3>Importation de la structure de regroupement</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>L&apos;ordre des groupes financiers dans une structure de regroupement est désormais conservé lorsque vous exportez puis importez une structure de regroupement.</p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2021-06.</p>
+        <h3>Journal de signature pour les signatures électroniques simples</h3>
+        <p>Vous pouvez désormais visualiser et télécharger un journal des signatures dans le visualiseur PDF pour les documents qui ont été signés électroniquement par les clients dans les documents de requête.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Review-contact-responses.htm">Examiner les réponses des contacts</a> et <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm">Joindre des documents à un dossier de mission.</a></p>
+        <p><img src="../Resources/Images/signature-log-pdf-viewer.png" alt="Le journal des signatures."></img></p>
+        <h3>Examiner les outils pour détecter les risques</h3>
+        <p>Les utilisateurs peuvent désormais utiliser des outils de révision pour suivre les changements apportés aux risques dans le nouveau module de risques après l&apos;approbation du réviseur.</p>
+        <p><img src="../Resources/Images/risks-review-tools.png" style="width: 1066px;height: 465px;" alt="Examiner les outils du module de risque."></img></p>
+        <p>Si vous avez activé la validation au niveau du document pour le module risques, les outils de révision suivants sont à la disposition des utilisateurs :</p>
+        <ul>
+            <li>
+                <p><b>Ajouté</b> - Marque les risques qui ont été ajoutés.</p>
+            </li>
+            <li>
+                <p><b>Supprimé</b> - Marque les risques qui ont été supprimés.</p>
+            </li>
+            <li>
+                <p><b>Modifié</b> - Marque les risques qui ont été modifiés.</p>
+            </li>
+        </ul>
+        <p>Si vous avez activé l&apos;approbation individuelle des risques, seul l&apos;outil de révision <b>modifié</b> est disponible. Notez que lorsque l&apos;approbation individuelle des risques est activée, les utilisateurs ne peuvent pas supprimer un risque une fois que l&apos;évaluateur l&apos;a approuvé.</p>
+        <h3>Vérification améliorée des écarts de solde</h3>
+        <p>Les contrôles des écarts d&apos;équilibre dans les tableaux dynamiques comparent désormais les valeurs absolues des lignes étiquetées et ne tiennent pas compte du fait que la valeur est négative ou positive. Ainsi, lorsque les soldes des comptes créditeurs sont comparés à ceux des comptes débiteurs, la différence de signe entre les deux comptes n&apos;est pas signalée comme une anomalie de solde.</p>
+    </body>
+</html>

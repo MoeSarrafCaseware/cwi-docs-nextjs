@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Thresholds and maximum limits</h1>
+        <p>The following performance and scalability metrics information represent the appropriate thresholds or the estimated maximum limits recommended for SE products. You also refer to the <a href="https://docs.google.com/spreadsheets/d/1naLgb2QbGhM7xDgsng4kd2b_EUk0KB_tckONVtpm1IU/edit?usp=sharing">Comparative Analysis</a> spreadsheet to help you evaluate the performance of financial statements for your SE App.</p>
+        <h2>Engagements</h2>
+        <table class="table table-striped">
+            <col style="width: 249px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>
+                        <p>Threshold / Maximum Limit</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number of users within a single engagement file</td>
+                    <td>
+                        <p>5</p>
+                        <p class="note inline"><b>Hinweis:</b> Performance may decline if more than 5 users are actively making changes.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>File size</td>
+                    <td>No specific recommendations but engagement file creation, loading and carry forward might be impacted by the size of external documents in the engagement, for example PDFs.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Documents</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number of documents per engagement file</td>
+                    <td>275</td>
+                </tr>
+                <tr>
+                    <td>Time to load all visible documents in an engagement file</td>
+                    <td>~3 seconds</td>
+                </tr>
+                <tr>
+                    <td>Maximum file size limit for external documents</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Data page</h2>
+        <table class="table table-striped">
+            <col style="width: 349px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum number of groups</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Time to load trial balance accounts and groups</td>
+                    <td>~3 seconds</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum number of accounts</p>
+                        <p><i>(in total not per group) </i></p>
+                    </td>
+                    <td>
+                        <p>10000</p>
+                        <p>(for consolidated and non-consolidated engagements)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Time to load all accounts and groups in the trial balance</p>
+                        <p><i>(assuming a grouping structure of 800 groups)</i></p>
+                    </td>
+                    <td>~3 seconds</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Seite Hauptabschlussübersicht</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum number of groups</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Time to load trial balance accounts and groups</td>
+                    <td>~3 seconds</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum number of accounts</p>
+                        <p><i>(in total not per group) </i></p>
+                    </td>
+                    <td>
+                        <p>200 (for consolidated engagements)</p>
+                        <p>800 (for non-consolidated engagements)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Time to load all accounts and groups in the trial balance</p>
+                        <p><i>(assuming a grouping structure of 800 groups)</i></p>
+                    </td>
+                    <td>~3 seconds</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Checklisten</h2>
+        <table class="table table-striped">
+            <col style="width: 257px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Time to load visible procedures per checklist document</p>
+                        <p><![CDATA[ 
+]]><i>(including available sub-procedures, groups and subgroups)</i></p>
+                    </td>
+                    <td>
+                        <p>~2 seconds</p>
+                        <p class="bestpractice inline"><b>Best Practice:</b> Consider splitting up large checklists into multiple documents. You can set up <a href="Set-up-bulk-print.htm">bulk print</a> to print them as a single document.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum number of procedures per document</p>
+                        <p><i>(including sub-procedures, groups, sub-groups)</i></p>
+                    </td>
+                    <td>250</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (new design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Maximum number of sections per area</p>
+                        <p><![CDATA[
+]]><i>(sections used for testing consisted of: 14 tables, 14 text areas - where text areas consisted of plain text and 3 formulas)</i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Time to load a document with 30 sections per area <i>(sections used in testing consisted of: 14 tables and 14 text areas - each text area consisted of plain text and 3 formulas)</i></td>
+                    <td>~2 seconds</td>
+                </tr>
+                <tr>
+                    <td>Maximum number of areas in the document</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Time to load a document with 100 areas</td>
+                    <td>~2 seconds</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Abfragen</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum file size limit for uploads</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Generating PDF for print</h2>
+        <table class="table table-striped">
+            <col style="width: 264px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum number of pages in the document</td>
+                    <td>
+                        <p>40</p>
+                        <p class="note inline"><b>Hinweis:</b> The PDF engine we use when printing has a timeout of 5 minutes. If the print time exceeds this threshold the document will not print.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (old design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Maximum number of sections in the document</p>
+                        <p><i>(sections used for testing consisted of: 14 tables, 14 text areas - where text areas consisted of plain text and 3 formulas) </i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Time to load a document with 30 sections</p>
+                        <p><i>(sections used in testing consisted of: 14 tables and 14 text areas - each text area consisted of plain text and 3 formulas) </i></p>
+                    </td>
+                    <td>~5 seconds</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>New risk module</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Threshold / Maximum Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number of risks in the <b>RISK</b> tab</td>
+                    <td>
+                        <p>100 (if collapsed)</p>
+                        <p>20 (if expanded)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

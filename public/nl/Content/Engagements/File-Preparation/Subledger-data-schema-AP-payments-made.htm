@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Crediteuren—gemaakte betalingen</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. In dit onderwerp worden de velden in het subgrootboek Crediteuren-betalingen beschreven.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transactie-ID <br /><code>(ap_payment_made_transaction_id)</code></td>
+                    <td>
+                        <p>Een kruisverwijzing naar de grootboekpost. Deze kan verschillende niveaus bevatten die de transactie kunnen identificeren. Voorbeelden zijn kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.<![CDATA[
+]]></p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsnummer<br /><code>(ap_payment_made_payment_id)</code></td>
+                    <td>
+                        <p>De unieke ID voor elke gemaakte betaling. Mogelijk moet u velden samenvoegen om deze ID aan te maken, bijv. leverancier en betalingsnummer, zodat u elke transactie apart kunt identificeren.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Betalingsdatum<br /><code>(ap_payment_made_payment_date)</code></p>
+                    </td>
+                    <td>
+                        <p>De datum waarop de betaling is uitgevoerd of het krediet is toegepast.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Betalingsjaar<br /><code>(ap_payment_made_fiscal_year)</code></p>
+                    </td>
+                    <td>
+                        <p>Het fiscaal jaar waarin de <b>Betalingsdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsperiode <br /><code>(ap_payment_made_payment_period</code>)</td>
+                    <td>
+                        <p>De fiscale periode waarin de <b>Betalingsdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type bedrag (debet / credit)<br /> <code>(ap_payment_made_amount_credit_debit_indicator</code>)</td>
+                    <td>
+                        <p>Geeft aan of het bedrag een credit of debet is.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: <br /><code>C=credit</code>; <br /><code>D=debet</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingstype <br /><code>(ap_payment_made_payment_type</code>)</td>
+                    <td>
+                        <p>De codewaarde of indicator van de methode waarmee het debet- of creditbedrag van de transactie door de leverancier is opgeheven of toegerekend aan de schuld. Voorbeelden zijn cheques, overboekingen, kasgeld, etc.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsbedrag<br /> <code>(ap_payment_made_payment_amount</code>)</td>
+                    <td>
+                        <p>Geldbedrag van de transactie vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gerapporteerd betalingsbedrag<br /> <code>(ap_payment_made_payment_amount_reporting</code>)</td>
+                    <td>
+                        <p>Geldbedrag van de transactie dat in de gerapporteerde valuta is vastgelegd.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokale betalingsvaluta <br /><code>(ap_payment_made_payment_amount_local</code>)</td>
+                    <td>
+                        <p>Het geldbedrag van de transactie vastgelegd in de lokale valuta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boekingsstatus <br /><code>(ap_payment_made_posting_status</code>)</td>
+                    <td>
+                        <p>Geeft aan of de transactie ingeboekt is op het grootboek.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: <code>Geplaatst</code> of <code>Niet Geplaatst</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batchnummer <br /><code>(ap_payment_made_batch_id</code>)</td>
+                    <td>
+                        <p>Een batch identifier gegenereerd door het bronsysteem.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsomschrijving <br /><code>(ap_payment_made_description</code>)</td>
+                    <td>
+                        <p>Een omschrijving van de betaling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bron-ID <br /><code>(ap_payment_made_source_id</code>)</td>
+                    <td>
+                        <p>Boekingsbron. De code voor de bron van waaruit de journaalpost is geplaatst, zoals een verkoopjournaal, kassabonnenjournaal, algemeen journaal, loonkostenjournaal, handmatige invoer door accountant, spreadsheet, etc.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leverancier-ID<code>(ap_payment_made_supplier_account_id</code>)</td>
+                    <td>
+                        <p>Identificatiecode van de leverancier aan wie betaling is overgemaakt of bij wie kredieten zijn toegepast.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam leverancier <br /><code>(ap_payment_made_supplier_account_name</code>)</td>
+                    <td>
+                        <p>De naam van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboekt door <br /><code>(ap_payment_made_entered_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die het record aanmaakte.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van invoer <br /><code>(ap_payment_made_entered_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde tijd <br /><code>(ap_payment_made_entered_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door <br /><code>(ap_payment_made_approved_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die de post goedkeurde.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum goedkeuring <br /><code>(ap_payment_made_approved_by_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijdstip van goedkeuring <br /><code>(ap_payment_made_approved_by_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door <br /><code>(ap_payment_made_last_modified_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de laatste persoon die deze post aanpaste.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van laatste wijziging <br /><code>(ap_payment_made_last_modified_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijd laatste wijziging <br /><code>(ap_payment_made_last_modified_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurnummer <br /><code>(ap_payment_made_invoice_number</code>)</td>
+                    <td>
+                        <p>Een identificatienummer voor een intern of extern gegenereerde transactie. Voorbeelden zijn het chequenummer, betalingskenmerk, of origineel document-ID.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurdatum <br /><code>(ap_payment_made_invoice_date</code>)</td>
+                    <td>
+                        <p>De datum bij een extern gegenereerde transactie. Voorbeelden zijn de chequedatum of uitvoerdatum van de overboeking.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit <br /><code>(ap_payment_made_business_unit_code</code>)</td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grootboekrekeningnummer (debet) <br /><code>(ap_payment_made_gl_debit_account_number</code>)</td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de debetzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grootboekrekeningnummer (krediet) <br /><code>(ap_payment_made_gl_credit_account_number</code>)</td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de creditzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Rekening-ID <br /><code>(ap_payment_made_line_account_id</code>)</td>
+                    <td>
+                        <p>De grootboekrekeningcode van de grootboekomzetrekening. Deze kan een subrekening-ID bevatten, net als verschillende niveaus die de rekening kunnen identificeren, waaronder kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Omschrijving van rekening <br /><code>(ap_payment_made_line_account_description</code>)</td>
+                    <td>
+                        <p>Een beschrijving van de rekening waarvan de identificatie verschijnt in <b>Lijndetail - Rekening-ID</b>.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsvaluta <br /><code>(ap_payment_made_payment_amount_currency</code>)</td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het betalingsbedrag.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gerapporteerde betalingsvaluta <br /><code>(ap_payment_made_payment_amount_reporting_currency</code>)</td>
+                    <td>
+                        <p>De gerapporteerde valuta die betrekking heeft op het betalingsbedrag voor niet-geconsolideerde rapporten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokale betalingsvaluta <br /><code>(ap_payment_made_payment_amount_local_currency</code>)</td>
+                    <td>
+                        <p>De valuta voor lokale rapportageverplichtingen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boekings-ID <br /><code>(ap_payment_made_journal_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor een journaalpost.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

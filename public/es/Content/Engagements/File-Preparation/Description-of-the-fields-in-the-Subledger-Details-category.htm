@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transaction data display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>SUBLEDGER DETAILS</b> category that appear in the General ledger dataset.</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Identifier Type (<code>identifier_type</code>)</h2>
+        <p>Código identificador de los datos dentro del libro auxiliar.</p>
+        <h3>Requisitos</h3>
+        <p>
+            <ul>
+                <li>Less than 2,500 unique values. These values must be tagged to one of:<ul><li>CU - Customers</li><li>Gastos pagados por anticipado</li><li>SU - Suppliers</li><li>EM-Empleados</li><li>Activos de inversión</li><li>OT - Other</li><li>Activos de capital (activos fijos) (CA)</li><li>IN - Inventory</li><li>Compromisos de deuda</li></ul></li>
+            </ul>
+        </p>
+        <h2>Identifier Code (<code>identifier_code</code>)</h2>
+        <p>Código identificador de los datos dentro del libro auxiliar. <br />Ejemplo: número de cliente, número de proveedor, número de empleado. <br />Ejemplos: &quot;C123&quot;, &quot;V6589&quot;, &quot;6597&quot;.</p>
+        <h3>Requisitos</h3>
+        <p>If the identifier type is tagged, this must also be tagged.</p>
+        <h2>Identifier Description (<code>identifier_description</code>)</h2>
+        <p>Nombre asociado con el código identificador. <br />Ejemplos: &quot;ABC Customer Ltd.&quot;, &quot;DEF Purchase Inc.&quot;, &quot;Sally Jones&quot;.</p>
+        <h2>Identifier Active (<code>identifier_active</code>)</h2>
+        <p>Indica si el código identificador está activo o inactivo.</p>
+        <h2>Identifier Street (<code>identifier_street</code>)</h2>
+        <p>Identifier&apos;s street - line 1. <br />Ejemplos: &quot;123 Anywhere Street&quot;, &quot;Anywhere 26&quot;.</p>
+        <h2>Calle 2 del identificador</h2>
+        <p>Detalle de dirección de la dirección del identificador: línea 2. <br />Ejemplos: &quot;Suite 1100&quot;, &quot;Unit 002B&quot;.</p>
+        <h2>Identifier City (<code>identifier_city</code>)</h2>
+        <p>Ciudad donde se ubica el identificador. <br />Ejemplos: &quot;Toronto&quot;, &quot;Los Ángeles&quot;.</p>
+        <h2>Estado o provincia del identificador</h2>
+        <p>Estado o provincia donde se ubica el identificador. <br />Ejemplos: &quot;Ontario&quot;, &quot;California&quot;.</p>
+        <h2>Identificador de código postal</h2>
+        <p>Código postal donde se ubica el identificador. <br />Examples: &quot;94704&quot;, &quot;M5A 0L6&quot;.</p>
+        <h2>Identifier Country (<code>identifier_country</code>)</h2>
+        <p>País (código) donde se ubica el identificador.</p>
+        <h2>Document Number (<code>document_number</code>)</h2>
+        <p>Identificador asociado con el documento de origen. This is the document that supports the transaction entered into the ERP. <br />Ejemplos: &quot;PO4569&quot; para el pedido de compra, &quot;7956&quot; para el cheque.</p>
+        <h2>Número del documento al que aplica</h2>
+        <p>El número de documento asociado con el documento de origen utilizado para compensar valores debe y haber. Usado para calcular saldo abierto cuando el pago, adelanto, nota de crédito/débito no se ha aplicado por completo, permite el cálculo del elemento abierto. <br />Ejemplos: &quot;INV-001&quot;, &quot;121296&quot;.</p>
+    </body>
+</html>

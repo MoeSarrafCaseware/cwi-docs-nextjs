@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Le microservice OAuth</h1>
+        <p>Le microservice OAuth fournit des capacités de certification OAuth. Vous pouvez utiliser le microservice OAuth pour obtenir l&apos;autorisation d&apos;accéder aux informations d&apos;une personne, par exemple pour importer des données.</p>
+        <h2>À propos d&apos;OAuth</h2>
+        <p><b>OAuth</b> est une norme ouverte pour la délégation d&apos;accès. CWI l&apos;utilise pour permettre aux applications d&apos;accéder aux informations stockées sans fournir les mots de passe, ce qui donnerait un accès trop large. Des entreprises telles que Google utilisent OAuth pour permettre aux utilisateurs de partager des informations sur leurs comptes avec des applications ou des sites web tiers. OAuth permet d&apos;autoriser l&apos;accès sans partager les informations d&apos;identification et de révoquer l&apos;accès si nécessaire.</p>
+        <p>Vous utilisez OAuth chaque fois que vous cliquez sur le bouton &quot;Se connecter avec Google&quot; L&apos;application à laquelle vous accédez demande l&apos;autorisation de Google.</p>
+        <p>OAuth fonctionne avec HTTP. Le protocole permet à un serveur d&apos;autorisation de délivrer un jeton d&apos;accès si le propriétaire de la ressource le permet. Il permet différents niveaux d&apos;accès, tels que <i>lecture</i> au lieu de <i>lecture-écriture</i>, ou <i>unidirectionnel</i> au lieu de <i>bidirectionnel</i>. Il permet au propriétaire de la ressource de définir la granularité de l&apos;accès et de révoquer l&apos;accès, si nécessaire.</p>
+        <p>Le microservice OAuth de CWI ne prend actuellement en charge que l&apos;OAuth 1.0a, mais il est prévu qu&apos;il prenne également en charge l&apos;OAuth 2.0.</p>
+        <p>Notez qu&apos;une application (client) qui utilise OAuth doit d&apos;abord être enregistrée auprès du fournisseur. Cela se produit généralement aux premiers stades du développement, lorsque vous obtenez les informations sur le développement.</p>
+        <h2>Le processus OAuth</h2>
+        <p>
+            <p>Le flux général des demandes et des informations se déroule comme suit :</p>
+            <p><img src="OAuthFlow.png" /></p>
+        </p>
+        <p>Le client est votre application. L&apos;API de service est le microservice OAuth.</p>
+        <p>Lorsque vous utilisez le SDK OAuth, n&apos;oubliez pas cela :</p>
+        <ul>
+            <li>
+                <p>Les mises en œuvre varient d&apos;un fournisseur à l&apos;autre.</p>
+            </li>
+            <li>
+                <p>Nous ne disposons actuellement d&apos;aucun mécanisme permettant de rafraîchir les jetons d&apos;accès en cas d&apos;expiration.</p>
+            </li>
+        </ul>
+        <h2>Outils et environnement pour le SDK OAuth</h2>
+        <p>Lorsque vous utilisez des images Docker, vous avez besoin de Docker lui-même, d&apos;un accès à un référentiel où les images Docker sont stockées, d&apos;un registre des images disponibles et d&apos;un client HTTP.</p>
+        <h3>Outils nécessaires</h3>
+        <p>Pour utiliser le SDK OAuth, vous devez préparer ou installer les programmes suivants :</p>
+        <ul>
+            <li>
+                <p>Docker ; si vous souhaitez une interface utilisateur pour faciliter l&apos;utilisation de Docker, nous vous recommandons Kitematic.</p>
+            </li>
+            <li>
+                <p>Client AWS pour se connecter au registre des conteneurs EC2.</p>
+            </li>
+            <li>
+                <p>Un client HTTP, tel que Postman.</p>
+            </li>
+        </ul>
+        <p>Pour utiliser le système, vous devez installer Docker. Pour stocker, gérer et exécuter les images de conteneurs Docker, nous utilisons le registre de conteneurs Amazon EC2 (ECR).</p>
+        <h3>Installer Docker</h3>
+        <p>Pour installer Docker, rendez-vous sur <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/</a></p>
+        <p>Installez la dernière version stable pour votre plateforme.</p>
+        <h3>Installer le CLI AWS</h3>
+        <p>La plupart des contrôles sont effectués via l&apos;interface de ligne de commande de Docker, mais on y accède via la CLI d&apos;AWS.</p>
+        <p>Pour installer le CLI AWS, rendez-vous sur <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html">http://docs.aws.amazon.com/cli/latest/userguide/installing.html</a> et suivez les instructions.</p>
+        <h3>Installer le client Postman</h3>
+        <p>Pour travailler avec l&apos;implémentation OAuth, vous avez besoin d&apos;un client qui traite les messages https. Nous recommandons l&apos;utilisation du client Postman natif. (Notez que l&apos;application Postman Chrome est obsolète)</p>
+        <p>Pour installer le client Postman, rendez-vous sur <a href="https://www.getpostman.com/">https://www.getpostman.com/</a> et suivez les instructions qui y figurent.</p>
+        <h3>Créer un projet AWS</h3>
+        <p>Pour travailler avec le système Amazon, vous avez besoin d&apos;un profil. Cette opération ne doit être effectuée qu&apos;une seule fois.</p>
+        <ol>
+            <li>
+                <p>Obtenez votre AWS Key ID et votre Secret Access Key auprès de Solutions.</p>
+            </li>
+            <li>
+                <p>S&apos;il n&apos;existe pas de profil AWS CLI pour ECR, créez-en un :<borderedcode>aws configure --profile <i>votre-profil</i></borderedcode></p>
+            </li>
+            <ul>
+                <li>
+                    <p>La région doit être <inlinecode>us-east-2</inlinecode></p>
+                </li>
+                <li>
+                    <p>Vous pouvez définir n&apos;importe quel format de sortie par défaut, mais ces exemples utilisent json.</p>
+                </li>
+            </ul>
+        </ol>
+        <h3>Configurer l&apos;environnement OAuth</h3>
+        <p>Pour établir une connexion avec le microservice OAuth, vous devez :</p>
+        <ol>
+            <li>
+                <p>Tirez l&apos;image du registre Docker de Caseware.</p>
+            </li>
+            <li>
+                <p>Préparez le dossier local qui contiendra le fichier de configuration.</p>
+            </li>
+            <li>
+                <p>Régler le <inlinecode>PROFILS.DE.PRINTEMPS.ACTIFS</inlinecode> pour cette durée d&apos;exécution.</p>
+            </li>
+            <li>
+                <p>Configurez chaque nouveau fournisseur. Les fournisseurs existants sont préconfigurés.</p>
+            </li>
+        </ol>
+        <h3>Définir les variables d&apos;environnement d&apos;une image Docker</h3>
+        <p>Vous pouvez définir ou remplacer les variables d&apos;environnement existantes pour une image Docker de trois façons. Ces méthodes s&apos;appliquent aux variables d&apos;environnement simples (sans tableau). (Les autres arguments de docker run ont été laissés de côté pour plus de clarté)</p>
+        <p>Vous pouvez spécifier la variable d&apos;environnement avec l&apos;option <inlinecode>E</inlinecode> à <inlinecode>docker run</inlinecode>.</p><code>$ docker run -e SPRING.PROFILES.ACTIVE=dev</code><p>Vous pouvez énumérer les variables d&apos;environnement dans un fichier et inclure le nom du fichier avec l&apos;option <inlinecode>--env-file</inlinecode> à <inlinecode>docker run</inlinecode>.</p><code>$ docker run --env-file xero-dev-env</code><p>Vous pouvez utiliser l&apos;un ou l&apos;autre de ces éléments.</p>
+        <h3>Se connecter et récupérer l&apos;image Docker du SDK OAuth</h3>
+        <p>Chaque microservice a son propre référentiel, les différentes versions d&apos;un même microservice utilisent un référentiel unique.</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre profil AWS sur ECR.</p>
+            </li>
+            <ul>
+                <li>
+                    <p>On Windows:</p><code>Invoke-Expression -Command (aws ecr get-login --profile <i>your-profile</i> --region us-east-2)</code></li>
+                <li>
+                    <p>Sur les variantes Unix, Linux ou MacOS :</p>
+                </li><code>$(aws ecr get-login --profile <i>your-profile</i> --region us-east-2)</code></ul>
+            <li>
+                <p>Tirez l&apos;image du registre Docker de Caseware.</p>
+            </li><code>$ docker pull cw-registry:9000/dev/cw-oauth</code><li>
+                <p>Vérifiez que l&apos;image du service OAuth a été extraite du registre Docker de Caseware.</p>
+            </li><code>$ docker images</code><code>DÉPÔT TAG IMAGE ID CRÉÉ TAILLE</code><code>cw-registry/cw-oauth latest ce717fdb2222 il y a 6 secondes 336.4 MB</code><li>
+                <p>Préparer un dossier local pour contenir les fichiers de configuration partagés avec le conteneur docker. Dans cet exemple provenant d&apos;un système Linux, le dossier a déjà été créé et contient des fichiers de configuration pour Quickbooks et pour Xero.</p>
+            </li><code>$ pwd &amp;&amp; ls</code><code>/home/user/oauth-configs</code><code>quickbooks.json xero.json</code><li>
+                <p>Régler le <inlinecode>PROFILS.DE.PRINTEMPS.ACTIFS</inlinecode> pour définir le profil d&apos;exécution de cette connexion OAuth. Trois valeurs sont possibles : <inlinecode>dev</inlinecode>, <inlinecode>Tests</inlinecode>ET <inlinecode>produit</inlinecode>.</p>
+                <p>
+                    <inlinecode>dev</inlinecode> utilise le stockage local des jetons en mémoire.</p>
+                <p>
+                    <inlinecode>Tests</inlinecode> ET <inlinecode>produit</inlinecode> se connecter à Collaborate pour le stockage des jetons.</p><code>SPRING.PROFILES.ACTIVE=dev</code></li>
+        </ol>
+        <h2>Add a New Provider</h2>
+        <p>Pour chaque fournisseur, vous avez besoin</p>
+        <ul>
+            <li>
+                <p>Un fichier de configuration, nommé pour le fournisseur.</p>
+            </li>
+            <li>
+                <p>Deux variables d&apos;environnement sont définies, nommées <inlinecode>CLÉ_DU_CONTENU_DU_FOURNISSEUR</inlinecode> ET <inlinecode>SECRET_DU_CONTENU_DU_FOURNISSEUR</inlinecode>.</p>
+            </li>
+        </ul>
+        <p>Les informations relatives aux fichiers de configuration et aux variables d&apos;environnement proviennent du fournisseur.</p>
+        <h3>Créer les fichiers de configuration OAuth</h3>
+        <p>
+            <p>Les fichiers de configuration OAuth se trouvent dans le dossier que vous avez créé. Les fichiers de configuration sont des fichiers JSON, nommés en fonction du fournisseur, et contiennent un objet avec ces quatre propriétés. Les valeurs proviennent du fournisseur.</p>
+            <p></p>
+            <p>
+                <table class="table table-striped">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>Propriété</td>
+                            <td>Valeur</td>
+                        </tr>
+                        <tr>
+                            <td>requestTokenURL</td>
+                            <td>URL spécifiée par le fournisseur pour acquérir un jeton de requête.</td>
+                        </tr>
+                        <tr>
+                            <td>autorisationURL</td>
+                            <td>URL spécifiée par le fournisseur pour diriger le propriétaire d&apos;une ressource (c&apos;est-à-dire l&apos;utilisateur) vers la connexion.</td>
+                        </tr>
+                        <tr>
+                            <td>accessTokenURL</td>
+                            <td>URL spécifiée par le fournisseur pour acquérir un jeton d&apos;accès après avoir reçu une subvention du propriétaire d&apos;une ressource.</td>
+                        </tr>
+                        <tr>
+                            <td>scopeKeyword</td>
+                            <td>Paramètre spécifique au fournisseur utilisé pour identifier la ressource. Dans l&apos;exemple, realmId fait référence à l&apos;identifiant d&apos;une entreprise de Quickbooks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </p><![CDATA[
+
+]]><p>Par exemple :</p><code>{ <br /> &quot;requestTokenURL&quot; : &quot;https://oauth.intuit.com/oauth/v1/get_request_token&quot;,<br /> &quot;authorizationURL&quot; : &quot;https://appcenter.intuit.com/Connect/Begin&quot;, <br /> &quot;accessTokenURL&quot; : &quot;https://oauth.intuit.com/oauth/v1/get_access_token&quot;, <br /> &quot;scopeKeyword&quot; : &quot;realmId&quot; <br />}</code><h3>Définir les variables d&apos;environnement pour le fournisseur</h3><p>Les clés d&apos;un fournisseur proviennent de ce dernier. En général, ils sont disponibles dans le cadre du programme de développement.</p><ol><li><p>Pour chaque fournisseur, définissez deux variables d&apos;environnement. Les noms des variables d&apos;environnement sont de la forme <inlinecode>CLÉ_DU_CONSOMMATEUR_DU_FOURNISSEUR</inlinecode> ET <inlinecode>SECRET_DU_CONSOMMATEUR_DU_FOURNISSEUR</inlinecode>. Par exemple :</p><code>QUICKBOOKS_CONSUMER_KEY=xxxxxxxxxxxxxxxxxxxxx</code><code>QUICKBOOKS_CONSUMER_SECRET=xxxxxxxxxxxxxxxxxx</code></li></ol><h2>Se connecter au microservice OAuth</h2><p>Pour vous connecter au microservice OAuth, vous avez besoin de :</p><ul><li><p>Docker</p></li><li><p>Un client HTTP tel que Postman ou cURL</p></li><li><p>Un éditeur de texte</p></li></ul><p>Pour vous connecter, vous devez</p><ol><li><p>Démarrer le microservice OAuth</p></li><li><p>Démarrer le flux OAuth</p></li><li><p>Obtenir les informations nécessaires à la création d&apos;un en-tête d&apos;autorisation OAuth1</p></li></ol><h3>Démarrer le microservice OAuth</h3><ol><li><p>Démarrer le service OAuth avec <inlinecode>docker run</inlinecode>en utilisant les drapeaux <inlinecode>-p hostport:containerport</inlinecode> ET <inlinecode>V</inlinecode>. Les <inlinecode>P</inlinecode> transfère les ports et le drapeau <inlinecode>V</inlinecode> monte le répertoire hôte spécifié dans le conteneur à l&apos;adresse <inlinecode>/etc/oauth</inlinecode>. La première moitié de l&apos;argument au <inlinecode>V</inlinecode> spécifie le dossier local que vous avez créé précédemment.</p></li><p><code>$ docker run -p 8000:8000 --env-file <i>votre-env-file</i> -v </code></p><p><code>/home/user/oauth-configs:/etc/oauth cw-registry/cw-oauth</code></p><p><code>[2017-08-09 15:12:54.932] INFO [main] c.c.o.m.OAuthApplication - - Démarrage de OAuthApplication sur localhost avec PID 1 (/opt/oauth/oauth.microservice-1.0-SNAPSHOT.jar démarré par root dans /)</code></p></ol><h3>Démarrer le flux OAuth</h3><ol><li><p>Pour lancer le flux OAuth, envoyez un message <inlinecode>Affiché</inlinecode> demande à <inlinecode>/getAuthUrl</inlinecode> avec le corps de la requête suivant :</p></li><code>{ &quot;baseParams&quot;:{ &quot;provider&quot; : &quot;nameOfProvider&quot;, &quot;firmName&quot; : &quot;nameOfYourFirm&quot;, &quot;sessionId&quot; : &quot;yourSessionId&quot; }, &quot;callbackUrl&quot; : &quot;http://localhost:8000/debugPrintCallback&quot; }</code><ul><li><p>Après l&apos;authentification du propriétaire de la ressource, le fournisseur envoie une demande à l&apos;URL de rappel. La demande du fournisseur contient le jeton OAuth résultant et d&apos;autres paramètres liés à la ressource. Dans cet exemple, nous utilisons le <inlinecode>/debugPrintCallback</inlinecode> fourni par notre service OAuth.</p></li><li><p>Le corps de la demande contient une URL en clair pour rediriger un client vers la connexion et l&apos;authentification :</p></li><code>https://appcenter.intuit.com/Connect/Begin?oauth_token=qyprdFnE2EH741CXUAXScJfgtwOWEcKlrykA6UEjVAVGXCb7&amp;oauth_callback=http%3A%2F%2Flocalhost:8000%2FdebugPrintCallback</code></ul><li><p>Connectez-vous à l&apos;URL indiquée dans la réponse précédente et authentifiez-vous.</p></li><ul><li><p>Après une authentification réussie, le fournisseur OAuth redirige vers une page contenant une chaîne de rappel. Par exemple :</p></li><code>oauth_token=qyprdFnE2EH741CXUAXScJgtwOWEcKlrykA6UEjVAVGXCb7&amp;oauth_verifier=k1tzqb5&amp;realmId=193514496812594&amp;dataSource=QBO</code></ul><li><p>Pour compléter le flux OAuth, envoyez un message <inlinecode>Affiché</inlinecode> demande à <inlinecode>/completeOAuthFlow</inlinecode> avec le corps de requête suivant, qui contient la chaîne de rappel reçue à l&apos;étape précédente.</p></li><code>{ &quot;baseParams&quot;:{ &quot;provider&quot; : &quot;nameOfProvider&quot;, &quot;firmName&quot; : &quot;nameOfYourFirm&quot;, &quot;sessionId&quot; : &quot;yourSessionId&quot; }, &quot;callbackString&quot; : &quot;oauth_token=qyprdDy1MhEGj4IAV9XTgM4xBnVti2uSivvsF0xKrkPsT1iq&amp;oauth_verifier=d5ahpwg&amp;realmId=123145849620082&amp;dataSource=QBO&quot; }</code><li><p>Obtenir une liste des ressources autorisées en envoyant un <inlinecode>Affiché</inlinecode> demande à <inlinecode>/getAuthorizedScopes</inlinecode> avec le corps de la requête suivant :</p></li><code>{&quot;provider&quot; : &quot;nameOfProvider&quot;, &quot;sessionId&quot; : &quot;yourSessionID&quot;, &quot;firmName&quot; : &quot;nameOfYourFirm&quot; }</code><li><p>Le fichier JSON renvoyé contient une liste de ressources identifiées en tant que <inlinecode>Champ d&apos;application</inlinecode>.</p></li><code>[ {&quot;scope&quot; : &quot;193514496812594&quot;, &quot;oAuthServiceId&quot;: &quot;829jgp09825rg254r0t2g4&quot; }, {&quot;scope&quot; : &quot;164512345412232&quot;, &quot;oAuthServiceId&quot;: 092w42s8d7g0vs98fs).</code></ol><h3>Obtenir un en-tête d&apos;autorisation OAuth1</h3><p>Chaque requête sortante vers un fournisseur OAuth1 nécessite une signature, générée à partir d&apos;une combinaison de :</p><ul><li><p>Demande d&apos;URL avec paramètres</p></li><li><p>Verbe HTTP</p></li><li><p>Paramètres de la demande</p></li><li><p>Clé du consommateur et secret du consommateur émis par le fournisseur</p></li></ul><p>Pour générer un en-tête d&apos;autorisation OAuth1 :</p><ol><li><p>Envoyer <inlinecode>Affiché</inlinecode> demande à <inlinecode>/getHeader</inlinecode> avec le corps de la requête suivant :</p></li><code>{&quot;baseParams&quot; : {&quot;provider&quot; : &quot;nameOfProvider&quot;, &quot;sessionId&quot; : &quot;yourSessionID&quot;, &quot;firmName&quot; : &quot;nameOfYourFirm&quot; }, &quot;oAuthServiceId&quot; : &quot;829jgp09825rg254r0t2g4&quot;, &quot;url&quot;: &quot;https://sandbox-quickbooks.api.intuit.com/v3/company/193514496812594/account/90?minorversion=4&quot; }</code><ul><li><p>Le JSON renvoyé contient une chaîne de caractères double-quote pour l&apos;en-tête Authorization dans la requête sortante.</p></li></ul><code>{&quot;headerName&quot; : &quot;Authorization&quot;, &quot;headerValue&quot; : &quot;OAuth oauth_nonce=\&quot;989043552\&quot;, oauth_signature=\&quot;uRttVCxc+bUQtO8ZZ7AvPQnSkgM=\&quot;, oauth_token=\&quot;qyprd9su2vdsQCGS37RmXZ74WowKG1dxH9j1HrM12R7Echi2\&quot;, oauth_consumer_key=&quot;UUKVDZHWBYTxLniTfHBjJDLLLKBUR\&quot;, oauth_timestamp=\&quot;1502288322\&quot;, oauth_signature_method=\&quot;HMAC-SHA1\&quot;, oauth_version=\&quot;1.0\&quot;&quot; }</code><li><p>Construire l&apos;en-tête d&apos;autorisation OAuth1 pour que la demande aboutisse. N&apos;oubliez pas de supprimer les caractères d&apos;échappement backslash.</p></li><li><p>Placez l&apos;en-tête dans votre requête sortante vers l&apos;URI de l&apos;API.</p></li></ol><h2>Modifier votre référentiel pour les importations</h2><p>Pour plus d&apos;informations sur la modification de votre configuration afin de gérer des types d&apos;importations spécifiques, reportez-vous au <a href="https://us.cwcloudtest.com/sdk-se-develop/p/documentation/cloud/Content/Reference/SE/tutorial-import-and-automap.html#">didacticiel sur l&apos;importation et l&apos;automatisation</a> dans la référence de l&apos;API SE.</p></body>
+</html>

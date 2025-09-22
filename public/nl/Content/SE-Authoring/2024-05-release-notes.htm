@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2024-05 release notes</h1>
+        <p>Welkom bij de Caseware AiDA 05 release! Deze release bevat belangrijke ontwerpupdates voor de Risk Library en de productinstellingen, evenals updates voor Cloud Connector, een nieuwe functie waarmee gebruikers proefbalansgegevens kunnen synchroniseren tussen verschillende opdrachten en meer.</p>
+        <h2>Updates voor cloudservices</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p><img src="../Resources/Images/cloud-connector-redesign.png" style="width: 928px;height: 492px;" alt="Een Microsoft Excel-bestand met het deelvenster Caseware Cloud Connector geopend." /></p>
+        <p>Er zijn verschillende verbeteringen aangebracht in Cloud Connector als onderdeel van deze release:</p>
+        <ul>
+            <li>
+                <p>Het deelvenster Cloud Connector heeft nu een nieuw ontwerp.</p>
+            </li>
+            <li>
+                <p>Er is nu een laadindicator toegevoegd aan het deelvenster, zodat je weet dat je gegevens nog steeds worden geladen.</p>
+            </li>
+            <li>
+                <p>Rekeningen en groepen met een saldo van nul worden nu standaard verborgen. Je kunt het selectievakje <b>Inclusief nulsaldo-items</b> inschakelen om deze items weer te geven.</p>
+            </li>
+            <li>
+                <p>Cloud Connector-formules ondersteunen nu het gebruik van gegevens van de moedermaatschappij, dochterondernemingen en geconsolideerde gegevens voor consolidatieopdrachten.</p>
+            </li>
+            <li>
+                <p>Wanneer je een groep toevoegt aan je spreadsheet vanuit het deelvenster Cloud Connector, worden nu ook alle zichtbare subgroepen van die groep toegevoegd.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Bekijk de volgende video&apos;s voor demo&apos;s van de Cloud Connector-updates:</p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1iHDeymHStT-lUZZESWOevLWEMqQ1T0-u/view?usp=sharing">Inclusief nulsaldo rekeningen</a></p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1UpQyffhD-igOQWHllPKj_GZUXo5Qofu9/view?usp=sharing">Consolidatiegegevens voor Cloud Connector</a></p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/14uiWLYxecyNGoTas_BwrRG54jbnRM1E8/view?usp=sharing">Alle zichtbare subgroepen van een groep toevoegen</a></p>
+            </li>
+        </ul>
+        <p>Zie <a href="Insert-data-using-the-right-pane.htm">Gegevens invoegen met behulp van het rechterdeelvenster</a>voor meer informatie.</p>
+        <h2>Bulkacties voor documenten</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>De pagina <b>Documenten</b> biedt nu de optie om wijzigingen aan te brengen in meerdere documenten tegelijk.</p>
+        <p><img src="../Resources/Images/documents-page-bulk-actions-setting.png" alt="De instelling Bulkacties in het menu Meer acties voor de pagina Documenten." /></p>
+        <p>Als je de optie <b>Bulkacties</b> inschakelt in het menu <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) op de pagina <b>Documenten</b> , kun je meerdere documenten selecteren en vervolgens al die documenten in één keer verplaatsen, verwijderen of aftekenen.</p>
+        <p>Merk op dat:</p>
+        <ul>
+            <li>
+                <p>Firmware auteurs kunnen documenten niet herschikken in groepen die vooraf zijn gedefinieerd door primaire auteurs</p>
+            </li>
+            <li>
+                <p>Eindgebruikers kunnen geen documenten verwijderen die zijn gemaakt door primaire auteurs of bedrijfsauteurs</p>
+            </li>
+            <li>
+                <p>De optie om documenten in bulk af te tekenen is alleen beschikbaar in opdrachten</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/documents-page-bulk-actions.png" style="width: 1236px;height: 589px;" alt="De pagina Documenten met Bulkacties ingeschakeld." /></p>
+        <p>Als gebruikers documenten proberen te verwijderen waar ze geen toestemming voor hebben, verschijnt er een lijst met documenten die ze niet kunnen verwijderen in het bevestigingsvenster.</p>
+        <p><img src="../Resources/Images/bulk-actions-delete-documents-dialog.png" style="width: 976px;height: 464px;" alt="Het bevestigingsvenster Documenten verwijderen toont welke documenten niet kunnen worden verwijderd." /></p>
+        <p>Wanneer gebruikers documenten in bulk aftekenen, kunnen ze de documenten bekijken voordat ze de aftekening voltooien. De <b>Statuskolom</b> in het dialoogvenster Documenten selecteren beoordelen informeert je over aanvullende informatie die je misschien wilt weten voordat je de documenten ondertekent. Als u bijvoorbeeld een controlelijst aftekent, maar niet alle procedures zijn afgetekend, wordt deze informatie weergegeven in de kolom <b>Status</b> . Je wordt ook geïnformeerd als ze documenten hebben geselecteerd die niet kunnen worden afgetekend.</p>
+        <p><img src="../Resources/Images/bulk-actions-review-selected-documents.png" style="width: 507px;height: 417px;" alt="Het dialoogvenster Geselecteerde documenten verplaatsen." /></p>
+        <p>Als u de gewenste acties hebt uitgevoerd, kunt u <b>Bulkacties</b> uitschakelen in het menu <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) of het pictogram <b>Sluiten</b> (<img src="../Resources/Images/icon-remove-from-chart.png" style="vertical-align: text-bottom;" alt=" " />) selecteren.</p>
+        <p>Zie <a href="https://drive.google.com/file/d/1O6xsiW3qsTI4WpA_0y1YMbSaIhbQ23Is/view?usp=sharing">Bulkacties</a> om een videodemo van deze functie te bekijken.</p>
+        <p>Zie <a href="Finalize-your-draft.htm">Je concept afmaken voor</a>meer informatie <a href="Finalize-your-draft.htm">.</a></p>
+        <p><img src="../Resources/Images/bulk-actions-close.png" style="width: 999px;height: 496px;" alt="Het pictogram Sluiten voor bulkacties in de rechterbovenhoek van de pagina Documenten." /></p>
+        <h2>Risicobibliotheek ontwerp updates</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Er zijn verschillende wijzigingen aangebracht in het ontwerp van de pagina <b>Risicobibliotheek</b> om de bruikbaarheid te verbeteren, waaronder</p>
+        <ul>
+            <li>
+                <p>Het filter <b>VIEW BY</b> is nu standaard ingesteld op <b>Indicators</b> . De optie <b>Categorieën</b> voor het filter is hernoemd naar <b>Cycli</b> of <b>Gebieden</b> , afhankelijk van of er cycli of gebieden worden gebruikt in de risicobibliotheek. Als er geen indicatoren worden gebruikt in de risicobibliotheek, worden de risico&apos;s weergegeven per cyclus of gebied.</p>
+            </li>
+            <li>
+                <p>Ingevouwen risicokaarten tonen nu alle beweringen die op het risico zijn toegepast, evenals de cyclus of het gebied dat bij het risico hoort, indien van toepassing.</p>
+            </li>
+            <li>
+                <p>De nummerindicator voor risicogroepen is nu groter en wordt naast de groepsnaam weergegeven in plaats van helemaal rechts op het scherm.</p>
+            </li>
+            <li>
+                <p>De vervolgkeuzelijst <b>Categorie</b> is nu de vervolgkeuzelijst <b>Cycli</b> of <b>Gebieden</b> , afhankelijk van of er cycli of gebieden worden gebruikt in de risicobibliotheek. Risicogroepen worden in de vervolgkeuzelijst weergegeven als subcategorieën van de cycli of gebieden waaraan ze zijn gekoppeld.</p>
+            </li>
+            <li>
+                <p>Er is nu een filter voor <b>cycli</b> beschikbaar, zodat je risico&apos;s op cyclus kunt filteren.</p>
+            </li>
+            <li>
+                <p>U kunt nu alle cycli of alle risicogroepen samenvouwen en uitvouwen.</p>
+            </li>
+        </ul>
+        <h2>Kolommen met nulsaldo weergeven in dynamische tabellen</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Je kunt nu instellen dat dynamische tabelkolommen automatisch worden verborgen als de kolom alleen nulsaldi bevat uit de tabelinstellingen.</p>
+        <p>Wanneer je een nieuwe dynamische tabel maakt in een sjabloon of engagement, staat de instelling <b>Nulsaldo kolommen verbergen</b> standaard aan. Voor bestaande dynamische tabellen die vóór deze versie zijn aangemaakt, is de instelling uitgeschakeld.</p>
+        <p>Zie <a href="Display-zero-balance-columns-in-dynamic-tables.htm">Kolommen groeperen in dynamische tabellen</a>voor meer informatie.</p>
+        <p><img src="../Resources/Images/dynamic-table-settings-hide-zero-balance-columns.png" style="width: 198px;height: 353px;" alt="The Hide zero balance columns setting in the dynamic table settings." /></p>
+        <h2>Customize headings in financial statements</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>De volgende updates zijn doorgevoerd om je meer aanpassingsmogelijkheden te geven voor koppen in financiële overzichten:</p>
+        <ul>
+            <li>
+                <p>Het dialoogvenster Opties voor opmaak bevat nu een veld om de lettergrootte voor gebiedstitels in te stellen.</p>
+            </li>
+            <li>
+                <p>Je kunt nu nummering toevoegen voor gebiedstitels in het dialoogvenster Opties voor nummeringskoppen. Terwijl de nummering voorheen alleen werd weergegeven in de Document Map, wordt deze nu ook weergegeven wanneer je naar het gebied navigeert in de financiële overzichten en in de inhoudsopgave</p>
+            </li>
+            <li>
+                <p>Alle vijf rubriekniveaus voor gebieden en notities kunnen nu worden weergegeven in de inhoudsopgave.</p>
+            </li>
+            <li>
+                <p>Je kunt nu individuele koppen voor gebieden en notities verbergen in de inhoudsopgave en de nummering voor een individuele kop verbergen in het menu <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) voor een gebied of notitie.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Zie <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Verbeteringen in financiële overzichten</a> voor een videodemo van deze functie.</p>
+        <p MadCap:conditions="General.Online">Zie <a href="Customize-font-sizes-and-spacing-in-financial-statements.htm">Lettergrootten en spatiëring in de jaarrekening aanpassen</a> en <a href="Customize-numbered-headings-in-the-financial-statements.htm">Genummerde kopjes in de jaarrekening aanpassen</a>voor meer informatie.</p>
+        <h2>Instellingen voor paginanummering van financiële overzichten</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>De afdrukinstellingen voor financiële overzichten bevatten nu een sectie <b>Paginanummering</b> . U kunt kiezen of u de paginanummering van het vorige gebied wilt voortzetten of dat u de nummering opnieuw wilt starten.</p>
+        <p MadCap:conditions="General.Online">Zie <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Verbeteringen in financiële overzichten</a> voor een videodemo van deze functie.</p>
+        <p MadCap:conditions="General.Online">Printopties in de jaarrekening instellen</p>
+        <p><img src="../Resources/Images/fs-print-settings-page-numbering.png" style="width: 680px;height: 503px;" alt="Het onderdeel Paginanummering in de afdrukinstellingen voor de jaarrekening." /></p>
+        <h2>Ontwerpupdate voor het dialoogvenster Productinstellingen</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Deze release bevat een gloednieuw ontwerp voor het dialoogvenster Productinstellingen voor een consistente look en feel op elk tabblad van het dialoogvenster.</p>
+        <p><img src="../Resources/Images/product-settings-redesign.png" style="width: 633px;height: 418px;" alt="Het vernieuwde dialoogvenster Productinstellingen met het tabblad Lettertypen en kopteksten." /></p>
+        <h2>Maatnummers</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Dimensies hebben nu een veld <b>Nummer</b> , zodat je een unieke identificatie kunt definiëren voor elke dimensie. Deze unieke identificatie kan worden gebruikt als een veld bij het importeren van transacties om transacties toe te wijzen aan een dimensie. Raadpleeg de <a href="https://developers.caseware.com/developers_content/v1/Data-Analytics/Whats-new-data-analytics.htm#Dimensionsforgeneralledgerdatasets">release notes van Data Analytics 2024-02</a>voor meer informatie.</p>
+        <p>Als je geen dimensiegetallen wilt gebruiken, kun je de optie <b>Getallen weergeven</b> uitschakelen en de kolom <b>Getallen</b> verbergen.</p>
+        <p>Zie <a href="Add-dimensions.htm">Gebieden toevoegen</a>voor meer informatie.</p>
+        <p><img src="../Resources/Images/product-settings-dimensions-number-column.png" style="width: 717px;height: 472px;" alt="Het tabblad Afmetingen van het dialoogvenster Productinstellingen. " /></p>
+        <h2>Materialiteitsformulier</h2>
+        <p><a href="End-user.htm">#eindgebruiker</a> <a href="Primary-author.htm">#primaryauteur</a> <a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>De volgende updates zijn doorgevoerd op de pagina Documenten:</p>
+        <h3>Informatiesecties met richtlijnen</h3>
+        <p>Je kunt begeleidingsinformatie voor gebruikers toevoegen om speciale instructies, aannames of andere noodzakelijke informatie op te nemen die je moet communiceren met betrekking tot elk van de delen van het Materialiteitsdocument en het algemene begeleidingsgebied van het document.</p>
+        <p><img src="../Resources/Images/materiality-document-guidance.png" alt="Het tabblad Richtlijnen van het materialiteitsdocument." /></p>
+        <p>Firma-auteurs hebben ook de mogelijkheid om hun eigen begeleidingsinformatiesecties in te schakelen en kunnen kiezen of ze begeleidingsinformatiesecties willen behouden die door primaire auteurs zijn toegevoegd.</p>
+        <p><img src="../Resources/Images/materiality-document-overall-materiality.png" alt="Het algemene materialiteitsgedeelte van het materialiteitsdocument met zowel de hoofdauteur als de firmauteur als leidraad." /></p>
+        <h3>Kwalitatieve informatie</h3>
+        <p>Je kunt nu een nieuwe sectie inschakelen om mogelijke onjuistheden in kwalitatieve toelichtingen te documenteren.</p>
+        <p><img src="../Resources/Images/materiality-document-qualitative-disclosures.png" alt="Het gedeelte Kwalitatieve informatie van het document 420 Materialiteit." /></p>
+        <h3>Materialiteit van prestaties gebaseerd op vooraf ingestelde percentages</h3>
+        <p>Je kunt er nu voor kiezen om vooraf ingestelde percentages te definiëren om de Performance Materiality-niveaus te berekenen. Firmaschrijvers kunnen de percentagewaarden aanpassen. Updates van de productsjabloon in de toekomst zullen de aanpassingen van de auteur van het bedrijf niet overschrijven.</p>
+        <p><img src="../Resources/Images/materiality-document-performance-materiality.png" alt="Het onderdeel Prestatiematerialiteit van het 420-materialiteitsdocument." /></p>
+        <p>Eindgebruikers kunnen dan de vooraf gedefinieerde percentages gebruiken bij het invullen van het materialiteitsdocument.</p>
+        <p><img src="../Resources/Images/materiality-document-performance-materiality-end-user.png" alt="De eindgebruiker ziet het gedeelte Prestatiematerialiteit van het materialiteitsdocument." /></p>
+        <h3>Bedrag voor onbeduidende onjuistheden berekend op basis van vooraf ingestelde percentages</h3>
+        <p>Je kunt nu vooraf ingestelde percentages definiëren om het bedrag te berekenen waaronder onjuistheden duidelijk triviaal zouden zijn.</p>
+        <p>Firmaschrijvers kunnen de percentagewaarden aanpassen. Updates van de productsjabloon in de toekomst zullen de aanpassingen van de auteur van het bedrijf niet overschrijven.</p>
+        <p><img src="../Resources/Images/materiality-document-trivial-misstatements.png" alt="Het onderdeel Triviale onjuistheden van het document 420 Materialiteit." /></p>
+        <h2>Nieuw voor auteurs</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2024-05.</p>
+        <h3>Dynamische accounttoewijzing voor secundaire groeperingsstructuren</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauteur</a></p>
+        <p>De eigenschap <b>Doel opnieuw toewijzen voor tegengestelde rekeningen</b> is nu beschikbaar voor financiële groepen in secundaire groeperingsstructuren. Hierdoor kun je dynamische accounttoewijzing instellen voor groepen in deze structuren.</p>
+        <h3>Componenten voor inhoud van risicobibliotheek</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauteur</a></p>
+        <p>U kunt nu componenten toewijzen aan de volgende inhoud in uw Risicobibliotheek:</p>
+        <ul>
+            <li>
+                <p>risico</p>
+            </li>
+            <li>
+                <p>Risicogroepen</p>
+            </li>
+            <li>
+                <p>Procedures</p>
+            </li>
+            <li>
+                <p>controle</p>
+            </li>
+            <li>
+                <p>Controledoelstellingen</p>
+            </li>
+        </ul>
+        <p>Het sjabloonbestand voor de risicobibliotheek is bijgewerkt en bevat nu een blad om componenten te definiëren. Er zijn ook kolommen toegevoegd aan bestaande bladen, zodat componenten kunnen worden toegewezen aan inhoud. Merk op dat alle componenten in de risicobibliotheek al aanwezig moeten zijn in uw productsjabloon.</p>
+        <h3>Componenten voor bedrijfsauteurs</h3>
+        <p><a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Firmaschrijvers kunnen nu hun eigen componenten en componentcategorieën maken in de firmasjabloon. Zodra ze hun componenten hebben gemaakt, kunnen ze componenten toewijzen aan inhoud in de bedrijfssjabloon, inclusief inhoud die is gemaakt door de primaire auteur. Merk op dat auteurs van bedrijven geen toegang hebben om de Risicobibliotheek aan te passen en geen componenten aan deze inhoud kunnen toewijzen.</p>
+        <p>Als onderdeel van deze functie kunnen firmware-auteurs ook de componenten en componentcategorieën bekijken die zijn aangemaakt door de primaire auteur, alle zichtbaarheidslogica die is gekoppeld aan deze componenten en welke componenten zijn toegewezen aan inhoud in de sjabloon.</p>
+        <p>Firmware auteurs kunnen componenten, componentencategorieën of componenttoewijzingen aan content die door de primaire auteur is aangemaakt niet wijzigen of verwijderen, maar ze kunnen wel hun eigen componenten toevoegen aan categorieën die door de primaire auteur zijn aangemaakt.</p>
+        <p>Merk op dat, hoewel bedrijfsauteurs componenten kunnen toewijzen aan financiële groepen die ze aanmaken, ze geen componenten kunnen toewijzen aan groepen die de primaire auteur heeft aangemaakt.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Define-components.htm">Componenten definiëren</a> en <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Assign-components-to-items-in-your-template.htm">Componenten toewijzen aan items in uw sjabloon</a>voor meer informatie.</p>
+        <h3>Dynamische tabellen knippen en plakken</h3>
+        <p><a href="Primary-author.htm">#primaryauteur</a></p>
+        <p>Je kunt nu dynamische tabellen knippen en plakken. Met deze functie kun je eenvoudig dynamische tabellen verplaatsen van het ene deel van de jaarrekening naar het andere.</p>
+        <p>Om een dynamische tabel te knippen, selecteer je <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) | <b>Knip sectie</b>.</p>
+        <p><img src="../Resources/Images/fs-cut-dynamic-table.png" style="width: 145px;height: 297px;" alt="De optie Snijd sectie in het menu Meer acties voor een dynamische tabel." /></p>
+        <p>Om de dynamische tabel te plakken, selecteer je Een nieuwe sectie toevoegen en vervolgens <b>Sectie plakken</b>.</p>
+        <p MadCap:conditions="General.Online">Zie <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Verbeteringen in financiële overzichten</a> voor een videodemo van deze functie.</p>
+        <p MadCap:conditions="General.Online">Zie <a href="Cut-and-paste-a-table.htm">Een tabel knippen en plakken</a>voor meer informatie.</p>
+        <p><img src="../Resources/Images/fs-paste-dynamic-table.png" style="width: 741px;height: 308px;" alt="De optie Sectie plakken is beschikbaar bij het toevoegen van een nieuwe sectie aan een jaarrekeninggebied." /></p>
+        <h2>Nieuw voor eindgebruikers</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2024-05.</p>
+        <h3>Proefbalans synchroniseren tussen verschillende opdrachten</h3>
+        <p>Wanneer gebruikers gegevens vanuit een andere overeenkomst in hun overeenkomst importeren, kunnen ze nu de optie <b>Proefbalans synchroniseren</b> selecteren om automatisch gegevens vanuit de bronovereenkomst te synchroniseren. Hierdoor kun je wijzigingen aanbrengen in de gegevens in de bronafspraak en deze wijzigingen automatisch delen met gesynchroniseerde afspraken.</p>
+        <p><img src="../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="De optie Proefbalans synchroniseren in het dialoogvenster Opdracht zoeken."></img></p>
+        <p>Wanneer engagementgegevens worden gesynchroniseerd vanuit een andere engagement:</p>
+        <ul>
+            <li>
+                <p>Op de <b>gegevenspagina</b> wordt een koppeling naar de bronopdracht weergegeven.</p>
+            </li>
+            <li>
+                <p>Je kunt geen accounts, groepen of aanpassingen bewerken die zijn gesynchroniseerd vanuit de bronafspraak.</p>
+            </li>
+            <li>
+                <p>Je kunt geen accounts toewijzen die zijn gesynchroniseerd vanuit de bronafspraak.</p>
+            </li>
+            <li>
+                <p>U kunt kwesties en annotaties maken voor gesynchroniseerde accounts en groepen, maar geen annotaties voor gesynchroniseerde aanpassingen.</p>
+            </li>
+            <li>
+                <p>Wanneer er wijzigingen worden aangebracht in de bronovereenkomst, ontvangen gebruikers in de doelovereenkomst een melding om hen te informeren dat deze wijzigingen zijn toegepast op hun bestand. Verbintenissen worden elke vijf minuten opnieuw gesynchroniseerd.</p>
+            </li>
+            <li>
+                <p>Als je een engagement vergrendelt die gegevens bevat die zijn gesynchroniseerd vanuit een bron-engagement, worden wijzigingen die zijn gemaakt in de bron-engagement niet langer gesynchroniseerd.</p>
+            </li>
+            <li>
+                <p>Als zowel de bron- als de bestemmingsverbintenis worden overgedragen, worden de overgedragen bestanden automatisch gekoppeld, zodat je gegevens van de bronverbintenis van het huidige jaar kunt blijven synchroniseren.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Zie <a href="https://drive.google.com/file/d/1DkmhqiUR315uPJ-0hu_E3M7N7Hi6AWZc/view?usp=sharing">Proefsaldo synchroniseren</a> voor een videodemo van deze functie.</p>
+        <p MadCap:conditions="General.Online">Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Import-the-trial-balance-from-an-engagement-file.htm">De proefbalans importeren uit een CSV- of Excel-bestand</a>voor meer informatie.</p>
+        <h3>Financial groups in the Data page</h3>
+        <p>Wanneer je de tabbladen voor financiële groepen op de <b>gegevenspagina</b> opent, kun je nu:</p>
+        <ul>
+            <li>
+                <p>Groepen opnieuw ordenen</p>
+            </li>
+            <li>
+                <p>Mappen uitvouwen en samenvouwen</p>
+            </li>
+        </ul>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">Gegevens van de klant importeren</a>voor meer informatie.</p>
+        <h3>Reviewtools ingeschakeld.</h3>
+        <p>Wanneer gebruikers het nummer naast een reviewtool selecteren in de popover Reviewtools, springt het document nu automatisch naar het volgende item dat gemarkeerd is voor die reviewtool. Deze verbetering maakt het makkelijker voor gebruikers om te navigeren door items die herzien moeten worden in een document.</p>
+        <p>Merk op dat deze verbetering alleen beschikbaar is voor checklists, risico&apos;s en de jaarrekening.</p>
+        <p>Zie voor meer informatie <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Werken met revisietools</a>.</p>
+        <h3>Rekeningen voor interne dochterondernemingen toevoegen</h3>
+        <p>Bij consolidatieopdrachten kun je nu handmatig rekeningen toevoegen en bewerken voor interne dochterondernemingen.</p>
+        <h3>Overdracht voor aanpassingen</h3>
+        <p>Je kunt nu aanpassingen van vorig jaar bewerken en verwijderen in opdrachten die zijn aangemaakt vanuit overdracht.</p>
+        <h3>Annotaties koppelen aan procedures.</h3>
+        <p>Je kunt nu annotaties koppelen aan specifieke checklistprocedures in plaats van aan het checklistdocument als geheel. Je kunt een specifieke procedure selecteren nadat ze een checklistdocument hebben geselecteerd in de <b>vervolgkeuzelijst Link</b> . Ze kunnen groepen en procedures met subprocedures uit- en inklappen om de procedure te vinden die ze zoeken. De geselecteerde procedure wordt blauw weergegeven.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps//en/Engagements/Documentation-and-Review/Add-annotations.htm">Gebieden toevoegen</a>voor meer informatie.</p>
+        <p><img src="../Resources/Images/annotation-dialog-select-procedure.png" style="width: 264px;height: 382px;" alt="De sectie Procedure in het dialoogvenster Annotatie maken."></img></p>
+        <h3>Aanpassingen op de pagina Aanpassingen</h3>
+        <p>De volgende wijzigingen zijn aangebracht in de manier waarop aanpassingen worden weergegeven op de <b>gegevenspagina</b> :</p>
+        <ul>
+            <li>
+                <p>Aanpassingen voorgaand jaar worden nu weergegeven op de pagina <b>Gegevens</b> .</p>
+            </li>
+            <li>
+                <p>The <b>Split Adjustments</b> option is now available on the <b>Data</b> page. Als gebruikers deze optie aanzetten, worden normale en herclassificerende aanpassingen in aparte kolommen weergegeven. Om deze optie beschikbaar te maken voor eindgebruikers, <b>schakelt</b> u het selectievakje <b>Gesplitste aanpassingskolommen inschakelen</b> in op het tabblad <b>Data Page</b> van uw productinstellingen.</p>
+            </li>
+        </ul>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">Gegevens van de klant importeren</a>voor meer informatie.</p>
+        <h3>Selecteer hoeveel rijen moeten worden weergegeven op de gegevenspagina</h3>
+        <p>Je kunt nu selecteren hoeveel rijen je op de <b>gegevenspagina</b> wilt weergeven in de vervolgkeuzelijst <b>Rijen per pagina</b> . Je kunt kiezen om 100, 200, 300, 400 of 500 rijen per pagina weer te geven. Standaard is dit 100.</p>
+        <p><img src="../Resources/Images/data-page-rows-per-page-dropdown.png" alt="De keuzelijst Rijen per pagina op de pagina Gegevens."></img></p>
+        <h3>Planningsbalansen bewerken op de pagina Gegevens</h3>
+        <p>Je kunt nu planningsbalansen bewerken op de pagina <b>Gegevens</b> , zelfs nadat de eindbalans is geïmporteerd.</p>
+        <h3>Meerdere dimensies selecteren bij het boeken van aanpassingen</h3>
+        <p>Wanneer u aanpassingen in groepen plaatst, kunt u nu meerdere afmetingen selecteren voor elke groepsregel in de aanpassing.</p>
+        <p>Voor meer informatie, zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm">Post aanpassingen op de proefbalans</a>.</p>
+        <h1>Fixes in SE 2024-05</h1>
+        <p>De volgende lijst bevat een korte beschrijving van bugs die zijn opgelost in SE 2024-05.</p>
+        <ul>
+            <li>
+                <p>Problemen weergeven in de gedeelten <b>Koptekst</b> en <b>Voettekst</b> van de afdrukinstellingen van het financiële overzicht.</p>
+            </li>
+            <li>
+                <p>Tekstantwoorden in query&apos;s worden niet opgeslagen.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers de optie Afdrukvoorbeeld gebruiken, passen de analysegrafieken niet op de pagina&apos;s van de gegenereerde PDF.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers in de financiële overzichten het veld <b>voor de beschrijving van de inhoudsopgave</b> leeg laten voor een gebied, klapt het veld in en kan het niet meer worden bewerkt.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers in de jaarrekening een toelichting uitsluiten en vervolgens de pagina vernieuwen, wordt het gedeelte <b>Toelichting bij de jaarrekening</b> in de Document Map niet langer uitgebreid.</p>
+            </li>
+            <li>
+                <p>In de financiële overzichten worden beschrijvingen voor pagina-einden niet weergegeven in de inhoudsopgave, tenzij het gebied waar de pagina-einden zich bevinden ook een beschrijving heeft.</p>
+            </li>
+            <li>
+                <p>De instelling <b>Uitgebreide groepen</b> voor dynamische tabellen werkt niet zoals verwacht. De financiële groepen zijn niet volledig uitgebreid in de tabel.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers nieuwe secties toevoegen aan financiële overzichten, wordt de sectie onderaan het document toegevoegd in plaats van op de locatie die de gebruiker heeft geselecteerd.</p>
+            </li>
+            <li>
+                <p>Op de pagina <b>Risico&apos;s</b> zijn links naar documentverwijzingen in een risicokaart niet klikbaar nadat de opdracht is vergrendeld.</p>
+            </li>
+            <li>
+                <p>Eindgebruikers kunnen geen uitgebreide financiële inkomensgroepen maken.</p>
+            </li>
+            <li>
+                <p>In producten waar de proefbalansfunctie niet is ingeschakeld, wordt op de pagina <b>Risico&apos;s</b> proefbalansinformatie weergegeven.</p>
+            </li>
+            <li>
+                <p>Planningsbalanskolommen worden weergegeven op de pagina <b>Gegevens</b> bij producten waarbij de planningsbalans niet is ingeschakeld.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers op de <b>gegevenspagina</b> zijn, werkt de terugknop in hun browser niet.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers rijen toevoegen aan tabellen in het materialiteitsformulier, worden de tabelrijen automatisch opnieuw gerangschikt wanneer de gebruiker de pagina vernieuwt of de overeenkomst opnieuw opent.</p>
+            </li>
+            <li>
+                <p>Het veld <b>Verkeerde opgave</b> wordt weergegeven wanneer gebruikers voor het eerst een overeenkomst aanmaken als ze het type wijzigen in Normaal of Herclassificeren.</p>
+            </li>
+            <li>
+                <p>Problemen met de weergave wanneer gebruikers een vervolgkeuzemenu openen in het dialoogvenster Aanpassing bewerken.</p>
+            </li>
+            <li>
+                <p>Bij opdrachten die zijn gemaakt op basis van overdracht werkt het accepteren van alle overdrachtsvoorstellen in een controlelijst niet zoals verwacht.</p>
+            </li>
+            <li>
+                <p>In controlelijstprocedures met responstypen voor contactgegevens worden de velden met contactgegevens weergegeven wanneer gebruikers in en vervolgens uit het antwoordveld klikken, ook al heeft de gebruiker geen contactpersoon geselecteerd.</p>
+            </li>
+            <li>
+                <p>Er treedt een fout op wanneer gebruikers proberen overdrachtsvoorstellen te accepteren in BGL360-overeenkomsten.</p>
+            </li>
+            <li>
+                <p>Als een gebruiker op de pagina <b>Consolidatiehiërarchie</b> het raster samenvouwt en vervolgens de pagina vernieuwt, wordt het raster niet langer samengevouwen.</p>
+            </li>
+            <li>
+                <p>In het <b>kolomfilter</b> op de <b>gegevenspagina</b> worden de subfilters <b>$ Variantie</b> en <b>% Variantie</b> opnieuw gerangschikt wanneer gebruikers het kolomfilter <b>Variantie</b> slepen en neerzetten.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers een steekproef genereren op het tabblad <b>Verrichtingen</b> van de <b>gegevenspagina</b> en vervolgens wegnavigeren van de pagina, wordt het bevestigingsvenster dat hen informeert dat ze de gegenereerde steekproef gaan verliezen pas weergegeven nadat ze al naar een andere pagina zijn genavigeerd.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers een afdrukvoorbeeld van de pagina <b>Documenten</b> afdrukken, worden mappen die op de pagina zijn samengevouwen niet uitgeklapt in het afdrukvoorbeeld.</p>
+            </li>
+            <li>
+                <p>De widget voor het sterrenbeeld wordt niet zoals verwacht weergegeven op de pagina <b>Risico&apos;s</b> .</p>
+            </li>
+            <li>
+                <p>Nieuw geïmporteerde gegevens worden niet weergegeven op de <b>gegevenspagina</b> totdat de gebruiker de pagina vernieuwt.</p>
+            </li>
+            <li>
+                <p>Op het tabblad <b>Transacties</b> van de <b>gegevenspagina</b> wordt de kolom <b>Bedrag</b> weergegeven, zelfs als de kolom is ingesteld op niet weergeven.</p>
+            </li>
+        </ul>
+    </body>
+</html>

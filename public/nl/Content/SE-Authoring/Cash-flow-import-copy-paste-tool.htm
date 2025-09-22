@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Tool voor importeren / kopiëren-plakken van kasstroom</h1>
+        <p><b>De tool voor het importeren/kopiëren-plakken van kasstromen</b> is ontwikkeld om onze gebruikers te helpen bij het efficiënt overbrengen van saldi van kasstroomoverzichten van externe bronnen (Excel- of CSV-werkbladen) naar dynamische tabellen in de jaarrekening.</p>
+        <p>Zodra de <b>Cash flow import / copy-paste tool</b> is geïntegreerd met uw oplossing, selecteert u <strong>Toevoegen</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) op uw <b>Documenten</b> pagina en voegt u de volgende documenten toe:</p>
+        <ul>
+            <li>
+                <p><b>Kasstroomimport</b> - Het hoofdformulier dat alle functionaliteit bevat voor zowel de indirecte als de directe kasstroommethode.</p>
+            </li>
+            <li>
+                <p><b>PA - Structuurtabel kasstroomoverzicht</b> - Een SE Builder formulier dat nodig is om de functionaliteit van het hoofdformulier te ondersteunen. Je moet dit werkblad toevoegen aan je Documentenpagina, maar je kunt het altijd verbergen met de zichtbaarheidsinstellingen.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>GC - Formulier voor zichtbaarheid in auteursmodus</b> - Een SE Builder-formulier dat de instellingen voor zichtbaarheid van de inhoud van het formulier aanstuurt op basis van het type auteur dat het opent. Je moet dit werkblad toevoegen aan je <b>Documentenpagina</b> , maar je kunt het altijd verbergen met de zichtbaarheidsinstellingen.</p>
+                <p class="note"><b>Let op:</b> <b>GC - Zichtbaarheidsformulier voor auteursmodus</b> is een formulier dat door andere Global Components-formulieren wordt gebruikt. Als het eerder aan je oplossing is toegevoegd, hoef je verder niets te veranderen.</p>
+            </li>
+        </ul>
+        <h2>Vereiste wijzigingen van de primaire auteur</h2>
+        <p>
+            <h3>Serie raamwerk voor financiële verslaglegging</h3>
+        </p>
+        <p>Als je app meerdere <b>Frameworks of Industries</b>ondersteunt, voeg dan de ID&apos;s van de procedures in waar deze informatie is gedocumenteerd.</p>
+        <p class="note"><b>Let op:</b> Als je app slechts één raamwerk voor financiële rapportage of één bedrijfstak ondersteunt, laat je deze velden leeg.</p>
+        <h3>Verslaggevingsmethode kasstroomoverzicht</h3>
+        <p>Voer dezelfde stappen uit om de procedure-ID in te voegen waar het type <b>kasstroommethode</b> is gedocumenteerd in uw oplossing (directe of indirecte methode).</p>
+        <p class="note"><b>Let op:</b> Als je app slechts één cashflowmethode ondersteunt, laat je dit veld leeg. Standaard past het formulier de indirecte methode toe.</p>
+        <h3>Regelbeschrijving bewerken uitschakelen</h3>
+        <p>Selecteer <b>Ja</b> om de mogelijkheid uit te schakelen voor eindgebruikers om de beschrijvingen van de lijnen te bewerken.</p>
+        <p>
+            <h3>Geldmiddelen en kasequivalenten financiële groepen</h3>
+        </p>
+        <p>Selecteer de financiële groepen die samen het <b>saldo van geldmiddelen en kasequivalenten</b>vormen, dat wordt gebruikt voor het kasstroomoverzicht. Dit saldo wordt gebruikt voor kruiscontroles in het overzichtsgedeelte.</p>
+        <h3>Aanvullende kasstroominformatie</h3>
+        <p>Selecteer <b>Ja</b> als een sectie Aanvullende cashflowinformatie van toepassing is op uw oplossing.</p>
+        <p>
+            <h3>Kasstroomstructuurtabel</h3>
+        </p>
+        <p>Gebruik de tabel om de cashflowstructuren in te stellen voor elk financieel rapporteringsraamwerk en elke sector die in uw app wordt ondersteund, op basis van de informatie in het gedeelte <b>Instellingen</b> hierboven:</p>
+        <ul>
+            <li>
+                <p>Selecteer elke configuratie die van toepassing is op basis van het raamwerk voor financiële verslaglegging en de branche die door je app wordt ondersteund.</p>
+            </li>
+            <li>
+                <p>Geef het aantal rijen op dat moet worden opgenomen in elke kasstroomsectie (Operationeel / Investering of Financiering).</p>
+                <p class="note"><b>Let op:</b> Het maximum aantal rijen voor elke sectie wordt gedefinieerd door de SE Builder auteur via het <b style="font-style: italic;">values.json</b> bestand. In de hoofdversie van dit formulier zijn maximaal <b>40 rijen</b> per sectie gedefinieerd. Extra rijen kunnen worden toegevoegd door de SE Builder auteur door extra <b style="font-style: italic;">sleutels</b> toe te voegen in de <i style="font-weight: bold;">values.json</i>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Bewerken</b> om de regelitems te definiëren voor elk van de vereiste kasstroomstructuren.</p>
+            </li>
+        </ul>
+        <p>Het dialoogvenster <b>Bewerken</b> biedt de volgende opties:</p>
+        <ul>
+            <li>
+                <p><b>Alles wissen</b> - Verwijdert alle regelbeschrijvingen van alle secties.</p>
+            </li>
+            <li>
+                <p><b>Herstel origineel</b> - Herstelt de regelbeschrijvingen terug naar de standaard beschrijvingen zoals gedefinieerd in het bestand <i style="font-weight: bold;">values.json</i> .</p>
+            </li>
+            <li>
+                <p><b>Nieuwe standaardwaarde instellen</b> - Slaat de huidige ingevoerde waarden op als de nieuwe standaardwaarde voor toekomstige structuren.</p>
+            </li>
+            <li>
+                <p><b>Opslaan</b> - Slaat de ingevoerde waarden op.</p><div class="note"><p><b>Let op:</b></p>
+                    <ul>
+                        <li>
+                            <p>Als je app slechts één financieel rapportagekader of één bedrijfstak ondersteunt, wordt er een rij &quot;Engagement standaard&quot; weergegeven om de structuur voor de cashflow in te stellen.</p>
+                        </li>
+                        <li>
+                            <p>De standaardstructuur voor kasstroomoverzichten in de tool is gebaseerd op de <i>International Full IFRS XBRL-taxonomie</i>. Pas de structuur aan op basis van de specifieke kenmerken van uw markt en zorg ervoor dat u de wijzigingen opslaat.</p>
+                        </li>
+                        <li>
+                            <p>Raadpleeg <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Vertaling of bewoordingsupdates toevoegen</a>om de standaardwaarden te wijzigen of te vertalen</p>
+                        </li>
+                    </ul></div></li>
+        </ul>
+        <p>
+            <h3>Jaarrekeningen Dynamische tabellen maken</h3>
+        </p>
+        <p>De <b>Cash flow import / copy paste tool</b> slaat de informatie op met behulp van <b style="font-style: italic;">Formulierwaarden-ID&apos;s</b>. Om de waarden te koppelen tussen het SE Builder formulier en de Jaarrekening, moet de primaire auteur deze <b style="font-style: italic;">Formulierwaarden ID&apos;s</b> autoriseren in de dynamische tabellen.</p>
+        <ul>
+            <li>
+                <p>Klik <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023(Final)-Cash_Flow_Statement_Import_Tool-values_json_keys_(Global_Components).xlsx">hier</a>voor een lijst met <b style="font-style: italic;">ID&apos;s van formulierwaarden</b> die zijn gekoppeld aan de dynamische tabellen van de financiële administratie. Merk op dat dit de gedeelde standaardwaarden zijn en dat ze al aangepast kunnen zijn door de ontwikkelaar van je solution SE.</p>
+            </li>
+            <li>
+                <p>Koppel elke ID van de formulierwaarde aan de corresponderende celwaarde in de dynamische tabel in de jaarrekening.</p>
+                <p><img src="../Resources/Images/Data-link.jpg" alt="Gegevenskoppeling voor Cash Flow Import Tool." /></p>
+            </li>
+        </ul>
+        <p>Bekijk <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">deze opname</a>voor een gedetailleerd overzicht van de configuratie-instellingen van de primaire auteur.</p>
+        <p>Voor meer informatie over hoe u toegang krijgt tot de aangepaste formulieren van <b>de Cash flow import / copy-paste tool</b> , zie <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Aan de slag met Cash flow import / copy-paste tool</a>.</p>
+        <p>
+            <h2>Workflow voor eindgebruikers</h2>
+        </p>
+        <p>Als eindgebruiker moet je de volgende informatie documenteren:</p>
+        <ol>
+            <li>
+                <p>Geef aan of de bedragen die je wilt importeren of kopiëren al afgerond zijn of niet.</p><div class="note"><p><b>Let op:</b></p>
+                    <ul>
+                        <li>
+                            <p>Financiële overzichten kunnen worden afgerond op duizenden, miljoenen en miljarden.</p>
+                        </li>
+                        <li>
+                            <p>Geef aan of de geïmporteerde/gekopieerde bedragen al zijn afgerond volgens de afrondingsinstellingen van de jaarrekening.</p>
+                        </li>
+                        <li>
+                            <p>Als de bedragen niet zijn afgerond, past het formulier automatisch dezelfde afrondingsinstellingen toe als gespecificeerd in de afrondingsinstellingen van de jaarrekening.</p>
+                        </li>
+                        <li>
+                            <p>To enable rounding in the financial statements refer to <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Customize-rounding-in-the-financial-statements.htm?region=int"><p>Afronding in de jaarrekening aanpassen</p></a></p>
+                        </li>
+                    </ul></div></li>
+            <li>
+                <p>Selecteer de methode om de kasstroombedragen in dit formulier in te voegen: <b>CSV importeren | Kopiëren-plakken</b>.</p><div class="note"><p><b>Let op:</b> De tool voor het importeren van kasstromen ondersteunt twee manieren om de bedragen in dit formulier in te voegen:</p>
+                    <ol>
+                        <li>
+                            <p><b>CVS-import</b> CSV-import Importeer de bedragen met behulp van het meegeleverde voorgedefinieerde CSV-sjabloonbestand.</p>
+                            <p><b>Let op:</b> CSV Import ondersteunt het laden van de informatie uit een CSV sjabloonbestand met een vooraf gedefinieerde indeling/structuur. Een voorbeeldbestand is hier te vinden: <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023-CSV_Import_Templates_(no_Amounts-Direct&amp;Indirect).rar">CSV importsjabloon demobestand</a>.</p>
+                        </li>
+                        <li>
+                            <p><b>Kopiëren-plakken:</b> Hiermee kunt u de bedragen voor elk van de van toepassing zijnde cashflowsecties direct kopiëren en plakken.</p>
+                        </li>
+                    </ol></div></li>
+            <li>
+                <p>Selecteer of je bedragen van vorig jaar wilt importeren of niet.</p>
+            </li>
+            <li>
+                <p>Controleer het gedeelte <b>Samenvatting</b> om er zeker van te zijn dat het kasstroomoverzicht in balans is.</p>
+            </li>
+        </ol>
+        <p>Zie <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">deze opname</a>voor een gedetailleerde beschrijving van de functionaliteit van <b>de Cashflow import / copy-paste tool</b> voor eindgebruikers.</p>
+    </body>
+</html>

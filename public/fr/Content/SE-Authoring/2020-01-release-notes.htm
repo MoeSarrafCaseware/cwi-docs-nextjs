@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2020-01</h1>
+        <p>N&apos;abandonnez pas tout de suite vos compétences en Microsoft Excel ! Cloud Engagements lance Cloud Connector - un complément MS Excel. Avec des graphiques et des tableaux dans les états financiers, l&apos;échantillonnage des transactions et plus encore, SE 2020-01 marque le début de la nouvelle année avec des ajouts passionnants à la plateforme.</p>
+        <h2>Échantillonnage</h2>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="End-user.htm">#enduser</a></p>
+        <p>La page Données comporte désormais un nouvel onglet : <b>Transactions</b>, uniquement dédié à l&apos;affichage des transactions des comptes, ainsi qu&apos;à la sélection d&apos;échantillons et à la génération de rapports pour les tests de vérification.</p>
+        <p><img src="../Resources/Images/transactions-tab.PNG" alt="Onglet Transactions dans la page Données." /></p>
+        <p>In the <b>Transactions</b> tab, users can:</p>
+        <ul>
+            <li>
+                <p>analyser les données en les triant et en les filtrant pour créer une population d&apos;échantillonnage.</p>
+            </li>
+            <li>
+                <p>générer un échantillon de données en utilisant les méthodes disponibles (manuelle, aléatoire, unité monétaire ou systématique).</p>
+            </li>
+            <li>
+                <p>exporter l&apos;échantillon vers un fichier CSV ou le copier dans le presse-papiers pour une analyse plus approfondie et la documentation des résultats du test. Les utilisateurs peuvent également télécharger le fichier d&apos;exemple dans la page Documents et y faire référence à partir d&apos;une procédure de programme de travail.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/systematic-sampling-generated.PNG" alt="Systematic sample selection." /></p>
+        <p>Vous pouvez activer l&apos;échantillonnage dans votre produit en cochant la case <b>Activer l&apos;échantillonnage</b> dans les paramètres du produit.</p>
+        <p><img src="../Resources/Images/enable-sampling.PNG" alt="Activer l&apos;échantillonnage dans la page Données." /></p>
+        <h2>Analysis in Financial Statements</h2>
+        <p><a href="Primary-author.htm">#Premier auteur</a> <a href="Firm-author.htm">#premier auteur</a> <a href="End-user.htm">#enduser</a></p>
+        <p>Une nouvelle section <b>Analyse</b> est désormais disponible dans les états financiers. Vous pouvez personnaliser les types de graphiques et de diagrammes, ainsi que les données qu&apos;ils présentent dans l&apos;API du produit. Pour en savoir plus, voir <a href="Add-an-analysis-section.htm">Ajouter une procédure.</a></p>
+        <p>Comme l&apos;onglet <b>Analyse</b> des listes de contrôle, la section <b>Analyse des</b> états financiers affiche les graphiques ou diagrammes sélectionnés pour un groupe spécifique ou l&apos;analyse financière globale. Les utilisateurs peuvent redimensionner les graphiques et les tableaux afin de les afficher en taille réelle dans toute la section pour une meilleure présentation. Pour en savoir plus, voir les <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Statements-and-Conclusions/Prepare-financial-statements.htm#Reviewaccountanalysis">graphiques d&apos;analyse dans les états financiers.</a></p>
+        <p><img src="../Resources/Images/analysis-in-FS.PNG" alt="Section d&apos;analyse dans les états financiers." /></p>
+        <h2>Constructeur de calculs dans les cellules des tableaux dynamiques</h2>
+        <p><a href="Primary-author.htm">#Premier auteur</a> <a href="Firm-author.htm">#premier auteur</a> <a href="End-user.htm">#enduser</a></p>
+        <p>Une icône de formule (<img src="../Resources/Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) est désormais disponible dans les cellules des tableaux dynamiques des états financiers afin de prendre en charge les scénarios qui nécessitent des valeurs calculées dans les cellules, telles que : les lignes de mouvement dans l&apos;état des flux de trésorerie ou les lignes d&apos;analyse des ratios dans la section &quot;Bénéfice par action&quot; du compte de résultat.</p>
+        <p class="note inline"><b>Remarque :</b> Cette option n&apos;est disponible que pour les types de colonnes et de lignes d&apos;entrée.</p>
+        <p>Le calcul peut inclure des chiffres, des données provenant de la balance de vérification, des données provenant des états financiers ou une combinaison de tous ces éléments.</p>
+        <p class="note inline"><b>Remarque :</b> L&apos;option de <b>valeur Formulaires</b> n&apos;est disponible que si vous avez développé des formulaires à l&apos;aide de SE Builder dans votre produit.</p>
+        <p><img src="../Resources/Images/cell-calculation-PY.PNG" alt="Onglet Formula builder - l&apos;onglet Calculation." /></p>
+        <p>Dans le document, vous pouvez sélectionner la cellule dans laquelle vous avez ajouté un calcul pour en afficher les détails.</p>
+        <p><img src="../Resources/Images/view-calculation-Fs-doc-PA.PNG" alt="Popup montrant les détails d&apos;un calcul ajouté dans une cellule de tableau." /></p>
+        <p>Si les utilisateurs remplacent un calcul de cellule prédéfini (un calcul qui a été ajouté dans le modèle de produit par les auteurs), une option Revenir s&apos;affiche dans le générateur de formules - l&apos;onglet <b>Calcul</b> - afin qu&apos;ils puissent toujours revenir au calcul prédéfini, si nécessaire.</p>
+        <p><img src="../Resources/Images/revert-calculation.png" alt="Revenir au calcul prédéfini. Option disponible pour les utilisateurs finaux s&apos;ils remplacent un calcul de cellule prédéfini." /></p>
+        <p>Si les utilisateurs remplacent la valeur d&apos;une cellule, la fenêtre contextuelle Détails du compte affiche la valeur calculée et la formule d&apos;origine, ainsi qu&apos;une option Revenir.</p>
+        <p><img src="../Resources/Images/calculation-popup=post-override.PNG" alt="L&apos;utilisateur a remplacé une cellule issue d&apos;un calcul. La fenêtre contextuelle Détails du compte affiche les détails de la valeur remplacée et présente une option Revenir." /></p>
+        <h2>Logique améliorée pour l&apos;affichage/masquage dans les lignes de tableau</h2>
+        <p><a href="Primary-author.htm">#Premier auteur</a> <a href="Firm-author.htm">#premier auteur</a> <a href="End-user.htm">#enduser</a></p>
+        <p>L&apos;option Afficher/Masquer pour les lignes des tableaux dynamiques comprend désormais des options supplémentaires. La sélection de l&apos;icône ouvre une liste déroulante qui présente deux ou trois options, en fonction du type de ligne.</p>
+        <ul>
+            <li>
+                <p><b>Appliquer le comportement par défaut</b> - le comportement par défaut est appliqué à la colonne. Notez que le comportement par défaut diffère en fonction du type de colonne.</p>
+                <ul>
+                    <li>
+                        <p>Pour les lignes d&apos;entrée :</p>
+                    </li>
+                    <p>Cette ligne doit toujours figurer dans les états financiers.</p>
+                    <p>Afficher dans la copie d&apos;impression du document si la ligne a un solde (la cellule n&apos;est pas vide et sa valeur n&apos;est pas nulle).</p>
+                    <li>
+                        <p>Pour les lignes de <b>Total</b> ou de <b>Titre des</b> groupes personnalisés :</p>
+                    </li>
+                    <p>Cette ligne doit toujours figurer dans les états financiers.</p>
+                    <p>Affichage dans la copie d&apos;impression du document si le groupe comprend plus d&apos;un solde de compte (les cellules ne sont pas vides et leurs valeurs ne sont pas nulles).</p>
+                    <li>
+                        <p>Pour les lignes de la balance de vérification :</p>
+                    </li>
+                    <p>Display in the financial statements and in the print copy if the balances for current or prior year exist.</p>
+                </ul>
+            </li>
+            <li>
+                <p><b>Toujours afficher cette colonne</b> - la colonne est toujours affichée dans les états financiers et dans la copie imprimée (PDF).</p>
+            </li>
+            <li>
+                <p><b>Toujours masquer cette colonne</b> - la colonne est toujours masquée dans les états financiers et dans la copie imprimée (PDF).</p>
+            </li>
+            <p class="note inline"><b>Remarque :</b> Cette option n&apos;est disponible que pour les lignes de saisie et les lignes de groupe (lignes de groupe de la balance générale, lignes <b>de</b> groupe personnalisées et lignes de <b>total</b> ).</p>
+        </ul>
+        <p><img src="../Resources/Images/new-show-hide-options.PNG" alt="Nouvelles options Afficher/Masquer pour les lignes de tableaux dynamiques." /></p>
+        <p>Pour compléter cette fonctionnalité, les lignes qui apparaissent dans les états financiers mais ne s&apos;impriment pas apparaissent en gris dans le document, ce qui permet de les repérer facilement.</p>
+        <p><img src="../Resources/Images/grayed-out-input-rows.PNG" alt="Les lignes qui ne s&apos;imprimeront pas s&apos;affichent en gris." /></p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2020-01.</p>
+        <h3>Cloud Connector</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Cloud Connector is a Microsoft Office Add-in that allows you to link data between your Cloud Engagement product and MS Excel. Grâce à ce lien, vous pouvez créer des fichiers Excel pour les états financiers, les tableaux ou les calculs adaptés aux besoins de votre solution.</p>
+        <p>Cloud Connector permet une mise à jour en temps réel des données liées dans le fichier Excel. If any value or information changes in the engagement file, it&apos;s automatically updated in the excel file - guaranteeing efficient and effective information transfer.</p>
+        <p>Les utilisateurs peuvent également utiliser Cloud Connector dans des fichiers Excel pour créer la preuve du tableau des flux de trésorerie dans les audits.</p>
+        <p>Comme le montre la figure ci-dessous, Cloud Connector affiche les fichiers Excel en tant que <b>Datalink</b> dans le ruban.</p>
+        <p><img src="../Resources/Images/connector-plugged-in.PNG" alt="Complément Cloud Connector." /></p>
+        <p>Pour utiliser Cloud Connector, vous devez :</p>
+        <ol>
+            <li>
+                <p>disposer d&apos;une installation locale de <b>Microsoft Office 365</b> Desktop ou en ligne. Notez que la version 2019 ou antérieure de MS Office n&apos;est pas prise en charge.</p>
+            </li>
+            <li>
+                <p>créer un fichier Excel de <b>MS Office 365 Desktop</b> et le télécharger dans votre modèle ou fichier d&apos;engagement.</p>
+            </li>
+            <li>
+                <p>ouvrez le fichier Excel à partir de la page Documents de votre modèle ou de votre dossier d&apos;engagement.</p>
+            </li>
+            <li>
+                <p>Obtenez le complément <b>Caseware Cloud Connector</b> dans la boutique Microsoft Add-ins.</p>
+            </li>
+            <p><i>Les </i><b style="font-style: italic;">Datalink</b><i> Sera disponible dans la section <img src="../Resources/Images/icon-admin-managed.png" style="vertical-align: text-bottom;height: 20px;" alt="" />du magasin.</i></p>
+            <li>
+                <p>use the <b>Datalink</b> Add-in to insert data from your template or engagement file in the excel file.</p>
+            </li>
+        </ol><div MadCap:conditions="General.Online"><p>Pour en savoir plus sur cette fonctionnalité, regardez le clip de démonstration de Cloud Connector lors de notre webinaire SE 2020-01.</p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button><h3 class="modalheading">Accéder à plus de contenu</h3>
+                            <p class="modalmaintext">Inscrivez-vous pour recevoir les derniers articles et nouvelles concernant les produits Caseware.</p>
+                            <p class="modalsubtext">Votre téléchargement commencera immédiatement après votre inscription.</p>
+                            <p class="emailmodalinputlabel">Courriel :</p><input type="text" id="email" /> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Souscrire</button><a class="modalnoemail" onclick="downloadFilenoemail()">Non merci. Je veux juste télécharger le fichier.</a> <div id="emailerrormsg"></div></div> <div class="modal-footer"><a href="https://casewarecloud.com">Vous n&apos;avez pas encore de Cloud ? Cliquez ici pour en savoir plus.</a></div></div></div></div><a class="downloadLink" data-toggle="modal" filename="Cloud-Connector-functionality-Demo.mp4" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Clip de démonstration de Cloud Connector</a></div><h3>Composants</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Un nouveau paramètre de produit <b>Composants</b> est introduit pour soutenir une approche plus universelle de la logique de visibilité à travers les éléments de contenu du modèle. Dans cette version du paramètre Composants, les groupes financiers de la balance de vérification sont les seuls éléments de contenu pris en charge.</p>
+        <p>Vous pouvez définir des composantes pertinentes pour votre produit ou votre marché. Par exemple, vous pouvez définir des composants en fonction du type de secteur, du type d&apos;entité ou du cadre de reporting. Vous pouvez également définir une logique de visibilité pour chaque composant. Par exemple, n&apos;affichez le contenu relatif à un secteur spécifique de l&apos; <i>agriculture</i> que si l&apos;entité opère dans ce secteur.</p>
+        <p><img src="../Resources/Images/components.PNG" alt="Ajoutez des composants dans les paramètres de votre produit." /></p>
+        <p>Dans cette version, une nouvelle propriété de groupe, <b>Composant,</b> est désormais disponible dans la boîte de dialogue Propriétés du groupe afin que vous puissiez associer un ou plusieurs composants à un groupe de balance générale.</p>
+        <p>Si vous associez plusieurs composants à un groupe de balances de vérification et que vous définissez des paramètres de visibilité pour chacun des composants, alors.. :</p>
+        <ul>
+            <li>
+                <p>le groupe de balances de vérification est masqué dans l&apos;engagement si tous les composants associés sont masqués en raison de conditions de visibilité.</p>
+            </li>
+            <li>
+                <p>le groupe de balances de vérification est visible dans la mission si au moins un des composants associés est visible en raison des conditions de visibilité.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/components-property.PNG" alt="La propriété du groupe de composants." /></p>
+        <h3>Groupe</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Le champ ID du groupe dans les propriétés du groupe peut désormais contenir jusqu&apos;à 256 caractères pour répondre à la nécessité d&apos;avoir des ID plus longs. Par exemple, les produits pour lesquels iXBRL est activé peuvent avoir des identifiants d&apos;une longueur maximale de 200 caractères.</p>
+        <h3>Conditions de visibilité</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Une nouvelle option est désormais disponible dans le modèle <b>Information</b> (<img src="../Resources/Images/icon-information.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Exporter les conditions de visibilité</b>, afin que vous puissiez exporter directement les conditions de visibilité vers un fichier CSV.</p>
+        <p><img src="../Resources/Images/export-visibility-conditions.png" alt="Export visiblity settings." /></p>
+        <h3>Nouveau dialogue sur les risques.</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>D&apos;autres personnalisations sont disponibles dans les options d&apos; <b>évaluation du</b>  <b>risque</b> dans les paramètres du produit. Vous pouvez désormais personnaliser les étiquettes pour les risques inhérents, les risques de contrôle et les risques d&apos;anomalies significatives pour votre produit.</p>
+        <p><img src="../Resources/Images/IR-CR-RMM-label-customization.PNG" alt="Personnaliser les étiquettes IR, CR et RMM." /></p>
+        <h3>Tableaux IFRS</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Vous pouvez désormais définir des lignes de dimension pour inclure les données de l&apos;année précédente.</p>
+        <p><img src="../Resources/Images/prior-year-info-in-dimension-rows.PNG" alt="Données de l&apos;année précédente dans les lignes de dimensions (tableaux IFRS)." /></p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2020-01.</p>
+        <h3>Comptes</h3>
+        <p>Vous pouvez désormais assigner de nouveaux comptes à des groupes sans avoir à naviguer sur une autre page. La boîte de dialogue Compte comporte désormais trois listes déroulantes de groupes (Financier, Code fiscal et Plan comptable).</p>
+        <p>Notez que si le compte est affecté à un groupe lié à un autre groupe, il est automatiquement affecté au groupe lié également. Par exemple, si le compte est affecté à l&apos; <i>inventaire</i> dans le regroupement financier lié aux <i>autres stocks à vendre</i> dans le plan comptable, le compte est automatiquement affecté aux <i>autres stocks à vendre</i> dans le plan comptable également.</p>
+        <p><img src="../Resources/Images/assign-account-to-group.PNG" alt="Attribuer un compte à un groupe lors de sa création." /></p>
+        <h3>Régularisations</h3>
+        <p>Lors de la comptabilisation des ajustements, vous pouvez désormais créer un compte pendant que vous ajoutez les lignes de l&apos;écriture d&apos;ajustement.</p>
+        <p><img src="../Resources/Images/add-account-in-adjustments.png" alt="Créer un compte tout en ajoutant une ligne d&apos;écriture d&apos;ajustement." /></p>
+        <h3>Requêtes</h3>
+        <p>Les documents d&apos;interrogation ont fait l&apos;objet de quelques améliorations afin de conserver le comportement hérité et d&apos;améliorer la lisibilité.</p>
+        <ul>
+            <li>Pour visualiser et analyser efficacement les questions dans les requêtes, un filtre s&apos;affiche désormais dans la navigation de gauche du document une fois qu&apos;il a été envoyé aux contacts.</li>
+        </ul>
+        <p>La figure ci-dessous montre comment le personnel peut filtrer les questions par statut.</p>
+        <p><img src="../Resources/Images/question-filters-queries.PNG" alt="Filtres pour les questions d&apos;interrogation - Vue des contacts." /></p>
+        <p>La figure ci-dessous montre comment les contacts peuvent filtrer les questions par statut.</p>
+        <p><img src="../Resources/Images/question-filters-contacts.PNG" alt="Filtres pour les questions d&apos;interrogation - Vue des contacts." /></p>
+        <ul>
+            <li>À l&apos;instar de l&apos;ancienne présentation des requêtes, lorsque vous ouvrez un document de requête, son nom s&apos;affiche désormais dans la navigation principale de l&apos;engagement, en haut de la page.</li>
+        </ul>
+        <p><img src="../Resources/Images/query-name-in-main-nav.png" alt="En conservant le comportement hérité de l&apos;ancienne présentation de la requête, le nom du document s&apos;affiche désormais dans la navigation principale." /></p>
+        <h3>Nouveau dialogue sur les risques.</h3>
+        <p>Plusieurs améliorations de l&apos;interface utilisateur ont été incorporées dans cette version afin d&apos;améliorer l&apos;attrait visuel, l&apos;interaction et l&apos;expérience globale. En ce qui concerne les nouvelles fonctionnalités,</p>
+        <ul>
+            <li>
+                <p>une icône d&apos;exportation est désormais disponible dans l&apos;onglet <b>Évaluations</b> afin que les utilisateurs puissent exporter les informations relatives aux évaluations des risques au format PDF.</p>
+            </li>
+            <li>
+                <p>Les valeurs RMM et les informations sur les risques sont désormais transférées vers les widgets <b>Risques</b> et <b>Évaluation des risques de</b> l&apos;onglet Risques des listes de contrôle.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/RMM-risks-in-checklists.PNG" alt="Les widgets RMM et Risques dans une liste de contrôle. Informations tirées de la nouvelle présentation des risques." /></p>
+        <h2>Corrections dans SE 2020-01</h2>
+        <p>La liste suivante contient une brève description des corrections de bogues dans SE 2020-01.</p>
+        <h3>Nouveau dialogue sur les risques.</h3>
+        <p>Correction de problèmes dans le nouveau module de gestion des risques,</p>
+        <ul>
+            <li>la tentative de résolution d&apos;un problème dans l&apos;onglet Évaluations ne fonctionne pas comme prévu.</li>
+            <li>le message confirmant la création du risque reste dans la page.</li>
+            <li>la création d&apos;un lien de référence vers le nouveau module de risque renvoie à l&apos;ancien modèle de risque.</li>
+            <li>la page des nouveaux risques est vide et n&apos;affiche pas les risques existants.</li>
+        </ul>
+        <h3>La page Données</h3>
+        <p>Correction de problèmes dans la page Données où,</p>
+        <ul>
+            <li>
+                <p>la liaison entre les groupes fiscaux et les groupes financiers ne fonctionne pas comme prévu.</p>
+            </li>
+            <li>
+                <p>la désaffectation des comptes d&apos;un groupe financier les désaffecte également du groupe IGRF.</p>
+            </li>
+            <li>
+                <p>lors de la visualisation des dossiers dans la page <b>Dossiers</b> , les dossiers enregistrés sur les lignes de la balance de vérification renvoient à l&apos;ancienne page Balance de vérification au lieu de la page Données.</p>
+            </li>
+        </ul>
+        <h3>Requêtes</h3>
+        <p>Correction de problèmes dans les requêtes où,</p>
+        <ul>
+            <li>
+                <p>le bouton <b>Sélectionner la destination</b> est absent des documents de requête dans le modèle de produit et le modèle d&apos;entreprise.</p>
+            </li>
+            <li>
+                <p>le temps de chargement d&apos;un document de requête contenant plus de 100 questions est plus long que prévu.</p>
+            </li>
+            <li>
+                <p>les messages d&apos;erreur traduits ne s&apos;affichent pas correctement dans la page <b>Créer une requête</b> .</p>
+            </li>
+            <li>
+                <p>les documents de requête du modèle de produit et du modèle d&apos;entreprise affichent l&apos;option <b>Ajouter un contact</b> dans le menu <b>Plus d&apos;actions</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+        </ul>
+        <h3>États financiers</h3>
+        <p>Correction de problèmes dans les états financiers,</p>
+        <ul>
+            <li>
+                <p>les utilisateurs finaux peuvent revenir sur les titres de groupes personnalisés créés par l&apos;auteur principal dans les tableaux dynamiques.</p>
+            </li>
+            <li>
+                <p>les paramètres de marge d&apos;impression ne s&apos;appliquent pas à certaines pages.</p>
+            </li>
+            <li>
+                <p>ne s&apos;affichent pas dans l&apos;aperçu avant impression généré par le PDF.</p>
+            </li>
+            <li>
+                <p>la fenêtre contextuelle Détail du compte dans les tableaux dynamiques affiche des zéros dans les colonnes <b>Préliminaire</b> et <b>Précédent</b> pour les groupes personnalisés.</p>
+            </li>
+        </ul>
+        <h3>Autres corrections</h3>
+        <p>La liste suivante présente les améliorations générales apportées à la SE 2019-10.</p>
+        <ul>
+            <li>
+                <p>Correction d&apos;un problème où la recherche de modèles de requête dans la navigation de gauche du fichier d&apos;engagement ne fonctionne pas comme prévu.</p>
+            </li>
+            <li>
+                <p>Correction d&apos;un problème dans la page <b>Documents</b> où l&apos;indicateur de problèmes (<img src="../Resources/Images/icon-issues-showing-total-number.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) ne fonctionne pas comme prévu.</p>
+            </li>
+            <li>
+                <p>Correction d&apos;un problème où l&apos;onglet <b>Valeur du formulaire</b> dans la boîte de dialogue<b>DataLink</b> est inaccessible bien que les formulaires SE Builder soient activés dans le produit.</p>
+            </li>
+        </ul>
+    </body>
+</html>

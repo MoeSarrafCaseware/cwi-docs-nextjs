@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1017" MadCap:lastWidth="744" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Propiedades de tarifas del personal</h1><MadCap:snippetBlock src="../../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Rates can be assigned to staff members based on the <b>work codes</b> set up for the company. This enables the company to assign individual rates to staff members while maintaining a standard set of work codes across the company.</p>
+        <p>You can also set work codes to a zero (0) rate to record time at no charge.</p>
+        <p class="note"><b>Note:</b> Staff members without a standard rate can still post entries to time. Their rate will amount to zero.</p>
+        <p>Staff rates have the following properties:</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Rate</th>
+                    <th>Propiedades</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr MadCap:conditions="">
+                    <td>Standard rate and Work Code rates</td>
+                    <td>Estado</td>
+                    <td>
+                        <p>The current status of the standard or work code rate:</p>
+                        <ul class="bulletRed">
+                            <li>
+                                <p>¿Activo?</p>
+                                <p>The current rate for this staff member. See Effective Date below.</p>
+                            </li>
+                            <li>
+                                <p><b>Historical</b> (<img src="../../../Resources/Icons/Historical-work-code-19x21.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                                <p>The rate for this staff member in a prior period.</p>
+                                <p class="note"><b>Note:</b>;A prior period rate cannot be modified or deleted.</p>
+                            </li>
+                            <li>
+                                <p><b>Future</b> (<img src="../../../Resources/Icons/Future-work-code-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                                <p>A future rate for this staff member. A rate is a future rate if the effective date occurs after the current period.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Standard Rate</td>
+                    <td>Fecha de validez</td>
+                    <td>
+                        <p>The date the standard rate takes effect.</p>
+                        <p>The effective date cannot be earlier than the period start date.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>
+                        <p>The standard (default) rate for this staff member. The standard rate is applied when there is no corresponding rate defined for the specific work code.</p>
+                        <p>For example, a staff member enters time using work code 100. If there is no corresponding rate defined for this work code, then the standard rate is applied for this time entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Work Code Rates</td>
+                    <td>Work Code</td>
+                    <td>A predefined work code for time entries. See <a href="../../../Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm#Creating-a-new-work-code">Creating new work codes</a> for more information.</td>
+                </tr>
+                <tr>
+                    <td>Fecha de validez</td>
+                    <td>
+                        <p>The date the rate for the specified work code takes effect.</p>
+                        <p>The effective date cannot be earlier than the period start date.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>
+                        <p>The rate for the specified work code for this staff member. If defined, this rate is applied when entering time using the specified work code.</p>
+                        <p>For example, a staff member enters time using work code 100. A rate of $100.00 is defined for this work code. This rate is then applied for time entries using work code 100.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

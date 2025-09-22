@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Importin"></a>Gegevens importeren uit desktop accounting software</h1>
+        <p>Als u klantgegevens wilt importeren vanuit desktopboekhoudsoftware van derden, gebruikt u de Cloud Import Utility om een importbestand te genereren dat u later kunt importeren via het tabblad <b>Datasets</b> op de pagina <b>Data</b> van uw Caseware Cloud-opdracht. De Caseware Cloud Import Utility ondersteunt de meeste desktop boekhoudsoftware.</p>
+        <p>Ga voor een volledige lijst met boekhoudsoftware van derden naar <MadCap:xref href="Supported-third-party-accounting-packages.htm">Ondersteunde desktop accounting software van derden</MadCap:xref>. De opties die beschikbaar zijn bij het importeren, zijn afhankelijk van het product.</p>
+        <h2>Vereisten</h2>
+        <p>Voordat u importeert, moet u de vereiste stappen voor uw software uitvoeren. Zie <a href="Prerequisites-for-importing-from-desktop-accounting-packages.htm">Vereisten voor importeren uit desktop boekhoudsoftware</a> voor meer informatie.</p>
+        <p>Lees het volgende als je wilt weten hoe je gegevens importeert vanuit QuickBooks desktop of Sage desktop:</p>
+        <ul>
+            <li>
+                <p>Importeren vanuit QuickBooks-desktop</p>
+            </li>
+            <li>
+                <p>Importeren vanuit Sage-desktop</p>
+            </li>
+        </ul>
+        <p>Gebruik voor alle andere boekhoudsoftware van derden de instructies op deze pagina.</p>
+        <p class="note"><b>Let op:</b> Rekeningen met een nulsaldo worden niet automatisch geïmporteerd in Caseware Cloud apps, met uitzondering van <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Om rekeningen met een nulsaldo op te nemen, moet je ze handmatig <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">toevoegen</a> en <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">toewijzen</a> aan de juiste financiële groepen.</p>
+        <h2>Genereer het .ini-bestand.</h2>
+        <p>Tijdens deze stap download en installeer je de Caseware Cloud Import Utility. Gebruik het om je klantgegevens te importeren en een importbestand te genereren.</p>
+        <p><b>Het importbestand genereren:</b></p>
+        <ol>
+            <li>
+                <p>Download het hulpprogramma Caseware Cloud importeren.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware hulpprogramma voor cloudimport (.exe)</a></p>
+            <p>Zorg ervoor dat je de .exe opslaat in een nieuwe of unieke map, omdat het een groot aantal bestanden uitpakt in de map wanneer het wordt uitgevoerd.</p>
+            <li>
+                <p>Open het hulpprogramma, selecteer <b>Andere gegevensbron</b> en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Geef in de velden <b>Import From (Importeren van)</b> en <b>Version (Versie)</b> de boekhoudsoftware op van waaruit je exporteert.</p>
+                <p>De inhoud van de pagina verandert afhankelijk van je selectie.</p>
+            </li>
+            <li>
+                <p>Blader naar het <b>Importpad</b> van het clientbestand dat je wilt importeren.</p>
+                <p>Als je boekhoudsoftware vereist dat je een klantbestand opgeeft, zie je het keuzemenu <b>Client ID-bestand selecteren</b> . Als er meer dan één bestand is, moet je hier het juiste bestand selecteren.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>. De pagina <b>Wizard Nieuw bestand voltooid</b> wordt weergegeven.</p>
+                <p>Dit toont de locatie van een tijdelijk bestand dat zal worden gebruikt om het uiteindelijke .zip-bestand met de geïmporteerde gegevens te genereren.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Voltooien</b> om de conversie uit te voeren.</p>
+                <p>Nadat de gegevens zijn gegenereerd, verschijnt het dialoogvenster Opslaan als.</p>
+            </li>
+            <li>
+                <p>Navigeer naar de gewenste locatie om het .zip-bestand op te slaan en selecteer <b>Opslaan</b>.</p>
+                <p><b>Let op:</b> Als je gegevens importeert in IDEA met de Cloud Import Utility, ga dan niet verder met het importeren van de gegevens. De volgende stap is het importeren van het zipbestand in IDEA. Raadpleeg de IDEA-Help voor meer informatie.</p>
+            </li>
+        </ol>
+        <h2>Importeren:datumgegevens</h2>
+        <p>Nadat je het zipbestand hebt gegenereerd met de Caseware Cloud Import Utility, kun je de gegevens importeren in je engagement.</p>
+        <p><b>De gegevens importeren in je engagement:</b></p>
+        <ol>
+            <li>
+                <p>Open je Caseware Cloud engagement bestand. Wanneer je de engagement voor het eerst opent, verschijnt het pop-upvenster met de eigenschappen van de engagement. Stel <b>de einddatum van het jaar</b> in op dezelfde datum als de gegevens die je gaat importeren.</p>
+                <p>De eindejaarsdatum is het laatste element van de naam van het zipbestand dat je hebt gegenereerd. Voor het bestand met de naam UNIVERSAL CONSTRUCTION 2025-06-30.zip is de einddatum bijvoorbeeld 30 juni 2025.</p>
+            </li>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De <b>gegevenspagina</b> wordt geopend op het tabblad <b>Datasets</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                </li>
+                <li>
+                    <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Selecteer je desktop boekhoudsoftware uit de lijst met gegevensbronnen.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+            <li>
+                <p>Selecteer in de Upload-fase van de importwizard het zip-bestand dat u hebt gegenereerd met de Caseware Cloud Import Utility of sleep het naar een andere locatie en selecteer vervolgens <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>In het stadium Gegevens configureren van de importwizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Rapportageperiode</b> wordt automatisch gevuld met de rapportageperiode van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Kies bij <b>Select dataset type</b>het type dat je importeert.</p>
+                <p>Voor meer informatie over de datasetopties, zie <a href="#Dataset">Dataset types beschreven</a>. Merk op dat sommige types datasets mogelijk niet beschikbaar zijn in uw product.</p>
+            </li>
+            <li>
+                <p>Als je <b>Proefbalans</b>hebt geselecteerd, vouw je de lijst met datasets samen door het pictogram <b>Samenvouwen</b> (<img src="../../Resources/Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />) te selecteren. De optie<b>De laatste 5 jaar TB importeren</b> verschijnt. Selecteer deze optie om tot vijf jaar proefbalansgegevens te importeren als deze beschikbaar zijn in het gegenereerde zip-bestand.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Bekijk de informatie in de fase Bevestiging van de importwizard en selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p class="indent">Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p class="indent">Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p class="indent">Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p class="indent">Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+        <h2>De proefbalans opnieuw importeren</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /><h2><a name="Dataset"></a>DATASETTYPE</h2><MadCap:snippetBlock src="../../Resources/Snippets/dataset-descriptions.flsnp" /></body>
+</html>

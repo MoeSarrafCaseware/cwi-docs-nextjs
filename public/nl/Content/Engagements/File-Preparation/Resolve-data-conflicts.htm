@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Conflicten bij het importeren van gegevens oplossen</h1>
+        <p class="note inline"><strong>Let op:</strong> Balansgegevens kunnen niet worden samengevoegd binnen één boekhoudperiode. Bij het importeren van een nieuwe proefbalans die rekeningnummers bevat die al aanwezig zijn in de bestaande gegevens voor dezelfde periode, zullen de nieuwe saldobedragen de bestaande saldobedragen volledig vervangen. Accountnummers die nog niet in het systeem stonden, worden toegevoegd als nieuwe accounts</p>
+        <p>Voor elke rij gegevens die u in Caseware Cloud importeert, wordt automatisch een unieke identificatie gemaakt met behulp van de waarden van een of meer velden in de rij gegevens. Als de gegevensbron een CSV- of Excel-bestand is, kunnen gegevensconflicten worden gedetecteerd nadat je velden van inkomende gegevens hebt toegewezen aan Caseware-velden. Bekijk de onderstaande scenario&apos;s en hoe je in elk van deze scenario&apos;s gegevensconflicten oplost. Voor meer informatie over het importeren van grootboekgegevens uit CSV- of Excel-bestanden, zie <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Gegevens van de klant importeren uit een CSV- of Excel-bestand</a>.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subledger datasets begrijpen</a> voor meer informatie over hoe unieke identifiers worden gevormd in subledger datasets.</p>
+        <p>Zie <a href="Understand-genledger-data.htm">De grootboekdataset begrijpen</a> voor meer informatie over hoe unieke identificaties worden gevormd in de grootboekdataset.</p>
+        <h2>Gegevensconflict in hetzelfde CSV- of Excel-bestand</h2>
+        <p>Gegevensconflicten treden op in een CSV- of Excel-bestand als meer dan één gegevensrij dezelfde unieke identifier heeft:</p>
+        <ul>
+            <li>Er verschijnen een waarschuwingspictogram en een knop <strong>Opnieuw toewijzen</strong> in het gedeelte Geüploade bestanden in het venster Gegevens importeren.</li>
+            <li>Als u met de muis over het waarschuwingspictogram beweegt, verschijnt het volgende bericht: &quot;Los conflicten in de gegevensbron op voordat u opnieuw importeert</li>
+        </ul>
+        <p><img src="../../Resources/Images/ResolveConflictsInDataSource-da-2024-09.png" alt="Conflicten oplossen die verschijnen als meer dan één gegevensrij in het CSV- of Excel-bestand dezelfde identifier heeft." /></p>
+        <p><strong>Om gegevensconflicten in hetzelfde importbestand op te lossen:</strong></p>
+        <ol>
+            <li>Je hebt de volgende opties:<ol style="list-style-type: lower-alpha;"><li>Verwijder het bestand uit de sectie Geüploade bestanden door te klikken op (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li><li>Zorg ervoor dat je de juiste kolom toewijst aan het Caseware-veld dat als primaire sleutel wordt gebruikt door op <b>Opnieuw toewijzen</b>te klikken. Zie <a href="#Quick">Snelle verwijzing naar conflicten per gegevenstype</a>, waarin de velden staan die standaard worden gebruikt om de unieke identificatie te vormen in elk gegevenstype.</li></ol></li>
+            <li>Open het bestand en verwijder of wijzig alle dubbele gegevensrijen. Hieronder vind je een <a href="#Quick">snelle verwijzing</a> naar de velden waarvan de waarden gegevensconflicten kunnen veroorzaken als ze hetzelfde zijn in twee of meer gegevensrijen.</li>
+            <li>Importeer het vaste bestand opnieuw.</li>
+        </ol>
+        <h2><a name="Data"></a>Gegevensconflict tussen de dataset die wordt geïmporteerd en een bestaande dataset</h2>
+        <p>Als er al een rij in de dataset staat die dezelfde unieke identifier heeft als een rij die je probeert te importeren, ontstaat er een gegevensconflict. <a href="#Quick">Snelle verwijzing naar conflicten per type dataset</a> toont de velden die gegevensconflicten veroorzaken als hun waarden dezelfde zijn in het bestand dat je importeert en in de bestaande dataset. Bovendien ontstaan gegevensconflicten alleen in hetzelfde type dataset. Er zullen bijvoorbeeld nooit gegevensconflicten worden gevonden tussen een nieuw geïmporteerde grootboekdataset en een bestaande subgrootboekdataset.</p>
+        <p>In dit scenario verschijnen een waarschuwingspictogram en een knop <strong>Conflicten oplossen</strong> in het gedeelte Geüploade bestanden in het venster Gegevens importeren.</p>
+        <p><img src="../../Resources/Images/ResolveConflictNewFilevsExisting.png" alt="Gegevensconflict tussen de dataset die wordt geïmporteerd en een bestaande dataset." /></p>
+        <p><strong>Om een conflict op te lossen tussen het inkomende bestand en een bestaande dataset:</strong></p>
+        <ol>
+            <li>In het venster Gegevens importeren, in het gedeelte Geüploade bestanden, kunt u de gegevensbron die u zojuist hebt geïmporteerd verwijderen door te klikken op (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) en een ander bestand importeren, of klik op <strong>Conflicten oplossen</strong> om een van de opties voor het oplossen van gegevensconflicten te gebruiken. Als u klikt op <b>Conflicten oplossen</b>, gaat u door naar de volgende stap.</li>
+            <li>Je hebt de volgende opties:<ol style="list-style-type: lower-alpha;"><li><strong>Conflicten oplossen met gegevens uit &lt;naam importbestand gegevens&gt; </strong><ol style="list-style-type: lower-roman;"><li>Selecteer deze optie om de gegevensrijen in de bestaande dataset te overschrijven met de gegevensrijen waarvan de identifiers hetzelfde zijn in het nieuw geïmporteerde gegevensbestand. Klik op <strong>Volgende</strong>.</li><li>U wordt gevraagd om te bevestigen. Klik op <strong>Volgende</strong>.</li></ol></li><li><strong>Conflicten oplossen met gegevens uit &lt;naam van de bestaande dataset&gt; </strong><ol style="list-style-type: lower-roman;"><li>Selecteer deze optie om de gegevensrijen in het nieuw geïmporteerde gegevensbestand waarvan de identifiers dezelfde zijn als die in de bestaande dataset, te negeren. Alle andere gegevensrijen waarvan de identifiers niet conflicteren met de bestaande dataset worden geïmporteerd. Klik op <strong>Volgende</strong>.</li><li>U wordt gevraagd om te bevestigen. Klik op <strong>Volgende</strong>.</li></ol></li><li><strong>Conflictoverzicht downloaden als CSV-bestand</strong></li><p class="indent">Klik op deze link om een CSV-bestand te downloaden van de gegevensrijen waarin conflicten zijn opgetreden. Analyseer het bestand en ga dan verder met een van deze opties:</p><ol style="list-style-type: lower-roman;"><li>Als je bepaalt dat je de gegevens in de bestaande dataset wilt gebruiken, selecteer je <b>Conflicten oplossen met gegevens uit </b>&lt;naam<b>bestaande dataset&gt;</b>. Gegevensrijen met conflicten in het importbestand worden niet geïmporteerd. Alle andere gegevens in het importbestand worden geïmporteerd.</li><li>Als je bepaalt dat je de gegevens in het importbestand wilt gebruiken, laat je het gegevensimportbestand zoals het is en selecteer je de optie <b>Conflicten oplossen met gegevens van &lt;data import file name&gt;</b> . Alle gegevens in het importbestand worden geïmporteerd. Gegevensrijen in de bestaande dataset die conflicten bevatten, worden overschreven.</li><li><p>Verwijder de gegevensbron die je net hebt geïmporteerd, repareer het importbestand door de gegevensrijen met unieke identifiers die hetzelfde zijn als in de bestaande dataset te verwijderen en importeer het bestand opnieuw.</p></li></ol></ol></li>
+        </ol>
+        <h2>Gegevensconflicten oplossen met gegevens uit een nieuw geïmporteerd bestand</h2>
+        <p>Als je ervoor kiest om gegevensimportconflicten op te lossen met gegevens uit een nieuw geïmporteerd bestand en dat bestand later verwijdert, worden de rijen met conflicterende gegevens volledig uit de dataset verwijderd.</p>
+        <p>Het volgende geval kan zich voordoen, afhankelijk van de mate van overlap tussen het nieuw geïmporteerde bestand dat werd verwijderd en bestaande gegevensrijen in de dataset.</p>
+        <h3>Nieuw geïmporteerd bestand is een superset van een eerder geïmporteerd gegevensbestand</h3>
+        <p>In dit geval wordt een gegevensbestand geïmporteerd in een dataset.</p>
+        <p><img src="../../Resources/Images/ImportFile1.png" alt="Gegevensbestand wordt geïmporteerd in een dataset" /></p>
+        <p>Een tweede bestand met alle gegevensrijen uit het eerste bestand en enkele nieuwe gegevens wordt geïmporteerd in dezelfde dataset. Er is een gegevensconflict gedetecteerd omdat sommige gegevensrijen in de dataset en in het inkomende tweede importbestand dezelfde unieke identifiers hebben.</p>
+        <p><img src="../../Resources/Images/ResolveConflictsImport2.png" alt="Er is een gegevensconflict gedetecteerd omdat sommige gegevensrijen in de dataset en in het inkomende tweede importbestand dezelfde unieke identifiers hebben." /></p>
+        <p>De gebruiker kiest ervoor om op <b>Conflicten oplossen</b>te klikken en selecteert vervolgens de optie <b>Conflicten oplossen met behulp van gegevens van &lt;data import file name&gt;</b> .</p>
+        <p><img src="../../Resources/Images/ResolveConflictsUsingDataFile2.png" alt="Gegevensconflicten oplossen door de gegevens uit het tweede importbestand te gebruiken om gegevensrijen in de eerste import met dezelfde identifiers te overschrijven. " /></p>
+        <p>De gegevens van het nieuw geïmporteerde bestand overschrijven het eerder geïmporteerde bestand. De resulterende dataset bevat nu alleen de gegevens in het nieuw geïmporteerde bestand<code>(GeneralLedger_ImportFile2_Superset.csv</code>).</p>
+        <p><img src="../../Resources/Images/ResultConflictResolved.png" alt="Resulterende dataset bevat alleen gegevens uit het tweede importbestand (GeneralLedger_ImportFile2_Superset.csv)" /></p>
+        <p>Het nieuw geïmporteerde bestand, <code>GeneralLedger_ImportFile2_Superset.csv</code>, wordt echter per ongeluk verwijderd.</p>
+        <p><img src="../../Resources/Images/FIle2Deleted.png" alt="Het tweede importbestand is per ongeluk verwijderd, waardoor de dataset leeg is." /></p>
+        <p>Dit resulteert in een lege dataset. Op de pagina Datasets wordt alleen het eerste bestand dat is geïmporteerd weergegeven, in dit voorbeeld <code>GeneralLedger_ImportFile1.csv.</code> Als je de dataset exporteert, krijg je een waarschuwing.</p>
+        <p><img src="../../Resources/Images/ExportDataset.png" alt="Ik probeer de verwijderde gegevens te exporteren." /></p>
+        <p>Hoe je de lege dataset oplost, hangt af van wat je wilt bereiken:</p>
+        <h4>Je wilt dat de dataset de gegevens bevat van het tweede, grotere importbestand dat je als laatste hebt geïmporteerd</h4>
+        <ul>
+            <li>Verwijder in de kolom Bron het bestand dat je als eerste hebt geïmporteerd, in dit voorbeeld is dat <code>GeneralLedger_ImportFile1.csv.</code></li>
+            <li>Importeer het tweede gegevensbestand opnieuw in de dataset, die in dit voorbeeld <code>GeneralLedger_ImportFile2_Superset.csv is.</code></li>
+        </ul>
+        <h4>Je wilt dat de dataset alleen de gegevens bevat van het eerste importbestand</h4>
+        <ul>
+            <li>Verwijder in de kolom Bron het bestand dat je als eerste hebt geïmporteerd, in dit voorbeeld is dat <code>GeneralLedger_ImportFile1.csv.</code></li>
+            <li>Importeer het eerste gegevensbestand opnieuw in de dataset.</li>
+        </ul>
+        <h2><a name="Quick"></a>Snelle verwijzing naar gegevensconflicten per type dataset <a href="#Footnote">*</a></h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>DATASETTYPE</th>
+                    <th>Conflicten treden op wanneer dit veld dezelfde waarde heeft in twee of meer gegevensrijen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grootboek</td>
+                    <td>Entry ID<code>(entry_id</code>) - Lijnnummer<code>(line_number</code>)</td>
+                </tr>
+                <tr>
+                    <td>Crediteuren—facturen</td>
+                    <td>Transactie-ID<code>(ap_invoice_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Crediteuren—gemaakte betalingen</td>
+                    <td>Transactie-ID<code>(ap_payment_made_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Crediteuren—leveranciers</td>
+                    <td>Leverancier-ID<code>(ap_supplier_supplier_account_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Crediteuren—openstaande saldi</td>
+                    <td>Transactie-ID<code>(ap_open_balance_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Crediteuren—facturen</td>
+                    <td>Transactie-ID<code>(ap_invoice_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Debiteuren—ontvangen betalingen</td>
+                    <td>Transactie-ID<code>(ar_cash_received_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Debiteuren—klanten</td>
+                    <td>Rekening-ID klant</td>
+                </tr>
+                <tr>
+                    <td>Debiteuren—openstaande saldi</td>
+                    <td>Transactie-ID<code>(ar_open_balance_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Voorraadtransacties</td>
+                    <td>Transactie-ID<code>(inventory_on_hand_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Beschikbare voorraad</td>
+                    <td>Transactie-ID<code>(inventory_on_hand_transaction_id</code>)</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <p><a name="Footnote"></a>* In de <i><a href="#Quick">Snelle verwijzing naar gegevensconflicten per type dataset</a></i> tabel wordt aangenomen dat je een veld in het importbestand hebt toegewezen aan het aangegeven Caseware veld. Dit veld is standaard de primaire sleutel voor de dataset en de waarde ervan wordt gebruikt om de unieke identificatie voor elke rij gegevens automatisch te genereren. Als je geen veld toewijst aan het veld dat is aangewezen als de primaire sleutel voor de dataset, worden andere velden die zijn aangewezen als alternatieve primaire sleutels gebruikt om automatisch een unieke identificatie te genereren. Zie de veldbeschrijvingen voor het datasettype in kwestie voor meer informatie: <a href="Understand-genledger-data.htm">Begrijp de grootboekdataset</a> of <a href="Understand-subledger-data.htm">Begrijp subgrootboekdatasets</a>.</p>
+    </body>
+</html>

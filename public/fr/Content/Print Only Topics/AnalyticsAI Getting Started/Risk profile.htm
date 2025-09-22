@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Profil de risque</h1>
+        <p>Au cours de cette étape, vous effectuerez les opérations suivantes :</p>
+        <ul>
+            <li style="font-weight: normal;"><b>2-1 Influencers (Organizational Risk)</b></li>
+            <li style="font-weight: normal;"><b>2-2 Analyse des risques (risque de transaction)</b></li>
+            <li style="font-weight: normal;"><b>2-3 Révision analytique :</b></li>
+        </ul>
+        <h2>Influenceurs</h2>
+        <p>Les influenceurs sont des comptes sur lesquels vous souhaitez mettre l&apos;accent dans le cadre de votre analyse des risques. Ils identifient les risques macroéconomiques et organisationnels et mettent en évidence les transactions susceptibles d&apos;être intéressantes à la lumière de ces risques.</p>
+        <p>Par exemple, si vous soupçonnez des faiblesses de contrôle sur les comptes de trésorerie, vous pouvez définir l&apos;influence de tout compte de trésorerie afin d&apos;augmenter le score d&apos;un pourcentage spécifique. Vous pouvez fixer l&apos;influence des comptes en espèces à 50 %, par exemple, et les scores de risque de toutes les transactions contenant des comptes en espèces seront automatiquement augmentés de 50 %. Les transactions à risque zéro ne seront pas ajustées et resteront donc à risque zéro.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Adjust-influencers.htm">Détection des valeurs aberrantes</a> .</p>
+        <MadCap:pageBreak />
+        <p></p><MadCap:snippetBlock src="../../Resources/Snippets/adjust-influencers.flsnp" /><MadCap:pageBreak />
+        <h2>Analyse des risques</h2>
+        <p>La page <b>Résultats</b> vous donne un aperçu des transactions de l&apos;engagement à l&apos;aide de différents widgets.</p>
+        <p><b>To view the test results:</b></p>
+        <ul>
+            <li>Cliquez sur <b>2-2 Analyse de risque (Risque de transaction)</b> dans la page <b>Documents</b> .</li>
+        </ul>
+        <p><img src="../../Resources/Images/results-page.png" alt="Test results as displayed from 2-2 Risk Analysis (Transaction Risk) on the Documents page" /></p>
+        <MadCap:pageBreak />
+        <h3>Widgets</h3>
+        <p>Cliquez sur l&apos;information dans l&apos;un des widgets pour afficher plus d&apos;informations. Les informations affichées dans les widgets changent pour refléter votre sélection.</p>
+        <p>Vous pouvez cliquer sur les widgets <b>Résumé du risque</b>, <b>Exceptions à haut risque</b>, <b>Utilisateurs à haut risque</b> et <b>Journaux à haut risque</b> pour obtenir plus de détails. See <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Analytics-ai-test-results.htm#Navigateawidget">Navigate a widget</a> for more information.</p>
+        <h4>Résumé des risques</h4>
+        <p>Ce widget classe les transactions en fonction de leur score de risque global.</p>
+        <p><img src="../../Resources/Images/insight-risk-summary.png" alt="Transactions en termes de score de risque global" /></p>
+        <MadCap:pageBreak />
+        <h4>Exceptions à haut risque</h4>
+        <p>Ce widget montre les transactions avec un score de risque qui sont regroupées par test. Les quatre tests les plus importants en termes de montant s&apos;affichent.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-exceptions.png" alt="Les quatre tests les plus importants et leurs montants" /></p>
+        <MadCap:pageBreak />
+        <h4>Utilisateurs à haut risque</h4>
+        <p>Ce widget affiche les cinq premiers utilisateurs ayant effectué des transactions avec le score de risque le plus élevé.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-users.png" alt="Ce widget affiche les cinq premiers utilisateurs ayant effectué des transactions avec le score de risque le plus élevé." /></p>
+        <MadCap:pageBreak />
+        <h4>Revues à haut risque</h4>
+        <p>Ce widget affiche les cinq revues ayant le score de risque le plus élevé.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-journals.png" alt="Top five journals with the highest risk score" /></p>
+        <MadCap:pageBreak />
+        <h4>Graphique de séries temporelles</h4>
+        <p>Utilisez le graphique des <b>séries chronologiques</b> pour observer le score de risque et la valeur en dollars des transactions évaluées pour les 13 mois précédents à partir de l&apos;ensemble de données téléchargé. Survolez un élément pour afficher plus d&apos;informations.</p>
+        <p><img src="../../Resources/Images/aai-time-series-with-details.png" alt="Graphique de la série chronologique du risque par rapport à la valeur des transactions" /></p>
+        <h3>Modifier la configuration de certains tests</h3>
+        <p>A partir de là, vous pouvez voir tous les tests qui sont exécutés dans AnalyticsAI. Vous pouvez également configurer les tests en procédant comme suit :</p>
+        <ul>
+            <li>Sélectionnez les tests à effectuer.</li>
+            <li>Modifier l&apos;importance accordée à certains tests<b>(score de risque</b>).</li>
+            <li>Refine test parameters.</li>
+        </ul>
+        <MadCap:pageBreak /><MadCap:snippetBlock src="../../Resources/Snippets/view-configuration-page.flsnp" /><p>Désélectionnez la case d&apos;un test si vous ne souhaitez pas qu&apos;il soit exécuté.</p>
+        <p>Vous pouvez également utiliser cette page pour mettre l&apos;accent<b>(score de risque</b>) sur des tests spécifiques et leurs paramètres.</p><MadCap:snippetBlock src="../../Resources/Snippets/change-risk-score.flsnp" /><h4>Tableaux et graphiques</h4>
+        <p>Les tests comprennent un diagramme circulaire qui indique le pourcentage et la quantité des transactions signalées pour ce test. Des diagrammes à secteurs apparaissent lorsqu&apos;un test a mis en évidence des transactions.</p>
+        <p><img src="../../Resources/Images/aai-duplicate-entries.png" alt="Entrées en double Test analytiqueAI" /></p>
+        <MadCap:pageBreak />
+        <p>Certains tests, tels que le test &quot; <b>High Amounts&quot;</b> , comprennent un diagramme circulaire et un graphique supplémentaire qui vous aide à configurer les paramètres.</p>
+        <p><img src="../../Resources/Images/aai-high-amounts.png" alt="Montants élevés Test AnalyticsAI" /></p>
+        <p>Les diagrammes à barres spécifiques au test montrent la distribution des données par rapport au test, ce qui permet à l&apos;auditeur d&apos;avoir une idée claire de l&apos;endroit où fixer le paramètre. Par exemple, le diagramme à barres des <b>montants élevés</b> montre la distribution des montants de la ligne de transaction. Vous pouvez ajuster le <b>percentile</b> pour marquer les montants à droite de la barre orange.</p>
+        <p>Dans cet exemple, la valeur par défaut du percentile a été modifiée en 99,7. Remarquez que pour la valeur de percentile par défaut de 99,1, 21 transactions sont signalées. Lorsque nous modifions le <b>percentile</b> à 99,7 et que nous réexécutons les tests, le nombre de transactions signalées tombe à cinq.</p>
+        <p><img src="../../Resources/Images/aai-high-amounts-adjusted.png" alt="Montants élevés ajustés" /></p>
+        <MadCap:pageBreak />
+        <h4>Détection des valeurs aberrantes</h4>
+        <p>AnalyticsAI dispose d&apos;un certain nombre de tests de détection de valeurs aberrantes basés sur l&apos;apprentissage machine (ML). Ces tests sont désactivés par défaut.</p>
+        <p><b>Pour activer les tests de détection des valeurs aberrantes :</b></p>
+        <ul>
+            <li>Cochez les cases des tests de détection des valeurs aberrantes sur la page <b>CONFIGURATION</b> </li>
+        </ul>
+        <p><img src="../../Resources/Images/enable-outlier-test.png" alt="Activer les tests de valeurs aberrantes d&apos;AnalyticsAI" /></p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Analytics-ai-configuration.htm#Teststatus">Détection des valeurs aberrantes</a> .</p>
+        <h2>Examen analytique</h2>
+        <p>Le document d&apos; <b>examen analytique 2-3</b> identifie les relations (pour une utilisation éventuelle dans les procédures analytiques de fond), les risques et les incohérences. Les tableaux d&apos;analyse figurant dans le présent document sont liés aux données tout au long de la mission afin d&apos;aider les auditeurs à comparer visuellement les données et à découvrir des tendances et des schémas à l&apos;aide d&apos;analyses de données prédéfinies.</p>
+        <p>Utilisez le menu déroulant pour sélectionner les résultats <b>préliminaires</b> ou <b>finaux</b> . Utilisez les boutons de filtrage pour afficher les widgets d&apos;analyse souhaités. Les widgets sont interactifs. Survolez un élément spécifique d&apos;un graphique pour obtenir plus d&apos;informations.</p>
+        <MadCap:pageBreak /><MadCap:snippetBlock src="../../Resources/Snippets/show-analytical-review.flsnp" /></body>
+</html>

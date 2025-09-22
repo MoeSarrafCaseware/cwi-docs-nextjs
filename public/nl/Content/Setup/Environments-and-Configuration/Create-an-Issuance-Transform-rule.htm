@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Maak een Issuance Transform-regel aan (ADFS)</h1>
+        <p>Maak een Issuance Transform-regel om LDAP-kenmerken toe te wijzen aan uitgaande claims.</p>
+        <p style="font-weight: bold;">Maak een Issuance Transform-regel aan (ADFS)</p>
+        <ol>
+            <li>
+                <p>Klik in de ADFS Administration Console op de map <b>Application Groups</b> en dubbelklik vervolgens op uw <a href="Create-a-new-application-group.htm">nieuwe applicatiegroep</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Dubbelklik in het dialoogvenster Eigenschappen op de <a href="Create-a-Web-API-application.htm">Web API-toepassing</a>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-01.png" /></p>
+            </li>
+            <li>
+                <p>Klik in het dialoogvenster Web API Properties op het tabblad <b>Issuance Transform Rules</b> en klik vervolgens op <b>Add Rule (Regel toevoegen)</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-02.png" /></p>
+            </li>
+            <li>
+                <p>Klik op de vervolgkeuzelijst <b>Claimsjabloon</b> en selecteer <b>LDAP-attributen verzenden als claims</b>. Klik op <b>Volgende</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-03.png" /></p>
+            </li>
+            <li>
+                <p>Voer een naam in voor de claimregel, klik vervolgens op het vervolgkeuzemenu <b>Attribute store</b> en selecteer <b>Active Directory</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-04.png" /></p>
+            </li>
+            <li>
+                <p>Vul de tabel Mapping van LDAP-kenmerk naar uitgaande claimtypes als volgt in:</p>
+                <table class="table">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <tbody>
+                        <tr>
+                            <th>LDAP attribuut</th>
+                            <th>Type uitgaande claim</th>
+                        </tr>
+                        <tr>
+                            <td>E-mailadres:</td>
+                            <td>E-mail</td>
+                        </tr>
+                        <tr>
+                            <td>Voornaam</td>
+                            <td>voornaam</td>
+                        </tr>
+                        <tr>
+                            <td>Achternaam</td>
+                            <td>familienaam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Klik op <b>Ja</b> om de configuratie te voltooien.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Generate-the-reply-URL-ADFS.htm">De antwoord-URL genereren (Okta)</a></p>
+    </body>
+</html>

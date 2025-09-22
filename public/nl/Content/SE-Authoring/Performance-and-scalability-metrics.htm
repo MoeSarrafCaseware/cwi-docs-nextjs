@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Drempels en maximumlimieten</h1>
+        <p>De volgende informatie over prestaties en schaalbaarheid geeft de juiste drempelwaarden of geschatte maximumlimieten aan die worden aanbevolen voor SE-producten. Je raadpleegt ook de <a href="https://docs.google.com/spreadsheets/d/1naLgb2QbGhM7xDgsng4kd2b_EUk0KB_tckONVtpm1IU/edit?usp=sharing">Comparative Analysis</a> spreadsheet om je te helpen bij het evalueren van de prestaties van de financiële overzichten voor jouw SE App.</p>
+        <h2>opdracht</h2>
+        <table class="table table-striped">
+            <col style="width: 249px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>
+                        <p>Drempel / Maximale limiet</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aantal gebruikers binnen één engagementbestand</td>
+                    <td>
+                        <p>5</p>
+                        <p class="note inline"><b>Let op:</b> De prestaties kunnen afnemen als meer dan 5 gebruikers actief wijzigingen aanbrengen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandsgrootte:</td>
+                    <td>Geen specifieke aanbevelingen, maar het aanmaken, laden en doorsturen van engagementbestanden kan worden beïnvloed door de grootte van externe documenten in de engagement, bijvoorbeeld PDF&apos;s.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>document</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aantal documenten per opdrachtdossier</td>
+                    <td>275</td>
+                </tr>
+                <tr>
+                    <td>Tijd om alle zichtbare documenten in een engagementbestand te laden</td>
+                    <td>~3 seconden</td>
+                </tr>
+                <tr>
+                    <td>Maximale bestandsgrootte voor externe documenten</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Pagina</h2>
+        <table class="table table-striped">
+            <col style="width: 349px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum aantal tekens</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Tijd om proefbalansrekeningen en -groepen te laden</td>
+                    <td>~3 seconden</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum aantal tekens</p>
+                        <p><i>(in totaal, niet per groep) </i></p>
+                    </td>
+                    <td>
+                        <p>10000</p>
+                        <p>(voor geconsolideerde en niet-geconsolideerde opdrachten)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Tijd om alle rekeningen en groepen in de proefbalans te laden</p>
+                        <p><i>(uitgaande van een groeperingsstructuur van 800 groepen)</i></p>
+                    </td>
+                    <td>~3 seconden</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Opties saldibalans</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum aantal tekens</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Tijd om proefbalansrekeningen en -groepen te laden</td>
+                    <td>~3 seconden</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum aantal tekens</p>
+                        <p><i>(in totaal, niet per groep) </i></p>
+                    </td>
+                    <td>
+                        <p>200 (voor geconsolideerde opdrachten)</p>
+                        <p>800 (voor niet-geconsolideerde opdrachten)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Tijd om alle rekeningen en groepen in de proefbalans te laden</p>
+                        <p><i>(uitgaande van een groeperingsstructuur van 800 groepen)</i></p>
+                    </td>
+                    <td>~3 seconden</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Checklists</h2>
+        <table class="table table-striped">
+            <col style="width: 257px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Tijd om zichtbare procedures per checklistdocument te laden</p>
+                        <p><![CDATA[ 
+]]><i>(inclusief beschikbare subprocedures, groepen en subgroepen)</i></p>
+                    </td>
+                    <td>
+                        <p>~2 seconden</p>
+                        <p class="bestpractice inline"><b>Beste praktijk:</b> Overweeg om grote checklists op te splitsen in meerdere documenten. Je kunt <a href="Set-up-bulk-print.htm">bulkafdrukken</a> instellen om ze als één document af te drukken.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum number of procedures per document</p>
+                        <p><i>(inclusief subprocedures, groepen, subgroepen)</i></p>
+                    </td>
+                    <td>250</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (new design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Maximum number of sections per area</p>
+                        <p><![CDATA[
+]]><i>(secties gebruikt voor het testen bestonden uit: 14 tabellen, 14 tekstgebieden - waarbij tekstgebieden bestonden uit platte tekst en 3 formules)</i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Tijd om een document te laden met 30 secties per gebied <i>(de secties die werden gebruikt tijdens het testen bestonden uit: 14 tabellen en 14 tekstgebieden - elk tekstgebied bestond uit platte tekst en 3 formules)</i></td>
+                    <td>~2 seconden</td>
+                </tr>
+                <tr>
+                    <td>Maximum aantal gebieden in het document</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Tijd om een document met 100 gebieden te laden</td>
+                    <td>~2 seconden</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Zoekopdrachten</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximale bestandsgrootte voor uploads</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>PDF genereren voor afdrukken</h2>
+        <table class="table table-striped">
+            <col style="width: 264px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maximum aantal pagina&apos;s in het document</td>
+                    <td>
+                        <p>40</p>
+                        <p class="note inline"><b>Let op:</b> De PDF-engine die we gebruiken voor het afdrukken heeft een time-out van 5 minuten. Als de printtijd deze drempel overschrijdt, wordt het document niet afgedrukt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (old design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Maximum aantal secties in het document</p>
+                        <p><i>(secties gebruikt voor het testen bestonden uit: 14 tabellen, 14 tekstgebieden - waarbij tekstgebieden bestonden uit platte tekst en 3 formules) </i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Tijd om een document met 30 secties te laden</p>
+                        <p><i>(secties die werden gebruikt bij het testen bestonden uit: 14 tabellen en 14 tekstgebieden - elk tekstgebied bestond uit platte tekst en 3 formules) </i></p>
+                    </td>
+                    <td>~5 seconden</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Nieuwe risicomodule</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Drempel / Maximale limiet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aantal risico&apos;s in het tabblad <b>RISICO</b></td>
+                    <td>
+                        <p>100 (indien ingeklapt)</p>
+                        <p>20 (indien uitgebreid)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Add a calculation in table cells</h1>
+        <p>You can add calculation formulas in table cells. Once users import data, the cells automatically populate with calculated values based on your predefined formulas. For example, you can add cell calculations in your template to build:</p>
+        <ul>
+            <li>
+                <p>complex notes to the financial statements, such as movement rows.</p>
+            </li>
+            <li>
+                <p>worksheets (which can be used as a base setup to various items in your template).</p>
+            </li>
+            <li>
+                <p>movement rows in the Statement of Cash Flows.</p>
+            </li>
+            <li>
+                <p>ratio analysis rows in the Earnings per share section in the Income Statement.</p>
+            </li>
+        </ul>
+        <p>The calculation can include numbers, data sourced from the trial balance, data sourced from the financial statements, form values (if SE Builder forms are developed in your product) or a combination of all.</p>
+        <p class="note inline"><b>Note:</b> This feature is only available for cells in columns or rows with type <b>Input</b>.</p>
+        <p style="font-weight: bold;">To add a calculation in table cells:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie die Tabelle aus.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" style="width: 24px;height: 13px;vertical-align: text-bottom;" />), then choose <b>Edit Dynamic Table.</b></p>
+            </li>
+            <p>Die Tabellenoptionen im Bearbeitungsmodus.</p>
+            <li>
+                <p>Go to the desired cell and select the <b>fx</b> icon.</p>
+                <p class="note inline"><b>Note:</b> The cell must be an <b>Input row</b> or <b>Input</b> column cell.</p>
+                <p><img src="../Resources/Images/fx-icon-in-cell.png" alt="The fx icon displays on the left margin of the cell." /></p>
+            </li>
+            <li>
+                <p>In the <b>Calculation</b> tab, enter your formula.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select <b>Insert data</b> (<b>f</b><sub style="font-weight: bold;">x</sub>) to insert a trial balance data link in the formula.</p>
+                    </li>
+                    <p>The <b>Data Link</b> dialog opens on the <b>Trial Balance</b> tab. The current document is selected by default as the source for trial balance data.</p>
+                    <p>You can change the default using the <b>Source</b> drop-down:</p>
+                    <ul>
+                        <li>
+                            <p><b>Trial balance</b> - trial balance data is sourced from the <b>Final</b> column in the <b>Data</b> page. That is, the final amounts after any existing adjustments are applied.</p>
+                        </li>
+                        <li>
+                            <p><b>Financial statements</b> - trial balance data is sourced from the financial statements. That is, the amounts after rounding is applied and any manual overrides are done.</p>
+                        </li>
+                    </ul>
+                    <p>As you insert data links, the (<img src="../Resources/Images/icon-fs-data-source.png" style="width: 22px;height: 25px;vertical-align: text-bottom;" />) or (<img src="../Resources/Images/icon-tb-data-source.png" style="vertical-align: text-bottom;width: 22px;height: 22px;" />) prefix indicates the data source.</p>
+                    <div class="note inline">
+                        <p><b>Hinweise:</b></p>
+                        <ul>
+                            <li>
+                                <p>The <b>Cell Reference</b> tab enables you to reference values from one dynamic table into another. See <a href="Add-cell-references.htm">Add cell references</a> for more information.</p>
+                            </li>
+                            <li>
+                                <p>If you have developed SE Builder forms in your product, the <b>Forms value</b> tab is available in the <b>Data Link</b> dialog. You can insert values from forms using this tab.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <li>
+                        <p>Select <b>Numbers</b> (<img src="../Resources/Images/icon-number.png" style="width: 26px;height: 18px;vertical-align: text-bottom;" />) to insert numbers in the formula.</p>
+                        <p class="tip"><b>Tipp:</b> You can use your keyboard to insert numbers.</p>
+                    </li>
+                    <li>
+                        <p>Add the desired operators to build the formula.</p>
+                        <p class="tip"><b>Tipp:</b> You can use your keyboard to insert operators.</p>
+                        <p><img src="../Resources/Images/cell-calculation-PY.PNG" alt="Calculation formula in an input row cell." /></p>
+                    </li>
+                    <li>
+                        <p>Select <b>DONE</b> to close the <b>Calculation</b> tab.</p>
+                        <p class="note inline"><b>Note:</b> If you&apos;ve entered an invalid formula, the <b>fx</b> icon displays in red (<img src="../Resources/Images/icon-red-fx-invalid-calculation.png" style="width: 20px;height: 25px;vertical-align: text-bottom;" />) to indicate an error.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>As you&apos;re setting up the financial statements, you can review the calculation formulas you&apos;ve added. Select a cell to view details of the calculation.</p>
+        <p><img src="../Resources/Images/view-calculation-Fs-doc-PA1.png" alt="In the document, you can select the cell to view the details of the calculation." /></p>
+        <p>End users can override cell calculations. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Add-or-edit-a-calculation-in-table-cells-in-the-financial-statements.htm">Add or edit a calculation in table cells.</a></p>
+    </body>
+</html>

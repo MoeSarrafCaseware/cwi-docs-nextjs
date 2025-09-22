@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Résumé des partenaires et des gestionnaires</h1>
+        <p>Le<b>résumé à l&apos;intention des associés</b> et des<b>gestionnaires (PMS)</b> est un document conçu pour fournir aux gestionnaires et aux associés une vue d&apos;ensemble des informations clés qui déterminent les décisions d&apos;audit pour une mission. Le PMS peut être personnalisé en fonction des paramètres spécifiques de la solution.</p>
+        <p>Une fois que le <b>résumé des partenaires et des gestionnaires (PMS)</b> est intégré à votre solution, sélectionnez <strong>Ajouter</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) sur votre page <b>Documents</b> et ajoutez les documents suivants :</p>
+        <ul>
+            <li>
+                <p><b>Résumé du partenaire et du gestionnaire -</b> Le formulaire principal comprend toutes les fonctionnalités, y compris les paramètres de configuration de l&apos;auteur principal et tous les widgets.</p>
+            </li>
+            <li>
+                <p><b>PA - Feuille de calcul récapitulative des partenaires et des gestionnaires</b> - Un formulaire SE Builder qui est nécessaire pour soutenir la fonctionnalité du formulaire principal. Vous devez ajouter cette feuille de calcul à votre page <b>Documents</b> , mais vous pouvez toujours la masquer en utilisant les paramètres de visibilité.</p>
+            </li>
+            <li>
+                <p><b>GC - Formulaire de visibilité en mode auteur</b> - Un formulaire SE Builder qui pilote les paramètres de visibilité du contenu du formulaire en fonction du type d&apos;auteur qui y accède. Vous devez ajouter cette feuille de calcul à votre page <b>Documents</b> , mais vous pouvez toujours la masquer en utilisant les paramètres de visibilité.</p>
+                <p class="note"><b>Remarque :</b> Le <b>formulaire GC - Visibilité en mode auteur</b> est un formulaire utilisé par d&apos;autres formulaires de composants globaux. S&apos;il a déjà été ajouté à votre solution, aucune autre action n&apos;est requise à cette étape.<br /></p>
+            </li>
+        </ul>
+        <h2>Changements requis au niveau de l&apos;auteur principal</h2>
+        <p>Le<b>résumé de l&apos;associé et du gestionnaire (PMS)</b> comprend un certain nombre de widgets présentant des informations clés qui déterminent les décisions d&apos;audit pour une mission.</p>
+        <p><b>Partner and manager summary (PMS)</b> a été développé par l&apos;équipe International Solutions et a fait l&apos;objet d&apos;une démonstration lors du webinaire Distributeurs du 26 juillet 2023.</p>
+        <p>Pour une présentation détaillée de la fonctionnalité de <b>résumé des partenaires et des gestionnaires</b> applicable aux utilisateurs finaux, voir <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23368&amp;returntype=UploadedFile">cet enregistrement.</a></p>
+        <p>Une fois ajouté, accédez au formulaire lorsque vous êtes dans le formulaire principal et configurez les widgets nécessaires.</p>
+        <p>Le tableau ci-dessous présente un résumé de chacun des widgets :</p>
+        <table class="table table-striped">
+            <col style="width: 220px;" />
+            <col style="width: 162px;" />
+            <col style="width: 132px;" />
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Onglet / Widget</th>
+                    <th style="text-align: left;">Configurations de l&apos;auteur principal</th>
+                    <th style="text-align: left;">Suppose une logique de contenu spécifique</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Paramètres</b> - Vue d&apos;ensemble</td>
+                    <td style="font-style: italic;color: #000000;">Configurations requises pour l&apos;auteur principal</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Non</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planification</b> - Informations financières</td>
+                    <td style="font-style: italic;color: #000000;">Configurations requises pour l&apos;auteur principal</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui </span>- voir les détails <a href="#Financial_information">ici</a></td>
+                </tr>
+                <tr>
+                    <td>Informations générales sur l&apos;engagement.</td>
+                    <td style="font-style: italic;color: #000000;">Configurations requises pour l&apos;auteur principal</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Non</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planification</b> - Documents nécessitant des jeux de rôles spécifiques</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui -</span>voir les détails <a href="#Documents_requiring_specific_role_sets">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Planification</b> - Équipe d&apos;engagement</td>
+                    <td style="font-style: italic;color: #000000;">Configurations requises pour l&apos;auteur principal</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui </span>- voir les détails <a href="#Engagement_team">ici</a></td>
+                </tr>
+                <tr>
+                    <td>Évaluation des risques et réponse</td>
+                    <td style="font-style: italic;color: #000000;">Configurations de l&apos;auteur principal requises (le cas échéant)</td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td>Évaluation des risques et réponse</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td><b>Évaluation des risques et réponse</b> - Réponse d&apos;audit prévue</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui </span>- voir les détails <a href="#Planned_audit_responses">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Évaluation des risques et réaction</b> - Documents nécessitant des jeux de rôles spécifiques</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui </span>- voir les détails <a href="#Documents_requiring_specific_role_sets">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Travail sur le terrain</b> - Documents avec des réponses non optimales</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui</span> - voir les détails <a href="#Fieldwork">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Travail sur le terrain</b> - Documents avec conclusions personnalisées</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui</span> - voir les détails <a href="#Documents_with_custom_conclusion">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Travail sur le terrain</b> - Documents nécessitant des jeux de rôles spécifiques</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui </span>- voir les détails <a href="#Documents_requiring_specific_role_">ici</a></td>
+                </tr>
+                <tr>
+                    <td><b>Achèvement</b> - Questions</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td><b>Achèvement</b> - Ajustements</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td><b>Achèvement</b> - Documents dont la visibilité est ignorée</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td>Documents modifiés après la signature.</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;">Non</td>
+                </tr>
+                <tr>
+                    <td><b>Achèvement</b> - Documents nécessitant des jeux de rôles spécifiques</td>
+                    <td style="color: #000000;"><i>Aucun auteur principal n&apos;est requis</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Oui</span> - voir les détails <a href="#Documents_requiring_specific_role_">ici</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Settings"></a>Paramètres</h2>
+        <p class="note"><b>Remarque</b>: Les configurations de l&apos;auteur principal sont requises.</p>
+        <ul>
+            <li>
+                <p>Le tableau des <b>paramètres</b> permet aux auteurs principaux de personnaliser le contenu du <b>résumé du partenaire et du gestionnaire (PMS)</b> en fonction de la solution dans laquelle il est intégré.</p>
+            </li>
+            <li>
+                <p>La colonne <b>Onglets du formulaire</b> comprend une liste de noms d&apos;onglets qui forment la structure du document PMS. Utilisez cette colonne pour modifier les noms des onglets en fonction des exigences spécifiques de votre solution.</p>
+            </li>
+            <li>
+                <p>La colonne <b>Widget</b> contient une liste des widgets disponibles pour chacun des onglets. Choisissez les widgets à inclure en fonction des exigences spécifiques de votre solution.</p>
+            </li>
+            <li>
+                <p>Les<b>phases de l&apos;engagement</b> permettent aux auteurs principaux d&apos;aligner les <b>phases du document d&apos;</b> engagement SE sur les onglets du PMS. Vous pouvez sélectionner une ou plusieurs phases correspondant à un onglet particulier. Ces informations sont utilisées dans le reste de la fonctionnalité PMS pour filtrer correctement les informations pour chacun des widgets applicables. Pour en savoir plus sur les <b>phases d&apos;engagement</b>, voir <a href="https://developers.caseware.com/se-authoring/31/Define-the-engagement-phases.htm">Définir les phases d&apos;engagement.</a></p>
+            </li>
+            <li>
+                <p>Les<b>dossiers</b> permettent aux auteurs principaux de filtrer davantage les dossiers qui s&apos;alignent sur un onglet particulier et qui sont utilisés dans le reste de la fonctionnalité PMS pour filtrer correctement l&apos;information pour chacun des widgets applicables. Par défaut, tous les dossiers associés à une <b>phase d&apos;engagement</b> sont sélectionnés. Notez que si la sélection de la <b>phase d&apos;engagement</b> est modifiée, la sélection des <b>dossiers</b> doit être révisée.</p>
+            </li>
+        </ul><div class="note"><p><b>Remarque :</b></p>
+            <ul>
+                <li>
+                    <p>Ce formulaire ne permet pas d&apos;ajouter plusieurs onglets dans les paramètres de l&apos;auteur principal.</p>
+                </li>
+                <li>
+                    <p>Les widgets inclus sont affectés à des onglets individuels et ne peuvent pas être déplacés d&apos;un onglet à l&apos;autre.</p>
+                </li>
+                <li>
+                    <p>Chaque widget est exclusivement conçu pour ce formulaire et ne peut être intégré dans d&apos;autres zones de l&apos;engagement SE.</p>
+                </li>
+            </ul></div><p>Si vous envisagez d&apos;apporter des modifications importantes au contenu ou aux fonctionnalités des formulaires SE Builder, telles que l&apos;ajout, la suppression ou la modification de fonctionnalités, vous devrez être propriétaire du code.</p>
+        <p class="note"><b>Remarque :</b> Le fait d&apos;être propriétaire du code signifie que vous serez responsable de la maintenance des formulaires du constructeur SE à l&apos;avenir. Il s&apos;agit notamment d&apos;appliquer manuellement toutes les modifications, mises à jour et corrections de bogues futures qui sont déployées pour la source de formulaire d&apos;origine.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Partner-and-manager-summary.htm">Demander l&apos;accès à la synthèse des partenaires et des gestionnaires</a>.</p>
+        <p>Nous détaillons ci-dessous le fonctionnement de chaque widget et la manière dont il doit être configuré, le cas échéant.</p>
+        <h2>Planification</h2>
+        <h3><a name="Financial_information"></a>Information financière.</h3>
+        <p class="note"><b>Remarque :</b> Les configurations de l&apos;auteur principal sont requises.</p>
+        <p>Le widget <b>Informations financières</b> comprend les informations du graphique d&apos;analyse sélectionnées pour être présentées dans le PMS. Pour en savoir plus sur les modules d&apos;analyse, voir <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-analysis-module.html">Configuration du module d&apos;analyse.</a></p>
+        <p>En tant qu&apos;auteur principal, précisez les éléments suivants :</p>
+        <ul>
+            <li>
+                <p>L&apos;URL du document d&apos;analyse que vous souhaitez inclure dans le document PMS.</p>
+            </li>
+            <li>
+                <p>L&apos;URL et le nom du document d&apos;analyse pour créer la référence dans le document PMS.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Remarque :</b> Le widget <b>Informations financières</b> permet d&apos;ajouter un document d&apos;analyse et d&apos;afficher toutes les informations, telles que les graphiques, contenues dans ce document. En fonction de l&apos;étendue de vos documents d&apos;analyse, vous pouvez créer un document d&apos;analyse distinct contenant de plus petits sous-ensembles de graphiques à inclure dans le widget d&apos; <b>informations financières de</b> PMS.</p>
+        <h3>Informations générales sur l&apos;engagement.</h3>
+        <p class="note"><b>Remarque :</b> Les configurations de l&apos;auteur principal sont requises.</p>
+        <p>Le widget &quot; <b>Informations générales sur l&apos;engagement&quot;</b> énumère les principales réponses de l&apos;engagement sur la base des informations définies dans le tableau ci-dessous :</p>
+        <ul>
+            <li>
+                <p><b>ID de la procédure</b> - Insérez l&apos; <b>ID de</b> la <b>procédure de</b> l&apos;information que vous souhaitez présenter. Pour savoir comment identifier l&apos;ID de la procédure, reportez-vous à la section <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identifier l&apos;ID de la procédure</a>.</p>
+            </li>
+            <li>
+                <p><b>Nom de la procédure</b> - Fournissez la description que vous souhaitez voir apparaître dans le tableau. Si aucune description n&apos;est fournie, le texte par défaut de la procédure sera utilisé.</p>
+            </li>
+            <li>
+                <p><b>Réponse Oui / Non</b> - La case à cocher permet de sélectionner <b>Oui</b> ou <b>Non</b> comme réponse en fonction du type de procédure. Il indiquera <b>Oui</b> pour les procédures ayant reçu une réponse sous forme de <i>récit</i> ou de <i>procédure</i> et <i>Non</i> pour celles ayant reçu une réponse sous forme de <i>S/O.</i> Cette case à cocher est spécifique à certains types de procédures qui comportent des réponses en ligne de <i>type Narratif, Procédure</i> ou <i>N/A.</i>  Pour les autres types de procédures, la case ne doit pas être cochée.</p>
+            </li>
+            <li>
+                <p><b>Modifier la couleur de gravité</b> - Sélectionnez l&apos;icône du crayon pour définir la couleur des réponses en fonction de leur gravité. Par exemple : <b>Haut - <span style="color: #000000;">Rouge</span> / Moyen - <span style="color: #000000;">Orange</span> / Bas - <span style="color: #000000;">Vert.</span></b></p>
+            </li>
+        </ul>
+        <h3>Documents nécessitant des jeux de rôles spécifiques</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents nécessitant des jeux de rôles spécifiques</b> répertorie tous les documents des phases d&apos;engagement sélectionnées pour l&apos;onglet <b>Planification</b> . Ces documents ont un schéma de signature différent du schéma par défaut spécifié dans <b>Produit → Paramètres → Signoffs → Schémas.</b></p>
+        <p>Pour en savoir plus sur les systèmes de signature, voir <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Configurer les systèmes de signature</a>.</p>
+        <h3><a name="Engagement_team"></a>Équipe d&apos;engagement</h3>
+        <p class="note"><b>Remarque :</b> Les configurations de l&apos;auteur principal sont requises.</p>
+        <p>Le widget de <b>l&apos;équipe d&apos;engagement</b> affiche des informations documentées sur l&apos;équipe spécifique à votre engagement.</p>
+        <p><b>Notez que ce widget prend en charge les cas suivants :</b></p>
+        <p><b>Case 1</b> Lorsque les informations relatives à l&apos;équipe de mission sont documentées dans le cadre d&apos;une procédure unique dans une <b>liste de contrôle SE</b>, ce qui permet d&apos;avoir plusieurs lignes, les informations relatives au <b>poste</b> et au <b>nom s</b>&apos;affichent. Répondez à la <b>liste de contrôle SE</b> si ce scénario s&apos;applique et complétez les informations suivantes :</p>
+        <ul>
+            <li>
+                <p><b>ID de la</b> procédure - Insérer l&apos;ID de la procédure dans laquelle les informations de l&apos;équipe de mission sont documentées. Pour savoir comment identifier l&apos;ID de la procédure, reportez-vous à la section <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identifier l&apos;ID de la procédure</a>.</p>
+            </li>
+            <li>
+                <p><b>Lire les informations sur la procédure</b> - Cliquez sur le bouton pour obtenir des informations sur la manière dont les réponses sont définies pour la procédure.</p>
+            </li>
+            <li>
+                <p><b>Poste/Nom</b> - Spécifiez laquelle des réponses de la procédure représente le poste ou le nom.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/1-procedure-settings.png" title="La boîte de dialogue Paramètres de la procédure." /></p>
+        <p><b>Case 2</b> Lorsque les informations relatives à l&apos;équipe de mission sont consignées dans un document/tableau SE Builder différent, répondez par le tableau <b>SE Builder</b> si ce scénario s&apos;applique, et suivez les instructions énumérées ci-dessous :</p>
+        <p>Utilisez l&apos;exemple de code suivant et ajoutez-le à votre propre formulaire SE Builder pour remplir les informations requises dans le <b>tableau PMS - Engagement team :</b></p><code> <p>calcUtils.calc(function (calcUtils, field, form) {</p><p>let rowData = [</p><p>&quot;nom&quot; : &apos;Nam&apos;, position : &apos;Développeur&apos; },</p><p>&quot;nom&quot; : khoa&quot;, position : Gérer</p><p>&quot;nom&quot; : huy&quot;, position : &apos;Développeur 1&apos;},</p><p>&quot;nom&quot; : hieu&quot;, position : &apos;Développeur 2&apos;},</p><p>&quot;nom&quot; : ha&quot;, position : &apos;Développeur&apos; },</p><p>]</p><p>if (!wpw.tax.gcs) wpw.tax.gcs = {} ;</p><p>if (JSON.stringify(wpw.tax.gcs.cacheCKList) !== JSON.stringify(rowData)) {</p><p>wpw.tax.gcs.cacheCKList = rowData ;</p><p>wpw.tax.gcs.clearTableRows(form(&apos;pmsd&apos;).field(&apos;engagementTeamInfoTable&apos;)) ;</p><p>form(&apos;pmsd&apos;).field(&apos;engagementTeamInfoTable&apos;).addRow(0, rowData, true) ;</p><p>form(&apos;pmsd&apos;).field(&apos;hasTeamProcedures&apos;).set(true) ;</p><p>form(&apos;pmsd&apos;).field(&apos;hasTeamProcedures&apos;).save() ;</p><p>}</p></code><h2>Évaluation des risques et réponse</h2>
+        <h3>Risques</h3>
+        <p class="note"><b>Remarque :</b> Configurations de l&apos;auteur principal requises, le cas échéant.</p>
+        <p>Le widget <b>Risques</b> affiche les informations sur les <b>risques</b> documentés dans le dossier de mission :</p>
+        <ul>
+            <li>
+                <p><b>Risque au niveau des états financiers</b>: Si votre application permet de documenter le risque au niveau des états financiers :</p>
+                <ul>
+                    <li>
+                        <p>Insérer l&apos; <b>identifiant de la procédure</b> dans laquelle les informations relatives à l&apos;équipe de mission sont documentées. Pour savoir comment identifier l&apos;ID de la procédure, reportez-vous à la section <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identifier l&apos;ID de la procédure.</a></p>
+                    </li>
+                    <li>
+                        <p>Documenter l&apos; <b>URL</b> et le <b>nom de</b> la liste de contrôle contenant ces informations pour créer la référence dans l&apos;onglet du document PMS.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Affiche automatiquement le nombre <b>total</b> de risques documentés dans le dossier de mission</p>
+            </li>
+            <li>
+                <p>Affiche automatiquement le nombre de <b>risques significatifs</b> identifiés dans le dossier de mission</p>
+            </li>
+            <li>
+                <p>Affiche automatiquement le nombre de <b>risques de fraude</b> identifiés dans le dossier de mission</p>
+            </li>
+        </ul>
+        <p>La référence du <b>rapport de risque</b> incluse dans le widget dirige automatiquement l&apos;utilisateur final vers l&apos;onglet d&apos; <a href="https://developers.caseware.com/se-authoring/31/Enable-the-new-risk-module.htm">évaluation des risques</a> dans le dossier de mission.</p>
+        <h3>Contrôles</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Contrôles</b> affiche les informations sur les <b>contrôles</b> documentés dans le dossier d&apos;engagement :</p>
+        <ul>
+            <li>
+                <p>Affiche automatiquement le nombre <b>total</b> de contrôles documentés dans le dossier de mission.</p>
+            </li>
+            <li>
+                <p>Affiche automatiquement le nombre de <b>contrôles clés</b> documentés dans le dossier de mission.</p>
+            </li>
+        </ul>
+        <p>La référence du <b>rapport de contrôle</b> incluse dans le widget dirige automatiquement l&apos;utilisateur final vers l&apos;onglet du <a href="https://developers.caseware.com/se-authoring/31/SE-Authoring/Enable-controls-in-the-risks-module.htm">rapport de contrôle</a> dans le fichier d&apos;engagement.</p>
+        <h3><a name="Planned_audit_responses"></a>Planned audit responses</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Réponses d&apos;audit planifiées</b> affiche automatiquement les informations basées sur les tableaux de réponses d&apos;audit intégrés dans les listes de contrôle du programme d&apos;audit qui font partie de la phase d&apos;évaluation des risques et de réponse, comme spécifié dans le tableau des <a href="#Settings">paramètres.</a> </p>
+        <p class="note"><b>Remarque :</b> Le widget <b>Réponses d&apos;audit planifiées</b> ne permet d&apos;afficher des informations que si le <a href="https://developers.caseware.com/se-authoring/31/Audit-response-table.htm">composant global - Tableau des réponses d&apos;audit</a> a été implémenté dans la solution, ainsi que les listes de contrôle du programme d&apos;audit. Ces listes de contrôle, y compris le tableau des réponses à l&apos;audit, sont liées à un domaine financier :</p>
+        <p class="note"><img src="../Resources/Images/2-show-risk-information.png" title="Afficher les informations sur les risques " /></p>
+        <h3>Documents nécessitant des jeux de rôles spécifiques</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents nécessitant des jeux de rôles spécifiques</b> répertorie tous les documents des phases d&apos;engagement sélectionnées pour l&apos;onglet <b>Évaluation des risques et réponse.</b>  Ces documents ont un schéma de signature différent du schéma par défaut spécifié dans <b>Produit → Paramètres → Signoffs → Schémas.</b></p>
+        <p>Pour en savoir plus sur les systèmes de signature, voir <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Configurer les systèmes de signature</a>.</p>
+        <h2><a name="Fieldwork"></a>Travail sur le terrain</h2>
+        <h3>Documents avec des réponses non optimales</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents avec réponses non optimales</b> répertorie les documents de la phase de travail sur le terrain de la mission qui contiennent des procédures marquées d&apos;une réponse non optimale.</p>
+        <p class="note"><b>Remarque :</b> Ce widget lit des informations basées sur la fonction de réponse non optimale disponible pour les réponses aux procédures :</p>
+        <p class="note"><img src="../Resources/Images/3-Documents-with-non-optimal-answers.png" title="Documents avec des réponses non optimales." /></p>
+        <p>Pour en savoir plus sur les réponses non optimales, voir <a href="https://developers.caseware.com/se-authoring/31/Print Only Topics/Reviewer Training/Review-Tools.htm">Outils de révision - Réponses non optimales</a>.</p>
+        <h3><a name="Documents_with_custom_conclusion"></a>Documents avec conclusion personnalisée</h3>
+        <p><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents avec conclusion personnalisée</b> affiche les listes de contrôle des programmes d&apos;audit pour lesquels la zone de texte supplémentaire de la conclusion était vide par défaut lors de la création de la mission et a été modifiée par l&apos;utilisateur final au niveau de la mission.</p>
+        <p class="note"><b>Remarque :</b> Ce widget permet d&apos;afficher des informations uniquement dans le scénario suivant :</p>
+        <ul>
+            <li>
+                <p>La liste de contrôle du programme d&apos;audit comprend la section Conclusion telle que définie dans les <a href="https://developers.caseware.com/se-authoring/31/Review-and-modify-the-checklist-default-settings.htm">paramètres par défaut de la liste de contrôle</a></p>
+            </li>
+            <li>
+                <p>Renvoie le nom de la liste de contrôle dont la conclusion a été modifiée si :</p>
+                <ul>
+                    <li>
+                        <p>La zone de texte supplémentaire de la section conclusion était vide par défaut et a été modifiée par l&apos;utilisateur final au niveau de l&apos;engagement.</p>
+                    </li>
+                    <li>
+                        <p>La liste de contrôle du programme d&apos;audit est visible sur la page <b>Documents.</b> </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3><a name="Documents_requiring_specific_role_"></a>Documents nécessitant des jeux de rôles spécifiques</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents nécessitant des jeux de rôles spécifiques</b> répertorie tous les documents des phases de la mission sélectionnées pour l&apos;onglet <b>Travail sur le terrain.</b>  Ces documents ont un schéma de signature différent du schéma par défaut spécifié dans <b>Produit → Paramètres → Signoffs → Schémas.</b></p>
+        <p>Pour en savoir plus sur les systèmes de signature, voir <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Configurer les systèmes de signature</a>.</p>
+        <h2>Documents à remplir</h2>
+        <h3>Problèmes</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Questions</b> affiche automatiquement les informations sur les questions documentées dans le dossier d&apos;engagement, en les regroupant par catégories :</p>
+        <ul>
+            <li>
+                <p>Remarquable</p>
+            </li>
+            <li>
+                <p>Résolu</p>
+            </li>
+            <li>
+                <p>Effacer</p>
+            </li>
+        </ul>
+        <p>La référence à la <b>page des questions</b> incluse dans le widget dirige automatiquement l&apos;utilisateur final vers le rapport de <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm?region=int">synthèse des questions</a> dans le dossier de mission.</p>
+        <h3>Régularisations</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget Ajustements affiche automatiquement les informations sur les ajustements enregistrés dans le dossier d&apos;engagement :</p>
+        <ul>
+            <li>
+                <p>Le nombre <b>total</b> d&apos;ajustements enregistrés dans le dossier de mission pour l&apos;année en cours, à l&apos;exclusion des ajustements fiscaux comptabilisés.</p>
+            </li>
+            <li>
+                <p>Le nombre total d&apos;ajustements <b>proposés</b> (non enregistrés - factuels / projetés / discrétionnaires) enregistrés dans le dossier de mission pour l&apos;année en cours.</p>
+            </li>
+            <li>
+                <p>Le nombre total d&apos;ajustements <b>réels</b> (normaux et de reclassement) enregistrés dans le dossier de mission pour l&apos;année en cours.</p>
+            </li>
+            <li>
+                <p>Le nombre total d&apos;ajustements <b>éliminatoires</b> enregistrés dans le dossier de mission pour l&apos;année en cours, s&apos;il y en a et si la mission est définie comme une consolidation.</p>
+            </li>
+        </ul>
+        <p>Documentez l&apos; <b>URL</b> et le <b>nom</b> du document &quot; <a href="https://developers.caseware.com/se-authoring/31/Set-up-the-Summary-of-Misstatements.htm">Summary of Misstatements&quot;</a> pour créer la référence dans l&apos;onglet &quot;PMS document&quot;, si cela s&apos;applique à votre application.</p>
+        <p>La référence de la <b>page Ajustements</b> incluse dans le widget dirige automatiquement l&apos;utilisateur final vers l&apos;onglet <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm?region=int">Ajustements</a> dans le fichier d&apos;engagement.</p>
+        <h3>Documents dont la visibilité est ignorée</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents dont la visibilité a été modifiée</b> affiche tous les documents de la mission dont les paramètres de visibilité par défaut, définis à l&apos;origine par l&apos;auteur principal ou l&apos;auteur du cabinet, ont été modifiés par l&apos;utilisateur final au niveau de la mission, de l&apos;une ou l&apos;autre manière :</p>
+        <ul>
+            <li style="font-weight: normal;">
+                <p>Remplacer les paramètres de visibilité du document pour afficher un document destiné à être masqué.</p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>Remplacer les paramètres de visibilité du document pour masquer un document destiné à être affiché.</p>
+            </li>
+        </ul>
+        <p>Notez que ce widget affiche des informations sur tout document dont les paramètres de visibilité ont été modifiés directement sur la page <b>Documents</b> <b>(Caché forcé</b>) et non par le biais de la boîte de dialogue des paramètres de visibilité. Cela inclut également les cas où cette modification a été effectuée par l&apos;auteur principal ou l&apos;auteur principal.</p>
+        <p>Par exemple, un document dont les paramètres de visibilité suivants ont été définis par l&apos;auteur principal sera affiché dans le widget :</p>
+        <p><img src="../Resources/Images/4-Visibility-settings.png" title="La fonction de réglage de la visibilité." /></p>
+        <p><img src="../Resources/Images/5-Visibility-settings.png" title="La fonction de réglage de la visibilité." /></p>
+        <p>Pour résoudre ce problème en tant qu&apos;auteur principal ou en tant qu&apos;auteur d&apos;une entreprise, naviguez jusqu&apos;au modèle et ajustez les paramètres de visibilité à l&apos;aide de la boîte de dialogue des paramètres de visibilité, plutôt que d&apos;apporter des modifications directement sur la page <b>Documents :</b> </p>
+        <p><img src="../Resources/Images/6-Visibility-settings-visibility-form.png" title="Les paramètres de visibilité sont les suivants" /></p>
+        <p><img src="../Resources/Images/7-Use-default-settings.png" alt="Utiliser les paramètres par défaut." /></p>
+        <h3>Documents modifiés après la signature.</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents modifiés après la</b> signature énumère tous les documents des phases d&apos;engagement qui ont été modifiés après leur signature.</p>
+        <p>Pour en savoir plus sur cette fonctionnalité, voir <a href="https://developers.caseware.com/se-authoring/31/Review-and-customize-signoff-schemes.htm">Modifications après l&apos;approbation du réviseur</a>.</p>
+        <h3><a name="Documents_requiring_specific_role_sets"></a>Documents nécessitant des jeux de rôles spécifiques</h3>
+        <p class="note"><b>Remarque :</b> Aucun auteur principal n&apos;est requis.</p>
+        <p>Le widget <b>Documents nécessitant des jeux de rôles spécifiques</b> répertorie tous les documents des phases de la mission sélectionnées pour l&apos; <b>onglet Achèvement</b>. Ces documents ont un schéma de signature différent du schéma par défaut, comme spécifié dans <b>Produit → Paramètres → Signoffs → Schémas.</b></p>
+        <p>Pour en savoir plus sur les systèmes de signature, voir <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Configurer les systèmes de signature</a>.</p>
+    </body>
+</html>

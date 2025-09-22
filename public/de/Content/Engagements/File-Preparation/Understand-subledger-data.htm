@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Understand subledger datasets</h1>
+        <p>See <a href="#Subledger">Subledger datasets described</a> for the types of subledger dataset you can import into Caseware Cloud. Each dataset description lists the mandatory and optional fields making up transactions for that type of subledger dataset and the purpose of each field. The diagram below explains the basic elements of the subledger dataset descriptions.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <h2>Anatomy of a subledger dataset description</h2>
+        <p><img src="../../Resources/Images/Subledger-data-schemas-described.png" alt="Anatomy of a subledger dataset description" /></p>
+        <p> </p>
+        <table class="table table-striped">
+            <col style="width: 243px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>User-facing name. The name of the Caseware field as it appears in the drop-downs of the Import Data window, where you map fields in your incoming data to Caseware fields.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Field description. This details the purpose of the field and where applicable examples of possible values.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Internal field name. The internal name of the Caseware field, which you will need to know if you are manipulating data imported for analytic notebooks or other third-party development work where you are manipulating the raw imported data.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Primary key. If a field is a primary key, its value is used to uniquely identify the data entry or row of the data.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>
+                        <p>Data type. The types of values a field can have and the operations that can be performed.</p>
+                        <ul>
+                            <li>
+                                <p>Text—Any alphanumeric value.</p>
+                            </li>
+                            <li>
+                                <p>Date—Date. Note that if you map a field containing date and time, only the date portion is imported.</p>
+                            </li>
+                            <li>
+                                <p>Data/time—Date and time.</p>
+                            </li>
+                            <li>
+                                <p>Enum—A list of alphanumeric values can be specified.</p>
+                            </li>
+                            <li>
+                                <p>Money—Values must be numeric and represent amounts of money.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Required. Indicates whether the field is required to be able to import a transaction of this type into Caseware Cloud.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">7</td>
+                    <td>Primary key alternate. If the field that is designated as the primary key is absent from the data you are importing, the value of the primary key alternate, or one of several primary key alternates, is used to create a unique identifying code for the data entry by concatenating their values together: <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+        <h2><a name="Subledger"></a>Subledger datasets described</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Subledger dataset</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-invoices.htm">Accounts payable - invoices </a></td>
+                    <td>
+                        <p>The Accounts payable—invoices dataset contains all invoices received during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-payments-made.htm">Accounts payable - payments made</a></td>
+                    <td>
+                        <p>The Accounts payable—payments made dataset contains all payment transactions (check, wire transfer, cash, and so on) made during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-suppliers.htm">Accounts payable - suppliers</a></td>
+                    <td>
+                        <p>The Accounts payable—suppliers dataset contains all details related to the Supplier such as Contact details, address, credit limit and so on.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-open-balances.htm">Accounts payable - open balances</a></td>
+                    <td>
+                        <p>The Open accounts—payable dataset contains details regarding all open, unpaid, or unresolved payable transactions as of the close of business on a specified date.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-invoices.htm">Accounts receivable - invoices</a></td>
+                    <td>
+                        <p>The Accounts receivable—invoice dataset contains all invoices generated during the period under review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-cash-received.htm">Accounts receivable - cash received</a></td>
+                    <td>
+                        <p>The Accounts receivables—cash received dataset contains all payment transactions (check, wire transfer, cash, and so on) received during the period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-customers.htm">Accounts receivable - customers</a></td>
+                    <td>The Accounts receivable—customers dataset contains all details related to the customer, such as contact details, address, credit limit and so on.</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-open-balances.htm">Accounts receivable - open balances</a></td>
+                    <td>The Accounts receivable—open balances dataset contains details regarding all open, unpaid, or unresolved customer transactions as of the close of business on a specified date.</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-transactions.htm">Bestandstransaktionen</a></td>
+                    <td>Captures all transactions affecting inventory accounts during the time period specified (for example, receipts, shipments, transfers, returns, and adjustments).</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-on-hand.htm">Aktueller Bestand</a></td>
+                    <td>Captures the on-hand inventory quantities of items by location and amounts as of the specified date.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+    </body>
+</html>

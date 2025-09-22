@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Voorrangsregels in zichtbaarheidsinstellingen</h1>
+        <p>De volgende voorrangsregels zijn van toepassing wanneer zichtbaarheidsinstellingen worden geëvalueerd voor een specifiek item:</p>
+        <p><i>Een item is alles in het platform waarvan je de zichtbaarheid kunt instellen. Bijvoorbeeld een checklistprocedure, een queryvragenset, een document, een map.</i></p>
+        <ol>
+            <li>
+                <p><b>aftekenen</b></p>
+                <p>Signoff heeft de hoogste prioriteit. Als het item is afgemeld, wordt het zichtbaar.</p>
+                <p>Dat wil zeggen, als een item verborgen is en gebruikers tekenen ervoor, dan wordt het zichtbaar.</p>
+                <p><b>Voorbeeld:</b> Als een checklistdocument verborgen is door de zichtbaarheidsinstellingen en een gebruiker selecteert <b>Verborgen items weergeven</b> en vervolgens tekent, dan wordt de procedure zichtbaar.</p>
+            </li>
+            <li>
+                <p><b>Zichtbaarheidsinstellingen voor het item</b></p>
+                <p>Zichtbaarheidsinstellingen op het item komen op de tweede plaats. Als er zichtbaarheidsinstellingen bestaan voor het item, dan worden de zichtbaarheidsinstellingen van het item gebruikt - ongeacht de zichtbaarheidsinstellingen voor de ouder waartoe het behoort.</p>
+                <p><b>Voorbeeld</b>: Als een procedure in een controlelijst verborgen is door zijn eigen zichtbaarheidsinstellingen en de groep waartoe hij behoort zichtbaar is, dan is de procedure verborgen - volgens zijn eigen zichtbaarheidsinstellingen en niet volgens de zichtbaarheidsinstellingen van de groep.</p>
+            </li>
+            <li>
+                <p><b>Zichtbaarheidsinstellingen op de ouder van het item (als het item een ouder heeft)</b></p>
+                <p>Zichtbaarheidsinstellingen op de ouder van het item (als het item bij een ouder hoort) hebben de laatste prioriteit. Als er geen zichtbaarheid is ingesteld op het item en het behoort tot een ouder, dan worden de zichtbaarheidsinstellingen voor de ouder gebruikt.</p>
+            </li>
+            <p>Dat wil zeggen, als de ouder van een item verborgen is door zichtbaarheidsinstellingen en er zijn geen zichtbaarheidsinstellingen voor dit item, dan is het item verborgen - volgens de zichtbaarheidsinstellingen van de ouder.</p>
+            <p><b>Voorbeeld</b>: Als een map verborgen is door zichtbaarheidsinstellingen en er zijn geen zichtbaarheidsinstellingen beschikbaar voor de documenten in deze map en geen van de documenten is afgemeld, dan wordt elk document verborgen - volgens de zichtbaarheidsinstellingen van de map.</p>
+        </ol>
+        <p class="note inline"><b>Let op:</b> <a href="Define-components.htm">Componenten</a> zijn niet opgenomen in deze lijst omdat ze momenteel alleen invloed hebben op proefbalansgroepen. In een toekomstige release zullen componenten de zichtbaarheid van bijkomende items in het platform beïnvloeden en zal informatie over hun rangorde worden toegevoegd.</p>
+    </body>
+</html>

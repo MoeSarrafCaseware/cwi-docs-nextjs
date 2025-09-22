@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Licensing and pricing</h1>
+        <p>When you sell your SE product, you can bill your clients using one of the following methods:</p>
+        <ul>
+            <li>
+                <p>Firm (one time fee)</p>
+                <p>This is a one time fee that a firm pays to purchase your SE product.</p>
+                <p class="note inline"><b>Note:</b> This is the default billing method on the product, no setup required to activate it.</p>
+            </li>
+            <li>
+                <p>Pay Per User</p>
+            </li>
+            <p>This means you charge your clients per staff member. To enable billing per user, add the <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;:true</span> property to the root level in the collaborate.json file for your product. To learn more, see the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-configure-your-se-product.html">Smart Engagements SDK documentation.</a></p>
+            <p class="note inline"><b>Hinweis:</b> For the Pay Per User method to bill correctly, you must manually remove the product from the <b>All Staff</b> group in Cloud. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Setup/Users-and-Groups/Set-staff-access-levels.htm#Enable-Cloud-apps">Enable apps for users and groups.</a></p>
+            <p><img src="../Resources/Images/remove-product-in-all-staff-group-cloud.PNG" alt="Enable or disable your SE product for the All Staff group in Cloud" /></p>
+            <li>
+                <p>Pay Per Engagement</p>
+                <p>This means that you charge your clients per engagement file. To enable billing per engagement, add the <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot;: true</span> property to the root level In the collaborate.json file for your product. To learn more, see the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-configure-your-se-product.html">Smart Engagements SDK documentation.</a></p>
+                <p class="note inline"><b>Note:</b> For the Pay Per Engagement method to bill correctly, make sure that the product is available in the <b>All Staff</b> group in Cloud. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Setup/Users-and-Groups/Set-staff-access-levels.htm#Enable-Cloud-apps">Enable apps for users and groups</a>.</p>
+            </li>
+        </ul>
+        <p>The <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;</span> and <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot;</span> properties setup is done per product, it&apos;s not a universal setting across products.</p>
+        <p class="warning"><b>Warnung:</b><br />- You can only have one billing method enabled in your product at a time.<br />- Make sure the billing method added in the collaborate.json matches the billing method in the Caseware back office platform. For example, if the Caseware back office platform has set up your solution to bill clients per engagement, then the collaborate.json file in your SE product must have the <span style="font-family: 'Courier New';">&quot;requiresPaymentPerInstance&quot;: true</span> property added at the root level <u>not the</u> <span style="font-family: 'Courier New';">&quot;requiresPaymentPerUser&quot;:true</span>.</p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Conditions for glossary terms and dynamic text display logic</h1>
+        <p>The following listing describes the conditions required to configure the display logic for a <a href="What's-the-engagement-glossary.htm">glossary term</a> or <a href="What's-dynamic-text.htm">dynamic text</a>. It also describes the parameters for each condition.</p>
+        <h2>Condición de respuesta</h2>
+        <p>Logic is based on a checklist procedure response.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li><b>Document -</b> select the checklist document.</li>
+            <li><b>Procedure -</b> select the procedure.</li>
+            <li><b>Condition -</b> select the response.</li>
+            <li><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <p>Condition is met when the selected response in <b>Condition</b> is provided in the selected checklist procedure.</p>
+        <h2>Condición de balance de comprobación</h2>
+        <p>Logic is based on the trial balance group properties.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Financial Group -</b><span style="font-weight: normal;">select the trial balance group</span>.</li>
+            <li><b>Condition -</b> select an option from the drop-down.<ul style="list-style-type: circle;"><li><a href="Group-properties.htm#Consiste">Consistente</a></li><li><a href="Group-properties.htm#Contrary">Contrario</a></li><li><a href="Group-properties.htm#Inconsis">Inconsistente</a></li></ul></li>
+            <li><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <p>For example, if the group balance is <b>Consistent</b> → <i>Statement of Income</i> displays.</p>
+        <h2>Condición de consolidación</h2>
+        <p>Logic is based on whether the engagement is a consolidation engagement or not.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Condition -</b><span style="font-weight: normal;">select the consolidation state (Consolidated or Non-consolidated)</span>.</li>
+            <li><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <h2>Escala/redondeo</h2>
+        <p>Select a rounding scale from the drop-down.</p>
+        <h3>Ejemplo</h3>
+        <p>If the rounding is in <b>Millions</b>, then display this item.</p>
+        <h2>Condición de período de informe</h2>
+        <p>Logic is based on the reporting period for the engagement.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Condition -</b><span style="font-weight: normal;">select the value of the reporting period (Monthly, Quarterly, Semi-Annual, Annual)</span></li>
+            <li><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <h2>Condición de tipo de organización</h2>
+        <p>Logic is based on the country selected for the engagement entity.</p>
+        <p><b>Parámetros:</b></p>
+        <ul>
+            <li><b>Condition -</b> select a country.</li>
+            <li><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <h2>Condición de valor de formulario</h2>
+        <p>Logic is based on the value of a form field.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li><b>Condition -</b> select a form and a field in the selected form.</li>
+            <li><![CDATA[
+]]><b>Output -</b> enter the text to be displayed when the condition is met.</li>
+        </ul>
+        <p class="note inline"><![CDATA[
+]]><b>Note:</b> This condition is only enabled if you have <a href="Develop-custom-forms.htm">SE Builder forms</a> set up in your product.</p>
+        <h2>Grupo de condiciones</h2>
+        <p>Select this option if you want to add a group of conditions, where the text output is based on how the conditions in the group are collectively evaluated.</p>
+        <p style="font-weight: bold;">Parámetros:</p>
+        <ul>
+            <li><b>When all conditions below are met</b> - select this option if you want all conditions to be true for the Group Condition to be met.</li>
+            <li><b>When any condition below is met</b> - select this option if you want any condition to be true for the Group Condition to be met.</li>
+            <li><b>Output -</b>enter the text to be displayed when the Group Condition is met.</li>
+        </ul>
+    </body>
+</html>

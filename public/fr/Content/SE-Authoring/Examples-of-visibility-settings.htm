@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Exemples de paramètres de visibilité</h1>
+        <p>Voici quelques exemples de la manière dont vous pouvez mettre en place la logique de visibilité.</p>
+        <h2>Exemple 1 : Une condition</h2>
+        <p>Les paramètres de visibilité suivants rendent un document visible si l&apos;année fiscale commence après le 30 novembre 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-01.PNG" alt="Paramètres de visibilité" /></p>
+        <p>Si la date de début d&apos;année de la mission est le 20 décembre 2018, la condition est vraie et le document est disponible (affiché) dans le dossier de la mission.</p>
+        <p>Si la date de début d&apos;année de la mission est le 15 mai 2018, la condition est évaluée comme étant fausse et le document n&apos;est pas disponible (caché) dans le dossier de la mission.</p>
+        <h2>Exemple 2 : Deux conditions</h2>
+        <p>Les paramètres de visibilité suivants rendent un document visible si la mission est une mission de révision dont l&apos;exercice commence après le 30 novembre 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-02.PNG" style="width: 933px;height: 281px;" alt="Paramètres de visibilité" /></p>
+        <p>Si le type de mission est Compilation et que la date de début de l&apos;année de la mission est le 15 décembre 2018, le résultat final est faux et le document n&apos;est pas disponible (caché) dans le dossier.</p>
+        <h2>Exemple 3 : Une condition et un groupe de conditions</h2>
+        <p>Ajoutons une condition de groupe pour obtenir une configuration imbriquée. Une condition de groupe vous permet de regrouper plusieurs conditions et de les évaluer ensemble. Le résultat est ensuite comparé aux autres conditions disponibles.</p>
+        <p>Les paramètres de visibilité suivants font qu&apos;un document n&apos;est pas visible si la mission est une mission de préparation ou si l&apos;entité est une société privée canadienne dont l&apos;exercice commence après le 31 décembre 2018.</p>
+        <p><img src="../Resources/Images/visbility settings-03.PNG" style="width: 568px;height: 321px;" /></p>
+        <p>Si la date de début de l&apos;année de la mission est le 20 décembre 2018, que le type d&apos;organisation est Société privée sous contrôle canadien et que le type de mission est Révision, le résultat final est faux et le document n&apos;est pas disponible (caché) dans le dossier.</p>
+        <h2>Exemple 4 : Deux groupes de conditions</h2>
+        <p>Les options suivantes rendent un document visible pour les exercices commençant après le 15 décembre 2019 et les périodes intermédiaires des exercices commençant après le 15 décembre 2020.</p>
+        <p><img src="../Resources/Images/visbility settings-04.PNG" alt="Paramètres de visibilité qui rendent un document visible pour les exercices commençant après le 15 décembre 2019" /></p>
+        <p>Supposons que la période de déclaration soit annuelle, que la date de début de l&apos;année pour cette période soit le 30 novembre 2018, que la période intermédiaire soit mensuelle et que la date de début de l&apos;année pour cette période soit le 30 décembre 2019.</p>
+        <p>Le système évalue la première condition du groupe - et le résultat est faux car l&apos;une des conditions n&apos;est pas remplie. Il évalue ensuite la deuxième condition de groupe et le résultat est vrai, car les deux conditions sont remplies.</p>
+        <p>Enfin, il évalue les résultats pour les deux conditions de groupe sur la base de la logique de visibilité au sommet (qui stipule que le document s&apos;affiche si l&apos;une des conditions est vraie) - pour finalement obtenir un résultat final indiquant que le document est disponible (s&apos;affiche) dans le dossier.</p>
+    </body>
+</html>

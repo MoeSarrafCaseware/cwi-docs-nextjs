@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table class="table table-striped">
+            <col>
+            </col>
+            <col MadCap:conditions="General.SE-Authoring">
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>DATASETTYPE</th>
+                    <th>Schema-ID</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Understand-genledger-data.htm?region=int#General">Grootboek</a></td>
+                    <td>cwi.schema.grootboek</td>
+                    <td>Grootboekposten</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Trial-balance-described.htm">Saldibalans</a></td>
+                    <td>cwi.schema.rekeningen</td>
+                    <td>Een werkblad waarin alle grootboeken worden samengevoegd in debet- en creditkolommen om ervoor te zorgen dat de boekhouding van een bedrijf wiskundig correct is.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-invoices.htm">Crediteuren - facturen </a></td>
+                    <td>cwi.schema.ap_facturen</td>
+                    <td>
+                        <p>De dataset Crediteuren-facturen bevat alle facturen die tijdens de onderzochte periode zijn ontvangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-payments-made.htm">Crediteuren — gemaakte betalingen</a></td>
+                    <td>cwi.schema.ap_betalingen_gemaakt</td>
+                    <td>
+                        <p>De dataset Crediteuren-betalingen bevat alle betalingstransacties (cheque, overboeking, contant, enzovoort) die tijdens de periode zijn uitgevoerd.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-suppliers.htm">Crediteuren — leveranciers</a></td>
+                    <td>cwi.schema.ap_leveranciers</td>
+                    <td>
+                        <p>De Accounts payable-suppliers dataset bevat alle details met betrekking tot de leverancier, zoals contactgegevens, adres, kredietlimiet enzovoort.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-open-balances.htm">Crediteuren - openstaande saldi</a></td>
+                    <td>cwi.schema.ap_open_balansen</td>
+                    <td>
+                        <p>De dataset Openstaande rekeningen-betaalbaar bevat gegevens over alle openstaande, onbetaalde of onopgeloste crediteurentransacties aan het einde van het boekjaar op een bepaalde datum.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-invoices.htm">Debiteuren — facturen</a></td>
+                    <td>cwi.schema.ar_invoices</td>
+                    <td>
+                        <p>De dataset Debiteuren-facturen bevat alle facturen die tijdens de onderzochte periode zijn gegenereerd.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-cash-received.htm">Debiteuren — ontvangen betalingen</a></td>
+                    <td>cwi.schema.ar_cash_ontvangen</td>
+                    <td>
+                        <p>De dataset Debiteuren-ontvangen contanten bevat alle betalingstransacties (cheque, overboeking, contanten, enzovoort) die tijdens de periode zijn ontvangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-customers.htm">Debiteuren — klanten</a></td>
+                    <td>cwi.schema.ar_klanten</td>
+                    <td>De dataset Debiteuren-klanten bevat alle details over de klant, zoals contactgegevens, adres, kredietlimiet enzovoort.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-open-balances.htm">Debiteuren — openstaande saldi</a></td>
+                    <td>cwi.schema.ar_open_balansen</td>
+                    <td>De dataset Openstaande rekeningen-betaalbaar bevat gegevens over alle openstaande, onbetaalde of onopgeloste crediteurentransacties aan het einde van het boekjaar op een bepaalde datum.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-transactions.htm">Voorraadtransacties</a></td>
+                    <td>cwi.schema.inventory_transacties</td>
+                    <td>Legt alle transacties vast die van invloed zijn op inventarisrekeningen tijdens de opgegeven periode (bijvoorbeeld ontvangsten, verzendingen, overdrachten, retouren en aanpassingen).</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-on-hand.htm">Beschikbare voorraad</a></td>
+                    <td>cwi.schema.inventaris_bij_hand</td>
+                    <td>Legt de voorraadhoeveelheden van artikelen vast per locatie en hoeveelheid vanaf de opgegeven datum.</td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td>Om dit dataset type in te schakelen, voeg je <code>&quot;schemaless&quot;: true</code> toe aan de &quot;feature&quot; sectie in het product.json bestand.</td>
+                    <td>Ongestructureerde transactiegegevens die geen vooraf gedefinieerd schema volgen. <MadCap:conditionalText MadCap:conditions="General.Cloud-Help">Selecteer deze optie om gegevens te importeren die niet overeenkomen met een van de datasettypen die hier worden beschreven. Elk bestand dat je importeert met dit type dataset wordt beschouwd als een eigen dataset.</MadCap:conditionalText></td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+    </body>
+</html>

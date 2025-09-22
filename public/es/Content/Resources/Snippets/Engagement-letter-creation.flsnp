@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2>Replace text and field placeholders</h2>
+        <p>The letter&apos;s content can include placeholders for some text and fields that you need to replace with specific information related to your engagement, organization or client.</p>
+        <p>The <b>Placeholders</b> indicator at the top of the document tracks your progress on placeholders. It shows the number of placeholders that haven&apos;t been replaced by actual information. You can also select the indicator to navigate to the next empty placeholder.</p>
+        <p style="font-weight: bold;">To replace a text placeholder:</p>
+        <ol>
+            <li>
+                <p>Select the text placeholder.</p>
+                <p class="tip"><b>Tip:</b> The blue highlighted text in the document are placeholders.</p>
+            </li>
+            <li>
+                <p>At the <b>Text Placeholder</b> popup, replace the placeholder text and select <b>Save.</b></p>
+                <p class="note"><b>Note</b>: If you don&apos;t want to change the placeholder text, you must select the placeholder and select <b>Save</b> at the Text Placeholder dialog so it&apos;s removed from the count at the <b>Placeholders</b> indicator.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">To replace a field placeholder:</p>
+        <ol>
+            <li>
+                <p>Select the field placeholder.</p>
+                <p class="tip"><b>Tip:</b> The blue drop-down fields in the document are field placeholders.</p>
+            </li>
+            <li>
+                <p>Select a value or specify a date as indicated in the placeholder field.</p>
+            </li>
+        </ol>
+        <h2>Cambiar el texto dinámico y los términos del glosario del encargo</h2>
+        <p class="note"><b>Note</b>: You can only change an existing glossary term or a dynamic text output if the override option is enabled in your product.</p>
+        <p>An engagement glossary contains terms. Terms are words and phrases that can be reused throughout the product. When a term is changed, it is changed everywhere the author defined.</p>
+        <p>Dynamic text fields change if certain conditions are met. For example, if the client responds &apos;Yes&apos; to a procedure in a checklist, then &apos;Agreed&apos; shows in the dynamic text field.</p>
+        <p>Your documents may contain terms from the glossary or dynamic text fields. Depending on your product, you may be able to override glossary terms and dynamic text outputs.</p>
+        <p><b>To change an engagement glossary term or a dynamic text output:</b></p>
+        <ol>
+            <li>
+                <p>Select the document&apos;s text area where you want to change.</p>
+                <p>Areas highlighted in gray are either glossary terms or dynamic text fields.</p>
+            </li>
+            <li>
+                <p>Select the glossary term or dynamic text to open the <b>Data Link</b> dialog.</p>
+                <p>If you select a glossary term, you can select information (<img src="../Images/icon-information-blue-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to see the number of places that term is used.</p>
+            </li>
+            <li>
+                <p>Change the <b>Output</b> as desired and select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>When the <b>Output condition</b> is met, the text changes in all the places it&apos;s used in the engagement. If a different condition is met after the change, the <b>Output</b> changes to match the configured output text for that condition.</p>
+        <h2>Insert the firm logo</h2>
+        <p>You can insert the firm logo in any text area or in the document head or footer.</p>
+        <p style="font-weight: bold;">To insert the firm logo:</p>
+        <ol>
+            <li>
+                <p>Select the text field where you want to insert the logo.</p>
+            </li>
+            <li>
+                <p>Select <b>Insert Logo Placeholder</b> (<img src="../Images/icon-insert-logo.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) at the formatting toolbar.</p>
+            </li>
+            <p>The firm logo is added in the text field.</p>
+            <p>If no logo is available in the firm template, a placeholder with a link to Cloud displays so you can <a href="../../Engagements/Template-and-Authoring/Add-a-firm-logo-and-letterhead.htm">upload a logo</a>.</p>
+        </ol>
+        <p class="note"><b>Note:</b> You can only upload a firm logo in the firm template. To access the firm template, you must have the <b>Settings Admin</b> role or similar. For more information, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a> and <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Assign security roles</a>.</p>
+        <h2><a name="Add9"></a>Añadir un salto de página</h2>
+        <p>You can add a page break anywhere in the document to manually mark where a specific page ends and a new one starts . This allows you to control the page layout for printing.</p>
+        <p>To add a page break, select <b>+Add section | Page Break</b>. A page break is inserted with a default title <b>Page Break</b>. You can select the default title to change it. Note this title is not part of the document content.</p>
+        <p class="note"><b>Note:</b> You cannot add a page break in empty grouping area. You must add text areas or guidance sections.</p>
+        <p>To delete a page break, select <b>Settings (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Delete.</b></p>
+        <h2><a name="Set2"></a>Set up the print options</h2>
+        <p>The Print (<img src="../Icons/print-financial-statement-inline1.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) button converts the document to a PDF format for users to print or save. Note that guidance sections are never included in the PDF.</p>
+        <p style="font-weight: bold;">To set up print options:</p>
+        <ol>
+            <li>
+                <p>Go to the Document Map, the select <b>More actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Print Settings.</b></p>
+            </li>
+            <p>If you want to have different settings for a page break or a grouping area or the Table of Contents, select <b>Settings (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Edit Print Settings.</b></p>
+            <li>
+                <p>Specify the preferred settings for <b>Letterhead</b>, <b>Page Size</b> and <b>Margins.</b></p>
+            </li>
+            <li>
+                <p>Select <b>Landscape</b> to change the page orientation.</p>
+            </li>
+            <p>The default is <b>Portrait.</b></p>
+            <li>
+                <p>Clear the <b>Count in page numbering</b> check box if you want page numbering to start after the <b>Table of Contents</b> page.</p>
+            </li>
+        </ol>
+    </body>
+</html>

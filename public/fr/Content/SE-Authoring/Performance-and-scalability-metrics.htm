@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Seuils et limites maximales</h1>
+        <p>Les informations suivantes sur les performances et l&apos;évolutivité représentent les seuils appropriés ou les limites maximales estimées recommandées pour les produits SE. Vous vous référez également à la feuille de calcul de l&apos; <a href="https://docs.google.com/spreadsheets/d/1naLgb2QbGhM7xDgsng4kd2b_EUk0KB_tckONVtpm1IU/edit?usp=sharing">analyse comparative</a> pour vous aider à évaluer la performance des états financiers de votre application SE.</p>
+        <h2>Missions</h2>
+        <table class="table table-striped">
+            <col style="width: 249px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>
+                        <p>Seuil / Limite maximale</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre d&apos;utilisateurs dans un seul dossier d&apos;engagement</td>
+                    <td>
+                        <p>5</p>
+                        <p class="note inline"><b>Remarque :</b> Les performances peuvent diminuer si plus de 5 utilisateurs effectuent des modifications de manière active.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Taille du fichier</td>
+                    <td>Aucune recommandation spécifique, mais la création, le chargement et le report des fichiers de mission peuvent être influencés par la taille des documents externes de la mission, par exemple les PDF.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Documents</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre de documents par dossier de mission</td>
+                    <td>275</td>
+                </tr>
+                <tr>
+                    <td>Temps nécessaire pour charger tous les documents visibles dans un dossier d&apos;engagement</td>
+                    <td>~3 secondes</td>
+                </tr>
+                <tr>
+                    <td>Taille maximale des fichiers pour les documents externes</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Page de données</h2>
+        <table class="table table-striped">
+            <col style="width: 349px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre maximum de projets :</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Temps de chargement des comptes et groupes de la balance de vérification</td>
+                    <td>~3 secondes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Nombre maximum de projets :</p>
+                        <p><i>(au total et non par groupe) </i></p>
+                    </td>
+                    <td>
+                        <p>10000</p>
+                        <p>(pour les missions consolidées et non consolidées)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Temps nécessaire pour charger tous les comptes et groupes dans la balance de vérification</p>
+                        <p><i>(en supposant une structure de 800 groupes)</i></p>
+                    </td>
+                    <td>~3 secondes</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Page Balance de vérification</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre maximum de projets :</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>Temps de chargement des comptes et groupes de la balance de vérification</td>
+                    <td>~3 secondes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Nombre maximum de projets :</p>
+                        <p><i>(au total et non par groupe) </i></p>
+                    </td>
+                    <td>
+                        <p>200 (pour les missions consolidées)</p>
+                        <p>800 (pour les missions non consolidées)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Temps nécessaire pour charger tous les comptes et groupes dans la balance de vérification</p>
+                        <p><i>(en supposant une structure de 800 groupes)</i></p>
+                    </td>
+                    <td>~3 secondes</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Listes de contrôle</h2>
+        <table class="table table-striped">
+            <col style="width: 257px;" />
+            <col style="width: 234px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Temps de chargement des procédures visibles par document de la liste de contrôle</p>
+                        <p><![CDATA[ 
+]]><i>(y compris les sous-procédures, groupes et sous-groupes disponibles)</i></p>
+                    </td>
+                    <td>
+                        <p>~2 secondes</p>
+                        <p class="bestpractice inline"><b>Meilleure pratique :</b> Envisagez de diviser les listes de contrôle volumineuses en plusieurs documents. Vous pouvez configurer l&apos; <a href="Set-up-bulk-print.htm">impression en masse</a> pour les imprimer en un seul document.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum number of procedures per document</p>
+                        <p><i>(y compris les sous-procédures, les groupes, les sous-groupes)</i></p>
+                    </td>
+                    <td>250</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (new design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Maximum number of sections per area</p>
+                        <p><![CDATA[
+]]><i>(les sections utilisées pour les tests sont les suivantes 14 tableaux, 14 zones de texte - les zones de texte étant constituées de texte simple et de 3 formules)</i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Temps de chargement d&apos;un document comportant 30 sections par zone <i>(les sections utilisées dans les tests étaient les suivantes) : 14 tableaux et 14 zones de texte - chaque zone de texte se compose de texte brut et de 3 formules)</i></td>
+                    <td>~2 secondes</td>
+                </tr>
+                <tr>
+                    <td>Nombre maximum de zones dans le document</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Temps de chargement d&apos;un document de 100 zones</td>
+                    <td>~2 secondes</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Requêtes</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Taille maximale des fichiers à télécharger</td>
+                    <td>100 MB</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Générer un PDF pour l&apos;impression</h2>
+        <table class="table table-striped">
+            <col style="width: 264px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre maximum de pages dans le document</td>
+                    <td>
+                        <p>40</p>
+                        <p class="note inline"><b>Remarque :</b> Le moteur PDF que nous utilisons pour l&apos;impression a un délai d&apos;attente de 5 minutes. Si le temps d&apos;impression dépasse ce seuil, le document ne sera pas imprimé.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Letters, memos and financial statements (old design)</h2>
+        <table class="table table-striped">
+            <col style="width: 386px;" />
+            <col style="width: 253px;" />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Nombre maximum de sections dans le document</p>
+                        <p><i>(les sections utilisées pour les tests sont les suivantes 14 tableaux, 14 zones de texte - les zones de texte étant constituées de texte simple et de 3 formules) </i></p>
+                    </td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Temps de chargement d&apos;un document de 30 sections</p>
+                        <p><i>(les sections utilisées dans les tests sont les suivantes 14 tableaux et 14 zones de texte - chaque zone de texte se compose de texte brut et de 3 formules) </i></p>
+                    </td>
+                    <td>~5 secondes</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Nouveau dialogue sur les risques.</h2>
+        <table class="table table-striped">
+            <col style="width: 353px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Seuil / Limite maximale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre de risques dans l&apos;onglet <b>RISK</b> </td>
+                    <td>
+                        <p>100 (en cas d&apos;effondrement)</p>
+                        <p>20 (si élargi)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

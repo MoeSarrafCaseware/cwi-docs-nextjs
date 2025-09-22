@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importar el balance de comprobación de un archivo de encargo</h1>
+        <p>You can import the trial balance from another engagement file if the <b>Import from Caseware Cloud Engagement</b> option is enabled in your product.</p>
+        <p><img src="../../Resources/Images/ImportFromExistingEngagement.png" alt="Option to import data from an existing Cloud engagement" /></p>
+        <p>Tenga en cuenta que:</p>
+        <ul>
+            <li>
+                <p>To import from an engagement file that belongs to a different Cloud app, you must have access to that app and the entity that the file belongs to. To learn more, see <a href="../../Setup/Users-and-Groups/Review-security-settings-for-the-default-groups.htm">Set staff access levels</a></p>
+            </li>
+            <li>
+                <p>Period data between the source and destination engagements are automatically mapped. For example, the <b>Current Year</b> data column from the source engagement is automatically imported to the <b>Current Year</b> column in the destination engagement</p>
+            </li>
+            <li>
+                <p>Once the data is imported, the year-end date for the destination engagement is automatically set to match the year-end date of the source engagement</p>
+            </li>
+            <li>
+                <p>Annotations and issues are not imported</p>
+            </li>
+            <li>
+                <p>Importing from a consolidation engagement imports the parent entity data only into the destination engagement</p>
+            </li>
+            <li>
+                <p>If the source and destination groupings don&apos;t match or partially match, unassigned accounts will populate in the <b>Assign Accounts</b> tab and you must manually assign them. To learn more, see <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Assign accounts to groups in the Data page</a></p>
+            </li>
+        </ul>
+        <p>When you import data from another engagement, you have the option to turn on the <b>Sync Trial Balance</b> toggle. If you turn this option on, data from the source engagement is automatically synced with the destination engagement. This allows you to make changes to the data in the source engagement and automatically share those changes with synced engagements. Note that you cannot select consolidated engagements as source engagements.</p>
+        <p>When engagement data is synced from another engagement:</p>
+        <ul>
+            <li>
+                <p>A link to the source engagement displays on the <b>Data</b> page and for adjustments that are synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You cannot edit accounts, groups or adjustments synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You cannot assign accounts that have been synced from the source engagement.</p>
+            </li>
+            <li>
+                <p>You can create issues and annotations for synced accounts and groups but cannot create annotations for synced adjustments.</p>
+            </li>
+            <li>
+                <p>When changes are made to the source engagement, users in the destination engagement receive a notification to inform them that those changes have been applied to their file. Engagements are resynced every five minutes.</p>
+                <p>If changes have been made to the source engagement while a user was logged out of the destination engagement, they will receive a notification that there are changes pending when they next log in to the file, and then the pending changes will sync to the destination engagement on the usual five-minute cycle.</p>
+                <p class="note"><b>Note:</b> Group names that are changed in the source engagement are not synced to the destination engagement.</p>
+            </li>
+            <li>
+                <p>When you make adjustments in the destination engagement, the adjustments are not synced back to the source engagement.</p>
+            </li>
+            <li>
+                <p>If you lock down an engagement that contains data synced from a source engagement, changes made in the source engagement are no longer synced.</p>
+            </li>
+            <li>
+                <p>If both the source and destination engagement are carried forward, the carried forward files are automatically linked so you can continue to sync data from the current year source engagement.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Importar el balance de comprobación de un archivo de encargo</p>
+        <ol>
+            <li>
+                <p>Vaya a la página <b>Datos</b> . The Data pages opens to the Datasets tab.</p>
+            </li>
+            <li>
+                <p>Select the <b>Import from Caseware Cloud Engagement</b> option</p>
+                <p>In the Select engagement section, select the engagement that you want to import the trial balance from.</p>
+                <p>Note that you can only select one engagement.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ImportFromCloudEngagement.png" alt="Searching for an engagement to import data from. " /></p>
+        <p class="tip"><b>Tip:</b> To select an engagement that belongs to a different entity, select the <b>Show all entities</b> check box.</p>
+        <ol>
+            <li value="3">
+                <p>If you want to automatically sync updates to the trial balance data from the source engagement to the destination engagement, select the <b>Sync Trial Balance</b> option.</p>
+                <p><img src="../../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="The Sync Trial Balance option in the Engagement Search dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>CONFIRM</b>.</p>
+            </li>
+        </ol>
+        <h2>Reimport the trial balance data</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

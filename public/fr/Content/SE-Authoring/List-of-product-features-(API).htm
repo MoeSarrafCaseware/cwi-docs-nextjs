@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.SE-Authoring" MadCap:conditionTagExpression="exclude[General.Cloud-Help]">
+    <head>
+    </head>
+    <body>
+        <h1>Liste des caractéristiques du produit (API)</h1>
+        <p>La liste suivante décrit les caractéristiques du produit que vous pouvez activer/désactiver dans votre produit SE.</p>
+        <p>Voir <a href="Workflow-(how-to-author-your-product-template).htm">Comment créer un modèle de produit </a>pour en savoir plus sur la création d&apos;un modèle de produit SE.</p>
+        <h2><a name="Additio"></a> Champs d&apos;entité supplémentaires</h2>
+        <p>Définissez le champ <code>customFields</code> pour personnaliser les champs de la boîte de dialogue Create Entity.</p>
+        <p><img src="../Resources/Images/create-entity-dialog.PNG" alt="La boîte de dialogue Create Entity (Créer une entité)." /></p>
+        <h2><a name="Addition"></a>Annotations supplémentaires</h2>
+        <p>Vous pouvez inclure le module <code>com.caseware.reference</code> dans le fichier product.json pour activer des types d&apos;annotation supplémentaires.</p>
+        <h2><a name="Areas"></a>Zone</h2>
+        <p>Les domaines vous permettent de résumer des groupes d&apos;états financiers à un niveau plus élevé pour l&apos;identification et l&apos;évaluation des risques (souvent au niveau du programme d&apos;audit). Pour plus d&apos;informations, voir <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Ajouter des zones et des cycles.</a></p>
+        <h2><a name="Assertio"></a>Affirmation</h2>
+        <p>Incluez le module <code>com.caseware.assertion</code> dans le fichier product.json pour activer les annotations dans votre application Cloud.</p>
+        <h2><a name="Automap"></a> Automapping</h2>
+        <p>Mappage automatique des sections des fichiers de données lors de l&apos;importation. Pour en savoir plus, voir <a href="Set-up-automapping-(Data-page).htm">Configuration de l&apos;impression en masse.</a></p>
+        <p>Voir le <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html">tutoriel sur l&apos;</a> importation et la <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html">mise en correspondance automatique du SDK</a> pour plus d&apos;informations sur la propriété automap.</p>
+        <h2>Arrondi automatique</h2>
+        <p>Pour activer l&apos;arrondi automatique dans les états financiers, créez un script appelé <code>financial-rounding-setup.js</code> et incluez-le dans le tableau &quot;js&quot; de votre fichier product.json. Dans ce script, il faut inclure les éléments suivants :</p><div><pre><code>(function() {<br />     &apos;use strict&apos; ;<br />     wpw.financials.financialsSetup.roundingErrorGroupNumbers = [&apos;A&apos;, &apos;B&apos;] ;<br />})();
+		</code></pre></div><p>a&quot; et &quot;B&quot; sont des chaînes représentant les numéros des groupes de la structure dont la somme doit être égale à zéro. Si nécessaire, vous pouvez inclure plus de deux groupes.</p>
+        <p>Par exemple, si la structure de regroupement contient deux groupes, Actif et Passif, dont la somme doit être égale à zéro, remplacez la chaîne &quot;A&quot; de la fonction ci-dessus par le numéro de groupe de l&apos;Actif et remplacez la chaîne &quot;B&quot; par le numéro de groupe du Passif. Le passif et l&apos;actif sont ensuite additionnés et l&apos;on vérifie qu&apos;il n&apos;y a pas d&apos;erreur d&apos;arrondi.</p>
+        <p>Notez que les différences d&apos;arrondi sont appliquées par défaut au premier compte non nul du niveau le plus bas de l&apos;enfant qui apparaît dans le premier groupe de la balance générale. Pour plus d&apos;informations, voir <a href="Change-the-default-group-for-rounding-differences.htm">Modifier le groupe par défaut pour les écarts d&apos;arrondi</a>.</p>
+        <h2><a name="Checkli"></a> Liste de contrôle</h2>
+        <p>Active la fonctionnalité de la liste de contrôle.</p>
+        <p>Pour plus d&apos;informations, voir <a href="Add-a-checklist.htm">Renommer un fichier</a>.</p>
+        <h2><a name="Contacts"></a>Contrôle des contacts</h2>
+        <p>Cette propriété contrôle l&apos;accès des contacts à l&apos;engagement. Par défaut, les contacts ne peuvent ni modifier ni consulter un engagement. Pour accorder un accès en vue aux contacts affectés à l&apos;engagement, définissez <code>contactAccess</code> sur <code>READ</code>.</p>
+        <p>Notez qu&apos;une fois que vous avez accordé aux contacts l&apos;accès aux engagements, vous ne pouvez pas limiter les zones du fichier d&apos;engagement auxquelles ils peuvent accéder. Nous recommandons d&apos;utiliser cette fonction uniquement pour les produits de reporting et non pour les produits d&apos;audit. Nous vous recommandons également d&apos;examiner attentivement la fonctionnalité avant de lancer votre produit afin de vous assurer qu&apos;elle fonctionne comme vous l&apos;attendez.</p>
+        <h2><a name="Cycles"></a>Cycles (cycles économiques)</h2>
+        <p>Utilisé pour organiser davantage les groupes dans la balance de vérification.</p>
+        <p>Pour plus d&apos;informations, voir <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Ajouter des zones et des cycles.</a></p>
+        <h2><a name="Detailed"></a>Vue détaillée des documents</h2>
+        <p>Fait de la <b>vue détaillée</b> de la page <b>Documents</b> la vue par défaut.</p>
+        <h2><a name="Dimensions-concept"></a>Dimensions</h2>
+        <p>Les dimensions sont des propriétés qui peuvent être attribuées aux comptes dans un engagement. Chaque compte peut se voir attribuer une ou plusieurs dimensions.</p>
+        <p>For more information, see<a href="Add-dimensions.htm#Add"> <span> Add dimensions.</span></a></p>
+        <h2><a name="Engagement-properties"></a> Boîte de dialogue Propriétés de l&apos;engagement</h2>
+        <p>Afficher l&apos;invite Propriétés de l&apos;engagement chaque fois que les utilisateurs ouvrent un nouvel engagement. Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Gérer les documents de la mission.</a></p>
+        <h2><a name="Engageme"></a>Recherche d&apos;engagement</h2>
+        <p>Désactive le champ de recherche sur la carte du document dans tous les documents d&apos;engagement.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm#Locateandaccessdocumentsintheengagementfile">Localiser et accéder aux documents du dossier de mission</a> .</p>
+        <h2><a name="Envision"></a>Envision</h2>
+        <p>Permet d&apos;ajouter le profil de données Envision prêt à l&apos;emploi à votre produit. Les profils de données Envision sont des tableaux de bord qui affichent des informations sur les transactions importées dans les missions. Pour plus d&apos;informations, voir</p>
+        <p>Pour activer Envision, ajoutez <code>&quot;com.caseware.an.e.analytics.ai&quot;</code> au tableau des <code>ensembles</code> et définissez la propriété <code>&quot;envisionProfile&quot; : true.</code></p>
+        <p>Vous pouvez ensuite utiliser l&apos; <b>icône Ajouter un document</b> (<img src="../Resources/Images/icon-document-add-dropdown.png" style="vertical-align: text-bottom;" />) dans la page <b>Documents</b> pour ajouter le formulaire personnalisé <b>Envision Profile</b> à votre produit.</p>
+        <h2 MadCap:conditions="General.Ignore">Cycle de vie externe</h2>
+        <p MadCap:conditions="General.Ignore">Définissez la propriété <code>externalLifecycle</code> à <code>true</code> si vous voulez que les engagements de votre produit SE soient créés ou supprimés en dehors de Caseware Cloud. --BESOIN DE PLUS D&apos;INFORMATIONS OU D&apos;UN EXEMPLE</p>
+        <h2><a name="Firm"></a>Personnalisations de l&apos;entreprise</h2>
+        <p>Permet aux <a href="Firm-author.htm">auteurs du cabinet de</a> personnaliser le modèle utilisé pour créer de nouvelles missions. Cette option est activée par défaut.</p>
+        <h2><a name="Help"></a>Aide</h2>
+        <p>Vous permet de fournir à vos utilisateurs un lien vers une page d&apos;aide, telle que votre site d&apos;information sur les produits.</p>
+        <p><img alt="C&apos;est ici que le lien est établi. Les utilisateurs sélectionnent Information | Aide et l&apos;encre s&apos;ouvre." src="../Resources/Images/help-property-in-application.PNG" /></p>
+        <h2><a name="Import"></a>Documents d&apos;importation</h2>
+        <p>Définissez la propriété <code>&quot;importDocuments&quot; : true</code> pour copier le contenu d&apos;un autre modèle d&apos;application Caseware Cloud. Pour en savoir plus, voir <a href="Copy-content-from-another-template.htm">Copier le contenu d&apos;un autre modèle</a>.</p>
+        <h2><a name="Imports"></a>Importations</h2>
+        <p>Le tableau des <code>importations</code> dans le fichier .js du produit vous permet d&apos;activer les options d&apos;importation dans le produit, afin que les utilisateurs puissent importer les données du client.</p>
+        <p>Ajoutez les modules correspondant aux options d&apos;importation souhaitées au tableau des <code>importations</code> . Pour en savoir plus, voir <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html#provider-bindings-import-ui-switch">Activer les importations de liens avec les fournisseurs</a>.</p>
+        <p>Pour les utilisateurs finaux, les options d&apos;importation activées s&apos;affichent dans la page <b>Données</b> (ou dans la page <b>Balance de vérification</b> si vous n&apos;avez pas encore activé la page Données dans votre produit).</p>
+        <p>You can also build a custom integration for your product to import data from a 3rd party online accounting package. To learn more, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-import-bindings/Get-started-with-import-bindings.htm">Provider Bindings SDK</a>.</p>
+        <h2>Activer l&apos;importation de types de données</h2>
+        <p>Permet d&apos;activer les options de type de données pour les données du grand livre, les données des transactions du grand livre auxiliaire et les importations de la balance de vérification à partir de fichiers CSV. Cela permet aux utilisateurs de sélectionner le type de jeu de données qui s&apos;applique à leur importation de données.</p>
+        <p>Pour activer un type de jeu de données, incluez l&apos;ID de schéma correspondant dans le fichier product.json, comme indiqué dans l&apos;exemple de code ci-dessous. Notez que vous devez ajuster le code pour supprimer les ID de schéma pour tous les types de jeux de données que vous ne souhaitez pas activer pour les utilisateurs. See the descriptions linked below for more information.</p><div><pre><code>&quot;importTaxonomy&quot; : {
+					&quot;id&quot;: &quot;cwi.taxonomy.transactions&quot;, &quot;version&quot; : &quot;0&quot;,
+					&quot;schemaIds&quot;: [&quot;cwi.schema.general_ledger&quot;, &quot;cwi.schema.ap_invoices&quot;, &quot;cwi.schema.ap_payments_made&quot;, &quot;cwi.schema.ap_suppliers&quot;, &quot;cwi.schema.ap_open_balances&quot;, &quot;cwi.schema.ar_invoices&quot;, &quot;cwi.schema.ar_cash_received&quot;, &quot;cwi.schema.ar_customers&quot;, &quot;cwi.schema.ar_open_balances&quot;, &quot;cwi.schema.inventory_transactions&quot;, &quot;cwi.schema.inventory_on_hand&quot; ] }</code></pre></div><p>Pour permettre aux utilisateurs d&apos;importer des données qui ne correspondent à aucun type de jeu de données, vous pouvez ajouter <code>&quot;schemaless&quot; : true</code> à la section &quot;feature&quot; du fichier product.json. Par conséquent, les utilisateurs auront la possibilité de sélectionner le type de jeu de données &quot;Autres&quot;.</p><MadCap:snippetBlock src="../Resources/Snippets/dataset-descriptions.flsnp" /><p> </p>
+        <h2><a name="Interim"></a>Interim Reporting Period</h2>
+        <p>Permet d&apos;établir des rapports intermédiaires.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-an-engagement-for-an-interim-period.htm?Highlight=interim">Créer une mission pour une période de reporting intermédiaire.</a></p>
+        <h2><a name="Issues"></a> Problèmes</h2>
+        <p>Permet aux utilisateurs d&apos;ajouter des questions.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm">Créer un dossier d&apos;engagement</a>.</p>
+        <h2><a name="Job"></a>Numéro de l&apos;emploi</h2>
+        <p>Vous pouvez masquer le champ Numéro de travail dans la boîte de dialogue <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Propriétés de la mission. </a></p>
+        <p>Définissez la propriété <code>&quot;hiddenJobNumber&quot; : true</code> pour masquer le <b>numéro d&apos;emploi</b>.</p>
+        <h2><a name="Material"></a>Matérialité</h2>
+        <p>Permettre l&apos;intégration de la matérialité dans votre produit. Une inexactitude acceptée (due à une omission ou à une erreur) est considérée comme significative. L&apos;importance relative est le seuil accepté (marge d&apos;erreur) pour les inexactitudes.</p>
+        <p>Pour plus d&apos;informations, voir <a href="Set-up-the-Materiality-document.htm">Paramétrage de l&apos;importance relative</a> et <a href="Set-up-the-Summary-of-Misstatements.htm">Résumé des anomalies.</a></p>
+        <h2><a name="Prior"></a> Année précédente</h2>
+        <p>Par défaut, un seul solde de période antérieure est pris en charge et s&apos;affiche dans la mission - une fois que les utilisateurs ont importé les données du client.</p>
+        <p>Pour activer jusqu&apos;à quatre soldes de périodes antérieures, définissez la propriété <code>showAllPriorPeriods</code> à <code>true</code>.</p>
+        <h2><a name="Product"></a>Classe de produits</h2>
+        <p>Cette propriété est utilisée par les utilisateurs des documents de travail. It returns one of the following values:</p>
+        <ul>
+            <li>
+                <p><b>PBC</b> - Pour indiquer que les documents de travail sont intégrés à une application PBC. Notez que cette intégration n&apos;est disponible que pour la version de base des Working Papers 2019 et les versions ultérieures.</p>
+            </li>
+            <li>
+                <p><b>ANALYTICS</b> - Pour indiquer que Working Papers est intégré à une application AnalyticsAI. Notez que cette intégration n&apos;est disponible que pour la version de base des Working Papers 2020 et les versions ultérieures.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Remarque : </b>Si les requêtes sont activées dans l&apos;application AnalyticsAI, cette propriété renvoie<b>&quot;ANALYTICS</b>&quot;.</p>
+        <h2><a name="Query"></a>requête</h2>
+        <p>Permettre aux utilisateurs de créer des requêtes.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Collaboration entre le personnel et les contacts (Requêtes).</a></p>
+        <h2><a name="Reimport"></a>Réimportation</h2>
+        <p>Permet la mise à jour du nom et du numéro de compte lors de la réimportation de la balance de vérification.</p>
+        <h2><a name="Review"></a>Outils de révision</h2>
+        <p>Désactive les outils de révision dans l&apos;ensemble du produit pour les utilisateurs.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Réviser des documents préparés avec des outils de révision.</a></p>
+        <h2><a name="Risk"></a>Évaluation des risques</h2>
+        <p>Pour activer le rapport d&apos;évaluation des risques dans votre produit.</p>
+        <p>Pour plus d&apos;informations, voir comment configurer le <a href="Set-up-the-Risk-report.htm">risque</a>, le <a href="Set-up-the-Control-report.htm">contrôle</a> et la <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">gestion des risques.</a></p>
+        <h2><a name="Forms"></a>Formulaires et jeux de formulaires</h2>
+        <p>Pour inclure les évaluations des risques, les risques, les contrôles, les rapports sur l&apos;importance relative et les inexactitudes dans votre application Cloud, incluez l&apos;ensemble de formulaires généraux <code>com.caseware.ca.general</code> dans la propriété de l&apos; <code>ensemble.</code>  Vous pouvez également faire ce qui suit :</p>
+        <p><code>Fonctionnalité [&quot;cycles&quot;, &quot;riskAssessment&quot; ]</code></p>
+        <p><code>Modules [&quot;com.caseware.visualization.charts&quot;, &quot;com.caseware.assertion&quot; ]</code></p>
+        <p>Si vous ne souhaitez pas inclure tous les rapports, vous pouvez inclure des rapports spécifiques. Notez que si vous choisissez d&apos;inclure des formulaires spécifiques, vous devez activer la propriété ou le module requis. Par exemple, pour activer le rapport sur les contrôles :</p>
+        <ul>
+            <li>
+                <p>Inclure le <code>com.caseware.ca.general.control-report</code> dans la propriété du <code>formulaire</code> </p>
+            </li>
+            <li>
+                <p>Activer la propriété <a href="#Cycles">Cycles</a> </p>
+            </li>
+        </ul>
+        <h2><a name="Roll"></a>report</h2>
+        <p>Report en vrac. Le fichier product.json de l&apos;API doit être modifié pour inclure les années précédentes et suivantes lorsqu&apos;elles existent. Voir le <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-enable-carry-forward.html">tutoriel du SDK</a> pour les instructions détaillées.</p>
+        <p>Pour plus d&apos;informations sur l&apos;expérience de l&apos;utilisateur final en matière de report, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Carry-forward-an-engagement.htm">Report d&apos;un engagement.</a></p>
+        <h2><a name="Second"></a>Deuxième évaluateur</h2>
+        <p>Active un second réviseur dans votre produit afin que l&apos;option <b>Révision finale</b> soit incluse dans toutes les signatures et que le champ <b>Second réviseur</b> soit disponible dans la boîte de dialogue Créer un engagement. Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Editer la lettre de mission.</a></p>
+        <h2><a name="Trial"></a>Balance</h2>
+        <p>Activer l&apos;onglet Balance de vérification dans l&apos;engagement.</p>
+        <p>For more information, see <a href="Define-groupings.htm">Define groupings.</a></p>
+        <h2><a name="User"></a>Groupes financiers définis par l&apos;utilisateur</h2>
+        <p>Permet aux utilisateurs d&apos;ajouter leurs propres groupes.</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">Renommer un fichier</a>.</p>
+        <h2><a name="Workflo"></a> Flux de travail</h2>
+        <p>Pour activer la fonction de flux de travail en lecture seule ou pour masquer le statut du flux de travail dans la boîte de dialogue des <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">propriétés de l&apos;engagement</a> .</p>
+        <p>Pour plus d&apos;informations, voir <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-workflows.html">Workflows et déclencheurs dans SE.</a></p>
+        <h2><a name="iXBRL"></a>iXBRL</h2>
+        <p>IXBRL est une norme ouverte qui permet aux entreprises de préparer des états financiers dans un format qui fournit les données structurées exigées par les régulateurs et les analystes, tout en permettant aux préparateurs de conserver un contrôle total sur la mise en page et la présentation de leur rapport.</p>
+        <p>Un fichier d&apos;aide à la conversion et un pointeur vers ce fichier doivent être ajoutés dans l&apos;API. See the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">XBRL SDK tutorial</a> for the detailed instructions.</p>
+        <p>Si vous avez mis en place au moins une taxonomie XBRL, le mode de révision XBRL est disponible pour les utilisateurs finaux et activé par défaut. Si vous souhaitez cacher une taxonomie XBRL aux utilisateurs finaux, vous pouvez définir la propriété <code>&quot;hideFromReviewMode&quot;</code> à <code>true</code> dans la <code>XBRLTaxonomyDefinition</code>.</p>
+        <p>Notez que si toutes les taxonomies sont cachées, le mode de révision XBRL n&apos;est pas disponible pour les utilisateurs finaux.</p>
+        <p>Pour en savoir plus sur la révision et l&apos;exportation de documents XBRL, voir <a href="XBRL-review-and-export.htm">Révision et exportation XBRL</a>.</p>
+    </body>
+</html>

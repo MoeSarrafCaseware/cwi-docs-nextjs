@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configurar reclamaciones opcionales (Azure AD)</h1>
+        <p>Before completing the SSO integration process, you need to edit the manifest to include the given_name and family_name claims. When a staff member uses SSO, these claims will provide their first and last name to Cloud.</p>
+        <p style="font-weight: bold;">To configure optional claims:</p>
+        <ol>
+            <li>
+                <p>Sign in to your Azure portal.</p>
+            </li>
+            <li>
+                <p>Select <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>From the left-hand navigation pane, select <b>App registrations</b>.</p>
+            </li>
+            <li>
+                <p>Seleccione el campo que desea en la lista.</p>
+            </li>
+            <li>
+                <p>From the left-hand navigation pane, select <b>Manifest</b>.</p>
+            </li>
+            <li>
+                <p>Edit the <b>optionalClaims</b> property as follows:</p>
+                <p><pre xml:space="preserve"><code class="language-python">&quot;optionalClaims&quot;: {<br />
+	&quot;idToken&quot;: [<br />
+		{<br />
+			&quot;name&quot;: &quot;given_name&quot;,<br />
+			&quot;essential&quot;: true<br />
+		},<br />
+		{<br />
+			&quot;name&quot;: &quot;family_name&quot;,<br />
+			&quot;essential&quot;: true<br />
+		}<br />
+	]<br />
+},</code></pre>
+                </p>
+                <p class="note"><b>Note:</b> You must copy the information above exactly to correctly configure optional claims.</p>
+                <p><img src="../../Resources/Images/azure-optional-claims.png" alt="The configured optionalClaims property." /></p>
+            </li>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Generate-the-reply-URL-Azure-AD.htm">Generate the Reply URL</a></p>
+    </body>
+</html>

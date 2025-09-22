@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Samenvatting partners en managers</h1>
+        <p><b>Partner- en managersamenvatting (PMS)</b> is een document dat is ontworpen om managers en partners een overzicht op hoog niveau te geven van de belangrijkste informatie die ten grondslag ligt aan auditbeslissingen voor een opdracht. PMS kan worden aangepast op basis van de oplossingsspecifieke instellingen.</p>
+        <p>Zodra het <b>Partner- en manageroverzicht (PMS)</b> is geïntegreerd met uw oplossing, selecteert u <strong>Toevoegen</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) op uw <b>Documentenpagina</b> en voegt u de volgende documenten toe:</p>
+        <ul>
+            <li>
+                <p><b>Partner- en managersamenvatting -</b> Het hoofdformulier dat alle functionaliteit bevat, inclusief de configuratie-instellingen van de primaire auteur en alle widgets.</p>
+            </li>
+            <li>
+                <p><b>PA - Samenvattend werkblad voor partners en managers</b> - Een SE Builder-formulier dat nodig is om de functionaliteit van het hoofdformulier te ondersteunen. Je moet dit werkblad toevoegen aan je <b>Documentenpagina</b> , maar je kunt het altijd verbergen met de zichtbaarheidsinstellingen.</p>
+            </li>
+            <li>
+                <p><b>GC - Formulier voor zichtbaarheid in auteursmodus</b> - Een SE Builder-formulier dat de instellingen voor zichtbaarheid van de inhoud van het formulier aanstuurt op basis van het type auteur dat het opent. Je moet dit werkblad toevoegen aan je <b>Documentenpagina</b> , maar je kunt het altijd verbergen met de zichtbaarheidsinstellingen.</p>
+                <p class="note"><b>Let op:</b> Het <b>GC - Formulier voor zichtbaarheid in auteursmodus</b> is een formulier dat wordt gebruikt door andere formulieren van Global Components. Als het eerder aan je oplossing is toegevoegd, hoef je in deze stap niets meer te doen.<br /></p>
+            </li>
+        </ul>
+        <h2>Vereiste wijzigingen van primaire auteur</h2>
+        <p><b>Partner- en managersamenvatting (PMS)</b> bevat een aantal widgets met belangrijke informatie die de controlebeslissingen voor een opdracht bepalen.</p>
+        <p><b>Partner and manager summary (PMS)</b> is ontwikkeld door het International Solutions team en werd gedemonstreerd tijdens het Distributors Webinar op 26 juli 2023.</p>
+        <p>Bekijk <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23368&amp;returntype=UploadedFile">deze opname</a>voor een gedetailleerde beschrijving van de <b>partner- en managersamenvattingsfunctionaliteit</b> voor eindgebruikers.</p>
+        <p>Eenmaal toegevoegd, open je het formulier terwijl je in Primary form bent en configureer je de vereiste widgets.</p>
+        <p>Zie de onderstaande tabel voor een overzicht van elk van de widgets:</p>
+        <table class="table table-striped">
+            <col style="width: 220px;" />
+            <col style="width: 162px;" />
+            <col style="width: 132px;" />
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Tabblad / Widget</th>
+                    <th style="text-align: left;">Primaire auteur configuraties</th>
+                    <th style="text-align: left;">Gaat uit van een specifieke inhoudslogica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Instellingen</b> - Overzicht</td>
+                    <td style="font-style: italic;color: #000000;">Vereiste configuraties voor primaire auteur</td>
+                    <td style="color: #000000;"><span style="color: #000000;">No</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Financial information</td>
+                    <td style="font-style: italic;color: #000000;">Vereiste configuraties voor primaire auteur</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja </span>- zie details <a href="#Financial_information">hier</a></td>
+                </tr>
+                <tr>
+                    <td>Algemene informatie over betrokkenheid</td>
+                    <td style="font-style: italic;color: #000000;">Vereiste configuraties voor primaire auteur</td>
+                    <td style="color: #000000;"><span style="color: #000000;">No</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Documenten die specifieke rollensets vereisen</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja-</span>zie de details <a href="#Documents_requiring_specific_role_sets">hier</a></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Team betrokkenheid</td>
+                    <td style="font-style: italic;color: #000000;">Vereiste configuraties voor primaire auteur</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja </span>- zie details <a href="#Engagement_team">hier</a></td>
+                </tr>
+                <tr>
+                    <td>Risicobeoordeling en reactie.</td>
+                    <td style="font-style: italic;color: #000000;">Primaire auteursconfiguraties vereist (indien van toepassing)</td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td>Risicobeoordeling en reactie.</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Risicobeoordeling en -respons</b> - Geplande auditrespons</td>
+                    <td style="color: #000000;"><i style="color: #000000;">Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja </span>- zie details <a href="#Planned_audit_responses">hier</a></td>
+                </tr>
+                <tr>
+                    <td><b>Risicobeoordeling en reactie</b> - Documenten waarvoor specifieke functiesets vereist zijn</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja </span>- zie details <a href="#Documents_requiring_specific_role_sets">hier</a></td>
+                </tr>
+                <tr>
+                    <td>Documenten met niet-optimale antwoorden</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja</span> - zie details <a href="#Fieldwork">hier</a></td>
+                </tr>
+                <tr>
+                    <td>Documenten met aangepaste conclusies</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja</span> - zie details <a href="#Documents_with_custom_conclusion">hier</a></td>
+                </tr>
+                <tr>
+                    <td><b>Veldwerk</b> - Documenten waarvoor specifieke rollen zijn vereist</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja </span>- zie details <a href="#Documents_requiring_specific_role_">hier</a></td>
+                </tr>
+                <tr>
+                    <td><b>Voltooiing</b> - Problemen</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Voltooiing</b> - Aanpassingen</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td>Documenten met overschreven zichtbaarheid</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td>Documenten gewijzigd na aftekenen</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Afronding</b> - Documenten waarvoor specifieke rollensets vereist zijn</td>
+                    <td style="color: #000000;"><i>Geen primaire auteur vereist</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Ja</span> - zie details <a href="#Documents_requiring_specific_role_">hier</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Settings"></a>Instellingen</h2>
+        <p class="note"><b>Let op</b>: Primaire auteursconfiguraties vereist.</p>
+        <ul>
+            <li>
+                <p>Met de <b>instellingentabel</b> kunnen primaire auteurs de inhoud van het <b>Partner- en manageroverzicht (PMS)</b> aanpassen op basis van de oplossing waarin het geïntegreerd is.</p>
+            </li>
+            <li>
+                <p>De kolom <b>Formuliertabs</b> bevat een lijst met tabbladnamen die de structuur van het PMS-document vormen. Gebruik deze kolom om de namen van de tabbladen aan te passen op basis van de specifieke vereisten van je oplossing.</p>
+            </li>
+            <li>
+                <p>In de kolom <b>Widget</b> staat een lijst met beschikbare widgets voor elk van de tabbladen. Kies welke widgets je wilt opnemen op basis van de specifieke vereisten van je oplossing.</p>
+            </li>
+            <li>
+                <p><b>Opdrachtfasen</b> stelt primaire auteurs in staat om <b>SE-engagementdocumentfasen</b> af te stemmen op PMS-tabbladen. Je kunt één of meerdere fasen selecteren die overeenkomen met een bepaald tabblad. Deze informatie wordt gebruikt in de rest van de PMS-functionaliteit om de juiste informatie te filteren voor elk van de toepasselijke widgets. Voor meer informatie over <b>engagementfasen</b>, zie <a href="https://developers.caseware.com/se-authoring/31/Define-the-engagement-phases.htm">De engagementfasen definiëren.</a></p>
+            </li>
+            <li>
+                <p>Met<b>mappen</b> kunnen primaire auteurs verder filteren welke mappen bij een bepaald tabblad horen en in de rest van de PMS-functionaliteit worden gebruikt om de juiste informatie te filteren voor elk van de toepasselijke widgets. Standaard worden alle mappen geselecteerd die zijn gekoppeld aan een <b>Opdrachtfase</b> . Als de selectie van de <b>Opdrachtfase</b> wordt gewijzigd, moet ook de selectie van <b>de Mappen</b> worden herzien.</p>
+            </li>
+        </ul><div class="note"><p><b>Let op:</b></p>
+            <ul>
+                <li>
+                    <p>Dit formulier biedt geen ondersteuning voor het toevoegen van meerdere tabbladen via de instellingen van de primaire auteur.</p>
+                </li>
+                <li>
+                    <p>Widgets zijn toegewezen aan individuele tabbladen en kunnen niet tussen tabbladen worden verplaatst.</p>
+                </li>
+                <li>
+                    <p>Elke widget is exclusief ontworpen voor dit formulier en kan niet worden ingesloten in andere gebieden van de SE-engagement.</p>
+                </li>
+            </ul></div><p>Als je van plan bent om significante wijzigingen aan te brengen in de inhoud of functionaliteit van SE Builder formulieren, zoals het toevoegen, verwijderen of wijzigen van functionaliteit, dan heb je code-eigenaarschap nodig.</p>
+        <p class="note"><b>Let op:</b> Eigenaar worden van de code betekent dat je verantwoordelijk bent voor het onderhoud van de SE builder formulieren. Dit omvat het handmatig toepassen van alle toekomstige wijzigingen, updates en bugfixes die voor de oorspronkelijke formulierbron worden ingezet.</p>
+        <p>Zie voor meer informatie <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Partner-and-manager-summary.htm">Toegang aanvragen tot het Partner- en managersoverzicht</a>.</p>
+        <p>Hieronder leggen we uit hoe elke widget werkt en hoe deze geconfigureerd moet worden, waar van toepassing.</p>
+        <h2>Planning</h2>
+        <h3><a name="Financial_information"></a>Financiële informatie</h3>
+        <p class="note"><b>Let op:</b> Primaire auteursconfiguraties vereist.</p>
+        <p>De widget <b>Financiële informatie</b> bevat informatie over analysegrafieken die geselecteerd zijn om te worden weergegeven in het PMS. Zie <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-analysis-module.html">De analysemodule instellen</a>voor meer informatie over analysemodules.</p>
+        <p>Geef als primaire auteur het volgende op:</p>
+        <ul>
+            <li>
+                <p>De URL van het analysedocument dat u wilt opnemen in het PMS-document.</p>
+            </li>
+            <li>
+                <p>Zowel de URL als de naam van het analysedocument om de verwijzing binnen het PMS-document te maken.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Let op:</b> De widget <b>Financiële informatie</b> ondersteunt de toevoeging van één analysedocument en geeft alle informatie, zoals grafieken, in dat document weer. Afhankelijk van de uitgebreidheid van uw analysedocumenten wilt u misschien een apart analysedocument maken met kleinere subsets van grafieken die worden opgenomen in de widget <b>Financiële informatie</b> van PMS.</p>
+        <h3>Algemene informatie over betrokkenheid</h3>
+        <p class="note"><b>Let op:</b> Primaire auteursconfiguraties vereist.</p>
+        <p>De widget <b>Algemene engagementinformatie</b> geeft een overzicht van de belangrijkste reacties op de engagement op basis van de informatie in de onderstaande tabel:</p>
+        <ul>
+            <li>
+                <p><b>Procedure-ID</b> - Voer de <b>procedure-ID</b> in van de informatie die u wilt weergeven. Raadpleeg <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">De procedure-ID identificeren</a>voor instructies over het identificeren van de procedure-ID.</p>
+            </li>
+            <li>
+                <p><b>Naam procedure</b> - Geef de beschrijving op die je in de tabel wilt weergeven. Als er geen beschrijving is opgegeven, wordt de standaardtekst van de procedure gebruikt.</p>
+            </li>
+            <li>
+                <p><b>Ja / Nee antwoord</b> - Met het selectievakje kunt u <b>Ja</b> of <b>Nee</b> selecteren als antwoord op basis van het type procedure. Er wordt <b>Ja</b> weergegeven voor procedures die zijn beantwoord als <i>Verhalend</i> of <i>Procedure</i> en <i>Nee</i> voor procedures die zijn beantwoord als <i>N.v.t.</i> Dit selectievakje is specifiek voor bepaalde typen procedures die <i>Narratief, Procedure</i> of <i>N.v.t.</i> als inline antwoord bevatten. Voor andere proceduretypes moet het selectievakje uitgeschakeld blijven.</p>
+            </li>
+            <li>
+                <p><b>Kleur ernst bewerken</b> - Selecteer het potloodpictogram om de kleur van de reacties te definiëren op basis van hun ernst. Bijvoorbeeld: <b>Hoog - <span style="color: #000000;">Rood</span> / Gemiddeld - <span style="color: #000000;">Oranje</span> / Laag - <span style="color: #000000;">Groen</span></b>.</p>
+            </li>
+        </ul>
+        <h3>Documenten die specifieke rollensets vereisen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten waarvoor specifieke rollensets</b> nodig zijn toont alle documenten van de opdrachtfasen die zijn geselecteerd voor het tabblad <b>Planning</b> . Deze documenten hebben een ander aftekenschema dan het standaardschema zoals opgegeven in <b>Product → Instellingen → Aftekenschema&apos;s → Schema&apos;s</b>.</p>
+        <p>Voor meer informatie over Ondertekenschema&apos;s, zie <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Ondertekenschema&apos;s instellen</a>.</p>
+        <h3><a name="Engagement_team"></a>Team betrokkenheid</h3>
+        <p class="note"><b>Let op:</b> Primaire auteursconfiguraties vereist.</p>
+        <p>De widget <b>Opdrachtteam</b> toont gedocumenteerde teaminformatie die specifiek is voor jouw opdracht.</p>
+        <p><b>Merk op dat deze widget de volgende gevallen ondersteunt:</b></p>
+        <p><b>Casus 1:</b> Als de informatie over het Opdrachtteam wordt gedocumenteerd in een enkele procedure in een <b>SE-checklist</b>, waarbij meerdere rijen mogelijk zijn, wordt informatie over <b>Positie</b> en <b>Naam</b>weergegeven. Beantwoord <b>de SE Checklist</b> als dit scenario van toepassing is en vul de volgende informatie in:</p>
+        <ul>
+            <li>
+                <p><b>Procedure-ID</b> - Voer de procedure-ID in waar de informatie over het opdrachtteam wordt gedocumenteerd. Raadpleeg <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">De procedure-ID identificeren</a>voor instructies over het identificeren van de procedure-ID.</p>
+            </li>
+            <li>
+                <p><b>Lees procedure-informatie</b> - Klik op de knop om informatie op te halen over hoe reacties zijn gedefinieerd voor de procedure.</p>
+            </li>
+            <li>
+                <p><b>Positie/Naam</b> - Geef aan welke van de procedureantwoorden de positie of naam vertegenwoordigt.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/1-procedure-settings.png" title="Het dialoogvenster Procedure-instellingen." /></p>
+        <p><b>Casus 2:</b> Als de informatie van het Opdrachtteam in een ander SE Builder-document/tabel is vastgelegd, reageer dan met de <b>SE Builder-tabel</b> als dit scenario van toepassing is en volg de onderstaande instructies:</p>
+        <p>Gebruik de volgende voorbeeldcode en voeg deze toe aan je eigen SE Builder-formulier om de vereiste informatie in te vullen in de <b>tabel PMS - Opdrachtteam</b>:</p><code> <p>calcUtils.calc(functie (calcUtils, veld, formulier) {</p><p>laat rowData = [</p><p>Naam &quot;Naam&quot;, positie: &apos;Ontwikkelaar&apos;},</p><p>Naam &quot;Khoa&quot;, positie: (Beheerd)</p><p>Naam &quot;Huy&quot;, positie: &apos;Ontwikkelaar 1&apos;},</p><p>Naam &quot;Hieu&quot;, positie: &apos;Ontwikkelaar 2&apos;},</p><p>Naam ha&apos;, positie: &apos;Ontwikkelaar&apos;},</p><p>]</p><p>als (!wpw.tax.gcs) wpw.tax.gcs = {};</p><p>if (JSON.stringify(wpw.tax.gcs.cacheCKList) !== JSON.stringify(rowData)) {</p><p>wpw.tax.gcs.cacheCKList = rowData;</p><p>wpw.tax.gcs.clearTableRows(form(&apos;pmsd&apos;).field(&apos;engagementTeamInfoTable&apos;));</p><p>formulier(&apos;pmsd&apos;).veld(&apos;engagementTeamInfoTable&apos;).addRow(0, rowData, true);</p><p>formulier(&apos;pmsd&apos;).veld(&apos;hasTeamProcedures&apos;).set(true);</p><p>formulier(&apos;pmsd&apos;).veld(&apos;heeftTeamProcedures&apos;).opslaan();</p><p>}</p></code><h2>Risicobeoordeling en reactie</h2>
+        <h3>risico</h3>
+        <p class="note"><b>Let op:</b> Primaire auteursconfiguraties vereist, indien van toepassing.</p>
+        <p>De widget <b>Risico&apos;s</b> toont de informatie over <b>risico&apos;s</b> die zijn gedocumenteerd in het opdrachtbestand:</p>
+        <ul>
+            <li>
+                <p><b>Risico op het niveau van financiële overzichten</b>: Als je app het documenteren van risico&apos;s op het niveau van het financieel overzicht ondersteunt:</p>
+                <ul>
+                    <li>
+                        <p>Voer de <b>procedure-ID</b> in waar de informatie over het opdrachtteam wordt gedocumenteerd. Raadpleeg <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">De procedure-ID identificeren</a>voor instructies over het identificeren van de procedure-ID <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">.</a></p>
+                    </li>
+                    <li>
+                        <p>Documenteer de <b>URL</b> en de <b>naam</b> van de controlelijst die deze informatie bevat om de referentie te maken op het tabblad PMS-document.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Toont automatisch het <b>totale</b> aantal risico&apos;s dat is gedocumenteerd in het opdrachtdossier</p>
+            </li>
+            <li>
+                <p>Geeft automatisch het aantal <b>significante risico&apos;s</b> weer dat is geïdentificeerd in het opdrachtdossier</p>
+            </li>
+            <li>
+                <p>Geeft automatisch het aantal <b>frauderisico&apos;s</b> weer dat in het engagementbestand is geïdentificeerd</p>
+            </li>
+        </ul>
+        <p>De verwijzing <b>naar het risicorapport</b> in de widget leidt de eindgebruiker automatisch naar het tabblad <a href="https://developers.caseware.com/se-authoring/31/Enable-the-new-risk-module.htm">Risicobeoordeling</a> in het opdrachtbestand.</p>
+        <h3>controle</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Besturingselementen</b> toont de informatie over <b>besturingselementen</b> die in het opdrachtbestand zijn gedocumenteerd:</p>
+        <ul>
+            <li>
+                <p>Toont automatisch het <b>totale</b> aantal controles dat is gedocumenteerd in het opdrachtbestand.</p>
+            </li>
+            <li>
+                <p>Toont automatisch het aantal <b>essentiële controles</b> dat is gedocumenteerd in het opdrachtbestand.</p>
+            </li>
+        </ul>
+        <p>De verwijzing naar <b>het Controlerapport</b> in de widget leidt de eindgebruiker automatisch naar het tabblad <a href="https://developers.caseware.com/se-authoring/31/SE-Authoring/Enable-controls-in-the-risks-module.htm">Controlerapport</a> in het engagementbestand.</p>
+        <h3><a name="Planned_audit_responses"></a>Planned audit responses</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Geplande auditreacties</b> geeft de informatie automatisch weer op basis van de Auditreactietabellen die zijn ingebed in de checklists van het auditprogramma die deel uitmaken van de Risicobeoordelings- en responsfase, zoals gespecificeerd in de tabel <a href="#Settings">Instellingen</a> .</p>
+        <p class="note"><b>Let op:</b> De widget <b>Geplande auditreacties</b> ondersteunt het weergeven van informatie alleen als de <a href="https://developers.caseware.com/se-authoring/31/Audit-response-table.htm">Global Component - Audit Response Table</a> is geïmplementeerd in de oplossing, samen met de controleprogrammachecklists. Deze checklists, inclusief de tabel met auditantwoorden, zijn gekoppeld aan een financieel gebied:</p>
+        <p class="note"><img src="../Resources/Images/2-show-risk-information.png" title="Alle informatie weergeven " /></p>
+        <h3>Documenten die specifieke rollensets vereisen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten waarvoor specifieke rollensets</b> nodig zijn toont alle documenten van de opdrachtfasen die zijn geselecteerd voor het tabblad <b>Risicobeoordeling en reactie</b> . Deze documenten hebben een ander aftekenschema dan het standaardschema zoals opgegeven in <b>Product → Instellingen → Aftekenschema&apos;s → Schema&apos;s</b>.</p>
+        <p>Voor meer informatie over Ondertekenschema&apos;s, zie <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Ondertekenschema&apos;s instellen</a>.</p>
+        <h2><a name="Fieldwork"></a>Veldwerk</h2>
+        <h3>Documenten met niet-optimale antwoorden</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten met niet-optimale antwoorden</b> toont de documenten uit de engagement veldwerkfase die procedures bevatten gemarkeerd met een niet-optimaal antwoord.</p>
+        <p class="note"><b>Let op:</b> Deze widget leest informatie gebaseerd op de niet-optimale antwoordfunctie die beschikbaar is voor procedureantwoorden:</p>
+        <p class="note"><img src="../Resources/Images/3-Documents-with-non-optimal-answers.png" title="Documenten met niet-optimale antwoorden" /></p>
+        <p>Voor meer informatie over niet-optimale antwoorden, zie <a href="https://developers.caseware.com/se-authoring/31/Print Only Topics/Reviewer Training/Review-Tools.htm">Beoordelingshulpmiddelen - Niet-optimale antwoorden</a>.</p>
+        <h3><a name="Documents_with_custom_conclusion"></a>Documenten met aangepaste conclusies</h3>
+        <p><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten met aangepaste conclusie</b> geeft de controleprogramma&apos;s checklists weer waarbij het extra tekstgebied voor de conclusie standaard leeg was bij het maken van de opdracht en door de eindgebruiker is aangepast op opdrachtniveau.</p>
+        <p class="note"><b>Let op:</b> Deze widget ondersteunt het weergeven van informatie alleen in het volgende scenario:</p>
+        <ul>
+            <li>
+                <p>De controlelijst van het auditprogramma bevat de sectie Conclusie zoals gedefinieerd in de <a href="https://developers.caseware.com/se-authoring/31/Review-and-modify-the-checklist-default-settings.htm">standaardinstellingen van de controlelijst</a></p>
+            </li>
+            <li>
+                <p>Geeft de naam van de controlelijst met een gewijzigde conclusie als:</p>
+                <ul>
+                    <li>
+                        <p>Het extra tekstgebied van het afsluitende gedeelte was standaard leeg en werd door de eindgebruiker aangepast op opdrachtniveau.</p>
+                    </li>
+                    <li>
+                        <p>De checklist voor het auditprogramma is zichtbaar op de pagina <b>Documenten</b> .</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3><a name="Documents_requiring_specific_role_"></a>Documenten die specifieke rollensets vereisen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten waarvoor specifieke rollensets</b> nodig zijn toont alle documenten van de opdrachtfasen die zijn geselecteerd voor het tabblad <b>Veldwerk</b> . Deze documenten hebben een ander aftekenschema dan het standaardschema zoals opgegeven in <b>Product → Instellingen → Aftekenschema&apos;s → Schema&apos;s</b>.</p>
+        <p>Voor meer informatie over Ondertekenschema&apos;s, zie <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Ondertekenschema&apos;s instellen</a>.</p>
+        <h2>Volledig</h2>
+        <h3>Problemen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Issues</b> toont automatisch de informatie over Issues die zijn gedocumenteerd in het engagementbestand, waarbij ze worden gegroepeerd op:</p>
+        <ul>
+            <li>
+                <p>Uitmuntend</p>
+            </li>
+            <li>
+                <p>Opgelost</p>
+            </li>
+            <li>
+                <p>Wissen</p>
+            </li>
+        </ul>
+        <p>De verwijzing <b>naar de Issues-pagina</b> in de widget leidt de eindgebruiker automatisch naar het rapport <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm?region=int">Samenvatting van problemen</a> in het opdrachtbestand.</p>
+        <h3>VJP&apos;s</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget Aanpassingen toont automatisch de informatie over aanpassingen in het engagementbestand:</p>
+        <ul>
+            <li>
+                <p>Het <b>totale</b> aantal correcties dat voor het huidige jaar in het engagementbestand is opgenomen, exclusief eventuele fiscale correcties.</p>
+            </li>
+            <li>
+                <p>Het totale aantal <b>voorgestelde</b> (Niet-geregistreerde - Feitelijke / Geraamde / Oordeelsmatige) aanpassingen die voor het huidige jaar in het opdrachtdossier zijn opgenomen.</p>
+            </li>
+            <li>
+                <p>Het totale aantal <b>werkelijke</b> (normale en herclassificerende) aanpassingen dat voor het huidige jaar in het engagementbestand is opgenomen.</p>
+            </li>
+            <li>
+                <p>Het totale aantal <b>eliminerende</b> aanpassingen in het opdrachtbestand voor het huidige jaar als die er zijn en de opdracht is ingesteld als een consolidatie.</p>
+            </li>
+        </ul>
+        <p>Documenteer de <b>URL</b> en de <b>naam</b> van het document <a href="https://developers.caseware.com/se-authoring/31/Set-up-the-Summary-of-Misstatements.htm">Samenvatting van onjuistheden</a> om de referentie te maken op het tabblad PMS-document, als dit van toepassing is op je app.</p>
+        <p>De verwijzing naar <b>de aanpassingspagina</b> in de widget leidt de eindgebruiker automatisch naar het tabblad <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm?region=int">Aanpassingen</a> in het engagement-bestand.</p>
+        <h3>Documenten met overschreven zichtbaarheid</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten met overschreven zichtbaarheid</b> toont alle documenten van de opdracht waarvan de standaard zichtbaarheidsinstellingen, oorspronkelijk ingesteld door de primaire auteur of de bedrijfsauteur, zijn gewijzigd door de eindgebruiker op opdrachtniveau:</p>
+        <ul>
+            <li style="font-weight: normal;">
+                <p>De instellingen voor de zichtbaarheid van documenten opheffen om een document weer te geven dat verborgen moet blijven.</p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>De instellingen voor de zichtbaarheid van documenten opheffen om een document te verbergen dat bedoeld is om te worden weergegeven.</p>
+            </li>
+        </ul>
+        <p>Merk op dat deze widget informatie weergeeft over elk document waarvan de zichtbaarheidsinstellingen direct zijn aangepast op de <b>Documenten</b> pagina<b>(Gedwongen verborgen</b>) en niet via het dialoogvenster met zichtbaarheidsinstellingen. Dit omvat ook gevallen waarin deze wijziging werd uitgevoerd door de primaire auteur of de vaste auteur.</p>
+        <p>Bijvoorbeeld, een document met de volgende zichtbaarheidsinstellingen ingesteld door de primaire auteur zal worden weergegeven in de widget:</p>
+        <p><img src="../Resources/Images/4-Visibility-settings.png" title="De zichtbaarheidsinstellingen." /></p>
+        <p><img src="../Resources/Images/5-Visibility-settings.png" title="De zichtbaarheidsinstellingen." /></p>
+        <p>Om dit probleem op te lossen als primaire of firm auteur, navigeer je naar de sjabloon en pas je de zichtbaarheidsinstellingen aan via het zichtbaarheidsinstellingen venster, in plaats van direct wijzigingen aan te brengen op de <b>Documenten</b> pagina:</p>
+        <p><img src="../Resources/Images/6-Visibility-settings-visibility-form.png" title="De zichtbaarheid is ingesteld." /></p>
+        <p><img src="../Resources/Images/7-Use-default-settings.png" alt="Standaardinstellingen gebruiken." /></p>
+        <h3>Documenten gewijzigd na aftekenen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten gewijzigd na aftekenen</b> toont alle documenten uit de engagementfasen die werden gewijzigd nadat ze werden afgetekend.</p>
+        <p>Voor meer informatie over deze functionaliteit, zie <a href="https://developers.caseware.com/se-authoring/31/Review-and-customize-signoff-schemes.htm">Wijzigingen na goedkeuring door reviewer</a>.</p>
+        <h3><a name="Documents_requiring_specific_role_sets"></a>Documenten die specifieke rollensets vereisen</h3>
+        <p class="note"><b>Let op:</b> Geen primaire auteur vereist.</p>
+        <p>De widget <b>Documenten waarvoor specifieke rollensets</b> nodig zijn toont alle documenten van de opdrachtfasen die zijn geselecteerd voor het <b>tabblad Voltooiing</b>. Deze documenten hebben een ander aftekenschema dan het standaardschema, zoals gespecificeerd in <b>Product → Instellingen → Aftekenschema&apos;s → Schema&apos;s</b>.</p>
+        <p>Voor meer informatie over Ondertekenschema&apos;s, zie <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Ondertekenschema&apos;s instellen</a>.</p>
+    </body>
+</html>

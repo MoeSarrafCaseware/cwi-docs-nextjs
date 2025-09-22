@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Constatations</h1>
+        <p>Nos processus automatisés d&apos;analyse SAST des documents de travail ont donné lieu aux constatations suivantes en matière de sécurité critique et de sécurité élevée. Nous avons résumé les résultats critiques et élevés de chaque outil, tandis que les résultats moyennement et faiblement classés ont été laissés de côté par souci de concision. Tous les résultats ont été analysés du point de vue de l&apos;impact sur la sécurité, et les résultats faibles/moyens se sont avérés être liés à des problèmes de qualité du code en cours d&apos;élaboration, et non à des vulnérabilités logicielles.</p>
+        <h2>Veracode</h2>
+        <h3>Moyen - Fichier temporaire non sécurisé (CWE-377, règle VC8593) - 2 instances</h3>
+        <p><strong>État </strong><strong>Remediation scheduled</strong><strong>, Working Papers 2024 Update 1</strong></p>
+        <p>Certains composants de l&apos;application de bureau Working Papers utilisent des fichiers temporaires dans le cadre de leur fonctionnement normal. Veracode a constaté que certains de ces fichiers temporaires sont créés à l&apos;aide d&apos;un générateur de nombres aléatoires non sécurisé, d&apos;une manière qui pourrait être prédite par un utilisateur malveillant ayant un accès local au système.</p>
+        <p>Nous avons créé un ticket pour que l&apos;équipe de développement corrige le problème. La solution recommandée consiste à utiliser un générateur de nombres aléatoires sécurisé au lieu d&apos;un générateur pseudo-aléatoire dans ladite fonction créant le fichier temporaire.</p>
+        <MadCap:pageBreak />
+        <p>Entre-temps, nous avons évalué que les deux détections de cette règle ont un <a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N/E:U/RL:U/RC:R/CR:M/IR:H/AR:M/MAV:L/MAC:L/MPR:L/MUI:N/MS:U/MC:N/MI:L/MA:N&amp;version=3.1">score CVSSv3.1</a>global <a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N/E:U/RL:U/RC:R/CR:M/IR:H/AR:M/MAV:L/MAC:L/MPR:L/MUI:N/MS:U/MC:N/MI:L/MA:N&amp;version=3.1">de 3,5</a>, de sorte qu&apos;il a été déterminé qu&apos;aucun correctif n&apos;est nécessaire. Le caractère aléatoire de la valeur générée n&apos;affecte pas la sécurité du composant ou de l&apos;artefact de fichier.</p>
+        <h3>Moyen - Utilisation d&apos;un mot de passe codé en dur (CVE-259, règle VC9191) - 1 instance</h3>
+        <p><strong>État Faux positifs </strong></p>
+        <p>Afin de fournir une fonction d&apos;importation de données à partir de MYOB Cloud, Working Papers initie un flux OAUTH 2.0 à travers le MYOB AccountRight SDK. Ce processus nécessite l&apos;utilisation d&apos;une clé de développeur, qui est codée en dur dans le code source. La clé de développeur ne peut pas être utilisée seule pour collecter des données, car les informations d&apos;identification du client sont également nécessaires.</p>
+        <p>Étant donné que le fournisseur ne prend en charge que le type de subvention Authorization Code, il n&apos;y a aucun moyen d&apos;éviter le codage en dur des secrets sans procéder à des changements architecturaux majeurs, ce qui impliquerait de transmettre les données par l&apos;intermédiaire d&apos;un serveur contrôlé par Caseware et d&apos;effectuer le flux OAUTH pour le compte de l&apos;utilisateur. Il a été décidé que le flux actuel était optimal.</p>
+        <h2>Dépendante</h2>
+        <h3>Chromium Embedded Framework (CefSharp)</h3>
+        <p><strong>État Remédiation programmée, Documents de travail 2024</strong></p>
+        <p>La plupart des résultats de<strong></strong>(5 sur 7) trouvés par Dependabot sont liés à CefSharp, un composant intégré à Google Chrome. La version actuelle de CefSharp utilisée dans les Working Papers est 109.1.110, qui intègre Chromium 109.0.5414.87. L&apos;équipe mettra à jour la version de Chromium dans les Working Papers 2024. Étant donné qu&apos;il s&apos;agit d&apos;un composant de navigateur externe intégré dans les documents de travail, il nécessite des tests importants.</p>
+        <p>La version de Chromium utilisée dans les Working Papers est connue pour présenter des vulnérabilités exploitables signalées par Google. Cependant, le composant utilisé n&apos;est pas destiné à la navigation générale. Le cas d&apos;utilisation prévu consiste à accéder aux sites et services contrôlés par Caseware, et est couvert par notre programme de sécurité global. Bien que nous ne puissions pas empêcher les utilisateurs de visiter d&apos;autres sites web, nous conseillons aux utilisateurs de ne pas utiliser ce composant pour la navigation générale en raison des nombreuses façons dont il peut être utilisé.</p>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: normal;">Now, let&apos;s set up the Notes Library to create a pool of notes for users.</p>
+        <ol>
+            <li>
+                <p>Create a note and add the note content.</p>
+                <p>You can optionally create a note hierarchy by adding subheadings to the note.</p>
+                <p>To add subheadings:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select the <b>Notes to the Financial Information</b> area on the Document Map.</p>
+                    </li>
+                    <li>
+                        <p>Select the note that you want to create a hierarchy for, then select <b>Add</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>The applicable heading displays under <b>Heading</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select the applicable heading.</p>
+                        <p>A subcategory note is added in the document with a default title <b>Note title</b>. You can select the default title and change it.</p>
+                    </li>
+                </ol>
+                <p>You can also define an association to the note. An association refers to the trial balance groups that a specific note is related to. Use associations to further categorize notes by associating them with specific trial balance groups.</p>
+                <p style="font-weight: normal;">To associate a note to a trial balance group:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select the note that you want to associate with a trial balance group.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>More actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Associations.</b></p>
+                    </li>
+                    <li>
+                        <p>Select <b>Add Financial Groups (<img src="../Icons/financial-stat-add1.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b> to populate the trial balance data.</p>
+                    </li>
+                    <li>
+                        <p>Choose a trial balance group to associate the note with.</p>
+                    </li>
+                    <li>
+                        <p>Klicken Sie auf <b>Speichern</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Exclude the note.</p>
+                <p>When a note is excluded from the document, it&apos;s stored in the Notes Library. To have a note automatically excluded from the document, set up visibility conditions for each note in the financial statements document. Once the conditions are met, the note is automatically excluded from the document and stored in the Notes Library.</p>
+                <p class="note"><b>Note:</b> The Notes Library is only available if there are excluded notes in the document.</p>
+                <p style="font-weight: normal;">To manually exclude a note:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Go to the note that you want to exclude.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>More actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Exclude.</b></p>
+                    </li>
+                    <p>The note is excluded from the document and stored in the Notes Library.</p>
+                </ol>
+            </li>
+            <li>
+                <p>Repeat the above steps until you have a pool of notes in the Notes Library.</p>
+            </li>
+        </ol>
+        <p>If you select the <b>Add</b> (<img src="../Icons/add-FS.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon in the <b>Document Map</b> now, you&apos;ll find that another option <b>Insert from Library</b> is available. All newly created <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT">Caseware ReviewComp</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint">OnPoint PCR </MadCap:conditionalText>engagements also will have this option available to users, so they can add notes from the Notes Library.</p>
+    </body>
+</html>

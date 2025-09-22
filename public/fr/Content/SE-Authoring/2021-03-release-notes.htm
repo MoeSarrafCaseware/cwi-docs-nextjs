@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head><title>Notes de mise à jour SE 2021-03</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2021-03</h1>
+        <p>Soyez bien au chaud pour l&apos;automne avec SE 2021-03 ! Avec des outils de révision dans les listes de contrôle pour visualiser les changements après signature, des mises à jour de la logique de visibilité pour les colonnes des tableaux dynamiques et bien d&apos;autres choses encore, la SE 2021-03 est pleine de nouveautés passionnantes pour la plateforme.</p>
+        <h2>Amélioration de la logique Afficher/Masquer pour les colonnes des tableaux</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>L&apos;option <b>Afficher/Masquer</b> (<img src="../Resources/Images/icon-eye-03.png" style="width: 20px;height: 16px;vertical-align: text-bottom;" />/<img src="../Resources/Images/icon-eye-01.png" style="width: 24px;height: 21px;vertical-align: text-bottom;" />) pour les colonnes des tableaux dynamiques comprend désormais des options supplémentaires.</p>
+        <ul>
+            <li>
+                <p><b>Appliquer le comportement par défaut</b> - le comportement par défaut est appliqué à la colonne. Notez que le comportement par défaut diffère en fonction du type de colonne.</p>
+                <ul>
+                    <li>
+                        <p>Pour les colonnes de la balance de vérification :</p>
+                        <p>La colonne apparaît toujours dans les états financiers et dans la copie imprimée (PDF).</p>
+                        <p class="note"><b>Remarque :</b> Les colonnes de l&apos;année précédente ne s&apos;affichent pas s&apos;il n&apos;y a pas de données de l&apos;année précédente.</p>
+                    </li>
+                    <li>
+                        <p>Pour les colonnes de saisie et de calcul personnalisé :</p>
+                        <p>La colonne s&apos;affiche toujours dans les états financiers et s&apos;affiche dans la copie d&apos;impression (PDF) si la colonne contient des données (au moins une cellule n&apos;est pas vide et sa valeur n&apos;est pas nulle).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Toujours afficher</b> - la colonne s&apos;affiche toujours dans les états financiers et dans la copie imprimée (PDF).</p>
+            </li>
+            <li>
+                <p><b>Toujours cacher</b> - la colonne est toujours cachée dans les états financiers et dans la copie imprimée (PDF).</p>
+            </li>
+        </ul>
+        <h2>Amélioration de l&apos;interface utilisateur pour la nouvelle page Documents</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>La conception de la nouvelle page <b>Documents</b> a été améliorée :</p>
+        <ul>
+            <li>
+                <p>Les colonnes de signature sont désormais alignées à droite de la page.</p>
+            </li>
+            <li>
+                <p>Les icônes de signature sont désormais alignées à gauche dans les colonnes.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/new-signoff-columns.png" alt="Nouvelle conception des colonnes d&apos;approbation dans la page Documents." /></p>
+        <h2>Mode de révision XBRL</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Le mode de révision XBRL est désormais disponible pour les utilisateurs finaux et activé par défaut. Si vous souhaitez cacher une taxonomie XBRL aux utilisateurs finaux, vous pouvez définir la propriété<code>&quot;hideFromReviewMode</code>&quot; à <code>true</code> dans la <code>XBRLTaxonomyDefinition</code>.</p>
+        <p>Notez que si toutes les taxonomies sont cachées, le mode de révision XBRL n&apos;est pas disponible pour les utilisateurs finaux.</p>
+        <p>Pour en savoir plus, voir <a href="XBRL-review-and-export.htm">XBRL review and export</a> et <a href="List-of-product-features-(API).htm#iXBRL">iXBRL</a>.</p>
+        <p>Pour consulter les informations destinées aux utilisateurs finaux, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/XBRL-review-and-export.htm">Révision et exportation XBRL</a>.</p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2021-03.</p>
+        <h3>Champ contextuel dans l&apos;examen XBRL</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Vous pouvez désormais ajouter un champ contextuel lors de la construction de faits XBRL. Le champ de contexte est affiché dans le panneau de révision lorsque vous révisez des faits XBRL.</p>
+        <p><img src="../Resources/Images/xbrl-context-field.png" alt="Le champ de contexte dans le panel de révision XBRL." /></p>
+        <h3>Styles d&apos;en-tête personnalisables</h3>
+        <p>#primaryauthor <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les auteurs primaires et secondaires peuvent désormais personnaliser la taille de la police, le type d&apos;accentuation (gras, souligné, italique) et la couleur des en-têtes du document dans les paramètres du produit. Les styles d&apos;en-tête s&apos;appliquent à tous les documents de la mission.</p>
+        <p>Pour en savoir plus, voir <a href="Formatting-and-localization.htm">Configurer les préférences de mise en forme</a> et <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Authoring-index.htm">Personnaliser les options d&apos;affichage, la mise en forme et les autres paramètres de votre modèle de cabinet</a>.</p>
+        <p><img src="../Resources/Images/product-settings-customize-headings.png" alt="Les paramètres Polices et En-têtes." /></p>
+        <h3>Formulaires personnalisés</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Un nouveau paramètre, <b>Formulaires personnalisés</b> , est désormais disponible dans la boîte de dialogue Paramètres du produit. Vous pouvez ainsi remplacer les pages par défaut des fonctionnalités suivantes par des formulaires personnalisés :</p>
+        <ul>
+            <li>
+                <p>Page sur les risques</p>
+            </li>
+            <li>
+                <p>Page des contrôles</p>
+            </li>
+            <li>
+                <p>Document de matérialité</p>
+            </li>
+            <li>
+                <p>Résumé des anomalies</p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="Set-up-custom-forms.htm">Développer des formulaires personnalisés.</a></p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2021-03.</p>
+        <h3>Outils de révision améliorés dans les listes de contrôle</h3>
+        <p>Vous pouvez désormais utiliser les outils de révision pour suivre les modifications apportées aux listes de contrôle après que les réviseurs les ont approuvées.</p>
+        <p>Si l&apos;option <b>Modifié depuis la dernière révision</b> est activée dans la page <b>Documents</b> et que les utilisateurs ouvrent une liste de contrôle qui a été modifiée après la signature du réviseur, la boîte de dialogue Outils de révision s&apos;ouvre automatiquement et les modifications apportées depuis la dernière révision s&apos;affichent dans la liste de contrôle.</p>
+        <p class="note"><b>Remarque :</b> Si l&apos;option <b>Modifié depuis la dernière révision</b> est désactivée dans la page <b>Documents</b> , les utilisateurs doivent activer manuellement les outils de révision dans la liste de contrôle pour afficher les modifications apportées depuis la dernière révision.</p>
+        <p>Les utilisateurs peuvent choisir d&apos;afficher les modifications apportées depuis la création de l&apos;engagement en utilisant le menu déroulant.</p>
+        <p><img src="../Resources/Images/checklist-review-tools-dropdown.png" style="width: 395px;height: 593px;" alt="Le menu déroulant Outils de révision." /></p>
+        <p>Lorsque les utilisateurs désactivent la notification <b>Modifié depuis la dernière révision</b> dans la liste de contrôle ou dans la page <b>Documents</b> , l&apos;option <b>Modifications depuis la dernière révision</b> n&apos;est plus disponible dans les outils de révision.</p>
+        <p>Un message de confirmation s&apos;affiche également pour indiquer aux utilisateurs que l&apos;effacement des notifications supprime définitivement les informations relatives aux modifications apportées depuis la dernière révision.</p>
+        <p>Les ajouts et mises à jour suivants sont également disponibles pour les outils d&apos;examen des listes de contrôle :</p>
+        <ul>
+            <li>
+                <p>Les outils d&apos;examen de la <b>visibilité</b>  <b>Ajouté</b> et <b>Remplacé</b> sont remplacés par :</p>
+                <ul>
+                    <li>
+                        <p><b>Contenu prédéfini ajouté</b> - Marque le contenu qui a été manuellement rendu visible par les membres du personnel.</p>
+                    </li>
+                    <li>
+                        <p><b>Ajout de contenu créé par l&apos;engagement</b> - Marque le contenu créé par les membres du personnel</p>
+                    </li>
+                    <li>
+                        <p><b>Remplacé pour exclure</b> - Marque le contenu qui a été manuellement forcé à être caché par les membres du personnel.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Un nouvel outil d&apos;examen <b>supprimé</b> est désormais disponible. Il marque le contenu qui a été ajouté par les membres du personnel avant la révision et qui a été supprimé après la révision. Notez que cet outil de révision n&apos;est disponible que lorsque vous utilisez l&apos;option <b>Modifications depuis la dernière révision.</b></p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Travailler avec les outils de révision.</a></p>
+        <h3>Vider les colonnes de saisie dans des tableaux dynamiques</h3>
+        <p>Les colonnes d&apos; <b>entrée</b> vides dans les tableaux dynamiques sont désormais automatiquement exclues lors de l&apos;impression des états financiers. Lorsque vous consultez les états financiers d&apos;un fichier de mission, les en-têtes des colonnes d&apos; <b>entrée</b> vides s&apos;affichent en gris.</p>
+        <p>Notez qu&apos;une colonne est considérée comme vide si ses cellules sont vides ou ont des valeurs nulles.</p>
+        <p><img src="../Resources/Images/dynamic-table-empty-input-column.png" alt="Un tableau dynamique avec une colonne Entrée vide." /></p>
+        <h3>Fonctionnalités de recherche améliorées</h3>
+        <p>La présentation de la requête comporte désormais des boutons disponibles au bas de chaque question. Les clients peuvent sélectionner le bouton <b>Soumettre la réponse</b> pour soumettre leurs réponses à chaque question. Une fois qu&apos;ils l&apos;ont fait, le bouton change pour indiquer qu&apos;une réponse a été envoyée.</p>
+        <p>Le bouton <b>Soumettre la réponse</b> est également à votre disposition pour que vous puissiez soumettre des réponses au nom des clients qui ont fourni des réponses en dehors de la requête.</p>
+        <p><img src="../Resources/Images/query-submit-response.png" style="width: 557px;height: 375px;" alt="Le bouton Soumettre la réponse." /></p>
+        <p>Lorsque les membres du personnel examinent les réponses à la requête, ils peuvent utiliser les boutons pour <b>accepter</b> ou <b>renvoyer</b> chaque réponse. Le statut de chaque question est désormais affiché en haut à droite de la question.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Collaboration entre le personnel et les contacts (Requêtes).</a></p>
+        <p><img src="../Resources/Images/query-return-accept-buttons.png" style="width: 551px;height: 457px;" alt="Les boutons &quot;Retour&quot; et &quot;Accepter&quot; s&apos;affichent en bas de la question, tandis que l&apos;état de la requête apparaît dans le coin supérieur droit." /></p>
+        <h3>Modifier et supprimer les commentaires dans les requêtes</h3>
+        <p>Les utilisateurs peuvent désormais modifier et supprimer leurs commentaires dans la nouvelle présentation de la requête.</p>
+        <p><img src="../Resources/Images/query-comments-edit-delete.png" alt="Les options de modification et de suppression des commentaires de la requête." /></p>
+        <p>Les horodatages des commentaires modifiés et supprimés s&apos;affichent dans la zone Commentaires. Le terme &quot; <i>supprimé</i> &quot; s&apos;affiche pour un commentaire supprimé avec l&apos;horodatage. The timestamps and deleted comments are not visible to contacts.</p>
+        <p>Les commentaires ne peuvent pas être modifiés ou supprimés si la requête est marquée comme complète ou annulée</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Collaboration entre le personnel et les contacts (Requêtes).</a></p>
+        <h3>Détails de la question</h3>
+        <p>La zone de commentaires dans les requêtes affiche désormais l&apos;historique de chaque question. L&apos;historique de la question de la requête comprend l&apos;horodatage et le nom d&apos;utilisateur pour les actions suivantes :</p>
+        <ul>
+            <li>
+                <p>La demande est envoyée au contact</p>
+            </li>
+            <li>
+                <p>Contact répond à la question</p>
+            </li>
+            <li>
+                <p>Le contact marque la question comme répondue</p>
+            </li>
+            <li>
+                <p>La réponse est acceptée</p>
+            </li>
+            <li>
+                <p>La réponse est rejetée</p>
+            </li>
+        </ul>
+        <p>Ces informations sont également incluses dans l&apos;archive de l&apos;engagement sauvegardée lorsque vous utilisez l&apos;option <b>Télécharger la copie de référence.</b> Notez que l&apos;historique des questions n&apos;est pas disponible pour les contacts.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Collaboration entre le personnel et les contacts (Requêtes).</a></p>
+        <p><img src="../Resources/Images/query-history.png" style="width: 557px;height: 358px;" alt="Paramètres de la question de requête." /></p>
+        <h3>Module sur les risques</h3>
+        <p>Un nouveau filtre <b>Signoffs</b> est désormais disponible dans le nouveau module de risque - à condition que le paramètre Signoffs de risque individuel soit activé dans le module. Le filtre comprend trois options :</p>
+        <ul>
+            <li>
+                <p><b>Non signé</b> - indique le nombre de risques qui n&apos;ont pas été signés par le préparateur ou le réviseur (ou les réviseurs si la fonction de deuxième réviseur est activée dans le produit).</p>
+            </li>
+            <li>
+                <p><b>Préparé</b> - indique le nombre de risques approuvés par le préparateur de la mission.</p>
+            </li>
+            <li>
+                <p><b>Révisé</b> - indique le nombre de risques approuvés par le réviseur de la mission (ou les réviseurs si la fonction de deuxième réviseur est activée dans le produit).</p>
+                <p>Notez que le filtre <b>révisé</b> ne prend pas en charge les nouveaux rôles et schémas d&apos;approbation. Il sera pris en charge dans une prochaine version.</p>
+            </li>
+        </ul>
+        <h3>Personnaliser les paramètres de format</h3>
+        <p>Vous pouvez désormais modifier les paramètres de produit par défaut pour les paramètres de format suivants dans un engagement :</p>
+        <ul>
+            <li>
+                <p>Monnaie</p>
+            </li>
+            <li>
+                <p>Format de la date</p>
+            </li>
+            <li>
+                <p>Chiffres</p>
+            </li>
+            <li>
+                <p>Unité de mesure</p>
+            </li>
+        </ul>
+        <p>Les sélections effectuées par les utilisateurs sont conservées lorsque l&apos;engagement est reporté.</p>
+        <p>Personnaliser les options d&apos;affichage, le formatage et d&apos;autres paramètres pour votre modèle d&apos;entreprise</p>
+        <h3>Glisser-déposer des documents dans la nouvelle page Documents</h3>
+        <p>Vous pouvez désormais glisser-déposer des documents externes, tels que des PDF, des fichiers Word et des fichiers Excel, depuis votre bureau vers des dossiers et des espaces réservés dans la nouvelle page <b>Documents.</b>  Notez qu&apos;il n&apos;est actuellement pas possible de glisser-déposer des documents de votre bureau dans les phases.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm">Gérer les documents d&apos;engagement</a>.</p>
+        <h3>Transactions</h3>
+        <p>Les menus déroulants <b>Colonnes</b> et <b>Filtres</b> de l&apos;onglet <b>Transactions</b> de la page <b>Données</b> ont fait l&apos;objet de quelques ajouts et mises à jour :</p>
+        <ul>
+            <li>
+                <p>Une nouvelle colonne de sélection <b>Numéro de document</b> est ajoutée dans le menu déroulant <b>Colonnes</b> .</p>
+            </li>
+            <li>
+                <p>La sélection et le filtre de la colonne <b>Source</b> sont renommés <b>Type de document.</b></p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/transactions-columns.png" style="width: 322px;height: 404px;" alt="Le menu déroulant Colonnes." /></p>
+        <h3>Remplacer les documents externes</h3>
+        <p>Les utilisateurs peuvent désormais remplacer des documents externes. Ils peuvent soit sélectionner <b>Plus d&apos;actions</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) | <b>Remplacer</b> , soit glisser-déposer un nouveau document sur l&apos;ancien pour le remplacer. Lorsque les utilisateurs remplacent un document, ils peuvent choisir de supprimer ou de conserver les signatures préexistantes.</p>
+        <p class="note"><b>Remarque :</b> Le versionnage des documents n&apos;est pas pris en charge (aucun historique des versions n&apos;est conservé).</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm">Gérer les documents d&apos;engagement</a>.</p>
+        <h3>Re-import trial balance data</h3>
+        <p>L&apos;option <b>Réimporter à partir d&apos;une source différente</b> est désormais disponible dans la page <b>Données</b> afin que vous puissiez sélectionner une source différente lors de la réimportation des données de la balance de vérification.</p>
+        <h2>Corrections</h2>
+        <p>La liste suivante contient une brève description des problèmes qui ont été résolus dans cette version.</p>
+        <ul>
+            <li>
+                <p>Problèmes de traduction.</p>
+            </li>
+            <li>
+                <p>Problèmes d&apos;interface utilisateur liés au panneau Documents et à l&apos;espacement dans les pages <b>Données</b> et <b>Risques</b> .</p>
+            </li>
+            <li>
+                <p>Dans les listes de contrôle, les utilisateurs peuvent modifier l&apos;onglet <b>Analyse</b> même si l&apos;engagement est verrouillé.</p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Exemple d&apos;exportation et le fichier CSV exporté affichent toutes les transactions en dollars ($) au lieu de la devise locale.</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can add general ledger accounts and specify tax and billing defaults." />
+    </head>
+    <body>
+        <h1>Paramétrer les comptes du grand livre général</h1>
+        <p>Dans les Paramètres, vous pouvez créer et affecter des comptes de grand livre (GL) pour suivre les soldes de votre organisation pour le Temps et la Facturation.</p>
+        <h2><a name="Adding"></a>Adding GL accounts</h2><MadCap:snippetBlock src="../../Resources/Snippets/note-general-ledger-enabled.flsnp" /><p>Bien que Cloud soit livré avec un ensemble prédéfini de comptes GL, vous pouvez ajouter de nouveaux comptes en fonction des besoins de votre organisation. Par exemple, supposons que vous souhaitiez que les utilisateurs puissent facturer leurs frais de bureau. Dans ce cas, vous devez créer un compte GL spécifique pour les frais de bureau.</p>
+        <p><b>Pour ajouter un compte GL :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur des paramètres</i> ou des droits équivalents.</p>
+            </li>
+            <li>
+                <p>Assurez-vous d&apos;avoir sélectionné <b>Activer le grand livre</b> dans <b>Paramètres | Temps | Général | Paramètres de temps et de dépenses.</b></p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Temps</b> et, dans la section Comptes, sélectionnez <b>Plan comptable.</b></p>
+                <p><img style="border:1px solid #3f66a3" src="../../Resources/Images/Firm-settings-chart-of-accounts-630x570.png" alt="La section Plan comptable de la page Paramètres." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau</b>.</p>
+                <p><img src="../../Resources/Images/Firm-settings-new-GL-account-630x393.png" alt="La boîte de dialogue Nouveau compte GL dans la page Plan comptable" /></p>
+            </li>
+            <li>
+                <p>Complétez les champs et sélectionnez <b>Enregistrer.</b> Le champ <b>Numéro de compte</b> est obligatoire.</p>
+            </li>
+        </ol>
+        <p>The new account is added to the chart of accounts.</p>
+        <h2><a name="Setting"></a>Pour définir les comptes fiscaux :</h2>
+        <p>Le nuage vous permet de spécifier des comptes fiscaux <b>primaires</b> et <b>secondaires</b> . Vous pouvez définir chaque taxe et les affecter à des comptes GL existants.</p>
+        <p><b>Pour définir les comptes fiscaux :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des droits équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Temps</b> et, sous Facture, sélectionnez <b>Taxe</b>.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-tax-631x580.png" alt="La section Taxe de la page Paramètres." /></p>
+            </li>
+            <li>
+                <p>Remplir les champs sous l&apos; <b>impôt principal</b> (et, le cas échéant, l&apos; <b>impôt secondaire</b>).</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-tax-fields-630x404.png" alt="Remplir les champs des sections Taxe principale et Taxe secondaire" /></p>
+            </li>
+            <li>
+                <p>Si vous avez activé le grand livre, sélectionnez un <b>compte GL</b> à associer à chaque taxe modifiée.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b> pour appliquer vos modifications.</p>
+            </li>
+        </ol>
+        <p>Les comptes fiscaux de votre organisation ont été définis.</p>
+        <h2><a name="Setting2"></a>Pour définir les comptes par défaut :</h2><MadCap:snippetBlock src="../../Resources/Snippets/note-general-ledger-enabled.flsnp" /><p>Vous pouvez définir des comptes généraux par défaut pour les <b>créances</b>, les <b>frais</b>et les <b>travaux en cours</b>. Si ces valeurs par défaut sont sélectionnées, les utilisateurs pourront produire des factures sans avoir à attribuer eux-mêmes des comptes GL.</p>
+        <p>Pour que votre personnel puisse utiliser l&apos;application Facturation du temps, il faut qu&apos;une valeur par défaut soit définie pour les créances.</p>
+        <p><b>Pour définir les comptes par défaut :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des droits équivalents.</p>
+            </li>
+            <li>
+                <p>Assurez-vous d&apos;avoir sélectionné <b>Activer le grand livre</b> dans <b>Paramètres | Temps | Général | Paramètres de temps et de dépenses.</b></p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Temps</b> et, sous Comptes, sélectionnez <b>Comptes par défaut.</b></p>
+                <p><img style="border:1px solid #3f66a3" src="../../Resources/Images/Firm-settings-default-accounts-630x585.png" alt="La section Comptes par défaut de la page Paramètres." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez le <b>compte GL</b> approprié pour chaque catégorie.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b> pour appliquer vos modifications.</p>
+            </li>
+        </ol>
+        <p>Vous avez mis à jour les comptes par défaut. Les nouvelles écritures de facturation de ce type seront affectées par défaut à ces comptes.</p>
+    </body>
+</html>

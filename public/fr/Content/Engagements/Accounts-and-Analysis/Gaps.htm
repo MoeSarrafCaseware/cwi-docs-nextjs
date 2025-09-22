@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Trous</h1>
+        <p>Cette analyse des trous repère les transactions manquantes dans une certaine séquence de transactions.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Des paramètres du système mal configurés pouvant nécessiter une amélioration et une évaluation plus poussée</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Les écritures de journal à la clôture de l&apos;exercice sont souvent reportées au moyen d&apos;une séquence de numérotation spéciale; l&apos;auditeur peut déterminer cette séquence et générer une liste aux fins d&apos;examen</p>
+            </li>
+            <li>
+                <p>Les transactions manquantes susceptibles d&apos;être annulées</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <p><b>Champ principal</b> – Le champ numérique, de date ou de caractères qui sera utilisé comme champ principal pour l&apos;analyse des trous.</p>
+        <h2>Paramètres</h2>
+        <p>Les paramètres suivants doivent être définis pour exécuter ce test :</p>
+        <ul>
+            <li>
+                <p><b>Plage inférieure</b> – Sélectionnez le point de départ de l&apos;analyse des trous. Il s&apos;agit généralement de la première transaction, mais il se peut que ce ne soit pas le cas s&apos;il manque des transactions au début.</p>
+            </li>
+            <li>
+                <p><b>Plage supérieure</b> – Sélectionnez le point final de l&apos;analyse des trous. Il s&apos;agit généralement de la dernière transaction, mais il se peut que ce ne soit pas le cas s&apos;il manque des transactions à la fin.</p>
+            </li>
+            <li>
+                <p><b>Incrément</b> – Saisissez l&apos;incrément attendu pour le champ analysé. En général, l&apos;incrément est de un.</p>
+            </li>
+            <li>
+                <p><b>Exclure les jours fériés</b> – Sélectionnez s&apos;il faut inclure ou non les jours fériés dans les tests où le champ analysé est un champ de date.</p>
+            </li>
+            <li>
+                <p><b>Sélectionner les jours fériés</b> – Si vous avez choisi d&apos;exclure les jours fériés, indiquez les dates qui sont des jours fériés.</p>
+            </li>
+            <li>
+                <p><b>Exclure les week-ends</b> – Sélectionnez s&apos;il faut inclure ou non les week-ends dans les tests où le champ analysé est un champ de date.</p>
+            </li>
+            <li>
+                <p><b>Masque</b> – Si le champ analysé est un champ de caractères, entrez un masque pour indiquer quelle partie contient la partie numérique à utiliser pour la détection des trous. Par exemple, si vous utilisez un champ de facture au format ABC123456, le masque sera CCCNNNNNN, N représentant la partie numérique du champ. Seule la partie numérique est analysée pour les trous.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Trous dans les dates</b> – Recherchez les dates pour lesquelles il n&apos;y a pas de transactions alors qu&apos;elles sont attendues sur la base des paramètres sélectionnés.</p>
+            </li>
+            <li>
+                <p><b>Trous dans les numéros de documents</b> – Recherchez les trous dans les listes numériques, comme les numéros de chèques manquants.</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique des trous, il faut réaliser les étapes suivantes pour exécuter le test :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un champ a été sélectionné pour l&apos;analyse de base. Ces champs doivent être des champs numériques, de date ou de caractères. Ce test analytique ne fonctionne pas pour les champs d’heure.</p>
+            </li>
+            <li>
+                <p>Classez la base de données par ordre croissant en fonction du champ Trou.</p>
+            </li>
+            <li>
+                <p>L&apos;analyse des trous sera effectuée différemment selon le type de champ :</p>
+                <ul>
+                    <li>
+                        <p><b>Numérique</b> – Permet d&apos;obtenir les points de départ et d&apos;arrivée (plage de trou) ainsi que l&apos;incrément. Les valeurs par défaut doivent être la plus petite et la plus grande, et la valeur par défaut de l&apos;incrément est 1. L’utilisateur peut modifier cette valeur. Créez une liste de tous les trous qui se trouvent dans la plage et dans l’incrément sélectionnés.</p>
+                        <p class="note"><b>Remarque :</b> Remarque : Si la colonne contient des valeurs non entières, elles sont arrondies à la décimale la plus proche.</p>
+                    </li>
+                    <li>
+                        <p><b>Date</b> – Obtenir les dates les plus anciennes et les plus récentes saisies par l&apos;utilisateur. L&apos;incrément par défaut est d&apos;un jour. Ce test permet également à l&apos;utilisateur d&apos;exclure les week-ends et les jours fériés de la détection des trous.</p>
+                    </li>
+                    <li>
+                        <p><b>Caractère</b> – Obtenir le masque pour indiquer quelles parties de la valeur du champ sont les parties numériques qui seront soumises à la détection des trous.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Il y a deux ensembles de résultats. Le premier ensemble énumère le trou de début et de fin et le nombre d&apos;éléments manquants, et le deuxième ensemble énumère les éléments manquants.</p>
+            </li>
+        </ol>
+    </body>
+</html>

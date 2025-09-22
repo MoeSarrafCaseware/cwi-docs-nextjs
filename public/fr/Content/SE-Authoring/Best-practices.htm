@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Meilleures pratiques</h1>
+        <p>La manière dont vous rédigez vos états financiers a une incidence sur les performances du document, notamment sur le temps de chargement et d&apos;affichage d&apos;une zone sélectionnée. Il est important que vous planifiez la manière dont vous ajouterez et mettrez en place le contenu.</p>
+        <p>Pour une expérience optimale lors de l&apos;édition et de l&apos;utilisation des états financiers, tenez compte des conseils suivants lors de la configuration du contenu.</p>
+        <ul>
+            <li>
+                <p>Une zone comportant moins de logique de visibilité se charge et fonctionne plus rapidement qu&apos;une zone comportant de nombreuses règles de visibilité.</p>
+                <p>Au lieu d&apos;avoir plusieurs éléments de contenu pour lesquels les mêmes règles de visibilité sont définies pour chaque élément, regroupez les éléments dans une zone et définissez la logique de visibilité pour cette zone.</p>
+            </li>
+            <li>
+                <p>Une zone contenant moins d&apos;éléments se charge et fonctionne plus rapidement qu&apos;une zone contenant beaucoup d&apos;éléments.</p>
+                <p>Au lieu d&apos;avoir trop d&apos;éléments de contenu dans une zone, envisagez de diviser la zone en plusieurs zones et de regrouper les éléments qui partagent un contexte similaire. Par exemple, les éléments ayant la même logique de visibilité.</p>
+            </li>
+        </ul>
+        <h4>Exemple</h4>
+        <p>Configuration du contenu - version 1 :</p>
+        <p>Lorsque vous configurez un contenu en utilisant la méthode suivante, la zone se charge lentement et fonctionne mal.</p>
+        <ul>
+            <li>
+                <p>Zone</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Contenu 1 (visible lorsque la réponse à la liste de contrôle est un engagement d&apos;examen)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 3 (visible lorsque la réponse à la liste de contrôle est un engagement d&apos;examen)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 4 (toujours visible)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 5 (visible lorsque la réponse à la liste de contrôle est un engagement de compilation)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 6 (visible lorsque la réponse à la liste de contrôle est un engagement de compilation)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 7 (visible lorsque la réponse à la liste de contrôle est un engagement de compilation)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 2 (visible lorsque la réponse à la liste de contrôle est un engagement d&apos;examen)</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Configuration du contenu - version 2 :</p>
+        <p>Lorsque vous configurez le contenu à l&apos;aide de la méthode suivante, chaque zone se charge beaucoup plus rapidement et fonctionne mieux.</p>
+        <ul>
+            <li>
+                <p>Zone 1 (visible lorsque la réponse à la liste de contrôle est un engagement d&apos;examen)</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Contenu 1 (toujours visible)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 2 (toujours visible)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 3 (toujours visible)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Zone 2 (toujours visible)</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Contenu 4 (toujours visible)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Zone 3 (visible lorsque la réponse à la liste de contrôle est l&apos;engagement de compilation)</p>
+                <ul>
+                    <li>
+                        <p>Contenu 5 (toujours visible)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 6 (toujours visible)</p>
+                    </li>
+                    <li>
+                        <p>Contenu 7 (toujours visible)</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

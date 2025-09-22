@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Liaison des données et mises à jour en temps réel dans Caseware Cloud Connector</h1><MadCap:snippetBlock src="../../Resources/Snippets/cloud-connector-note.flsnp" /><p>Si une valeur de données change dans l&apos;engagement, le changement est automatiquement reflété dans le fichier Excel.</p>
+        <p class="note"><b>Remarque :</b> Si vous souhaitez partager une copie du fichier Excel actuel et que vous ne voulez pas que les données soient mises à jour au fur et à mesure que le fichier de mission est mis à jour, vous pouvez utiliser l&apos;option <b>Dupliquer et dissocier</b> . Cette opération permet de créer une copie des feuilles de calcul, sans les formules, que vous pouvez utiliser pour sauvegarder des informations ou les envoyer à des clients. Notez que les feuilles protégées ne peuvent pas être dupliquées.</p>
+        <p><b>Exemple</b>:</p>
+        <ol>
+            <li>
+                <p>Vous insérez le nom du groupe de balance comptable <i>Cash</i> dans le fichier Excel en utilisant le complément <b>Caseware Cloud Connector</b> .</p>
+            </li>
+            <li>
+                <p>Pendant que vous travaillez sur votre engagement, vous modifiez le nom du groupe en <i>Trésorerie et équivalents de trésorerie.</i></p>
+            </li>
+            <li>
+                <p>Vous remarquerez que les <i>liquidités</i> ont été automatiquement transformées en <i>liquidités et que les équivalents de liquidités</i> s&apos;affichent automatiquement dans le fichier Excel.</p>
+            </li>
+        </ol>
+        <p>Cependant, si vous modifiez un numéro de groupe dans votre engagement, le changement n&apos;est pas automatiquement reflété dans les données que vous avez insérées dans le fichier Excel. Vous devez réinsérer les données dans le fichier Excel.</p>
+        <p><b>Exemple :</b></p>
+        <ol>
+            <li>
+                <p>Vous insérez le nom du groupe de balance de vérification <i>Cash</i> dans le fichier Excel en utilisant le complément <b>Caseware Cloud Connector</b> .</p>
+            </li>
+            <li>
+                <p>Lorsque vous travaillez sur votre engagement, vous modifiez le numéro de groupe pour <i>Cash</i>.</p>
+            </li>
+            <li>
+                <p>Vous remarquerez que la cellule affiche maintenant un nom incorrect ou aucune valeur.</p>
+            </li>
+            <p>Pour y remédier, supprimez la valeur existante et réinsérez le nom du groupe de la balance de vérification <i>&quot;Liquidités&quot;</i> dans le fichier Excel.</p>
+        </ol>
+    </body>
+</html>

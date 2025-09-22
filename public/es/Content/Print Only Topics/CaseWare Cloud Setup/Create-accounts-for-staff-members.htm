@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Create accounts for staff members</h1>
+        <p>Once you create entities for each of your clients, grant Cloud access to other staff members in your firm. You can create a new account for each staff member who needs to collaborate on your engagements. After you create accounts for your staff members, you can assign them security roles to determine the level of access they have to your firm. The following table briefly describes the roles you can assign your staff members. For more details, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a>.</p>
+        <table style="width: 100%;">
+            <col style="width: 237px;" />
+            <col style="width: 237px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td><b>Funciones</b></td>
+                    <td style="font-weight: bold;">Ambito:</td>
+                    <td><b>Descripción</b></td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>System-wide</td>
+                    <td>
+                        <p>Assign the Admin role to Staff responsible for managing the entire site. Admins can access all content and perform any action. Admins must still be assigned a license to use apps that require one.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Configuración Admin</td>
+                    <td>System-wide</td>
+                    <td>
+                        <p>Assign the Settings Admin role to staff responsible for Firm settings and template authoring.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personal Admin</td>
+                    <td>System-wide</td>
+                    <td>
+                        <p>Assign the Staff Admin role to staff responsible for managing staff. Staff Admins can add, view, edit, and delete all staff in the system.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entidades Admin</td>
+                    <td>System-wide</td>
+                    <td>
+                        <p>Assign the Entities Admin role to staff responsible for adding entities and contacts. Entities Admins can add, view, edit, and delete all entities and contacts in the system, and all content within entities.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Propietario</td>
+                    <td>System-wide, Entities and content within them</td>
+                    <td>Owners can view, edit, delete, and grant others roles on content where they have this role.</td>
+                </tr>
+                <tr>
+                    <td>Editor</td>
+                    <td>System-wide, Entities and content within them</td>
+                    <td>Editors can view and edit content where they have this role.</td>
+                </tr>
+                <tr>
+                    <td>Visor</td>
+                    <td>System-wide, Entities and content within them</td>
+                    <td>Viewers can view content where they have this role.</td>
+                </tr>
+                <tr>
+                    <td>Entity Access</td>
+                    <td>System-wide, Entities and content within them</td>
+                    <td>
+                        <p>Granting the Entity Access role to a user enables the assignment of a security role on content and grants access to the entity summary and details.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Practice set</h2>
+        <p class="note"><b>Note:</b> To add accounts for staff members, you must have either the Admin or Staff Admin role.</p>
+        <ol>
+            <li>
+                <p>Create an Excel file containing your staff member information with <b>email</b>, <b>first-name</b> and <b>last-name</b> columns.</p>
+            </li>
+            <li>
+                <p>Guarde el archivo como <b>Ejercicio 8E</b>.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Staff</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New</b> and, under Import, select <b>Staff</b>.</p>
+            </li>
+            <li>
+                <p>In the first two checkboxes of the Import Staff dialog, choose how the import will handle existing users.</p>
+                <p class="note"><b>Note</b>: Select the second checkbox only if you are importing a complete staff or contacts list.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-Users-798x150.png" style="border:1px solid #3f66a3" alt="The first two options in the Import Staff dialog" /></p>
+            </li>
+            <li>
+                <p>Choose whether or not your text or CSV file contains a <b>header row</b> and what type of <b>delimiter</b> is used.</p>
+            </li>
+            <li>
+                <p>Select <b>Import from CSV</b> and browse to your Staff List.csv directory file then select <b>Next</b></p>
+            </li>
+            <li>
+                <p>Map the property that matches each column.</p>
+            </li>
+            <li>
+                <p>Select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>A confirmation dialog appears showing the number of users successfully added or modified.</p>
+        <p>After you import a user list, Cloud will automatically send them an email with a link to their login page. A record of this email can be found in <b>Settings | Email | Email Log</b>.</p>
+        <p>On the login screen, they will be asked to enter their email address and to enter and confirm a password.</p>
+    </body>
+</html>

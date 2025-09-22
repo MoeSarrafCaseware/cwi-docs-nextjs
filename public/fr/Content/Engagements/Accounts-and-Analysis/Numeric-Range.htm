@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Plage numérique</h1>
+        <p>Le test analytique Plage numérique repère les transactions à l&apos;intérieur d&apos;une fourchette de valeurs définie. Son objectif principal est de signaler les transactions de grande valeur, mais vous pouvez ajuster la configuration pour détecter les transactions qui se situent en dessous d&apos;un seuil défini ou dans des fourchettes de valeurs précises. Vous pouvez également choisir d&apos;utiliser des seuils en pourcentage au lieu de seuils numériques. Par exemple, vous pouvez configurer le test afin de repérer le pourcentage de transactions les plus élevées.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les transactions qui contiennent des estimations significatives</p>
+            </li>
+            <li>
+                <p>Les transactions complexes, irrégulières ou inhabituelles qui peuvent justifier une enquête approfondie</p>
+            </li>
+            <li>
+                <p>Les transactions importantes</p>
+            </li>
+            <li>
+                <p>Les transactions manquantes susceptibles d&apos;être annulées</p>
+            </li>
+            <li>
+                <p>Les problèmes d&apos;évaluation</p>
+            </li>
+            <li>
+                <p>Les transactions importantes au sein de la population</p>
+            </li>
+            <li>
+                <p>Les transactions de faible valeur ou de valeur nulle au sein de la population</p>
+            </li>
+            <li>
+                <p>Les transactions ou les soldes de valeur nulle</p>
+            </li>
+            <li>
+                <p>Une fourchette de valeurs, par exemple juste en dessous d&apos;un point de démarcation</p>
+            </li>
+            <li>
+                <p>Les comptes débiteurs avec opérations de crédit ou les comptes créditeurs avec opérations de débit</p>
+            </li>
+            <li>
+                <p>Les clients ayant des limites de crédit élevées</p>
+            </li>
+            <li>
+                <p>Les soldes de comptes clients dépassant un certain montant</p>
+            </li>
+            <li>
+                <p>Les soldes des comptes fournisseurs dépassant un certain montant</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Cette analyse utilise un champ numérique qui contient des montants ou des quantités. Vous pouvez sélectionner le champ à utiliser lorsque vous définissez les paramètres du test.</p>
+        <h2>Paramètres</h2>
+        <p>De nombreux paramètres doivent être définis pour exécuter le test :</p>
+        <ul>
+            <li>
+                <p><b>Sélectionner les champs</b> – Sélectionnez dans la liste un ou plusieurs champs numériques à utiliser pour effectuer le test.</p>
+            </li>
+            <li>
+                <p><b>Numérique ou pourcentage</b> – Sélectionnez s&apos;il faut effectuer le test en utilisant la valeur numérique des champs ou des valeurs en pourcentage. L&apos;option <b>Numérique</b> est sélectionnée par défaut. L&apos;option choisie ici détermine les autres paramètres de ce test.</p>
+            </li>
+        </ul>
+        <p>Si vous sélectionnez <b>Numérique</b>, effectuez des sélections pour les paramètres suivants :</p>
+        <ul>
+            <li>
+                <p><b>Seuil de valeur élevée</b> – Saisissez une valeur dans ce champ pour extraire toutes les transactions dont les montants sont supérieurs à cette valeur.</p>
+            </li>
+            <li>
+                <p><b>Seuil de faible valeur</b> – Saisissez une valeur dans ce champ pour extraire toutes les transactions dont les montants sont inférieurs à cette valeur.</p>
+            </li>
+            <li>
+                <p><b>Plages de valeurs</b> – Saisissez une ou plusieurs plages de valeurs pour extraire toutes les transactions dont les montants sont compris dans ces plages.</p>
+            </li>
+            <li>
+                <p><b>Valeurs exactes</b> – Saisissez une valeur exacte pour extraire toutes les transactions ayant cette valeur. Par exemple, vous pouvez utiliser ce paramètre pour extraire toutes les transactions de valeur zéro.</p>
+            </li>
+        </ul>
+        <p>Si vous sélectionnez <b>Pourcentage</b>, effectuez des sélections pour les paramètres suivants :</p>
+        <ul>
+            <li>
+                <p><b>Seuil de pourcentage élevé</b> – Saisissez un pourcentage dans ce champ pour extraire toutes les transactions dont le pourcentage est supérieur à cette valeur.</p>
+            </li>
+            <li>
+                <p><b>Seuil de faible pourcentage</b> – Saisissez un pourcentage dans ce champ pour extraire toutes les transactions dont le pourcentage est inférieur à cette valeur.</p>
+            </li>
+            <li>
+                <p><b>Plages de valeurs</b> – Saisissez une ou plusieurs plages de pourcentages pour extraire toutes les transactions dont les pourcentages sont compris dans ces plages.</p>
+            </li>
+            <li>
+                <p><b>Valeurs exactes</b> – Saisissez un pourcentage exact pour extraire toutes les transactions correspondant à ce pourcentage.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Plage de montants</b> – Relève les transactions dans une plage définie pour les champs de montants sur la base d&apos;une valeur numérique ou d&apos;un pourcentage.</p>
+            </li>
+            <li>
+                <p><b>Plage de remise</b> – Relève les transactions dans une plage définie pour les champs de remise sur la base d&apos;une valeur numérique ou d&apos;un pourcentage.</p>
+            </li>
+            <li>
+                <p><b>Plage de quantité</b> – Relève les transactions dans une plage définie pour les champs de quantité sur la base d&apos;une valeur numérique ou d&apos;un pourcentage.</p>
+            </li>
+            <li>
+                <p><b>Plage de jours d&apos;échéance</b> – Relève les transactions dans une plage définie pour les champs de jours d&apos;échéance sur la base d&apos;une valeur numérique ou d&apos;un pourcentage.</p>
+            </li>
+            <li>
+                <p><b>Plage numérique</b> – Relève les transactions dans une plage définie sur la base d&apos;une valeur numérique ou d&apos;un pourcentage.</p>
+            </li>
+            <li>
+                <p><b>Valeur monétaire élevée</b> – Relève les transactions dont le champ montant est supérieur ou égal à la valeur numérique définie.</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Plage numérique, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez que le champ sélectionné pour effectuer le test est numérique.</p>
+            </li>
+            <li>
+                <p>En fonction des paramètres sélectionnés par l&apos;utilisateur, déterminez le type d&apos;extraction du montant :</p>
+                <ul>
+                    <li>
+                        <p>Égal à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Supérieur à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Supérieur ou égal à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Inférieur à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Inférieur ou égal à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Pas égal à la valeur</p>
+                    </li>
+                    <li>
+                        <p>Une fourchette de valeurs</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Demandez à l&apos;utilisateur si l&apos;analyse est basée sur un pourcentage ou une valeur.</p>
+                <ul>
+                    <li>
+                        <p>Si une valeur est sélectionnée, elle est demandée à l&apos;utilisateur. Si l&apos;option est l&apos;extraction par plage, deux valeurs seront nécessaires.</p>
+                    </li>
+                    <li>
+                        <p>Si un pourcentage est sélectionné, le pourcentage est demandé à l&apos;utilisateur, et la valeur qu&apos;il représente est calculée. Cette valeur varie en fonction du type d&apos;extraction, par exemple 10 % pour des valeurs élevées donneront une valeur différente de 10 % pour des valeurs faibles. Si l&apos;option est l&apos;extraction par plage, deux valeurs seront nécessaires.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

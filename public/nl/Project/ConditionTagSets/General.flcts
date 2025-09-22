@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Name="Online"
+    BackgroundColor="#90ee90"
+    Comment="content that are exclusive to online builds (such as Download modals)" />
+  <ConditionTag
+    Comment="PDF content"
+    Name="PDF"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#a9a9a9"
+    Name="Ignore"
+    Comment="Deprecated content or temporarily hidden content" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="SE-Authoring"
+    Comment="Content specific for the SE Authoring online Help"
+    OriginalName="SE-Authoring" />
+  <ConditionTag
+    BackgroundColor="#ffd700"
+    Name="Translated"
+    Comment="Documents that exist in multiple languages within the project. For example, the privacy policy exists in English, Spanish, and French." />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="Cloud-Help"
+    Comment="topics in end-user help (Cloud help)" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="snippet-ignore"
+    Comment="hidden or temporarily removed snippet content"
+    OriginalName="snippet-ignore" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="Redirected"
+    Comment="Mark topics that have been replaced or removed"
+    OriginalName="Redirected" />
+  <ConditionTag
+    BackgroundColor="#00bfff"
+    Name="SE-Builder"
+    Comment="Content specific to SE Builder (reserved for future use)" />
+  <ConditionTag
+    BackgroundColor="#a20ce8"
+    Name="Not-in-TOC"
+    Comment="Topics that are linked to from Cloud but not in the TOC" />
+  <ConditionTag
+    BackgroundColor="#d2691e"
+    Name="DE-Ignore"
+    Comment="Content to hide in the German site." />
+  <ConditionTag
+    BackgroundColor="#00ff00"
+    Name="CA"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b4513"
+    Name="US"
+    Comment="" />
+</CatapultConditionTagSet>

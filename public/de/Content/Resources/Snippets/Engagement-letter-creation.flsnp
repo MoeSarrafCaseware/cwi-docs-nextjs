@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2>Text und Feldplatzhalter ersetzen</h2>
+        <p>Der Inhalt der Vorlage kann Platzhalter für einige Texte und Felder enthalten, die Sie durch spezifische Informationen zu Ihrem Engagement, Ihrem Unternehmen oder Ihrem Kunden ersetzen müssen.</p>
+        <p>Der <b>Platzhalter</b>-Indikator oben in der Dokumentennavigation zeigt Ihren Fortschritt bei den Platzhaltern an. Sie zeigt die Anzahl der Platzhalter, die noch nicht durch tatsächliche Informationen ersetzt wurden. Sie können auch den Indikator auswählen, um zum nächsten leeren Platzhalter zu navigieren.</p>
+        <p style="font-weight: bold;">So ersetzen Sie einen Textplatzhalter:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie den Textplatzhalter aus.</p>
+                <p class="tip"><b>Tipp:</b> Der blau hervorgehobene Text im Dokument ist ein Platzhalter.</p>
+            </li>
+            <li>
+                <p>Ersetzen Sie im Popup-Fenster <b>Textplatzhalter</b> den Platzhaltertext und wählen Sie <b>Speichern</b>.</p>
+                <p class="note"><b>Bitte beachten Sie</b>: Wenn Sie den Platzhaltertext nicht ändern möchten, müssen Sie den Platzhalter markieren und im Dialog Textplatzhalter die Option<b>Speichern</b> wählen, damit er aus der Zählung im <b>Platzhalter</b>-Indikator entfernt wird.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Um einen Feldplatzhalter zu ersetzen:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie den Feldplatzhalter aus.</p>
+                <p class="tip"><b>Tipp:</b> Die blauen Drop-down-Felder im Dokument sind Feldplatzhalter.</p>
+            </li>
+            <li>
+                <p>Wählen Sie einen Wert oder geben Sie ein Datum an, das im Platzhalterfeld angegeben ist.</p>
+            </li>
+        </ol>
+        <h2>Engagement-Glossarbegriff und dynamischen Text ändern</h2>
+        <p class="note"><b>Hinweis</b>: Sie können einen vorhandenen Glossarbegriff oder eine dynamische Textausgabe nur dann ändern, wenn die Überschreibungsoption in Ihrem Produkt aktiviert ist.</p>
+        <p>Ein Engagement-Glossar enthält Begriffe. Begriffe sind Wörter und Ausdrücke, die im gesamten Produkt wiederverwendet werden können. Wenn ein Begriff geändert wird, wird er überall geändert, wo der Autor ihn definiert hat.</p>
+        <p>Dynamische Textfelder ändern sich, wenn bestimmte Bedingungen erfüllt sind. Beantwortet der Kunde beispielsweise einen Vorgang in einer Checkliste mit „Ja“, so wird im dynamischen Textfeld „Einverstanden“ angezeigt.</p>
+        <p>Ihre Dokumente können Begriffe aus dem Glossar oder dynamische Textfelder enthalten. Je nach Produkt können Sie möglicherweise Glossarbegriffe und dynamische Textausgaben außer Kraft setzen.</p>
+        <p><b>To change an engagement glossary term or a dynamic text output:</b></p>
+        <ol>
+            <li>
+                <p>Wählen Sie den Textbereich des Dokuments aus, den Sie ändern möchten.</p>
+                <p>Grau hinterlegte Bereiche sind entweder Glossarbegriffe oder dynamische Textfelder.</p>
+            </li>
+            <li>
+                <p>Wählen Sie den Glossarbegriff oder den dynamischen Text, um den Dialog <b>Daten-Link</b> zu öffnen.</p>
+                <p>Wenn Sie einen Glossarbegriff auswählen, können Sie Informationen (<img src="../Images/icon-information-blue-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) auswählen, um zu sehen, wie oft dieser Begriff verwendet wird.</p>
+            </li>
+            <li>
+                <p>Ändern Sie <b>Ausgabe (Output)</b> wie gewünscht und wählen Sie <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p>Wenn die <b>Ausgabebedingung</b> erfüllt ist, ändert sich der Text an allen Stellen, an denen er im Engagement verwendet wird. Wird nach der Änderung eine andere Bedingung erfüllt, ändert sich die <b>Ausgabe (Output)</b> entsprechend dem konfigurierten Ausgabetext für diese Bedingung.</p>
+        <h2>Firmenlogo einfügen</h2>
+        <p>Sie können das Firmenlogo in einen beliebigen Textbereich oder in die Kopf- oder Fußzeile des Dokuments einfügen.</p>
+        <p style="font-weight: bold;">So fügen Sie das Firmenlogo ein:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie das Textfeld aus, in das Sie das Logo einfügen möchten.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Logo-Platzhalter einfügen</b> (<img src="../Images/icon-insert-logo.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in der Formatierungssymbolleiste.</p>
+            </li>
+            <p>Das Firmenlogo wird in das Textfeld eingefügt.</p>
+            <p>Wenn in der Firmenvorlage kein Logo vorhanden ist, wird ein Platzhalter mit einem Link zu Cloud angezeigt, damit Sie ein <a href="../../Engagements/Template-and-Authoring/Add-a-firm-logo-and-letterhead.htm">Logo hochladen</a> können.</p>
+        </ol>
+        <p class="note"><b>Bitte beachten Sie:</b> Sie können ein Firmenlogo nur in der Firmenvorlage hochladen. Um auf die Unternehmensvorlage zugreifen zu können, müssen Sie über die Rolle <b>Einstellungen-Administrator</b> oder gleichwertige Rechte verfügen. Weitere Informationen finden Sie in <a href="../../Setup/Security/Built-in-roles.htm">Vorgegebene Rollen</a> und <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Zugriffsrollen zuweisen</a>.</p>
+        <h2><a name="Add9"></a>Seitenumbruch hinzufügen</h2>
+        <p>Sie können an einer beliebigen Stelle des Dokuments einen Seitenumbruch einfügen, um manuell zu markieren, wo eine bestimmte Seite endet und eine neue Seite beginnt. Damit können Sie das Seitenlayout für den Druck steuern.</p>
+        <p>Um einen Seitenumbruch hinzuzufügen, wählen Sie <b>+Abschnitt hinzufügen | Seitenumbruch</b>. Es wird ein Seitenumbruch mit einem Standardtitel <b>Seitenumbruch</b> eingefügt. Sie können den Standardtitel auswählen, um ihn zu ändern. Beachten Sie, dass dieser Titel nicht zum Inhalt des Dokuments gehört.</p>
+        <p class="note"><b>Hinweis:</b> Sie können in einem leeren Gruppierungsbereich keinen Seitenumbruch einfügen. Sie müssen Textbereiche oder Führungsabschnitte hinzufügen.</p>
+        <p>Um einen Seitenumbruch zu löschen, wählen Sie <b>Einstellungen (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Löschen</b>.</p>
+        <h2><a name="Set2"></a>Einrichten der Druckeinstellungen</h2>
+        <p>Mit der Schaltfläche Drucken (<img src="../Icons/print-financial-statement-inline1.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) wird das Dokument in ein PDF-Format umgewandelt, das der Benutzer drucken oder speichern kann. Beachten Sie, dass die Leitfäden nie in der PDF-Datei enthalten sind.</p>
+        <p style="font-weight: bold;">Druckoptionen einrichten:</p>
+        <ol>
+            <li>
+                <p>Gehen Sie in die Dokumentennavigation und wählen anschließend <b>Weitere Aktionen (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Druckeinstellungen</b> für das Dokument.</p>
+            </li>
+            <p>Wenn Sie unterschiedliche Einstellungen für einen Seitenumbruch, einen Gruppenbereich oder das Inhaltsverzeichnis haben möchten, wählen Sie <b>Einstellungen (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Druckeinstellungen bearbeiten</b>.</p>
+            <li>
+                <p>Nehmen Sie die gewünschten Einstellungen für <b>Briefkopf</b>, <b>Seitengröße</b> und <b>Ränder</b> vor.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Querformat</b>, um die Seitenausrichtung zu ändern.</p>
+            </li>
+            <p>Der Standard ist <b>Hochformat</b>.</p>
+            <li>
+                <p>Deaktivieren Sie die Option <b>In Seitenzahlanzeige einschließen</b>, wenn Sie möchten, dass die Seitennummerierung nach der Seite mit dem <b>Inhaltsverzeichnis</b> beginnt.</p>
+            </li>
+        </ol>
+    </body>
+</html>

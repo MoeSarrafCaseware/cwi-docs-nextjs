@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Générer l&apos;URL de réponse (Okta)</h1>
+        <p>Okta utilise une URL de réponse pour rediriger les utilisateurs vers Cloud après qu&apos;ils se sont connectés avec Okta.</p>
+        <p><b>To generate the Reply URL:</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur des paramètres</i> ou des autorisations équivalentes.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page du fournisseur d&apos;identité, remplissez les champs suivants :</p>
+                <ul>
+                    <li>
+                        <p><b>Nom du fournisseur d&apos;identité:</b> Saisissez un nom significatif pour votre fournisseur d&apos;identité. Par exemple, Okta. Ce nom sera affiché à côté de l&apos;URL de votre réponse pour l&apos;identifier.</p>
+                        <p class="note"><b>Remarque :</b> Ce nom ne peut pas dépasser 32 caractères et ne peut contenir que des lettres, des chiffres, des traits de soulignement, des signes plus et moins.</p>
+                    </li>
+                    <li>
+                        <p><b>Point d&apos;arrivée des métadonnées du fournisseur d&apos;identité:</b> Collez le <b>point de terminaison des métadonnées</b> que vous avez <a href="Copy-the-metadata-URI.htm">copié précédemment dans un document texte</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>ID du client :</b> Collez l&apos; <b>identifiant de l&apos;application</b> que vous avez <a href="Generate-client-credentials.htm">copié précédemment dans un document texte</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Secret du client :</b> Collez le <b>Secret du Client</b> que vous avez <a href="Generate-client-credentials.htm">copié précédemment dans un document texte</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="La page des paramètres de l&apos;authentification unique." /></p>
+                <p>Sélectionnez <b>Enregistrer</b>. L&apos;URL de votre réponse s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le bouton <b>Copier dans le presse-papiers</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour copier l&apos;URL de votre réponse. Vous devez l&apos;ajouter à votre application dans Azure AD.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Utilisez le bouton Copier dans le presse-papiers pour copier l&apos;URL de votre réponse." /></p>
+            </li>
+        </ol>
+        <h2>Set your Reply URL in Okta</h2>
+        <p>Après avoir généré une URL de réponse, vous devrez l&apos;ajouter à Okta pour vous assurer que les utilisateurs peuvent se connecter avec succès.</p>
+        <p><b>Pour définir votre URL de réponse dans Azure :</b></p>
+        <ol>
+            <li>
+                <p>Connectez-vous au tableau de bord Okta de votre entreprise avec un compte <b>administrateur</b> .</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, développez le menu déroulant <b>Applications</b> et sélectionnez <b>Applications</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page Applications, sélectionnez le nom de votre intégration d&apos;applications.</p>
+                <p><img src="../../Resources/Images/okta-02.png" /></p>
+            </li>
+            <li>
+                <p>Sur la page d&apos;intégration de l&apos;application, sous l&apos;onglet <b>Général</b> , descendez jusqu&apos;au groupe <b>Paramètres généraux.</b> </p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Modifier</b>.</p>
+                <p><img src="../../Resources/Images/okta-08.png" /></p>
+            </li>
+            <li>
+                <p>Faites défiler la page jusqu&apos;à la section <b>Personnes.</b></p>
+            </li>
+            <li>
+                <p>À côté du champ <b>Sign-in redirect URIs</b> , sélectionnez <b>Add URI</b>.</p>
+            </li>
+            <li>
+                <p>Collez l&apos;URL de la réponse dans le champ.</p>
+                <p><img src="../../Resources/Images/okta-09.png" /></p>
+            </li>
+            <li>
+                <p>De plus, collez l&apos;URL de la réponse dans le champ <b>URI de connexion de l&apos;initiateur</b> . Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Test-your-single-sign-on-integration-Okta.htm">Tester l&apos;intégration de l&apos;authentification unique</a></p>
+    </body>
+</html>

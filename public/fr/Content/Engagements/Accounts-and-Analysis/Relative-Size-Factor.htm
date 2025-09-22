@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Facteur de la taille relative</h1>
+        <p>Le test d’analyse du facteur de la taille relative repère les exceptions lorsque le montant le plus important d&apos;un sous-ensemble dans une clé donnée se trouve en dehors de la norme de ce sous-ensemble. Une clé est un champ spécifique ou une combinaison de champs utilisé pour regrouper les données en sous-ensembles à des fins d&apos;analyse.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Observations aberrantes ou modèles inhabituels</p>
+            </li>
+            <li>
+                <p>Transactions qui s&apos;écartent sensiblement de la norme</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs ci-dessous sont utilisés pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ <b>ID de l’écriture</b> pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champ numérique</b> – Le champ utilisé pour calculer le facteur de taille relative (FTR).</p>
+            </li>
+            <li>
+                <p><b>N’importe quel champ</b> – Un ou plusieurs champs à utiliser pour créer les sous-ensembles à partir desquels le FTR est généré.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Les paramètres suivants doivent être définis pour exécuter ce test :</p>
+        <ul>
+            <li>
+                <p><b>FTR</b> – Saisissez le multiple entre le montant le plus élevé et le deuxième montant le plus élevé du sous-ensemble. Par exemple, si le FTR est fixé à deux, le montant le plus élevé devra être deux fois plus important que le deuxième pour être sélectionné.</p>
+            </li>
+            <li>
+                <p><b>Ignorer les petits montants</b> – Sélectionnez s’il faut exclure ou non les petits montants.</p>
+            </li>
+            <li>
+                <p><b>Petit montant</b> – Si vous avez choisi d&apos;ignorer les petits montants, entrez la valeur qui serait considérée comme la valeur minimale à inclure dans le test. Par exemple, si vous entrez 100 $, toutes les transactions inférieures à 100 $ seront exclues de l&apos;analyse.</p>
+            </li>
+            <li>
+                <p><b>Valeurs positives ou négatives</b> – Sélectionnez si le test doit être effectué sur des valeurs positives ou négatives.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p>La seule configuration disponible pour ce test est le <b>facteur de taille relative.</b> Ce test analytique repère les exceptions lorsque le montant le plus important d&apos;un sous-ensemble dans une clé donnée se trouve en dehors de la norme pour ce sous-ensemble.</p>
+        <h2>Spécifications techniques</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Ces spécifications techniques sont basées sur la sélection de nombres positifs. Pour les nombres négatifs, le plus petit nombre est considéré comme le plus grand pour les étapes suivantes.</p>
+        <p>Lorsque vous exécutez le test analytique des mots-clés, il faut réaliser les étapes suivantes :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un champ de montant a été sélectionné.</p>
+            </li>
+            <li>
+                <p>Vérifiez un ou plusieurs champs (à l&apos;exception du montant) qui seront utilisés pour la création des sous-ensembles.</p>
+            </li>
+            <li>
+                <p>Totalisez le fichier sur la base des champs qui ont été sélectionnés pour le sous-ensemble, ces champs doivent être dans l&apos;ordre de sélection, la totalisation doit inclure le nombre d&apos;enregistrements par sous-ensemble. Lors de la sélection, l&apos;analyse porte seulement sur des valeurs négatives ou positives en fonction de l’indicateur du type de valeurs sur lesquelles l&apos;analyse doit être effectuée.</p>
+            </li>
+            <li>
+                <p>Extrayez tous les enregistrements dont le nombre est supérieur à 1 (exclut tous les sous-ensembles dans lesquels il n&apos;y a qu&apos;une seule transaction; pour cette analyse, vous avez besoin de deux transactions ou plus par sous-ensemble).</p>
+            </li>
+            <li>
+                <p>Reliez le fichier créé à l&apos;étape 6 au fichier d&apos;origine par les champs du sous-ensemble sélectionnés. Le fichier original doit également être filtré sur le champ du montant en fonction de l&apos;indicateur positif ou négatif. Si l&apos;indicateur est positif, le filtre doit être montant &gt; 0, et si l&apos;indicateur est négatif, il doit être montant &lt; 0. Cette étape consiste à créer un fichier de toutes les transactions qui feront partie de l&apos;analyse FTR.</p>
+            </li>
+            <li>
+                <p>Extrayez les deux premières transitions pour chaque sous-ensemble de l&apos;étape 7. Inclure seulement le ou les champs du sous-ensemble, le champ du montant et la clé de l&apos;enregistrement.</p>
+            </li>
+            <li>
+                <p>À partir de l&apos;étape 8, extrayez l&apos;enregistrement le plus important en termes de montant pour chaque sous-ensemble.</p>
+            </li>
+            <li>
+                <p>Renommez le champ de montant de l&apos;étape 8 en <b>Montant le plus élevé</b>.</p>
+            </li>
+            <li>
+                <p>À partir de l&apos;étape 7, extrayez toutes les transactions à l&apos;exception de celles de l&apos;étape 6 (enregistrements supérieurs). Cela permet d&apos;obtenir une liste de transactions qui exclut la transaction la plus élevée.</p>
+            </li>
+            <li>
+                <p>À partir de l’étape 11, extrayez la transaction la plus importante par sous-ensemble unique, ce qui donne la deuxième transaction la plus importante pour les sous-ensembles.</p>
+            </li>
+            <li>
+                <p>À partir de l&apos;étape 11, renommez le champ montant en <b>Deuxième montant le plus élevé</b>.</p>
+            </li>
+            <li>
+                <p>À partir de l&apos;étape 9, calculer la valeur moyenne pour chaque clé unique. Cette moyenne exclura le montant le plus élevé du sous-ensemble unique extrait à l&apos;étape 9.</p>
+            </li>
+            <li>
+                <p>Renommez le champ de la valeur moyenne de l&apos;étape 14 en <b>Moyenne X la plus élevée</b>.</p>
+            </li>
+            <li>
+                <p>Combinez les transactions de l&apos;étape 9 (valeurs les plus élevées) et de l&apos;étape 12 (deuxièmes valeurs les plus élevées).</p>
+            </li>
+            <li>
+                <p>Combinez les transactions de l&apos;étape 16 (valeur la plus élevée et deuxième valeur la plus élevée) avec celles de l&apos;étape 15 (moyenne X la plus élevée). Le résultat devrait maintenant contenir les colonnes du sous-ensemble, la colonne Montant le plus élevé, la colonne Deuxième montant le plus élevé, la colonne de la Moyenne X la plus élevée et la colonne Décompte.</p>
+            </li>
+            <li>
+                <p>Créez la colonne Facteur de taille relative sur la base du montant le plus élevé ou du deuxième montant le plus élevé, en utilisant généralement quatre décimales pour l&apos;affichage.</p>
+            </li>
+            <li>
+                <p>Extrayez toutes les transactions qui sont égales ou supérieures au paramètre du FTR. Si le paramètre prévoit que les petits montants doivent être ignorés, il faut également exclure toutes les transactions dont la valeur du montant le plus élevé est inférieure à la valeur du petit montant incluse dans les paramètres.</p>
+            </li>
+            <li>
+                <p>Extrayez les transactions liées au FTR.</p>
+            </li>
+            <li>
+                <p>Joignez le fichier source original au test du fichier FTR. La jonction sera uniquement mise en correspondance, et la correspondance sera basée sur les champs sélectionnés pour le sous-ensemble ainsi que sur le champ du montant correspondant au champ du montant le plus élevé.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="These settings are related to the overall security of your Cloud, including role permissions, password settings, and session management." />
+    </head>
+    <body>
+        <h1>Einstellungen - Zugriffschutz</h1>
+        <h2><a name="Role"></a>Rollenberechtigungen</h2>
+        <p><img src="../../../Resources/Images/settings-role-permissions.png" alt="Zugriffschutz - Rollenberechtigungen" /></p>
+        <p>Der Bereich Rollenberechtigungen beinhaltet Optionen, um in Cloud vorgegebene Rollen zu überprüfen und neue zu erstellen, die den Anforderungen Ihres Unternehmens gerecht werden</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rolle hinzufügen</td>
+                    <td>
+                        <p>Eine neue Zugriffsrolle erstellen. Weitere Informationen finden Sie in <MadCap:xref href="../../../Setup/Security/Create-custom-security-roles.htm">Zugriffsrollen erstellen</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kopieren/Bearbeiten/Löschen der Rolle</td>
+                    <td>
+                        <p>Zugriffsrollen ändern oder entfernen. In Cloud vorgegebene Rollen können nicht bearbeitet oder gelöscht werden. Sie können die Option <b>Kopieren</b> verwenden, um die Einstellung einer vorgegebenen Rollenberechtigung als Basis für eine neue benutzerdefinierte Rolle zu verwenden.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ist anwendbar auf</td>
+                    <td>
+                        <p>Gibt an, ob die Rolle für <b>Mitarbeiter</b> (<img src="../../../Resources/Icons/Staff-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) oder <b>Kontakte</b> (<img src="../../../Resources/Icons/Contacts-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) geeignet ist.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rollenname</td>
+                    <td>
+                        <p>Der Name der Rolle.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anwendungsbereich</td>
+                    <td>
+                        <p>Die Zugriffsebenen, die in dieser Rolle definiert sind.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Password"></a>Kennworteinstellungen</h2>
+        <p><img src="../../../Resources/Images/firm-settings-password-settings-1441x417.png" alt="Kennwortoptionen, die auf der Seite Einstellungen angezeigt werden." /></p>
+        <p>Systemweite Standards für Benutzerkennwort: <b>Mittel</b>, <b>Sicher</b> oder <b>Sehr sicher</b> sowie die Häufigkeit, mit der Benutzer ihre Kennwörter zurücksetzen müssen. Cloud-Definitionen für jede Zugriffsebene werden in den Beispielen angezeigt.</p>
+        <h2><a name="Session"></a>Authentifizierung und Sitzungsverwaltung</h2>
+        <p>Sie können in der Sitzungsverwaltung ermöglichen, dass Benutzer für einen bestimmten Zeitraum angemeldet bleiben. Nach der Aktivierung müssen sich Benutzer für einen bestimmten Zeitraum nur einmal vom selben Browser in Cloud anmelden. Nur wenn Benutzer sich explizit vom System abmelden oder das angegebene Zeitlimit überschritten haben, müssen Sie sich erneut anmelden.</p>
+        <p>Bei der Zwei-Faktor-Authentifizierung wird von Benutzern erwartet, dass sie zwei Informationen liefern, die ihre Identität bestätigen, bevor ihnen Zugriff auf Cloud gewährt wird. Erfahren Sie mehr über die Zwei-Faktor-Authentifizierung in <MadCap:xref href="../../../Setup/Security/Login-settings.htm#Configur">Zwei-Faktor-Authentifizierung konfigurieren</MadCap:xref>.</p>
+        <p>Diese Optionen sind standardmäßig deaktiviert.</p>
+        <h3>Zwei-Faktor-Authentifizierung</h3>
+        <p><img src="../../../Resources/Images/firm-settings-authentication-session-management-two-factor.png" alt="Einstellungen zur Zwei-Faktor-Authentifizierung." /></p>
+        <p><b>Alle Mitarbeiter</b> - Zwei-Faktor-Authentifizierung für alle Mitarbeiterkonten aktivieren.</p>
+        <p><b>Alle Kontakte</b> - Zwei-Faktor-Authentifizierung für alle Kontakte aktivieren.</p>
+        <p><b>Dem Benutzer erlauben, die Einrichtung zu überspringen bis:</b> - Erlaubt Benutzern sich bis zu einem bestimmten Zeitpunkt ohne Zwei-Faktor-Authentifizierung anzumelden.</p>
+        <p><b>Anmeldung mit Zwei-Faktor-Authentifizierung ist für Benutzer zwingend erforderlich</b> - Geben Sie an, wie oft Benutzer einen Verifizierungscode bei der Anmeldung eingeben müssen.</p>
+        <ul>
+            <li><b>Alle 30 Tage</b> - Benutzer müssen alle 30 Tage einen neuen Verifizierungscode eingeben.</li>
+            <li><b>Bei jeder Anmeldung</b>- Benutzer müssen bei jeder Anmeldung einen neuen Verifizierungscode eingeben.</li>
+        </ul>
+        <p>Wenn sich ein Benutzer zum ersten Mal an einem neuen Gerät anmeldet, muss er einen neuen Verifizierungscode eingeben.</p>
+        <h3>Sitzungsverwaltung</h3>
+        <p><img src="../../../Resources/Images/Firm-session-management-973x243.png" alt="Verfügbare Optionen im Bereich Sitzungsverwaltung auf der Seite Einstellungen." /></p>
+        <p>Zur Aktivierung der Sitzungsverwaltung wählen Sie <b>Benutzer bei Anmeldung speichern</b> und geben die Anzahl der Stunden bei <b>Anzahl der Stunden, die der Benutzer angemeldet bleiben soll</b> ein.</p>
+        <p>Benutzer können dann bei der Anmeldung <b>Für X Stunden angemeldet bleiben</b> auswählen<br /></p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Conditions relatives aux termes du glossaire et à la logique d&apos;affichage dynamique du texte</h1>
+        <p>La liste suivante décrit les conditions requises pour configurer la logique d&apos;affichage d&apos;un <a href="What's-the-engagement-glossary.htm">terme de glossaire</a> ou d&apos;un <a href="What's-dynamic-text.htm">texte dynamique</a>. Il décrit également les paramètres de chaque condition.</p>
+        <h2>Condition de réponse</h2>
+        <p>La logique est basée sur une procédure de réponse par liste de contrôle.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li><b>Document -</b> sélectionner le document de la liste de contrôle.</li>
+            <li><b>Procédure -</b> sélectionner la procédure.</li>
+            <li><b>Condition -</b> sélectionner la réponse.</li>
+            <li><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <p>La condition est remplie lorsque la réponse sélectionnée dans la <b>condition</b> est fournie dans la procédure de la liste de contrôle sélectionnée.</p>
+        <h2>Condition de la balance de vérification</h2>
+        <p>La logique est basée sur les propriétés du groupe de la balance générale.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Groupe financier -</b> <span style="font-weight: normal;">sélectionner le groupe de balance de vérification</span>.</li>
+            <li><b>Condition -</b> sélectionnez une option dans la liste déroulante.<ul style="list-style-type: circle;"><li><a href="Group-properties.htm#Consiste">Cohérent</a></li><li><a href="Group-properties.htm#Contrary">Contrairement à ce que l&apos;on pourrait penser</a></li><li><a href="Group-properties.htm#Inconsis">Incohérent</a></li></ul></li>
+            <li><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <p>Par exemple, si le solde du groupe est <b>Cohérent</b> → Le <i>compte de résultat</i> s&apos;affiche.</p>
+        <h2>Condition de consolidation</h2>
+        <p>La logique est basée sur le fait que la mission est une mission de consolidation ou non.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Condition -</b> <span style="font-weight: normal;">sélectionner l&apos;état de consolidation (consolidé ou non consolidé</span>).</li>
+            <li><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <h2>Mise à l&apos;échelle/arrondi</h2>
+        <p>Sélectionnez une échelle d&apos;arrondi dans la liste déroulante.</p>
+        <h3>Exemple</h3>
+        <p>Si l&apos;arrondi est en <b>millions</b>, afficher cet élément.</p>
+        <h2>Condition relative à la période de référence</h2>
+        <p>La logique est basée sur la période de référence de la mission.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Condition -</b> <span style="font-weight: normal;">sélectionner la valeur de la période de déclaration (mensuelle, trimestrielle, semestrielle, annuelle)</span></li>
+            <li><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <h2>Condition relative au type d&apos;organisation</h2>
+        <p>La logique est basée sur le pays sélectionné pour l&apos;entité d&apos;engagement.</p>
+        <p><b>Paramètres :</b></p>
+        <ul>
+            <li><b>Condition -</b> sélectionnez un pays.</li>
+            <li><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <h2>Forme Valeur Condition</h2>
+        <p>La logique est basée sur la valeur d&apos;un champ de formulaire.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li><b>Condition -</b> sélectionner un formulaire et un champ dans le formulaire sélectionné.</li>
+            <li><![CDATA[
+]]><b>Sortie -</b> saisissez le texte à afficher lorsque la condition est remplie.</li>
+        </ul>
+        <p class="note inline"><![CDATA[
+]]><b>Remarque :</b> Cette condition n&apos;est activée que si des <a href="Develop-custom-forms.htm">formulaires SE Builder</a> sont configurés dans votre produit.</p>
+        <h2>Groupe de conditions</h2>
+        <p>Sélectionnez cette option si vous souhaitez ajouter un groupe de conditions, où l&apos;édition de texte est basée sur la façon dont les conditions du groupe sont évaluées collectivement.</p>
+        <p style="font-weight: bold;">Paramètres :</p>
+        <ul>
+            <li><b>Lorsque toutes les conditions ci-dessous sont remplies</b> - sélectionnez cette option si vous souhaitez que toutes les conditions soient remplies pour que la condition de groupe le soit.</li>
+            <li><b>Lorsque l&apos;une des conditions ci-dessous est remplie</b> - sélectionnez cette option si vous souhaitez que l&apos;une des conditions soit vraie pour que la condition de groupe soit remplie.</li>
+            <li><b>Sortie - saisir</b>le texte à afficher lorsque la condition de groupe est remplie.</li>
+        </ul>
+    </body>
+</html>

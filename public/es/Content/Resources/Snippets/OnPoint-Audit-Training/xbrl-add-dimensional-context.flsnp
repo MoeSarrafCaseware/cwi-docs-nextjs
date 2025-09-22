@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>You can add dimensional and typed dimensional contexts from the XBRL review panel.</p>
+        <p>Before you begin, select the XBRL icon (<img src="../../Icons/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in the top menu, select the taxonomy you want to review and Start Review to open the review panel.</p>
+        <p><b>Añadir un contexto de dimensión o de dimensión con tipo</b></p>
+        <ol>
+            <li>
+                <p>In the financial statements, select the content that requires a custom context.</p>
+            </li>
+            <li>
+                <p>In the <b>Context</b> section of the review panel, select <b>More actions</b> (<img src="../../Icons/more-actions-vertical.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>New dimensional context</b>.</p>
+                <p><img src="../../Images/xbrl-review-panel-new-dimensional-context.png" alt="El panel XBRL REVIEW." /></p>
+            </li>
+            <li>
+                <p>Seleccione los valores claves necesarios.</p>
+                <p class="note"><b>Note:</b> The role associated with the tag is preselected in the <b>Select role</b> field. If the role contains a typed dimension, an information message indicating that you need to set values for the dimension displays. You can set values for the typed dimension after you select <b>Confirm</b>.</p>
+                <p><img src="../../Images/xbrl-edit-dimensions-dialog.png" alt="The Edit Dimensions dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>Confirm</b>.</p>
+            </li>
+            <li>
+                <p>If you need to enter values for a typed dimension, complete the new <b>Dimension Instance</b> fields which appear in the <b>Dimensions</b> section. Otherwise, proceed to the next step.</p>
+                <p><img src="../../Images/xbrl-dimension-instance.png" alt="The Dimensions section of the Context Editor dialog." /></p>
+                <p>These values enable you to produce multiple contexts with different values for this typed dimension, at the same time. In the screenshot example, the necessary options for naming a controlling party have been selected. As there are three controlling parties in the example engagement, these could be populated as in the screenshot above, 1 to 3, to automatically create three contexts with typed dimensions of value 1, 2 and 3.</p>
+            </li>
+            <li>
+                <p>In the <b>Context</b> section, enter the required values.</p>
+                <p class="note"><b>Note:</b> If you have added a typed dimension, add the element <b>&lt;n&gt;</b> to the <b>Name</b> field. This ensures the context names align with the instance value of the typed dimension added to the context. You cannot add the context if you do not add this element to the <b>Name</b> field.</p>
+                <p><img src="../../Images/xbrl-context-editor-dialog-3.png" alt="The Context Editor dialog." /></p>
+            </li>
+            <li>
+                <p>Agregar contexto(s)</p>
+            </li>
+        </ol>
+        <p>The context you created is now available for you to add to tags.</p>
+    </body>
+</html>

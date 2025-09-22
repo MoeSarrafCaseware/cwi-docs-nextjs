@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Fixes in SE 2024-12</h1>
+        <p>Welcome to SE 2024-12! Deze release biedt de mogelijkheid om een afsluitgeschiedenis toe te voegen aan de gedownloade referentie kopie van een overeenkomst, en meer.</p>
+        <p>Zie het volgende onderwerp om de meest recente fixes in deze release te bekijken:</p>
+        <ul>
+            <li>
+                <p><a href="#Fixes">Fixes in SE 2024-12</a></p>
+            </li>
+        </ul>
+        <h2>Geschiedenis van vergrendeling als PDF</h2>
+        <p><a href="Primary-author.htm">#primaryauteur</a><a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Gebruikers kunnen nu de afsluitingsgeschiedenis downloaden als PDF in het referentie-exemplaar. Om deze functie in te schakelen, voegt u de volgende code toe aan de <code>archiefarray</code> van het <i>product.json-bestand</i> voor uw product:</p><div><pre><code>Titel: &quot;Vergrendeling&quot;, &quot;uri&quot;: &quot;index.jsp#/lockdown&quot; } }</code></pre></div><p>De referentie kopie is beschikbaar via het <b>Informatie</b> icoon (<img src="../Resources/Images/info icon black.png" alt="" style="vertical-align: text-bottom;" />) in het bovenste menu.</p>
+        <p><img src="../Resources/Images/lockdown_history_as_pdf.png" alt="Geeft de functie Download referentie kopie weer in het menu Informatie" /></p>
+        <h2>Cloud Engagements integratie met Sherlock</h2>
+        <p><a href="Primary-author.htm">#primaryauteur</a><a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Voor de laatste integratie-updates met Caseware Sherlock, zie <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Whats-New/Whats-new-CaseWare-Sherlock.htm">Wat is nieuw - Caseware-Sherlock.</a></p>
+        <h2>Java-upgrades voor de Cloud Engagements-server en microservices</h2>
+        <p>De Caseware Cloud Engagement server is nu geüpgraded van Java 11 naar Java 17. Bovendien zijn de microservices nu geüpgraded van Java 17 naar Java 21.</p>
+        <h2><a name="Fixes"></a>Fixes in SE 2024-12</h2>
+        <p>De volgende lijst bevat een korte beschrijving van bugs die zijn opgelost in SE 2024-12.</p>
+        <ul>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-43739">SE-43739</a>] - Bij het toepassen van XBRL-tags op notitiekoppen wordt de selectie niet onmiddellijk gemarkeerd en de kleur en plaatsing van de markering is inconsistent met andere delen van de UX.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-49594">SE-49594</a>] - De optie om een zoekopdracht te wissen in de taxonomieviewer wist de zoekopdracht niet.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-50284">SE-50284</a>] - De aangepaste contexteditor loopt vast bij het maken van nieuwe contexten of het bewerken van bestaande contexten.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51097">SE-51097</a>] - Tekst in het veld Inhoudsopgave beschrijving wordt niet opgeslagen als een nieuwe tekstsectie wordt toegevoegd aan de jaarrekening vóór de beschrijving.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51303">SE-51303</a>] - Verwijderde tekstgedeelten worden niet zichtbaar verwijderd uit de jaarrekening totdat de webpagina wordt vernieuwd.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51482">SE-51482</a>] - De velden Identifier en Naam in het dialoogvenster Documenteigenschappen zijn niet zichtbaar voor primaire auteurs, waardoor ze niet kunnen worden gewijzigd.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51634">SE-51634</a>] - Bij het importeren van proefbalansgegevens van een bestaande opdracht kan één opdracht worden geselecteerd als bron en bestemming. Hierdoor raakt de betrokkenheid bij de bestemming uit balans.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51655">SE-51655</a>] - Na het toewijzen van een account aan een dimensie is de dimensieselector niet zichtbaar op de gegevenspagina totdat de webpagina wordt vernieuwd.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-51780">SE-51780</a>] - Het genereren van iXBRL mislukte in bepaalde omgevingen.</p>
+            </li>
+            <li>
+                <p>[<a href="https://caseware.atlassian.net/browse/SE-52319">SE-52319</a>] - In het dialoogvenster XBRL Context Editor wordt met de knop om context te kopiëren niet het juiste veld Toepasbaar overgenomen.</p>
+            </li>
+        </ul>
+    </body>
+</html>

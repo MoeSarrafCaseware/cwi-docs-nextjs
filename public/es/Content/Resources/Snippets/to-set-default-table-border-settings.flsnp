@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>You can set default underline and overline options for dynamic tables in the Table Borders settings in the financial statements.</p>
+        <p><b>Establecer las opciones predeterminadas de subrayado y sobrelineado para tablas dinámicas</b></p>
+        <ol>
+            <li>
+                <p>In the financial statements, select <b>Document settings</b> (<img src="../Images/icon-settings.png" style="vertical-align: text-bottom;" />) | <b>Table Borders</b>.</p>
+                <p><img src="../Images/table-borders-settings.png" style="width: 369px;height: 378px;" alt="The Table Borders option in the document settings." /></p>
+            </li>
+            <li>
+                <p>In the Dynamic Table Border settings dialog, select your desired border for header and total rows in the <b>HEADER ROWS</b> and <b>TOTAL ROWS</b> sections.</p>
+                <p><img src="../Images/dynamic-table-border-settings-2.png" alt="The Dynamic Table Border Settings dialog." /></p>
+            </li>
+            <li>
+                <p>Select the <b>Underline space between columns</b> check box in the <b>HEADER ROWS</b> and <b>TOTALS ROWS</b> sections if you want the underline and overline options to extend between columns.</p>
+            </li>
+            <li>
+                <p>If you want to use a different border for grand total rows, select the <b>Use different border for GRAND TOTAL rows</b> check box and select your desired border.</p>
+            </li>
+            <li>
+                <p>Under <b>FINAL ROWS</b>, if you want to apply a border to the last row in dynamic tables, select the <b>Apply border to the last row in each table</b> check box and select your desired border.</p>
+                <p>Note that this border only applies to last rows that are not total rows. If the last row in a dynamic table is a total row, the border selected under <b>TOTAL ROWS</b> is applied instead.</p>
+            </li>
+            <li>
+                <p>Under <b>DESCRIPTION COLUMN</b>, If you do not want underlines and overlines to apply to description columns, deselect <b>Overline and underline description columns</b>.</p>
+            </li>
+            <li>
+                <p>If you want to remove any custom underline and overline options you have applied previously to individual dynamic tables, select the <b>OVERRIDE TABLE CUSTOMIZATION</b> check box.</p>
+                <p>Note that selecting this check box only removes prior customizations. You can still apply custom borders to individual dynamic table rows in the future.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>APPLY</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

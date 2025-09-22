@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Nadat je de XBRL-tags hebt gecontroleerd, kun je het XBRL-rapport exporteren om te valideren dat het naar verwachting wordt gegenereerd.</p>
+        <p><b>XBRL-rapporten exporteren</b></p>
+        <ol>
+            <li>
+                <p>Selecteer de weergave <b>Personen</b> in het bovenste menu.</p>
+            </li>
+            <li>
+                <p>Selecteer in het gedeelte <b>XBRL Export</b> de XBRL-taxonomie die u wilt exporteren als er meerdere opties zijn en selecteer vervolgens <b>Export</b>.</p>
+                <p><img src="../../Images/xbrl-popup-export.png" alt="De XBRL pop-up." /></p>
+            </li>
+            <li>
+                <p>Als er dubbele feiten in de jaarrekening staan, verschijnt het dialoogvenster Duplicate XBRL fact. Dubbele feiten ontstaan wanneer dezelfde tag op meerdere plaatsen in de jaarrekening voorkomt en verschillende waarden bevat. Ze worden vaak veroorzaakt door afrondingsfouten.</p>
+                <p>Je kunt selecteren welke van de dubbele waarden je wilt exporteren in het dialoogvenster Duplicate XBRL Fact:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer een duplicaat om te corrigeren en selecteer vervolgens <b>Corrigeren</b>.</p>
+                        <p><img src="../../Images/duplicate-xbrl-fact-dialog.png" alt="Het dialoogvenster Duplicate XBRL Fact." style="width: 773px;height: 373px;" /></p>
+                    </li>
+                    <li>
+                        <p>In het dialoogvenster Correct Duplicate XBRL Fact kun je de waarden selecteren om de financiële overzichten te openen naar de locatie van het gemarkeerde feit, zodat je kunt bepalen welke waarde je moet exporteren.</p>
+                        <p>Je kunt de dialoogvensters Duplicate XBRL Fact en Correct Duplicate XBRL Fact verplaatsen en de grootte ervan aanpassen om de inhoud in je financiële overzichten te bekijken.</p>
+                        <p><img src="../../Images/xbrl-correct-duplicate-xbrl-fact-dialog.png" alt="De dialoogvensters Duplicate XBRL Fact en Correct Duplicate XBRL Fact." style="width: 970px;height: 509px;" /></p>
+                    </li>
+                    <li>
+                        <p>Identificeer de waarde die je wilt exporteren en selecteer <b>Doorgaan</b>.</p>
+                        <p>Als je de waarden wilt combineren om ze te exporteren, zet je de optie <b>Waarden combineren</b> op <b>Ja</b>en selecteer je een willekeurig aantal waarden die gecombineerd moeten worden. Als de tag numeriek is, worden de geselecteerde waarden bij elkaar opgeteld. Als het alfanumeriek is, worden de waarden aan elkaar gekoppeld.</p>
+                        <p><img src="../../Images/xbrl-correct-duplicate-xbrl-fact-dialog-2.png" alt="Het dialoogvenster Dubbele XBRL-fact corrigeren." style="width: 701px;height: 527px;" /></p>
+                    </li>
+                    <li>
+                        <p>Herhaal de bovenstaande stappen totdat u alle dubbele feiten hebt gecorrigeerd en selecteer vervolgens <b>Ga verder</b>.</p>
+                        <p class="note"><b>Let op:</b> Je selecties hier hebben geen invloed op de financiële overzichten en alleen op het genereren van rapporten. Elke keer dat je een XBRL-rapport genereert, moet je de dubbele feiten opnieuw corrigeren.</p>
+                        <p><img src="../../Images/xbrl-duplicate-xbrl-fact-proceed.png" alt="Het dialoogvenster Duplicate XBRL Fact." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Als er validatiefouten in het rapport staan, worden die op dit punt gemarkeerd. Selecteer <b>Annuleren</b> om het exportproces te annuleren en de fouten aan te pakken of selecteer <b>Doorgaan</b> om het exportproces voort te zetten.</p>
+                <p><img src="../../Images/xbrl-validation-failed-dialog.png" alt="Het dialoogvenster XBRL-validatie mislukt." /></p>
+            </li>
+            <li>
+                <p>In het dialoogvenster Generate XBRL Review kun je de inhoud van het rapport bekijken voordat je het genereert.</p>
+                <p>Er zijn vier tabbladen in het dialoogvenster. Op elk tabblad kunt u <b>CSV exporteren</b> selecteren om de inhoud van het tabblad naar een CSV-bestand te exporteren zodat u het gemakkelijker kunt bekijken.</p>
+                <p><img src="../../Images/xbrl-generate-xbrl-review-dialog.png" alt="De tag Fouten van het dialoogvenster XBRL-overzicht genereren." style="width: 863px;height: 522px;" /></p>
+                <p>De vier tabbladen zijn:</p>
+                <ul>
+                    <li>
+                        <p><b>Errors</b> - Geeft diagnostische fouten aan die niet eerder in het proces zijn opgepikt, zoals tags die gegevens van een onjuist type bevatten of tags die vereiste zinnen missen.</p>
+                    </li>
+                    <li>
+                        <p><b>Verplichte tags</b> - Geeft aan of in het rapport tags ontbreken die volgens de betreffende regelgevende instantie verplicht zijn. Ontbrekende tags worden in rood weergegeven en op het tabblad voor dit gebied staat een beknopt overzicht.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-mandatory-tags.png" style="width: 803px;height: 260px;" alt="Het tabblad Verplichte tags van het dialoogvenster XBRL-overzicht genereren." /></p>
+                    </li>
+                    <li>
+                        <p><b>Systeemtags</b> - Toont de tags, waarde en relevante informatie over de systeemtags in je rapport. Dit kan handig zijn om te bevestigen dat de dubbele waarden die eerder in het proces zijn behandeld, correct zijn verwerkt.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-system-tags.png" style="width: 814px;height: 297px;" alt="Het tabblad System Tags van het dialoogvenster Generate XBRL Review." /></p>
+                    </li>
+                    <li>
+                        <p><b>Aangepaste tags</b> - Toont de tags die door jou zijn toegepast in de overeenkomst.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-custom-tags.png" style="width: 819px;height: 302px;" alt="Het tabblad Custom Tags van het dialoogvenster Generate XBRL Review." /></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Als je klaar bent met het bekijken van de informatie in het dialoogvenster, selecteer je <b>Doorgaan om iXBRL te genereren</b>.</p>
+            </li>
+        </ol>
+        <p>Het iXBRL html-rapport met de bedrijfsnaam, datum en tijd van exporteren wordt opgeslagen op de pagina <b>Documenten</b> in je engagement.</p>
+    </body>
+</html>

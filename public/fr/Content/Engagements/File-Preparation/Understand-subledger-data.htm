@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comprendre les ensembles de données du grand livre auxiliaire</h1>
+        <p>Voir <a href="#Subledger">Description des jeux de données</a> de comptabilité auxiliaire pour les types de jeux de données de comptabilité auxiliaire que vous pouvez importer dans Caseware Cloud. Chaque description d&apos;ensemble de données énumère les champs obligatoires et facultatifs qui composent les transactions pour ce type d&apos;ensemble de données de comptabilité auxiliaire, ainsi que l&apos;objectif de chaque champ. Le diagramme ci-dessous explique les éléments de base des descriptions des ensembles de données du grand livre auxiliaire.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <h2>Anatomie de la description d&apos;un jeu de données du grand livre auxiliaire</h2>
+        <p><img src="../../Resources/Images/Subledger-data-schemas-described.png" alt="Anatomie de la description d&apos;un jeu de données du grand livre auxiliaire" /></p>
+        <p> </p>
+        <table class="table table-striped">
+            <col style="width: 243px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Nom de l&apos;utilisateur. Le nom du champ Caseware tel qu&apos;il apparaît dans les menus déroulants de la fenêtre d&apos;importation des données, où vous mettez en correspondance les champs de vos données entrantes avec les champs Caseware.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Description du champ. Elle détaille l&apos;objectif du champ et, le cas échéant, des exemples de valeurs possibles.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Nom du champ interne. Le nom interne du champ Caseware, que vous devez connaître si vous manipulez des données importées pour des carnets analytiques ou d&apos;autres travaux de développement de tiers où vous manipulez les données brutes importées.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Clé primaire. Si un champ est une clé primaire, sa valeur est utilisée pour identifier de manière unique l&apos;entrée de données ou la ligne de données.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>
+                        <p>Type de données. Les types de valeurs qu&apos;un champ peut avoir et les opérations qui peuvent être effectuées.</p>
+                        <ul>
+                            <li>
+                                <p>Texte - Toute valeur alphanumérique.</p>
+                            </li>
+                            <li>
+                                <p>Date-Date. Notez que si vous mappez un champ contenant la date et l&apos;heure, seule la partie date est importée.</p>
+                            </li>
+                            <li>
+                                <p>Données/heure - Date et heure.</p>
+                            </li>
+                            <li>
+                                <p>Enum - Une liste de valeurs alphanumériques peut être spécifiée.</p>
+                            </li>
+                            <li>
+                                <p>Argent - Les valeurs doivent être numériques et représenter des montants d&apos;argent.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Il s&apos;agit d&apos;une obligation. Indique si le champ est obligatoire pour pouvoir importer une transaction de ce type dans Caseware Cloud.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">7</td>
+                    <td>Clé primaire alternée. Si le champ désigné comme clé primaire est absent des données que vous importez, la valeur de la clé primaire alternative, ou de l&apos;une des clés primaires alternatives, est utilisée pour créer un code d&apos;identification unique pour l&apos;entrée de données en concaténant leurs valeurs : <code>&lt;PremièreAlternative&gt;-&lt;DeuxièmeAlternative&gt;-&lt;TroisièmeAlternative&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+        <h2><a name="Subledger"></a>Description des ensembles de données de Subledger</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Ensemble de données Subledger</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-invoices.htm">Comptes fournisseurs – Factures </a></td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes fournisseurs-factures contient toutes les factures reçues au cours de la période examinée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-payments-made.htm">Comptes fournisseurs – Paiements effectués</a></td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes fournisseurs - Paiements effectués contient toutes les transactions de paiement (chèque, virement, espèces, etc.) effectuées au cours de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-suppliers.htm">Comptes fournisseurs – Fournisseurs</a></td>
+                    <td>
+                        <p>Le jeu de données Comptes fournisseurs contient tous les détails relatifs au fournisseur, tels que les coordonnées, l&apos;adresse, la limite de crédit, etc.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-open-balances.htm">Comptes fournisseurs – Soldes non utilisés</a></td>
+                    <td>
+                        <p>Le jeu de données Comptes ouverts-payables contient des détails concernant toutes les transactions ouvertes, non payées ou non résolues à la clôture des activités à une date donnée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-invoices.htm">Comptes clients – Factures</a></td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes débiteurs-factures contient toutes les factures générées au cours de la période examinée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-cash-received.htm">Comptes clients – Encaissements</a></td>
+                    <td>
+                        <p>L&apos;ensemble de données Comptes débiteurs-espèces reçues contient toutes les transactions de paiement (chèque, virement, espèces, etc.) reçues au cours de la période.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-customers.htm">Comptes clients – Clients</a></td>
+                    <td>L&apos;ensemble de données Accounts receivable-customers contient tous les détails relatifs au client, tels que ses coordonnées, son adresse, sa limite de crédit, etc.</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-open-balances.htm">Comptes clients – Soldes non utilisés</a></td>
+                    <td>Le jeu de données Comptes clients - soldes ouverts contient des détails concernant toutes les transactions clients ouvertes, non payées ou non résolues à la clôture des activités à une date donnée.</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-transactions.htm">Mouvements de stock</a></td>
+                    <td>Capture toutes les transactions affectant les comptes d&apos;inventaire pendant la période spécifiée (par exemple, les réceptions, les expéditions, les transferts, les retours et les ajustements).</td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-on-hand.htm">Stock disponible</a></td>
+                    <td>Saisit les quantités d&apos;articles en stock, par emplacement et par montant, à la date spécifiée.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+    </body>
+</html>

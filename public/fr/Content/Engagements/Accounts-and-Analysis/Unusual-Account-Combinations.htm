@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Combinaisons de comptes inhabituelles</h1>
+        <p>Le test analytique des combinaisons de comptes inhabituelles permet d&apos;identifier les transactions qui présentent des combinaisons inhabituelles par rapport au reste de la population. L&apos;utilisateur peut décider du pourcentage de la population qui serait considéré comme inhabituel. The default is 3%.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>La baisse de l&apos;exactitude et de la précision des rapports financiers</p>
+            </li>
+            <li>
+                <p>Transactions potentiellement non soutenues</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Les transactions complexes, irrégulières ou inhabituelles qui peuvent justifier une enquête approfondie</p>
+            </li>
+            <li>
+                <p>Interprétation erronée des méthodes comptables en raison d&apos;un manque de formation ou d&apos;erreurs de système entraînant des classifications incorrectes dans les états financiers</p>
+            </li>
+            <li>
+                <p>Les paramètres du système qui ne sont pas correctement configurés</p>
+            </li>
+            <li>
+                <p>Transactions peu fréquentes</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs ci-dessous sont utilisés pour cette analyse :</p>
+        <p><b>Champs principaux</b> –</p>
+        <ul>
+            <li>
+                <p>Un ou plusieurs champs qui déterminent comment le groupe définira les combinaisons. Par exemple, vous pouvez utiliser le champ <b>Journal.</b> </p>
+            </li>
+            <li>
+                <p>Un ou plusieurs champs qui déterminent les regroupements. Il s&apos;agit généralement du champ <b>Numéro de compte</b> , mais d&apos;autres champs peuvent également être utilisés si nécessaire.</p>
+            </li>
+            <li>
+                <p>Champ Montant Un seul champ de montant peut être sélectionné pour le regroupement.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Un paramètre doit être défini pour que ce test puisse être exécuté :</p>
+        <p><b>Pourcentage pour les combinaisons inhabituelles</b> - Saisir un pourcentage jusqu&apos;à deux décimales à utiliser pour déterminer ce qui est considéré comme une combinaison inhabituelle. Ce pourcentage doit être supérieur à 0 % et peut atteindre un maximum de 50 %. La valeur par défaut est 11.</p>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Combinaisons de comptes complexes, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Validez que les colonnes de référence nécessaires ont été sélectionnées, à savoir qu&apos;une colonne de montant a été sélectionnée, une ou plusieurs colonnes qui composent la colonne de regroupement telle qu&apos;un numéro de compte et une ou plusieurs colonnes qui composent l&apos;ID telle que le numéro d&apos;écriture du journal.</p>
+            </li>
+            <li>
+                <p>Créez une colonne NEW_ID qui concatène la ou les colonnes qui composent l&apos;ID.</p>
+            </li>
+            <li>
+                <p>Créez une colonne NEW_GROUP qui concatène la ou les colonnes qui composent le groupement.</p>
+            </li>
+            <li>
+                <p>Triez les données par NEW_ID et NEW_GROUP.</p>
+            </li>
+            <li>
+                <p>Remplacer la colonne NEW_GROUP par des valeurs numériques croissantes. Pour ce faire, la colonne NEW_GROUP est regroupée pour obtenir des valeurs uniques, puis un numéro unique est attribué à partir de zéro. Cette étape est réalisée au cas où la longueur de la colonne de NEW_GROUP serait trop importante.</p>
+            </li>
+            <li>
+                <p>Extraire les combinaisons de crédits par ID. Pour ce faire, il faut extraire tous les montants négatifs (crédit). Les combinaisons de crédits sont ajoutées à une colonne CREDIT_COMBINATIONS. Par exemple, si NEW_GROUP_NUMERIC a les groupes 1 et 2, la colonne CREDIT_COMBINATIONS indiquera 1, 2.</p>
+            </li>
+            <li>
+                <p>Extraire les combinaisons de débit par ID. Pour ce faire, il faut extraire tous les montants positifs (débit). Les combinaisons de débit sont ajoutées à une colonne DEBIT_COMBINATIONS. Par exemple, si NEW_GROUP_NUMERIC a les groupes 1 et 2, la colonne DEBIT_COMBINATIONS indiquera 1, 2.</p>
+            </li>
+            <li>
+                <p>Regrouper les NEW_ID pour obtenir des valeurs uniques.</p>
+            </li>
+            <li>
+                <p>Pour chaque NEW_ID, ajoutez les DEBIT_COMBINATIONS et les CREDIT_COMBINATIONS. Cette étape permet d&apos;obtenir une combinaison unique pour chaque identifiant.</p>
+            </li>
+            <li>
+                <p>Remplacer les NaN par des valeurs vides.</p>
+            </li>
+            <li>
+                <p>Regroupez les DEBIT_COMBINATIONS et les CREDIT_COMBINATIONS afin d&apos;obtenir le nombre de chaque combinaison.</p>
+            </li>
+            <li>
+                <p>Ajouter un pourcentage basé sur l&apos;effectif / l&apos;effectif total.</p>
+            </li>
+            <li>
+                <p>Extract all rows that are equal to or less than the unusual_combinations_percentage value.</p>
+            </li>
+            <li>
+                <p>Fusionner l&apos;ensemble de données précédent par identifiant pour obtenir les identifiants dont la valeur est inférieure au pourcentage de combinaisons inhabituelles.</p>
+            </li>
+            <li>
+                <p>Fusionner l&apos;ensemble de données précédent avec l&apos;ensemble de données original pour obtenir toutes les transactions qui appartiennent aux identifiants marqués.</p>
+            </li>
+            <li>
+                <p>Supprimer toutes les colonnes créées afin que le résultat ne contienne que les colonnes de l&apos;enregistrement d&apos;origine.</p>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

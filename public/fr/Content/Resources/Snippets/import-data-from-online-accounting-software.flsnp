@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> . The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+                <ul>
+                    <li>
+                        <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                    </li>
+                    <li>
+                        <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.<br /></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sous IMPORTATION DU CONNECTEUR DE DONNÉES, sélectionnez le logiciel de comptabilité dans la liste. Cet exemple utilise Xero.</p>
+                <p>Si votre source de données n&apos;est pas visible, saisissez son nom dans le champ de recherche pour la trouver.</p>
+            </li>
+        </ol>
+        <p><img src="../Images/ImportFromDataConnector.png" alt="Recherche du logiciel de comptabilité à partir duquel vous souhaitez importer des données." /></p>
+        <p> </p>
+        <p class="note"><b>Remarque :</b> Si vous importez des données depuis Sage Intacct, vous devrez d&apos;abord vous assurer que votre client a ajouté l&apos;ID d&apos;expéditeur de Caseware à la section d&apos;autorisation des services Web de sa configuration Sage. L&apos;identifiant de l&apos;expéditeur de Caseware est <code>CaseWare-MPP</code>. Pour en savoir plus, voir <a href="https://www.intacct.com/ia/docs/en_US/help_action/Company/Company_setup/Company_Information/Security/company-web-services-authorizations.htm?cshid=Web_services_authorizations#AddWebServicesauthorizations">Ajouter des assertions dans les procédures</a>.</p>
+        <ol>
+            <li value="3">
+                <p>Sur la page de connexion du logiciel à partir duquel vous effectuez l&apos;importation, saisissez vos informations d&apos;identification et accordez les autorisations nécessaires pour permettre l&apos;accès.</p>
+                <p>L&apos;expérience d&apos;authentification variera en fonction de votre logiciel.</p>
+            </li>
+            <li>
+                <p>S&apos;il existe plusieurs options d&apos;organisation, la phase de <b>sélection de l&apos;organisation</b> s&apos;affiche. Sélectionnez l&apos;organisation appropriée à partir de laquelle vous souhaitez importer des données, puis cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>A l&apos;étape <b>Configuration des données de</b> l&apos;assistant d&apos;importation :</p>
+                <ul>
+                    <li>
+                        <p>La date de<b>début</b> est automatiquement remplie avec la date de début des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>fin</b> est automatiquement remplie avec la date de fin des données.</p>
+                        <p class="note"><b>Remarque :</b> La date de fin doit correspondre à la date de fin d&apos;année des données à importer. La date de fin d&apos;exercice de la mission dans laquelle vous importez ces données doit également correspondre à la date de fin des données à importer.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Dans <b>Sélectionner le type de jeu</b>de données, choisissez le type de jeu de données que vous importez.</p>
+                <p>Pour en savoir plus sur les options des jeux de données, voir <a href="../../Engagements/File-Preparation/Import-data-from-online-accounting-sofware-new-method.htm#Dataset">Types de jeux de données</a>. Tous les types de jeux de données ne sont pas disponibles s&apos;ils n&apos;ont pas été activés dans votre produit.</p>
+            </li>
+            <li>
+                <p>Si vous avez sélectionné <b>Balance de vérification</b>, réduisez la liste des types d&apos;ensembles de données en sélectionnant l&apos;icône de <b>réduction</b> (<img src="../Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />). Remarquez que l&apos;option <b>Importer les 5 dernières années de TB</b> apparaît. Sélectionnez-le pour importer jusqu&apos;à cinq années de données de balance de vérification si elles sont disponibles dans le fichier zip que vous avez généré.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>À l&apos;étape de confirmation de l&apos;assistant d&apos;importation, vérifiez les informations et sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Remarque :</b> Si vous fermez l&apos;assistant d&apos;importation pendant que les données sont importées, l&apos;importation se poursuivra. Lorsque vous reviendrez à l&apos;assistant, vous pourrez voir l&apos;état de l&apos;importation.</p>
+        <p>Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p><img src="../Images/ViewData-GL.png" alt="Cliquer sur le bouton Voir les données pour visualiser le jeu de données qui vient d&apos;être importé. " /></p>
+        <p>Une nouvelle page s&apos;affiche avec les données.</p>
+        <p>Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p>Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p>Pour plus d&apos;informations, reportez-vous à la section <a href="../../Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+        <p> </p>
+        <p>
+            <br />
+        </p>
+    </body>
+</html>

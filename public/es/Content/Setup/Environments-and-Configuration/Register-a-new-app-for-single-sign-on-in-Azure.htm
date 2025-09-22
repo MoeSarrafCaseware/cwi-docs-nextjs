@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Registrar una nueva aplicación para el inicio de sesión único (Azure AD)</h1>
+        <p>To integrate Cloud with Azure AD, you must register Cloud as a new app. When registered, you can allow Cloud to access your Active Directory domain.</p>
+        <p><b>Registrar una nueva aplicación para el inicio de sesión único (Azure AD)</b></p>
+        <ol>
+            <li>
+                <p>Sign in to your Azure portal. If you have access to more than one portal, select your account in the top-right corner, then select your desired tenant.</p>
+            </li>
+            <li>
+                <p>Select <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>From the left-hand navigation pane, select <b>App registrations</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New registration</b>.</p>
+                <p><img src="../../Resources/Images/azure-app-registration.png" alt="Select New registration." /></p>
+            </li>
+            <li>
+                <p>On the <b>Register an application</b> page, enter your registration data:</p>
+                <ul>
+                    <li>
+                        <p><b>Name</b>: Enter an appropriate name.</p>
+                    </li>
+                    <li>
+                        <p><b>Supported account types</b>: Select <b>Accounts in this organizational directory only (Default Directory only - Single tenant)</b>.</p>
+                    </li>
+                    <li>
+                        <p><b>Redirect URI</b>: Select <b>Web</b>. You do not need to enter a URL.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>After you enter your information, select <b>Register</b>. Your application details are displayed.</p>
+                <p class="warning"><b>Important:</b> Copy the Application ID and paste it to a text document for later use. Label it <b>Application ID</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Generate-a-client-secret.htm">Generate a client secret</a></p>
+    </body>
+</html>

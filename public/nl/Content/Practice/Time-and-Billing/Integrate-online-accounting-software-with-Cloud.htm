@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Integreer online boekhoudsoftware met Caseware Cloud</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Je kunt facturen vanuit Caseware Cloud exporteren naar Xero of QuickBooks Online (QBO). Dit proces is sneller en nauwkeuriger dan het handmatig invoeren van gegevens. Voordat je facturen exporteert, moet je:</p>
+        <ol>
+            <li>
+                <p>Koppel je boekhoudsoftware aan Cloud.</p>
+            </li>
+            <li>
+                <p>Configureer de integratie-instellingen.</p>
+            </li>
+        </ol>
+        <h2 id="link-cloud">Online boekhoudsoftware koppelen aan Caseware Cloud</h2>
+        <p>Als je facturen wilt exporteren naar online boekhoudsoftware, koppel Cloud dan aan een bestaande account.</p>
+        <p class="note"><b>Let op:</b> Als je een QBO-gebruiker bent, moet je Aangepaste transactienummers inschakelen voordat je facturen exporteert. Zie <a href="https://community.intuit.com/articles/1145900-change-the-number-on-invoices-or-other-transactions">Het nummer op facturen of andere transacties wijzigen</a>voor meer informatie.</p>
+        <p><b>Online boekhoudsoftware koppelen aan Cloud:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Zorg ervoor dat het grootboek (GL) is uitgeschakeld. Zie voor meer informatie over het uitschakelen van GL <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm#Time">Tijd- en onkosteninstellingen</MadCap:xref>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-time-and-expense-settings-gl-disabled.png" alt="De pagina Tijd- en onkosteninstellingen met de optie Grootboek inschakelen uitgeschakeld." /></p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Tijd | Algemeen | Integratie boekhoudsoftware</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Koppeling naar QuickBooks Online</b> of <b>Koppeling naar Xero</b>en meld je vervolgens aan bij je account.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Let op:</b> Nadat je een koppeling hebt gemaakt met een Xero-account, kan een poging om de account te wijzigen resulteren in een fout bij het ophalen van gegevens.</p>
+        <h2>Integratie-instellingen configureren</h2>
+        <p>Om ervoor te zorgen dat je facturen correct worden geëxporteerd naar je online boekhoudprogramma, moet je de standaard inkomstenrekening, het standaard belastingtarief en de standaard betalingstermijn instellen.</p>
+        <h3>De standaard inkomensrekening instellen</h3>
+        <p>Geëxporteerde facturen worden toegepast op een inkomstenrekening die u selecteert in het vervolgkeuzemenu <b>Standaardinkomensrekening</b> .</p>
+        <p style="font-weight: bold;">Een standaardinkomensrekening instellen:</p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Tijd | Algemeen | Integratie boekhoudsoftware</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer een inkomstenrekening in het vervolgkeuzemenu <b>Standaardinkomensrekening</b> .</p>
+                <p><img src="../../Resources/Images/default-income-account.png" alt="Selecteer een inkomstenrekening in de vervolgkeuzelijst Standaardinkomensrekening." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <h3>Standaard belastingtarief instellen</h3>
+        <p>Wanneer je facturen vanuit Cloud exporteert naar de boekhoudsoftware, wordt de belastingjurisdictie automatisch in kaart gebracht op basis van de belastingtarieven die in Cloud zijn ingesteld. Je kunt ook handmatig een standaard belastingjurisdictie instellen door een <b>Standaard Belastingtarief</b> in Cloud te selecteren.</p>
+        <p>De belastingtarieven in het vervolgkeuzemenu <b>Standaardbelastingtarief</b> verschillen afhankelijk van je Cloud-instellingen en je boekhoudsoftware.</p>
+        <p style="font-weight: bold;">QuickBooks Online</p>
+        <p>Belastingtarieven in QBO die overeenkomen met uw <b>Primary Tax Rate</b> en uw <b>Secondary Tax Rate</b> worden ingevuld in het keuzemenu <b>Default Tax Rate</b> . Als je <b>Primary Tax Rate</b> bijvoorbeeld is ingesteld op 10% en je <b>Secondary Tax Rate</b> op 5%, dan worden belastingtarieven in QBO met een primair tarief van 10% en een secundair tarief van 5% weergegeven in het keuzemenu <b>Default Tax Rate</b> .</p>
+        <p><b>Xero</b></p>
+        <p>Belastingtarieven in Xero die overeenkomen met het totaal van je <b>Primaire belastingtarief</b> en je <b>Secundaire belastingtarief</b> worden ingevuld in de vervolgkeuzelijst <b>Standaard belastingtarief</b> . Als je <b>Primary Tax Rate</b> bijvoorbeeld is ingesteld op 10% en je <b>Secondary Tax Rate</b> op 5%, dan worden belastingtarieven van in totaal 15% uit Xero weergegeven in de vervolgkeuzelijst.</p>
+        <p>Voor meer informatie over het instellen van belastingtarieven, zie <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm">Tijd (instellingen)</MadCap:xref>.</p>
+        <p>Als je klanten zich in hetzelfde rechtsgebied bevinden als je bedrijf, stel dan het <b>standaard belastingtarief</b> in op het belastinggebied van je bedrijf. Als je facturen exporteert voor klanten buiten je bedrijfsjurisdictie, moet je mogelijk handmatig de juiste belastingjurisdictie instellen in je boekhoudsoftware nadat je de facturen hebt geëxporteerd.</p>
+        <p>Laten we bijvoorbeeld aannemen dat je bedrijf opereert vanuit Nova Scotia, Canada en dat je klanten hebt in zowel Nova Scotia als New Brunswick. Beide rechtsgebieden hanteren een belastingtarief van 15% voor goederen en diensten. Als de meeste van je klanten zich in Nova Scotia bevinden, stel dan het standaardbelastingtarief in op Nova Scotia. Op deze manier wordt Nova Scotia voor elke geëxporteerde factuur waarvoor 15% belasting in rekening wordt gebracht, ingesteld als jurisdictie in je boekhoudsoftware. Als je een factuur exporteert voor New Brunswick (waar ook een belastingtarief van 15% geldt), moet je het rechtsgebied handmatig wijzigen in je boekhoudsoftware.</p>
+        <p><b>Een standaard belastingtarief instellen voor geëxporteerde facturen:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Tijd | Algemeen | Integratie boekhoudsoftware</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer het toepasselijke belastingtarief in de vervolgkeuzelijst <b>Standaardbelastingtarief</b> .</p>
+                <p><img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="Het gedeelte Integratie boekhoudsoftware van de pagina Instellingen na de integratie van QuickBooks Online. " /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <h4>De standaard betalingstermijn instellen</h4>
+        <p>De standaard betalingstermijn bepaalt het aantal dagen voordat de verwachte betaling verschuldigd is. Een factuur die bijvoorbeeld op 10 juli is uitgegeven met een betalingstermijn van 7 moet op 17 juli worden betaald.</p>
+        <p>Een standaard betalingstermijn van 0 stelt de vervaldatum van alle geëxporteerde facturen in op de datum waarop de factuur is uitgegeven. Bijvoorbeeld, een factuur die is aangemaakt op 1 september met een betalingstermijn van 0 zal ook 1 september als vervaldatum hebben.</p>
+        <p>Zodra je je boekhoudsoftware integreert, wordt de standaard betalingstermijn automatisch ingesteld op 30.</p>
+        <p style="font-weight: bold;">Een standaard betalingstermijn instellen:</p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Tijd | Algemeen | Integratie boekhoudsoftware</b>.</p>
+            </li>
+            <li>
+                <p>In the <b>Default Payment Term</b> field, enter a number between 0 and 999.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="Het gedeelte Integratie boekhoudsoftware van de pagina Instellingen na de integratie van QuickBooks Online. " /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>Nadat je de integratie hebt voltooid, kun je facturen exporteren naar je online boekhoudprogramma. Voor meer informatie, zie</p>
+        <ul>
+            <li>
+                <p><a href="Export-invoices-to-QuickBooks-Online.htm">Facturen exporteren naar QuickBooks Online</a></p>
+            </li>
+            <li>
+                <p><a href="Export-invoices-to-Xero.htm">Facturen exporteren naar Xero</a></p>
+            </li>
+        </ul>
+    </body>
+</html>

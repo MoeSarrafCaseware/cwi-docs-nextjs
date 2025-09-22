@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  DefaultUrl="/Content/webapps.htm"
+  MasterToc="/Project/TOCs/Online Output.fltoc"
+  MasterPage="/Content/Resources/MasterPages/Empty.flmsp"
+  Skin="(none)"
+  ExcludeUnreferencedContent="false"
+  RemoveMadCapStyles="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/Empty.css"
+  DisableAutoSync="true"
+  MoveOutputContentToRoot="true"
+  ConditionTagExpression="include[General.Online] exclude[General.Ignore or General.PDF or General.SE-Authoring] "
+  PartialWordSearch="true"
+  EnableSitemap="true"
+  SitemapWebUrl="https://docs.caseware.com"
+  OutputFolder="C:\cloud">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger-gegevensreeksen beschreven</h1>
+        <p>Als je grootboektransacties <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importeert</a> vanuit een CSV- of Excel-bestand, moet je de velden in kaart brengen, zodat de transactiegegevens goed worden weergegeven in de overeenkomst.</p>
+        <p>Dit onderwerp beschrijft de velden binnen de categorie <b>AANVULLENDE DETAILEN</b> die verschijnen in de grootboekdataset.</p>
+        <p>Merk op dat sommige velden verplicht zijn om goed te functioneren bij specifieke tests voor gegevensanalyse. Zie voor meer informatie <a href="CSV-transaction-file-requirements.htm#Mandator2">Verplichte velden voor gegevensanalyse</a>.</p>
+        <h2>Regelnummer<code>(regel_nummer</code>)</h2>
+        <p>De ID die uniek is voor elke regel in een post. ID wordt automatisch gegenereerd als het niet getagd was.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Indien gelabeld, wordt dit gebruikt als de identificator van de transactieregel.</li>
+                <li>Als het regelnummer niet gelabeld is, krijgt elke transactieregel binnen elke unieke transactie een volgnummer dat begint bij 1.</li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Er mogen geen lege regelnummercellen zijn.</li>
+                <li>Er mogen geen dubbele regelnummers zijn voor elke unieke vermelding.</li>
+            </ul>
+        </p>
+        <h2>Toegang ID<code>(entry_id</code>)</h2>
+        <p>Een identificatienummer dat uniek is voor iedere journaalpost - nummer hoeft niet opeenvolgend te zijn.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Indien gelabeld, wordt dit gebruikt om transacties te groeperen.</li>
+                <li>Als Entry Nummer en Entry ID niet gelabeld zijn, krijgt elke transactie een willekeurige unieke identificatie.</li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>Er mogen geen lege invoer-ID-cellen zijn.</p>
+    </body>
+</html>

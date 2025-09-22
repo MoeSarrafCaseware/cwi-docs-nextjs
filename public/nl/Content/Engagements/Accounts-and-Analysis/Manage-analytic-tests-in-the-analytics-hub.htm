@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Analytische tests beheren in de Analytics Hub</h1>
+        <p class="note"><b>Let op:</b> Deze functie is alleen beschikbaar als deze is ingeschakeld in uw product.</p>
+        <p>De Analytics Hub is een centrale locatie die je kunt gebruiken om alle analysetests te bekijken en te beheren die beschikbaar zijn in je engagement. From the Analytics Hub, you can</p>
+        <ul>
+            <li>
+                <p>Alle analytische tests bekijken die beschikbaar zijn in je engagement</p>
+                <p class="note"><b>Let op:</b> Tests die zijn gekoppeld aan verborgen controlelijstprocedures worden niet weergegeven in de Analytics Hub</p>
+            </li>
+            <li>
+                <p>Teststatussen en resultaten bekijken</p>
+            </li>
+            <li>
+                <p>Filter tests</p>
+            </li>
+            <li>
+                <p>Aanpassingen aanbrengen aan testconfiguraties</p>
+            </li>
+            <li>
+                <p>Navigeren naar gekoppelde controlelijstprocedures</p>
+            </li>
+        </ul>
+        <p>Om de Analytics Hub te openen, selecteert u <b>Analytics Hub</b> in het bovenste menu. Als je de pagina opent, zie je aan de linkerkant een lijst met alle tests die beschikbaar zijn in je verbintenis. Je kunt zoeken of de filters gebruiken om de test te vinden die je zoekt.</p>
+        <p><img src="../../Resources/Images/analytics-hub-multiple-tests-selected.png" alt="De Analytics Hub." /></p>
+        <p>Zodra je een test opent, kun je de configuratie aanpassen of navigeren naar de gekoppelde controlelijstprocedures op het tabblad <b>Testparameters</b> . Om de test uit te voeren, kun je de knop <b>Uitvoeren</b> selecteren en vervolgens de resultaten bekijken op het tabblad <b>Resultaten</b> voor de test. Je kunt ook meerdere tests selecteren met de selectievakjes en ze tegelijkertijd uitvoeren.</p>
+        <p><img src="../../Resources/Images/analytics-hub-test-opened.png" alt="De Analytics Hub met rechts een geopende test." /></p>
+        <p>Om de pagina <b>met samengevoegde resultaten</b> te openen, selecteert u de knop <b>Resultaten</b> boven aan de pagina. Deze pagina toont alle transacties die gemarkeerd zijn als resultaat van alle tests die je hebt uitgevoerd. Je kunt de opties <b>Kolommen</b> en <b>Filters</b> gebruiken om de resultaten die je ziet te filteren en de knop <b>Exporteren</b> gebruiken om de resultaten te exporteren naar een CSV-bestand.</p>
+        <p><img src="../../Resources/Images/analytics-hub-aggregated-results-page.png" alt="De pagina Geaggregeerde resultaten." /></p>
+        <h2>Gegevens dynamisch filteren voor analytische tests</h2>
+        <p>Je kunt de brondataset voor een analytische test filteren en vervolgens de test uitvoeren op de subset van gegevens die door het filter is geïdentificeerd.</p>
+        <p><b>Gegevens dynamisch filteren voor een analytische test:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer in de Analytics Hub de analysetest waarvan u de invoergegevensverzameling wilt filteren.</p>
+            </li>
+            <li>
+                <p>In <b>Gegevensverzameling filteren</b>selecteren ze <b>+ Filter toevoegen</b> om een filtervoorwaarde te maken die wordt toegepast op een enkele kolom van de invoergegevensverzameling.</p>
+            </li>
+            <li>
+                <p>Je kunt de kolom selecteren waarin je een filter wilt toepassen.</p>
+            </li>
+        </ol>
+        <p class="indent"><ul><li><p>Een filter ondersteunt een of meer filtervoorwaarden.</p></li><li><p>Meerdere filtervoorwaarden kunnen worden verbonden met logische connectieven zoals AND, OR of NOT.</p></li><li><p>Elke filtervoorwaarde wordt alleen toegepast op een enkele kolom van de invoerdataset.</p></li><li><p>Voorwaardelijke argumenten verschillen per gegevensformaat. In een datumkolom kun je bijvoorbeeld een bereik opgeven.</p></li></ul></p>
+        <p><img src="../../Resources/Images/Step1-AnalyticFilter.png" alt="Selecteer een kolom waarop u een filtervoorwaarde wilt toepassen." /></p>
+        <ol>
+            <li value="4">Maak de filtervoorwaarde en selecteer <b>Filter</b> om deze uit te voeren.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step2-Filtering.png" alt="Maak een filtervoorwaarde om de subset van gegevens te isoleren waarop je de analytische test wilt uitvoeren." /></p>
+        <p class="indent">Het aantal gegevensrijen dat aan de voorwaarde voldoet, verschijnt.</p>
+        <ol>
+            <li value="5">Je kunt dan de analytische test uitvoeren op deze subset van gegevens door op <b>Uitvoeren</b>te klikken.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step3-RunAnalyticTestonFilteredSubset.png" alt="Voer de analytische test uit op de subset van invoergegevens die je met het filter hebt gemaakt." /></p>
+    </body>
+</html>

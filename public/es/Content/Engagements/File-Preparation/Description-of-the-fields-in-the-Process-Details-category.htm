@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Process details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>PROCESS DETAILS</b> category that appear in the General ledger dataset..</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Número de documento original</h2>
+        <p>Número que identifica el documento original que da comienzo al flujo del proceso empresarial. This is the document which is the precursor for this recorded transaction. <br />Ejemplos: &quot;PO-001&quot;, &quot;132134&quot;.</p>
+        <h3>Requisitos</h3>
+        <p>
+            <ul>
+                <li>Less than 2,500 unique values.</li>
+                <li>The data in the applicable column in the transaction import file (the CSV file) must be assigned to the <code>originating_document_number</code> values below:<![CDATA[ 
+					]]><ul><li>Asientos</li><li>AR - Accounts Receivable Adjustments (credits, returns, other adjustments)</li><li>Contratos de compra</li><li>Desembolso de efectivo</li><li>AP - Accounts Payable Adjustments (credits, returns, other adjustments)</li><li>Solicitudes de compra</li><li>Recibos de efectivo</li><li>Activos fijos</li><li>Pedidos de compra</li><li>SJ - Sales Journal (Sales Invoice Listing)</li><li>Activos de inversión</li><li>Bienes enviados</li><li>PJ - Purchases Journal (Purchase Invoice Listing)</li><li>Contrato de ventas</li><li>Bienes recibidos</li><li>PL - Payroll Journal</li><li>Pedidos de venta</li><li>OT - Other</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

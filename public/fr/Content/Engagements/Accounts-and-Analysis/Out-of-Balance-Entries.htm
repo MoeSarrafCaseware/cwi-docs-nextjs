@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Écritures non équilibrées</h1>
+        <p>Le test analytique Écritures non équilibrées est utilisé pour créer une liste des écritures de journal dont le montant total de chaque écriture n&apos;est pas égal à zéro.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>La baisse de l&apos;exactitude et de la précision des rapports financiers</p>
+            </li>
+            <li>
+                <p>Des problèmes systémiques dans le traitement des transactions par un service</p>
+            </li>
+            <li>
+                <p>Les paramètres du système qui ne sont pas correctement configurés</p>
+            </li>
+            <li>
+                <p>L’échec du processus de validation des données</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Les comptes qui n&apos;ont pas été rapprochés en temps utile ou qui contiennent des différences non rapprochées</p>
+            </li>
+            <li>
+                <p>Les transactions unilatérales</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs ci-dessous sont utilisés pour cette analyse :</p>
+        <ul>
+            <li>
+                <p>Un champ qui contient un identifiant de transaction unique, tel que le champ <b>ID de l’écriture</b> dans l’ensemble de données du grand livre général. Ce champ est utilisé pour déterminer le solde de la transaction et évaluer s&apos;il est en équilibre ou hors équilibre. Pour les transactions à double écriture, vous devez sélectionner le champ à utiliser comme identifiant unique. Il s&apos;agit du paramètre du <b>champ Regroupement</b>.</p>
+            </li>
+            <li>
+                <p>Le champ contenant le montant de la ligne de transaction. Notez que les valeurs positives sont considérées comme des transactions de débit, et les valeurs négatives comme des transactions de crédit.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Un paramètre doit être défini pour que ce test puisse être exécuté :</p>
+        <p><b>Champ de regroupement</b> – Sélectionnez le champ à utiliser comme identifiant unique pour les transactions à double écriture, tel que le champ <b>ID d&apos;écriture</b> ou le champ <b>Numéro d&apos;écriture</b>. Par défaut, le champ <b>Numéro d&apos;écriture</b> est utilisé pour ce paramètre.</p>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique des montants arrondis, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Totalisez le montant pour chaque identifiant de transaction unique.</p>
+            </li>
+            <li>
+                <p>Extrayez tous les éléments pour lesquels le total est différent de zéro.</p>
+            </li>
+            <li>
+                <p>Reliez les montants non nuls au fichier d&apos;origine en utilisant l&apos;identifiant unique de la transaction et l’exporter en tant que résultat du test.</p>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

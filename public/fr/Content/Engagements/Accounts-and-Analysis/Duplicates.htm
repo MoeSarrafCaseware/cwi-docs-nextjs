@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Doublons</h1>
+        <p>Le test analytique Doublons détecte les transactions ou les enregistrements en double ou potentiellement frauduleux dans les états financiers ou les documents comptables d&apos;une entreprise. Il permet de déceler des erreurs, des exceptions ou des activités frauduleuses telles que la double comptabilisation des produits, des charges ou des actifs.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>Les domaines de l&apos;information financière dont l&apos;exactitude ou la précision est moindre</p>
+            </li>
+            <li>
+                <p>Les transactions fictives</p>
+            </li>
+            <li>
+                <p>Des problèmes systémiques dans le traitement des transactions par un service</p>
+            </li>
+            <li>
+                <p>Des paramètres du système mal configurés pouvant nécessiter une amélioration et une évaluation plus poussée</p>
+            </li>
+            <li>
+                <p>L’échec du processus de validation des données</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+            <li>
+                <p>Les transactions reportées en double par erreur</p>
+            </li>
+            <li>
+                <p>Processus redondants ou manque de coordination entre les services</p>
+            </li>
+            <li>
+                <p>Problèmes avec les rapprochements</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ <b>ID de l’écriture</b> pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champs en double</b> – Un ou plusieurs champs qui seront comparés pour rechercher les doublons.</p>
+            </li>
+            <li>
+                <p><b>Champs différents</b> – Un ou plusieurs champs qui doivent être différents pour rechercher les écritures en double. Ces champs sont facultatifs et sont utilisés seulement pour l&apos;analyse lorsque vous recherchez des doublons avec un champ différent. Par exemple, si vous recherchez le même paiement effectué à des dates différentes, le champ du paiement sera le champ dupliqué, et le champ de la date sera le champ qui doit être différent.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Il n&apos;y a pas de paramètres définis par l&apos;utilisateur pour ce test.</p>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par ID de compte, type d&apos;identifiant, numéro d&apos;écriture, date de la saisie, saisi par et montant</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par type de document d&apos;origine et numéro de document d&apos;origine</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par type de document et numéro de document</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par champ Saisi par l&apos;utilisateur différent</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Montant en double par identifiant</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Date et montant de la saisie en double par type de document</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par description et montant</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">JE différents : Même numéro de compte, montant et date de saisie</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Écritures en double – Par numéro de compte, montant, numéro de document et date de saisie</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Date d&apos;entrée différente : Same Account Number, Amount, Document Number</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numéros de facture en double</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Dates de facture fournisseur en double</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numéros de chèques en double</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Montants de facture fournisseur en double</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Transactions en double</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Transaction en double avec une date de facture différente</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Transaction en double avec date saisie différente</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Doublons, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première. Notez qu’il n’est pas encore possible de définir des filtres et que ce le sera dans les versions ultérieures du test.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;au moins un champ a été sélectionné pour effectuer l&apos;analyse des doublons.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un champ différent facultatif a été sélectionné.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un champ de plage de dates a été sélectionné.</p>
+            </li>
+            <li>
+                <p>Test de base :</p>
+                <ul>
+                    <li>
+                        <p>Seuls les champs en double sont marqués – Effectuez l&apos;analyse en recherchant des correspondances dans la base de données et exportez toutes les correspondances dans le fichier de résultats.</p>
+                    </li>
+                    <li>
+                        <p>Champ différent sélectionné – Effectuez l&apos;analyse en recherchant les correspondances dans lesquelles le champ sélectionné comme différent ne correspond pas. Exportez toutes les correspondances dans le fichier de résultats.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Ajoutez une colonne supplémentaire qui regroupe les doublons. Par exemple, la première série de doublons sera regroupée sous le numéro 1 dans cette colonne, et la deuxième série sera regroupée sous le numéro 2.</p>
+            </li>
+        </ol>
+    </body>
+</html>

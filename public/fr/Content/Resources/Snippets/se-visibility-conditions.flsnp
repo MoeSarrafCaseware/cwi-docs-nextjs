@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="instNotes" style="color: #000000;">Le tableau suivant décrit les conditions de visibilité disponibles :</p>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Condition</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Paramètres</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Exemple</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">RMM (risque d&apos;anomalies significatives)</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez un type d&apos;assertion, un groupe de la balance générale et l&apos;une des conditions suivantes :</p>
+                        <ul>
+                            <li style="color: #000000;"><b>RMM</b> - le groupe sélectionné dispose d&apos;un RMM pour ce type d&apos;assertion</li>
+                            <li style="color: #000000;"><b>Pas de RMM</b> - le groupe sélectionné n&apos;a pas de RMM pour ce type d&apos;assertion</li>
+                        </ul>
+                        <p style="color: #000000;">Si le nouveau module de risque est activé dans votre produit, un ensemble différent de paramètres est disponible pour cette condition :</p>
+                        <ul>
+                            <li style="color: #000000;">Sélectionner le type d&apos;assertion</li>
+                            <li style="color: #000000;">Sélectionner le domaine ou le cycle économique</li>
+                            <li style="color: #000000;">Spécifier l&apos;opération logique à comparer et à évaluer (=,&lt;=,&gt;=)</li>
+                            <li style="color: #000000;">Sélectionner l&apos;échelle RMM</li>
+                        </ul>
+                        <p style="color: #000000;">Notez que les valeurs de la liste des échelles RMM dépendent de la configuration de votre produit.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si l&apos; <b>exhaustivité de l</b> &apos; <b>encaisse</b>  <b>n&apos;a pas de RMM</b>, afficher cet élément.</p>
+                        <p style="color: #000000;"><i>Ou si le nouveau module de risque est activé dans votre produit :</i></p>
+                        <p><span style="color: #000000;">Si </span><b style="color: #000000;">Précision</b><span style="color: #000000;"> pour </span><b style="color: #000000;">Inventaire</b><span style="color: #000000;"> a </span><b style="color: #000000;">RMM inférieur à Moyen</b><span style="color: #000000;">alors cachez cet élément.</span></p>
+                        <p style="color: #000000;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Groupement financier</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez un groupe dans la balance générale, indiquez l&apos;année (actuelle ou antérieure) et l&apos;une des valeurs de solde suivantes :</p>
+                        <ul>
+                            <li style="color: #000000;">est égal à zéro</li>
+                            <li style="color: #000000;">est non nulle</li>
+                            <li style="color: #000000;">est matériel</li>
+                            <li style="color: #000000;">n&apos;est pas significatif</li>
+                        </ul>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si le solde du compte des <b>placements à court terme</b> pour l&apos; <b>exercice en cours</b> est <b>important, il</b> faut alors indiquer ce poste</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Réponse</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionner un document source, une procédure dans le document et une réponse à la procédure</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Dans le document <b>200 Optimizer</b> , si la réponse à la procédure <b>Quel est le type de mission tel que défini par SSARS21 ?</b> est <b>Compilation</b>, masquer cet élément</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Consolidation</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Préciser si la mission est consolidée ou non consolidée</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si l&apos;engagement est <b>consolidé</b>, afficher cet élément</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Mise à l&apos;échelle/arrondi</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez une échelle d&apos;arrondi dans la liste déroulante.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si l&apos;arrondi est en <b>millions</b>, afficher cet élément.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Période intermédiaire</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez la période de référence :</p>
+                        <ul>
+                            <li style="color: #000000;">Mensuel</li>
+                            <li style="color: #000000;">Trimestrielle</li>
+                            <li style="color: #000000;">Semestrielle</li>
+                            <li style="color: #000000;">Annuel</li>
+                        </ul>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si la période de référence est <b>annuelle</b>, l&apos;affichage de cette rubrique</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Date</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez la nature de la date :</p>
+                        <ul>
+                            <li style="color: #000000;">En vigueur le</li>
+                            <li style="color: #000000;">Expire le</li>
+                        </ul>
+                        <p style="color: #000000;">Sélectionnez les options de type de période pour l&apos;exercice comptable et les périodes intermédiaires au sein d&apos;un exercice comptable :</p>
+                        <ul>
+                            <li style="color: #000000;">Date de début de l&apos;année</li>
+                            <li style="color: #000000;">Date de fin d&apos;année</li>
+                            <li style="color: #000000;">Date de début de la période</li>
+                            <li style="color: #000000;">Date de fin de période</li>
+                        </ul>
+                        <p style="color: #000000;">Sélectionner les opérations mathématiques utilisées pour comparer et évaluer (&lt;,&gt;, &lt;=,&gt;=)</p>
+                        <p style="color: #000000;">Sélectionner la date</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Cette rubrique indique si la <b>date</b>  <b>d&apos;entrée en</b>  <b>vigueur</b> pour le <b>début de l&apos;année</b> est postérieure au <b>30 novembre 2019.</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Type d&apos;organisation</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Sélectionnez le pays et le type d&apos;organisation</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Si le type d&apos;entité est une <b>société privée canadienne</b>, afficher cette rubrique</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">Langue</span></td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">Sélectionnez une langue de contenu dans la liste déroulante. </span></td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">Si la langue du contenu est </span><b style="color: #000000;">Français</b><span style="color: #000000;">, affichez cet élément.</span><p><span style="color: #000000;">Notez que la langue du contenu correspond à la langue actuellement sélectionnée dans la fenêtre contextuelle <a href="../../Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Set">des propriétés de l&apos;engagement</a> .</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Groupe</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Ajouter les conditions dans ce groupe</p>
+                        <p style="color: #000000;" class="note"><b>Remarque :</b> Tous les types de conditions susmentionnés peuvent être définis.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Cette rubrique indique si le type de mission est <b>Examen</b> et si le type d&apos;entité est <b>Société privée canadienne</b> ou si la date de début d&apos;année est postérieure au <b>21 octobre 2019 </b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;">Valeur du formulaire</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;">
+                        <p>Vous pouvez inclure un ou plusieurs formulaires dans la configuration des conditions. Sélectionnez le nom du formulaire, un champ du formulaire sélectionné et une valeur pour le champ sélectionné.</p>
+                        <p>Les options de valeur pour un champ sélectionné dépendent du type de champ. Par exemple, les champs numériques comportent des opérateurs logiques et des valeurs numériques, tandis que les champs de date comportent une icône de calendrier pour la sélection de la date.</p>
+                        <p class="note"><b>Remarque :</b> Cette condition n&apos;est disponible que si vous avez des formulaires personnalisés dans votre produit. Par exemple, les formulaires fiscaux.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;"><span style="color: #000000;">Si le champ </span><b style="color: #000000;">T2S8</b><span style="color: #000000;"> dans </span><b style="color: #000000;">S8 - Déduction pour amortissement (DPA)</b><span style="color: #000000;"> est </span><b style="color: #000000;">&gt; 10</b><span style="color: #000000;"> ou le champ </span><b style="color: #000000;">T3S8</b><span style="color: #000000;"> en </span><b style="color: #000000;">S8 - Déduction pour amortissement (DPA)</b><span style="color: #000000;"> est </span><b style="color: #000000;">&gt; 10</b><span style="color: #000000;">alors affichez ce poste.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

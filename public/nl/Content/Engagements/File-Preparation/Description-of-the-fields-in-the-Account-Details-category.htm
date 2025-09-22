@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger-gegevensreeksen beschreven</h1>
+        <p>Als je grootboektransacties <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importeert</a> vanuit een CSV- of Excel-bestand, moet je de velden in kaart brengen, zodat de transactiegegevens goed worden weergegeven in de overeenkomst.</p>
+        <p>Dit onderwerp beschrijft de velden binnen de categorie <b>ACCOUNT DETAILS</b> die verschijnen in de grootboekdataset.</p>
+        <p>Merk op dat sommige velden verplicht zijn om goed te functioneren bij specifieke tests voor gegevensanalyse. Zie voor meer informatie <a href="CSV-transaction-file-requirements.htm#Mandator2">Verplichte velden voor gegevensanalyse</a>.</p>
+        <h2>Rekeningidentificatiecode<code>(account_id</code>)</h2>
+        <p>Een ID of de rekening waar de boeking in is opgenomen. Deze moet overeenkomen met het rekeningschema. <br />&quot;1001&quot; of &quot;Bankrekening 1&quot;.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Moet gelabeld zijn om alle transactiegerelateerde functies te laten werken.</li>
+                <li>Proefbalans koppelen aan transactiegegevens.</li>
+                <li>Proefbalans inzoomen in transacties.</li>
+                <li>In alle AnalyticsAI-tests - Alle tests vereisen Account Identifier.</li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Minder dan 5.000 unieke waarden.</li>
+                <li>Komt overeen met geïmporteerde proefbalansrekeningen.</li>
+            </ul>
+        </p>
+        <h2>Beschrijving hoofdrekening<code>(account_main_description</code>)</h2>
+        <p>ID-omschrijving van de rekeningengroep waar de post is geboekt. <br />Voorbeelden: &quot;Kasgeld&quot;, &quot;Materiële vaste activa&quot;.</p>
+        <h3>Instructies</h3>
+        <p>Visuele tekstbeschrijving voor accounts.</p>
+        <h2>Ingevoerd door<code>(entered_by</code>)</h2>
+        <p>Gebruikers-ID van degene die de post aanmaakte..</p>
+        <h3>Instructies</h3>
+        <p>In deze AnalyticsAI-tests:<ul><li>Ingevoerd en goedgekeurd door dezelfde gebruiker</li><li>Ongebruikelijke gebruikers</li></ul></p>
+        <h2>Ingevoerde datum<code>(entered_date</code>)</h2>
+        <p>Feitelijke datum/tijdstip waarop de post in het systeem is geboekt - wordt automatisch opgegeven door het systeem - komt niet noodzakelijk overeen met de datum van de geboekte post in het grootboek.</p>
+        <h3>Instructies</h3>
+        <p>In de Ongebruikelijke Tijden AnalyticsAI-test.</p>
+        <h3>Benodigd</h3>
+        <p>De datumnotatie moet correct zijn ingesteld:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Entry Verantwoordelijke persoon<code>(entry_responsible_person</code>)</h2>
+        <p>Gebruikers-ID van degene die de invoer goedkeurt.</p>
+        <h3>Instructies</h3>
+        <p>In dezelfde gebruiker die AnalyticsAI-test invoert en goedkeurt.</p>
+    </body>
+</html>

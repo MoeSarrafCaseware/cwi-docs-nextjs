@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.Not-in-TOC">
+    <head>
+    </head>
+    <body>
+        <h1>Activation of staff and contact accounts</h1>
+        <p>New accounts for staff members or contacts are activated differently in Cloud:</p>
+        <ul>
+            <li><b>Staff accounts</b> are activated immediately after their account is added to the system.</li>
+            <li><b>Contact accounts</b> are activated after the added contact is assigned the <i>Entity Collaborator</i> role on an entity.</li>
+        </ul>
+        <h2>Activation Emails</h2>
+        <p>Activating either account type may prompt the system to send an activation email to the user. The activation email includes both your Cloud URL and a link to a page where they can set their account password. This information must be provided separately to the staff or contact if the activation email is not sent.</p>
+        <p>Determining if the activation email is sent depends on how the staff or contact was added to the system. Both the staff and contact forms provide a password field and an administrator has the option of specifying a password or leaving the password field blank.</p>
+        <ul>
+            <li><b>When a password is not specified</b> the system automatically sends an activation email to the staff or contact <i>when their account is activated</i>.</li>
+            <li><b>When a password is specified</b> the system does not send an activation email to the staff or contact at all. In this case, the initial password and Cloud URL must be provided separately.</li>
+        </ul>
+        <h2>Zusammenfassung</h2>
+        <p>The following table summarizes the system behavior when activating staff or contact accounts:</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Password Field</th>
+                    <th>System Behavior</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Password is not specified</td>
+                    <td>
+                        <ul>
+                            <li>For Staff: Activation email is automatically sent to the staff email address <b>after their account is added to the system.</b></li>
+                            <li>For Contacts: Activation email is automatically sent to the contact email address <b>after they are assigned the </b><i style="font-weight: bold;">Entity Collaborator</i><b> role on an entity in the system.</b></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password is specified</td>
+                    <td>
+                        <p>Activation email is not sent for either staff or contacts.</p>
+                        <p class="note"><b>Note:</b> You must provide the staff member with your Cloud URL and their initial password.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

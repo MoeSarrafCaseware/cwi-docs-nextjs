@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Créer une application API Web (ADFS)</h1>
+        <p>Créez une application Web API pour le site Cloud de votre entreprise et définissez les autorisations de l&apos;application.</p>
+        <p style="font-weight: bold;">• Créer une application API Web</p>
+        <ol>
+            <li>
+                <p>Dans la console d&apos;administration ADFS, cliquez sur le dossier <b>Groupes d&apos;application</b> , puis double-cliquez sur votre <a href="Create-a-new-application-group.htm">nouveau groupe d&apos;application</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>In the Properties dialog, click <b>Add Application</b>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-02.png" /></p>
+            </li>
+            <li>
+                <p>Dans la liste Template, sélectionnez <b>Web API.</b> Cliquez sur <b>Suivant.</b></p>
+                <p><img src="../../Resources/Images/adfs-api-app-03.png" /></p>
+            </li>
+            <li>
+                <p>Collez le <b>Secret du Client</b> que vous avez copié précédemment dans un document texte. Cliquez sur <b>Suivant.</b></p>
+                <p><img src="../../Resources/Images/adfs-api-app-04.png" /></p>
+            </li>
+            <li>
+                <p>Dans la liste des politiques de contrôle d&apos;accès, sélectionnez celle qui s&apos;applique le mieux à votre entreprise. Cliquez sur <b>Suivant.</b></p>
+                <p><img src="../../Resources/Images/adfs-api-app-05.png" /></p>
+            </li>
+            <li>
+                <p>Dans la liste des champs d&apos;application autorisés, sélectionnez les champs d&apos;application suivants :</p>
+                <ul>
+                    <li>
+                        <p>toutes les demandes d&apos;indemnisation</p>
+                    </li>
+                    <li>
+                        <p>Courriel</p>
+                    </li>
+                    <li>
+                        <p>Openid</p>
+                    </li>
+                    <li>
+                        <p>Profil</p>
+                    </li>
+                </ul>
+                <p>Cliquez sur <b>Suivant.</b></p>
+                <p><img src="../../Resources/Images/adfs-api-app-06.png" /></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Oui</b> pour remplir le rapport.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Create-an-Issuance-Transform-rule.htm">• Créer une règle de transformation des délivrances</a></p>
+    </body>
+</html>

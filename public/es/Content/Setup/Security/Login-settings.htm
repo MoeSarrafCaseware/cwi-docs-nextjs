@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can configure Cloud login settings to meet your security requirements." />
+    </head>
+    <body>
+        <h1>Configuración de inicio de sesión</h1>
+        <p>When you first begin to set up your Cloud profile, you can configure Cloud settings for your organization&apos;s security. As an administrator, you can:</p>
+        <ul>
+            <li>
+                <p>Change the Cloud password settings</p>
+            </li>
+            <li>
+                <p>Set online session length</p>
+            </li>
+            <li>
+                <p>Configure two-factor authentication</p>
+            </li>
+        </ul>
+        <h2 id="password-req">Set password requirements</h2>
+        <p>Cloud has a default set of password requirements that are enforced for all new users. Once you have successfully logged into Cloud yourself, you can make these requirements more strict.</p>
+        <p><b>To set password requirements:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Security | Password Settings</b>. The <b>Password Settings</b> page is displayed.</p>
+            </li>
+        </ol>
+        <p>You can set a minimum password strength and you can choose whether or not passwords will expire. Once you have set the password requirements, select <b>Save</b> to apply your changes.</p>
+        <h3 id="password-req-minimum-strength">Minimum password strength</h3>
+        <p>The minimum password strength is a setting that determines the minimum length for Cloud passwords and the different types of characters that must be included. Characters are grouped into four types:</p>
+        <ul>
+            <li>
+                <p>lower-case letters</p>
+            </li>
+            <li>
+                <p>upper-case letters</p>
+            </li>
+            <li>
+                <p>Números</p>
+            </li>
+            <li>
+                <p>non-alphanumeric characters</p>
+            </li>
+        </ul>
+        <p>The minimum password strength is <b>Moderate</b> by default, but you can set it to <b>Strong</b> or <b>Very Strong</b>. The stronger you require your Cloud passwords to be, the longer the passwords must be or the more different character types your users must include.</p>
+        <p>For example, if you apply the <b>Moderate</b> setting, a staff member can use a password that is all lower-case letters if it is at least 12 characters long. If you apply the <b>Very Strong</b> setting, the same staff member can only use a password of all lower-case letters if the password is at least 30 characters long.</p>
+        <h3 id="password-req-expiry"><a name="Password"></a>Password expiry</h3>
+        <p>This password expiry setting lets you require staff members to periodically change their passwords. By default, passwords will never expire.</p>
+        <p>To set up expiring passwords, choose <b>Yes</b> in the <b>Passwords expire</b> field. A new line is displayed where you can specify the number of months before passwords expire.</p>
+        <h2 id="session-length">Set online session length</h2>
+        <p>When a staff member signs in to Cloud, they begin a session. That staff member ends their session when they sign out from Cloud or when they close the application (in the web browser or in Working Papers).</p>
+        <p>You can change this session management setting for all users in your organization. If you set Cloud to remember users on sign in, users will only have to log in once for a specified period of time. They will be able to close their browser without ending the session, and if they go back to Cloud in the same browser, they will automatically return to the last place they worked without needing to log in again.</p>
+        <p>While a longer session duration reduces your login frequency, it increases the chances that the session can become compromised. We suggest that you set the online session length to a reasonable duration.</p>
+        <p><b>To set online session length:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Security | Session Management</b>. The <b>Session Management</b> page is displayed.</p>
+            </li>
+            <li>
+                <p>Select the checkbox for <b>Remember Users on Sign In</b>. A new line with a field for <b>Hours to Remember Users</b> is displayed.</p>
+            </li>
+            <li>
+                <p>Enter the number of hours that your organization&apos;s Cloud sessions should stay open after users close the application.</p>
+            </li>
+            <li>
+                <p>Select <b>Save</b> to apply your changes.</p>
+            </li>
+        </ol>
+        <p>Once this setting is enabled, users for your organization will have the option to stay signed in for the number of hours that you entered in the settings.</p>
+        <p><img src="../../Resources/Images/session-management-remember-630x270.png" style="border:1px solid #3f66a3" alt="A user who selects this checkbox before signing in will be able to reopen Cloud without entering their user credentials for up to 8 hours after closing the browsing session." /></p>
+        <h2 id="configure-2fa"><a name="Configur"></a>Configure two-factor authentication</h2>
+        <p class="note"><b>Note:</b> SMS-based two-factor authentication is currently available free of charge on a trial basis. In a future release, our development team will add a second method of two-factor authentication. That method will work with mobile devices, will not rely on SMS, and will be free to use. When the second method becomes available, there may be additional costs for continued use of SMS-based two-factor authentication.</p>
+        <p>To effectively secure your organization&apos;s sensitive data, consider enabling two-factor authentication. With two-factor authentication, you will be expected to supply two pieces of information to verify your identity before gaining access to Cloud.</p>
+        <ul>
+            <li>
+                <p>Your password</p>
+            </li>
+            <li>
+                <p>A single-use code sent to your mobile phone</p>
+            </li>
+        </ul>
+        <p>Using two pieces of information helps ensure that you are the only person that can access your account, even if someone else has your password.</p>
+        <h3>Best practices</h3>
+        <p>We recommend the following to ensure users with two-factor authentication can maintain access to Cloud:</p>
+        <ul>
+            <li>
+                <p>Ensure that your organization has <b>at least two</b> staff members with the Admin role before enabling two-factor authentication. Only staff members with the Admin role can disable two-factor authentication. Granting this role to two users ensures that at least one account will always be able to access Cloud. For instructions, see <a href="Assign-system-wide-security-roles.htm">Assign security roles</a>.</p>
+            </li>
+            <li>
+                <p><a href="Login-settings.htm#Generate">Generate backup codes</a>. Backup codes are single-use codes that enable you to log in if you cannot access your mobile phone, or if an administrator is unavailable to disable two-factor authentication for you.</p>
+            </li>
+        </ul>
+        <h3><a name="Addition"></a>Additional requirements for Working Papers users</h3>
+        <p>Currently, two-factor authentication is only supported with Working Papers 2017.00.283 or later. If you are using an earlier version of Working Papers, an administrator must disable two-factor authentication for your Cloud account otherwise you will not be able to sign in.</p>
+        <p>To learn more about disabling two-factor authentication for individual accounts, see <MadCap:xref href="Login-settings.htm#Enable">Enable two-factor authentication for your own account</MadCap:xref>.</p>
+        <h3 id="enable-2fa">Enable two-factor authentication across your organization</h3>
+        <p class="note"><b>Note</b>: Staff and contacts can always enable two-factor authentication from their own accounts. For more information on enabling two-factor authentication for individual users, see <MadCap:xref href="Login-settings.htm#Enable">Enable two-factor authentication for your account</MadCap:xref>.</p>
+        <p>You can enable two-factor authentication for all staff and contacts from the Settings page. You can also enable two-factor authentication for your account individually.</p>
+        <p><b>To enable two-factor authentication for staff and contacts: </b></p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role or the equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings | Security | Authentication and Session Management</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>All Staff</b>, <b>All Contacts</b>, or both. If you want either group to be able to opt out of two-factor authentication temporarily, <b>select Allow user to skip setup until:</b> and choose a date and time. This option is intended to allow users sufficient time to complete the setup process.</p>
+                <p><img src="../../Resources/Images/firm-settings-authentication-session-management-2fa-settings.png" alt="Two-factor authentication options availble on the Settings page." /></p>
+            </li>
+            <li>
+                <p>From the drop-down menu, select <b>Every 30 days</b> or <b>Every sign in</b> to set how often two-factor authentication is required when you sign in. You will need to provide a new code the first time you sign in from a new device regardless of your choice.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p>You have enabled two-factor authentication for staff and contacts. If you prefer, you can leave the decision to enable two-factor authentication up to individual users. For more information see <MadCap:xref href="Login-settings.htm#Enable">Enable two-factor authentication for your own account</MadCap:xref>.</p>
+        <h3 id="enable-personal-2fa"><a name="Enable"></a>Enable two-factor authentication for your own account</h3>
+        <p>You can enable two-factor authentication for your own account at any time, even if it&apos;s not enabled across your organization. You&apos;ll need a valid phone number to enable this option.</p>
+        <p><b>To enable two-factor authentication for an individual account: </b></p>
+        <ol>
+            <li>
+                <p>Select your <b>avatar</b> and choose <b>My Settings</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="The avatar menu." /></p>
+            </li>
+            <li>
+                <p>From the sidebar, select <b>Account Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Enable</b>, then choose your country from the <b>Country</b> drop-down menu.</p>
+            </li>
+            <li>
+                <p>Enter your mobile phone number in the <b>Mobile Phone</b> field, then select <b>Update Phone Number</b>.</p>
+                <p><img src="../../Resources/Images/personal-settings-acount-settings-2fa.png" alt="Two-factor authentication options in My Settings." /></p>
+            </li>
+            <li>
+                <p>Enter your password, then enter your verification code in the <b>Verification Code</b> field.</p>
+            </li>
+            <li>
+                <p>Select <b>Verify</b>.</p>
+            </li>
+        </ol>
+        <p>You have set up two-factor authentication for an individual account. If you lose your phone, an administrator can temporarily disable two-factor authentication. For more information, see <MadCap:xref href="Login-settings.htm#Disable">Disable two-factor authentication for a specific user</MadCap:xref>.</p>
+        <h4 id="update-phone">Update your phone number</h4>
+        <p>If you change your phone number, you&apos;ll need to update your two-factor settings . If you can no longer access your Cloud account, an administrator can temporarily disable your two-factor authentication (see <MadCap:xref href="Login-settings.htm#Disable">Disable two-factor authentication for a specific user</MadCap:xref> ).</p>
+        <p><b>To update your phone number:</b><![CDATA[
+]]></p>
+        <ol>
+            <li>
+                <p>Select your <b>avatar</b>, then select <b>My Settings</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="The avatar menu." /></p>
+            </li>
+            <li>From the sidebar, select <b>Account Settings</b>.</li>
+            <li>
+                <p>Enter your mobile phone number in the <b>Mobile Phone</b> field and select <b>Update Phone Number</b>.</p>
+                <p><img src="../../Resources/Images/personal-settings-acount-settings-2fa.png" alt="The two-factor authentication options in Personal Settings." /></p>
+            </li>
+            <li>
+                <p>Enter your password, then enter your verification code in the <b>Verification Code</b> field.</p>
+            </li>
+            <li>
+                <p>Select <b>Verify</b>.</p>
+            </li>
+        </ol>
+        <p>You have updated your phone number. If you want to disable two-factor authentication for your account, you&apos;ll need to contact an administrator. For more information on disabling two-factor authentication, see <MadCap:xref href="Login-settings.htm#Disable">Disable two-factor authentication for a specific user</MadCap:xref>.</p>
+        <h4 id="generate"><a name="Generate"></a>Generate backup codes</h4>
+        <p>Backup codes enable you to log in if you cannot access your mobile phone, or if an administrator is unavailable to disable two-factor authentication for you. Backup codes are single-use, and must be generated while you have access to your account.</p>
+        <p><b>To generate backup codes:</b></p>
+        <ol>
+            <li>
+                <p>Ensure you have enabled two-factor authentication for your account. To learn more, see <MadCap:xref href="Login-settings.htm#Enable">Enable two-factor authentication for your own account.</MadCap:xref></p>
+            </li>
+            <li>
+                <p>Select your profile picture and choose <b>My Settings</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="The avatar menu." /></p>
+            </li>
+            <li>
+                <p>From the sidebar, select <b>Account Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Generate backup codes</b>.</p>
+                <p><img src="../../Resources/Images/my-settings-account-settings-backup.png" alt="Option to generate backup codes after selecting Account Settings" /></p>
+            </li>
+            <li>
+                <p>Enter your password, then select <b>Continue</b>.</p>
+            </li>
+            <li>
+                <p>Write down your backup codes and store them in a safe place, or select <b>Download</b> to store them in a TXT file.</p>
+            </li>
+            <li>
+                <p>Select <b>Close</b>.</p>
+            </li>
+        </ol>
+        <p>You have generated backup codes. If you lose access to your backup codes and your mobile phone, you will need to contact an administrator to regain access to your account.</p>
+        <h3 id="disable-2fa"><a name="Disable"></a>Disable two-factor authentication for a specific user</h3>
+        <p>If you lose access to your mobile phone or change your phone number, you won&apos;t be able to access your account. To regain access, an administrator must temporarily disable two-factor authentication for your account. Note that if an administrator permanently disables two-factor authentication, you can&apos;t change your two-factor authentication phone number.</p>
+        <p style="font-weight: bold;">To disable two-factor authentication for a specific user:</p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Admin</i> role.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Staff</b> or <b>Contacts</b>.</p>
+            </li>
+            <li>
+                <p>Choose a staff member or contact, and select <b>Edit</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Edit-user-630x131.png" alt="The Edit button displayed on the Staff or Contact page when an account is selected." /></p>
+            </li>
+            <li>
+                <p>Select <b>Password</b>; then choose <b>Disable two-factor authentication</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Until:</b> to allow a staff member or contact to opt out temporarily. This ensures that the staff member can access their account and change their two-factor authentication phone number if required. In the field, specify the date to automatically re-enable two-factor authentication.</p>
+                <p><img src="../../Resources/Images/personal-settings-password-disable-2fa.png" alt="The options available when disabling two-factor authentication for a specific user." /></p>
+            </li>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p>You can disable two-factor authentication for other reasons as well. For example, you might disable two-factor authentication permanently because a staff member doesn&apos;t own a mobile phone, or has integrated certain Caseware software with Cloud. To learn more about how integrated software interacts with two-factor authentication, see <MadCap:xref href="Login-settings.htm#Addition">Additional requirements for Working Papers and Time users</MadCap:xref>.</p>
+    </body>
+</html>

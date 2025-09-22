@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Asignación de cuentas a grupos en la página Datos (nuevo diseño)</h1>
+        <p class="note"><b>Nota:</b> El nuevo diseño para asignar cuentas sólo está disponible si se ha activado en su producto. Consulte <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Asignar cuentas a grupos en la página Datos</a> para aprender a asignar cuentas desde la versión antigua de la página.</p>
+        <p>En la página <b>Datos</b> , el icono <b>Asignar cuentas</b> puede mostrar a veces un distintivo rojo ( ) una vez importado el balance de sumas y saldos. Esto significa que una o más cuentas no se han asignado correctamente a los grupos. Lo mismo ocurre cuando añades manualmente una o varias cuentas. Observe que el distintivo rojo muestra el número de cuentas sin asignar. Por ejemplo, si hay una cuenta sin asignar, el distintivo muestra <b>1</b> ().</p>
+        <p><img src="../../Resources/Images/assign-accounts-screen2.png" alt="La página Asignar cuentas."></img></p>
+        <p>Debe asignar manualmente las cuentas no asignadas a los grupos adecuados para que los datos financieros se completen correctamente durante todo el contrato. Si hay más de una estructura de agrupación disponible en su producto, cuando asigna un grupo a una cuenta en la estructura de agrupación por defecto, se asigna automáticamente a los grupos vinculados en otras estructuras de agrupación.</p>
+        <h2>Asignar cuentas a  grupos</h2>
+        <p style="font-weight: normal;">Puede asignar manualmente cuentas no asignadas a grupos desde la página <b>Asignar cuentas</b> .</p>
+        <p style="font-weight: bold;">Para asignar una cuenta a un grupo:</p>
+        <ol>
+            <li>
+                <p>Seleccione el icono <b>Asignar cuentas</b> () en la esquina superior derecha de la página <b>Datos</b> .</p>
+                <p>También puede seleccionar la pestaña <b>Asignar cuentas</b> del panel lateral izquierdo.</p>
+                <p>En la pestaña <b>Asignar cuentas</b> , las cuentas sin asignar aparecen en la sección <b>Sin asignar</b> .</p>
+                <p>Si su compromiso está consolidado, puede utilizar el desplegable del selector de entidad para seleccionar a qué entidad asigna las cuentas.</p>
+                <p>Los grupos financieros aparecen en la sección <b>Estructura de agrupación</b> . Si su producto tiene varias estructuras de agrupación, puede utilizar el desplegable para seleccionar a qué estructura de agrupación desea asignar las cuentas.</p>
+                <p>Puede seleccionar la casilla <b>Más acciones</b> () | <b>Mostrar ocultos</b> para ver los grupos que se han ocultado en el compromiso Si selecciona <b>Mostrar ocultos</b>, aparecerá el icono invisible () junto a los grupos ocultos para que pueda localizarlos en la lista.</p>
+                <p><img src="../../Resources/Images/assign-accounts-new-design.png" alt="La página Asignar cuentas."></img></p>
+            </li>
+            <li>
+                <p>Seleccione un grupo para asignar la cuenta seleccionada a ese grupo.</p>
+                <p>También puede arrastrar la cuenta desde la sección Sin asignar y soltarla en un grupo para asignarla.</p>
+                <p>Puede utilizar el cuadro de búsqueda o los filtros para encontrar la cuenta que desea asignar. Los filtros disponibles permiten filtrar las cuentas no asignadas por nombre de cuenta, número de cuenta, si la cuenta tiene saldo acreedor o deudor y el importe del saldo.</p>
+                <p>También puede asignar cuentas a dimensiones si están disponibles en su producto.</p>
+                <p><img src="../../Resources/Images/assign-accounts-new-filters.png" alt="La página Asignar cuentas con el cuadro desplegable Filtros abierto."></img></p>
+            </li>
+        </ol>
+        <p class="note"><b>Nota:</b> Sólo puede asignar cuentas a un grupo de nivel inferior si no hay cuentas asignadas a su grupo padre. Por ejemplo, supongamos que tiene dos grupos de cuentas, <i>Ingresos</i> y <i>Arrendamientos</i>, ambos asignados al grupo principal <i>Ingresos</i> . Si asigna una cuenta al grupo <i>Ingresos</i> , no podrá asignar ninguna cuenta a los grupos <i>Ingresos</i> o <i>Ingresos por arrendamiento</i> . Si desea asignar cuentas a un grupo de nivel inferior, primero debe desasignar manualmente las cuentas asignadas al grupo padre. Para obtener más información, consulta <a href="#Unassign">Desasignar cuentas de grupos</a>.</p>
+        <p>Después de asignar una cuenta, puede seleccionar <b>Deshacer</b> (), si es necesario, para volver a desasignar la cuenta.</p>
+        <p><img src="../../Resources/Images/assign-accounts-undo.png"></img></p>
+        <h2>Copiar asignación de cuenta de otro encargo</h2>
+        <p>Para simplificar el proceso de imputación, puede copiar la estructura de imputación de otro compromiso. Esto le permite aprovechar los compromisos que utilizan la misma estructura de agrupación financiera y los mismos números de grupo, por lo que puede asignar automáticamente cuentas en su compromiso actual para que coincidan con el compromiso del que está copiando.</p>
+        <p>Cuando seleccione un compromiso del que copiar, las cuentas de su compromiso actual que tengan el mismo número de cuenta que las cuentas del otro compromiso se asignarán a los grupos financieros correspondientes.</p>
+        <p class="note"><b>Nota:</b> Sólo puede copiar imputaciones de contratos a los que tenga acceso.</p>
+        <p style="font-weight: bold;">Para copiar asignación de cuenta de otro encargo</p>
+        <ol>
+            <li>
+                <p>En la página <b>Asignar cuentas</b> , seleccione <b>Más acciones</b> () | <b>Copiar imputación de otro compromiso</b>.</p>
+                <p><img src="../../Resources/Images/assign-accounts-copy-assgnmt.png" alt="La opción Copiar imputación desde otro compromiso del menú Más acciones."></img></p>
+            </li>
+            <li>
+                <p>En el cuadro de diálogo Copiar asignación del compromiso, seleccione la entidad que contiene el compromiso del que desea copiar y, a continuación, seleccione el compromiso.</p>
+                <p><img src="../../Resources/Images/copy-assignment-from-engagement-dialog.png" alt="El diálogo Copiar asignación desde compromiso."></img></p>
+            </li>
+            <li>
+                <p>Si desea anular cualquier asignación de cuenta existente que haya realizado, seleccione <b>Anular asignación de cuenta existente</b>. Si no selecciona esta opción, las asignaciones de cuentas existentes no se modifican y sólo se asignan las cuentas que actualmente no están asignadas.</p>
+            </li>
+            <li>
+                <p>Seleccionar <b>Listo</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Anular la asignación de cuentas a grupos</h2>
+        <p>Puede desasignar manualmente cuentas de grupos en la pestaña <b>Asignar cuentas</b> .</p>
+        <p><b>Para desasignar una cuenta de un grupo:</b></p>
+        <ol>
+            <li>
+                <p>En la pestaña <b>Asignar cuentas</b> , desplácese hasta el grupo del que desea desasignar cuentas.</p>
+            </li>
+            <li>
+                <p>Seleccione y arrastre las cuentas asignadas al grupo superior a la sección <b>Sin asignar</b> .</p>
+            </li>
+        </ol>
+    </body>
+</html>

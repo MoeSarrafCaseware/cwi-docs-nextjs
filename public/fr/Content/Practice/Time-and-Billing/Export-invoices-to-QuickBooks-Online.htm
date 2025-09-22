@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Exporter des factures vers QuickBooks Online</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Après l&apos; <a href="Integrate-online-accounting-software-with-Cloud.htm">intégration</a> avec QuickBooks Online, vous pouvez exporter les factures finalisées.</p>
+        <h4>Les factures ne sont pas synchronisées entre les services</h4>
+        <p>Si vous devez modifier une facture dans Cloud après l&apos;avoir exportée vers votre logiciel de comptabilité, vous devez effectuer à nouveau l&apos;exportation pour vous assurer que les deux services sont à jour. Pour plus d&apos;informations, voir <MadCap:xref href="#Modify">Modifier une facture exportée</MadCap:xref>.</p>
+        <h4>L&apos;exportation et la modification des informations sur les clients sont limitées</h4>
+        <p>Lorsque vous exportez une facture, Time tente d&apos;associer la facture à un client préexistant dans votre logiciel de comptabilité. Si aucune correspondance n&apos;est trouvée, un nouveau client est créé en utilisant le nom de l&apos;entité du nuage. Pour modifier les informations relatives à un client après une exportation, vous devez les mettre à jour manuellement dans Cloud et dans votre logiciel de comptabilité.</p>
+        <h4>Les factures créées dans votre logiciel de comptabilité ne peuvent pas être exportées vers le cloud</h4>
+        <p>Si vous créez une facture dans votre logiciel de comptabilité, vous ne pouvez pas exporter cette facture vers Cloud.</p>
+        <h4>Les factures payées et approuvées sont automatiquement clôturées dans le nuage</h4>
+        <p>Lorsque vous marquez une facture comme payée ou approuvée dans votre logiciel de comptabilité, le statut de la facture passe à Fermé dans le nuage. Ce processus peut prendre jusqu&apos;à douze heures en fonction de votre logiciel comptable.</p>
+        <h2>Exporter une facture</h2>
+        <p>Avant de commencer, assurez-vous que vous avez l&apos;autorisation d&apos; <i>exporter vers le logiciel de comptabilité</i> Time.</p><div class="note"><p><b>Remarque :</b> Si vous exportez à partir de QuickBooks Online <b>US</b>, tenez compte des éléments suivants :</p>
+            <ul>
+                <li>Si les options de taxe primaire ou secondaire sont désactivées ou ont un taux de <b>0</b> dans <b>Paramètres | Temps | Taxe</b>, la ligne associée dans la facture exportée ne sera pas imposable.</li>
+                <li>Une erreur s&apos;affiche si la taxe sur les ventes est définie dans la facture, mais pas dans QuickBooks Online US.</li>
+                <li>Si la taxe de vente automatisée est activée dans QuickBooks Online US, elle remplacera le taux de taxe existant dans la facture. Il peut en résulter un taux d&apos;imposition différent de celui prévu. Assurez-vous que les options de l&apos;impôt primaire ou secondaire sont réglées sur le taux correct.</li>
+                <li>Si la taxe de vente automatisée est désactivée dans QuickBooks Online US (valeur par défaut pour les entreprises créées avant le 10 novembre 2017), assurez-vous que le taux de taxe correspond, sinon une erreur s&apos;affichera.</li>
+            </ul></div><p><b>Exporter des factures vers QuickBooks Online</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Facturation</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez les factures finalisées que vous souhaitez exporter, puis cliquez sur <b>Plus d&apos;actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Exporter les factures sélectionnées vers QuickBooks Online</b>.</p>
+            </li>
+        </ol>
+        <p>Si des erreurs ou des avertissements surviennent pendant l&apos;exportation, ils sont affichés dans la colonne <b>Exportation QuickBooks</b> .</p>
+        <h2><a name="Modify"></a>Modifier une facture exportée</h2>
+        <p>Dans certains cas, il est possible de modifier une facture après son exportation. Par exemple, si un poste est incorrect dans la facture. La procédure de modification d&apos;une facture après son exportation varie en fonction de votre logiciel comptable et du statut de la facture.</p>
+        <h3>Modifier une facture impayée</h3>
+        <p>Si vous avez exporté une facture vers QuickBooks Online mais que vous n&apos;avez pas encore ajouté d&apos;informations de paiement, nous vous recommandons d&apos;effectuer les modifications nécessaires dans Cloud et non dans QuickBooks Online. Les modifications apportées à une facture dans QuickBooks Online ne sont pas synchronisées entre les deux services et peuvent entraîner des enregistrements inexacts dans Cloud.</p><MadCap:snippetBlock src="../../Resources/Snippets/to-modify-an-unpaid-invoice.flsnp" /><p>La facture est supprimée de QuickBooks Online et peut maintenant être modifiée. Après avoir effectué les modifications nécessaires, exportez à nouveau la facture à l&apos;aide du menu <b>Autres actions.</b></p>
+        <h3>Modifier une facture payée ou approuvée</h3>
+        <p>Les factures marquées comme payées dans QBO sont automatiquement marquées comme fermées dans Cloud. Ce processus peut durer jusqu&apos;à une heure.</p>
+        <ul>
+            <li>
+                <p>Pour apporter des modifications à une facture <b>finalisée</b> qui a été marquée comme payée dans QBO, changez son statut en <b>brouillon</b>.</p>
+            </li>
+            <li>
+                <p>Pour apporter des modifications à une facture <b>fermée</b> qui a été marquée comme payée dans QBO, changez le statut de la facture de <b>Fermée</b> à <b>Finalisée</b>, puis changez son statut en <b>Brouillon</b>. Pour en savoir plus sur l&apos;édition des factures clôturées, voir <a href="Send-an-invoice-to-a-client.htm#Display">Afficher les factures clôturées</a>.</p>
+            </li>
+        </ul>
+        <p>Une fois que vous avez modifié le statut de la facture dans Cloud, son statut dans QBO passe automatiquement à En suspens. Notez que QBO conserve toutes les informations relatives au paiement.</p>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The default base <b>Risk Scores</b> on the <b>CONFIGURATION</b> page have been selected to reflect the importance of a transaction that has been flagged by a given test.</p>
+        <p>For example, <b>Complex Account Combinations</b> has a higher base score of 50. This is because the more accounts a transaction affects, the more advisable it may be for the auditor to investigate those transactions further.</p>
+        <p>Conversely, <b>Unusual Users</b> has a base score of 1, as a user infrequently posting to an account is not always an indication of a red flag.</p>
+        <p>This is an area where professional judgement and knowledge of the entity are valuable. If you are concerned that one particular test may be indicative of a potential problem, you can increase the base score for that test to bring those transactions to the top of the list.</p>
+        <h3>Niveles de riesgo</h3>
+        <p>AnalyticsAI calculates risk level relative to the overall amount of risk in the data set. It sorts all of the transactions in order of descending risk score. It then takes the top 5% of scored transactions and labels those transactions as high risk. AnalyticsAI uses exclusive threshold logic here, so that all transactions with the same score have the same risk level. Similarly, the next 10% of transactions are labeled as medium risk. All other scored transactions are considered low risk. Transactions that have not been flagged by any tests will have a score of zero and be included in the zero risk category.</p>
+        <p><img src="../Images/Replace screenshot DOC-451.png" alt="You can change the default risk scores if needed." style="width: 1331px;height: 775px;" /></p>
+        <p>For example, assume there are 1,000 transactions in a data set, of which five have five risk points, seven have four risk points, and so on as shown below:</p>
+        <table style="width: 100%;">
+            <col style="width: 97px;">
+            </col>
+            <col style="width: 150px;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Puntuación</td>
+                    <td style="text-align: center;font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Número de transacciones</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">5</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">5</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">4</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">7</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">3</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">30</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">2</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">40</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">1</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">53</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">0</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">865</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>There are a total of 135 scored transactions. The top 5% will be deemed as high risk. Five percent of 135 is about seven transactions, and our exclusive threshold logic will ensure that transactions with the same score will all be included at the same risk level - meaning in this case all transactions with a score of five will be labeled as high risk.</p>
+        <p>The next cutoff is for medium risk. This looks at the next 10% of transactions, which is about 14 (135 * 10%). As this would split the transactions with a risk score of three, all the transactions with a risk score of four will end up being labeled as medium risk and the transactions with three or fewer points will be deemed as low risk.</p>
+        <p>This model balances being able to categorize large sets of transactions, with varied risk levels, with being flexible enough for different distributions of risk across different transaction sets.</p>
+    </body>
+</html>

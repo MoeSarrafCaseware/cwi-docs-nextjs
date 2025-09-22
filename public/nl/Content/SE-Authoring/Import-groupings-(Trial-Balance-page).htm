@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Groepen importeren (pagina Proefbalans)</h1>
+        <p>Je kunt groepen importeren vanuit CSV- of Excel-bestanden. Voor CSV-importen moet je de bestanden eerst goed voorbereiden. Als je groepen hebt die zijn gedefinieerd in werkdocumenten, kun je ze exporteren naar een Excel-bestand en het bestand importeren.</p>
+        <p>Transacties importeren vanuit een CSV- of Excelbestand</p>
+        <ol>
+            <li><a href="#Prepare">Het CSV-bestand voor transacties voorbereiden</a></li>
+            <li><a href="#Import">Groepen importeren</a></li>
+        </ol>
+        <p>To import groupings from Working Papers:</p>
+        <ol>
+            <li><a href="#Export">Groepen exporteren van werkdocumenten naar Excel</a></li>
+            <li><a href="#Import">Groepen importeren</a></li>
+        </ol>
+        <h2><a name="Prepare"></a>Een CSV-bestand voorbereiden voor import (pagina Proefbalans)</h2>
+        <p>Het CSV-bestand moet de volgende vijf kolommen bevatten, ze mogen lege waarden hebben maar elke kolom moet beschikbaar zijn in het bestand:</p>
+        <ul>
+            <li>
+                <p>Kaartnummer (in SE bekend als groepsnummer)</p>
+            </li>
+            <li>
+                <p>Accountnaam (bekend als groepsnaam in SE)</p>
+            </li>
+            <li>
+                <p>Postable (accounts kunnen worden toegewezen aan de groepering)</p>
+            </li>
+            <li>
+                <p>Type (balans of resultatenrekening)</p>
+            </li>
+            <li>
+                <p>Tekenen (debet of credit)</p>
+            </li>
+        </ul>
+        <p>Je kunt optioneel de volgende kolommen opnemen:</p>
+        <ul>
+            <li>Gewicht</li>
+            <li>Sta  toe</li>
+            <li>Tegenstrijdige naam</li>
+            <li>Inconsistente naam</li>
+            <li>Afmeting Categorie</li>
+            <li>Uitgesloten Afmetingen</li>
+            <li>Doel opnieuw toewijzen voor tegengestelde accounts</li>
+            <li>Groepsindeling</li>
+            <li>Koppeling naar een belastinggroep</li>
+            <li>Koppeling naar een rekeningstelselgroep</li>
+            <li>Fiets</li>
+            <li>Gebied</li>
+            <li>Onderdelen</li>
+            <li>Standaardgroep</li>
+        </ul>
+        <p>U kunt deze kolommen gebruiken om <a href="Set-up-automapping-(Trial-Balance-page).htm">automapping</a> (automatische toewijzing van rekeningen aan groepen) in te <a href="Set-up-automapping-(Trial-Balance-page).htm">stellen</a> wanneer gebruikers een nieuwe proefbalans importeren.</p>
+        <p>De volgende tabel beschrijft alle informatiekolommen:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Kolom</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Omschrijving</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Kaartnummer.</p>
+                        <p>(verplicht)</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een kaartnummer in voor de groepering. Ook bekend als <i>groepsnummer</i> in SE.</p>
+                        <p>Kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Rekeningnaam</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer de naam voor de map in. Ook bekend als groepsnaam in SE.</p>
+                        <p>Kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+                        <p>Als dit veld leeg blijft, krijgt de groepering standaard de naam <b>&quot;[Naamloos]&quot;</b> .</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Verzendbaar</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Geef aan of accounts kunnen worden toegewezen aan de groepering.</p>
+                        <p>Kan een enkele letter bevatten. Verwachte waarden:</p>
+                        <ul>
+                            <li><b>Y</b> - accounts kunnen niet worden toegewezen aan de groepering.</li>
+                            <li><b>N</b> - accounts kunnen worden toegewezen aan de groepering.</li>
+                        </ul>
+                        <p>Als je dit veld leeg laat, kun je standaard accounts toewijzen aan de groepering.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Type</p>
+                        <p>(verplicht)</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Geef aan of de groepering bij de balans of bij de resultatenrekening hoort.</p>
+                        <p>Kan een enkele letter bevatten. Verwachte waarden:</p>
+                        <ul>
+                            <li>Balans</li>
+                            <li>Resultatenrekening</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Aanmelden</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Geef aan of de groepering voor debetrekeningen of creditrekeningen moet zijn.</p>
+                        <p>Kan een enkele letter bevatten. Verwachte waarden:</p>
+                        <ul>
+                            <li><b>D=debet</b></li>
+                            <li><b>C=credit</b>;</li>
+                        </ul>
+                        <p>Als dit veld leeg gelaten wordt, zal de groepering standaard het debet teken hebben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Groepsindeling</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een beschrijving voor het veld in.</p>
+                        <p>Kan alfanumerieke tekens, decimale punten, koppeltekens en onderstrepingstekens bevatten.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Gewicht</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een beschrijving voor het veld in. Als meerdere groepen dezelfde classificatie hebben, wordt elke account met die classificatie toegewezen aan de groep met het hoogste wegingsnummer.</p>
+                        <p>Kan een decimaal getal van 1 tot -1 bevatten.</p>
+                        <p>Als dit veld leeg gelaten wordt, zal de groepering standaard een gewicht van 0 hebben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Sta  toe</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Geef aan of de groep beperkingen heeft voor het rekeningsaldo.</p>
+                        <p>Kan een enkel karakter bevatten. Verwachte waarden:</p>
+                        <ul>
+                            <li><b>+</b> - alleen rekeningen met een debetsaldo (positief) kunnen worden toegewezen.</li>
+                            <li>- - alleen rekeningen met een creditsaldo (negatief) kunnen worden toegewezen.</li>
+                            <li>* - rekeningen met een debetsaldo of een creditsaldo kunnen worden toegewezen.</li>
+                        </ul>
+                        <p>Als je dit veld leeg laat, kun je standaard rekeningen toewijzen met een debetsaldo of een creditsaldo.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Koppeling naar een belastinggroep</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een groepnummer in uit het vervolgkeuzemenu Koppeling naar een groep in de groepstructuur van de Belastingcode in het dialoogvenster Groepseigenschappen.</p>
+                        <p>Hierdoor kun je accounts automatisch toewijzen aan groepen in andere groeperingsstructuren op basis van hun initiële groepstoewijzing.</p>
+                        <p><![CDATA[
+
+]]><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Koppeling naar een rekeningstelselgroep</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een groepnummer in uit het vervolgkeuzemenu Koppeling naar een groep in de voorgeschreven groeperingsstructuur in het dialoogvenster Groepseigenschappen.</p>
+                        <p>Hierdoor kun je accounts automatisch toewijzen aan groepen in andere groeperingsstructuren op basis van hun initiële groepstoewijzing.</p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Fiets</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer een cyclus in uit de lijst met bedrijfscycli (zoals gedefinieerd in de <a href="Add-areas-and-cycles.htm">Productinstellingen</a>). Als je Cloud app een risicobeoordelingsdocument bevat, worden items in die groep automatisch onder deze cyclus weergegeven in het document wanneer je een groep toewijst aan een bedrijfscyclus.</p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Gebied</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Selecteer een gebied voor de groep in de gebiedslijst (zoals gedefinieerd in de <a href="Add-areas-and-cycles.htm">Productinstellingen</a>). Als je Cloud app een risicobeoordelingsdocument bevat, worden items in die groep automatisch onder deze cyclus weergegeven in het document wanneer je een groep toewijst aan een bedrijfscyclus.</p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Onderdelen</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Componenten helpen je bij het opzetten van een markt- of regio-gestuurde zichtbaarheidslogica voor balansgroepen. Als de entiteit bijvoorbeeld actief is in de landbouwsector, geef dan proefbalansgroepen weer die relevant zijn voor de landbouw. Voor meer informatie, zie:</p>
+                        <p>Voer een of meer onderdelen in om toe te wijzen aan de groep (zoals gedefinieerd in de <a href="Define-components.htm">Productinstellingen</a>).</p>
+                        <p style="font-weight: bold;">Verwachte waarde:</p>
+                        <p style="font-style: italic;">Tekst</p>
+                        <p>Gebruik een dubbele punt om meerdere componenten te scheiden die zijn gekoppeld aan een groep (voorbeeld: component1;component2;component3).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Tegenstrijdige naam</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Weergave voor groepsbedragen die tegenovergesteld zijn aan het normale teken van de groep. Er verschijnt bijvoorbeeld &quot;Bank Overdraft&quot; in plaats van &quot;Bank&quot; als het saldo een krediet is.</p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Inconsistente naam</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer, indien van toepassing, een alternatieve beschrijving voor de groep in die moet worden weergegeven wanneer het huidige en het vorige jaar tegenovergestelde tekens hebben.</p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Afmeting Categorie</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Voer een dimensiecategorie in voor de groep (kies uit de lijst die is gedefinieerd in <a href="Add-dimensions.htm">Productinstellingen</a>). <b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Uitgesloten Afmetingen</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Voer de dimensies in die zijn uitgesloten van de geselecteerde categorie.</p>
+                        <p class="note inline"><![CDATA[
+]]><b>Let op:</b> Deze eigenschap is alleen beschikbaar als er een waarde voor Dimension Category bestaat.</p>
+                        <p><![CDATA[
+
+]]><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                        <p>Gebruik een dubbele punt om meerdere uitgesloten dimensies te scheiden (voorbeeld: dimensie1;dimensie2)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Doel opnieuw toewijzen voor tegengestelde accounts</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>If applicable, enter a group from the Financials grouping structure for accounts with a contrary balance.</p>
+                        <p>Als een rekening automatisch aan deze groep zou worden toegewezen, maar niet overeenkomt met het geselecteerde teken (debet of credit) voor deze groep, dan wordt deze automatisch toegewezen aan het <b>doel van het opnieuw toewijzen</b>. Bijvoorbeeld, negatief <b>actief</b> --&gt; positief <b>passief</b></p>
+                        <p><![CDATA[ 
+
+]]><b>Verwachte waarde:</b><![CDATA[
+
+]]><i>Tekst</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Standaardgroep</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Specify whether or not the group is a default group. Zie <a href="Group-properties.htm#Default">Gebieden toevoegen</a>voor meer informatie.<![CDATA[
+
+]]></p>
+                        <p><b>Verwachte waarde:</b><![CDATA[
+
+]]></p>
+                        <ul>
+                            <li>Y of 1 of WAAR</li>
+                            <li>N of 0 of FALSE</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export"></a>Groepen exporteren van werkdocumenten naar Excel</h2>
+        <p>Om de groeperingsstructuur te gebruiken die je hebt gedefinieerd in Working Papers, moet je het exporteren naar een Excel-bestand en het bestand vervolgens converteren naar een .csv.</p>
+        <p>Open Working Papers en volg de onderstaande stappen.</p>
+        <p style="font-weight: bold;">Een groep exporteren van Werkdocumenten naar een Excel-bestand:</p>
+        <ol>
+            <li>
+                <p>Open the file that you want to export.</p>
+            </li>
+            <li>
+                <p>Klik op het lint op <b>Cloud</b> | Openen.</p>
+            </li>
+            <p>Het werkblad Groeperingen wordt weergegeven.</p>
+            <li>
+                <p>Klik met de rechtermuisknop op een kolomkop en klik op <b>Kolommen herschikken.</b></p>
+            </li>
+            <p>Rangschik de actieve kolommen in het dialoogvenster Tabelkolommen opnieuw ordenen als: Nummer &gt; Naam &gt; Titel &gt; Type &gt; Teken</p>
+            <li>
+                <p>Klik op <b>OK.</b></p>
+            </li>
+            <p>Zorg ervoor dat elke groep een uniek nummer, een gedefinieerd type en teken bevat.</p>
+            <li>
+                <p>Klik op het lint op <b>Cloud</b> | Openen.</p>
+            </li>
+            <li>
+                <p>Selecteer op het tabblad Algemeen in het vervolgkeuzemenu Tabellijst Veldstijl de optie <b>Invoegcodes.</b></p>
+            </li>
+            <li>
+                <p>Klik op <b>OK.</b></p>
+            </li>
+            <li>
+                <p>Selecteer op het werkblad alle groepen door op een groepnummer te klikken en vervolgens op <b>CTRL+A</b> op je toetsenbord te drukken.</p>
+            </li>
+            <li>
+                <p>Kopieer de selectie door op <b>CTRL+C</b> op je toetsenbord te drukken.</p>
+            </li>
+            <li>
+                <p>Open een nieuwe Excel-werkmap.</p>
+            </li>
+            <li>
+                <p>Plak de groepen door op cel <b>A1</b>te klikken en vervolgens op de toetsen <b>CTRL+V</b> op je toetsenbord te drukken.</p>
+            </li>
+            <li>
+                <p>Verifieer dat de informatie correct is.</p>
+                <ul>
+                    <li>
+                        <p>Controleer op dubbele groepnummers door de hele kolom te selecteren en op <b>Home | Voorwaardelijke opmaak | Celregels markeren | Dubbele waarden te drukken.</b></p>
+                    </li>
+                    <li>
+                        <p>Controleer op ontbrekende of lege waarden in de kolommen Naam, Titel en Type.</p>
+                    </li>
+                    <li>
+                        <p>Controleer de kolom Type om er zeker van te zijn dat de classificatie correct is voor elke regel.</p>
+                    </li>
+                    <li>
+                        <p>Controleer in de kolom Teken of het teken correct is voor elke regel. Als het teken leeg is, staat het standaard op <b>Debet.</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sla de Excel-werkmap op als een .csv-bestand.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Groepen importeren vanuit een CSV- of Excel-bestand (pagina Proefbalans)</h2>
+        <p>Zodra je het CSV- of Excel-bestand klaar hebt, kun je het importproces starten.</p>
+        <p style="font-weight: bold;">Transacties importeren vanuit een CSV- of Excelbestand</p>
+        <ol>
+            <li>
+                <p>Ga naar het tabblad <b>Proefbalans</b> en selecteer <b>Meer acties (<img src="../Resources/Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Groepen importeren.</b></p>
+            </li>
+            <li>
+                <p>Sleep het .csv-bestand naar het pop-upvenster.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Ja</b> als u wordt gevraagd om het verwijderen van bestaande financiële groepen te bevestigen.</p>
+            </li>
+        </ol>
+        <p>Zodra het importeren is voltooid, bekijkt u de structuur om te controleren of het importeren is gelukt. U kunt de optie <b>Alles uitvouwen/Invouwen</b> (<img src="../Resources/Icons/expandAllCollapseAll.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) selecteren om de geïmporteerde structuur te bekijken. Indien nodig kunt u ook <span><a href="Add,-edit-and-move-groups-(Trial-Balance-page).htm#Edit">een groep bewerken</a></span> om extra eigenschappen toe te voegen of bestaande eigenschappen te wijzigen.</p>
+    </body>
+</html>

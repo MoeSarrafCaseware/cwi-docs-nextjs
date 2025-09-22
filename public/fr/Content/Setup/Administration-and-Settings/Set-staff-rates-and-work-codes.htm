@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can add work codes and set staff rates to ensure that general and specialized work are being allocated and billed for correctly" />
+    </head>
+    <body>
+        <h1>Définir les taux du personnel et les codes de travail</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Classez le temps et les dépenses facturables et non facturables de votre personnel en créant des codes de travail personnalisés. Par exemple, si vous souhaitez que votre personnel suive le temps passé à des tâches administratives internes, vous pouvez ajouter un code de travail de temps non facturable configuré de manière appropriée.</p>
+        <h2 id="Creating-a-new-work-code">Create new work codes</h2>
+        <p>Vous pouvez créer de nouveaux codes de travail à partir de la page <b>Paramètres</b> .</p>
+        <p><b>Pour créer un code de travail :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Temps</b> et, sous Codes de travail, sélectionnez <b>Temps</b> ou <b>Frais.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau | Ajouter</b>.</p>
+            </li>
+            <li>
+                <p>Complétez les champs comme il convient. Le seul champ obligatoire est le <b>code de travail.</b></p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-new-add-646x1021.png" alt="La boîte de dialogue Nouveau code de travail" /></p>
+                <p class="note"><b>Remarque :</b> La liste des codes de travail peut ne pas être triée correctement si elle contient des codes alphanumériques de longueur incohérente (par exemple, 1 ABC, 23 DEF, 456 GHI). Pour remédier à ce problème, ajoutez des zéros à chaque numéro afin de garantir une longueur cohérente (par exemple, 001 ABC, 023 DEF, 456 GHI) ou utilisez des codes numériques.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p>Votre nouveau code de travail est ajouté.</p><MadCap:snippetBlock src="../../Resources/Snippets/note-on-note-field.flsnp" /><h2 id="Importing-a-list-of-work-codes">Pour importer une liste de codes de travail :</h2>
+        <p>Vous pouvez également ajouter des codes de travail en masse en utilisant un <b>bloc de texte délimité</b> ou un<b>fichier .csv</b>. Vous aurez besoin d&apos;une liste d&apos;utilisateurs dans un fichier .csv ou un bloc de texte délimité.</p>
+        <p>Pour l&apos;une ou l&apos;autre méthode, il faut s&apos;assurer que</p>
+        <ul>
+            <li>
+                <p>Chaque ligne représente un membre du personnel</p>
+            </li>
+            <li>
+                <p>Chaque colonne représente une propriété, telle que le nom, l&apos;adresse électronique et le groupe d&apos;utilisateurs. Pour inclure un utilisateur dans plusieurs groupes, placez un tilde (~) entre chaque nom de groupe.</p>
+            </li>
+        </ul>
+        <p>Dans cet exemple, un administrateur souhaite ajouter trois codes de dépenses :</p>
+        <p style="font-style: italic;">Code, type, nom, taux, supplément</p>
+        <p style="font-style: italic;">E900, B, Divertissement, 0,05, 0,00</p>
+        <p style="font-style: italic;">E10100, NB, Equipement, 0.10, 0.15</p>
+        <p style="font-style: italic;">E1000, B, Frais de consultation, 0,10, 0,00</p>
+        <p><b>Pour importer une liste de codes de travail :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Temps</b> et, sous Codes de travail, sélectionnez <b>Temps</b> ou <b>Frais.</b></p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-695x813.png" alt="Sélectionnez Temps ou Frais pour importer une liste de codes de travail." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau | Importer</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Importer à partir de CSV</b> et naviguez jusqu&apos;à votre fichier de répertoire .csv, ou collez le texte de votre liste délimitée dans la zone de texte.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-717x251.png" alt="La boîte de dialogue Importation des codes de travail." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez les options appropriées au bas de la boîte de dialogue, puis sélectionnez <b>Suivant.</b></p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-options-705x122.png" alt="Les options de la boîte de dialogue Importer des codes de travail" /></p>
+            </li>
+            <li>
+                <p>Mettez en correspondance la propriété qui correspond à chaque colonne. Le <b>numéro de code de travail</b> est nécessaire pour terminer l&apos;importation. Si des codes existants utilisent le même numéro de code de travail, ils seront mis à jour lors de l&apos;importation.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-mapping-739x249.png" alt="La section de mappage des colonnes de la boîte de dialogue Importer des codes de travail" /></p>
+            </li>
+            <p>Si vous mappez le <b>type de facture</b>, il vous sera demandé d&apos;identifier les codes <b>facturables</b> et <b>non facturables</b> dans une boîte de dialogue séparée.</p>
+            <p><img src="../../Resources/Images/Firm-settings-import-work-codes-bill-type-630x337.png" alt="La boîte de dialogue Type de facture de la procédure Importation de codes de travail" /></p>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p>Une boîte de dialogue confirme le nombre de codes importés ou modifiés.</p>
+        <h2 id="Setting-staff-rates">Fixer les taux de rémunération du personnel :</h2>
+        <p>Le personnel doit être paramétré avec les taux appropriés avant de pouvoir soumettre ses entrées de temps. Vous pouvez attribuer des <b>taux standard</b> et des <b>taux de code de travail</b> à des membres individuels du personnel. Supposons, par exemple, que vous souhaitiez appliquer des taux différents pour le travail général et le travail plus spécialisé, tel que la consultation juridique. Dans ce cas, vous attribuerez un taux standard de base et un taux plus élevé associé au code de travail pour le travail spécialisé.</p>
+        <p><b>Fixer les taux de rémunération du personnel :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur du personnel</i> ou des droits équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Nuage, sélectionnez <b>Personnel.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;utilisateur dont vous souhaitez modifier le taux. Dans le menu de l&apos;utilisateur, sélectionnez <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Rates.</b></p>
+            </li>
+            <li>
+                <p>Pour ajouter un taux standard, sélectionnez <b>Taux standard | Nouveau</b>, remplissez les champs et sélectionnez <b>Enregistrer.</b></p>
+                <p><img src="../../Resources/Images/Staff-rate-standard-rate-630x427.png" alt="Le nouveau dialogue tarifaire standard" /></p>
+            </li>
+            <li>
+                <p>Pour ajouter un taux spécifique à un code de travail, sélectionnez <b>Taux de code de travail | Nouveau</b>, remplissez les champs et sélectionnez <b>Enregistrer.</b> Vous devrez rechercher ou sélectionner les codes de travail existants de votre organisation dans le champ Code de travail.</p>
+                <p><img src="../../Resources/Images/Staff-rate-work-code-rate-630x534.png" alt="La boîte de dialogue Nouveau code de travail" /></p>
+            </li>
+        </ol>
+        <p>Les taux que vous avez ajoutés ou mis à jour se trouvent dans la boîte de dialogue <b>Taux de personnel de</b> chaque utilisateur.</p>
+        <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Work-code-rate-added-700x206.png" alt="Les nouveaux codes de travail sont visibles dans la boîte de dialogue Taux de personnel d&apos;un utilisateur" /></p>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Create accounts for staff members</h1>
+        <p>Une fois que vous avez créé des entités pour chacun de vos clients, accordez l&apos;accès au nuage à d&apos;autres membres du personnel de votre entreprise. Vous pouvez créer un nouveau compte pour chaque membre du personnel qui doit collaborer à vos missions. Après avoir créé des comptes pour les membres de votre personnel, vous pouvez leur attribuer des rôles de sécurité afin de déterminer le niveau d&apos;accès qu&apos;ils ont à votre entreprise. Le tableau suivant décrit brièvement les rôles que vous pouvez attribuer aux membres de votre personnel. For more details, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a>.</p>
+        <table style="width: 100%;">
+            <col style="width: 237px;" />
+            <col style="width: 237px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td><b>rôle</b></td>
+                    <td style="font-weight: bold;">Champ d&apos;application</td>
+                    <td><b>Description</b></td>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>À l&apos;échelle du système</td>
+                    <td>
+                        <p>Attribuer le rôle d&apos;administrateur au personnel responsable de la gestion de l&apos;ensemble du site. Les administrateurs peuvent accéder à tout le contenu et effectuer n&apos;importe quelle action. Les administrateurs doivent toujours se voir attribuer une licence pour utiliser les applications qui en nécessitent une.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paramètres Admin</td>
+                    <td>À l&apos;échelle du système</td>
+                    <td>
+                        <p>Attribuez le rôle d&apos;administrateur des paramètres au personnel responsable des paramètres de l&apos;entreprise et de la création de modèles.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Administrateur du personnel</td>
+                    <td>À l&apos;échelle du système</td>
+                    <td>
+                        <p>Attribuer le rôle d&apos;administrateur du personnel au personnel responsable de la gestion du personnel. Les administrateurs du personnel peuvent ajouter, consulter, modifier et supprimer tous les membres du personnel dans le système.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entités Admin</td>
+                    <td>À l&apos;échelle du système</td>
+                    <td>
+                        <p>Attribuez le rôle d&apos;administrateur des entités au personnel chargé d&apos;ajouter des entités et des contacts. Entités Les administrateurs peuvent ajouter, visualiser, modifier et supprimer toutes les entités et tous les contacts du système, ainsi que tout le contenu des entités.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>•	Responsable</td>
+                    <td>Ensemble du système, Entités et leur contenu</td>
+                    <td>Les propriétaires peuvent consulter, modifier, supprimer et attribuer des rôles à d&apos;autres personnes sur le contenu pour lequel ils ont ce rôle.</td>
+                </tr>
+                <tr>
+                    <td>Éditeur</td>
+                    <td>Ensemble du système, Entités et leur contenu</td>
+                    <td>Les éditeurs peuvent consulter et modifier le contenu lorsqu&apos;ils ont ce rôle.</td>
+                </tr>
+                <tr>
+                    <td>Vues</td>
+                    <td>Ensemble du système, Entités et leur contenu</td>
+                    <td>Les spectateurs peuvent voir le contenu lorsqu&apos;ils ont ce rôle.</td>
+                </tr>
+                <tr>
+                    <td>Accès aux entités</td>
+                    <td>Ensemble du système, Entités et leur contenu</td>
+                    <td>
+                        <p>L&apos;attribution du rôle d&apos;accès à l&apos;entité à un utilisateur permet l&apos;attribution d&apos;un rôle de sécurité sur le contenu et donne accès au résumé et aux détails de l&apos;entité.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Kit d&apos;entraînement</h2>
+        <p class="note"><b>Remarque :</b> Pour ajouter des comptes pour les membres du personnel, vous devez avoir le rôle d&apos;administrateur ou d&apos;administrateur du personnel.</p>
+        <ol>
+            <li>
+                <p>Créez un fichier Excel contenant les informations sur les membres de votre personnel, avec les colonnes <b>email</b>, <b>prénom</b> et <b>nom</b> .</p>
+            </li>
+            <li>
+                <p>Save the file as <b>Staff List.csv</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Audit.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau</b> et, sous Importation, sélectionnez <b>Personnel</b> ou Contacts.</p>
+            </li>
+            <li>
+                <p>Dans les deux premières cases à cocher de la boîte de dialogue Importer du personnel, choisissez la manière dont l&apos;importation traitera les utilisateurs existants.</p>
+                <p class="note"><b>Remarque</b>: Ne sélectionnez cette option que si vous importez une liste complète de collaborateurs ou de contacts.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-Users-798x150.png" style="border:1px solid #3f66a3" alt="Les deux premières options de la boîte de dialogue Importation de personnel" /></p>
+            </li>
+            <li>
+                <p>Choisissez si votre fichier texte ou CSV contient ou non une <b>ligne d&apos;en-tête</b> et quel type de <b>délimiteur</b> est utilisé.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Importer à partir de CSV</b> et naviguez jusqu&apos;à votre fichier de répertoire Staff List.csv, puis sélectionnez <b>Suivant</b></p>
+            </li>
+            <li>
+                <p>Mettez en correspondance la propriété qui correspond à chaque colonne.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p>Une boîte de dialogue de confirmation apparaît, indiquant le nombre d&apos;utilisateurs ajoutés ou modifiés avec succès.</p>
+        <p>Après avoir importé une liste d&apos;utilisateurs, Cloud leur enverra automatiquement un courriel avec un lien vers leur page de connexion. Un enregistrement de cet e-mail peut être trouvé dans <b>Paramètres | Email | Journal des e-mails.</b></p>
+        <p>Sur l&apos;écran de connexion, il leur sera demandé d&apos;entrer leur adresse électronique et de saisir et confirmer un mot de passe.</p>
+    </body>
+</html>

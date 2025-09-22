@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Debiteuren—openstaande saldi</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. Dit onderwerp beschrijft de velden in het subgrootboek Debiteuren-openstaande saldi.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transactie-ID<code>(ar_open_balance_transaction_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor de transactie van openstaande debiteuren omvat de factuur en kas ontvangen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurtype<code>(ar_open_balance_invoice_type</code>)</td>
+                    <td>
+                        <p>De codewaarde of indicator van de methode waarmee het debet- of creditbedrag van de transactie door de klant is opgeheven of toegerekend aan de schuld. Voorbeelden zijn cheque, bankoverschrijving, contant geld, creditnota, factuur, factuur met alleen rente, enzovoort.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vervaldatum factuur</td>
+                    <td>
+                        <p>De datum waarop de klant dient te betalen. Niet alle transacties hebben een vervaldatum (bijv. kredietmemo&apos;s). De looptijd van een vordering wordt doorgaans op deze datum berekend.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Balance Amount (<code>ar_open_balance_balance_amount</code>)</td>
+                    <td>
+                        <p>Het resterende geldbedrag van het saldo vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bedrag gerapporteerd saldo</td>
+                    <td>
+                        <p>Het geldbedrag dat in de gerapporteerde valuta is vastgelegd.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokaal saldobedrag</td>
+                    <td>
+                        <p>Het geldbedrag van het saldo in de lokale valuta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oorspronkelijk bedrag<code>(ar_open_balance_original_balance_amount</code>)</td>
+                    <td>
+                        <p>Het geldbedrag voor de oorspronkelijke balans (oorspronkelijk factuurbedrag), vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oorspronkelijk lokaal saldo</td>
+                    <td>
+                        <p>Het geldbedrag in de lokale valuta (oorspronkelijk factuurbedrag).</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oorspronkelijke saldorapporten</td>
+                    <td>
+                        <p>Het geldbedrag dat in de gerapporteerde valuta is vastgelegd (oorspronkelijk factuurbedrag).</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Groeperingscode<code>(ar_open_balance_grouping_code</code>)</td>
+                    <td>
+                        <p>Een groeperingsmechanisme voor gerelateerde items in een batch of groep met facturen, zoals de factuurgroepering in bepaalde ERP-systemen</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type bedrag (debet / credit)</td>
+                    <td>
+                        <p>Geeft aan of het bedrag een credit of debet is.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: &quot;C&quot;=credit; &quot;D&quot;=debet.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project-ID<code>(ar_open_balance_project_id</code>)</td>
+                    <td>
+                        <p>De unieke identificatiecode voor het project, waarvan debiteuren is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fiscaal jaar<code>(ar_open_balance_fiscal_year</code>)</td>
+                    <td>
+                        <p>Het fiscaal jaar waarin de <b>Transactiedatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boekhoudkundige periode<code>(ar_open_balance_accounting_period</code>)</td>
+                    <td>
+                        <p>De verslagperiode waarin de <b>Transactiedatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beschrijving<code>(ar_open_balance_remark</code>)</td>
+                    <td>
+                        <p>Een beschrijving (vrije tekst).</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rekening-ID klant</td>
+                    <td>
+                        <p>De ID van de klant van wie betaling wordt verwacht of bij wie ongebruikte kredieten zijn toegepast.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam rekening klant</td>
+                    <td>
+                        <p>De naam van de klant.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Derde plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuur ID<code>(ar_open_balance_invoice_number</code>)</td>
+                    <td>
+                        <p>De unieke ID voor elke factuur.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurdatum<code>(ar_open_balance_invoice_date</code>)</td>
+                    <td>
+                        <p>De datum van de transactie, los van de datum waarop de factuur is ingeboekt. Dit is de datum waarop de vervaldatum wordt bepaald op basis van de factuurvoorwaarden.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Vierde plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit</td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Number (<code>ar_open_balance_reference_number</code>)</td>
+                    <td>
+                        <p>Een identificatienummer voor een intern of extern gegenereerde transactie. Voorbeelden zijn het chequenummer, betalingskenmerk, of origineel document-ID.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Date (<code>ar_open_balance_reference_date</code>)</td>
+                    <td>
+                        <p>De datum bij een extern gegenereerde transactie. Voorbeelden zijn de chequedatum of uitvoerdatum van de overboeking.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Verkoopovereenkomst-ID</td>
+                    <td>
+                        <p>De unieke ID voor de verkoopovereenkomst, waarvan debiteuren is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toegangs-ID<code>(ar_open_balance_journal_id</code>)</td>
+                    <td>
+                        <p>De unieke identificatiecode voor de journaalpost. Wordt doorgaans automatisch door het systeem gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo Valuta<code>(ar_open_balance_balance_amount_currency</code>)</td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het saldo.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Valuta gerapporteerd saldo</td>
+                    <td>
+                        <p>De gerapporteerde valuta die betrekking heeft op het rapportagebedrag van het saldo voor niet-geconsolideerde rapporten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokaal saldovaluta</td>
+                    <td>
+                        <p>De valuta voor lokale rapportageverplichtingen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bedrag Valuta<code>(ar_open_balance_amount_currency</code>)</td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het bedrag.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bedrag gerapporteerde valuta</td>
+                    <td>
+                        <p>De gerapporteerde valuta die betrekking heeft op het bedrag voor niet-geconsolideerde rapporten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bedrag lokale valuta</td>
+                    <td>
+                        <p>De valuta voor lokale rapportageverplichtingen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

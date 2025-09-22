@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comprendre l&apos;ensemble des données du grand livre général</h1>
+        <p>Lorsque vous importez des transactions du grand livre à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type de jeu de données <strong>du grand livre</strong> que vous sélectionnez lors de l&apos;importation, afin que les données du grand livre s&apos;affichent correctement dans la mission. Cette rubrique explique comment les identifiants uniques sont générés automatiquement lors de l&apos;importation, ainsi que les descriptions des données du grand livre.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <h2>Comment les identifiants uniques des lignes de données du grand livre sont autogénérés ?</h2>
+        <p>Il est important de savoir comment les identificateurs uniques sont autogénérés si des conflits de données surviennent lors de l&apos;importation des données. Voir <a href="Resolve-data-conflicts.htm">Résoudre les conflits d&apos;importation de données</a> pour plus d&apos;informations sur la manière dont ils peuvent se produire et sur ce que vous pouvez faire pour les résoudre.</p>
+        <p>Lorsque vous importez des données du grand livre dans des fichiers CSV ou Excel, chaque ligne de données doit être identifiée de manière unique. Pour ce faire, Cloud crée un identifiant unique composé des valeurs des champs que vous attribuez aux champs Caseware <strong>Entry ID</strong> <code>(entry_id</code>) et <strong>Line Number</strong> <code>(line_number)</code>pour former un identifiant unique pour chaque ligne de données :</p>
+        <p>{<code>entry_id</code>}-{<code>line_number</code>}</p>
+        <ul>
+            <li>Lorsque des champs du fichier d&apos;importation entrant sont affectés à l&apos; <strong>ID d&apos;entrée</strong> mais pas <strong>au numéro de ligne</strong> ou vice versa, une valeur unique est autogénérée pour l&apos; <strong>ID d&apos;entrée</strong> ou le <strong>numéro de ligne</strong>, selon ce qui manque.</li>
+            <li>Lorsque les champs du fichier d&apos;importation entrant ne sont pas affectés à l&apos;ID d&apos;entrée et au numéro de ligne, des combinaisons uniques sont générées automatiquement pour ces deux champs Caseware.</li>
+            <li>Lorsque les utilisateurs attribuent un champ au <strong>numéro d&apos;entrée</strong> mais pas à l&apos; <strong>ID d&apos;entrée</strong>, l&apos; <strong>ID d&apos;entrée</strong> sera rempli automatiquement avec les valeurs du <strong>numéro d&apos;entrée</strong>.</li>
+        </ul>
+        <h2><a name="General"></a>Ensemble de données du grand livre décrit</h2>
+        <p>Voir les liens ci-dessous pour la description des champs dans le type de dataset Grand livre.</p>
+        <ul>
+            <li><a href="Description-of-the-fields-in-the-Transaction-Details-category.htm">Détails de la transaction</a></li>
+            <li><a href="Description-of-the-fields-in-the-Account-Details-category.htm">Détails du compte</a></li>
+            <li><a href="Description-of-the-fields-in-the-Additional-Details-category.htm">Détails supplémentaires</a></li>
+            <li><a href="Description-of-the-fields-in-the-Subledger-Details-category.htm">Détails du grand livre auxiliaire</a></li>
+            <li><a href="Description-of-the-fields-in-the-Process-Details-category.htm">Détails du processus</a></li>
+        </ul>
+    </body>
+</html>

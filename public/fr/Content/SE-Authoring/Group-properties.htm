@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Propriétés du groupe</h1>
+        <p>La liste suivante décrit chaque propriété de la boîte de dialogue Propriétés du groupe.</p>
+        <h2><a name="Number"></a>Nombre</h2>
+        <p>Saisissez un numéro de mappage unique. Si vous avez déjà importé des groupes, le numéro de mappage doit suivre la structure du masque de mappage existant.</p>
+        <h2><a name="Consiste"></a>Nom cohérent</h2>
+        <p>Saisir une description du groupe à afficher si le solde est cohérent avec le signe normal du groupe. Cette description apparaît dans la colonne &quot; <b>Préliminaire</b> &quot; des états financiers.</p>
+        <h2><a name="Contrary"></a>Nom contraire</h2>
+        <p>Le cas échéant, saisissez une description du groupe à afficher si le solde est opposé au signe normal du groupe. Cette description apparaît dans la colonne &quot; <b>Préliminaire</b> &quot; des états financiers.</p>
+        <p>Par exemple, &quot;Découvert bancaire&quot; apparaîtra à la place de &quot;Banque&quot; lorsque le solde est créditeur.</p>
+        <h2><a name="Inconsis"></a>Nom incohérent</h2>
+        <p>Le cas échéant, saisissez une description alternative pour le groupe à afficher lorsque l&apos;année en cours et l&apos;année précédente ont des signes opposés. Cette description apparaît dans la colonne &quot; <b>Préliminaire</b> &quot; des états financiers.</p>
+        <p class="note inline"><b>Remarque :</b> Ce nom a la priorité sur le nom cohérent et le nom contraire, quel que soit le solde du groupe dans la balance de vérification.</p>
+        <h2><a name="Sign"></a>Signe</h2>
+        <p>Sélectionnez le signe applicable (débit ou crédit).</p>
+        <h2><a name="Type"></a>Type</h2>
+        <p>Sélectionnez le type d&apos;état approprié pour ce groupe (bilan, compte de résultat, résultat global).</p>
+        <h2>Formule :</h2>
+        <p>Le cas échéant, saisissez une formule AOCI pour calculer les valeurs de ce groupe. Une fois que l&apos;utilisateur a importé la balance générale, ce groupe affiche un montant dérivé des soldes des autres groupes.</p>
+        <p><b>Exemple de formule pour les AOCI :</b></p>
+        <p><span style="font-family: 'Courier New';">Tagbal(&quot;1.234&quot;,perspec({yearOffset}),{type},{code})</span></p>
+        <p>où 1.234 est le groupe OCI dans la section du compte de résultat</p>
+        <h2><a name="Breakdow"></a>Répartition par dimension</h2>
+        <p>Le cas échéant, sélectionnez une catégorie de dimension pour le groupe dans la liste déroulante <b>Ventilation par dimension</b> (les valeurs de la liste sont définies dans les paramètres du produit). Cela permet aux utilisateurs de filtrer la balance de vérification afin de visualiser les informations relatives aux soldes par dimension.</p>
+        <h2><a name="Include"></a>Inclure les dimensions</h2>
+        <p>Ce bouton n&apos;est disponible que si une catégorie de dimension est sélectionnée dans <b>Ventilation par dimension</b>. Il vous permet d&apos;exclure des dimensions spécifiques de la catégorie sélectionnée.</p>
+        <p>Le bouton affiche les dimensions disponibles dans la catégorie sélectionnée. Vous pouvez exclure une dimension spécifique en décochant la case située à côté.</p>
+        <p style="text-align: left;"><img src="../Resources/Images/include-dimensions-button.PNG" style="width: 257px;height: 174px;" alt="Ventilation par dimension avec sélection d&apos;une catégorie de déminage" /></p>
+        <h2><a name="Cycle"></a>Cycle et zone</h2>
+        <p>Sélectionnez un cycle d&apos;activité et un domaine dans les menus déroulants du groupe<b>Domaine/Cycle</b> (les valeurs des menus déroulants sont définies dans les <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">paramètres du produit</a>). Si votre application Cloud comprend un document d&apos;évaluation des risques, lorsque vous affectez un groupe à un cycle d&apos;activité, les éléments de ce groupe seront automatiquement affichés sous ce cycle dans le document, ce qui facilitera l&apos;audit par cycle d&apos;activité.</p>
+        <h2><a name="Componen2"></a>Catégories de composants</h2>
+        <p>Les catégories de composants organisent les composants de votre produit pour plusieurs secteurs d&apos;activité, types d&apos;entités ou cadres de reporting. Par exemple, les éléments liés au type d&apos;industrie peuvent être regroupés dans une catégorie et les éléments liés aux cadres de reporting dans une autre catégorie. Pour en savoir plus, voir <a href="Define-components.htm">Définir la matérialité</a>.</p>
+        <p>Sélectionnez une ou plusieurs catégories à attribuer au groupe dans la liste déroulante <b>Catégories de composants</b> (les catégories de la liste déroulante sont définies dans les <a href="Define-components.htm">paramètres du produit</a>). Une fois que vous avez attribué une catégorie à un groupe, elle est incluse dans la boîte de dialogue Propriétés du groupe et vous pouvez attribuer les composants applicables.</p>
+        <p><img src="../Resources/Images/component-category-property.png" alt="Les utilisateurs peuvent sélectionner des catégories dans le menu déroulant." /></p>
+        <h2><a name="Componen"></a>Composants</h2>
+        <p>Les composants vous aident à mettre en place une logique de visibilité axée sur le marché ou sur la région pour les groupes de balances de vérification. Par exemple, si l&apos;entité opère dans le secteur de l&apos;agriculture, affichez les groupes de balances de vérification qui sont pertinents pour l&apos;agriculture. Pour en savoir plus, voir <a href="Define-components.htm">Définir la matérialité</a>.</p>
+        <p>Avant de pouvoir affecter des composants, vous devez sélectionner une ou plusieurs <a href="#Componen2">catégories de composants</a>. Une fois que vous avez sélectionné une catégorie pour le groupe, celle-ci est incluse dans la boîte de dialogue. Sélectionnez un ou plusieurs composants à affecter au groupe dans la liste déroulante des catégories (les composants de la liste déroulante des catégories sont définis dans les <a href="Define-components.htm">paramètres du produit</a>).</p>
+        <p><img src="../Resources/Images/components-in-a-category.PNG" alt="L&apos;utilisateur sélectionne les catégories Industrie manufacturière et Agriculture, sylviculture, pêche et chasse. Remarquez qu&apos;ils sont inclus dans la boîte de dialogue une fois sélectionnés." /></p>
+        <p>Si vous associez plusieurs composants à un groupe de balances de vérification et que des paramètres de visibilité sont définis pour chaque composant dans votre application Cloud, la visibilité du groupe de balances de vérification varie selon que les composants affectés appartiennent à la même catégorie ou à des catégories différentes :</p>
+        <ul>
+            <li>
+                <p>Si les composants affectés appartiennent à la même catégorie, le groupe de balance générale est visible si au moins un composant est visible - sinon le groupe est masqué</p>
+            </li>
+            <li>
+                <p>Si les composants affectés appartiennent à des catégories différentes, le groupe de balance générale est visible si au moins un composant de chaque catégorie est visible - sinon, le groupe est masqué</p>
+            </li>
+        </ul>
+        <p>Il existe une exception aux règles ci-dessus si les membres du personnel ajoutent un compte à un engagement, cochent la case <b>Afficher les</b>  <b>comptes</b> cachés (dans l&apos;onglet <b>Attribuer des comptes</b> ) et attribuent le nouveau compte à un groupe caché. Dans ce cas, le groupe et ses groupes parents deviennent visibles.</p>
+        <p>Supposons, par exemple, que le groupe <i>Frais d&apos;exploitation</i> soit masqué en raison des paramètres de visibilité des composants. L&apos;utilisateur crée un compte <i>Autres dépenses</i> et l&apos;affecte aux <i>Dépenses d&apos;exploitation</i>. Dans ce cas, les <i>dépenses d&apos;exploitation</i> et ses groupes parents deviennent automatiquement visibles.</p>
+        <h2><a name="Link"></a>Structures de groupes liés</h2>
+        <p>Sélectionnez des groupes dans d&apos;autres structures de regroupement pour y lier le groupe financier. Cela vous permet d&apos;affecter automatiquement des comptes à des groupes dans d&apos;autres structures de regroupement sur la base de leur affectation initiale à un groupe.</p>
+        <h2>Propriétés</h2>
+        <p>Cette propriété est réservée pour une utilisation future dans le cadre du développement de formulaires personnalisés.</p>
+        <p MadCap:conditions="General.Ignore">&lt;INFORMATION SUPPRIMÉE CAR ELLE NE S&apos;APPLIQUE QU&apos;AUX ANCIENS SYSTÈMES FINANCIERS QUE NOUS N&apos;APPUYONS PLUS- De la réunion hebdomadaire sur les billets, KYLE ET L&apos;ÉQUIPE&gt;Sélectionner l&apos;option applicable dans le menu déroulant Propriétés.</p>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-01.PNG" style="width: 530px;height: 75px;" alt="Liste déroulante des propriétés" /></p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>ventilation = visible</b> - Sélectionnez cette option pour que les sous-groupes soient développés par défaut dans les états financiers.</p>
+                <p MadCap:conditions="General.Ignore">Par exemple, le sous-groupe <b style="font-style: italic;">Immobilisations corporelles</b> affiche par défaut les sous-groupes <i>Immobilisations corporelles</i> et <i>Amortissement cumulé des immobilisations corporelles</i> .</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-02.PNG" style="width: 392px;height: 251px;" /></p>
+        <ul MadCap:continue="true">
+            <p MadCap:conditions="General.Ignore">Le groupe peut être réduit dans les états financiers en sélectionnant l&apos;icône <b>Réduire le groupe</b> .</p>
+        </ul>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-03.PNG" style="width: 335px;height: 95px;" alt="Immobilisations corporelles et sous-groupe des immobilisations corporelles effondrées" /></p>
+        <ul>
+            <li MadCap:conditions="General.Ignore"><b>ventilation = cachée</b> - Sélectionnez cette option pour que les sous-groupes soient réduits par défaut dans les états financiers. Vous pouvez développer les détails des états financiers en sélectionnant l&apos;icône <b>Développer le groupe.</b> </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>ventilation = aucun</b> - Sélectionnez cette option pour masquer les sous-groupes dans les états financiers.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>highLevelView = true</b> - Saisir cette propriété pour les groupes de comptes qui doivent être réduits lorsque l&apos;utilisateur sélectionne le bouton <b>Réduire</b> dans la balance générale.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>financialClassification = netIncome</b> - Sélectionnez cette option pour marquer le groupe comme revenu net.</p>
+            </li>
+        </ul>
+        <h2><a name="Allow"></a>Allow account assignment</h2>
+        <p style="font-weight: normal;">Cochez cette case pour autoriser l&apos;affectation de comptes à ce groupe.</p>
+        <h2><a name="Reassign"></a>Réaffectation de l&apos;objectif pour les comptes contraires</h2>
+        <p>Le cas échéant, sélectionner un groupe (<b>&quot;réaffecter la cible</b>&quot;) pour les comptes avec un solde contraire. Si un compte est automatiquement affecté à ce groupe mais qu&apos;il ne correspond pas au signe sélectionné (débit ou crédit) pour ce groupe, il sera automatiquement affecté à la <b>cible de réaffectation. </b></p>
+        <p>Par exemple, <b>actif</b> négatif --&gt; <b>passif</b>positif</p>
+        <h2><a name="Classifi"></a>Classification</h2>
+        <p>Saisir ou sélectionner une classification à partir d&apos;un plan comptable général. Cette liste de base des classifications permet une mise en correspondance automatique directe à partir d&apos;un logiciel comptable en faisant correspondre la classification appliquée au groupe au type de compte dans le logiciel comptable.</p>
+        <h2><a name="Adjust"></a>Ajuster la préférence du groupe</h2>
+        <p>Le poids est utilisé pour rattacher automatiquement des comptes à un groupe sur la base d&apos;une échelle. Par exemple, les groupes ayant une pondération positive seront préférés aux groupes sans pondération.</p>
+        <h2><a name="Account"></a>Restrictions sur le solde du compte</h2>
+        <p>Spécifiez les types de comptes qui peuvent être affectés en fonction de leur solde :</p>
+        <ul>
+            <li>les comptes dont le solde est à affecter</li>
+            <li>seuls les comptes ayant un solde débiteur (positif) peuvent être affectés</li>
+            <li>seuls les comptes présentant un solde créditeur (négatif) peuvent être affectés</li>
+        </ul>
+        <h2>Groupe de parents</h2>
+        <p>Sélectionnez le groupe de niveau supérieur dans la structure.</p>
+        <h2><a name="Default"></a>Groupe par défaut</h2>
+        <p>Cette propriété vous permet de marquer le groupe comme l&apos;un de vos groupes par défaut ou <i>préférés</i>. Si l&apos;option <b>Groupes par défaut uniquement</b> est activée dans la vue Groupes (Financiers ou Fiscaux, ou Prescrits), seuls les groupes par défaut s&apos;affichent dans la page.</p>
+        <p>Par exemple, si vous disposez d&apos;une structure de regroupement importante, vous pouvez marquer les groupes les plus courants avec lesquels vous travaillez (vos groupes préférés) en cochant la case <b>Groupe par défaut.</b> Dans la vue Groupes, sélectionnez l&apos;option <b>Groupes par défaut uniquement</b> pour n&apos;afficher que les groupes marqués (ceux dont la case Groupe par défaut est cochée) dans la page.</p>
+    </body>
+</html>

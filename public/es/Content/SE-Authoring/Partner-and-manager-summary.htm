@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Resumen de socios y gerentes</h1>
+        <p><b>Partner and manager summary (PMS)</b> is a document designed to provide managers and partners with a high-level view of the key information that drives audit decisions for an engagement. PMS can be customized based on the solution specific settings.</p>
+        <p>Once the <b>Partner and manager summary (PMS)</b> is integrated with your solution, select <strong>Add</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) on your <b>Documents</b> page and add the following documents:</p>
+        <ul>
+            <li>
+                <p><b>Partner and manager summary -</b> The main form which includes all functionality, including primary author configuration settings and all the widgets.</p>
+            </li>
+            <li>
+                <p><b>PA - Partner and manager summary worksheet</b> - An SE Builder form that is required to support the functionality of the main form. You must add this worksheet to your <b>Documents</b> page but you can always hide it by using the visibility settings.</p>
+            </li>
+            <li>
+                <p><b>GC - Author mode visibility form</b> - An SE Builder form that drives the visibility settings on the content of the form based on the type of author that is accessing it. You must add this worksheet to your <b>Documents</b> page but you can always hide it by using the visibility settings.</p>
+                <p class="note"><b>Note:</b> The <b>GC - Author mode visibility form</b> is a form that is used by other Global Components forms. If it was previously added to your solution, there are no further actions required at this step.<br /></p>
+            </li>
+        </ul>
+        <h2>Required primary author changes</h2>
+        <p><b>Partner and manager summary (PMS)</b> includes a number of widgets presenting key information that drives the audit decisions for an engagement.</p>
+        <p><b>Partner and manager summary (PMS)</b> was developed by the International Solutions team and was demonstrated during the Distributors Webinar on July 26th, 2023.</p>
+        <p>For a detailed walkthrough of the <b>Partner and manager summary</b> functionality applicable for end-users, see <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23368&amp;returntype=UploadedFile">this recording</a>.</p>
+        <p>Once added, access the form while in Primary form and configure the required widgets.</p>
+        <p>See the table below for a summary of each of the widgets:</p>
+        <table class="table table-striped">
+            <col style="width: 220px;" />
+            <col style="width: 162px;" />
+            <col style="width: 132px;" />
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Tab / Widget</th>
+                    <th style="text-align: left;">Primary author configurations</th>
+                    <th style="text-align: left;">Assumes a specific content logic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Settings</b> - Overview</td>
+                    <td style="font-style: italic;color: #000000;">Primary author configurations required</td>
+                    <td style="color: #000000;"><span style="color: #000000;">No</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Financial information</td>
+                    <td style="font-style: italic;color: #000000;">Primary author configurations required</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes </span>- see details <a href="#Financial_information">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Overall engagement information</td>
+                    <td style="font-style: italic;color: #000000;">Primary author configurations required</td>
+                    <td style="color: #000000;"><span style="color: #000000;">No</span></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Documents requiring specific role sets</td>
+                    <td style="color: #000000;"><i style="color: #000000;">No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes</span>- see details <a href="#Documents_requiring_specific_role_sets">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Planning</b> - Engagement team</td>
+                    <td style="font-style: italic;color: #000000;">Primary author configurations required</td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes </span>- see details <a href="#Engagement_team">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Risk assessment and response</b> - Risks</td>
+                    <td style="font-style: italic;color: #000000;">Primary author configurations required (if applicable)</td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Risk assessment and response</b> - Controls</td>
+                    <td style="color: #000000;"><i style="color: #000000;">No primary author required</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Risk assessment and response</b> - Planned audit response</td>
+                    <td style="color: #000000;"><i style="color: #000000;">No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes </span>- see details <a href="#Planned_audit_responses">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Risk assessment and response</b> - Documents requiring specific role sets</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes </span>- see details <a href="#Documents_requiring_specific_role_sets">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Fieldwork</b> - Documents with non optimal answers</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes</span> - see details <a href="#Fieldwork">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Fieldwork</b> - Documents with custom conclusions</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes</span> - see details <a href="#Documents_with_custom_conclusion">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Fieldwork</b> - Documents requiring specific role sets</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes </span>- see details <a href="#Documents_requiring_specific_role_">here</a></td>
+                </tr>
+                <tr>
+                    <td><b>Completion</b> - Issues</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Completion</b> - Adjustments</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Completion</b> - Documents with overridden visibility</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Completion</b> - Documents modified after sign-off</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;">No</td>
+                </tr>
+                <tr>
+                    <td><b>Completion</b> - Documents requiring specific role sets</td>
+                    <td style="color: #000000;"><i>No primary author required</i></td>
+                    <td style="color: #000000;"><span style="color: #000000;">Yes</span> - see details <a href="#Documents_requiring_specific_role_">here</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Settings"></a>Configuración</h2>
+        <p class="note"><b>Note</b>: Primary author configurations required.</p>
+        <ul>
+            <li>
+                <p>The <b>Settings</b> table allows primary authors to customize the content of the <b>Partner and manager summary (PMS)</b> based on the solution it is integrated into.</p>
+            </li>
+            <li>
+                <p>The <b>Form tabs</b> column includes a list of tabs names that form the structure of the PMS document. Use this column to modify the tabs names based on your solution specific requirements.</p>
+            </li>
+            <li>
+                <p>In the <b>Widget</b> column, there is a list of available widgets for each of the tabs. Choose which widgets to include based on your solution specific requirements.</p>
+            </li>
+            <li>
+                <p><b>Engagement phases</b> allows primary authors to align SE Engagement <b>document phases</b> with PMS tabs. You can select one or multiple phases that correspond to any particular tab. This information is used throughout the rest of the PMS functionality to properly filter the correct information for each of the applicable widgets. To find out more about <b>Engagement phases</b>, see <a href="https://developers.caseware.com/se-authoring/31/Define-the-engagement-phases.htm">Define the engagement phases.</a></p>
+            </li>
+            <li>
+                <p><b>Folders</b> allows primary authors to further filter which folders align with a particular tab and be used throughout the rest of the PMS functionality to properly filter the correct information for each of the applicable widgets. By default, all folders associated with an <b>Engagement phase</b> will be selected. Note that if the <b>Engagement phase</b> selection is changed, then the <b>Folders</b> selection should be revised.</p>
+            </li>
+        </ul><div class="note"><p><b>Nota:</b></p>
+            <ul>
+                <li>
+                    <p>This form does not support adding multiple tabs through the primary author settings.</p>
+                </li>
+                <li>
+                    <p>Widgets included are designated to individual tabs and cannot be moved across tabs.</p>
+                </li>
+                <li>
+                    <p>Each widget is exclusively designed for this form and cannot be embedded into other areas of the SE engagement.</p>
+                </li>
+            </ul></div><p>If you are planning to make significant content or functionality changes in SE Builder forms, such as adding, removing or modifying functionality, you will need code ownership.</p>
+        <p class="note"><b>Note:</b> Assuming code ownership means you will be responsible for maintaining the SE builder forms going forward. This includes manually applying any future changes, updates and bug fixes that are deployed for the original form source.</p>
+        <p>For more information, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Partner-and-manager-summary.htm">Request access to the Partner and manager summary</a>.</p>
+        <p>Below we will detail how each widget works and how it should be configured, where applicable.</p>
+        <h2>Planificación</h2>
+        <h3><a name="Financial_information"></a>Información financiera</h3>
+        <p class="note"><b>Note:</b> Primary author configurations required.</p>
+        <p>The <b>Financial information</b> widget includes Analysis graph information selected to be presented in the PMS. To learn more about analysis modules, see <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-analysis-module.html">Setting Up the Analysis Module</a>.</p>
+        <p>As the primary author, specify the following:</p>
+        <ul>
+            <li>
+                <p>The URL of the Analysis document that you want to include in the PMS document.</p>
+            </li>
+            <li>
+                <p>Both the URL and the name of the Analysis document to create the reference within the PMS document.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Note:</b> The <b>Financial information</b> widget supports the addition of one Analysis document and will display all the information, such as graphs, included within that document. Depending on the extensiveness of your Analysis documents, you may want to create a separate Analysis document with smaller subsets of graphs to be included in the PMS <b>Financial information</b> widget.</p>
+        <h3>Overall engagement information</h3>
+        <p class="note"><b>Note:</b> Primary author configurations required.</p>
+        <p>The <b>Overall engagement information</b> widget lists out the key responses from the engagement based on the information defined in the table below:</p>
+        <ul>
+            <li>
+                <p><b>Procedure ID</b> - Insert the <b>procedure ID</b> of the information you want to be presented. For instructions on how to identify the procedure ID, refer to <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identify the procedure ID</a>.</p>
+            </li>
+            <li>
+                <p><b>Procedure name</b> - Provide the description that you want to be presented in the table. If no description is provided, the default text of the procedure will be used.</p>
+            </li>
+            <li>
+                <p><b>Yes / No response</b> - The checkbox allows selecting <b>Yes</b> or <b>No</b> as a response based on the procedure type. It will reflect <b>Yes</b> for procedures responded to as <i>Narrative</i> or <i>Procedure</i> and <i>No</i> for those responded to as <i>N/A</i>. This check box is specific to certain types of procedures that entail <i>Narrative, Procedure</i> or <i>N/A</i> as inline responses. For other procedure types, the checkbox should remain unchecked.</p>
+            </li>
+            <li>
+                <p><b>Edit severity color</b> - Select the pencil icon to define the color of the responses based on their severity. For example: <b>High - <span style="color: #000000;">Red</span> / Medium - <span style="color: #000000;">Orange</span> / Low - <span style="color: #000000;">Green</span></b>.</p>
+            </li>
+        </ul>
+        <h3>Documents requiring specific role sets</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents requiring specific role sets</b> widget lists out all the documents from the engagement phases selected for the <b>Planning</b> tab. These documents have a different signoff scheme from the default one as specified in the <b>Product → Settings → Signoffs → Schemes</b>.</p>
+        <p>To learn more about Signoffs Schemes, see <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Set up signoff schemes</a>.</p>
+        <h3><a name="Engagement_team"></a>Engagement team</h3>
+        <p class="note"><b>Note:</b> Primary author configurations required.</p>
+        <p>The <b>Engagement team</b> widget displays documented team information specific to your engagement.</p>
+        <p><b>Note that this widget supports the following cases:</b></p>
+        <p><b>Case 1:</b> Where the Engagement team information is documented within a single procedure in a <b>SE checklist</b>, allowing for multiple rows, it will display information about <b>Position</b> and <b>Name</b>. Answer <b>SE Checklist</b> if this scenario applies and fill in the following information:</p>
+        <ul>
+            <li>
+                <p><b>Procedure ID</b> - Insert the procedure ID where the engagement team information is documented. For instructions on how to identify the procedure ID, refer to <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identify the procedure ID</a>.</p>
+            </li>
+            <li>
+                <p><b>Read procedure information</b> - Click on the button to retrieve information on how responses are defined for the procedure.</p>
+            </li>
+            <li>
+                <p><b>Position/Name</b> - Specify which of the procedure responses represent the Position or Name.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/1-procedure-settings.png" title="The Procedure Settings dialog." /></p>
+        <p><b>Case 2:</b> Where the Engagement team information is documented in a different SE Builder document/table, respond with <b>SE Builder</b> table if this scenario applies, and follow the instructions listed below:</p>
+        <p>Use the following example code and add to your own SE Builder form to populate the required information in the <b>PMS - Engagement team table</b>:</p><code> <p>calcUtils.calc(function (calcUtils, field, form) {</p><p>let rowData = [</p><p>{name: &apos;Nam&apos;, position: &apos;Developer&apos;},</p><p>{name: &apos;Khoa&apos;, position: &apos;Manager&apos;},</p><p>{name: &apos;Huy&apos;, position: &apos;Developer 1&apos;},</p><p>{name: &apos;Hieu&apos;, position: &apos;Developer 2&apos;},</p><p>{name: &apos;Ha&apos;, position: &apos;Developer&apos;},</p><p>]</p><p>if (!wpw.tax.gcs) wpw.tax.gcs = {};</p><p>if (JSON.stringify(wpw.tax.gcs.cacheCKList) !== JSON.stringify(rowData)) {</p><p>wpw.tax.gcs.cacheCKList = rowData;</p><p>wpw.tax.gcs.clearTableRows(form(&apos;pmsd&apos;).field(&apos;engagementTeamInfoTable&apos;));</p><p>form(&apos;pmsd&apos;).field(&apos;engagementTeamInfoTable&apos;).addRow(0, rowData, true);</p><p>form(&apos;pmsd&apos;).field(&apos;hasTeamProcedures&apos;).set(true);</p><p>form(&apos;pmsd&apos;).field(&apos;hasTeamProcedures&apos;).save();</p><p>}</p></code><h2>Risk assessment and response</h2>
+        <h3>Riesgos</h3>
+        <p class="note"><b>Note:</b> Primary author configurations required, if applicable.</p>
+        <p>The <b>Risks</b> widget displays the information about <b>Risks</b> documented in the engagement file:</p>
+        <ul>
+            <li>
+                <p><b>Financial statement level risk</b>: If your app supports documenting the Financial statement level risk:</p>
+                <ul>
+                    <li>
+                        <p>Insert the <b>procedure ID</b> where the engagement team information is documented. For instructions on how to identify the procedure ID, refer to <a href="https://developers.caseware.com/se-authoring/31/How-to-identify-the-procedure-ID.htm">Identify the procedure ID.</a></p>
+                    </li>
+                    <li>
+                        <p>Document the <b>URL</b> and the <b>name</b> of the checklist containing this information to create the reference on the PMS document tab.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Automatically displays the <b>total</b> number of risks documented in the engagement file</p>
+            </li>
+            <li>
+                <p>Automatically displays the number of <b>significant risks</b> identified in the engagement file</p>
+            </li>
+            <li>
+                <p>Automatically displays the number of <b>fraud risks</b> identified in the engagement file</p>
+            </li>
+        </ul>
+        <p>The <b>Risk report</b> reference included on the widget automatically directs the end user to the <a href="https://developers.caseware.com/se-authoring/31/Enable-the-new-risk-module.htm">Risks assessment</a> tab in the engagement file.</p>
+        <h3>Controles</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Controls</b> widget displays the information about <b>Controls</b> documented in the engagement file:</p>
+        <ul>
+            <li>
+                <p>Automatically displays the <b>total</b> number of controls documented in the engagement file.</p>
+            </li>
+            <li>
+                <p>Automatically displays the number of <b>key controls</b> documented in the engagement file.</p>
+            </li>
+        </ul>
+        <p>The <b>Control report</b> reference included on the widget automatically directs the end user to the <a href="https://developers.caseware.com/se-authoring/31/SE-Authoring/Enable-controls-in-the-risks-module.htm">Controls report</a> tab in the engagement file.</p>
+        <h3><a name="Planned_audit_responses"></a>Planned audit responses</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Planned audit responses</b> widget displays the information automatically based on the Audit Response Tables embedded in the audit program checklists that are part of the Risk assessment and response phase, as specified in the <a href="#Settings">Settings</a> table.</p>
+        <p class="note"><b>Note:</b> The <b>Planned audit responses</b> widget supports displaying information only if the <a href="https://developers.caseware.com/se-authoring/31/Audit-response-table.htm">Global Component - Audit Response Table</a> has been implemented into the solution, along with the audit program checklists. These checklists, inclusive of the Audit Response Table, are linked to a Financial Area:</p>
+        <p class="note"><img src="../Resources/Images/2-show-risk-information.png" title="Mostrar información de riesgo " /></p>
+        <h3>Documents requiring specific role sets</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents requiring specific role sets</b> widget lists out all the documents from the engagement phases selected for the <b>Risk Assessment and Response</b> tab. These documents have a different signoff scheme from the default one as specified in the <b>Product → Settings → Signoffs → Schemes</b>.</p>
+        <p>To learn more about Signoffs Schemes, see <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Set up signoff schemes</a>.</p>
+        <h2><a name="Fieldwork"></a>Trabajo de campo</h2>
+        <h3>Documents with non optimal answers</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents with non optimal answers</b> widget lists out the documents from the engagement fieldwork phase that contain procedures marked with a non optimal answer.</p>
+        <p class="note"><b>Note:</b> This widget reads information based on the non optimal answer feature available for procedure responses:</p>
+        <p class="note"><img src="../Resources/Images/3-Documents-with-non-optimal-answers.png" title="Documents with non optimal answers." /></p>
+        <p>To learn more about non optimal answers, see <a href="https://developers.caseware.com/se-authoring/31/Print Only Topics/Reviewer Training/Review-Tools.htm">Review Tools - Non optimal answers</a>.</p>
+        <h3><a name="Documents_with_custom_conclusion"></a>Documents with custom conclusion</h3>
+        <p><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents with custom conclusion</b> widget displays the audit programs checklists where the default conclusion additional text area was blank by default at the engagement creation and was modified by the end user at the engagement level.</p>
+        <p class="note"><b>Note:</b> This widget supports displaying information only in the following scenario:</p>
+        <ul>
+            <li>
+                <p>The audit program checklist includes the Conclusion section as defined in the <a href="https://developers.caseware.com/se-authoring/31/Review-and-modify-the-checklist-default-settings.htm">checklist default settings</a></p>
+            </li>
+            <li>
+                <p>Returns the name of the checklist with a modified conclusion if:</p>
+                <ul>
+                    <li>
+                        <p>The additional text area from the conclusion section was blank by default and was modified by the end user at the engagement level.</p>
+                    </li>
+                    <li>
+                        <p>The audit program checklist is visible on the <b>Documents</b> page.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3><a name="Documents_requiring_specific_role_"></a>Documents requiring specific role sets</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents requiring specific role sets</b> widget lists out all the documents from the engagement phases selected for the <b>Fieldwork</b> tab. These documents a different signoff scheme from the default one as specified in the <b>Product → Settings → Signoffs → Schemes</b>.</p>
+        <p>To learn more about Signoffs Schemes, see <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Set up signoff schemes</a>.</p>
+        <h2>Finalizada</h2>
+        <h3>Problemas</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Issues</b> widget automatically displays the information about Issues documented in the engagement file, grouping them by:</p>
+        <ul>
+            <li>
+                <p>Pendiente</p>
+            </li>
+            <li>
+                <p>Resuelto</p>
+            </li>
+            <li>
+                <p>Tildado</p>
+            </li>
+        </ul>
+        <p>The <b>Issues page</b> reference included on the widget automatically directs the end user to the <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm?region=int">Summary of issues</a> report in the engagement file.</p>
+        <h3>Ajustes</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>Adjustments widget automatically displays the information about Adjustments posted in the engagement file:</p>
+        <ul>
+            <li>
+                <p>The <b>total</b> number of adjustments recorded in the engagement file for the current year, excluding any Tax Adjustments posted.</p>
+            </li>
+            <li>
+                <p>The total number of <b>proposed</b> (Unrecorded - Factual / Projected / Judgmental) adjustments recorded in the engagement file for the current year.</p>
+            </li>
+            <li>
+                <p>The total number of <b>actual</b> (Normal and Reclassifying) adjustments recorded in the engagement file for the current year.</p>
+            </li>
+            <li>
+                <p>The total number of <b>eliminating</b> adjustments recorded in the engagement file for the current year if there are any and the engagement is set as a Consolidation.</p>
+            </li>
+        </ul>
+        <p>Document the <b>URL</b> and the <b>name</b> of the <a href="https://developers.caseware.com/se-authoring/31/Set-up-the-Summary-of-Misstatements.htm">Summary of Misstatements</a> document to create the reference on the PMS document tab, if this applies for your app.</p>
+        <p>The <b>Adjustments page</b> reference included on the widget automatically directs the end user to the <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm?region=int">Adjustments</a> tab in the engagement file.</p>
+        <h3>Documents with overridden visibility</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents with overridden visibility</b> widget displays all the documents from the engagement which have had their default visibility settings, originally set by primary author or firm author, modified by the end-user at the engagement level, by either:</p>
+        <ul>
+            <li style="font-weight: normal;">
+                <p>Overriding the document visibility settings to display a document intended to be hidden.</p>
+            </li>
+            <li style="font-weight: normal;">
+                <p>Overriding the document visibility settings to hide a document intended to be shown.</p>
+            </li>
+        </ul>
+        <p>Note that this widget displays information about any document that has had its visibility settings modified directly on the <b>Documents</b> page (<b>Forced Hidden</b>) and not through the visibility settings dialog. This also includes instances when this change was done by the primary author or firm author.</p>
+        <p>For example, a document with the following visibility settings set by the primary author will be displayed in the widget:</p>
+        <p><img src="../Resources/Images/4-Visibility-settings.png" title="The visibility settings feature." /></p>
+        <p><img src="../Resources/Images/5-Visibility-settings.png" title="The visibility settings feature." /></p>
+        <p>To resolve this issue as a primary or firm author, navigate to the template and adjust the visibility settings using the visibility settings dialog, rather than making changes directly on the <b>Documents</b> page:</p>
+        <p><img src="../Resources/Images/6-Visibility-settings-visibility-form.png" title="The visibility settings features." /></p>
+        <p><img src="../Resources/Images/7-Use-default-settings.png" alt="Usar configuración predeterminada" /></p>
+        <h3>Modificado después de la aprobación</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents modified after the sign off</b> widget lists out all the documents from the engagement phases that were modified after they were signed off.</p>
+        <p>To learn more about this functionality, see <a href="https://developers.caseware.com/se-authoring/31/Review-and-customize-signoff-schemes.htm">Modifications after reviewer signoff</a>.</p>
+        <h3><a name="Documents_requiring_specific_role_sets"></a>Documents requiring specific role sets</h3>
+        <p class="note"><b>Note:</b> No primary author required.</p>
+        <p>The <b>Documents requiring specific role sets</b> widget lists out all the documents from the engagement phases selected for the <b>Completion tab</b>. These documents have a different signoff scheme from the default one, as specified in the <b>Product → Settings → Signoffs → Schemes</b>.</p>
+        <p>To learn more about Signoffs Schemes, see <a href="https://developers.caseware.com/se-authoring/31/Engagements/Template-and-Authoring/Set-up-signoff-schemes.htm">Set up signoff schemes</a>.</p>
+    </body>
+</html>

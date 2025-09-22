@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes clients – Encaissements</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du grand livre auxiliaire Comptes clients - Espèces reçues.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>ID de la transaction <br /><code>(ar_cash_received_transaction_id</code>)</p>
+                    </td>
+                    <td>
+                        <p>Une référence croisée à l&apos;écriture du grand livre (GL). Il peut contenir de nombreux niveaux différents pour identifier la transaction, y compris les centres de coûts, tels que l&apos;entreprise, la division, la région, le groupe et la succursale/le département.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Numéro d&apos;accusé de réception <br /><code>(ar_cash_receipt_id</code>)</p>
+                    </td>
+                    <td>
+                        <p>L&apos;identifiant unique de chaque paiement reçu, à partir duquel les comptes débiteurs (CD) sont calculés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date de réception <br /><code>(ar_cash_receipt_date</code>)</p>
+                    </td>
+                    <td>
+                        <p>Date à laquelle il est constaté que le client a effectué le paiement ou a bénéficié d&apos;un crédit.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Reçu Année fiscale <br /><code>(ar_cash_received_receipt_fiscal_year</code>)</p>
+                    </td>
+                    <td>
+                        <p>L&apos;année fiscale au cours de laquelle la <b>date de réception</b> survient.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Période de réception <br /><code>(ar_cash_received_receipt_period</code>)</p>
+                    </td>
+                    <td>
+                        <p>La période fiscale au cours de laquelle <b>la date de réception</b> survient.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Montant Type - débit / crédit <br /><code>(indicateur ar_cash_received_amount_credit_debit</code>)</p>
+                    </td>
+                    <td>
+                        <p>Indique si le montant est un crédit ou un débit.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Valeurs possibles : <code>C=crédit</code>; <code>D=débit</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Type de reçu <br /><code>(ar_cash_receipt_type</code>)</p>
+                    </td>
+                    <td>
+                        <p>La valeur du code ou l&apos;indicateur de la méthode par laquelle le montant du débit ou du crédit de la transaction a été éteint ou réparti sur la dette par le client. Il peut s&apos;agir par exemple d&apos;un chèque, d&apos;un virement bancaire, d&apos;espèces, etc.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Montant du reçu <br /><code>(ar_cash_receipt_amount)</code></p>
+                    </td>
+                    <td>
+                        <p>Le montant monétaire de la transaction enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Déclaration du montant de l&apos;encaissement <br /><code>(ar_cash_received_receipt_amount_reporting</code>)</p>
+                    </td>
+                    <td>
+                        <p>Montant monétaire de la transaction enregistré dans la monnaie de présentation.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Montant du reçu Local<br /><code>(ar_cash_receipt_amount_local</code>)</p>
+                    </td>
+                    <td>
+                        <p>Montant de la transaction en monnaie locale.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Statut du détachement <br /><code>(ar_cash_received_posting_status</code>)</p>
+                    </td>
+                    <td>Indique si la transaction a été enregistrée dans le grand livre (GL). Type de données : Texte requis : Non Valeurs possibles : <code>Posté</code>, <code>non posté</code></td>
+                </tr>
+                <tr>
+                    <td>Numéro d&apos;accusé de réception <br /><code>(ar_cash_received_receipt_number</code></td>
+                    <td>
+                        <p>Le numéro de l&apos;argent reçu, à partir duquel les comptes débiteurs (CD) sont calculés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du projet <br /><code>(ar_cash_received_project_id</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique du projet, à partir duquel les comptes à recevoir sont calculés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant fonctionnel <br /><code>(ar_cash_received_functional_amount)</code></td>
+                    <td>
+                        <p>Le montant monétaire de la transaction enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description <br /><code>(ar_cash_received_remark</code></td>
+                    <td>
+                        <p>Une description sous forme de texte libre.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot <br /><code>(ar_cash_received_batch_id</code></td>
+                    <td>
+                        <p>Un identifiant de lot généré par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description du paiement <br /><code>(ar_cash_received_description</code></td>
+                    <td>
+                        <p>Une description du paiement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source ID <br /><code>(ar_cash_received_source_id</code></td>
+                    <td>
+                        <p>La source de l&apos;affichage. Le code de la source d&apos;où provient l&apos;écriture de journal, comme le journal des ventes, le journal des encaissements, le journal général, le journal des salaires, l&apos;écriture manuelle du comptable, la feuille de calcul, etc.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du compte client <br /><code>(ar_cash_received_customer_account_id</code></td>
+                    <td>
+                        <p>Identifiant du client dont le paiement est reçu ou auquel des crédits ont été appliqués.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du compte client <br /><code>(ar_cash_received_customer_account_name)</code></td>
+                    <td>
+                        <p>Le nom du client.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(ar_cash_received_business_unit_code)</code></td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de la facture <br /><code>(nombre_de_factures_reçues_ar_cash)</code></td>
+                    <td>
+                        <p>Numéro d&apos;identification d&apos;une transaction générée en interne ou en externe. Il peut s&apos;agir par exemple du numéro de chèque, du numéro de virement ou de l&apos;identifiant du document original.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la facture <br /><code>(ar_cash_received_invoice_date</code></td>
+                    <td>
+                        <p>La date d&apos;une transaction générée en externe. Il s&apos;agit par exemple de la date du chèque ou de la date du virement.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autre numéro de référence <br /><code>(numéro de référence ar_cash_received_reference_number)</code></td>
+                    <td>
+                        <p>Numéro d&apos;identification d&apos;une transaction générée en interne ou en externe. Il s&apos;agit par exemple du numéro de chèque, du numéro de virement ou de l&apos;identifiant du document original.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autre date de référence <br /><code>(ar_cash_received_reference_date</code></td>
+                    <td>
+                        <p>La date d&apos;une transaction générée en externe. Il s&apos;agit par exemple de la date du chèque ou de la date du virement.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du contrat de vente <br /><code>(ar_cash_received_sales_contract_id</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique du contrat de vente, à partir duquel le RA est calculé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant du reçu Devise <br /><code>(ar_cash_receipt_amount_currency)</code></td>
+                    <td>
+                        <p>La devise fonctionnelle ou de groupe liée au montant de l&apos;encaissement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant de l&apos;encaissement Devise de déclaration <br /><code>(ar_cash_receipt_amount_reporting_currency)</code></td>
+                    <td>
+                        <p>La devise de reporting liée au montant de l&apos;encaissement pour les rapports non consolidés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant du reçu Monnaie locale <br /><code>(ar_cash_receipt_amount_local_currency)</code></td>
+                    <td>
+                        <p>La devise pour les exigences locales en matière de déclaration.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de la monnaie fonctionnelle <br /><code>(ar_cash_received_functional_currency_code)</code></td>
+                    <td>
+                        <p>La monnaie d&apos;enregistrement utilisée dans les logiciels de comptabilité financière.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro du compte de débit GL <br /><code>(ar_cash_received_gl_debit_account_number</code></td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le débit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de compte de crédit GL <br /><code>(ar_cash_received_gl_credit_account_number</code></td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le crédit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - ID du compte <br /><code>(ar_cash_received_line_account_id</code></td>
+                    <td>
+                        <p>Code du compte de recettes du grand livre général (GL). Ce code peut contenir un identifiant de sous-compte, ainsi que de nombreux niveaux différents pour identifier le compte, y compris les centres de coûts, tels que l&apos;entreprise, la division, la région, le groupe et la succursale/le département.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - Description du compte <br /><code>(ar_cash_received_line_account_description</code></td>
+                    <td>
+                        <p>La description de <b>Invoice Line</b>.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entré par <br /><code>(ar_cash_received_entered_by</code></td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de saisie <br /><code>(ar_cash_received_entered_date</code></td>
+                    <td>
+                        <p>Date à laquelle cette transaction a été introduite dans le système source. Cette date est parfois appelée date de création.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure d&apos;entrée <br /><code>(ar_cash_received_entered_time</code></td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par <br /><code>(ar_cash_received_approved_by</code></td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a approuvé les ajouts ou les modifications de la base de données clients.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation <br /><code>(ar_cash_received_approved_date</code></td>
+                    <td>
+                        <p>Date à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Délai d&apos;approbation <br /><code>(ar_cash_received_approved_time</code></td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification <br /><code>(ar_cash_received_last_modified_by</code></td>
+                    <td>
+                        <p>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la dernière modification <br /><code>(ar_cash_received_last_modified_date)</code></td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification <br /><code>(ar_cash_received_last_modified_time)</code></td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID d&apos;entrée <br /><code>(ar_cash_received_journal_id</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique de l&apos;écriture au journal. Il est généré automatiquement par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

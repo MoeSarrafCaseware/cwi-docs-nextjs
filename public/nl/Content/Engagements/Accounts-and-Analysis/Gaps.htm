@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gaps</h1>
+        <p>De analytische test Gaps identificeert ontbrekende transacties binnen een bepaalde reeks transacties.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Onjuist geconfigureerde systeeminstellingen die mogelijk moeten worden verbeterd en verder geëvalueerd</p>
+            </li>
+            <li>
+                <p>Zwakke interne controles</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de monitoring- en opsporingsactiviteiten</p>
+            </li>
+            <li>
+                <p>Slechte training</p>
+            </li>
+            <li>
+                <p>YE-journaalposten worden vaak geboekt in een speciale nummeringssequentie - de auditor zou die sequentie kunnen bepalen en een lijst ter controle kunnen genereren</p>
+            </li>
+            <li>
+                <p>Ontbrekende transacties die mogelijk ongeldig zijn gemaakt</p>
+            </li>
+            <li>
+                <p>Beoordelen van risico&apos;s op afwijkingen van materieel belang als gevolg van mogelijke fraude.</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <p><b>Kernveld</b> - Het numerieke, datum- of tekenveld dat wordt gebruikt als kernveld voor de hiaatanalyse.</p>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om deze test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Onderste bereik</b> - Selecteer het beginpunt van de gap-analyse. Dit is meestal de eerste transactie, maar misschien niet als transacties aan het begin ontbreken.</p>
+            </li>
+            <li>
+                <p><b>Bovenste bereik</b> -Selecteer het eindpunt van de hiaatanalyse. Dit is meestal de laatste transactie, maar misschien niet als transacties aan het einde ontbreken.</p>
+            </li>
+            <li>
+                <p><b>Toename</b> - Voer de verwachte toename in voor het veld dat wordt geanalyseerd. Meestal is de toename één.</p>
+            </li>
+            <li>
+                <p><b>Sluit feestdagen uit</b> - Selecteer of feestdagen wel of niet moeten worden opgenomen in tests waarbij het veld dat wordt geanalyseerd een datumveld is.</p>
+            </li>
+            <li>
+                <p><b>Selecteer feestdagen</b> - Als je ervoor hebt gekozen om feestdagen uit te sluiten, geef dan aan welke data feestdagen zijn.</p>
+            </li>
+            <li>
+                <p><b>Sluit weekends uit</b> - Selecteer of weekends wel of niet moeten worden opgenomen in tests waarbij het veld dat wordt geanalyseerd een datumveld is.</p>
+            </li>
+            <li>
+                <p><b>Masker</b> - Als het veld dat wordt geanalyseerd een tekenveld is, voer dan een masker in om aan te geven welk deel het numerieke deel bevat dat moet worden gebruikt voor de spleetjesdetectie. Als je bijvoorbeeld een factuurveld in het formaat ABC123456 gebruikt, zou het masker CCCNNNNN zijn, waarbij de N&apos;s het numerieke gedeelte van het veld weergeven. Alleen het numerieke gedeelte wordt geanalyseerd op hiaten.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Hiaten in datums</b> - Zoek naar datums die geen transacties hebben terwijl ze wel verwacht zouden worden op basis van de geselecteerde parameters.</p>
+            </li>
+            <li>
+                <p><b>Documentnummer hiaten</b> - Zoek naar hiaten in numerieke lijsten, zoals ontbrekende chequenummers.</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test Gaps uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Valideer dat er één veld is geselecteerd voor de kernanalyse. Deze velden moeten numerieke velden, datumvelden of tekenvelden zijn. Deze analytische test werkt niet voor tijdvelden.</p>
+            </li>
+            <li>
+                <p>Sorteer de database in oplopende volgorde op basis van het veld tussenruimte.</p>
+            </li>
+            <li>
+                <p>De kloofanalyse wordt verschillend uitgevoerd, afhankelijk van het type veld:</p>
+                <ul>
+                    <li>
+                        <p><b>Numeriek</b> - Verkrijg het begin- en eindpunt (bereik voor de tussenruimte) samen met de toename. De standaardwaarden moeten de kleinste en de grootste waarde zijn en de standaardwaarde voor increment is 1. Dit kan door de gebruiker worden gewijzigd. Maak een lijst met hiaten die binnen het geselecteerde bereik liggen en verhoog.</p>
+                        <p class="note"><b>Let op:</b> Als de kolom niet-integer waarden bevat, dan wordt de kolom afgerond naar het dichtstbijzijnde decimaalteken.</p>
+                    </li>
+                    <li>
+                        <p><b>Datum</b> - Verkrijg de vroegste en laatste datum zoals ingevoerd door de gebruiker. De standaardverhoging is één dag. Met deze test kan de gebruiker ook weekenden en feestdagen uitsluiten van de hiaatdetectie.</p>
+                    </li>
+                    <li>
+                        <p><b>Karakter</b> - Verkrijg het masker om aan te geven welke delen van de veldwaarde de numerieke delen zijn waarop de spleetdetectie zal worden toegepast.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>There are two sets of results. De eerste set bevat de begin- en eindopening en het aantal ontbrekende items, en de tweede set bevat de ontbrekende items.</p>
+            </li>
+        </ol>
+    </body>
+</html>

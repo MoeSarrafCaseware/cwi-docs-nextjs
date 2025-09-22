@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Patrón de carácter</h1>
+        <p>The Character Patterns analytic test identifies whether items such as telephone numbers or postal codes are in the expected pattern. El Análisis de patrones de caracteres recurrentes utiliza el lenguaje Regexp y debe seguir la sintaxis de Regexp de Python.</p>
+        <p>This analytic test can be used to identify character patterns that can help validate data integrity. Por ejemplo, la validación de números de teléfono, direcciones de correo electrónico o códigos postales con respecto a patrones esperados puede ayudar a identificar errores potenciales en los datos.</p>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> - Unique field(s) that are used to create a unique transaction ID such as the <b>Entry ID</b> field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Core field(s)</b> - One or more fields with string values which are used to run the test. If multiple fields are selected, the test searches for the same character pattern for each test.</p>
+            </li>
+        </ul>
+        <h2>Parámetros</h2>
+        <p>The following parameters must be set to run this test:</p>
+        <ul>
+            <li>
+                <p><b>Include or exclude pattern</b> - Select whether to identify fields that follow the specified pattern or that do not follow the specified pattern.</p>
+            </li>
+            <li>
+                <p><b>Character pattern</b> - Specify the proper python regex pattern to use to analyze the selected fields.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p>The following configuration is available for this test:</p>
+        <p><b>Character pattern</b> - User defined character pattern based on a python regex pattern.</p>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Character Patterns analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first. Note that the ability to set filters is not currently available and will be available in later versions of the test.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that one or more character fields have been selected for the analytic. If multiple fields have been selected, the same regexp is used on each one.</p>
+            </li>
+            <li>
+                <p>Validate that the user has indicated if they are looking for lines which follow the pattern or do not follow the pattern.</p>
+            </li>
+            <li>
+                <p>Obtain the regexp. This should be formatted as a regular expression that can be used in python. See <a href="https://docs.python.org/3/library/re.html">re — Regular expression operations</a> to learn more.</p>
+            </li>
+            <li>
+                <p>Depending on whether the user has selected to identify values that follow or do not follow the pattern, extract the values that meet the criteria based on the regexp supplied.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>If there are multiple fields and the user has selected to identify values that do not follow the pattern, then the transaction line is extracted if at least one of the columns is not true.</p>
+                    </li>
+                    <li>
+                        <p>If there are multiple fields and the user has selected to identify values that do follow the pattern, the transaction line is extracted only if all of the fields follow the pattern.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default. Note that the ability to select result fields is not currently available and will be available in later versions of the test.</p>
+            </li>
+        </ol>
+    </body>
+</html>

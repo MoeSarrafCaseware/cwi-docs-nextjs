@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comparación</h1>
+        <p>Este análisis puede utilizarse para comparar dos o más conjuntos de datos para validar que la información es la misma o distinta en función del contexto, como mayor, menor o no es igual. For instance, you can use this test to confirm that the user responsible for inputting transaction details differs from the user authorizing those transactions. This test can be instrumental in validating consistency between receiving reports and corresponding invoices.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Posibles intentos de manipulación de estados financieros.</p>
+            </li>
+            <li>
+                <p>Financial reporting areas that have lower accuracy or precision</p>
+            </li>
+            <li>
+                <p>Problemas sistémicos sobre la forma en la que un departamento procesa las transacciones</p>
+            </li>
+            <li>
+                <p>Improperly configured system settings which may need improvement and further evaluation</p>
+            </li>
+            <li>
+                <p>Weak internal controls</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de las actividades de supervisión y detección</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> - Unique field(s) that are used to create a unique transaction ID such as the Entry ID field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p><b>Core fields</b> - Two or more fields of any type need to be tagged for the comparison. The fields tagged should be of the same type.</p>
+            </li>
+        </ul>
+        <h2>Parámetros</h2>
+        <p>The following parameter must be set to run this test:</p>
+        <p><b>Comparison type</b> - Select how the data in the selected fields should compare to each other. Tus opciones son:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Igual</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">&lt;&gt; (no igual a)</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Mayor que</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Mayor que o igual a</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Menor que</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Menor o igual a</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Character field comparison</b> - Compares two character fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+            <li>
+                <p><b>Date field comparison</b> - Compares two date fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+            <li>
+                <p><b>Numeric field comparison</b> - Compares two numeric fields and lists them based on whether they are equal or not equal.</p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Comparisons analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This is only valid if specific fields have been selected. If all the columns are available, this is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that two or more fields have been selected and that all the fields selected are of the same type.</p>
+            </li>
+            <li>
+                <p>Obtain the type of comparison from the parameters entered. The options are:</p>
+                <ul>
+                    <li>
+                        <p>Igual </p>
+                    </li>
+                    <li>
+                        <p>no igual a</p>
+                    </li>
+                    <li>
+                        <p>Mayor que o igual a</p>
+                    </li>
+                    <li>
+                        <p>Mayor que (&gt;)</p>
+                    </li>
+                    <li>
+                        <p>Menor o igual que (&lt;=)</p>
+                    </li>
+                    <li>
+                        <p>Menor que (&lt;)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Perform the core analytic comparing the fields selected with the comparison type.</p>
+                <ul>
+                    <li>
+                        <p>When comparing two fields, extract any records where the comparison returns true.</p>
+                    </li>
+                    <li>
+                        <p>When comparing three or more fields, extract any records where the comparison between at least two of the fields returns true.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Optionally, the filters in step 1 can be placed on the data after the core analytic is complete instead of prior to completion.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

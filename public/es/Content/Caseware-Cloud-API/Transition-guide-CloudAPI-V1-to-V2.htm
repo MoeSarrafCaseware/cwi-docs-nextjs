@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Guía de transición-Caseware Cloud API V1 a V2</h1>
+        <p>La API V1 ha ayudado a muchos clientes a automatizar los flujos de trabajo y a garantizar que los datos de Caseware Cloud estén actualizados y sean precisos. Sin embargo, a medida que han ido evolucionando las necesidades de los clientes, hemos recibido comentarios sobre las limitaciones de la V1, especialmente en lo que respecta al trabajo con las unidades de negocio y las etiquetas. Basándonos en estos comentarios, hemos introducido importantes mejoras en la API V2 para satisfacer mejor sus necesidades y ayudarle a trabajar de forma más eficiente.</p>
+        <p>Las principales mejoras de la API V2 son:</p>
+        <ul>
+            <li>
+                <p><b>Compatibilidad con unidades de negocio (BU)</b>: Compatibilidad mejorada con la gestión de múltiples unidades de negocio dentro de su organización.</p>
+            </li>
+            <li>
+                <p><b>API de gestión de etiquetas</b>: Un nuevo conjunto de puntos finales de API para automatizar la gestión y asignación de etiquetas para una mejor organización y filtrado.</p>
+            </li>
+            <li>
+                <p><b>Documentación del SDK fácil de usar</b>: Documentación clara y completa del SDK diseñada para simplificar la integración y el desarrollo.</p>
+            </li>
+        </ul>
+        <p>La API V2 se lanzará <b>junto con la V1</b> para garantizar la compatibilidad con versiones anteriores, por lo que sus integraciones actuales seguirán funcionando durante la transición. No obstante, <b>la API V1 quedará obsoleta el 30 de octubre de 2025</b>, por lo que dispondrá de tiempo suficiente para migrar a la V2 sin interrupciones.</p>
+        <p>Hemos diseñado estos cambios para que tengan el mayor impacto posible en la mejora de su experiencia, basándonos directamente en los comentarios que hemos recibido. Esta guía le guiará a través de las nuevas funciones, responderá a preguntas comunes sobre diferentes casos de uso y flujos de trabajo, y le ayudará a garantizar una transición fluida y satisfactoria a la API V2.</p>
+        <h2>Respuestas a las preguntas más frecuentes</h2>
+        <h3>Información general sobre la API V2</h3>
+        <p><b>P1: ¿Cuál es la diferencia entre API V1 y V2?</b></p>
+        <p><b>A1:</b> La API V2 aporta varias mejoras clave con respecto a la V1, como una mayor compatibilidad con las unidades de negocio (BU), un sistema de gestión de etiquetas más flexible y un SDK fácil de usar para los desarrolladores con una documentación más clara. Estas actualizaciones están diseñadas para mejorar la eficacia, reducir la curva de aprendizaje de los desarrolladores e introducir las mejores prácticas de integración.</p>
+        <p style="font-weight: bold;">P2: ¿Cómo mejora la API V2 la compatibilidad con las Unidades de Negocio (BU)?</p>
+        <p><b>A2:</b> En la API V2, hemos pasado de utilizar identificadores específicos de sitio a identificadores únicos globales (GUID). Esto garantiza que los datos sean identificables de forma única en todas las unidades de negocio, lo que facilita la gestión y la ampliación de las integraciones entre unidades de negocio sin conflictos. Para las organizaciones que no utilizan BU, los GUID siguen ofreciendo una forma más sólida y preparada para el futuro de gestionar los datos, ajustándose a las mejores prácticas y mejorando la flexibilidad de integración.</p>
+        <p style="font-weight: bold;">P3: ¿Seguirán funcionando mis integraciones V1 actuales?</p>
+        <p><b>A3:</b> Sí, incluso con el lanzamiento de la API V2, Caseware sigue siendo compatible con la V1 para garantizar que sus integraciones no se vean interrumpidas.</p>
+        <p><b>P4: ¿Existe un calendario para la desaparición de la V1?</b></p>
+        <p><b>A4:</b> La V1 seguirá siendo compatible con la V2, por lo que puedes seguir utilizando tus integraciones actuales por ahora. Sin embargo, la API V1 quedará obsoleta el 30 de octubre de 2025. Recomendamos realizar la transición a la V2 antes de esta fecha para garantizar una experiencia sin problemas y aprovechar al máximo las nuevas funciones y mejoras.</p>
+        <p><b>P5: ¿Dónde puedo encontrar la documentación de las nuevas funciones de la API V2?</b></p>
+        <p><b>R5:</b> La documentación detallada de la API V2, incluida la información sobre los nuevos puntos finales y funcionalidades, está disponible en nuestra documentación del SDK. Incluye descripciones completas de los nuevos puntos finales de la V2, ejemplos y directrices para ayudarle en la transición de la V1 a la V2. La documentación del SDK está organizada para admitir ambas versiones, por lo que puede cambiar fácilmente entre los puntos finales V1 y V2 en función de sus necesidades de integración. Además, los desarrolladores pueden descargar la especificación de la API abierta directamente desde la documentación del SDK, lo que proporciona un formato estructurado para integrarse con la nueva API V2.</p>
+        <p><img src="../Resources/Images/Cloud API V2 Transition Handbook - Transitioning from V1.png" alt="Selección de la versión de la especificación API de Caseware Cloud" /></p>
+        <p><b>P6: ¿Debo pasar a la V2 aunque no utilice unidades de negocio ni etiquetas?</b></p>
+        <p><b>A6</b> Sí, recomendamos la transición a la API V2, incluso si actualmente no utiliza unidades de negocio o etiquetas. La API V1 quedará obsoleta con el tiempo y, cuando esto ocurra, su integración actual dejará de ser compatible. Además, desde el punto de vista de las mejores prácticas, la V2 introduce puntos finales que utilizan identificadores únicos globales (GUID), que ofrecen soluciones más fiables y escalables en comparación con las claves no únicas. Hacer la transición le ayudará a preparar su integración para el futuro.</p>
+        <p><b>P7: ¿Existen limitaciones o problemas conocidos con la V2?</b></p>
+        <p><b>R7:</b> Aunque la API V2 ofrece varias mejoras, hay que tener en cuenta algunas limitaciones. Por ejemplo, los puntos finales de las etiquetas siguen utilizando ID en lugar de GUID, y tenemos previsto solucionar este problema en futuras versiones. También tenemos previsto lanzar actualizaciones menores de la V2 de forma periódica, incorporando comentarios y añadiendo nuevas funciones. También agradecemos sus valiosos comentarios para ayudarnos a priorizar las mejoras y garantizar que V2 satisfaga sus necesidades.</p>
+        <p><b>P8: ¿Habrá futuras actualizaciones de la API V2?</b></p>
+        <p><b>R8:</b> Sí, seguiremos publicando actualizaciones menores de la API V2 con regularidad, incorporando nuevas funciones, mejoras y correcciones de errores. Recomendamos a los desarrolladores que visiten periódicamente el sitio de documentación del SDK para mantenerse al día de los últimos cambios y descargar las especificaciones de la API abierta más recientes. Tenga en cuenta que la API V1 dejará de recibir actualizaciones en el futuro, por lo que le recomendamos que pase a la V2 para beneficiarse de las mejoras y la asistencia continuas.</p>
+        <h2>Preguntas sobre la transición de V1 a V2</h2>
+        <p><b>P1: ¿Cómo planificar mi transición de V1 a V2?</b></p>
+        <p><b>A1:</b> Puede pasar de V1 a V2 de dos maneras: una migración escalonada o un cambio completo.</p>
+        <ul>
+            <li>
+                <p>Migración por fases: Migre diferentes integraciones (por ejemplo, entidades, personal o grupos) en fases separadas, probando e implementando cada una a medida que avanza.</p>
+            </li>
+            <li>
+                <p>Cambio completo: Actualice todas las integraciones existentes a la vez, pero asegúrese de realizar pruebas exhaustivas en un entorno de pruebas antes de realizar el cambio completo.</p>
+            </li>
+        </ul>
+        <p><b>Plan your transition</b></p>
+        <ol>
+            <li>
+                <p>Revise la documentación de la API V2.</p>
+            </li>
+            <li>
+                <p>Elija su enfoque de migración (por fases o completa).</p>
+            </li>
+            <li>
+                <p>Actualizar el código de integración para realizar llamadas API a los puntos finales V2.</p>
+            </li>
+            <li>
+                <p>Supervisa la integración tras el cambio.</p>
+            </li>
+        </ol>
+        <p>Este proceso garantiza una transición fluida, independientemente de su enfoque.</p>
+        <p>Para obtener información detallada sobre la migración de casos de uso específicos, como entidades, personal, etc., consulte las secciones correspondientes a continuación.</p>
+        <p><b>P2: ¿Cómo debo gestionar las referencias de ID si tengo una base de datos cartográfica?</b></p>
+        <p><b>A2:</b> Si está utilizando una base de datos de mapeo o middleware para almacenar y referenciar identificadores de objetos CW (como IDs de entidades), le recomendamos que actualice su base de datos para almacenar tanto el ID CW como el correspondiente CWGuid.</p>
+        <p>Antes de migrar a la V2, puede utilizar la API de la V1 para buscar datos por ID de CW. En la respuesta, encontrará el CWGuid de cada objeto, que podrá utilizar para actualizar su tabla de referencias. Esto garantizará que su sistema esté preparado para la transición a la V2, en la que las CWGuids serán el identificador principal.</p>
+        <p><b>P3: ¿Puedo seguir utilizando la V1 durante la transición a la V2?</b></p>
+        <p><b>A3:</b> Sí, puedes seguir utilizando la V1 mientras migras a la V2. Las integraciones V1 y V2 pueden funcionar en paralelo durante este proceso de migración. Por ejemplo, puede ejecutar su integración de entidades en V2 mientras que su integración de personal sigue utilizando V1</p>
+        <p><b>P4: ¿Tengo que modificar el código de mis integraciones actuales?</b></p>
+        <p><b>A4:</b> Sí, para aprovechar las nuevas funciones de la V2, tendrá que actualizar sus llamadas a la API a los nuevos puntos finales de la V2. Los cambios específicos necesarios dependerán de los puntos finales que esté utilizando actualmente en la V1.</p>
+        <p><b>P5: ¿Cómo puedo obtener ayuda durante la transición?</b></p>
+        <p><b>R5:</b> Nuestro equipo de asistencia está a su disposición para ayudarle con cualquier duda o problema que le surja durante el proceso de transición.</p>
+        <p style="font-weight: bold;">P6: ¿Tengo que crear nuevos clientes API para la V2?</p>
+        <p><b>A6:</b> No, no es necesario crear nuevos clientes API o claves para V2. Sus clientes actuales de V1 seguirán funcionando sin problemas con V2. No obstante, si lo prefiere, puede crear nuevos clientes API específicos para V2. Una vez que haya realizado la transición completa a la V2, puede optar por eliminar los antiguos clientes de la V1 para asegurarse de que las integraciones de la V1 ya no se utilizan.</p>
+        <h2>Cuestiones relacionadas con los casos prácticos para la migración a la V2</h2>
+        <h3>Entidades</h3>
+        <p><b>T1 ¿Cómo crear un IDEAScript?</b></p>
+        <p><b>A1 Para Unidades de Negocio:</b> Para crear una entidad en una Unidad de Negocio específica, utilice el punto final <b>Crear una entidad en una unidad de negocio</b> . Proporcione el <b>nombre corto de la unidad de negocio</b> en los parámetros de la ruta junto con otros detalles requeridos en el cuerpo de la solicitud. La API creará la entidad en la Unidad de Negocio especificada. La respuesta incluirá un <b>CWGuid</b>, que deberá utilizarse para cualquier operación futura sobre la entidad, sustituyendo al ID de entidad anterior.</p>
+        <p><img src="../Resources/Images/CreateEntityinBU-Endpoint.png" alt="Visualización del endpoint para crear una entidad en una unidad de negocio" /></p>
+        <p><b>Si no utiliza Unidades de Negocio</b>, utilice el punto final estándar <b>Crear una entidad</b> , como hizo en la V1. Esto creará la entidad en su sitio en la nube, y aquí también se debe utilizar el <b>CWGuid</b> para las operaciones posteriores.</p>
+        <p><img src="../Resources/Images/CreateEntity.png" alt="Visualización del endpoint utilizado para crear una entidad donde no existen unidades de negocio." /></p>
+        <p><b>T2 ¿Cómo llamo a los puntos finales de obtención, actualización y eliminación de entidades en V2?</b></p>
+        <p><b>A2</b> En <b>la API V2</b>, debe utilizar <b>CWGuids</b> en lugar de <b>entityIds</b> para identificar entidades en los puntos finales <b>Get</b>, <b>Update</b>y <b>Delete</b> . Funciona así:</p>
+        <ol>
+            <li>
+                <p><b>Cuando se crea una entidad o se recupera una lista de entidades</b> (por ejemplo, a través del punto final Search Filtered List), la respuesta incluirá un <b>CWGuid</b> para cada entidad.</p>
+            </li>
+            <li>
+                <p><b>Para las operaciones posteriores</b> (Get, Update, Delete), debe utilizar el <b>CWGuid</b> proporcionado en la respuesta para hacer referencia a la entidad específica.</p>
+            </li>
+        </ol>
+        <p>Para las empresas de <b>unidades de negocio (BU)</b> , el uso de <b>CWGuids</b> garantiza que la entidad se identifique de forma única en todas las BU, lo que simplifica las operaciones en múltiples unidades de negocio. El sistema utilizará el Guid para realizar la operación solicitada (Obtener, Actualizar o Borrar) en cualquier Unidad de Negocio, garantizando una integración sin fisuras.</p>
+        <h3>Usuarios</h3>
+        <p><b>P3: ¿Cómo puedo crear usuarios en la V2?</b></p>
+        <p><b>A3</b> La creación de usuarios en la V2 es similar a la de la V1, con una función añadida para las empresas de unidades de negocio. Funciona así:</p>
+        <p><b>Para todas las empresas:</b></p>
+        <p>Cree usuarios en V2 utilizando el punto final <b>Crear un usuario</b> , de forma similar a V1. El proceso sigue siendo el mismo para la mayoría de los parámetros.</p>
+        <p><img src="../Resources/Images/CreateUserAPI.png" alt="Visualización del endpoint utilizado para crear un usuario." /></p>
+        <p><b>Para las empresas de la Unidad de Negocio (BU):</b></p>
+        <p>Las empresas de BU pueden especificar los <b>nombres abreviados de las unidades de negocio</b> para conceder al usuario acceso a BU específicas. Esto simplifica la gestión del acceso de los usuarios a través de múltiples unidades de negocio. He aquí un ejemplo de código con la lista de BUs:</p>
+        <p><img src="../Resources/Images/BU-Shortname.png" alt="Conceder a los usuarios acceso a una lista de unidades de negocio." /></p>
+        <p><b>Respuesta</b></p>
+        <p>Tras crear el usuario, la respuesta incluirá un <b>CWGuid</b>, que deberá utilizarse para futuras operaciones (Obtener, Actualizar, Eliminar) en lugar del ID de usuario anterior.</p>
+        <p><b>P4: ¿Cómo puedo obtener los datos de un usuario?</b></p>
+        <p><b>A4:</b> En V2, para recuperar los detalles de un usuario, utilice el punto final Obtener detalles del usuario y proporcione el CWGuid del usuario en los parámetros de la ruta. En la V1, se habría utilizado el ID de usuario, pero en la V2, se requiere el Guid en su lugar.</p>
+        <p><b>P5: ¿Cómo obtengo la lista de Unidades de Negocio a las que tiene acceso un usuario?</b></p>
+        <p><b>A5:</b> Para obtener la lista de Unidades de Negocio a las que tiene acceso un usuario, utilice el endpoint Obtener Detalles de Usuario y proporcione el CWGuid del usuario. La respuesta incluirá todas las Unidades de Negocio a las que el usuario tiene acceso actualmente.</p>
+        <p style="font-weight: bold;">P6: ¿Cómo asigno o desasigno un usuario del personal a diferentes Unidades de Negocio?</p>
+        <p><b>A6:</b> Puede asignar o desasignar un usuario de Unidades de Negocio mientras crea o actualiza el usuario.</p>
+        <p><b>Crear un usuario</b></p>
+        <p>Proporcione una lista de nombres abreviados de unidades de negocio en la solicitud, especificando a qué unidades de negocio debe tener acceso el usuario.</p>
+        <p><b>Update user details</b></p>
+        <p>Puede asignar el usuario a nuevas Unidades de Negocio o eliminarlo de las existentes.</p>
+        <p class="indent">Para asignar el usuario a una BU:</p>
+        <p class="indent" style="font-weight: normal;">Incluya todas las Unidades de Negocio a las que el usuario debería tener acceso, incluyendo aquellas a las que ya tiene acceso.</p>
+        <p class="indent" style="font-weight: normal;">Para eliminar el acceso a una BU:</p>
+        <p class="indent">Incluya sólo las BU a las que el usuario debe conservar el acceso. Cualquier BU que no esté en la lista será eliminada del acceso del usuario.</p>
+        <p class="indent"><img src="../Resources/Images/Assign-Unassign-BUs.png" alt="Asignación de acceso a las unidades de negocio." /></p>
+        <p class="note inline"><b>Importante:</b><br /> Si no incluye el campo Unidad de Negocio en la solicitud de actualización, no se realizará ningún cambio en el acceso a la BU del usuario.</p>
+        <h3>Grupos</h3>
+        <p><b>P7: ¿Cómo se crea un grupo en V2?</b></p>
+        <p><b>A7:</b> En V2, para crear un grupo, utilice el punto final Crear grupo y proporcione los parámetros necesarios en el cuerpo de la solicitud. A diferencia de la V1, en la que recibías un groupId, en la V2 recibirás un CWGuid en la respuesta, que deberás utilizar para cualquier operación futura en ese grupo específico (como Get, Update o Delete).</p>
+        <p><b>P8: ¿Cómo puedo añadir usuarios a un grupo?</b></p>
+        <p><b>A8:</b> Para añadir un usuario a un grupo en V2, utilice el punto final &quot;Actualizar la asignación de un usuario a un grupo&quot;. En la V2, en lugar de utilizar el ID de grupo y los ID de usuario como en la V1, tendrás que proporcionar el CWGuid del grupo y los CWGuids de los usuarios que quieras añadir en la solicitud.</p>
+        <p>Añadiendo o eliminando usuarios a grupos y asignando esos grupos a Unidades de Negocio específicas, puede gestionar eficazmente el acceso de los usuarios a las diferentes Unidades de Negocio a través de sus pertenencias a grupos.</p>
+        <p><img src="../Resources/Images/AddusersToGgroup.png" alt="Visualización del punto final para añadir usuarios a un grupo." /></p>
+        <p><b>P9: ¿Cómo obtengo la lista de Unidades de Negocio a las que tiene acceso un grupo?</b></p>
+        <p><b>A9:</b> Para obtener la lista de Unidades de Negocio a las que un grupo tiene acceso, utilice el endpoint <b>Obtener detalles del grupo</b> y proporcione el <b>CWGuid</b>del grupo. La respuesta incluirá todas las Unidades de Negocio a las que el grupo tiene acceso actualmente.</p>
+        <p><b>Q10 ¿Puedo asignar Grupos a Unidades de Negocio utilizando APIs?</b></p>
+        <p><b>A10</b> Sí, puede asignar o desasignar grupos de Unidades de Negocio durante la creación del grupo o utilizando el punto final de actualización.</p>
+        <p><b>Crear grupo</b></p>
+        <p>Proporcione una lista de unidades de negocio en la solicitud, especificando a qué unidades de negocio debe tener acceso el grupo.</p>
+        <p><b>Actualizar los datos del grupo</b></p>
+        <p>Puede asignar el grupo a nuevas Unidades de Negocio o eliminarlo de las existentes.</p>
+        <ul>
+            <li>
+                <p>Para asignar el grupo a una BU: Incluya todas las BU a las que el grupo debe tener acceso, incluidas las asignadas previamente.</p>
+            </li>
+            <li>
+                <p>Para eliminar el acceso a una BU: Incluya sólo las BU a las que el grupo debe conservar el acceso. Cualquier BU que no esté en la lista será eliminada del acceso del grupo.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Nota:</b> Todos los usuarios del grupo heredarán el acceso a las Unidades de Negocio asignadas al grupo.</p>
+        <p class="note inline"><img src="../Resources/Images/UpdateGroupDetails.png" alt="Actualización de los datos del grupo de usuarios." /></p>
+        <h3>Funciones y permisos</h3>
+        <p style="font-weight: bold;">P11: ¿Cómo asigno funciones a usuarios y grupos para entidades y compromisos?</p>
+        <p><b>A11</b> En primer lugar, recupere la lista de roles disponibles y sus GUIDs utilizando la API Get Role List.</p>
+        <p><b>Asignar funciones a un usuario</b></p>
+        <p>Para asignar permiso de acceso a un usuario:</p>
+        <ul>
+            <li>
+                <p>Proporcione el CWGuid del usuario, las funciones que deben asignarse o eliminarse y los detalles del objeto:</p>
+                <ul>
+                    <li>
+                        <p>Si la función es para todo el sistema (aplicable a todo el sistema), no se requieren detalles adicionales.</p>
+                    </li>
+                    <li>
+                        <p>Si la función es específica de una entidad o compromiso, indique el tipo de objeto (por ejemplo, entidad o compromiso) y las CWGuid de dichos objetos.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b>Asignar funciones a un grupo</b></p>
+        <p>Para asignar una cuenta a un grupo:</p>
+        <ul>
+            <li>
+                <p>Proporcione el CWGuid del grupo, los roles (GUIDs) a asignar o eliminar y los detalles del objeto:</p>
+                <ul>
+                    <li>
+                        <p>Si el rol es para todo el sistema, no se necesitan parámetros adicionales.</p>
+                    </li>
+                    <li>
+                        <p>Si la función es específica de una entidad o compromiso, indique el tipo de objeto y las CWGuids correspondientes a dichos objetos.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="note inline"><b>Nota para las empresas de Unidades de Negocio (BU):</b> El uso de <b>CWGuids</b> para la asignación de roles mejora la eficiencia de las empresas BU al permitir una gestión fluida de la asignación de roles entre <b>entidades</b> y <b>compromisos</b> de diferentes Unidades de Negocio.</p>
+        <h3>encargo</h3>
+        <p style="font-weight: bold;">P12: ¿Se ha producido algún cambio en las API de compromiso?</p>
+        <p><b>R12:</b> Las API Get Engagement no han cambiado de la V1 a la V2 y siguen funcionando como antes. Los parámetros de la solicitud siguen utilizando ID, como en la V1. Sin embargo, si tiene integraciones existentes para compromisos que utilicen la V1, deberá migrar a la V2 para garantizar una compatibilidad continuada, ya que la V1 quedará obsoleta con el tiempo.</p>
+        <p><b>Pregunta específica de la BU</b></p>
+        <p><b>P13: ¿Qué es un apodo BU?</b></p>
+        <p><b>A13:</b> Cada <b>Unidad de Negocio (BU)</b> tiene varios atributos: una <b>URL</b>, un <b>Nombre BU</b>, un <b>Nombre para Mostrar</b>y un <b>Nombre Corto BU</b>. Mientras que el <b>nombre de la UB</b> y el <b>nombre para mostrar</b> pueden no ser únicos, el <b>nombre corto de la UB</b> es único en todo el mundo, por lo que se utiliza como identificador de las UB.</p>
+        <p>El BU Shortname se deriva del sufijo URL de la BU y forma parte del dominio caseware. Se puede recuperar fácilmente desde la URL de la BU.</p>
+        <p><b>Atributos BU descritos</b></p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;">URL de la BU (no editable)</td>
+                    <td style="font-weight: bold;">Nombre</td>
+                    <td style="font-weight: bold;">Mostrar etiqueta</td>
+                    <td style="font-weight: bold;">Nombre corto</td>
+                </tr>
+                <tr>
+                    <td>ca.caseware.ca/test-site</td>
+                    <td>Sitio de pruebas</td>
+                    <td>Oficina-NY</td>
+                    <td>sitio de pruebas</td>
+                </tr>
+                <tr>
+                    <td>us.caseware.com/empresa-1-a-b</td>
+                    <td>Empresa: {1}</td>
+                    <td>Oficina 1 (de A a B)</td>
+                    <td>empresa-1-a-b</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note inline"><b>Nota importante:</b> Actualmente, no hay ninguna API disponible para recuperar la lista de BUs y sus Shortnames. Puede ver la lista de todas las unidades de negocio accediendo al sitio en la nube y navegando hasta Configuración | Unidades de negocio.</p>
+        <p><b>P14: ¿Qué BU debo utilizar para llamar a las API de gestión de otras BU?</b></p>
+        <p><b>R14:</b> Recomendamos utilizar la URL de la Unidad de Negocio (BU) del Administrador para configurar sus integraciones API y gestionar los datos a través de otras BUs. La BU Admin sirve como eje central para gestionar múltiples BUs, en línea con la forma en que sugerimos gestionar las tareas administrativas a través de la UI.</p>
+        <p>Del mismo modo que aconsejamos a los administradores que gestionen el personal, los grupos y otros objetos desde la Admin BU en la interfaz de usuario, utilizar la Admin BU para sus llamadas a la API garantiza la coherencia y simplifica la administración. Este enfoque le ayuda a mantener un mejor control y visibilidad cuando gestiona datos de varias unidades de negocio.</p>
+        <p> </p>
+        <p> </p>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="You can post a number of different entries to your trial balance. Options include adjusting entries, reclassifying entries, uncorrected entries, and tax entries, which are all accessible from the Adjustment menu." />
+    </head>
+    <body>
+        <h1>Contabilizar ajustes en el balance de sumas y saldos</h1>
+        <p>Puede añadir ajustes a las cuentas o grupos del balance de sumas y saldos.</p>
+        <h2><a name="Post"></a>Contabilizar un asiento de ajuste en el balance de sumas y saldos (Página de datos)</h2>
+        <p>Puede contabilizar asientos de ajuste en cuentas o grupos e incluir una descripción del asiento y una <a href="../Documentation-and-Review/Add-annotations.htm#Annotate3">anotación.</a></p>
+        <p style="font-weight: bold;">Para contabilizar un asiento de ajuste:</p>
+        <ol>
+            <li>
+                <p>Vaya a la página <b>Datos</b> .</p>
+            </li>
+            <li>
+                <p>Seleccione <b>Cuentas</b> en el panel izquierdo.</p>
+            </li>
+            <p>También puede añadir ajustes en la opción de vista <b>GRUPOS FINANCIEROS</b> .</p>
+            <p class="note inline"><b>Nota:</b> También puede seleccionar GRUPOS <b>IMPUESTOS</b> y <b>GRUPOS PRESCRITOS</b>, si están activados en su producto.</p>
+            <li>
+                <p>Seleccione <b>Añadir</b> (<img src="../../Resources/Icons/add-button-data-page.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Añadir ajuste.</b></p>
+            </li>
+            <li>
+                <p>Añada los detalles del asiento de ajuste en el cuadro de diálogo.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Introduzca el <b>número de ajuste.</b></p>
+                    </li>
+                    <p class="note inline"><b>Nota:</b> Si no se trata de la primera entrada de ajustes, la aplicación incrementa automáticamente el último número de ajuste introducido y lo muestra en el campo <b>Número de ajuste</b> . Si se trata de la primera entrada de ajuste, aparece <i>1</i> en el campo como número de ajuste por defecto. Puede anular el valor predeterminado.</p>
+                    <li>
+                        <p>Seleccionar un <b>Tipo</b> de ajuste.</p>
+                    </li>
+                    <p class="note inline"><b>Nota:</b> Los tipos de ajuste disponibles en el desplegable se basan en la configuración de su producto.</p>
+                    <li>
+                        <p>Escriba una descripción para el ajuste.</p>
+                    </li>
+                    <li>
+                        <p>En <b>Detalles</b>, seleccione <b>+ Línea de</b>  <b>cuenta</b> para contabilizar el asiento de ajuste en una cuenta, o seleccione <b>+ Línea de grupo</b> para contabilizarlo en un grupo.</p>
+                        <p class="tip"><b>Consejo:</b> Puede crear una cuenta a medida que añade sus líneas utilizando el botón <b>Añadir cuenta</b> .</p>
+                        <p><img src="../../Resources/Images/add-account-in-adjustments2.png" alt="Añada una cuenta mientras introduce las líneas de ajuste." /></p>
+                        <p>Si hay varias estructuras de agrupación habilitadas en su producto y añade un ajuste de línea de grupo, puede seleccionar la estructura de agrupación adecuada en el desplegable. El ajuste sólo se aplicará a esa estructura de agrupación y no a los grupos vinculados de otras estructuras de agrupación.</p>
+                        <p>Si se trata de un compromiso de consolidación y usted decide,</p>
+                        <ul>
+                            <li>añada un ajuste de línea de cuenta, en el cuadro de diálogo aparecerá una lista de las cuentas principales y subsidiarias.</li>
+                            <li>añadir un ajuste de línea de grupo, se muestra en el diálogo una lista de los grupos de entidades padre.</li>
+                            <p>Tenga en cuenta que si el tipo de ajuste es <i>Eliminación</i>, también puede contabilizar el ajuste para un grupo subsidiario. Seleccione el nombre de la entidad para mostrar una lista de las entidades disponibles (matriz y todas las filiales). Para obtener más información sobre los tipos de ajuste, consulte <a href="#Common">Tipos de ajuste habituales.</a></p>
+                        </ul>
+                        <p><img src="../../Resources/Images/eliminiating-adj-parent-and-subsidiary.PNG" alt="Cómo contabilizar un ajuste para un grupo de filiales en Eliminación de ajustes." /></p>
+                    </li>
+                    <li>
+                        <p>Seleccione una cuenta o un grupo e introduzca el importe del ajuste. If you want to enter a calculation for the adjustment amount select <b>fx</b> in the <b>Amount</b> field and enter the calculation. To learn more, see the <a href="#Calculat">Calculated adjustments</a> section.</p>
+                        <p class="note"><b>Note:</b> If you select a group and dimensions are enabled in your product, you can also select dimensions to assign to the adjustment. You can select one dimension for each dimension category assigned to the group.</p>
+                    </li>
+                    <li>
+                        <p>Finalice la entrada seleccionando <b>+</b>  <b>línea de</b>  <b>cuenta</b> o <b>+ línea de grupo</b> para añadir otra cuenta o grupo para equilibrar el ajuste.</p>
+                    </li>
+                    <li>
+                        <p>Seleccione <b>Guardar</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>El asiento de ajuste se contabiliza en la cuenta o grupo. Los datos se actualizan inmediatamente con los nuevos valores. You can view your adjustment on the <b>Adjustments</b> page, and apply filters if required.</p>
+        <p>También puede contabilizar un asiento de ajuste seleccionando <b>Duplicar</b> para un ajuste existente para crear una copia del mismo.</p>
+        <p>Cuando se duplica un ajuste, el nuevo ajuste tiene el mismo tipo, descripción y detalles de cuenta que el ajuste original. Los ajustes duplicados se establecen por defecto para el año en curso, incluso si el ajuste original es para el año anterior.</p>
+        <p>Tenga en cuenta que no se copian las anotaciones, incidencias o firmas asociadas al ajuste.</p>
+        <h2><a name="Calculat"></a>Ajustes recalculados</h2>
+        <p>When you enter the adjustment amount, you can select <b>fx</b> to enter a calculation for the amount. You can reference other accounts and groups in the calculation, which allows you to create an adjustment that can be easily updated if the referenced account or group balance changes.</p>
+        <p>If a calculated adjustment contains a reference whose balance has changed, the <b>Recalculate</b> button displays next to the adjustment on the <b>Adjustments</b> page. You can also easily recalculate multiple adjustments at once, by selecting the <b>Recalculate all</b> button at the top of the page.</p>
+        <p><img src="../../Resources/Images/adjustments-page-recalculate.png" alt="The Adjustments page displaying an adjustment that requires recalculation." /></p>
+        <p>When you create calculated adjustments, you must avoid creating circular dependencies. To do this, ensure you do not reference parent groups and accounts or groups whose final balance is also dependent on calculated adjustments.</p>
+        <p>For example, if you make an adjustment to the <i>Petty Cash</i> account and reference its parent group, <i>Cash and cash equivalents</i>, in the calculation, you will create a circular dependency. When the adjustment is calculated and applied to the <i>Petty Cash</i> account, the balance of the parent group will also change. This will result in the <b>Recalculate</b> button displaying for the adjustment. If you select to recalculate the adjustment, the parent group’s balance will again be updated and the adjustment will continue to require recalculation. This will result in inaccurate balances for both the account and the parent group.</p>
+        <p><img src="../../Resources/Images/calculated-adjustment-circular-dependency.png" alt="An example of a calculated adjustment with a circular dependency. This adjustment is to the Petty Cash group but the calculation uses its parent group, Cash and cash equivalents." /></p>
+        <p>Another example that could lead to a circular dependency is when you add a calculated adjustment to one group that uses an account balance from a second group, and then add another adjustment to the second group that uses the final balance of the first group.</p>
+        <p>For example, say you add an adjustment to the <i>Petty Cash</i> account and reference the <i>Short-term investments</i> group balance. Now, if you add a second adjustment to the <i>Short-term investments</i> group that references the final balance of the parent group of the <i>Petty Cash</i> account, <i>Cash and cash equivalents</i>, you will create a circular dependency.</p>
+        <p>If the <i>Short-term investments</i> balance changes, the adjustment for the <i>Petty Cash</i> account will require recalculation. This will result in the final balance of the <i>Cash and cash equivalents</i> group changing, which means the adjustment for the <i>Short-term investments</i> group will also require recalculation. Once this adjustment is recalculated, the first adjustment will again require recalculation and so on.</p>
+        <h2><a name="Common"></a>Tipos de ajuste habituales</h2>
+        <p>Los tipos de ajustes incluyen asientos normales, asientos de reclasificación, asientos no corregidos y asientos fiscales. He aquí algunos ejemplos de los tipos de ajuste más comunes y una breve descripción.</p>
+        <ul>
+            <li>
+                <p><b>Normal</b>: Utilícelo para actualizar todos los documentos automáticos relevantes, como diarios, libros mayores, balances de comprobación, estados financieros y leadsheets. Al actualizar de un período a otro, incluido un cierre de ejercicio, estos asientos se transfieren de la columna de ajustes a la columna de saldo inicial o preliminar en los documentos de balance de sumas y saldos y de balance de comprobación.</p>
+            </li>
+            <li>
+                <p><b>Reclasificaciones</b>: No se registran en los libros contables normales. Sin embargo, se registran en todos los estados financieros y documentos de trabajo, como las hojas de ruta. Cuando se efectúan en un periodo distinto del último del ejercicio, los asientos de reclasificación se excluyen de los registros contables. En este caso, no es necesario anular los asientos de los saldos no consolidados.</p>
+                <p>Los asientos de reclasificación realizados en el último período del ejercicio se incluyen en los saldos iniciales del año siguiente cuando se realiza cualquiera de las siguientes elecciones durante un cierre de ejercicio: Actualizar el saldo inicial del año siguiente con el consolidado o el informe. Estos asientos de reclasificación deben anularse.</p>
+            </li>
+            <li>
+                <p><b>Eliminación</b>: Se utiliza para preparar combinaciones o consolidaciones de divisiones o empresas. Estos asientos aparecen en balances de comprobación consolidados, hojas de ruta y documentos de estados financieros.</p>
+            </li>
+            <li>
+                <p><b>No registrados - Hechos</b>: Representan incorrecciones de hecho que no se registrarán debido a su materialidad o asientos propuestos que pueden modificarse posteriormente a un estado normal. Estas entradas aparecen en el Documento de resumen de incorrecciones no corregidas.</p>
+            </li>
+            <li>
+                <p><b>No registrados - Proyectados</b>: Representan incorrecciones proyectadas no registradas basadas en las mejores estimaciones del auditor de incorrecciones en poblaciones, normalmente derivadas de muestreos. Estas entradas aparecen en el Documento de resumen de incorrecciones no corregidas.</p>
+            </li>
+            <li>
+                <p>Errores de apreciación no<b>registrados</b>: representan errores de apreciación no registrados basados en diferencias derivadas de juicios de la dirección sobre estimaciones contables, o de la selección o aplicación de políticas contables que el auditor considera inadecuadas o poco razonables. Estas entradas aparecen en el Documento de resumen de incorrecciones no corregidas.</p>
+            </li>
+            <li>
+                <p><b>Impuesto -</b>Federal: Ajustan el saldo del impuesto federal. No se registran en los libros contables normales. Utilice el balance de sumas y saldos, el libro diario y la hoja de ruta para visualizar las entradas de impuestos federales. Si se crea un documento automático Diario - Asientos de ajuste, cualquier asiento de ajuste Permanente o Temporal se muestra en la columna Diferencia del informe.</p>
+            </li>
+            <li>
+                <p><b>Impuestos -</b>Estado: Ajustan el saldo de los impuestos estatales. No se registran en los libros contables normales. Utilice el balance de sumas y saldos, el libro diario y la hoja de ruta para visualizar las entradas de impuestos estatales.</p>
+            </li>
+            <li>
+                <p><b>Impuesto - Ciudad</b>: Ajustan el saldo de impuestos municipales. No se registran en los libros contables normales. Utilice los documentos del balance de comprobación, del diario y de la hoja de ruta para visualizar las entradas de impuestos municipales.</p>
+            </li>
+        </ul>
+    </body>
+</html>

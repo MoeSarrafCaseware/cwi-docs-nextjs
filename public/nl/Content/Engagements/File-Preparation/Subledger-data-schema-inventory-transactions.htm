@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Beschreven voorraadtransacties</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. Dit onderwerp beschrijft de velden in het subgrootboek Inventaris transacties.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transactie-ID <br /><code>(inventaris_transactie_transactie_id</code>)</td>
+                    <td>
+                        <p>De transactie-ID gekoppeld aan de grootboekauditrapportagenormen (“Audit Data Standards” (ADS)) Procure to Pay of Order to Cash.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transactiedatum <br /><code>(inventaris_transactie_transactie_datum</code>)</td>
+                    <td>
+                        <p>De datum van activiteit, per bijbehorend transactiedocument, indien van toepassing.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Derde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadproduct-ID <br /><code>(inventaris_transactie_product_id</code>)</td>
+                    <td>
+                        <p>De product-ID is een code die een artikel in uw voorraad apart identificeert.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Serienummer <br /><code>(inventory_transaction_serial_number</code>)</td>
+                    <td>
+                        <p>Bij serievorming wordt hier het serienummer genoteerd. Al is &quot;serienummer&quot; de gangbare term, is de waarde niet beperkt tot numerieke waarden Al is het ongebruikelijk dat een artikel zowel door een serie- als partijnummer wordt gekenmerkt (het serienummer identificeert het artikel immers uniek), hoeven deze elkaar niet uit te sluiten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Vierde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Partijnummer<br /><code>(inventory_transaction_lot_number</code>)</td>
+                    <td>
+                        <p>Als het om een partij gaat, wordt hier het partijnummer genoteerd. Al is &quot;partijnummer&quot; de gangbare term, is de waarde niet beperkt tot numerieke waarden.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Primaire sleutel: Vijfde alternatief. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transactietype <br /><code>(inventaris_transactie_transactie_type</code>)</td>
+                    <td>
+                        <p>De codes met een omschrijving van de primaire voorraadspecifieke acties die plaatsvinden in: voorraadtransacties met betrekking tot de beweging van goederen, handel, aanpassingen van hoeveelheden vanwege interne gebeurtenissen in het bedrijf, en kostenaanpassingen vanwege marktfactoren of schade.</p>
+                        <p>Gegevenstype Enum</p>
+                        <p>Benodigd No</p>
+                        <p>Voorbeeldwaarden: Ontvangen goederen (GR), Verzonden goederen (GS), Voorraadoverdrachten (IT), Voorraadaanpassingen (IA), Overig (OT)</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Systeem transactietype <br /><code>(inventaris_transactie_transactie_type_systeem</code>)</td>
+                    <td>
+                        <p>Een lokale transactiecode van het onderliggende boekhoudsysteem.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transactietijd <br /><code>(inventory_transaction_transaction_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip van de activiteit, per bijbehorend transactiedocument, indien van toepassing.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transactiehoeveelheid <br /><code>(inventory_transaction_transaction_quantity</code>)</td>
+                    <td>
+                        <p>De hoeveelheid of artikel uitgedrukt in locatie bevoorradingsunit.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aanpassing transactiekosten <br /><code>(inventory_transaction_transaction_cost_adjustment</code>)</td>
+                    <td>
+                        <p>De stijging of (daling) van de bevoorradingskosten per eenheid.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Omschrijving transactie <br /><code>(inventaris_transactie_transactie_beschrijving</code>)</td>
+                    <td>
+                        <p>Een beschrijving van de transactie.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID van order gekoppeld aan transactie <br /><code>(inventory_transaction_transaction_associated_order_id</code>)</td>
+                    <td>
+                        <p>De klantorder, inkooporder of ander document gekoppeld aan de transactie. Moet aangeven of het nummer in de Regel-ID van order gekoppeld aan transactie afkomstig is van de grootboekauditrapportagenormen (“Audit Data Standards” (ADS)) Procure to Pay of Order to Cash, door respectievelijk de tekst &quot;P2P&quot; of &quot;O2C&quot; te gebruiken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regel-ID van order gekoppeld aan transactie <br /><code>(inventory_transaction_transaction_associated_order_line_id</code>)</td>
+                    <td>
+                        <p>Het regelnummer van een klantorder, inkooporder, om het onderscheid te maken tussen meerdere artikelen in één order voor verschillende hoeveelheden. Moet aangeven of het nummer in de Regel-ID van order gekoppeld aan transactie afkomstig is van de grootboekauditrapportagenormen (“Audit Data Standards” (ADS)) Procure to Pay of Order to Cash, door respectievelijk de tekst &quot;P2P&quot; of &quot;O2C&quot; te gebruiken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID van document gekoppeld aan transactie <br /><code>(inventory_transaction_transaction_associated_document_id</code>)</td>
+                    <td>
+                        <p>De leveringsbon, verzendnota of ander document aangemaakt bij/geassocieerd met beweging. Moet aangeven of het nummer in de Regel-ID van order gekoppeld aan transactie afkomstig is van het subgrootboek-ADS &quot; Procure to Pay&quot; of &quot; Order to Cash&quot; door respectievelijk de tekst &quot;P2P&quot; of &quot;O2C&quot; te gebruiken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regel-ID van document gekoppeld aan transactie <br /><code>(inventory_transaction_transaction_associated_document_line_id</code>)</td>
+                    <td>
+                        <p>Het regelnummer voor een ander document dan klantorder of inkooporder. Het document moet aangeven of het nummer in de Regel-ID van order gekoppeld aan transactie afkomstig is van het subgrootboek-ADS &quot; Procure to Pay&quot; of &quot; Order to Cash&quot; door respectievelijk de tekst &quot;P2P&quot; of &quot;O2C&quot; te gebruiken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Locatie verzonden voorraad <br /><code>(inventory_transaction_inventory_from_location</code>)</td>
+                    <td>
+                        <p>De opslaglocatie waar de voorraad naartoe wordt gestuurd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Locatie ontvangen voorraad <br /><code>(inventaris_transactie_inventaris_naar_locatie</code>)</td>
+                    <td>
+                        <p>De opslaglocatie waar de voorraad naartoe wordt gestuurd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadsysteem of externe bron <br /><code>(inventaris_transactie_inventaris_systeem_of_externe_bron</code>)</td>
+                    <td>
+                        <p>Wordt gebruikt om boekingsinformatie uit een andere ADS-module (bijvoorbeeld P2P, O2C) of vanuit de voorraad geïnitieerde transactie aan te geven. Indien geïnitieerd vanuit de voorraad, worden onderstaande velden gebruikt om gebruikers- en grootboekgegevens vast te leggen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadgrootboekregel debetrekeningnummer <br /><code>(inventory_transaction_gl_line_debit_account_number</code>)</td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de debetzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadgrootboekregel creditrekeningnummer <br /><code>(inventory_transaction_gl_line_credit_account_number</code>)</td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de creditzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project-ID <br /><code>(inventaris_transactie_project_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor het project. Wordt doorgaans automatisch door het systeem gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leveranciers (ID) <br /><code>(inventory_transaction_supplier_account_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor de leverancier. Wordt doorgaans automatisch door het systeem gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rekening-ID klant <br /><code>(inventory_transaction_customer_account_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor de ontvangende klant. Wordt doorgaans automatisch door het systeem gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code Innventariserende organisatie <br /><code>(inventory_transaction_inventory_organization_code</code>)</td>
+                    <td>
+                        <p>De code van de inventariserende organisatie. De inventariserende organisatie verwijst naar de organisatorische eenheid, fysiek of virtueel, waar de voorraadtransacties en saldi kunnen worden gevolgd en gemonitord. Het verschaft voorraadinformatie aan modules als inkoop en verkoop. De eenvoudigste vorm van voorraadorganisatie is een magazijn.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meeteenheidcode bevoorrading <br /><code>(inventory_transaction_inventory_stocking_uom_code</code>)</td>
+                    <td>
+                        <p>De gestandaardiseerde maateenheid die wordt gebruikt om voorraaditems te tellen en uit te drukken als specifieke hoeveelheden.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UOM-code Voorraadkosten <br /><code>(inventory_transaction_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>De code van de meeteenheid voor de voorraadkosten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraad benodigd door <br /><code>(inventory_transaction_inventory_required_by</code>)</td>
+                    <td>
+                        <p>De persoon of organisatie die de voorraad opvraagt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code kostenorganisatie <br /><code>(inventaris_transactie_kosten_organisatie_code</code>)</td>
+                    <td>
+                        <p>De code van de kostenorganisatie, die verwijst naar de organisatorische eenheden/niveaus waar de kosten van de uitgaande voorraad worden berekend. De berekening kan plaatsvinden op het niveau van de onderneming, op het niveau van de voorraadhoudende organisatie of op de specifieke locaties waar de voorraad is opgeslagen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadkosten <br /><code>(inventaris_transactie_voorraad_kosten</code>)</td>
+                    <td>
+                        <p>De kosten per eenheid volgens de methode in Voorraadkosten, in Beschikbare voorraad.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit <br /><code>(inventaris_transactie_bedrijfseenheid_code</code>)</td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboekt door <br /><code>(inventory_transaction_entered_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die het record aanmaakte.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van invoer <br /><code>(inventory_transaction_entered_date</code>)</td>
+                    <td>
+                        <p>Datum waarop de transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd. Indien mogelijk moet dit een door het systeem gegenereerde datum zijn (in plaats van een door de gebruiker ingevoerde datum). Deze datum stemt niet noodzakelijk overeen met de datum van de transactie zelf.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde tijd <br /><code>(inventory_transaction_entered_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd. ISO 8601 in 24-uurs weergave (hhmm) (bijv. 1:00 PM = 1300).</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door <br /><code>(inventaris_transactie_goedgekeurd_door</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die wijzigingen goedkeurde.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum goedkeuring <br /><code>(inventaris_transactie_goedgekeurd_per_datum</code>)</td>
+                    <td>
+                        <p>Datum waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijdstip van goedkeuring <br /><code>(inventaris_transactie_goedgekeurd_per_tijd</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd. ISO 8601 in 24-uurs weergave (hhmm) (bijv. 1:00 PM = 1300).</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door <br /><code>(inventory_transaction_last_modified_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de laatste persoon die deze post aanpaste.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van laatste wijziging <br /><code>(inventory_transaction_last_modified_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijd laatste wijziging <br /><code>(inventory_transaction_last_modified_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd. ISO 8601 in 24-uurs weergave (hhmm) (bijv. 1:00 PM = 1300).</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Functionele valutacode <br /><code>(inventory_transaction_functional_currency_code</code>)</td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het saldo (ISO 4217:2015).</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboekt door <br /><code>(inventory_transaction_posted_user_id</code>)</td>
+                    <td>
+                        <p>De unieke ID van de persoon die het record heeft ingeboekt. Wordt doorgaans automatisch door het systeem gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van invoer <br /><code>(inventory_transaction_posted_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de transactie in het systeem is ingeboekt.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde tijd <br /><code>(inventory_transaction_posted_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de bepaalde transactie is ingeboekt.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

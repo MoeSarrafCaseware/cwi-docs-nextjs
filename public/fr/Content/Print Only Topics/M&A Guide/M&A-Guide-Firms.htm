@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Considerations"></a>Considérations</h1>
+        <p>Si votre entreprise répond à l&apos;un des scénarios susmentionnés, tenez compte des éléments suivants avant de demander la fusion :</p>
+        <ul>
+            <li>
+                <p><b>Quel est le site cloud &quot;principal&quot; et quels sont les sites &quot;secondaires&quot; ?</b></p>
+                <p>Pour déterminer le flux des paramètres fusionnés entre les sites cloud, l&apos;un d&apos;entre eux doit être désigné comme &quot;principal&quot; et les autres comme &quot;secondaires&quot;. Cette désignation n&apos;est pertinente que pendant la fusion et n&apos;existera plus par la suite.</p>
+            </li>
+            <li>
+                <p><b>Qui est l&apos;&quot;administrateur principal&quot; ?</b></p>
+                <p>Vous devrez sélectionner un administrateur du site cloud &quot;principal&quot; pour recevoir des autorisations d&apos;administrateur pour toutes les unités commerciales et la possibilité de créer de nouvelles unités commerciales.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Au cours de la <a href="#MergeProcess">procédure de fusion</a>, le nouvel &quot;administrateur principal&quot; doit créer une unité d&apos;entreprise qui sera promue à l&apos;unité d&apos;entreprise &quot;Admin&quot; après la fusion. Cette unité opérationnelle &quot;Admin&quot; sera utilisée uniquement pour les changements au niveau de l&apos;administrateur et ne doit pas contenir d&apos;entités ou d&apos;engagements.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Certains des sites en nuage utilisent-ils l&apos;authentification unique (SSO) ?</b></p>
+                <ul>
+                    <li>
+                        <p>Si un seul site cloud utilise le SSO, sa configuration SSO sera appliquée à tous les autres sites cloud (qui n&apos;utilisent pas actuellement le SSO), qu&apos;il s&apos;agisse d&apos;un site &quot;primaire&quot; ou d&apos;un site &quot;secondaire&quot;.</p>
+                    </li>
+                    <li>
+                        <p>Si tous les sites du nuage ou plusieurs d&apos;entre eux utilisent le SSO, assurez-vous que les configurations correspondent avant la fusion. Pour cela, vous devez migrer tous les courriels des utilisateurs vers un seul fournisseur SSO. Si les configurations ne correspondent pas, la configuration SSO du site &quot;primaire&quot; sera utilisée.</p>
+                    </li>
+                </ul>
+                <p>Après la fusion, nous vous recommandons d&apos;apporter toute autre modification à la configuration SSO dans l&apos;unité d&apos;affaires &quot;Admin&quot;.</p>
+            </li>
+            <li>
+                <p><b>Certains de vos collaborateurs travaillent-ils dans un environnement hybride (Working Papers + Cloud) ?</b></p>
+                <p>Pour soutenir les fonctionnalités des unités commerciales, les administrateurs doivent s&apos;assurer que tout le personnel utilisant le nuage hybride met à jour les Working Papers 2023 : Mettre à jour 1 et ajouter la ligne suivante au fichier CV.VER de chaque instance de Working Papers :</p>
+                <p>AllowOpeningFilesConnectedToDifferentFirms=1</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Après la fusion, le personnel doit changer son URL d&apos;intégration dans le nuage dans Working Papers pour l&apos;URL de l&apos;unité commerciale &quot;Admin&quot;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>L&apos;un des sites Cloud contient-il des doublons d&apos;adresses électroniques de collaborateurs ou de contacts ?</b></p>
+                <p>Lors de la fusion, les comptes de personnel ou de contact dont les adresses électroniques sont en double entre les sites du nuage seront fusionnés. Si vous ne souhaitez pas que le compte d&apos;un membre du personnel ou d&apos;un contact soit fusionné, assurez-vous qu&apos;il possède une adresse électronique unique.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Si une adresse électronique en double existe dans un site Cloud en tant que compte du personnel et dans un autre en tant que compte de contact, le compte du personnel restera accessible après la fusion. Un compte de contact &quot;fictif&quot; restera dans toutes les activités, engagements, journaux, etc. où il se trouvait auparavant, mais il ne sera plus accessible à l&apos;avenir.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>L&apos;un des sites en nuage contient-il des groupes de personnel portant le même nom ?</b></p>
+                <p>Les groupes ne fusionnent pas et restent propres à l&apos;unité commerciale de leur site Cloud précédent ; toutefois, si une entité s&apos;est vu attribuer un groupe et a ensuite été transférée dans une unité commerciale différente, elle se verra automatiquement attribuer un groupe portant le même nom (s&apos;il existe) dans la nouvelle unité commerciale. Si vous ne souhaitez pas obtenir ce résultat, nous vous recommandons de renommer les groupes dont les noms sont en double avant la fusion.</p>
+            </li>
+            <li>
+                <p><b>L&apos;un des sites Cloud utilise-t-il des langues par défaut différentes ?</b></p>
+                <p>Si l&apos;un des sites Cloud utilise des langues par défaut différentes, elles doivent être alignées par le <a href="mailto:support@caseware.com">support Caseware</a> avant la fusion.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Les langues supplémentaires (en plus de la langue par défaut) ne sont pas copiées entre les unités commerciales lors de la fusion. Si vous avez des langues supplémentaires dans l&apos;un des sites Cloud, le <a href="mailto:support@caseware.com">support Caseware</a> devra activer ces langues dans tous les sites avant la fusion.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Certains des sites en nuage utilisent-ils des flux de travail personnalisés ?</b></p>
+                <p>Si l&apos;un des sites en nuage utilise des flux de travail personnalisés, il sera ajouté aux unités opérationnelles &quot;primaires&quot; et &quot;secondaires&quot;. Nous vous recommandons de renommer tout flux de travail personnalisé comportant des noms en double avant la fusion afin d&apos;éviter toute confusion. Si vous ne renommez pas ces workflows, les noms des doublons des unités d&apos;affaires &quot;secondaires&quot; seront automatiquement ajoutés au nom de l&apos;unité d&apos;affaires (par exemple Workflow_BU2).</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Les flux de travail sélectionnés dans chacun des sites Cloud précédents resteront sélectionnés dans leur unité opérationnelle associée.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Certains des sites en nuage utilisent-ils des propriétés d&apos;entité personnalisées ?</b></p>
+                <p>Si l&apos;un des sites cloud utilise des propriétés d&apos;entité personnalisées, il sera ajouté aux unités d&apos;affaires &quot;primaires&quot; et &quot;secondaires&quot;. Nous vous recommandons de renommer toutes les propriétés d&apos;entités personnalisées comportant des noms en double avant la fusion afin d&apos;éviter toute confusion.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Si une propriété d&apos;entité personnalisée est un champ obligatoire dans l&apos;un des sites cloud avant la fusion, elle sera obligatoire dans toutes les unités commerciales par la suite.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Certains des sites en nuage utilisent-ils des rôles personnalisés ?</b></p>
+                <p>Si l&apos;un des sites en nuage utilise des rôles personnalisés, il sera ajouté aux unités d&apos;entreprise &quot;primaire&quot; et &quot;secondaire&quot;. Nous vous recommandons de renommer les rôles personnalisés qui ont des noms en double avant la fusion afin d&apos;éviter toute confusion.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Les rôles personnalisés avec des noms en double seront fusionnés s&apos;ils ont des autorisations identiques. Les membres du personnel dont le rôle a été fusionné conserveront ce rôle après la fusion.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Certains des sites de Cloud contiennent-ils des engagements de Cloud (SE) ?</b></p>
+                <p>Les unités opérationnelles n&apos;ont pas été optimisées pour travailler avec les engagements Cloud (SE) ; cependant, nous apportons des améliorations itératives pour soutenir les engagements Cloud (SE) dans le cadre de notre feuille de route. Si l&apos;un de vos sites Cloud contient des engagements Cloud (SE), contactez votre représentant Caseware et demandez-lui si des unités d&apos;affaires sont recommandées pour votre entreprise.</p>
+            </li>
+        </ul>
+        <h2>Réglages fermes</h2>
+        <p>Le processus de fusion combine la plupart des paramètres des sites cloud existants et les applique à chaque unité commerciale ; cependant, certains paramètres ne peuvent pas être fusionnés ou écrasent d&apos;autres paramètres. Reportez-vous au tableau suivant pour savoir comment des paramètres spécifiques sont traités lors de la fusion :</p>
+        <table style="width: 100%;">
+            <col style="width: 50%;" />
+            <col style="width: 50%;" />
+            <tbody>
+                <tr>
+                    <th>
+                        <p>Paramètres</p>
+                    </th>
+                    <th>
+                        <p>Fusionner les détails</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Organization | Profile</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Personnalisation de la page d&apos;accueil</p>
+                    </td>
+                    <td>
+                        <p>Copié de &quot;Primaire&quot; à &quot;Secondaire&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Courriel (Paramètres)</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Intégration | API</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Permissions des rôles de sécurité</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Sécurité | Paramètres du mot de passe.</p>
+                    </td>
+                    <td>
+                        <p>Copié de &quot;Primaire&quot; à &quot;Secondaire&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Authentification et gestion des sessions</p>
+                    </td>
+                    <td>
+                        <p>Copié de &quot;Primaire&quot; à &quot;Secondaire&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Single Sign-On | Fournisseur d&apos;identité</p>
+                    </td>
+                    <td>
+                        <p>Copié de &quot;Primaire&quot; à &quot;Secondaire&quot;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Gestion des vues.</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Terminology</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Customization | Positions</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Gestion des balises.</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Allez dans Personnalisation | Gestion des liens.</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Activer/Désactiver les fonctions.</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Paramètres régionaux.</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Propriétés de l&apos;entité personnalisée.</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sélectionnez Personnalisation | Gestion du flux de travail.</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Select Working Papers | Working Papers Sécurité.</p>
+                    </td>
+                    <td>
+                        <p>Combiné &quot;primaire&quot; et &quot;secondaire</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Groupes et paramètres des groupes</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Paramètres de l&apos;application (modèle)</p>
+                    </td>
+                    <td>
+                        <p>Non fusionné</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Cloud 33.0</h2>
+        <p>En prévision de la sortie de Cloud 33.0, les entreprises qui ont l&apos;intention d&apos;utiliser des business units devraient envisager les changements suivants :</p>
+        <ul>
+            <li>
+                <p>Les rôles existants à l&apos;échelle du système (Admin, Staff Admin, Entity Admin, Settings Admin et les rôles personnalisés ayant une portée à l&apos;échelle du système) seront convertis en <b>rôles d&apos;organisation</b>. Ces rôles fonctionnent de la même manière que les rôles à l&apos;échelle du système, mais leurs autorisations s&apos;appliquent également à tous les utilisateurs du système <u>centres de profit</u> dans l&apos;organisation, à l&apos;exception du rôle d&apos;administrateur d&apos;entité (ou des rôles personnalisés avec des autorisations équivalentes), où les autorisations ne s&apos;appliquent qu&apos;aux unités commerciales auxquelles l&apos;utilisateur est affecté.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Les utilisateurs qui héritent d&apos;un rôle d&apos;organisation, que ce soit par le biais d&apos;un rôle converti à l&apos;échelle du système ou d&apos;un groupe, bénéficieront des privilèges de ce rôle dans toutes les unités commerciales, même si le rôle est hérité d&apos;un groupe qui n&apos;est affecté qu&apos;à quelques unités commerciales. Cela signifie que <u>certains utilisateurs pourraient avoir des privilèges d&apos;administrateur dans plus d&apos;unités commerciales qu&apos;ils n&apos;en avaient avant le Cloud 33.0</u>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Les rôles d&apos;entité et de contenu existants (Propriétaire, Éditeur, Visualisateur, Accès à l&apos;entité et rôles personnalisés avec une portée d&apos;entité et de contenu) seront convertis en <b>rôles de contenu</b>. Les autorisations de ces rôles ne s&apos;appliquent qu&apos;aux unités d&apos;affaires auxquelles l&apos;utilisateur est affecté.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Les utilisateurs qui héritent d&apos;un rôle de contenu par l&apos;intermédiaire d&apos;un groupe ne disposent des privilèges de ce rôle que dans les unités commerciales auxquelles le groupe est affecté.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Les groupes seront gérés à partir d&apos;un lieu centralisé, plutôt que par chaque unité opérationnelle. Cela signifie que les groupes <b>&quot;Tout le personnel&quot;</b> de chaque unité opérationnelle seront fusionnés en un seul groupe.</p>
+                <table style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td><img src="../../Resources/Images/icon-warning-consolidation.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></td>
+                            <td>Si votre entreprise utilise les groupes <b>All Staff</b> pour gérer les autorisations au niveau de l&apos;unité commerciale, vous devrez déplacer toutes les autorisations concernant l&apos;ensemble de l&apos;organisation vers le groupe <b>All Staff</b> de l&apos;unité commerciale &quot;Admin&quot;, et toutes les autorisations concernant certains utilisateurs vers un nouveau groupe personnalisé.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <p>Entreprises utilisant des unités commerciales avant la sortie de Cloud 33.0 <u>devront revoir et mettre à jour leurs rôles au niveau du personnel et au niveau du groupe dès sa publication</u>.</p><div class="pagebreak"></div><h1><a name="MergeProcess"></a>Processus de fusion</h1>
+        <p>Après avoir pris connaissance des <a href="#Considerations">considérations</a>, vous pouvez demander la fusion.</p>
+        <ol>
+            <li>
+                <p>Contactez votre représentant Caseware et confirmez que vous avez lu les <a href="#Considerations">considérations de</a> ce guide.</p>
+            </li>
+            <li>
+                <p>Votre représentant Caseware vous remettra un questionnaire. Complétez le questionnaire et renvoyez-le leur. Inclure la preuve de la demande de fusion par un dirigeant autorisé de l&apos;entreprise.</p>
+            </li>
+            <li>
+                <p>Votre représentant Caseware examinera le questionnaire et déterminera si les business units sont recommandées pour votre entreprise.</p>
+                <ul>
+                    <li>
+                        <p>Si les unités d&apos;affaires sont recommandées, votre représentant Caseware planifiera le premier des deux temps d&apos;arrêt pour vos sites Cloud.</p>
+                    </li>
+                    <li>
+                        <p>S&apos;il existe une solution alternative, votre représentant Caseware vous en informera et vous indiquera la marche à suivre.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Après le premier temps d&apos;arrêt, votre représentant Caseware vous enverra un rapport de fusion qui détaillera tous les conflits potentiels qui doivent être résolus avant la fusion.</p>
+            </li>
+            <li>
+                <p>Après avoir résolu les conflits potentiels, sélectionnez un administrateur du site cloud &quot;principal&quot; qui recevra les autorisations d&apos;administrateur pour toutes les unités commerciales et la possibilité d&apos;en créer de nouvelles. Le nouvel &quot;administrateur principal&quot; doit créer une unité d&apos;entreprise qui sera promue à l&apos;unité d&apos;entreprise &quot;Admin&quot; après la fusion. Cette unité opérationnelle &quot;Admin&quot; sera utilisée uniquement pour les changements au niveau de l&apos;administrateur et ne doit pas contenir d&apos;entités ou d&apos;engagements.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans le menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Paramètres | Organisation | Unités opérationnelles.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Nouvelle unité commerciale</b>.</p>
+                    </li>
+                    <li>
+                        <p>Saisissez un nom pour l&apos;unité commerciale. Notez que le nom <u>ne peut être modifié</u> L&apos;unité commerciale est créée. Le contenu de ce champ génère automatiquement une URL pour l&apos;unité commerciale.</p>
+                    </li>
+                    <li>
+                        <p>Saisissez une étiquette d&apos;affichage pour l&apos;unité commerciale. Il s&apos;agit du nom qui sera affiché à votre personnel.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Enregistrer</b>. La création de l&apos;unité commerciale peut prendre jusqu&apos;à 5 minutes. Ne quittez pas la page tant qu&apos;elle n&apos;est pas terminée (c&apos;est-à-dire tant que votre curseur n&apos;a pas terminé son animation de chargement).</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Contactez votre représentant Caseware et confirmez que vous avez créé la nouvelle unité commerciale. Ils programmeront le deuxième temps d&apos;arrêt pour vos sites en nuage.</p>
+            </li>
+            <li>
+                <p>Après le deuxième temps d&apos;arrêt, la fusion est terminée.</p>
+            </li>
+        </ol><div class="pagebreak"></div><h1>Post-fusion</h1>
+        <p>Une fois le <a href="#MergeProcess">processus de fusion</a>terminé, réfléchissez aux points suivants :</p>
+        <p><b>Administration</b></p>
+        <ul>
+            <li>
+                <p>Les anciennes désignations &quot;primaire&quot; et &quot;secondaire&quot; n&apos;existent plus. Ces unités opérationnelles sont égales dans la hiérarchie.</p>
+            </li>
+            <li>
+                <p>L&apos;unité commerciale supplémentaire (créée dans le cadre du <a href="#MergeProcess">processus de fusion</a>) est promue au sommet de la hiérarchie en tant qu&apos;unité commerciale &quot;Admin&quot; et peut être utilisée pour apporter des modifications à toutes les autres unités commerciales à l&apos;échelle de l&apos;organisation. L&apos;unité d&apos;affaires &quot;Admin&quot; ne doit pas contenir d&apos;entités ou d&apos;engagements.</p>
+            </li>
+            <li>
+                <p>Un administrateur doit importer tous les utilisateurs dans l&apos;unité d&apos;affaires &quot;Admin&quot;. A l&apos;avenir, tout nouvel utilisateur devra être importé dans l&apos;unité d&apos;affaires &quot;Admin&quot; en plus des unités d&apos;affaires auxquelles il aura accès.</p>
+            </li>
+            <li>
+                <p>Les administrateurs doivent procéder à un audit du personnel et de ses rôles afin de s&apos;assurer qu&apos;il a accès aux bonnes unités d&apos;entreprise avec les privilèges de compte adéquats. Ils peuvent mettre à jour les rôles du personnel dans l&apos;application <b>Personnel</b> et importer du personnel dans de nouvelles unités commerciales en sélectionnant <b>Nouveau | Importer | Personnel dans les unités commerciales.</b></p>
+            </li>
+            <li>
+                <p>Les administrateurs doivent s&apos;assurer que tout le personnel utilisant le nuage hybride met à jour les Working Papers 2023 : Mettre à jour 1 et ajouter la ligne suivante au fichier CV.VER de chaque instance de Working Papers :</p>
+                <p>AllowOpeningFilesConnectedToDifferentFirms=1</p>
+            </li>
+            <li>
+                <p>Les administrateurs peuvent commencer à <a href="https://docs.caseware.com/latest/webapps/en/Setup/Organization/Create-client-entities.htm">déplacer les entités entre les unités d&apos;entreprise</a> selon les besoins. S&apos;ils déplacent des entités en masse, nous recommandons de le faire pendant un week-end ou en dehors des heures de travail, et de préférence par lots. Il convient de noter que les entités contenant des engagements, des fichiers et du contenu connexe relatifs au nuage (SE) <u>ne peut être déplacé</u>. Toute tentative de déplacement d&apos;une entité contenant des engagements dans le nuage (SE) entraînera les conséquences suivantes <u>en permanence</u> bloquer les utilisateurs hors des engagements du nuage (SE), tout en déplaçant le reste de l&apos;entité.</p>
+            </li>
+        </ul>
+        <p><b>Personnel et contacts</b></p>
+        <ul>
+            <li>
+                <p>Tous les utilisateurs doivent accéder au Cloud à partir de l&apos;unité opérationnelle &quot;Admin&quot; et passer d&apos;une unité opérationnelle à l&apos;autre à l&apos;aide du sélecteur situé en haut du menu Cloud.</p>
+            </li>
+            <li>
+                <p>Le personnel utilisant un environnement de nuage hybride doit modifier son URL d&apos;intégration dans le nuage dans les Working Papers pour l&apos;URL de l&apos;unité d&apos;affaires &quot;Admin&quot;.</p>
+            </li>
+            <li>
+                <p>Les membres du personnel de l&apos;ancien site &quot;primaire&quot; qui disposaient d&apos;un compte de contact sur l&apos;ancien site &quot;secondaire&quot; n&apos;auront plus accès à leur compte de contact. S&apos;ils ont besoin d&apos;accéder aux entités ou aux missions de l&apos;ancien site &quot;secondaire&quot;, ils doivent obtenir un accès de niveau personnel à la nouvelle unité opérationnelle et se voir attribuer le rôle nécessaire à cet effet. En outre, ils devront se réabonner à tous les éléments qu&apos;ils avaient précédemment en tant que contact.</p>
+            </li>
+        </ul>
+    </body>
+</html>

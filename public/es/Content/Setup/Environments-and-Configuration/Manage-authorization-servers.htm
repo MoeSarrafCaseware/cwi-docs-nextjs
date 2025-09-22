@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Gestionar servidores de autorización (Okta)</h1>
+        <p>Users of your firm&apos;s single sign-on integration will pass through an authentication server. Okta provides a default authentication server that you can modify to your firm&apos;s requirements. If required, you can also <a href="#Add">add authorization servers</a>.</p>
+        <p class="note"><b>Note:</b> This step is optional and requires a license to the authorization server functionality from Okta. If you do not have access to this functionality, or simply do not need to modify authorization servers, proceed to <a href="Generate-the-Reply-URL-Okta.htm">Generate the Reply URL</a>.</p>
+        <p><b>To manage authentication servers:</b></p>
+        <ol>
+            <li>
+                <p>Log in to your firm&apos;s Okta dashboard with an <b>Admin</b> account.</p>
+            </li>
+            <li>
+                <p>From the main menu, expand the <b>Security</b> drop-down menu and select <b>API</b>.</p>
+            </li>
+            <li>
+                <p>On the API page, select the <b>Authorization Servers</b> tab. On this tab, you can edit or <a href="#Add">add authentication servers</a>. Next to the default authorization server, select the <b>Edit</b> icon.</p>
+                <p><img src="../../Resources/Images/okta-03.png" /></p>
+            </li>
+            <li>
+                <p>On the default authorization server&apos;s page, select the <b>Access Policies</b> tab. On this tab, you can edit or add access policies. Next to the default policy, select <b>Edit</b>.</p>
+                <p><img src="../../Resources/Images/okta-04.png" /></p>
+            </li>
+            <li>
+                <p>You can optionally edit the name and description for the policy, and choose to assign it to all clients, or specific clients. If you&apos;ve made any changes, select <b>Update Policy</b> to apply them.</p>
+            </li>
+            <li>
+                <p>You can also edit or add policy rules. Next to the default policy rule, select the <b>Edit</b> icon.</p>
+                <p><img src="../../Resources/Images/okta-05.png" /></p>
+            </li>
+            <li>
+                <p>You can optionally edit the rule to your preference. For integration with Caseware Cloud, ensure that the <b>Authorization Code</b> option is selected.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+        </ol>
+        <h2><a name="Add"></a>Add authorization servers</h2>
+        <p>If you do not want to use the default authorization server, or simply want to add another authorization server to customize to your firm&apos;s requirements, you can add them in the <b>Security</b> drop-down menu.</p>
+        <p><b>To add authorization servers:</b></p>
+        <ol>
+            <li>
+                <p>Log in to your firm&apos;s Okta dashboard with an <b>Admin</b> account.</p>
+            </li>
+            <li>
+                <p>From the main menu, expand the <b>Security</b> drop-down menu and select <b>API</b>.</p>
+            </li>
+            <li>
+                <p>On the API page, select the <b>Authorization Servers</b> tab.</p>
+            </li>
+            <li>
+                <p>Select <b>Add Authorization Server</b>.</p>
+                <p><img src="../../Resources/Images/okta-06.png" /></p>
+            </li>
+            <li>
+                <p>Enter a name, audience and description for the new authorization server. Seleccione <b>Guardar</b>.</p>
+            </li>
+            <li>
+                <p>On the authorization server&apos;s page, select the <b>Access Policies</b> tab.</p>
+            </li>
+            <li>
+                <p>Select <b>Add Policy</b>.</p>
+            </li>
+            <li>
+                <p>Enter a name and description for the policy, and choose to assign it to all clients, or specific clients. Select <b>Create Policy</b>.</p>
+            </li>
+            <li>
+                <p>On the policy&apos;s page, select <b>Add rule</b>.</p>
+            </li>
+            <li>
+                <p>Enter a name for the rule, and customize the rule options as required. For integration with Caseware Cloud, ensure that the <b>Authorization Code</b> option is selected.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+            <li>
+                <p>Select <b>Create rule</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Generate-the-Reply-URL-Okta.htm">Generate the Reply URL</a></p>
+    </body>
+</html>

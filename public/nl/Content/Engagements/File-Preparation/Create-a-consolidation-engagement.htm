@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Consolidation allows you to combine several entities into one engagement file (the parent company) for the purpose of publishing consolidated financial statements." />
+    </head>
+    <body>
+        <h1>Een consolidatieopdracht aanmaken</h1>
+        <p>Consolidatie stelt je in staat om verschillende entiteiten samen te voegen in één engagementbestand (de moedermaatschappij) met als doel geconsolideerde jaarrekeningen te publiceren.</p>
+        <h2 id="define">Een consolidatiehiërarchie definiëren</h2>
+        <p>Om een opdrachtbestand te consolideren moet je eerst de consolidatiehiërarchie definiëren. Dit beschrijft de relatie tussen een moedermaatschappij en haar dochterondernemingen. Het wordt gebruikt om de financiële resultaten van dochterondernemingen samen te voegen tot de financiële resultaten van hun moedermaatschappij.</p>
+        <p>Merk op dat je meerdere niveaus van dochterondernemingen kunt toevoegen. De moederentiteit kan bijvoorbeeld twee dochterentiteiten hebben en die dochterentiteiten kunnen ook hun eigen dochterentiteiten hebben.</p>
+        <p>De pagina <b>Consolidation Hierarchy</b> geeft deze relatie weer in de vorm van een stroomdiagram of een raster.</p>
+        <p><img src="../../Resources/Images/consolidation-graph-view.png" style="width: 1385px;height: 621px;" alt="De grafiekweergave van de pagina Consolidatiehiërarchie." /></p>
+        <p><img src="../../Resources/Images/consolidation-grid-view.png" style="width: 1392px;height: 387px;" alt="De rasterweergave van de pagina Consolidatiehiërarchie." /></p>
+        <p>Je kunt dochterondernemingen op twee verschillende manieren definiëren in de consolidatiehiërarchie:</p>
+        <ul>
+            <li>
+                <p><b>Gekoppelde opdracht</b> - Als de dochteronderneming een eigen opdrachtbestand nodig heeft in een aparte entiteit in je Cloud site, kun je het opdrachtbestand van de dochteronderneming koppelen aan het opdrachtbestand van de moederonderneming.</p>
+            </li>
+            <li>
+                <p><b>Geïmporteerd TB</b> - Als de dochteronderneming geen eigen opdrachtbestand nodig heeft, kun je de dochteronderneming intern toevoegen in het hoofdopdrachtbestand en de proefbalans van de dochteronderneming importeren in het bestand.</p>
+            </li>
+        </ul><MadCap:snippetBlock src="../../Resources/Snippets/To-create-a-consolidation-hierarchy.flsnp" /><p>Als je de consolidatiehiërarchie wilt bekijken of wijzigen nadat je deze hebt gedefinieerd, selecteer je het consolidatiepictogram (<img src="../../Resources/Images/icon-consolidation.png" style="vertical-align: bottom;" />) dat nu in het bovenste menu verschijnt.</p>
+        <p>Zodra je een dochteronderneming hebt toegevoegd aan de pagina <b>Consolidatiehiërarchie</b> , verschijnt de knop <b>Consolideren</b> (<img src="../../Resources/Images/icon-consolidate-47x16.png" style="vertical-align: bottom;" />) niet meer in het pop-upvenster Opdrachteigenschappen. Je kunt meer dochterondernemingen toevoegen op de pagina Consolidatiehiërarchie.</p>
+        <h2>Een proefbalans importeren voor een interne dochteronderneming</h2>
+        <p>Als je de optie <b>Geïmporteerd TB toevoegen</b> gebruikt om dochterondernemingen toe te voegen die geen aparte opdrachtbestanden hebben, kun je de proefbalansen voor deze entiteiten importeren vanaf de pagina <b>Gegevens</b> . U kunt tijdens het importeren selecteren voor welke entiteit u de proefbalans importeert.</p>
+        <p>See <a href="Import-and-manage-data.htm">Import and manage data</a> for more information.</p>
+        <p><img src="../../Resources/Images/import-data-subsidiary-selection.png" alt="De stap Selecteer entiteit voor import in het gegevensimportproces." /></p>
+        <h2 id="link">Een consolidatieopdracht koppelen aan een ander opdrachtbestand</h2>
+        <p>In sommige rechtsgebieden moet de financiële verslaggeving voor de moedermaatschappij gescheiden plaatsvinden van de financiële verslaggeving voor de consolidatie zelf.</p>
+        <p>Op de pagina <b>Consolidatiehiërarchie</b> kun je een geconsolideerd opdrachtbestand koppelen aan het opdrachtbestand van de bovenliggende entiteit met behulp van het dialoogvenster <b>Opdracht van bovenliggende ent</b> iteit. Het koppelen van de twee opdrachtbestanden zorgt ervoor dat beide opdrachten als één entiteit worden weergegeven in de consolidatiehiërarchie.</p>
+        <p>De dialoog <b>over ouderbetrokkenheid</b> :</p>
+        <ul>
+            <li>
+                <p>Er kan maar één engagementbestand worden geselecteerd</p>
+            </li>
+            <li>
+                <p>Filters voor opdrachten gebaseerd op hetzelfde SE-product en hetzelfde jaareinde</p>
+            </li>
+            <li>
+                <p>Toont geen opdrachten die geconsolideerd zijn (dochterondernemingen hebben)</p>
+            </li>
+        </ul><MadCap:snippetBlock src="../../Resources/Snippets/To-link-a-consolidation-engagement-to-another-engagement-file.flsnp" /><h2 id="updating">De proefbalans van een gekoppelde dochteronderneming bijwerken</h2>
+        <p>Je kunt de proefbalansgegevens van een dochteronderneming bijwerken in een geconsolideerde opdracht door alle wijzigingen die zijn gemaakt in de dochteronderneming over te nemen, terwijl de wijzigingen die zijn gemaakt in de geconsolideerde opdracht behouden blijven.</p>
+        <p>Als de proefbalans van een dochteronderneming is bijgewerkt sinds de consolidatie, wordt het consolidatiepictogram (<img src="../../Resources/Images/icon-consolidation-updated.png" style="vertical-align: bottom;" />) in het bovenste menu weergegeven met een rode stip. Op de pagina Consolidatiehiërarchie wordt bij entiteiten met bijgewerkte proefbalansen een waarschuwingspictogram (<img src="../../Resources/Images/icon-warning-consolidation.png" />) weergegeven. Je kunt de update toepassen met de optie <b>Reconsolidate</b> in de hiërarchie.</p>
+        <p>In het onderstaande voorbeeld zijn wijzigingen aangebracht in de proefbalansgegevens voor CaseWare Auto Shop. Selecteer <b>Meer acties</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Opnieuw consolideren</b> om de informatie in het geconsolideerde bestand bij te werken.</p>
+        <p><img src="../../Resources/Images/reconsolidate-graph-view.png" style="width: 1445px;height: 456px;" alt="De optie Opnieuw consolideren voor een dochteronderneming in grafiekweergave." /></p>
+        <p><img src="../../Resources/Images/reconsolidate-grid-view.png" style="width: 1461px;height: 344px;" alt="De optie Opnieuw consolideren voor een dochteronderneming in rasterweergave." /></p>
+    </body>
+</html>

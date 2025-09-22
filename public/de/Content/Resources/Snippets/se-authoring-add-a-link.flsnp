@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>You can add links to a URL, an email or a phone number.</p>
+        <p style="font-weight: bold;">To add a link:</p>
+        <p>Select <b>Add link</b> (<img src="../Images/text-format-addlink.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) and enter the following information in the Link Info tab:</p>
+        <ul>
+            <li>
+                <p><b>Display Text</b> - the selected text is the default Display text for the link. If you haven&apos;t selected text, enter the Display Text in this field.</p>
+            </li>
+            <li>
+                <p><b>Link Type</b> - select a type from the drop-down list. Based on your selection, the dialog displays different sets of fields that you need to specify:</p>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;">
+                                <p>Link type</p>
+                            </td>
+                            <td style="font-weight: bold;">
+                                <p>Fields</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>URL</p>
+                            </td>
+                            <td>
+                                <p><b>Protocol -</b> select the link protocol (http, https, ftp, news or other)</p>
+                                <p><b>URL</b> - enter the URL</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="color: #696969;font-style: normal;">Link to anchor in the text</p>
+                            </td>
+                            <td>
+                                <p>This feature is currently not functional</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Email</p>
+                            </td>
+                            <td>
+                                <p><b>E-mail address -</b> enter the email address</p>
+                                <p><b>Message Subject -</b> enter a subject for the email message</p>
+                                <p><b>Message Body -</b> enter the email message body</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Phone</p>
+                            </td>
+                            <td>
+                                <p><b>Phone number -</b> enter the phone number</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <p>Note that you can also add a link to a specific note in the financial statements. To copy the note URL, navigate to the note in the financial statements and copy the portion of the url beginning with #.</p>
+        <p><img src="../Images/insert-note-link.png" alt="The note URL." /></p>
+        <p>To link to the note, select <b>other</b> as the protocol and enter the note URL in the <b>URL</b> field.</p>
+        <p><img src="../Images/link-to-note.png" style="width: 538px;height: 422px;" alt="The link dialog." /></p>
+        <p>In the <b>Target tab</b>, select where you want the link target to open. The default is in a new browser window.</p>
+        <p>You can also enter more information in the <b>Advanced</b> tab. Note that if you add a link to a file download, you can select the <b>Force Download</b> check box in this tab so the file download starts once the user selects the link.</p>
+        <p>Once you&apos;re done, select <b>OK.</b></p>
+        <p>To remove a link, select the link text then select <b>Remove Link (<img src="../Images/text-format-removelink.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b>.</p>
+    </body>
+</html>

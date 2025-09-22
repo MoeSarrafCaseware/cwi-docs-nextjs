@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Target for generating User Guide PDF for OnPoint Audit"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/PDF/OnPoint Audit (Training).fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Front-Page.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/Print.css"
+  ConditionTagExpression="include[Product.OnPointAudit], exclude[General.Ignore or General.Online or PrintGuides.FirmAuthor or PrintGuides.OnPoint or PrintGuides.Teacher]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="General/StreetAddress">1100–351 King St East,</Variable>
+    <Variable
+      Name="General/ProductName">CaseWare Cloud</Variable>
+    <Variable
+      Name="General/UserGuideTitle">User Training</Variable>
+    <Variable
+      Name="General/CityStateZip">Toronto ON, M5A 0L6 Canada</Variable>
+    <Variable
+      Name="General/CompanyName">CaseWare International Inc.</Variable>
+    <Variable
+      Name="General/Fax">Fax: 416-867-1906</Variable>
+    <Variable
+      Name="General/PhoneNumber">Tel: 416-867-9504</Variable>
+    <Variable
+      Name="General/GuideTitle">Getting Started Guide</Variable>
+    <Variable
+      Name="General/ProductTitle">CaseWareCloud OnPoint Suite</Variable>
+    <Variable
+      Name="General/Subtitle">OnPoint Audit</Variable>
+    <Variable
+      Name="General/Title">User Guide</Variable>
+    <Variable
+      Name="General/VersionNumber">1.0</Variable>
+    <Variable
+      Name="General/Year">2024</Variable>
+  </Variables>
+  <Glossaries />
+  <DocumentProperties
+    Title="CaseWareCloud OnPoint Collaborate Training"
+    Author="CaseWare International Inc."
+    Subject="Training for OnPoint Collaborate" />
+  <PDF
+    RequireOpenPassword="false"
+    OpenPassword="1sDUel2fbGHA0YSZ0yqHwg=="
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

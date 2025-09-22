@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.Not-in-TOC">
+    <head>
+    </head>
+    <body>
+        <h1>Activation des comptes du personnel et des contacts</h1>
+        <p>Les nouveaux comptes pour les membres du personnel ou les contacts sont activés différemment dans le nuage :</p>
+        <ul>
+            <li>Les<b>comptes des membres du personnel</b> sont activés immédiatement après l&apos;ajout de leur compte dans le système.</li>
+            <li>Les<b>comptes de contact</b> sont activés lorsque le contact ajouté se voit attribuer le rôle de <i>collaborateur d&apos;entité</i> sur une entité.</li>
+        </ul>
+        <h2>Emails d&apos;activation</h2>
+        <p>L&apos;activation de l&apos;un ou l&apos;autre type de compte peut amener le système à envoyer un courriel d&apos;activation à l&apos;utilisateur. L&apos;e-mail d&apos;activation contient à la fois l&apos;URL de votre nuage et un lien vers une page où les utilisateurs peuvent définir le mot de passe de leur compte. Ces informations doivent être fournies séparément au personnel ou au contact si le courriel d&apos;activation n&apos;est pas envoyé.</p>
+        <p>L&apos;envoi de l&apos;e-mail d&apos;activation dépend de la manière dont le personnel ou le contact a été ajouté au système. Les formulaires de personnel et de contact comportent tous deux un champ de mot de passe et l&apos;administrateur a la possibilité de spécifier un mot de passe ou de laisser le champ de mot de passe vide.</p>
+        <ul>
+            <li><b>Si aucun mot de passe n&apos;est spécifié</b> , le système envoie automatiquement un courriel d&apos;activation au membre du personnel ou au contact <i>lorsque son compte est activé</i>.</li>
+            <li><b>Lorsqu&apos;un mot de passe est spécifié</b> , le système n&apos;envoie pas d&apos;e-mail d&apos;activation au personnel ou au contact. Dans ce cas, le mot de passe initial et l&apos;URL du nuage doivent être fournis séparément.</li>
+        </ul>
+        <h2>Résumé</h2>
+        <p>Le tableau suivant résume le comportement du système lors de l&apos;activation des comptes de personnel ou de contact :</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ du mot de passe</th>
+                    <th>Comportement du système</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Le mot de passe n&apos;est pas spécifié</td>
+                    <td>
+                        <ul>
+                            <li>Pour le personnel : Un courriel d&apos;activation est automatiquement envoyé à l&apos;adresse électronique de l&apos;employé <b>après l&apos;ajout de son compte dans le système.</b></li>
+                            <li>Pour les contacts : Le courriel d&apos;activation est automatiquement envoyé à l&apos;adresse électronique du contact <b>après qu&apos;il se soit vu attribuer le </b><b> rôle de</b><i style="font-weight: bold;">collaborateur d&apos;entité</i><b> pour une entité du système.</b></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Le mot de passe est spécifié</td>
+                    <td>
+                        <p>L&apos;email d&apos;activation n&apos;est pas envoyé pour le personnel ou les contacts.</p>
+                        <p class="note"><b>Remarque :</b> Vous devez fournir au membre du personnel l&apos;URL de votre nuage et son mot de passe initial.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

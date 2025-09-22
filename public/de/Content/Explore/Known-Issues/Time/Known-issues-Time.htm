@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWareCloud Time." />
+    </head>
+    <body>
+        <h1>Known issues in CasewareCloud Time</h1>
+        <p>The following known issues affect the current version of CasewareCloud Time.</p>
+        <h2 id="Errors">Errors with removed Time users</h2>
+        <p>If you&apos;re logged in and have your Time access revoked by an administrator, you&apos;ll receive multiple error messages when you attempt to access Time.</p>
+        <p MadCap:conditions="General.Ignore"><a href="https://bugs.caseware.com/browse/CORE-46707">CORE-46707</a></p>
+        <h2>Invoices exported to QuickBooks Online can be assigned inactive taxes</h2>
+        <p>During the export process, invoices can be incorrectly assigned inactive taxes. To work around this issue, you can manually select a new tax in QuickBooks Online for each affected invoice.</p>
+        <h2>Data retrieval error after changing Xero account</h2>
+        <p>A data retrieval error occurs when you unlink a Xero account from Time and then link to a different account. Refreshing the page does not resolve the error. To work around this issue, you can manage organizations directly in your Xero account instead of linking to a new account. The ability to change the Xero account you have linked to Time is currently unavailable.</p>
+        <h2>Cannot export new invoices to linked Xero account</h2>
+        <p>Attempting to export a new invoice to Xero will fail if the account was linked prior to August 2021.</p>
+        <p><b>Solution:</b> Relink your Xero account. In Xero, select <b>Settings | Connected Apps</b>. Next to the Caseware ImportHub app, select <b>Disconnect</b>. In Caseware Cloud, select the <b>Cloud</b> menu (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)<b> | Settings | Time | Accounting Software Integration</b>, then select <b>Unlink Xero</b>. Afterwards, select <b>Link to Xero</b> and sign in with your account.</p>
+        <h2>Fehler &quot;Benutzername muss eindeutig sein&quot; bei der Erstellung von neuen Kontakten</h2>
+        <p>If any existing contacts in a Cloud-integrated Time Desktop file are missing an email address, the &quot;User Name must be unique&quot; error displays when creating a new contact. As a temporary workaround, you can enter &apos;placeholder&apos; email addresses to bypass this error.</p>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head><title>Add a risk library version</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add a risk library version</h1>
+        <p>You can upload an Excel file with the content of your risk library to add a risk library major version.</p>
+        <p>To learn how to set up your Excel file, see the template and sample file below.</p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><span aria-hidden="true">X</span><h3 class="modalheading">Gain Access to More Content</h3>
+                        <p class="modalmaintext">Subscribe to receive updates on the latest articles and news for Caseware products.</p>
+                        <p class="modalsubtext">Your download will start immediately after you subscribe.</p>
+                        <p class="emailmodalinputlabel">Correo electrónico:</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Subscribe</button><a class="modalnoemail" onclick="downloadFilenoemail()">No thanks. I just want to download the file.</a> <div id="emailerrormsg"></div></div> <div class="modal-footer"><a href="https://casewarecloud.com">Don&apos;t have Cloud yet? Click here to learn more.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Template.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Administración de bibliotecas de riesgos</a></p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><span aria-hidden="true">X</span><h3 class="modalheading">Gain Access to More Content</h3>
+                    <p class="modalmaintext">Subscribe to receive updates on the latest articles and news for Caseware products.</p>
+                    <p class="modalsubtext">Your download will start immediately after you subscribe.</p>
+                    <p class="emailmodalinputlabel">Correo electrónico:</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Subscribe</button><a class="modalnoemail" onclick="downloadFilenoemail()">No thanks. I just want to download the file.</a> <div id="emailerrormsg"></div> <div class="modal-footer"><a href="https://casewarecloud.com">Don&apos;t have Cloud yet? Click here to learn more.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Sample.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Risk Library Sample File</a></p>
+        <p>The template is also available for download in the Unpublished Version dialog.</p>
+        <p><img src="../Resources/Images/risk-library-download-template.png" alt="The Unpublished Version dialog." /></p>
+        <p>If you’re adding a risk library version for the first time, the version is automatically added as a <b>Major</b> version. You can also add subsequent risk library versions: <b>Minor</b> or <b>Patch</b>. Use minor versions for planned updates to the library and use patch versions for urgent updates. This allows you to simultaneously work on a planned update and release critical updates.</p>
+        <p class="note inline"><b>Note:</b> You can only have one unpublished minor version and one unpublished patch version at a time.</p>
+        <p>To start, select <b>Settings</b> from the <b>Cloud menu</b>(<img src="../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), then select <b>Risk Library</b> | <b>Manage Risk Library</b>.</p>
+        <p><b>To add a risk library version:</b></p>
+        <ol>
+            <li>
+                <p>Select the risk library from the left pane.</p>
+            </li>
+            <li>
+                <p>If you’re adding the first version of this risk library, select <b>CREATE VERSION</b> then go to Step 4</p>
+            </li>
+            <li>
+                <p>If this is not the first version for this risk library:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Seleccione <b>ADD</b>.</p>
+                        <p>The Unpublished Version dialog opens.</p>
+                    </li>
+                    <li>
+                        <p>Seleccione el tipo de extracción.</p>
+                        <p>Opciones disponibles:</p>
+                        <ul>
+                            <li>
+                                <p><b>Minor</b> - Select this option for planned updates.</p>
+                            </li>
+                            <li>
+                                <p><b>Patch</b> - Select this option for urgent updates.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select the <b>Upload Excel File</b> box to browse or drag and drop the file.</p>
+                <p>You can select <b>DOWNLOAD TEMPLATE</b> to download an empty template that you can use to set up your risk library Excel file.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>CREATE</b>.</p>
+                <p>Errors and warnings display in the dialog - if there are issues with the Excel file data.</p>
+                <p>You can ignore warnings, but you must fix all errors and reupload the file to continue.</p>
+                <p><img src="../Resources/Images/risk-library-upload-errors.png" alt="The Unpublished Version dialog with errors and warnings for the uploaded file." /></p>
+            </li>
+        </ol>
+        <p>Once you’ve added the version, you can also:</p>
+        <ul>
+            <li>
+                <p>Select <b>Edit</b> (<img src="../Resources/Images/icon-edit-gray.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to replace the Excel file.</p>
+            </li>
+            <li>
+                <p>Select <b>Summary Report</b> (<img src="../Resources/Images/icon-risk-library-summary-report.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to view a summary of the risk library content.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>Sí</b> para eliminar la cuestión.</p>
+            </li>
+        </ul>
+    </body>
+</html>

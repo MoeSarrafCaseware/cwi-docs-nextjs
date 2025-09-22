@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>De antwoord-URL genereren (ADFS)</h1>
+        <p>ADFS gebruikt een Reply URL om gebruikers terug te leiden naar Cloud nadat ze zich hebben aangemeld.</p>
+        <p><b>Een antwoord-URL genereren in Cloud:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Eenmalige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Vul de volgende velden in op de pagina Identity Provider:</p>
+                <ul>
+                    <li>
+                        <p><b>Naam identiteitsprovider:</b> Voer een betekenisvolle naam in voor je identiteitsprovider. Bijvoorbeeld ADFS. Deze naam wordt naast de URL van je antwoord weergegeven om deze te identificeren.</p>
+                        <p class="note"><b>Let op:</b> Deze naam mag niet langer zijn dan 32 tekens en mag alleen letters, cijfers, underscores, plus- en mintekens bevatten.</p>
+                    </li>
+                    <li>
+                        <p><b>Eindpunt voor metagegevens van identiteitsprovider:</b> Voer uw metadata-eindpunt in met de volgende opmaak:</p>
+                        <p>https://your-adfs.com/adfs/.well-known/openid-configuration</p>
+                        <p>Vervang <i>uw-adfs.com</i> door uw ADFS hostnaam.</p>
+                    </li>
+                    <li>
+                        <p><b>{0} (Client-ID:</b> Plak de <b>Client Identifier</b> die je <a href="Create-a-new-application-group.htm">eerder naar een tekstdocument hebt gekopieerd</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Geheim van de klant:</b> Plak het <b>Client Secret</b> dat je <a href="Create-a-new-application-group.htm">eerder naar een tekstdocument hebt gekopieerd</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="De Single Sign-On instellingenpagina." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>. De URL van je antwoord wordt weergegeven.</p>
+                <p class="warning"><b>Belangrijk:</b> Selecteer het pictogram <b>Kopiëren naar klembord</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) en plak de URL van het antwoord in een tekstdocument voor later gebruik. Label het <b>URL beantwoorden</b>.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Gebruik de knop Kopiëren naar klembord om je antwoord-URL te kopiëren." /></p>
+            </li>
+        </ol>
+        <h2>Stel uw antwoord-URL in ADFS in</h2>
+        <p>Nadat je een Reply URL hebt gegenereerd, moet je deze toevoegen aan ADFS om ervoor te zorgen dat gebruikers zich succesvol kunnen aanmelden.</p>
+        <p><b>Om je antwoord-URL in te stellen in ADFS:</b></p>
+        <ol>
+            <li>
+                <p>Klik in de ADFS Administration Console op de map <b>Application Groups</b> en dubbelklik vervolgens op uw <a href="Create-a-new-application-group.htm">nieuwe applicatiegroep</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Dubbelklik in het dialoogvenster Eigenschappen op de toepassing Server.</p>
+                <p><img src="../../Resources/Images/adfs-reply-url-01.png" /></p>
+            </li>
+            <li>
+                <p>Wis de inhoud van het veld Redirect URI in het dialoogvenster Eigenschappen van de servertoepassing en plak vervolgens de <b>Antwoord-URL</b> die u eerder naar een tekstdocument hebt gekopieerd. Klik op <b>Toevoegen</b>en vervolgens op <b>OK</b>.</p>
+                <p><img src="../../Resources/Images/adfs-reply-url-02.png" /></p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Test-your-single-sign-on-integration.htm">Test de single sign-on integratie</a></p>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Generar la URL de respuesta (Okta)</h1>
+        <p>Okta uses a Reply URL to redirect users back to Cloud after they&apos;ve signed in with Okta.</p>
+        <p><b>To generate the Reply URL:</b></p>
+        <ol>
+            <li>
+                <p>Ensure you have the <i>Settings Admin</i> role or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>On the Identity Provider page, complete the following fields:</p>
+                <ul>
+                    <li>
+                        <p><b>Identity provider name:</b> Enter a meaningful name for your identity provider. For example, Okta. This name will be displayed next to your Reply URL to identify it.</p>
+                        <p class="note"><b>Note:</b> This name cannot exceed 32 characters and can only contain letters, numbers, underscores, plus and minus signs.</p>
+                    </li>
+                    <li>
+                        <p><b>Identity provider metadata endpoint:</b> Paste the <b>Metadata URI</b> that you <a href="Copy-the-metadata-URI.htm">copied to a text document previously</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Client ID:</b> Paste the <b>Client ID</b> that you <a href="Generate-client-credentials.htm">copied to a text document previously</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Client secret:</b> Paste the <b>Client Secret</b> that you <a href="Generate-client-credentials.htm">copied to a text document previously</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="The Single Sign-On settings page." /></p>
+                <p>Seleccione <b>Guardar</b>. Your Reply URL is displayed.</p>
+            </li>
+            <li>
+                <p>Select the <b>Copy to Clipboard</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) button to copy your Reply URL. You&apos;ll need to add it to your app integration in Okta.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Use the Copy to Clipboard button to copy your reply URL." /></p>
+            </li>
+        </ol>
+        <h2>Set your Reply URL in Okta</h2>
+        <p>After you generate a Reply URL, you&apos;ll need to add it to Okta to ensure that users can sign in successfully.</p>
+        <p><b>To set your reply URL in Okta:</b></p>
+        <ol>
+            <li>
+                <p>Log in to your firm&apos;s Okta dashboard with an <b>Admin</b> account.</p>
+            </li>
+            <li>
+                <p>From the main menu, expand the <b>Applications</b> drop-down menu and select <b>Applications</b>.</p>
+            </li>
+            <li>
+                <p>On the Applications page, select the name of your app integration.</p>
+                <p><img src="../../Resources/Images/okta-02.png" /></p>
+            </li>
+            <li>
+                <p>On the app integration&apos;s page, under the <b>General</b> tab, scroll down to the <b>General Settings</b> group.</p>
+            </li>
+            <li>
+                <p>Select <b>Edit</b>.</p>
+                <p><img src="../../Resources/Images/okta-08.png" /></p>
+            </li>
+            <li>
+                <p>Scroll down to the <b>Login</b> group.</p>
+            </li>
+            <li>
+                <p>Next to the <b>Sign-in redirect URIs</b> field, select <b>Add URI</b>.</p>
+            </li>
+            <li>
+                <p>Paste the Reply URL into the field.</p>
+                <p><img src="../../Resources/Images/okta-09.png" /></p>
+            </li>
+            <li>
+                <p>Additionally, paste the Reply URL into the <b>Initiate login URI</b> field. Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Test-your-single-sign-on-integration-Okta.htm">Test your single sign-on integration</a></p>
+    </body>
+</html>

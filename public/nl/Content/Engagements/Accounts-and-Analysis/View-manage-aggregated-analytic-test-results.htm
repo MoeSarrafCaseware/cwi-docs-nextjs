@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Geaggregeerde analytische testresultaten bekijken en beheren</h1>
+        <p class="note"><b>Let op:</b> Deze functie is alleen beschikbaar als deze is ingeschakeld in uw product.</p>
+        <p>Als er meerdere analytische tests zijn gekoppeld aan één controlelijstprocedure in uw engagement, kunt u de samengevoegde resultaten bekijken. Je kunt ze ook filteren en de status bekijken en instellen van elke transactie die is gemarkeerd door analytische tests.</p>
+        <p><b>Om de samengevoegde resultaten voor meerdere analytische tests te bekijken:</b></p>
+        <ol>
+            <li>Navigeer op de pagina Documenten naar een controlelijstprocedure waarin meerdere analytische tests zijn gekoppeld. Het <b>Analytics-pictogram</b> (<img src="../../Resources/Images/icon-analytics-test.png" style="vertical-align: text-bottom;" />) verschijnt naast elke controlelijstprocedure waarvoor een analytische test beschikbaar is.</li>
+        </ol>
+        <p><img src="../../Resources/Images/NavigatingToAnalyticTest.png" alt="Navigeren naar analytische tests vanuit een checklistprocedure." /></p>
+        <ol>
+            <li value="2">Selecteer het pictogram om de testresultaten te bekijken:</li>
+        </ol>
+        <p class="indent">Als er meerdere analytische tests zijn gekoppeld aan de controlelijst in uw product, wordt de Analytics Hub geopend. Als er maar één analytische test beschikbaar is voor de procedure, wordt er een tabblad Resultaten geopend met alleen de resultaten voor die analytische test. Zie <a href="View-analytics-test-results-for-checklists.htm">Analysetestresultaten voor controlelijsten bekijken</a>voor meer informatie.</p>
+        <p><img src="../../Resources/Images/AnalyticsHub-Multiple.png" alt="Meerdere analytische tests bekijken in de Analytics Hub. " /></p>
+        <ol>
+            <li value="3">Selecteer de analytische tests die je wilt uitvoeren en klik op <b>Uitvoeren</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/RunMultipleAnalyticTests.png" alt="De analytische tests uitvoeren die zijn geselecteerd in Analytics Hub." /><br />
+        </p>
+        <ol>
+            <li value="4">Zodra de <b>statuskolom</b> Succesindicatoren (<img src="../../Resources/Images/SuccessIndicator.png" alt="" style="vertical-align: text-bottom;" />) weergeeft voor de tests, klik je op <b>Resultaten</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AnalyticsLastRun.png" alt="Navigeren naar geaggregeerde resultaten van meerdere analytische tests. " /></p>
+        <p class="indent">Op de pagina Samengevoegde resultaten hebt u de volgende opties:</p>
+        <ul>
+            <li>
+                <p><a href="#Exclude">Kolommen of analytische tests uitsluiten</a></p>
+            </li>
+            <li>
+                <p><a href="#Filter">Filter samengevoegde gegevensresultaten</a></p>
+            </li>
+            <li>
+                <p><a href="#Set">Stel statussen in van transacties die gemarkeerd zijn in analytische tests</a></p>
+            </li>
+            <li>
+                <p><a href="#Export">Samengevoegde resultaten exporteren:</a></p>
+            </li>
+        </ul>
+        <h2><a name="Exclude"></a>Kolommen of analytische tests uitsluiten</h2>
+        <p><b>Kolommen of analytische tests uitsluiten van geaggregeerde resultaten:</b></p>
+        <ol>
+            <li>Klik op <b>Kolommen.</b></li>
+        </ol>
+        <p><img src="../../Resources/Images/FilteringColumnsAggregateResults.png" alt="Geaggregeerde resultaten filteren op kolommen. " /></p>
+        <ol>
+            <li value="2">Deselecteer de kolommen of analytische tests die je wilt uitsluiten van de samengevoegde resultaten.</li>
+        </ol>
+        <p><img src="../../Resources/Images/DeselectingColumnsAggregateResults.png" alt="Kolommen of analytische tests deselecteren om ze uit te sluiten van weergave op de pagina met samengevoegde resultaten. " /></p>
+        <p class="indent">De kolommen of analytische tests die u hebt gedeselecteerd, worden uitgesloten van de pagina met samengevoegde resultaten.</p>
+        <h2><a name="Filter"></a>Filter samengevoegde gegevensresultaten</h2>
+        <p>Je kunt de samengevoegde resultaten filteren door op <b>Filters</b> te klikken en vervolgens in het paneel Filters selecties te maken voor een van de kolommen in de dataset. Alle kolomfilters gebruiken de CONTAIN operator, terwijl de hele reeks filters de AND operator gebruikt.</p>
+        <p><b>Om geaggregeerde gegevensresultaten te filteren:</b></p>
+        <ol>
+            <li>Klik op Filter.</li>
+        </ol>
+        <p><img src="../../Resources/Images/FilterAggregateResults.png" alt="Navigeren naar filters voor samengevoegde resultaten" /></p>
+        <ol>
+            <li value="2">Maak in het paneel <b>Filters</b> selecties om de gegevens te filteren in de kolommen waaruit de samengevoegde resultaten bestaan. De filtervoorwaarden die je kunt toepassen, zijn afhankelijk van de indeling van de gegevens in de kolom die je filtert. In een datumkolom zoals <b>Plaatsingsdatum</b>kun je bijvoorbeeld filteren op een reeks datums. Als de kolom numerieke gegevens bevat, kun je filteren op numerieke bereiken of specifieke waarden.</li>
+        </ol>
+        <p class="indent">De hele reeks filters gebruikt de operator AND.</p>
+        <p class="indent">In het onderstaande voorbeeld worden transacties vastgehouden door het filter als</p>
+        <p class="indent"><code>Checklist/Procedure = `1-1 Data Reliability Checklist`&gt;</code> (elke transactieregel waarin Checklist/Procedure is ingesteld op de waarde `1-1 Data Reliability Checklist`)</p>
+        <p class="indent">EN</p>
+        <p class="indent"></p>
+        <p><img src="../../Resources/Images/AggregateResultsFilterExample.png" alt="Filters instellen op geaggregeerde resultaten van meerdere analytische tests." /></p>
+        <ol>
+            <li value="3">Klik op <b>Toepassen</b>.</li>
+        </ol>
+        <h2><a name="Set"></a>Stel statussen in van transacties die gemarkeerd zijn in analytische tests</h2>
+        <p>De pagina Geaggregeerde resultaten toont alle transacties die zijn gemarkeerd in de analytische tests die zijn uitgevoerd. Je hebt de optie om een status in te stellen om elke gemarkeerde transactie bij te houden. Alle gemarkeerde transacties beginnen op Open.</p>
+        <p><b>Om de status van één of meerdere transacties in te stellen:</b></p>
+        <ol>
+            <li>Selecteer in de linkerkolom het lijstnummer van de één of meer transacties waarvan je de status wilt bewerken.</li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus-AggregateResults.png" alt="Transactieregels selecteren waarvan je de status wilt bewerken. " /></p>
+        <ol>
+            <li value="2">
+                <p>Klik op <b>Status bewerken</b>.</p>
+            </li>
+            <li>
+                <p>Select the status to which you want to set the transactions you selected. In het onderstaande voorbeeld zetten we de transactie op de status Onderzoeken.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus.png" alt="Een status selecteren om de transactieregel op in te stellen." /></p>
+        <ol>
+            <li value="4">
+                <p>Klik op <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Let op:</b> De beschikbare statussen kunnen per product verschillen. Degenen die in het bovenstaande voorbeeld worden getoond, zijn degenen die standaard beschikbaar zijn.</p>
+        <h2><a name="Export"></a>Samengevoegde resultaten exporteren:</h2>
+        <p>U kunt de samengevoegde analytische testresultaten die worden weergegeven op de pagina Samengevoegde resultaten exporteren naar een CSV-bestand.</p>
+        <p><b>Samengevoegde resultaten exporteren:</b></p>
+        <ol>
+            <li>Klik op <b>Exporteren</b></li>
+        </ol>
+        <p><img src="../../Resources/Images/ExportAggregateResults.png" alt="Geaggregeerde resultaten van meerdere analytische tests exporteren. " /></p>
+        <ol>
+            <li value="2">
+                <p>Er wordt een bericht weergegeven waarin staat dat het exporteren van de samengevoegde gegevens enkele minuten kan duren. Klik op <b>Exporteren</b>.</p>
+            </li>
+            <li>
+                <p>Geef de naam van het CSV-exportbestand en de locatie op wanneer daarom wordt gevraagd.</p>
+            </li>
+        </ol>
+    </body>
+</html>

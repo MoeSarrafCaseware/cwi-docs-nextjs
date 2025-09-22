@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Navigeer naar de pagina <b>Data</b> . De <b>gegevenspagina</b> wordt geopend op het tabblad <b>Datasets</b> .</p>
+                <ul>
+                    <li>
+                        <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                    </li>
+                    <li>
+                        <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.<br /></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Selecteer onder IMPORT FROM DATA CONNECTOR de boekhoudsoftware uit de lijst. In dit voorbeeld wordt Xero gebruikt.</p>
+                <p>If your data source is not visible, enter its name into the Search box to find it.</p>
+            </li>
+        </ol>
+        <p><img src="../Images/ImportFromDataConnector.png" alt="Zoeken naar de boekhoudsoftware waaruit je gegevens wilt importeren." /></p>
+        <p> </p>
+        <p class="note"><b>Let op:</b> Als je gegevens importeert vanuit Sage Intacct, moet je er eerst voor zorgen dat je klant de afzender-ID van Caseware heeft toegevoegd aan de sectie Webservices autorisatie van hun Sage configuratie. De afzender-ID van Caseware is <code>CaseWare-MPP</code>. Zie <a href="https://www.intacct.com/ia/docs/en_US/help_action/Company/Company_setup/Company_Information/Security/company-web-services-authorizations.htm?cshid=Web_services_authorizations#AddWebServicesauthorizations">Gebieden toevoegen</a>voor meer informatie.</p>
+        <ol>
+            <li value="3">
+                <p>Op de inlogpagina voor de software van waaruit je importeert, voer je je gegevens in en geef je rechten om toegang te verlenen.</p>
+                <p>De verificatie-ervaring verschilt afhankelijk van je software.</p>
+            </li>
+            <li>
+                <p>Als er meerdere organisatieopties zijn, wordt het stadium <b>Organisatie selecteren</b> weergegeven. Selecteer de juiste organisatie om gegevens van te importeren en klik op <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>In het stadium Gegevens configureren van de importwizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p>
+                        <p class="note"><b>Let op:</b> Year end date must match the year-end date of the data to be imported. De eindejaarsdatum van de opdracht waarbij je deze gegevens importeert moet ook overeenkomen met de einddatum van de gegevens die je wilt importeren.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Kies bij <b>Select dataset type</b>het type dat je importeert.</p>
+                <p>Voor meer informatie over de datasetopties, zie <a href="../../Engagements/File-Preparation/Import-data-from-online-accounting-sofware-new-method.htm#Dataset">Dataset types beschreven</a>. Merk op dat sommige types datasets mogelijk niet beschikbaar zijn in uw product.</p>
+            </li>
+            <li>
+                <p>Als je <b>Proefbalans</b>hebt geselecteerd, vouw je de lijst met datasets samen door het pictogram <b>Samenvouwen</b> (<img src="../Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />) te selecteren. De opties voor <b>de Proefbalans</b> verschijnen:</p>
+                <p><img src="../Images/PlannedBalanceImport.png" alt="Een planningsbalans importeren van een online boekhoudprogramma." /></p>
+            </li>
+            <ul>
+                <li>
+                    <p>Selecteer <b>Planning proefbalans</b> als u een planning proefbalans importeert of <b>Definitieve proefbalans</b> als u een eindbalans importeert.</p>
+                </li>
+                <li>
+                    <p>Controleer of <b>de einddatum</b> correct is.</p>
+                </li>
+            </ul>
+        </ol>
+        <p class="note inline"><b>Let op: </b>Als u eindsaldi importeert of als planningsaldi niet zijn ingeschakeld in uw product, moet <b>Einddatum</b> overeenkomen met de eindejaarsdatum van de gegevens die moeten worden geïmporteerd.</p>
+        <p class="indent"><ul><li><p>In <b>Prior years</b>heb je de mogelijkheid om gegevens van de laatste vijf jaar te importeren:</p></li><ul><li><p>Select <b>Import the last 5 years of final trial balance data</b> to import final balances.</p></li><li><p>Select Import the last 5 years of planning trial balance data to import planning balances.</p></li></ul></ul></p>
+        <ol>
+            <li value="8">
+                <p>Selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Bekijk de informatie in de fase Bevestiging van de importwizard en selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Let op:</b> Als je wegnavigeert van het tabblad Datasets terwijl de gegevens worden geïmporteerd, gaat het importeren door. Wanneer je terugkeert naar het tabblad Datasets, kun je de status van het importeren zien.</p>
+        <p>Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p><img src="../Images/ViewData-GL.png" alt="Door op de knop Gegevens bekijken te klikken, wordt de zojuist geïmporteerde dataset weergegeven. " /></p>
+        <p>Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p>Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p>Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p>Raadpleeg <a href="../../Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+        <p> </p>
+        <p>
+            <br />
+        </p>
+    </body>
+</html>

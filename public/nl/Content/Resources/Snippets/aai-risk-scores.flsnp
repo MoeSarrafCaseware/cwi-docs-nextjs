@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>De standaard <b>basisrisicoscores</b> op de pagina <b>CONFIGURATIE</b> zijn geselecteerd om het belang weer te geven van een transactie die door een bepaalde test is gemarkeerd.</p>
+        <p><b>Complexe rekeningcombinaties</b> heeft bijvoorbeeld een hogere basisscore van 50. De reden hiervoor is dat hoe meer rekeningen een transactie beïnvloedt, hoe raadzamer het voor de accountant kan zijn om die transacties verder te onderzoeken.</p>
+        <p><b>Ongewone gebruikers</b> heeft daarentegen een basisscore van 1, omdat een gebruiker die niet vaak berichten plaatst op een account niet altijd een indicatie is van een rode vlag.</p>
+        <p>Dit is een gebied waar professionele oordeelsvorming en kennis van de entiteit waardevol zijn. Als je je zorgen maakt dat één bepaalde test op een mogelijk probleem wijst, kun je de basisscore voor die test verhogen om die transacties bovenaan de lijst te zetten.</p>
+        <h3>Risiconiveau</h3>
+        <p>AnalyticsAI berekent het risiconiveau ten opzichte van de totale hoeveelheid risico in de gegevensset. Het sorteert alle transacties in volgorde van aflopende risicoscore. Vervolgens wordt de top 5% van de gescoorde transacties genomen en als hoog risico bestempeld. AnalyticsAI gebruikt hier exclusieve drempellogica, zodat alle transacties met dezelfde score hetzelfde risiconiveau hebben. Evenzo wordt de volgende 10% van de transacties bestempeld als gemiddeld risico. Alle andere gescoorde transacties worden beschouwd als transacties met een laag risico. Transacties die door geen enkele test zijn gemarkeerd, krijgen een score van nul en worden opgenomen in de nulrisicocategorie.</p>
+        <p><img src="../Images/Replace screenshot DOC-451.png" alt="You can change the default risk scores if needed." style="width: 1331px;height: 775px;" /></p>
+        <p>Stel bijvoorbeeld dat er 1.000 transacties zijn in een gegevensset, waarvan er vijf vijf risicopunten hebben, zeven vier risicopunten, enzovoort, zoals hieronder weergegeven:</p>
+        <table style="width: 100%;">
+            <col style="width: 97px;">
+            </col>
+            <col style="width: 150px;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Score</td>
+                    <td style="text-align: center;font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Number of transactions</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">5</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">5</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">4</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">7</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">3</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">30</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">2</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">40</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">1</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">53</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">0</td>
+                    <td style="text-align: center;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">865</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Er zijn in totaal 135 gescoorde transacties. De top 5% wordt beschouwd als hoog risico. Vijf procent van 135 is ongeveer zeven transacties, en onze exclusieve drempellogica zorgt ervoor dat transacties met dezelfde score allemaal op hetzelfde risiconiveau worden opgenomen - wat in dit geval betekent dat alle transacties met een score van vijf als hoog risico worden bestempeld.</p>
+        <p>De volgende cutoff is voor gemiddeld risico. Dit kijkt naar de volgende 10% van de transacties, wat ongeveer 14 is (135 * 10%). Aangezien dit de transacties met een risicoscore van drie zou opsplitsen, zullen alle transacties met een risicoscore van vier uiteindelijk als gemiddeld risico worden bestempeld en zullen de transacties met drie of minder punten als laag risico worden beschouwd.</p>
+        <p>Dit model brengt een evenwicht tot stand tussen het kunnen categoriseren van grote reeksen transacties, met verschillende risiconiveaus, en het flexibel genoeg zijn voor verschillende risicoverdelingen over verschillende reeksen transacties.</p>
+    </body>
+</html>

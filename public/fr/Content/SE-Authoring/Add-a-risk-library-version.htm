@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head><title>Ajouter une version de la bibliothèque des risques</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Ajouter une version de la bibliothèque des risques</h1>
+        <p>Vous pouvez télécharger un fichier Excel contenant le contenu de votre bibliothèque de risques pour ajouter une version majeure de la bibliothèque de risques.</p>
+        <p>Pour savoir comment configurer votre fichier Excel, consultez le modèle et l&apos;exemple de fichier ci-dessous.</p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><span aria-hidden="true">X</span><h3 class="modalheading">Accéder à plus de contenu</h3>
+                        <p class="modalmaintext">Inscrivez-vous pour recevoir les derniers articles et nouvelles concernant les produits Caseware.</p>
+                        <p class="modalsubtext">Votre téléchargement commencera immédiatement après votre inscription.</p>
+                        <p class="emailmodalinputlabel">Courriel :</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Souscrire</button><a class="modalnoemail" onclick="downloadFilenoemail()">Non merci. Je veux juste télécharger le fichier.</a> <div id="emailerrormsg"></div></div> <div class="modal-footer"><a href="https://casewarecloud.com">Vous n&apos;avez pas encore de Cloud ? Cliquez ici pour en savoir plus.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Template.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Modèle de bibliothèque des risques</a></p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><span aria-hidden="true">X</span><h3 class="modalheading">Accéder à plus de contenu</h3>
+                    <p class="modalmaintext">Inscrivez-vous pour recevoir les derniers articles et nouvelles concernant les produits Caseware.</p>
+                    <p class="modalsubtext">Votre téléchargement commencera immédiatement après votre inscription.</p>
+                    <p class="emailmodalinputlabel">Courriel :</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Souscrire</button><a class="modalnoemail" onclick="downloadFilenoemail()">Non merci. Je veux juste télécharger le fichier.</a> <div id="emailerrormsg"></div> <div class="modal-footer"><a href="https://casewarecloud.com">Vous n&apos;avez pas encore de Cloud ? Cliquez ici pour en savoir plus.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Sample.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Exemple de fichier de la bibliothèque des risques</a></p>
+        <p>Le modèle est également disponible au téléchargement dans la boîte de dialogue Version inédite.</p>
+        <p><img src="../Resources/Images/risk-library-download-template.png" alt="Le dialogue sur la version inédite." /></p>
+        <p>Si vous ajoutez une version de la bibliothèque des risques pour la première fois, la version est automatiquement ajoutée en tant que version <b>majeure.</b>  Vous pouvez également ajouter des versions ultérieures de la bibliothèque des risques : <b>Mineur</b> ou <b>correctif</b>. Utilisez les versions mineures pour les mises à jour planifiées de la bibliothèque et les versions correctives pour les mises à jour urgentes. Cela vous permet de travailler simultanément sur une mise à jour planifiée et de publier des mises à jour critiques.</p>
+        <p class="note inline"><b>Remarque :</b> Vous ne pouvez avoir qu&apos;une seule version mineure non publiée et qu&apos;une seule version de correctif non publiée à la fois.</p>
+        <p>Pour commencer, sélectionnez <b>Settings</b> dans le <b>menu Cloud</b>(<img src="../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), puis sélectionnez <b>Risk Library</b> | <b>Manage Risk Library</b>.</p>
+        <p><b>Pour ajouter une version de la bibliothèque des risques :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez la bibliothèque de risques dans le volet de gauche.</p>
+            </li>
+            <li>
+                <p>Si vous ajoutez la première version de cette bibliothèque de risques, sélectionnez <b>CRÉER UNE VERSION</b> puis passez à l&apos;étape 4</p>
+            </li>
+            <li>
+                <p>S&apos;il ne s&apos;agit pas de la première version de cette bibliothèque de risques :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionner <b>ADD</b>.</p>
+                        <p>La boîte de dialogue Version inédite s&apos;ouvre.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez le type d&apos;extraction.</p>
+                        <p>Options disponibles :</p>
+                        <ul>
+                            <li>
+                                <p><b>Mineur</b> - Sélectionnez cette option pour les mises à jour planifiées.</p>
+                            </li>
+                            <li>
+                                <p><b>Patch</b> - Sélectionnez cette option pour les mises à jour urgentes.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select the <b>Upload Excel File</b> box to browse or drag and drop the file.</p>
+                <p>Vous pouvez sélectionner <b>TÉLÉCHARGER LE MODÈLE</b> pour télécharger un modèle vide que vous pouvez utiliser pour configurer votre fichier Excel de bibliothèque de risques.</p>
+            </li>
+            <li>
+                <p>Sélectionner <b>CREATE</b>.</p>
+                <p>Des erreurs et des avertissements s&apos;affichent dans la boîte de dialogue - en cas de problèmes avec les données du fichier Excel.</p>
+                <p>Vous pouvez ignorer les avertissements, mais vous devez corriger toutes les erreurs et télécharger à nouveau le fichier pour continuer.</p>
+                <p><img src="../Resources/Images/risk-library-upload-errors.png" alt="La boîte de dialogue Version non publiée avec les erreurs et les avertissements pour le fichier téléchargé." /></p>
+            </li>
+        </ol>
+        <p>Une fois la version ajoutée, vous pouvez également :</p>
+        <ul>
+            <li>
+                <p>Sélectionnez <b>Editer</b> (<img src="../Resources/Images/icon-edit-gray.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour remplacer le fichier Excel.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Rapport de synthèse</b> (<img src="../Resources/Images/icon-risk-library-summary-report.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour afficher un résumé du contenu de la bibliothèque des risques.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Oui</b> pour supprimer la question.</p>
+            </li>
+        </ul>
+    </body>
+</html>

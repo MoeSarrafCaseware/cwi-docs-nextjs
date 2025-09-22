@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>SE 2020-03 release notes</h1>
+        <p>SE 2020-03 brengt de<i> grote kleine</i> functies. Zoals de mogelijkheid om groepen en hun structuren te exporteren of documenten van de ene sjabloon naar de andere te kopiëren. Toevoegingen die we als &quot;klein&quot; hebben ingeschat. Toch waren zij, heel onverwacht, de drijvende kracht achter de meeste discussies en vragen in het webinar over de release van 2020-03!</p>
+        <h2>Nieuw voor auteurs</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2020-03.</p>
+        <h3>controle</h3>
+        <p><a href="Primary-author.htm">#primaryauteur</a></p>
+        <p class="note inline"><b>Let op:</b> Deze functie is alleen beschikbaar in de Grafische modus. Het wordt niet ingezet in partner- of productieomgevingen.</p>
+        <p>Er is nu een nieuwe sectie <b>Controles</b> beschikbaar in de Productinstellingen, omdat we de nieuwe risicomodule blijven uitbreiden:</p>
+        <ul>
+            <li>
+                <p>Automatisering van besturingsimplementatie en ontwerpdocumentatie.</p>
+            </li>
+            <li>
+                <p>Testen van de operationele effectiviteit van controles.</p>
+            </li>
+        </ul>
+        <p>Schakel op het tabblad <b>Algemeen</b> het selectievakje <b>Controles in de risicomodule inschakelen</b> in om algemene opties en velden in te stellen met betrekking tot naleving en documentatie van controle-identificatie en testen.</p>
+        <p><img src="../Resources/Images/settings-controls-enabled.PNG" alt="Algemene opties worden beschikbaar zodra u besturingselementen inschakelt in uw product." /></p>
+        <p>Op het tabblad <b>Velden</b> kun je opgeven welke velden in het controlerapport worden weergegeven en labels aanpassen.</p>
+        <p>De onderstaande afbeelding toont het gedeelte <b>Evaluatie van de effectiviteit van de bediening</b> op het tabblad <b>Velden</b> . Merk op hoe elk veld kan worden in- of uitgeschakeld in het rapport. Labels voor ingeschakelde velden kunnen ook worden aangepast.</p>
+        <p><img src="../Resources/Images/details-on-control-fields.PNG" alt=" Sectie Effectiviteitsevaluatie op het tabblad Velden. Merk op hoe je kunt opgeven welke velden worden weergegeven in het controlerapport en hoe je labels kunt aanpassen" /></p>
+        <p class="note inline"><b>Let op:</b> Het Out-Of-The-Box controlerapport zal beschikbaar zijn in een toekomstige release. Je kunt echter SE Builder gebruiken om een aangepast Controlerapport te maken op basis van de Productinstellingen. Neem contact op met het <a href="https://calendly.com/kyle-silverman">productteam van Cloud Engagements</a> voor meer informatie en ondersteuning.</p>
+        <h3>Jaarrekening</h3>
+        <p><a href="Primary-author.htm">#primaryauteur</a></p>
+        <p>Er wordt nu een waarschuwingsbericht weergegeven in gebieden met financiële overzichten met meer dan 100 inhoudssecties om je te informeren dat jij (en je productgebruikers) door het gebied moeten navigeren met behulp van de <b>Document Map</b>, niet door te scrollen.</p>
+        <p>To learn more, see <a href="Best-practices.htm">Best practices for financial statements authoring.</a></p>
+        <p><img src="../Resources/Images/fs-notes-warning.PNG" alt="Nieuw waarschuwingsbericht voor gebieden die de aanbevolen maximale grootte overschrijden." /></p>
+        <h3>Slim kopiëren-plakken</h3>
+        <p><a href="Primary-author.htm">#primaryauteur </a><a href="Firm-author.htm"> #hoofdauteur</a></p><MadCap:snippetBlock src="../Resources/Snippets/smart-copy-paste-intro.flsnp" /><p>Deze aanpak helpt je om producten efficiënt te ontwikkelen en uit te brengen en verkleint de kans op mogelijke fouten.</p>
+        <p>Om Slim kopiëren-plakken in te schakelen, zet u de eigenschap <span style="font-family: 'Courier New';">Documenten importeren</span> op <span style="font-family: 'Courier New';">waar</span> in de product.json van de sjabloon waarin u documenten wilt kopiëren.</p>
+        <p>Zodra u Slim kopiëren-plakken inschakelt, wordt de optie <b>Kopiëren vanuit een ander product</b> beschikbaar in de sjabloon waar u op dat moment aan werkt en kunt u documenten kopiëren die zijn gemaakt in andere productsjablonen.</p>
+        <p><img src="../Resources/Images/copy-from-template.PNG" alt="De optie Kopiëren van een ander product." /></p>
+        <p>In SE 2020-03 heeft de functie Slim kopiëren-plakken een beperkte functionaliteit die we in toekomstige versies willen uitbreiden.</p>
+        <ul>
+            <li>
+                <p>Je kunt alleen <b>brieven</b>, <b>memo&apos;s</b>, <b>werkbladen</b> en<b>financiële</b> <b>overzichten</b>kopiëren.</p>
+            </li>
+            <li>
+                <p>Als documenten van de ene sjabloon naar de andere worden gekopieerd, worden ontbrekende of inconsistente gegevens binnen zichtbaarheidsinstellingen, dynamische tekst, formules, begrippenlijsten en analysediagrammen niet geïdentificeerd.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Let op:</b> U moet handmatig gegevensverschillen identificeren en oplossen voor zichtbaarheidsinstellingen, dynamische tekst, formules, begrippenlijsten en analysegrafieken tussen de bron- en doelsjablonen nadat u documenten hebt gekopieerd.</p>
+        <p>Voor meer informatie, zie <a href="What-is-Smart-Copy---Paste.htm">Wat is Slim kopiëren-plakken</a>, <a href="Copy-content-from-another-template.htm">Inhoud van een andere sjabloon kopiëren</a> en <a href="Current-limitations-in-smart-copy---paste.htm">Huidige beperkingen</a>.</p>
+        <h3>XBRL</h3>
+        <p><a href="Primary-author.htm">#primaryauteur</a></p>
+        <p class="note inline"><b>Let op:</b> Deze functie is alleen beschikbaar in de Grafische modus. Het wordt niet ingezet in partner- of productieomgevingen.</p>
+        <p>Je kunt nu XBRL-feiten in financiële overzichten controleren en de instance-documenten exporteren om te valideren dat ze worden gegenereerd zoals verwacht.</p>
+        <p>Als u <a href="List-of-product-features-(API).htm#iXBRL">XBRL</a> in uw product hebt <a href="List-of-product-features-(API).htm#iXBRL">ingeschakeld</a> , is het pictogram XBRL bekijken en exporteren beschikbaar in uw productsjabloon.</p>
+        <p><img src="../Resources/Images/review-section-in-xbrl.PNG" alt="XBRL review and export" style="width: 402px;height: 458px;" /></p>
+        <p>Je kunt de taxonomie selecteren die je wilt bekijken of exporteren. Je kunt het beoordelingsproces op elk moment stoppen en later verdergaan. Zie <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files?viewkey=Item&amp;entityId=48454&amp;folderId=5838.">XBRL Review and Export</a>voor meer informatie over het testen.</p>
+        <p class="note inline"><b>Let op:</b> In SE 2020-03 is XBRL review en export alleen beschikbaar voor dynamische tabelgebieden in de jaarrekening. We zijn van plan om deze functie in toekomstige versies uit te breiden naar andere documenten.</p>
+        <h2>Nieuw voor eindgebruikers</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2020-03.</p>
+        <h3>Afdrukken in bulk</h3>
+        <p>Er is nu een nieuwe optie <b>Bulkafdrukinstellingen</b> beschikbaar. Met deze optie kunnen gebruikers twee of meer documenten groeperen die moeten worden samengevoegd en afgedrukt als één PDF-document.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users.PNG" alt="Bulk print option in the Documents page." /></p>
+        <p>Je kunt meer dan één bulkafdrukgroep configureren. Hetzelfde document kan ook worden opgenomen in meerdere bulkafdrukgroepen.</p>
+        <p>Zodra een bulkafdrukgroep is geconfigureerd, wordt deze weergegeven in de afdrukoptie op de <b>Documentenpagina</b> en in elk opdrachtdocument. Merk op dat als bulkprints geconfigureerd zijn, je nog steeds de optie hebt om een document individueel af te drukken, als je dat wilt.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users-document-view.PNG" alt="Afdrukoptie die drie opties weergeeft: (1) bulk print setup (2) een bulk print groep en (3) de optie om het document individueel af te drukken." /></p>
+        <h3>Pagina</h3>
+        <p>De gegevenspagina bevat nieuwe toevoegingen met betrekking tot groepstabbladen en de kolom <b>Aanpassingen</b> .</p>
+        <ul>
+            <li>
+                <p>Exportopties zijn nu beschikbaar in de groepstabbladen. Je kunt <b>Exporteren</b> (<img src="../Resources/Images/icon-export-data-page.PNG" style="width: 24px;height: 18px;vertical-align: text-bottom;" />) selecteren om gegevens te exporteren naar een CSV-bestand, PDF of Werkdocumenten. Je kunt de groeperingsstructuur ook exporteren.</p>
+            </li>
+            <p>Merk op dat bij het exporteren rekening wordt gehouden met bestaande selecties op de pagina. For example, if users have disabled <b>Parent Groups</b>, then they&apos;re not included in the exported file.</p>
+            <p><img src="../Resources/Images/export-group-structure.PNG" alt="Nieuwe exportoptie in groepstabbladen." /></p>
+            <li>
+                <p>Aanpassingen worden nu blauw weergegeven. Je kunt een aanpassing selecteren om naar de pagina <b>Aanpassingen</b> te gaan, waar de corresponderende boekingen worden gemarkeerd zodat je de details kunt bekijken.</p>
+            </li>
+            <p><img src="../Resources/Images/adjustments-display-in-blue.PNG" alt="Aanpassingen worden nu blauw weergegeven. Gebruikers kunnen een aanpassing selecteren om de details te bekijken." /></p>
+            <p>De onderstaande afbeelding laat zien hoe de corresponderende boeking wordt gemarkeerd op de pagina <b>Aanpassingen</b> .</p>
+            <p><img src="../Resources/Images/adjustments-navigated-from-Data-page.png" alt="Corresponderende aanpassingsboeking gemarkeerd (zie de blauwe verticale lijn aan de linkerkant)." /></p>
+        </ul>
+        <h3>Problemen</h3>
+        <p>In SE 2020-03 hebben we de logica rond het verwijderen van kwesties verbeterd om informatieverlies te voorkomen en het controlespoor te verbeteren.</p>
+        <ul>
+            <li>
+                <p>Gebruikers kunnen niet langer een probleem verwijderen, tenzij ze het hebben aangemaakt.</p>
+            </li>
+            <li>
+                <p>Alleen een beheerder kan problemen verwijderen die door andere gebruikers zijn aangemaakt. An Admin user has one or more Cloud security roles:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Admin</p>
+                    </li>
+                    <li>
+                        <p>Instellingen Admin</p>
+                    </li>
+                    <li>
+                        <p>Entiteiten Beheer</p>
+                    </li>
+                    <li>
+                        <p>Personeelsadministratie</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Nieuwe risicomodule</h3>
+        <p>Risico&apos;s kunnen nu worden overgedragen.</p>
+        <p><img src="../Resources/Images/carry-forward-risk-assessments.PNG" alt="Bulk Carry Forward en individuele Carry Forward voor risicobeoordelingen. " /></p>
+        <p>De onderstaande figuur toont de overdracht van risico&apos;s.</p>
+        <p><img src="../Resources/Images/carry-forward-risks.png" alt="Bulk Carry Forward optie en individuele Carry Forward opties voor risico&apos;s." /></p>
+    </body>
+</html>

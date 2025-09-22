@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importer à partir de QuickBooks Desktop</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresRCT.flsnp" /><p>Vous pouvez importer des données de QuickBooks desktop en les exportant sous la forme d&apos;un fichier <i>.cwq</i> , puis en important ce fichier dans votre engagement.</p>
+        <p class="note inline"><b>Remarque :</b> Les comptes dont le solde est nul ne sont pas automatiquement importés. Si vous souhaitez inclure des comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> manuellement et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> aux groupes désignés.</p>
+        <p>Avant de commencer, assurez-vous que</p>
+        <ul>
+            <li>
+                <p><a href="https://www.microsoft.com/en-ca/download/details.aspx?id=17851">Microsoft .NET Framework 4.0</a> est installé sur votre poste de travail.</p>
+            </li>
+            <li>
+                <p>L&apos;utilitaire d&apos;exportation QuickBooks est installé sur votre poste de travail.</p>
+            </li>
+            <p>Vous pouvez le télécharger à partir de <a href="https://my.caseware.com/">MyCaseware</a> sur la page <b>Support Downloads.</b></p>
+        </ul>
+        <h2>Étape 1 : Exporter des données à partir de QuickBooks</h2>
+        <p style="font-weight: bold;">Pour exporter des données à partir de QuickBooks US :</p>
+        <ol>
+            <li>
+                <p>Ouvrez votre compte QuickBooks desktop, puis ouvrez le fichier de l&apos;entreprise que vous souhaitez importer.</p>
+            </li>
+            <li>
+                <p>Ouvrez l&apos;utilitaire d&apos;exportation QuickBooks.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans la liste déroulante <b>Version QuickBooks</b> , sélectionnez<b> QuickBooks 2008-2020 Canada.</b></p>
+                    </li>
+                    <li>
+                        <p>dans le champ <b>Chemin d&apos;exportation</b> , sélectionnez <b>Browse....</b></p>
+                    </li>
+                    <p>La boîte de dialogue <b>Browse For Folder (Rechercher un dossier)</b> s&apos;ouvre.</p>
+                    <li>
+                        <p>Naviguez jusqu&apos;à l&apos;endroit où vous souhaitez créer le fichier d&apos;exportation, puis sélectionnez <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Sélectionnez <b>Spécifier la date de la dernière transaction</b> et saisissez la date applicable.</p>
+                    </li>
+                    <li>
+                        <p>Dans la liste déroulante <b>Méthode comptable</b> , sélectionnez la méthode de comptabilité d&apos;exercice applicable.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Exporter</b>.</p>
+            </li>
+            <p>Les données comptables du fichier QuickBooks Desktop sont exportées vers un fichier au format <i>.cwq</i> à l&apos;emplacement spécifié.</p>
+        </ol>
+        <h2>Étape 2 : Importer les données exportées dans votre engagement</h2>
+        <p style="font-weight: bold;">Pour importer les données exportées dans votre engagement :</p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>Dans le menu déroulant<b>ImportFrom</b> , sélectionnez <b>QuickBooks</b>.</p>
+            </li>
+            <li>
+                <p>Dans la liste déroulante <b>Version</b> , sélectionnez <b>QuickBooks 2019 Canada/UK/AUS</b>.</p>
+            </li>
+            <li>
+                <p>Dans <b>Chemin d&apos;importation</b>, parcourez et sélectionnez le fichier <i>.cwq</i> .</p>
+            </li>
+            <li>
+                <p>Spécifiez les paramètres souhaités pour l&apos;importation (fin d&apos;exercice, séquence de dates de la période).</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Suivant</b>, puis <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>Enregistrez le fichier zip généré à l&apos;aide de l&apos;invite affichée.</p>
+            </li>
+            <li>
+                <p>In your engagement file, go to the <b>Data</b> page. La page Données s&apos;ouvre sur l&apos;onglet Ensembles de données.</p>
+            </li>
+            <li>
+                <p>Sous IMPORTATION DEPUIS UN CONNECTEUR DE DONNÉES, sélectionnez <b>QuickBooks Desktop</b> dans la liste des sources de données, puis cliquez sur <b>Suivant.</b></p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Recherchez le connecteur de données QuickBooks Desktop dans la liste de l&apos;onglet Datasets." /></p>
+        <ol>
+            <li value="11">
+                <p>Sélectionnez ou déposez par glisser-déposer le fichier zip que vous avez enregistré à l&apos;étape 8.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+    </body>
+</html>

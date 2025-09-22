@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Administrators can create associations so that files and activities can be shared between entities where appropriate" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entity associations to enable single workspaces for multiple internal or client entities" />
+    </head>
+    <body>
+        <h1>Crear asociaciones de entidades</h1>
+        <p>Associations group two or more entities in Cloud, providing a consolidated view of activities and files for each entity that is a part of the association. Entities in associations remain independent of one another.</p>
+        <h2 id="Possible-associations">Possible associations</h2>
+        <p>You can create an association for any entity type - be it <b>internal</b>, <b>client</b> or <b>other</b>.</p>
+        <p>For example, if you&apos;re performing work for multiple subsidiaries of the same large corporation, you may want to represent each subsidiary with a separate client entity, then create an association for them.</p>
+        <p>An association can also contain different types of entities. For example, if you have an internal entity for your tax team, you could associate them with the client entities you provide tax work for.</p>
+        <p>Each entity can only be a part of one association. Attempting to associate an entity with entities already in an association results in one combined association.</p>
+        <p>For example, assume there are two associations; one composed of the set {A, B, C} and the other {D, E, F}. Associating an entity from one association with an entity from the other (for example, associating entity C with entity E) results in a combined association of the set {A, B, C, D, E, F}.</p>
+        <h2 id="Viewing-associations">Viewing associations</h2>
+        <p>When viewing an entity that is a part of an association, an icon appears beside the entity name. This icon acts as a switch to toggle between an <b>associated view</b> (<img src="../../Resources/Icons/AssociationAll-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), which displays content for all associated entities, and <b>single entity view</b> (<img src="../../Resources/Icons/AssociationSingle-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), which displays only the selected entity&apos;s content.</p>
+        <p><img src="../../Resources/Images/Single-entity-association-view-857x370.png" alt="Single entity view vs. Association view" /></p>
+        <p style="font-weight: bold;">Crear asociaciones de entidades</p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Staff Editor</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Entities</b>.</p>
+            </li>
+            <li>
+                <p>Select an entity you want to associate with another entity and select <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Associate</b>.</p>
+                <p><img src="../../Resources/Images/Associate-entity-630x150.png" alt="Select the Associate button from the Entity&apos;s menu to begin creating an association" /></p>
+            </li>
+            <li>
+                <p>Search for the entities you want to add. They will be displayed in the dialog by entity type.</p>
+                <p><img src="../../Resources/Images/Associate-entity-search-630x285.png" alt="Search for the entity you want to create an assicoation with" /></p>
+            </li>
+            <li>
+                <p>Select <b>Close</b>.</p>
+            </li>
+        </ol>
+        <h2 id="Permissions-for-associations">Permissions for associations</h2>
+        <p>Users are able to view, add and remove entities from an association. There are no separate permissions granted for associations; a user is permitted to view or modify entities in an association based on the permissions granted on individual entities.</p>
+        <ul>
+            <li>
+                <p>To view entities in an association, the user&apos;s role must grant <b>read</b> permission (R) on the <i>Summary</i> attribute of each entity. Users that do not have this permission on all entities in an association can only see the subset of entities for which they do.</p>
+                <p>Users cannot see associations if their role grants this permission on only one entity in the association.</p>
+            </li>
+            <li>
+                <p>To add or remove entities in an association, the user&apos;s role must grant edit permission (E) on the <i>Details</i> attribute of each entity. Users can only add or remove an entity in an association if permission is granted on that entity.</p>
+                <p>Although users may be able to view an entity, they may not add or remove them from associations without edit permission.</p>
+            </li>
+        </ul>
+        <p>The following table summarizes the permissions required to access entities in associations and includes suggestions for built-in roles that provide these permissions.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Access</th>
+                    <th>Permissions required</th>
+                    <th>Built-in Roles Suggestions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><b>View</b> entities in an association.</p>
+                    </td>
+                    <td>
+                        <p><b>Read (R)</b> permission on <i>Summary</i> attribute of entity.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Visor</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entity Access</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entity Collaborator</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Add</b> or <b>Remove</b> entities in an association.</p>
+                    </td>
+                    <td>
+                        <p><b>Edit (E)</b> permission on <i>Details</i> attribute of entity.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Editor</i></p>
+                            </li>
+                            <li>
+                                <p><i>Propietario</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

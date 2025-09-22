@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>To import data using the Cloud Import Utility</b>:</p>
+        <ol>
+            <li>
+                <p>Download the Cloud Import Utility.</p>
+            </li>
+            <li>
+                <p>Open the downloaded file, then select <b>Next</b>.</p>
+            </li>
+            <p>The <b>Import From Other Data Source</b> page displays.</p>
+            <li>
+                <p>In the <b>Import From</b> and <b>Version</b> fields, specify the accounting software you&apos;re exporting from.</p>
+                <p>The content of the page changes depending on your selection.</p>
+                <p class="note"><b>Hinweis:</b> Refer to <a href="../../Engagements/File-Preparation/Supported-third-party-accounting-packages.htm">Supported third party accounting packages</a> for the list of supported packages. If you find outdated packages in the list, report the issue to Caseware for investigation.</p>
+            </li>
+            <li>
+                <p>Browse to the <b>Import Path</b> of the client file you want to import.</p>
+                <p>If your accounting software requires you to specify a client file, you will see the <b>Select Client ID File</b> drop-down. If there is more than one file, be sure to select the correct one here.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Weiter</b>. The <b>New File Wizard Complete</b> page displays.</p>
+                <p>This shows the location of a temporary file that will be used to generate the final .zip file with the imported data.</p>
+            </li>
+            <li>
+                <p>Select <b>Finish</b> to perform the conversion.</p>
+                <p>After the data is generated, the Save As dialog displays.</p>
+            </li>
+            <li>
+                <p>Navigate to the desired location to save the .zip file and select <b>Save</b>.</p>
+                <p class="note"><b>Hinweis:</b> If you&apos;re importing data into <a href="https://www.caseware.com/ca/products/idea/">IDEA</a> using the Cloud Import Utility, do not proceed to Step 8. Your next step is to import the zip file into IDEA. See the IDEA Help for detailed instructions.</p>
+            </li>
+            <li>
+                <p>Upload the generated output file in your <b>Data</b> page.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Go to the <b>Import</b> tab.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Desktop Accounting Software.</b></p>
+                    </li>
+                    <li>
+                        <p>Browse or drag and drop the .zip file you&apos;ve saved in Step 8.</p>
+                        <p><b>Tipp:</b> If transactions are available in the data, you can select the <b>Import available transactional data</b> checkbox to import them as well.</p>
+                        <p><img src="../Images/data-page-import-from-desktop-trx.PNG" alt="Select the checkbox to import transactions - if avaiable." /></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

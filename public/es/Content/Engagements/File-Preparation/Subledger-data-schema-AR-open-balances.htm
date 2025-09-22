@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cuentas por cobrar - saldos abiertos</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts receivable—open balances subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaction ID (<code>ar_open_balance_transaction_id</code>)</td>
+                    <td>
+                        <p>El Id. único de la transacción de cuentas por cobrar abiertas incluye la factura y el efectivo recibidos.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Type (<code>ar_open_balance_invoice_type</code>)</td>
+                    <td>
+                        <p>El código, valor o indicador del método por el que el importe debe o haber de la transacción se anula o asigna a deuda por el cliente. Examples include check, wire transfer, cash, credit memo, invoice, interest-only invoice, and so on.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de vencimiento de la factura</td>
+                    <td>
+                        <p>La fecha en la que vence el pago del cliente. No todas las transacciones tendrán una fecha de vencimiento (por ejemplo, las notas de crédito). El vencimiento de una cuenta por cobrar suele calcularse en base a esta fecha.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Balance Amount (<code>ar_open_balance_balance_amount</code>)</td>
+                    <td>
+                        <p>El importe monetario del saldo restante registrado en la divisa funcional o divisa de grupo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe del saldo del informe</td>
+                    <td>
+                        <p>El importe monetario del saldo registrado en la divisa de informe.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe del saldo local</td>
+                    <td>
+                        <p>El importe monetario del saldo en la divisa local.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Original Amount (<code>ar_open_balance_original_balance_amount</code>)</td>
+                    <td>
+                        <p>El importe monetario del saldo original (importe de la factura original) registrado en la divisa funcional o divisa de grupo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe del saldo original local</td>
+                    <td>
+                        <p>El importe monetario en la divisa local (importe de la factura original).</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Informe del importe del saldo original</td>
+                    <td>
+                        <p>El importe monetario registrado en el informe de la divisa (importe de la factura original).</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grouping Code (<code>ar_open_balance_grouping_code</code>)</td>
+                    <td>
+                        <p>Un mecanismo de agrupación para artículos relacionados en un lote o grupo de facturas, como el grupo de facturas que se encuentra en ciertos sistemas de ERP.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de importe (Debe / Haber)</td>
+                    <td>
+                        <p>Indica si el importe es debe o haber.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Possible values: <code>C</code>=credit; <code>D</code>=debit.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project ID (<code>ar_open_balance_project_id</code>)</td>
+                    <td>
+                        <p>El identificador único del proyecto, del que derivan las cuentas por cobrar.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fiscal Year (<code>ar_open_balance_fiscal_year</code>)</td>
+                    <td>
+                        <p>El ejercicio fiscal en el que transcurre la <b>Fecha de la transacción</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Accounting Period (<code>ar_open_balance_accounting_period</code>)</td>
+                    <td>
+                        <p>El período contable en el que transcurre la <b>Fecha de la transacción</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description (<code>ar_open_balance_remark</code>)</td>
+                    <td>
+                        <p>Una descripción de texto en formato libre.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de cuenta de cliente</td>
+                    <td>
+                        <p>El Id. del cliente del que se espera el pago o al que se han aplicado los créditos no utilizados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre de cuenta del cliente</td>
+                    <td>
+                        <p>El nombre del cliente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Third alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice ID (<code>ar_open_balance_invoice_number</code>)</td>
+                    <td>
+                        <p>El Id. único para cada factura.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Invoice Date (<code>ar_open_balance_invoice_date</code>)</td>
+                    <td>
+                        <p>La fecha de la transacción, independientemente de la fecha en la que se creó la factura. La fecha a partir de la cual se calcula la fecha de vencimiento basada en las condiciones de la factura.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Fourth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de unidad de negocio</td>
+                    <td>
+                        <p>Se usa para identificar la unidad de negocio, región, sucursal, etc., al nivel en el que se estén auditando los estados financieros.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Number (<code>ar_open_balance_reference_number</code>)</td>
+                    <td>
+                        <p>Un número de identificación de una transacción generada de forma interna o externa. Los ejemplos incluyen número de cheque, número de transferencia bancaria o Id. del documento original.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other Reference Date (<code>ar_open_balance_reference_date</code>)</td>
+                    <td>
+                        <p>La fecha de una transacción generada de forma externa. Los ejemplos incluyen la fecha del cheque o la fecha de la transferencia bancaria.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. del contrato de ventas</td>
+                    <td>
+                        <p>El Id. único del contrato de ventas, del que derivan las cuentas por cobrar.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entry ID (<code>ar_open_balance_journal_id</code>)</td>
+                    <td>
+                        <p>El identificador único del asiento contable. Por lo general, el sistema lo genera de forma automática.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Balance Currency (<code>ar_open_balance_balance_amount_currency</code>)</td>
+                    <td>
+                        <p>La divisa funcional o divisa de grupo relacionada con el importe del saldo.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa del saldo del informe</td>
+                    <td>
+                        <p>La divisa de informe relacionada con el importe del informe de saldo para informes no consolidados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa del saldo local</td>
+                    <td>
+                        <p>La divisa para requisitos de informes locales.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amount Currency (<code>ar_open_balance_amount_currency</code>)</td>
+                    <td>
+                        <p>La divisa funcional o divisa de grupo relacionada con el importe.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa de informe del importe</td>
+                    <td>
+                        <p>La divisa de informe relacionada con el importe de informes no consolidados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de la divisa local</td>
+                    <td>
+                        <p>La divisa para requisitos de informes locales.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

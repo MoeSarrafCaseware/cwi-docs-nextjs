@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Transition guide—Caseware Cloud API V1 to V2</h1>
+        <p>API V1 has helped many customers automate workflows and ensure data in Caseware Cloud is up to date and accurate. However, as customer needs have evolved, we&apos;ve heard feedback about limitations in V1, particularly around working with Business Units, and Tags. Based on this feedback, we’ve made thoughtful improvements in API V2 to better meet your needs and help you work more efficiently.</p>
+        <p>Key improvements in API V2 include:</p>
+        <ul>
+            <li>
+                <p><b>Compatibility with Business Units (BUs)</b>: Improved support for managing multiple business units within your organization.</p>
+            </li>
+            <li>
+                <p><b>Tags management APIs</b>: A new set of API endpoints for automating the management and assignment of tags for better organization and filtering.</p>
+            </li>
+            <li>
+                <p><b>Developer-friendly SDK documentation</b>: Clear and comprehensive SDK documentation designed to simplify integration and development.</p>
+            </li>
+        </ul>
+        <p>API V2 will be launched <b>alongside V1</b> to ensure backward compatibility, so your existing integrations will continue working during the transition. However, <b>API V1 will be deprecated on October 30, 2025</b>, giving you ample time to migrate to V2 without disruption.</p>
+        <p>We’ve designed these changes to have the biggest impact on improving your experience, based directly on the feedback we&apos;ve received. This guide will walk you through the new features, answer common questions around different use cases and workflows, and help ensure a smooth and successful transition to API V2.</p>
+        <h2>Häufig gestellte Fragen</h2>
+        <h3>General Information About API V2</h3>
+        <p><b>Q1: What’s the difference between API V1 and V2?</b></p>
+        <p><b>A1:</b> API V2 brings several key improvements over V1, including better support for Business Units (BUs), a more flexible tags management system, and a developer-friendly SDK with clearer documentation. These updates are designed to enhance efficiency, reduce the learning curve for developers, and introduce best practices for integration.</p>
+        <p style="font-weight: bold;">Q2: How does API V2 improve compatibility with Business Units (BUs)?</p>
+        <p><b>A2:</b> In API V2, we’ve switched from using site-specific IDs to Globally Unique Identifiers (GUIDs). This ensures that data is uniquely identifiable across all Business Units (BUs), making it easier to manage and scale cross-BU integrations without conflicts. For organizations that don’t use BUs, GUIDs still provide a more robust and future-proof way to handle data, aligning with best practices and improving integration flexibility.</p>
+        <p style="font-weight: bold;">Q3: Will my current V1 integrations continue to work?</p>
+        <p><b>A3:</b> Yes, even with the API V2 launch, Caseware continues to support V1 to ensure that your integrations are not disrupted.</p>
+        <p><b>Q4: Is there a timeline for when V1 will be deprecated?</b></p>
+        <p><b>A4:</b> V1 will continue to be supported alongside V2, so you can keep using your current integrations for now. However, API V1 will be deprecated on October 30, 2025. We recommend transitioning to V2 before this date to ensure a smooth experience and to take full advantage of the new features and improvements.</p>
+        <p><b>Q5: Where can I find the documentation for the new V2 API features?</b></p>
+        <p><b>A5:</b> Detailed documentation for API V2, including information on new endpoints and functionality, is available in our SDK documentation. This includes full descriptions of the new V2 endpoints, examples, and guidelines to help you transition from V1 to V2. The SDK documentation is organized to support both versions, so you can easily switch between the V1 and V2 endpoints based on your integration needs. Additionally, developers can download the Open API Specification directly from the SDK documentation, providing a structured format for integrating with the new V2 API.</p>
+        <p><img src="../../Resources/Images/Cloud API V2 Transition Handbook - Transitioning from V1.png" alt="Selecting the version of Caseware Cloud API specification" /></p>
+        <p><b>Q6: Should I transition to V2 even if I am not using Business Units or Tags?</b></p>
+        <p><b>A6.</b> Yes, we recommend transitioning to API V2, even if you’re not currently using Business Units or Tags. API V1 will eventually be deprecated, and once that happens, your existing integration will no longer be supported. Additionally, from a best practices standpoint, V2 introduces endpoints that use Globally Unique Identifiers (GUIDs), which offer more reliable and scalable solutions compared to non-unique keys. Making the transition will help future-proof your integration.</p>
+        <p><b>Q7: Are there any limitations or known issues with V2?</b></p>
+        <p><b>A7:</b> While API V2 offers several improvements, there are a few limitations to be aware of. For example, the tags endpoints still use IDs rather than GUIDs, and we plan to address this in future releases. We also have plans to roll out minor updates to V2 on a regular cadence, incorporating feedback and adding new features. We also welcome your valuable feedback to help us prioritize improvements and ensure V2 meets your needs.</p>
+        <p><b>Q8: Will there be future upgrades to API V2?</b></p>
+        <p><b>A8:</b> Yes, we will continue to release minor updates for API V2 on a regular cadence, incorporating new features, enhancements, and bug fixes. We recommend that developers visit the SDK documentation site periodically to stay updated on the latest changes and download the most current Open API Specifications. Please note that API V1 will no longer receive updates going forward, so we encourage transitioning to V2 to benefit from ongoing improvements and support.</p>
+        <h2>Questions about the transition from V1 to V2</h2>
+        <p><b>Q1: How to plan my transition from V1 to V2?</b></p>
+        <p><b>A1:</b> You can transition from V1 to V2 in one of two ways: a staggered migration or a full switch.</p>
+        <ul>
+            <li>
+                <p>Phased Migration: Migrate different integrations (e.g., entities, staff, or groups) in separate phases, testing and implementing each one as you go.</p>
+            </li>
+            <li>
+                <p>Full Switch: Update all the existing integrations at once but ensure thorough testing in a staging environment before fully switching.</p>
+            </li>
+        </ul>
+        <p><b>Plan your transition</b></p>
+        <ol>
+            <li>
+                <p>Review the V2 API documentation.</p>
+            </li>
+            <li>
+                <p>Choose your migration approach (phased or full).</p>
+            </li>
+            <li>
+                <p>Update integration code to make API calls to V2 endpoints.</p>
+            </li>
+            <li>
+                <p>Monitor the integration after switching.</p>
+            </li>
+        </ol>
+        <p>This process ensures a smooth transition, regardless of your approach.</p>
+        <p>For detailed guidance on migrating specific use cases like entities, staff, and more, refer to the relevant sections below.</p>
+        <p><b>Q2: How should I handle ID references if I have a mapping database?</b></p>
+        <p><b>A2:</b> If you are using a mapping database or middleware to store and reference CW object identifiers (such as entity IDs), we recommend updating your database to store both the CW ID and the corresponding CWGuid.</p>
+        <p>Before migrating to V2, you can use the V1 API to look up data by CW ID. In the response, you&apos;ll find the CWGuid for each object, which you can then use to update your reference table. This will ensure your system is ready for the transition to V2, where CWGuids will be the primary identifier.</p>
+        <p><b>Q3: Can I continue using V1 while transitioning to V2?</b></p>
+        <p><b>A3:</b> Yes, you can continue using V1 while you migrate to V2. V1 and V2 integrations can work in parallel during this migration process. For example, you can run your entities integration on V2 while your staff integration still uses V1</p>
+        <p><b>Q4: Do I need to make any code changes to my current integrations?</b></p>
+        <p><b>A4:</b> Yes, to take advantage of the new features in V2, you will need to update your API calls to the new V2 endpoints. The specifics of the changes required will depend on the endpoints you&apos;re currently using in V1.</p>
+        <p><b>Q5: How can I get support during the transition?</b></p>
+        <p><b>A5:</b> Our support team is available to assist with any questions or challenges you encounter during the transition process.</p>
+        <p style="font-weight: bold;">Q6: Do I need to create new API clients for V2?</p>
+        <p><b>A6:</b> No, you don’t need to create new API clients or keys for V2. Your existing V1 clients will continue to work seamlessly with V2. However, if you prefer, you can create new API clients specifically for V2. Once you’ve fully transitioned to V2, you can choose to delete the old V1 clients to ensure that V1 integrations are no longer in use.</p>
+        <h2>Use-case-related questions for V2 migration</h2>
+        <h3>Entitäten</h3>
+        <p><b>Q1. How do I create an entity in V2?</b></p>
+        <p><b>A1. For Business Units:</b> To create an entity in a specific Business Unit, use the <b>Create an entity in a business unit</b> endpoint. Provide the <b>Business Unit Shortname</b> in the path parameters along with other required details in the request body. The API will create the entity in the specified Business Unit. The response will include a <b>CWGuid</b>, which should be used for any future operations on the entity, replacing the previous entity ID.</p>
+        <p><img src="../../Resources/Images/CreateEntityinBU-Endpoint.png" alt="Viewing the endpoint to create an entity in a business unit" /></p>
+        <p><b>If you are not using Business Units</b>, use the standard <b>Create an entity</b> endpoint, as you did in V1. This will create the entity in your cloud site, and here also the <b>CWGuid</b> should be used for subsequent operations.</p>
+        <p><img src="../../Resources/Images/CreateEntity.png" alt="Viewing the endpoint used to create an entity where there are no business units." /></p>
+        <p><b>Q2. How do I call the Get, Update, and Delete Entity endpoints in V2?</b></p>
+        <p><b>A2.</b> In <b>API V2</b>, you must use <b>CWGuids</b> instead of <b>entityIds</b> to identify entities in the <b>Get</b>, <b>Update</b>, and <b>Delete</b> endpoints. Here&apos;s how it works:</p>
+        <ol>
+            <li>
+                <p><b>When creating an entity or retrieving a list of entities</b> (e.g., via the Search Filtered List endpoint), the response will include a <b>CWGuid</b> for each entity.</p>
+            </li>
+            <li>
+                <p><b>For subsequent operations</b> (Get, Update, Delete), you must use the <b>CWGuid</b> provided in the response to reference the specific entity.</p>
+            </li>
+        </ol>
+        <p>For <b>Business Units (BU)</b> firms, using <b>CWGuids</b> ensures that the entity is uniquely identified across all BUs, simplifying operations across multiple business units. The system will use the Guid to perform the requested operation (Get, Update, or Delete) across any Business Unit, ensuring seamless integration.</p>
+        <h3>Benutzer</h3>
+        <p><b>Q3: How do I Create users in V2?</b></p>
+        <p><b>A3.</b> Creating users in V2 is similar to V1, with an added feature for Business Unit firms. Here&apos;s how it works:</p>
+        <p><b>For all firms:</b></p>
+        <p>Create users in V2 using the <b>Create a user</b> endpoint, similar to V1. The process remains the same for most parameters.</p>
+        <p><img src="../../Resources/Images/CreateUserAPI.png" alt="Viewing the endpoint used to create a user." /></p>
+        <p><b>For Business Unit (BU) firms:</b></p>
+        <p>BU firms can specify the <b>Business Unit Shortnames</b> to grant the user access to specific BUs. This simplifies managing user access across multiple business units. Here is a sample code with the list of BUs:</p>
+        <p><img src="../../Resources/Images/BU-Shortname.png" alt="Granting users access to a list of business units." /></p>
+        <p><b>Response:</b></p>
+        <p>After creating the user, the response will include a <b>CWGuid</b>, which should be used for future operations (Get, Update, Delete) instead of the previous user ID.</p>
+        <p><b>Q4: How do I get the details of a user?</b></p>
+        <p><b>A4:</b> In V2, to retrieve a user’s details, use the Get User Details endpoint and provide the user’s CWGuid in the path parameters. In V1, you would have used the user ID, but in V2, the Guid is required instead.</p>
+        <p><b>Q5: How do I get the list of Business Units a user has access to?</b></p>
+        <p><b>A5:</b> To get the list of Business Units a user has access to, use the Get User Details endpoint and provide the user’s CWGuid. The response will include all the Business Units the user currently has access to.</p>
+        <p style="font-weight: bold;">Q6: How do I assign or unassign a staff user to different Business Units?</p>
+        <p><b>A6:</b> You can assign or unassign a user from Business Units while creating or updating the user.</p>
+        <p><b>Create a user</b></p>
+        <p>Provide a list of Business Unit Shortnames in the request, specifying which Business Units the user should have access to.</p>
+        <p><b>Update user details</b></p>
+        <p>You can either assign the user to new Business Units or remove them from existing ones.</p>
+        <p class="indent">To assign the user to a BU:</p>
+        <p class="indent" style="font-weight: normal;">Include all the Business Units the user should have access to, including the ones they already have access to.</p>
+        <p class="indent" style="font-weight: normal;">To remove access from a BU:</p>
+        <p class="indent">Include only the BUs the user should retain access to. Any BU not in the list will be removed from the user&apos;s access.</p>
+        <p class="indent"><img src="../../Resources/Images/Assign-Unassign-BUs.png" alt="Assigning access to business units." /></p>
+        <p class="note inline"><b>Hinweis:</b><br /> If you don&apos;t include the Business Unit field in the update request, no changes will be made to the user’s BU access.</p>
+        <h3>Gruppen</h3>
+        <p><b>Q7: How do I create a group in V2?</b></p>
+        <p><b>A7:</b> In V2, to create a group, use the Create Group endpoint and provide the necessary parameters in the request body. Unlike in V1, where you would have received a groupId, in V2, you will receive a CWGuid in the response, which should be used for any future operations on that specific group (such as Get, Update, or Delete).</p>
+        <p><b>Q8: How can I add users to a group?</b></p>
+        <p><b>A8:</b> To add a user to a group in V2, use the “Update User Assignment to a Group” endpoint. In V2, instead of using the group ID and user IDs like in V1, you’ll need to provide the CWGuid of the group and the CWGuids of the users you want to add in the request.</p>
+        <p>By adding or removing users to groups and assigning those groups to specific Business Units, you can efficiently manage user access to different Business Units through their group memberships.</p>
+        <p><img src="../../Resources/Images/AddusersToGgroup.png" alt="Viewing the endpoint to add users to a group." /></p>
+        <p><b>Q9: How do I get the list of Business Units a group has access to?</b></p>
+        <p><b>A9:</b> To get the list of Business Units a group has access to, use the <b>Get group details</b> endpoint and provide the group’s <b>CWGuid</b>. The response will include all the Business Units the group currently has access to.</p>
+        <p><b>Q10. Can I assign Groups to Business Units using APIs?</b></p>
+        <p><b>A10.</b> Yes, you can assign or unassign groups from Business Units during group creation or by using the update endpoint.</p>
+        <p><b>Create a group</b></p>
+        <p>Provide a list of Business Unit Shortnames in the request, specifying which Business Units the group should have access to.</p>
+        <p><b>Update group details</b></p>
+        <p>You can either assign the group to new Business Units or remove them from existing ones.</p>
+        <ul>
+            <li>
+                <p>To assign the group to a BU: Include all BUs the group should have access to, including previously assigned ones.</p>
+            </li>
+            <li>
+                <p>To remove access from a BU: Include only the BUs the group should retain access to. Any BU not in the list will be removed from the group’s access.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note:</b> All users in the group will inherit access to the Business Units assigned to the group.</p>
+        <p class="note inline"><img src="../../Resources/Images/UpdateGroupDetails.png" alt="Updating user group details." /></p>
+        <h3>Roles and permissions</h3>
+        <p style="font-weight: bold;">Q11: How do I assign roles to users and groups for entities and engagements?</p>
+        <p><b>A11.</b> First, retrieve the list of available roles and their GUIDs using the Get Role List API.</p>
+        <p><b>Assign roles to a user</b></p>
+        <p>To assign roles to a user:</p>
+        <ul>
+            <li>
+                <p>Provide the CWGuid of the user, the roles to be assigned or removed, and the object details:</p>
+                <ul>
+                    <li>
+                        <p>If the role is system-wide (applicable to the entire system), no additional details are required.</p>
+                    </li>
+                    <li>
+                        <p>If the role is specific to an entity or engagement, provide the object type (e.g., entity or engagement) and the CWGuids of those objects.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b>Assign roles to a group</b></p>
+        <p>To assign roles to a group:</p>
+        <ul>
+            <li>
+                <p>Provide the CWGuid of the group, the roles (GUIDs) to be assigned or removed, and the object details:</p>
+                <ul>
+                    <li>
+                        <p>If the role is system-wide, no additional parameters are needed.</p>
+                    </li>
+                    <li>
+                        <p>If the role is specific to an entity or engagement, provide the object type and the relevant CWGuids for those objects.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note for Business Unit (BU) firms:</b> Using <b>CWGuids</b> for role assignments improves efficiency for BU firms by enabling seamless management of role assignments across <b>entities</b> and <b>engagements</b> across different Business Units.</p>
+        <h3>Engagements</h3>
+        <p style="font-weight: bold;">Q12: Have there been any changes to the Engagement APIs?</p>
+        <p><b>A12:</b> The Get Engagement APIs have not changed from V1 to V2 and continue to function as they did previously. The request parameters still use IDs, just like in V1. However, if you have existing integrations for Engagements using V1, you will still need to migrate to V2 to ensure continued support as V1 will eventually be deprecated.</p>
+        <p>BU Specific Question</p>
+        <p><b>Q13: What is a BU Shortname?</b></p>
+        <p><b>A13:</b> Each <b>Business Unit (BU)</b> has several attributes: a <b>URL</b>, a <b>BU Name</b>, a <b>Display Name</b>, and a <b>BU Shortname</b>. While the <b>BU Name</b> and <b>Display Name</b> can be non-unique, the <b>BU Shortname</b> is globally unique, which is why it is used as the identifier for BUs.</p>
+        <p>The BU Shortname is derived from the BU’s URL suffix and is part of the caseware domain. It can be easily retrieved from the BU URL.</p>
+        <p><b>BU attributes described</b></p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;">BU URL (non-editable)</td>
+                    <td style="font-weight: bold;">Name</td>
+                    <td style="font-weight: bold;">Display Label</td>
+                    <td style="font-weight: bold;">Shortname</td>
+                </tr>
+                <tr>
+                    <td>ca.caseware.ca/test-site</td>
+                    <td>Test Site</td>
+                    <td>Office-NY</td>
+                    <td>test-site</td>
+                </tr>
+                <tr>
+                    <td>us.caseware.com/company-1-a-b</td>
+                    <td>Company 1</td>
+                    <td>Office 1 (A to B)</td>
+                    <td>company-1-a-b</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note inline"><b>Important Note:</b> Currently, there is no API available to retrieve the list of BUs and their Shortnames. You can view the list of all BUs by logging into the cloud site and navigating to Settings | Business Units.</p>
+        <p><b>Q14: Which BU should I use to call APIs for managing other BUs?</b></p>
+        <p><b>A14:</b> We recommend using the Admin Business Unit (BU) URL to set up your API integrations and manage data across other BUs. The Admin BU serves as the central hub for managing multiple BUs, in line with how we suggest handling administrative tasks through the UI.</p>
+        <p>Just as we advise admins to manage staff, groups, and other objects from the Admin BU in the user interface, using the Admin BU for your API calls ensures consistency and simplifies administration. This approach helps you maintain better control and visibility when managing data across multiple BUs.</p>
+        <p> </p>
+        <p> </p>
+    </body>
+</html>

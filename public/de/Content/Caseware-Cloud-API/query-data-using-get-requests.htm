@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Query syntax in GET requests</h1>
+        <p>You can filter for the objects you want to retrieve by specifying a query as the value of the <code>search</code> query parameter in GET requests. Results are returned as a page of objects in a response message.</p>
+        <p>Several pages of results may be available, but the page that is returned is the one you request using the <code>page</code> query parameter. If you want the next page, you must make another request and increment the page number. Set the <code>pageSize</code> query parameter to the number of objects you want returned in the response message.</p>
+        <p>The query syntax for the <code>search</code> parameter in any GET request using the Caseware Cloud API is the following:</p>
+        <p><code>&lt;fieldName&gt;&lt;operator&gt;&lt;fieldValue&gt;</code></p>
+        <p>Leaving the query blank will return all the objects in the list.</p>
+        <p><strong><code>&lt;fieldName&gt;</code></strong> is the name of the top-level field you wish to operate on.</p>
+        <p class="note inline"><b>Note:</b> Not all fieldNames are valid. The field must be a primitive data type such as text, numbers, Booleans and dates. Complex data types such as collections or objects are not searchable.</p>
+        <p class="tip"><b>Tipp:</b> Most of the fields (or query parameters) that can be used to form queries (specified as the value of the <code>search</code> query parameter) are described in the request body schema in the POST Create operation for the object you are querying. For example, if you are querying entities, see the POST Create operation for entities:</p>
+        <p>
+            <div><code><p>https://{region}.casewarecloud.com/{firm}/sdk/{version-number}/caseware-cloud#tag/Entities/operation/createEntity</p></code></div>
+        </p>
+        <p><img src="../Resources/Images/Post-Operation.png" alt="Viewing the response body schema in the POST Create operation for entities. " /></p>
+        <h3>Supported relational operators</h3>
+        <p><strong><code>&lt;operator&gt;</code></strong> can be any of the following:</p>
+        <ul>
+            <li>= (equal)</li>
+            <li>&lt; (less than)</li>
+            <li>&gt; (greater than)</li>
+            <li>&lt;&gt; (not equal)</li>
+        </ul>
+        <p><strong><code>&lt;fieldValue&gt;</code></strong> can be any scalar value, that is, any single value:</p>
+        <p>For <strong>text</strong>, that is, any field whose data type is String, you must specify the value within single quotation marks:</p>
+        <p><code>fieldName=&apos;test&apos;</code></p>
+        <p>For fields whose data type contains special characters such as ‘ or \ must use an escape character (\) in the search query:</p>
+        <p><code>fieldName=&apos;randomText\’s randomText&apos;</code></p>
+        <p>For fields whose data type is <strong>number,</strong> specify the numeric value without quotation marks:</p>
+        <p><code>fieldName=123</code></p>
+        <p>For fields whose data type is <strong>Boolean</strong>,<strong></strong>specify either true or false:</p>
+        <p><code>fieldName=true</code></p>
+        <p>For fields whose data type is <strong>date</strong>, the date must follow this ISO format:</p>
+        <p><code>fieldName=&apos;YYYY-MM-DDTHH:MM:SS:Z&apos;</code></p>
+        <h3>Supported logical operators</h3>
+        <p>To help filter your results, you can combine two or more filter statements with the logical operators AND or OR. The AND operator takes precedence over OR. You must specify a space before and after the operator:</p>
+        <p><code>&lt;fieldName&gt;&lt;operator&gt;&lt;fieldValue&gt; AND &lt;fieldName&gt;&lt;operator&gt;&lt;fieldValue&gt;</code></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Beschreibung</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">AND</td>
+                    <td>Join two or more filter statements by the AND operator.</td>
+                    <td><code>countryCode=&apos;CA&apos; AND modifyDate&gt;&apos;2022-01-01&apos;</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">OR</td>
+                    <td>Join two or more filter statements by the OR operator.</td>
+                    <td><code>countryCode=&apos;US&apos; OR countryCode=&apos;CA&apos;</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="You can post a number of different entries to your trial balance. Options include adjusting entries, reclassifying entries, uncorrected entries, and tax entries, which are all accessible from the Adjustment menu." />
+    </head>
+    <body>
+        <h1>Abschlussbuchungen in Hauptabschlussübersicht vornehmen</h1>
+        <p>Sie können Abschlussbuchungen zur Hauptabschlussübersicht oder zu Gruppen hinzufügen.</p>
+        <h2><a name="Post"></a>Abschlussbuchungen in Hauptabschlussübersicht vornehmen (Seite Daten)</h2>
+        <p>Sie können Abschlussbuchungen für Konten oder Gruppen vornehmen und eine Beschreibung des Eintrags hinzufügen sowie eine <a href="../Documentation-and-Review/Add-annotations.htm#Annotate3">Referenz</a>.</p>
+        <p style="font-weight: bold;">Eine Abschlussbuchung erstellen:</p>
+        <ol>
+            <li>
+                <p>Gehen Sie auf die Seite <b>Daten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Konten</b> aus dem linken Bereich.</p>
+            </li>
+            <p>Sie können Buchungen auch in der Ansicht <b>STANDARDPOSITIONEN</b> hinzufügen.</p>
+            <p class="note inline"><b>Hinweis:</b> Sie können auch <b>TAX GROUPS</b> und <b>PRESCRIBED GROUPS</b> wählen, wenn diese in Ihrem Produkt aktiviert sind.</p>
+            <li>
+                <p>Klicken Sie auf <b>Hinzufügen</b> (<img src="../../Resources/Icons/add-button-data-page.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Buchung hinzufügen</b>.</p>
+            </li>
+            <li>
+                <p>Geben Sie im Dialog die Details zur Abschlussbuchung ein.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Geben Sie die <b>Buchungsnummer</b> ein.</p>
+                    </li>
+                    <p class="note inline"><b>Hinweis:</b> Wenn es sich nicht um die erste Buchung handelt, wird die zuletzt eingegebene Buchungsnummer hochgezählt und im Feld <b>Buchungsnummer</b> angezeigt. Handelt es sich um die erste Buchung, wird im Feld <i>1</i> als Standardbuchungsnummer angezeigt. Sie können den Standard überschreiben.</p>
+                    <li>
+                        <p>Wählen Sie einen <b>Typ</b> für die Buchung ein.</p>
+                    </li>
+                    <p class="note inline"><b>Hinweis:</b> Die verfügbaren Buchungstypen in der Drop-down-Listen basieren auf Ihrem Produkt-Setup.</p>
+                    <li>
+                        <p>Geben Sie eine Beschreibung für die Buchung ein.</p>
+                    </li>
+                    <li>
+                        <p>Bei <b>Details</b> wählen Sie <b>+ Kontozeile</b>, um eine Buchung für ein Konto vorzunehmen oder <b>+ Gruppenzeile</b>, wenn die Buchung für eine Gruppe erstellt werden soll.</p>
+                        <p class="tip"><b>Tipp:</b> Sie können ein Konto erstellen, während Sie seine Zeilen hinzufügen, indem Sie auf die Schaltfläche <b>Konto hinzufügen</b> klicken.</p>
+                        <p><img src="../../Resources/Images/add-account-in-adjustments2.png" alt="Fügen Sie ein Konto hinzu, während Sie die Anpassungszeilen eingeben." /></p>
+                        <p>Sind mehrere Gruppierungsstrukturen in Ihrem Produkt aktiviert und Sie fügen eine Gruppenzeilenbuchung hinzu, können Sie die passende Gruppierungsstruktur aus der Drop-down-Liste wählen. Die Buchung wird nur dieser Gruppierungsstruktur zugewiesen und nicht verknüpften Gruppen in anderen Gruppierungsstrukturen.</p>
+                        <p>Handelt es sich bei dem Engagement um ein konsolidiertes Engagement und Sie wählen</p>
+                        <ul>
+                            <li>eine Kontozeilenbuchung, wird im Dialog eine Liste der Konten von Mutter- und Tochtergesellschaften angezeigt.</li>
+                            <li>eine Gruppenzeilenbuchung, wird eine Liste der übergeordneten Einheitengruppen im Dialog angezeigt.</li>
+                            <p>Bitte beachten Sie: Handelt es sich um den Buchungstyp <i>Konsolidierung</i>, können Sie die Buchung auch für eine Tochtergruppe durchführen. Wählen Sie den Namen der Einheit, um eine Liste der verfügbaren Einheiten (Mutter- und alle Tochtergesellschaften) anzuzeigen. Weitere Informationen zu Buchungstypen finden Sie in <a href="#Common">Häufige Buchungstypen</a>.</p>
+                        </ul>
+                        <p><img src="../../Resources/Images/eliminiating-adj-parent-and-subsidiary.PNG" alt="Abschlussbuchungen für eine Tochtergesellschaftsgruppe unter Konsolidierungsbuchungen vornehmen." /></p>
+                    </li>
+                    <li>
+                        <p>Wählen Sie ein Konto oder eine Gruppe und geben Sie den Buchungsbetrag ein. Wenn Sie eine Berechnung für den Buchungsbetrag eingeben möchten, wählen Sie <b>fx</b> im Feld <b>Betrag</b> und geben Sie die Berechnung ein. To learn more, see the <a href="#Calculat">Calculated adjustments</a> section.</p>
+                        <p class="note"><b>Bitte beachten Sie:</b> Wenn Sie eine Gruppe auswählen und Dimensionen in Ihrem Produkt aktiviert sind, können Sie auch Dimensionen auswählen, die der Anpassung zugewiesen werden sollen. Sie können für jede Dimensionskategorie, die der Gruppe zugeordnet ist, eine Dimension auswählen.</p>
+                    </li>
+                    <li>
+                        <p>Schließen Sie die Buchung ab, indem Sie <b>+ Kontozeile</b> oder <b>+ Gruppenzeile</b> wählen, um ein weiteres Konto oder eine weitere Gruppe hinzuzufügen, um die Buchung auszugleichen.</p>
+                    </li>
+                    <li>
+                        <p>Klicken Sie auf <b>Speichern</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Ihre Abschlussbuchung wird auf das Konto oder die Gruppe gebucht. Die Daten werden sofort mit den neuen Werten aktualisiert. You can view your adjustment on the <b>Adjustments</b> page, and apply filters if required.</p>
+        <p>Sie können eine Abschlussbuchung auch erstellen, indem Sie <b>Duplicate (Duplizieren)</b> für eine vorhandene Buchung wählen, um eine Kopie zu erstellen.</p>
+        <p>Wenn Sie eine Abschlussbuchung duplizieren, hat die neue Buchung denselben Typ, dieselbe Beschreibung und dieselben Kontodetails wie die ursprüngliche Abschlussbuchung. Duplizierte Buchungen werden standardmäßig auf das aktuelle Jahr festgelegt, auch wenn die ursprüngliche Abschlussbuchung für das Vorjahr erfolgt.</p>
+        <p>Note that any annotations, issues or signoffs associated with the adjustment are not copied.</p>
+        <h2><a name="Calculat"></a>Calculated adjustments</h2>
+        <p>When you enter the adjustment amount, you can select <b>fx</b> to enter a calculation for the amount. You can reference other accounts and groups in the calculation, which allows you to create an adjustment that can be easily updated if the referenced account or group balance changes.</p>
+        <p>If a calculated adjustment contains a reference whose balance has changed, the <b>Recalculate</b> button displays next to the adjustment on the <b>Adjustments</b> page. You can also easily recalculate multiple adjustments at once, by selecting the <b>Recalculate all</b> button at the top of the page.</p>
+        <p><img src="../../Resources/Images/adjustments-page-recalculate.png" alt="The Adjustments page displaying an adjustment that requires recalculation." /></p>
+        <p>When you create calculated adjustments, you must avoid creating circular dependencies. To do this, ensure you do not reference parent groups and accounts or groups whose final balance is also dependent on calculated adjustments.</p>
+        <p>For example, if you make an adjustment to the <i>Petty Cash</i> account and reference its parent group, <i>Cash and cash equivalents</i>, in the calculation, you will create a circular dependency. When the adjustment is calculated and applied to the <i>Petty Cash</i> account, the balance of the parent group will also change. This will result in the <b>Recalculate</b> button displaying for the adjustment. If you select to recalculate the adjustment, the parent group’s balance will again be updated and the adjustment will continue to require recalculation. This will result in inaccurate balances for both the account and the parent group.</p>
+        <p><img src="../../Resources/Images/calculated-adjustment-circular-dependency.png" alt="An example of a calculated adjustment with a circular dependency. This adjustment is to the Petty Cash group but the calculation uses its parent group, Cash and cash equivalents." /></p>
+        <p>Another example that could lead to a circular dependency is when you add a calculated adjustment to one group that uses an account balance from a second group, and then add another adjustment to the second group that uses the final balance of the first group.</p>
+        <p>For example, say you add an adjustment to the <i>Petty Cash</i> account and reference the <i>Short-term investments</i> group balance. Now, if you add a second adjustment to the <i>Short-term investments</i> group that references the final balance of the parent group of the <i>Petty Cash</i> account, <i>Cash and cash equivalents</i>, you will create a circular dependency.</p>
+        <p>If the <i>Short-term investments</i> balance changes, the adjustment for the <i>Petty Cash</i> account will require recalculation. This will result in the final balance of the <i>Cash and cash equivalents</i> group changing, which means the adjustment for the <i>Short-term investments</i> group will also require recalculation. Once this adjustment is recalculated, the first adjustment will again require recalculation and so on.</p>
+        <h2><a name="Common"></a>Häufige Buchungstypen</h2>
+        <p>Zu den Buchungstypen gehören Nachbuchungen, Umgliederungen, Tatsächliche Fehler und Steuerbilanz. Hier finden Sie einige Beispiele für die gängigsten Buchungstypen und eine kurze Beschreibung.</p>
+        <ul>
+            <li>
+                <p><b>Nachbuchung</b>: Verwenden Sie diese Option, um alle relevanten automatischen Dokumente wie Journale, Hauptbücher, Salden, Jahresabschlüssen und Leadsheets zu aktualisieren. Bei der Aktualisierung von einer Periode auf eine andere, einschließlich eines Jahresabschlusses, werden diese Einträge von der Buchungsspalte in die Eröffnungs- oder vorläufige Bilanzspalte der Hauptabschlussübersicht- und Leadsheet-Dokumente übertragen</p>
+            </li>
+            <li>
+                <p><b>Umgliederung</b>: Diese werden nicht in den normalen Buchführungsunterlagen erfasst. Sie werden jedoch in allen Jahresabschlüssen und Arbeitspapieren wie Leadsheets erfasst. Wenn sie in einer anderen Periode als der letzten Periode des Geschäftsjahres vorgenommen werden, werden Umgliederungsbuchungen aus den Buchführungsunterlagen ausgeschlossen In diesem Fall müssen die Buchungen für nicht konsolidierte Salden nicht rückgängig gemacht werden.</p>
+                <p>Umgliederungsbuchungen, die in der letzten Periode des Geschäftsjahres vorgenommen wurden, werden in die Eröffnungssalden des nächsten Jahres einbezogen, wenn während eines Jahresabschlusses eine der folgenden Entscheidungen getroffen wird. Eröffnungssalden des Folgejahres aktualisieren mit: Konsolidiert oder Bericht Diese Umgliederungsbuchungen müssen dann rückgängig gemacht werden</p>
+            </li>
+            <li>
+                <p><b>Konsolidierung</b>: Zur Vorbereitung von Zusammenschlüssen oder Konsolidierungen von Abteilungen oder Unternehmen. Diese Einträge erscheinen in konsolidierten Bilanzen, Leadsheets und Jahresabschlussdokumenten.</p>
+            </li>
+            <li>
+                <p><b>Tatsächlicher Fehler - nicht gebucht</b>: Dabei handelt es sich um sachliche Falschaussagen, die aufgrund der Wesentlichkeit nicht erfasst werden, oder um vorgeschlagene Einträge, die nachträglich in den Normalzustand geändert werden können. Diese Einträge erscheinen im Dokument „Zusammenfassung nicht korrigierter falscher Angaben“.</p>
+            </li>
+            <li>
+                <p><b>Schätzung - nicht gebucht</b>: Hierbei handelt es sich um prognostizierte Falschangaben, die nicht erfasst wurden, basierend auf den besten Schätzungen des Prüfers zu Falschangaben in Grundgesamtheiten, die in der Regel aus Stichproben abgeleitet werden. Diese Einträge erscheinen im Dokument „Zusammenfassung nicht korrigierter falscher Angaben“.</p>
+            </li>
+            <li>
+                <p><b>Beurteilungsbedingter Fehler - nicht gebucht</b>: Dabei handelt es sich um fehlerhafte Beurteilungen, die nicht erfasst werden und auf Differenzen beruhen, die sich aus den Beurteilungen des Managements in Bezug auf Rechnungslegungsschätzungen oder der Auswahl oder Anwendung von Rechnungslegungsgrundsätzen ergeben, die der Abschlussprüfer für unangemessen oder unangemessen hält Diese Einträge erscheinen im Dokument „Zusammenfassung nicht korrigierter falscher Angaben“.</p>
+            </li>
+            <li>
+                <p><b>Steuerbilanz</b>: Dieser Abschlussbuchungstyp setzt auf den Berichtssalden und nicht auf den Eröffnungssalden auf, wie es bei den oben genannten Buchungstypen der Fall ist. Neben einer HGB Bilanz kann somit auf einfache Weise eine Steuerbilanz erstellt werden. In den CaseWare Arbeitspapieren muss der Saldentyp lediglich auf Steuerbilanz umgestellt werden. Sie haben die Möglichkeit, über die AuditReport Vorlagen eine Steuerbilanz mit entsprechendem Bericht auszugeben.</p>
+            </li>
+            <li>
+                <p><b>DTA</b>: Dieser Buchungstyp ist für Deutschland nicht anzuwenden. - -</p>
+            </li>
+            <li>
+                <p><b>n/a</b>: Dieser Buchungstyp ist für Deutschland nicht anzuwenden. - -</p>
+            </li>
+        </ul>
+    </body>
+</html>

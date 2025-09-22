@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Mots-clés</h1>
+        <p>Le test analytique Mots-clés analyse les mots-clés donnés d&apos;un ou de plusieurs champs. Ces mots-clés peuvent être saisis manuellement, choisis dans une liste prédéfinie de mots-clés ou dérivés d&apos;une liste de termes produite à partir des champs sélectionnés.</p>
+        <p>Ce test comprend également un paramètre qui vous permet de choisir entre les correspondances exactes et les correspondances partielles lors de la recherche de mots-clés.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les transactions qui contiennent des estimations significatives</p>
+            </li>
+            <li>
+                <p>Les transactions fictives</p>
+            </li>
+            <li>
+                <p>Les transactions qui sont de nature complexe ou inhabituelle</p>
+            </li>
+            <li>
+                <p>Les transactions entre sociétés</p>
+            </li>
+            <li>
+                <p>Les transactions utilisées pour réconcilier les livres auxiliaires. Par exemple, vous pouvez rechercher les mots-clés « rapprocher le grand livre auxiliaire » ou « établir la balance du grand livre auxiliaire »</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ <b>ID de l’écriture</b> pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champs de mots-clés</b> – Les champs de caractères dans lesquels les mots-clés sélectionnés sont recherchés.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Les paramètres suivants doivent être définis pour exécuter ce test :</p>
+        <ul>
+            <li>
+                <p><b>Liste de mots-clés</b> – Une liste de mots-clés enregistrée dans un fichier texte.</p>
+            </li>
+            <li>
+                <p><b>Correspondance exacte</b> – Indiquez si les valeurs doivent correspondre exactement au mot-clé. Si vous ne choisissez pas de déterminer uniquement les correspondances exactes, les correspondances partielles sont également relevées.</p>
+            </li>
+            <li>
+                <p><b>Ignorer la casse</b> – Indiquez si les correspondances des mots-clés sont sensibles à la casse ou non</p>
+            </li>
+            <li>
+                <p><b>Créer une colonne de mots correspondants</b> – Créer une colonne supplémentaire qui répertorie les mots pour lesquels des correspondances ont été trouvées pour cette configuration.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p>La seule configuration possible pour ce test est la <b>recherche par mots-clés</b>.</p>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique des mots-clés, il faut réaliser les étapes suivantes :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un ou plusieurs champs de caractères ont été sélectionnés pour l&apos;analyse.</p>
+            </li>
+            <li>
+                <p>Obtenez la liste de mots, selon l&apos;interface, elle peut provenir de plusieurs sources ou d&apos;un mélange d&apos;une ou plusieurs sources :</p>
+                <ul>
+                    <li>
+                        <p>Une liste préprogrammée de mots-clés.</p>
+                    </li>
+                    <li>
+                        <p>Une liste de mots-clés téléversée par l&apos;utilisateur.</p>
+                    </li>
+                    <li>
+                        <p>L&apos;utilisateur saisit les mots-clés directement dans l&apos;interface.</p>
+                    </li>
+                    <li>
+                        <p>Une combinaison d&apos;un ou de plusieurs des éléments ci-dessus.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Permettez à l&apos;utilisateur d&apos;ajouter ou de supprimer des mots-clés de la liste, en particulier s&apos;ils proviennent de l&apos;étape 3a ou 3b.</p>
+            </li>
+            <li>
+                <p>Demandez si la correspondance est sensible à la casse ou non.</p>
+            </li>
+            <li>
+                <p>En fonction de la sélection des correspondances exactes ou partielles, effectuez la recherche des mots-clés à partir de l&apos;étape 3.</p>
+            </li>
+            <li>
+                <p>Si une colonne de mots-clés correspondants a été sélectionnée pour être ajoutée, seule une colonne est ajoutée, même si plusieurs colonnes ont été sélectionnées pour la recherche.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes fournisseurs – Factures décrites</h1>
+        <p>Lors de l&apos;importation de transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier source aux champs Caseware dans le type de jeu de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du livre auxiliaire Comptes fournisseurs-factures.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID de la transaction <br /><code>(ap_invoice_transaction_id</code>)</td>
+                    <td>
+                        <p>Une référence croisée à l&apos;écriture du grand livre (GL). Il peut contenir de nombreux niveaux différents pour identifier la transaction. Les exemples incluent les centres de coûts, tels que l&apos;entreprise, la division, la région, le groupe et la branche/le département.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année de facturation <br /><code>(ap_invoice_fiscal_year</code>)</td>
+                    <td>
+                        <p>L&apos;année fiscale dans laquelle se situe la <b>date de la facture</b> .</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Période de facturation<code>(ap_invoice_invoice_period</code>)</td>
+                    <td>
+                        <p>La période fiscale dans laquelle la <b>date de la facture</b> survient.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;échéance de la facture <br /><code>(ap_invoice_invoice_due_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle le paiement est dû au fournisseur. Toutes les transactions n&apos;ont pas de date d&apos;échéance, par exemple les notes de crédit.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant de la facture (<br /><code>ap_invoice_invoice_amount</code>)</td>
+                    <td>
+                        <p>Le montant monétaire de la transaction enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Déclaration du montant de la facture <br /><code>(ap_invoice_invoice_amount_reporting</code>)</td>
+                    <td>
+                        <p>Montant monétaire de la transaction enregistré dans la monnaie de présentation.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant de la facture locale <br /><code>(ap_invoice_invoice_amount_local</code>)</td>
+                    <td>
+                        <p>Montant de la transaction en monnaie locale.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description <br /><code>(ap_invoice_description</code>)</td>
+                    <td>
+                        <p>Description de la facture sous forme de texte libre.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot <br /><code>(ap_invoice_batch_id</code>)</td>
+                    <td>
+                        <p>Identifiant généré par le système pour le lot.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source ID <br /><code>(ap_invoice_source_id</code>)</td>
+                    <td>
+                        <p>Source d&apos;affichage. Le code de la source d&apos;où provient l&apos;écriture de journal, comme le journal des ventes, le journal des encaissements, le journal général, le journal des salaires, l&apos;écriture manuelle du comptable, la feuille de calcul, etc.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du fournisseur <br /><code>(ap_invoice_supplier_account_id</code>)</td>
+                    <td>
+                        <p>Identifiant du fournisseur à qui le paiement est dû ou à qui des crédits non utilisés ont été appliqués.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du fournisseur <br /><code>(nom_du_fournisseur_de_la_facture_applicable</code>)</td>
+                    <td>
+                        <p>Le nom du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Conditions de facturation Pourcentage de réduction <br /><code>(ap_invoice_terms_discount_percentage</code>)</td>
+                    <td>
+                        <p>Pourcentage d&apos;escompte que le fournisseur peut accorder si une facture est payée avant un certain nombre de jours.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Conditions de facturation Jours d&apos;escompte <br /><code>(ap_invoice_terms_discount_days</code>)</td>
+                    <td>
+                        <p>Nombre de jours à partir de la date de la facture que le fournisseur accorde pour bénéficier de conditions d&apos;escompte.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Durée de la facture Jours d&apos;échéance <br /><code>(ap_invoice_terms_due_days</code>)</td>
+                    <td>
+                        <p>Le nombre de jours accordés pour satisfaire à l&apos;obligation avant qu&apos;une facture ne devienne impayée.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de la facture <br /><code>(numéro de facture ap_invoice_invoice_number</code>)</td>
+                    <td>
+                        <p>Numéro d&apos;identification d&apos;une facture générée en externe.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la facture <br /><code>(ap_invoice_invoice_date</code>)</td>
+                    <td>
+                        <p>La date de la facture, quelle que soit la date de saisie de la facture. Il s&apos;agit de la date à partir de laquelle la date d&apos;échéance est calculée sur la base des conditions de la facture.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Troisième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(code ap_invoice_business_unit</code>)</td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entré par <br /><code>(ap_invoice_entered_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de saisie <br /><code>(ap_invoice_entered_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la transaction a été introduite dans le système source. Cette date est parfois appelée date de création.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure d&apos;entrée <br /><code>(ap_invoice_entered_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par <br /><code>(ap_invoice_approved_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a approuvé l&apos;entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation <br /><code>(ap_invoice_approved_by_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Période approuvée <br /><code>(ap_invoice_approved_by_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification <br /><code>(ap_invoice_last_modified_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la dernière modification <br /><code>(ap_invoice_last_modified_date</code>)</td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification <br /><code>(ap_invoice_last_modified_time</code>)</td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du bon de commande <br /><code>(ap_invoice_purchase_order_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique de chaque commande.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - ID du produit <br /><code>(ap_invoice_line_product_code</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique de chaque produit acheté. Cet identifiant peut être créé en concaténant des champs tels que l&apos;unité commerciale, le numéro de produit, l&apos;année, etc. pour identifier chaque produit de manière unique.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - Description du produit <br /><code>(ap_invoice_line_product_description</code>)</td>
+                    <td>
+                        <p>La description du produit en langage clair, indiquant le nom ou d&apos;autres caractéristiques d&apos;identification du produit.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Devise de la facture <br /><code>(ap_invoice_invoice_amount_currency</code>)</td>
+                    <td>
+                        <p>La devise fonctionnelle ou de groupe liée au montant de la facture.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Déclaration de la devise de la facture <br /><code>(ap_invoice_invoice_reporting_currency</code>)</td>
+                    <td>
+                        <p>La devise de déclaration liée au montant de la facture pour les déclarations non consolidées.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Devise de facturation locale <br /><code>(ap_invoice_invoice_local_currency</code>)</td>
+                    <td>
+                        <p>La devise pour les exigences locales en matière de déclaration.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type d&apos;impôt <br />(<code>ap_invoice_tax1_type</code>)</td>
+                    <td>
+                        <p>Code du type de taxe. Les exemples incluent les ventes, la TVA.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description de l&apos;impôt <br />(<code>ap_invoice_tax1_type_description</code>)</td>
+                    <td>
+                        <p>Description du <b>type de taxe</b>. Par exemple, l&apos;autorité à laquelle la taxe est payée et d&apos;autres informations permettant d&apos;identifier le type de taxe.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant de l&apos;impôt <br />(<code>ap_invoice_tax1_local</code>)</td>
+                    <td>
+                        <p>Le montant de la taxe indiqué dans Type de taxe qui est inclus dans la transaction. Enregistré dans la monnaie locale.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code officiel de la facture <br /><code>(ap_invoice_official_invoice_code</code>)</td>
+                    <td>
+                        <p>Le code officiel unique de la facture, qui est généralement généré par les autorités fiscales.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Obligatoire : non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - ID du compte <br /><code>(ap_invoice_line_account_id</code>)</td>
+                    <td>
+                        <p>Code du compte de recettes du grand livre général (GL). Ce code peut contenir un identifiant de sous-compte, ainsi que de nombreux niveaux différents pour identifier le compte, y compris les centres de coûts, tels que l&apos;entreprise, la division, la région, le groupe et la succursale/le département.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - Description du compte <br /><code>(ap_invoice_line_account_description</code>)</td>
+                    <td>
+                        <p>La description du compte dont l&apos;identifiant apparaît dans <b>Détail de la ligne - ID du compte.</b></p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

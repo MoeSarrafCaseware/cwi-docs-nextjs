@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Data links (<img src="../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) allow you to have engagement information and properties retrieved and inserted in text fields.</p>
+        <p>You can add the following data links:</p>
+        <ul>
+            <li>
+                <p><b>Engagement-Eigenschaften</b></p>
+            </li>
+            <p>Retrieves and inserts information from the Engagement Properties dialog and entity properties.</p>
+            <p>The following image shows the Engagement Properties dialog. To open this dialog, select the engagement title at the top.</p>
+            <p><img src="../Images/engagement-properties-dialog.PNG" alt="Engagement Properties dialog" /></p>
+            <p>The following image shows the entity properties. To view the entity properties, go to the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Entities</b>. Locate the desired entity and select it.</p>
+            <p><img src="../Images/entity-properties.PNG" alt="Entity properties" /></p>
+            <p>If the value of the property is available (that is, it is not blank), it displays in the Data Link dialog so you can preview what will be inserted in the text field.</p>
+            <p><img src="../Images/data-link-values-dispay-in-dialog.PNG" alt="Data Link shows the values of each property - if it is available." /></p>
+            <p>Engagement Properties data links include:<ul style="list-style-type: circle;"><li><p>Operating name</p><p>This is the <b>Operating Name</b> field entered by users in the Create Entity dialog (when they create the entity). If users update the operating name in the Engagement Properties dialog, the data link retrieves this value.</p><p>Beispiel: Users create an entity with an operating name <i>GreenLight Inc.</i>. After they create the first engagement, they update the entity operating name in the Engagement Properties dialog to <i>GreenLight Holding</i>. If they insert a data link (fx) and select Operating Name, then <i>GreenLight Holding</i> is inserted in the text field.</p></li><li><p>Legal name</p><p>This is the <b>Name</b> field entered by users in the Create Entity dialog (when they create the entity).</p></li><li><p>Jahresabschlussdatum</p><p>This is the <b>Year end date</b> field in the Engagement Properties dialog. If users change the period or the dates then attempt to add a data link, the latest date is retrieved.</p></li><li><p>Startdatum des Jahres</p><p>This is the <b>Year start date</b> field in the Engagement Properties dialog. If users change the period or the dates then attempt to add this data link, the latest date is retrieved.</p></li><li><p>Current Year</p><p>Retrieves the year in the <b>Year end date</b> field in the Engagement Properties dialog. If users change the period or the dates then attempt to add this data link, the latest year is retrieved.</p></li><li><p>Website</p><p>Retrieves the <b>Website</b> field in the entity properties that users enter in the <b>General Info</b> | <b>Social Profile</b> tab. If users update the website, then attempt to add this data link, the latest entry is retrieved.</p></li><li><p>Prior Year</p><p>Retrieves the year in the <b>Year end date</b> field in the Engagement Properties dialog and subtract one (that is, year end date - 1). If users change the period or the dates then attempt to add this data link, the prior year value is re-calculated.</p></li><li><p>Currency code</p><p>Retrieves the currency code from the <b>Currency</b> field in the Engagement Properties dialog. If users update the selected currency in the Engagement Properties, the latest selected currency code is retrieved.</p></li><li><p>Currency name</p><p>Retrieves the currency name from the <b>Currency</b> field in the Engagement Properties dialog. If users update the selected currency in the Engagement Properties, the latest selected currency name is retrieved.</p></li><li><p>Currency symbol</p><p>Retrieves the currency symbol from the <b>Currency</b> field in the Engagement Properties dialog. If users update the selected currency in the Engagement Properties, the latest selected currency symbol is retrieved.</p></li><li><p>Entity address</p><p>Retrieves the values in the <b>Addresses</b> section in the entity properties.</p></li></ul></p>
+            <li>
+                <p style="font-weight: bold;">Hauptabschlussübersicht</p>
+                <p>Items in the trial balance in the engagement, such as: account name, grouping name, or values from the current or prior year. A <b>Display opposite sign</b> checkbox to display account balance in opposite (balance). If multiple financial grouping structures are enabled in your product, you can filter for accounts and groups by grouping structure. If dimensions are enabled in your product, you can filter for accounts and groups by dimension.</p>
+                <p>If the engagement is consolidated, you can choose whether to use data from the parent entity or a subsidiary, as well as whether to use the consolidated or non-consolidated value for the account or group. You can also select to use the default value based on whether the document is set to use consolidated or non-consolidated data.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Firm properties</p>
+                <p>Firm properties as defined in Cloud:</p>
+                <ul style="list-style-type: circle;">
+                    <li>Firm name</li>
+                    <li>Firm address</li>
+                </ul>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Responses</p>
+                <p>Responses to procedures from checklists. Once you select a checklist document from the list, select the response you want to retrieve and insert in the text section.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Wesentlichkeit</p>
+                <p>Values defines in the <a href="../../SE-Authoring/Set-up-the-Materiality-document.htm">Materiality</a> document.</p>
+            </li>
+            <li>
+                <p><b>Engagement Glossary</b></p>
+                <p>Add a term from the <a href="../../SE-Authoring/What's-the-engagement-glossary.htm">engagement glossary</a>.</p>
+                <p>See <a href="#To_add_an_Engagement_Glossary_term:">Add an Engagement Glossary term</a>.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Dynamic text</p>
+                <p>Dynamic text is conditional text. It&apos;s a field where different text displays based on a condition or a set of conditions.</p>
+                <p>See <span><a href="#To_add_dynamic_text:">Add dynamic text.</a></span></p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Forms Value</p>
+                <p>Insert the value of a specific form field. Once you select a form and a field, the value of the selected field is inserted in the text field.</p>
+                <p class="note inline"><b>Hinweis:</b> This option is only available in the Data Link dialog if you have developed forms using SE Builder in your product. To learn more, see <a href="../../SE-Authoring/Develop-custom-forms.htm">Develop custom forms.</a></p>
+            </li>
+        </ul>
+    </body>
+</html>

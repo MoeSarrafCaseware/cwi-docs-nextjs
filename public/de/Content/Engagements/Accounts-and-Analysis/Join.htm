@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Join</h1>
+        <p>Diese Analyse kombiniert zwei getrennte Datensätze zu einem einheitlichen Datensatz. Dieser Test ist nützlich, wenn Sie zwei Datensätze kombinieren müssen, weil ein Datensatz Stammdaten enthält, die die Erkenntnisse bereichern, die Sie aus dem zweiten Transaktionsdatensatz ableiten können. Mit diesem Test können Sie zum Beispiel Lieferanten ohne Transaktionen ermitteln.</p>
+        <p>Beachten Sie, dass die beiden via Join zu verbindenden Datensätze als Datensatz A (die Primärdatei) und Datensatz B (die Sekundärdatei) bezeichnet werden.</p>
+        <p>Dieser Test unterstützt die folgenden Joins:</p>
+        <ul>
+            <li>
+                <p>Inner Join (Behält nur die Zeilen bei, die in beiden Datensätzen A und B übereinstimmen)</p>
+            </li>
+            <li>
+                <p>Outer Join (Behält alle Zeilen bei, die entweder in Datensatz A oder B oder in beiden übereinstimmen)</p>
+            </li>
+            <li>
+                <p>Left Outer Join (behält alle Zeilen aus Datensatz A und die passenden Zeilen aus B)</p>
+            </li>
+            <li>
+                <p>Right Outer Join (behält alle Zeilen aus Datensatz B und die passenden Zeilen aus A)</p>
+            </li>
+            <li>
+                <p>Datensätze ohne sekundäre Übereinstimmung</p>
+            </li>
+            <li>
+                <p>Datensätze ohne primäre Übereinstimmung</p>
+            </li>
+        </ul>
+        <p>Diese Analyse kann für Folgendes verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Überprüfung, ob alle Lieferantentransaktionen korrekt gebucht sind. Eine Lieferantenstammdatendatei stellt sicher, dass alle Lieferanten dokumentiert sind, wodurch das Risiko fehlender Transaktionen verringert wird.</p>
+            </li>
+            <li>
+                <p>Bestätigen Sie, dass die Lieferanteninformationen korrekt sind. Auf diese Weise wird sichergestellt, dass die Zahlungen an rechtmäßige Lieferanten erfolgen und dass Fehler in den Lieferanteninformationen auf ein Minimum reduziert werden.</p>
+            </li>
+            <li>
+                <p>Für die Einhaltung der Vorschriften ist es von entscheidender Bedeutung, dass die Lieferantenstammdaten in Übereinstimmung mit den gesetzlichen Bestimmungen und den Unternehmensrichtlinien gepflegt werden. Prüfer überprüfen die Einhaltung der einschlägigen Gesetze, Vorschriften und internen Richtlinien.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <p><b>Kernspalte(n)</b>:</p>
+        <ul>
+            <li>
+                <p>Primäre Datei:</p>
+                <ul>
+                    <li>
+                        <p>Ein oder mehrere Felder, die für die Übereinstimmung verwendet werden</p>
+                    </li>
+                    <li>
+                        <p>Ein oder mehrere Felder, die in das verbundene Ergebnis aufgenommen werden sollen.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sekundäre Datei:</p>
+                <ul>
+                    <li>
+                        <p>Ein oder mehrere Felder, die für die Übereinstimmung verwendet werden.</p>
+                    </li>
+                    <li>
+                        <p>Ein oder mehrere Felder, die in das verbundene Ergebnis aufgenommen werden sollen.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Für die beiden Join-Felder muss außerdem angegeben werden, ob der Join in aufsteigender oder absteigender Reihenfolge durchgeführt werden soll. Die Felder der Primär- und Sekundärdateien müssen übereinstimmen, da sie als Schlüssel für die Verknüpfung verwendet werden.</p>
+        <h2>Parameter</h2>
+        <p>Ein Parameter muss gesetzt werden, um den Test durchzuführen:</p>
+        <p><b>Join Type</b>:</p>
+        <ul>
+            <li>
+                <p><b>Inner Join</b> (Behält nur die Zeilen bei, die in beiden Datensätzen A und B übereinstimmen)</p>
+            </li>
+            <li>
+                <p><b>Outer Join</b> (Behält alle Zeilen bei, die entweder in Datensatz A oder B oder in beiden übereinstimmen)</p>
+            </li>
+            <li>
+                <p><b>Left Outer Join</b> (behält alle Zeilen aus Datensatz A und die passenden Zeilen aus B)</p>
+            </li>
+            <li>
+                <p><b>Right Outer Join</b> (behält alle Zeilen aus Datensatz B und die passenden Zeilen aus A)</p>
+            </li>
+            <li>
+                <p><b>Datensätze ohne sekundäre Übereinstimmung</b></p>
+            </li>
+            <li>
+                <p><b>Datensätze ohne primäre Übereinstimmung</b></p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p>Die einzige Konfiguration, die für diesen Test zur Verfügung steht, ist die <b>Schlüsselwortsuche</b>.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analysefunktion Duplikate ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Ermitteln Sie, ob es sich um ein Endergebnis oder ein Zwischenergebnis handelt.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie die Art der Verbindung aus den folgenden Typen:</p>
+                <ul>
+                    <li>
+                        <p>Inner Join (Behält nur die Zeilen bei, die in beiden Datensätzen A und B übereinstimmen)</p>
+                    </li>
+                    <li>
+                        <p>Outer Join (Behält alle Zeilen bei, die entweder in Datensatz A oder B oder in beiden übereinstimmen)</p>
+                    </li>
+                    <li>
+                        <p>Left Outer Join (behält alle Zeilen aus Datensatz A und die passenden Zeilen aus B)</p>
+                    </li>
+                    <li>
+                        <p>Right Outer Join (behält alle Zeilen aus Datensatz B und die passenden Zeilen aus A)</p>
+                    </li>
+                    <li>
+                        <p>Datensätze ohne sekundäre Übereinstimmung</p>
+                    </li>
+                    <li>
+                        <p>Datensätze ohne primäre Übereinstimmung</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Die primäre Datei:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Ermitteln Sie das/die übereinstimmende(n) Feld(er)</p>
+                    </li>
+                    <li>
+                        <p>Ermitteln Sie die Liste der Felder, die im Ergebnis enthalten sein werden</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Die sekundäre Datei:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Ermitteln Sie das/die übereinstimmende(n) Feld(er)</p>
+                    </li>
+                    <li>
+                        <p>Ermitteln Sie die Liste der Felder, die im Ergebnis enthalten sein werden</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Ermitteln Sie, ob die Treffer in aufsteigender oder absteigender Reihenfolge oder in einer Mischung vorliegen.</p>
+            </li>
+            <li>
+                <p>Führen Sie den richtigen Join basierend auf den Benutzerauswahlen durch.</p>
+            </li>
+        </ol>
+    </body>
+</html>

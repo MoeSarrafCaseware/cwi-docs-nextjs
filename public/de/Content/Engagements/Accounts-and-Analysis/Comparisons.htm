@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Vergleiche</h1>
+        <p>Mit der Analysefunktion Vergleiche können Sie zwei oder mehr Datensätze miteinander vergleichen, um festzustellen, ob die Informationen gleich oder unterschiedlich sind, je nachdem, was Sie ausgewählt haben. Mit diesem Test können Sie beispielsweise überprüfen, ob der für die Eingabe von Transaktionsdetails zuständige Benutzer sich von dem Benutzer unterscheidet, der diese Transaktionen autorisiert. Dieser Test kann bei der Überprüfung der Konsistenz zwischen den Eingangsberichten und den entsprechenden Rechnungen hilfreich sein.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Aufdeckung von möglichen Versuchen zur Manipulation von Jahresabschlüssen</p>
+            </li>
+            <li>
+                <p>Bereiche der Finanzberichterstattung, die eine geringere Genauigkeit oder Präzision aufweisen</p>
+            </li>
+            <li>
+                <p>Systemische Probleme bei der Verarbeitung von Transaktionen in einer Abteilung</p>
+            </li>
+            <li>
+                <p>Unsachgemäß konfigurierte Systemeinstellungen, die möglicherweise verbessert und weiter ausgewertet werden müssen</p>
+            </li>
+            <li>
+                <p>Unzureichende interne Kontrollen</p>
+            </li>
+            <li>
+                <p>Schwache Überwachung und Aufdeckung von Aktivitäten</p>
+            </li>
+            <li>
+                <p>Mangelhafte Ausbildung</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <ul>
+            <li>
+                <p><b>Referenzfeld(er)</b> - Eindeutige(s) Feld(er), das/die zur Erstellung einer eindeutigen Transaktions-ID verwendet wird/werden, wie z. B. das Feld Eintrags-ID für den Hauptbuch-Datensatz. Diese Spalten sind nicht Teil des Ergebnisses, sondern dienen der Identifizierung der Transaktionen, die Teil des Ergebnisses sind. Dieses Feld wurde bereits im Test definiert und kann nicht geändert werden.</p>
+            </li>
+            <li>
+                <p><b>Kernfelder</b> - Zwei oder mehr Felder eines beliebigen Typs müssen für den Vergleich markiert werden. Die markierten Felder sollten vom gleichen Typ sein.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <p><b>Vergleichstyp</b> - Wählen Sie aus, wie die Daten in den ausgewählten Feldern miteinander verglichen werden sollen. Ihre Optionen sind:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Gleich</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Ungleich</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Größer als</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Größer als oder gleich</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Kleiner als</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Kleiner als oder gleich</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p><b>Zeichenfeldvergleich</b> - Vergleicht zwei Zeichenfelder und listet sie basierend darauf auf, ob sie gleich oder ungleich sind.</p>
+            </li>
+            <li>
+                <p><b>Datumsfeldvergleich</b> - Vergleicht zwei Datumsfelder und listet sie basierend darauf auf, ob sie gleich oder ungleich sind.</p>
+            </li>
+            <li>
+                <p><b>Numerisches Feld - Vergleich</b> - Vergleicht zwei numerische Felder und listet sie basierend darauf auf, ob sie gleich oder ungleich sind.</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analysefunktion Vergleiche ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Legen Sie bei Bedarf Filter über die Daten, damit eine Teilmenge für die Analyse verwendet wird. Wenn kein Filter gesetzt ist, wird die Analyse für die gesamte Datei durchgeführt. Dieser Schritt kann auch als letzter statt als erster Schritt durchgeführt werden.</p>
+                <p class="note"><b>Hinweis:</b> Filter sind derzeit nicht verfügbar und werden erst in einer späteren Version enthalten sein.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dies ist nur gültig, wenn bestimmte Felder ausgewählt wurden. Wenn alle Spalten vorhanden sind, ist dies nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob zwei oder mehr Felder ausgewählt wurden und ob alle ausgewählten Felder vom gleichen Typ sind.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie die Art des Vergleichs anhand der eingegebenen Parameter. Die Optionen sind:</p>
+                <ul>
+                    <li>
+                        <p><b>Gleich</b> (==)</p>
+                    </li>
+                    <li>
+                        <p><b>Ungleich</b> (!=)</p>
+                    </li>
+                    <li>
+                        <p><b>Größer als oder gleich</b> (&gt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Größer als</b> (&gt;)</p>
+                    </li>
+                    <li>
+                        <p><b>Kleiner als oder gleich</b> (&lt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Kleiner als</b> (&lt;)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Führen Sie die Kernanalyse durch, indem Sie die mit der Vergleichsart ausgewählten Felder vergleichen.</p>
+                <ul>
+                    <li>
+                        <p>Beim Vergleich zweier Felder werden alle Datensätze extrahiert, bei denen der Vergleich „wahr“ ergibt.</p>
+                    </li>
+                    <li>
+                        <p>Beim Vergleich von drei oder mehr Feldern werden alle Datensätze extrahiert, bei denen der Vergleich zwischen mindestens zwei der Felder den Wert „wahr“ ergibt.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+            <li>
+                <p>Optional können die Filter in Schritt 1 auch nach Abschluss der Kernanalyse auf die Daten angewendet werden, anstatt vor deren Abschluss.</p>
+                <p class="note"><b>Hinweis:</b> Filter sind derzeit nicht verfügbar und werden erst in einer späteren Version enthalten sein.</p>
+            </li>
+        </ol>
+    </body>
+</html>

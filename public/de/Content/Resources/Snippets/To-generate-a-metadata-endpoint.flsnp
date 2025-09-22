@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>Metadatenendpunkt kopieren:</b></p>
+        <ol>
+            <li>
+                <p>Melden Sie sich an Ihrem Azure Portal an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>App registrations</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die richtige App aus der Liste.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Endpoints</b>.</p>
+                <p><img src="../Images/azure-endpoints.png" alt="Auswahl von Endpunkten." /></p>
+            </li>
+            <li>
+                <p>A list of endpoints displays.</p>
+                <p class="warning"><b>Important:</b> Copy the OpenId Connect metadata document endpoint and paste it to a text document for later use. Label it <b>Metadata Endpoint</b>.</p>
+                <p><img src="../Images/azure-openID.png" alt="Kopieren Sie den Endpunkt OpenID Connect metadata document." /></p>
+            </li>
+        </ol>
+    </body>
+</html>

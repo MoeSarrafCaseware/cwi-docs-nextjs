@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can add work codes and set staff rates to ensure that general and specialized work are being allocated and billed for correctly" />
+    </head>
+    <body>
+        <h1>Set staff rates and work codes</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Classify your staff&apos;s billable and non-billable time and expenses by creating custom work codes. For example, if you want your staff to keep track of the time spent on internal administrative duties, you could add an appropriately configured non-billable time work code.</p>
+        <h2 id="Creating-a-new-work-code">Create new work codes</h2>
+        <p>You can create new work codes from the <b>Settings</b> page.</p>
+        <p><b>To create a work code:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time</b> and, under Work Codes, select <b>Time</b> or <b>Expense</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New | Add</b>.</p>
+            </li>
+            <li>
+                <p>Complete the fields as appropriate. The only mandatory field is the <b>Work Code</b>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-new-add-646x1021.png" alt="The New Work Code dialog" /></p>
+                <p class="note"><b>Note:</b> The list of work codes may not sort correctly if it contains alphanumeric codes with inconsistent lengths (e.g. 1 ABC, 23 DEF, 456 GHI). To correct this, pad each number with zeroes to ensure a consistent length (e.g. 001 ABC, 023 DEF, 456 GHI) or use numeric codes.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p>Your new work code is added.</p><MadCap:snippetBlock src="../../Resources/Snippets/note-on-note-field.flsnp" /><h2 id="Importing-a-list-of-work-codes">Import a list of work codes</h2>
+        <p>You can also add work codes in bulk using a <b>block of delimited text</b> or a .<b>csv file</b>. You&apos;ll need a list of work codes in a .csv file or delimited block of plain text.</p>
+        <p>For either method, ensure that:</p>
+        <ul>
+            <li>
+                <p>Each row represents one staff member, and</p>
+            </li>
+            <li>
+                <p>Each column represents a property, such as their <b>name</b>, <b>email</b>, or <b>user group</b>. To include a staff member in more than one group, place a tilde (~) between each group name.</p>
+            </li>
+        </ul>
+        <p>In this example, an administrator wants to add three expense codes:</p>
+        <p style="font-style: italic;">Code, Type, Name, Rate, Surcharge</p>
+        <p style="font-style: italic;">E900, B, Entertainment, 0.05, 0.00</p>
+        <p style="font-style: italic;">E10100, NB, Equipment, 0.10, 0.15</p>
+        <p style="font-style: italic;">E1000, B, Consulting expenses, 0.10, 0.00</p>
+        <p><b>To import a list of work codes:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Time</b> and, under Work Codes, select <b>Time</b> or <b>Expense</b>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-695x813.png" alt="Select Time or Expense to import a list of work codes." /></p>
+            </li>
+            <li>
+                <p>Select <b>New | Import</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Import from CSV</b> and browse to your .csv directory file, or paste your delimited list text into the text box.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-717x251.png" alt="The Import Work Codes dialog." /></p>
+            </li>
+            <li>
+                <p>Select the appropriate options at the bottom of the dialog, then select <b>Next</b>.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-options-705x122.png" alt="The options on the Import Work Codes dialog" /></p>
+            </li>
+            <li>
+                <p>Map the property that matches each column. The <b>Work Code Number</b> is required to complete the import. If any existing codes use the same Work Code Number, they will be updated when the import is performed.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-mapping-739x249.png" alt="The column mapping section of the Import Work Codes dialog" /></p>
+            </li>
+            <p>If you map the <b>Bill Type</b>, you&apos;ll be asked to identify the <b>Billable</b> and <b>Non-billable</b> codes in a separate dialog.</p>
+            <p><img src="../../Resources/Images/Firm-settings-import-work-codes-bill-type-630x337.png" alt="The Bill Type dialog from the Import Work Codes procedure" /></p>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p>A dialog will confirm the number of codes imported or modified.</p>
+        <h2 id="Setting-staff-rates">Set staff rates</h2>
+        <p>Staff must be set with the appropriate rates before they can submit their time entries. You can assign both <b>standard rates</b> and <b>work code rates</b> to individual staff members. For example, assume that you want to assign different rates for general work and more specialized work such as legal consultation. In this case, you would assign a baseline standard rate and a higher rate associated with the work code for the specialized work.</p>
+        <p><b>To set staff rates:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Staff Admin</i> role or equivalent rights.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Staff</b>.</p>
+            </li>
+            <li>
+                <p>Select the user whose rate you want to edit. In the user&apos;s menu, select <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Rates</b>.</p>
+            </li>
+            <li>
+                <p>To add a standard rate, select <b>Standard Rates | New</b>, complete the fields, and select <b>Save</b>.</p>
+                <p><img src="../../Resources/Images/Staff-rate-standard-rate-630x427.png" alt="The New Standard Rate dialog" /></p>
+            </li>
+            <li>
+                <p>To add a work code-specific rate, select <b>Work Code Rates | New</b>, complete the fields, and select <b>Save</b>. You will need to search or select from your organization&apos;s existing work codes in the Work Code field.</p>
+                <p><img src="../../Resources/Images/Staff-rate-work-code-rate-630x534.png" alt="The New Work Code rate dialog" /></p>
+            </li>
+        </ol>
+        <p>The rates you added or updated can be found in each user&apos;s <b>Staff Rate</b> dialog.</p>
+        <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Work-code-rate-added-700x206.png" alt="New work codes can be seen in a suer&apos;s Staff Rate dialog" /></p>
+    </body>
+</html>

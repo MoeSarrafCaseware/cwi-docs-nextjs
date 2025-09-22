@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>The following widgets enable you to highlight the status of a firm&apos;s open engagements and ensure that they&apos;re on track for completion.</p>
+        <h3>Engagement progress</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Gauge chart (<img src="../Images/gauge-chart-23x15.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of completed documents:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that defines the logic of what your users would consider a &quot;completed&quot; document.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf(Role 1 Initials, isNotNull(nullIf(Role 1 Initials,&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><i>Target value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of documents in the Document Manager:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Apply any entity and/or year-end filters to the widget, as necessary.</p>
+            </li>
+        </ul>
+        <h3>Breakdown of role-specific sign-offs</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Donut chart (<img src="../Images/donut-chart-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group/Color</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add one of the following:</p>
+                <ul>
+                    <li>
+                        <p><b>Role 1 Initials</b> for Role 1</p>
+                    </li>
+                    <li>
+                        <p><b>Role 2 Initials</b> for Role 2</p>
+                    </li>
+                    <li>
+                        <p>…</p>
+                    </li>
+                    <li>
+                        <p><b>Role 8 Initials</b> for Role 8</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>If you want to exclude documents with no sign-offs:</p>
+                <ol>
+                    <li>
+                        <p>Create a filter based on the selected Group/Color field (for example: Role 1 Initials, Role 2 Initials, etc.).</p>
+                    </li>
+                    <li>
+                        <p>On the Edit filter panel, click the first drop-down and select <b>Only this visual</b>.</p>
+                    </li>
+                    <li>
+                        <p>Under Filter type:</p>
+                        <ol>
+                            <li>
+                                <p>On the first drop-down, select <b>Custom filter</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the second drop-down, select <b>Does not equal</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the third drop-down, select <b>Exclude nulls</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Select <b>Apply</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Apply any entity and/or year-end filters to the widget, as necessary.</p>
+            </li>
+        </ul>
+        <h3>Status of deliverables</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p>Add a custom calculation field that provides the document number and name of a deliverable document:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation, which identifies a document that has a deliverable due date and returns its document number and name:</p>
+                        <p><code>ifelse(isNotNull(duedate), concat(toString(schedule), &apos;-&apos;,{Description}), &quot;Unknown&quot;)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>duedate</b> - Displays the due date of the deliverable document.</p>
+            </li>
+            <li>
+                <p><b>Role 1 Initials</b> - (Optional) Displays the Role 1 sign-off name.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../Images/format-visual-16x17.png" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Document Manager</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li>
+                <p><b>Line No</b> - Sorts the table to reflect the order in the Document Manager.</p>
+            </li>
+            <li>
+                <p><b>schedule</b> - Displays the completed document number.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Displays the document name.</p>
+            </li>
+            <li>
+                <p><b>Role 1 Initials</b> - Displays the Role 1 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 1</b> - Displays the Role 1 sign-off date.</p>
+            </li>
+            <li>
+                <p><b>Role 2 Initials</b> - Displays the Role 2 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 2</b> - Displays the Role 2 sign-off date.</p>
+            </li>
+            <li>
+                <p>…</p>
+            </li>
+            <li>
+                <p><b>Role 8 Initials</b> - Displays the Role 8 sign-off name.</p>
+            </li>
+            <li>
+                <p><b>Date of Completion 8</b> - Displays the Role 8 sign-off date.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Sort the table using the <b>Line No</b> field in ascending order. Once sorted, click on the column heading and hide the <b>Line No</b> field.</p>
+            </li>
+            <li>
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual (<img src="../Images/format-visual-16x17.png" />)</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Summary of all engagement progress</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../Images/horizontal-bar-chart-23x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-Axis</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>filename</b> - Displays the engagement file name</p>
+            </li>
+        </ul>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that determines the overall engagement progress:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that counts the total number of completed documents and divides it by the total number of documents.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},&apos;&apos;))) / count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Summary of all engagement progress (alternative table view)</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>filename</b> - Displays the engagement file name</p>
+            </li>
+        </ul>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that determines the overall engagement progress:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build a calculation that counts the total number of completed documents and divides it by the total number of documents.</p>
+                        <p>For example, if a document is considered complete after Role 1 is signed off, the calculation would read:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},&apos;&apos;))) / count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>yearend</b> - Displays the year-end date of the file.</p>
+            </li>
+        </ul>
+    </body>
+</html>

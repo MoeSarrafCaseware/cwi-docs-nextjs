@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Prerequisites for importing from desktop accounting software</h1>
+        <p>Je kunt klantgegevens importeren vanuit de meeste desktop boekhoudsoftware van derden voor gebruik met verschillende Caseware Cloud apps of <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Voordat u importeert, moet u de vereiste stappen voor uw software uitvoeren. Zie <a href="Import-data-from-a-desktop-accounting-software.htm">Gegevens importeren uit een desktop boekhoudprogramma</a>voor meer informatie over het importeren van klantgegevens <a href="Import-data-from-a-desktop-accounting-software.htm">.</a></p>
+        <p class="note"><b>Let op:</b> Als je boekhoudpakket niet op deze pagina staat, zijn er geen vereisten. Je kunt de instructies in <a href="Import-data-from-a-desktop-accounting-software.htm">Gegevens importeren uit een desktop boekhoudprogramma</a> volgen om je klantgegevens te importeren.</p>
+        <h2>Access boekhoudkundige dimensies</h2>
+        <ul>
+            <li>
+                <p>Installeer <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> lokaal op de machine die de import uitvoert.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.bak</p>
+                <p>(Verkregen door Accounting Dimensions te starten en een back-up van alle gegevens uit te voeren)</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Sla een reservekopie van je database op met het hulpprogramma <b>Access Dimensions Administrator (ADA)</b> dat bij het softwarepakket wordt geleverd.</p>
+            </li>
+            <li>
+                <p>Als de import wordt uitgevoerd op dezelfde machine waar het oorspronkelijke Access Accounting Dimensions-bestand actief is, zorg er dan voor dat de naam van het back-up databasebestand verschilt van de naam van de actieve database en dat het databasebestand in een andere map staat dan de actieve database. Anders moet de originele database van SQL-server worden verwijderd voordat deze wordt geïmporteerd.</p>
+            </li>
+        </ul>
+        <h2>Hulp voor accountants</h2>
+        <ul>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.mdb</p>
+            </li>
+        </ul>
+        <h2>AccountView</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Financiële periodes: Perioden.txt</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: Transacties.txt</p>
+                    </li>
+                    <li>
+                        <p>Datum jaareinde: Eindejaar.txt</p>
+                    </li>
+                    <li>
+                        <p>Niet-financiële gegevens: NFD.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Accpac (Advantage-serie)</h2>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/downloads/odbcupd.exe">ODBC Engine en het stuurprogramma</a>.</p>
+            </li>
+            <li>
+                <p>Installeer <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL</a> (Btrieve) of Microsoft SQL.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: CSCOM.DAT / CSCOM.RECCSFSC.DAT / CSFSC.REC</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: GLAMF.DAT / GLAMF.RECGLAFS.DAT / GLAFS.RECGLABK.DAT / GLABK.RECGLABRX.DAT / GLABRX.REC</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: GLPOST.DAT / GLPOST.REC</p>
+                    </li>
+                    <li>
+                        <p>Divisie-informatie: Bestanden met de extensies .dap, .dfe en .eap</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Zorg ervoor dat rekeningstructuren in Accpac unieke reeksen rekeningsegmenten en verschillende totale lengtes bevatten. Working Papers kan het splitsingsnummer niet correct importeren als deze twee structuren niet goed gedefinieerd zijn. Gebruik het <b>ACCPAC-venster Accountstructuurconfiguratie</b> om de structuren te wijzigen.</p>
+            </li>
+        </ul>
+        <h2>Accpac (DOS)</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: GLGLOB</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: GLDATA</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: GLPST</p>
+                    </li>
+                    <li>
+                        <p>Boekhoudkundige data: DATUM&apos;I</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Adagio Grootboek</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: GLGLOB</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: GLMAST&apos;R / GLDATA</p>
+                    </li>
+                    <li>
+                        <p>Boekhoudkundige data: DATUM&apos;I</p>
+                    </li>
+                    <li>
+                        <p>GL-import GLPST</p>
+                    </li>
+                    <li>
+                        <p>Periode Datum Instellingen: GLFISC&apos;R</p>
+                    </li>
+                    <li>
+                        <p>Budgetgegevens: GLNBUD&apos;R</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>AgExpert Analist</h2>
+        <ul>
+            <li>
+                <p>Maak een exportbestand in AgExpert met behulp van de exportmodule.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren: <i>bestandsnaam</i>.cwe</p>
+            </li>
+        </ul>
+        <h2>Attache Zakenpartner</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: SYSFILE.DAT</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: GLMAST.DATGLMASTLY.DAT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: GLTRAN.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Bedford Eenvoudig Boekhouden DOS</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: SN3.REC / SN4.REC</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: GN3.REC / GN4.REC</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: JOURNAL3.REC / JOURNAL4.REC</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Blue Link-oplossingen</h2>
+        <ul>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>Briljante boekhouding</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Geconsolideerde proefbalans: cwctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Niet-geconsolideerde proefbalans: cwunctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>GL Bewegingen: cwglmov1.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>BusinessVision</h2>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL 2000 Database Engine</a>.</p>
+            </li>
+            <li>
+                <p>Gebruik de exportmodule in BusinessVision om het rekeningstelsel en grootboekgegevens te exporteren als kommagelimiteerde ASCII-bestanden.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: GL-CHART.TXT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: GL.TXT</p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: BVCON.FIL</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>C&amp;LAS</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema:</p>
+                    </li>
+                    <li>
+                        <p>GL detail: bestandsnaam.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Concorde</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: PRIMO.TXT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: VINNEN.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Creatieve oplossingen boekhouding</h2>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/downloads/daoupdat.exe">DAO import update</a>.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.WSW</p>
+            </li>
+        </ul>
+        <h2>DacEASY</h2>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL 2000 Database Engine</a>.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>GL-detail: DEAGLTD.DB</p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: DEAGNRL.DB</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: DEAGLTH.DB</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>DATEV</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Saldo Records: DatumvexportKMVZ.txt</p>
+                    </li>
+                    <li>
+                        <p>Account Name Records: DatumvexportKTSKI.txt</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: DatumvexportMADMPD.txt</p>
+                    </li>
+                    <li>
+                        <p>Opties saldibalans SKR*.csv</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>DYNACOM</h2>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/downloads/daoupdat.exe">DAO import update</a>.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>6.4 - 7.0: <i>bestandsnaam</i>.mdb</p>
+                    </li>
+                    <li>
+                        <p>8.0 - later: <i>bestandsnaam</i>.ddb</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Expert boekhouding</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>EZEBiz Bedrijfsmanager</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.WSW</p>
+            </li>
+        </ul>
+        <h2>Finax v2.x</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Datum Informatie: MUMBU.ext</p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: PARBU.ext</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: BUNIDET.ext</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: ACCOUNTS.ext</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Finax v989.x</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: CODEINDX<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>NAAM_REK	Omschrijving van rekening LANCO<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Saldo voorgaand jaar <i>FIGZZZZZ</i><i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Begrotingscijfers: GLTOTS<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Datum Informatie: MUMBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: PARBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>GL-detail: BUNIDET<i>.xxx</i></p>
+                    </li>
+                </ul>
+                <p><i>(xxx</i> is de driecijferige Finax-extensie. <i>ZZZZZ</i> is de vergelijkende identificatiecode van vijf tekens)</p>
+            </li>
+        </ul>
+        <h2>Fortuin1000 Acomba</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: SCHARTE.FDW</p>
+                    </li>
+                    <li>
+                        <p>Journaalposten: GJOURNAL.FDW</p>
+                    </li>
+                    <li>
+                        <p>Administratieperiode GCTRL.FDW</p>
+                    </li>
+                    <li>
+                        <p>Gedetailleerde vacatures: GPOST.FDW</p>
+                    </li>
+                    <li>
+                        <p>Informatie over de klant: SINFOCIE.FDW</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Fortune1000 DOS</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: GGL.FDA</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: GJOURNAL.FDA</p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: GCIE.FDA</p>
+                    </li>
+                    <li>
+                        <p>Begrotingscijfers: GPOST.FDA</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Grote vlakten (Dynamics)</h2>
+        <p><b>Pervasieve SQL (Btrieve)</b></p>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL 2000 Database Engine</a>.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Bedrijvenlijst: Dynamiek SY02100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: Dynamiek systeem SY01500.BTR</p>
+                    </li>
+                    <li>
+                        <p>Structuur rekeningnummer: Dynamiek systeem SY00302.BTR</p>
+                    </li>
+                    <li>
+                        <p>Periode Data: Dynamics \ &lt;Client&gt; \ Company \ SY40101.BTR</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: Dynamics \ Financiën \ GL00100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Rekeningnummer: Dynamics \ Financiën \ GL00105.BTR</p>
+                    </li>
+                    <li>
+                        <p>Begrotingssaldi: Dynamics \ Financiën \ GL00201.BTR</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: Dynamics \ Financiën \ GL10110.BTR</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: Dynamics \ Financiën \ GL20000.BTR</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">C-boom Plus</p>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Bedrijvenlijst: Dynamiek SY02100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: Dynamiek systeem SY01500.DAT</p>
+                    </li>
+                    <li>
+                        <p>Structuur rekeningnummer: Dynamiek systeem SY00302.DAT</p>
+                    </li>
+                    <li>
+                        <p>Periode Data: Dynamics \ &lt;Client&gt; \ Company \ SY40101.DAT</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: Dynamics \ Financiën \ GL00100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Rekeningnummer: Dynamics \ Financiën \ GL00105.DAT</p>
+                    </li>
+                    <li>
+                        <p>Begrotingssaldi: Dynamics \ Financiën \ GL00201.DAT</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: Dynamics \ Financiën \ GL10110.DAT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: Dynamics \ Financiën \ GL20000.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Great Plains (DOS)</h2>
+        <p><b>Pervasieve SQL (Btrieve)</b></p>
+        <ul>
+            <li>
+                <p>Installeer de <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL 2000 Database Engine</a>.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Bedrijvenlijst: Dynamiek SY02100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: Dynamiek systeem SY01500.BTR</p>
+                    </li>
+                    <li>
+                        <p>Structuur rekeningnummer: Dynamiek systeem SY00302.BTR</p>
+                    </li>
+                    <li>
+                        <p>Periode Data: Dynamics \ &lt;Client&gt; \ Company \ SY40101.BTR</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: Dynamics \ Financiën \ GL00100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Rekeningnummer: Dynamics \ Financiën \ GL00105.BTR</p>
+                    </li>
+                    <li>
+                        <p>Begrotingssaldi: Dynamics \ Financiën \ GL00201.BTR</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: Dynamics \ Financiën \ GL10110.BTR</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: Dynamics \ Financiën \ GL20000.BTR</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">C-boom Plus</p>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Bedrijvenlijst: Dynamiek SY02100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: Dynamiek systeem SY01500.DAT</p>
+                    </li>
+                    <li>
+                        <p>Structuur rekeningnummer: Dynamiek systeem SY00302.DAT</p>
+                    </li>
+                    <li>
+                        <p>Periode Data: Dynamics \ &lt;Client&gt; \ Company \ SY40101.DAT</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: Dynamics \ Financiën \ GL00100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Rekeningnummer: Dynamics \ Financiën \ GL00105.DAT</p>
+                    </li>
+                    <li>
+                        <p>Begrotingssaldi: Dynamics \ Financiën \ GL00201.DAT</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: Dynamics \ Financiën \ GL10110.DAT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: Dynamics \ Financiën \ GL20000.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>KHK</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: AUDITAGT.TXT</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: AUDITGLT.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>MAS 90 voor Windows</h2>
+        <ul>
+            <li>
+                <p>Maak een nieuwe map aan buiten uw MAS 90 map. Selecteer in MAS 90 een bedrijfs-ID en exporteer de Trial Balance naar een vast ASCII-bestand in de nieuwe map. Maak in de map een submap aan en kopieer het bestand <b>SY0CTL.SOA</b> vanuit de <b>map MAS 90 SOA</b> naar de submap.</p>
+            </li>
+            <li>
+                <p>Exporteer de gegevens die je wilt importeren (Proefbalans, Grootboekgegevens, Gegevens voorgaand jaar of Budgetgegevens).</p>
+            </li>
+            <li>
+                <p>Importeer bestand GL_FiscalYearDetail.m4t</p>
+            </li>
+        </ul>
+        <h2>Microsoft Office Accounting</h2>
+        <ul>
+            <li>
+                <p>Installeer <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft SQL Server 2005</a> lokaal op de machine die de import uitvoert.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.sbb</p>
+            </li>
+        </ul>
+        <h2>MoneyWorks</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MS Boekhouden voor kleine bedrijven</h2>
+        <ul>
+            <li>
+                <p>Installeer <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> lokaal op de machine die de import uitvoert.</p>
+            </li>
+            <li>
+                <p>Het enige vereiste Microsoft Small Business Accounting-bestand is een <b>.zip-back-upbestand</b> dat is gemaakt door MS_SBA en dat is verkregen door een back-up te maken van alle gegevens. Raadpleeg de online Help van Microsoft Small Business Accounting voor meer informatie over het uitvoeren van een gegevensback-up.</p>
+            </li>
+        </ul>
+        <h2>Multi Express Bedrijf &amp; Boekhouding</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in Multi Express Business &amp; Accounting om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB Boekhouding</h2>
+        <ul>
+            <li>
+                <p>Maak een exportbestand in MYOB door te klikken op <b>Bestand</b> | <b>AccountantLink</b> | <b>Verzenden naar Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB AccountEdge</h2>
+        <ul>
+            <li>
+                <p>Maak een exportbestand in MYOB door te klikken op <b>Bestand</b> | <b>AccountantLink</b> | <b>Verzenden naar Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB AccountRight</h2>
+        <ul>
+            <li>
+                <p>Maak een exportbestand in MYOB door te klikken op <b>Bestand</b> | <b>AccountantLink</b> | <b>Verzenden naar Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.txt</p>
+            </li>
+        </ul>
+        <h2>Boomgaard</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: CODEINDX<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>NAAM_REK	Omschrijving van rekening LANCO<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Saldo voorgaand jaar <i>FIGZZZZZ</i><i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Begrotingscijfers: GLTOTS<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Datum Informatie: MUMBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Profiel informatie: PARBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>GL-detail: BUNIDET<i>.xxx</i></p>
+                    </li>
+                </ul>
+                <p><i>(xxx</i> staat voor de 3-cijferige extensie van het Orchard-bestand. <i>yyyyy</i> staat voor de vergelijkende identifier van vijf tekens)</p>
+            </li>
+        </ul>
+        <h2>Pastel Evolutie</h2>
+        <ul>
+            <li>
+                <p>Exporteer de transacties in Pastel Evolution om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Geconsolideerde proefbalans: cwctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Niet-geconsolideerde proefbalans: cwunctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>GL Bewegingen: cwglmov1.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Peachtree (DOS)</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: <i>GLxx</i> MST7.<i>Dyy</i></p>
+                    </li>
+                    <li>
+                        <p>GL-detail: <i>GLxxTRN7</i>.<i>Dyy</i></p>
+                    </li>
+                    <li>
+                        <p>Datum jaareinde: GLOPTS.<i>Dyy</i></p>
+                    </li>
+                </ul>
+                <p><i>(xx</i> staat voor het huidige periode nummer voor het Peachtree bestand. <i>yy</i> staat voor de twee-karakter klantcode (Bedrijfs ID) voor het Peachtree bestand)</p>
+            </li>
+        </ul>
+        <h2>Pegasus Kapitaal</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: SYSTEEM.DBF</p>
+                    </li>
+                    <li>
+                        <p>Saldibalans: NLNAAM.DBF</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: NLTRAN.DBF</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Pegasus Opera</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: _NPARM.DBF</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: _NACNT.DBF</p>
+                    </li>
+                    <li>
+                        <p>Begrotingssaldi: _NBUDG.DBF</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: _NTRAN.DBF</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Platina</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Rekeningschema: NLCHART</p>
+                    </li>
+                    <li>
+                        <p>Periode Data: NLPDATES</p>
+                    </li>
+                    <li>
+                        <p>Periode saldi: NLBAL</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: NLCOSUB</p>
+                    </li>
+                    <li>
+                        <p>Dagboekbatchgegevens: NLTXD</p>
+                    </li>
+                    <li>
+                        <p>Details geschiedenis batch: NLTXDH</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>PwC SIF</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Proefbalans: <i>bestandsnaam</i>.xxx</p>
+                    </li>
+                    <li>
+                        <p>Kasstroom: <i>bestandsnaam</i>.xxx</p>
+                    </li>
+                </ul>
+                <p>Je kunt een of beide bestanden importeren. Er is geen vast formaat voor de bestandsnaam en extensie van deze bestanden.</p>
+            </li>
+        </ul>
+        <h2>RealBroker</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.TXT</p>
+            </li>
+        </ul>
+        <h2>Sage 50 Rekeningen (Sage-Line50)</h2>
+        <ul>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Profiel informatie: ACCDATA\ACCOUNT.DTA</p>
+                    </li>
+                    <li>
+                        <p>Rekeningschema: ACCDATA\NOMINAL.DTA</p>
+                    </li>
+                    <li>
+                        <p>CoA-index: ACCDATA\NOMINDEX.DTA</p>
+                    </li>
+                    <li>
+                        <p>GL-detail: ACCDATA-SPLITSINGEN.DTA</p>
+                    </li>
+                    <li>
+                        <p>Bedrijfsinformatie: ACCDATA.DTA</p>
+                    </li>
+                    <li>
+                        <p>Account Type ACCDATA</p>
+                    </li>
+                    <li>
+                        <p>Bankgegevens: ACCDATA\BANK.DTA</p>
+                    </li>
+                    <li>
+                        <p>Grootboekindex: ACCDATAHEADER.DTA</p>
+                    </li>
+                    <li>
+                        <p>Afdeling Informatie: DEPARTM.DTA</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Sage 50 Boekhouden CDN Editie (Eenvoudig)</h2>
+        <ul>
+            <li>
+                <p>Installeer Sage 50 Accounting (CDN Edition) of het hulpprogramma Sage 50 Connection Manager van <a href="https://my.caseware.com/">MyCaseware</a>. U moet een van deze toepassingen hebben om de import uit te voeren; installeer ze echter niet allebei.</p>
+            </li>
+        </ul>
+        <h2>Settler GOLD boerderij software</h2>
+        <ul>
+            <li>
+                <p>Gebruik de Export module in Settler GOLD Farm Software om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.cwe</p>
+            </li>
+        </ul>
+        <h2>SigaFinance</h2>
+        <ul>
+            <li>
+                <p>Gebruik de <b>Export</b> module in SigaFinance om een export bestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: bestandsnaam.TXT</p>
+            </li>
+        </ul>
+        <h2>Tally Boekhouden (Exporteren)</h2>
+        <ul>
+            <li>
+                <p>Gebruik in Tally Accounting 9 het standalone exporthulpprogramma (Exporthulpprogramma voor Tally.ERP9) om de volgende bestanden met cliëntgegevens te maken:</p>
+                <ul>
+                    <li>
+                        <p><i>bedrijfID</i><i>.jjjjmmdd</i>.bedrijf.dat</p>
+                    </li>
+                    <li>
+                        <p><i>bedrijfsID</i><i>.jjjjmmdd</i>.grafiek.txt</p>
+                    </li>
+                    <li>
+                        <p><i>bedrijfIDjjjmmdd</i>.TBal.txt</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.Budget.txt (optioneel)</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.Forex.txt (optioneel)</p>
+                    </li>
+                    <li>
+                        <p><i>bedrijfsIDyyyymmdd</i>.GL.txt</p>
+                    </li>
+                </ul>
+                <p><i>(companyID</i> staat voor de bedrijfs-ID, <i>yyyymmdd</i> staat voor de begindatum van het jaar)</p>
+            </li>
+        </ul>
+        <h2>Ufsoft</h2>
+        <ul>
+            <li>
+                <p>Installeer <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> lokaal op de machine die de import uitvoert (als u de Ufsoft-toepassing niet hebt geïnstalleerd of geen toegang hebt tot de database).</p>
+            </li>
+            <li>
+                <p>Bestanden importeren:</p>
+                <ul>
+                    <li>
+                        <p>Versie 8.2, februari 8,5 Ufdata.bak</p>
+                    </li>
+                    <li>
+                        <p>&amp;Versie 8,11 Kopieer Ufdata.mdp en Ufsystem.mdp naar een andere map.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Windward Systeem Vijf</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.TXT</p>
+            </li>
+        </ul>
+        <h2>WinLedge</h2>
+        <ul>
+            <li>
+                <p>Gebruik de exportmodule in MoneyWorks om een exportbestand te maken.</p>
+            </li>
+            <li>
+                <p>Bestand importeren: <i>bestandsnaam</i>.TXT</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        
+    </head>
+    <body>
+        <p><b>Zugriff auf bestimmte Dateien oder Aktivitäten in einer Entität gewähren:</b></p>
+        <ol>
+            <li>
+                <p>Bitte stellen Sie sicher, dass Sie über die Rolle <i>Eigentümer</i> oder über gleichwertige Berechtigungen für die Dateien verfügen.</p>
+            </li>
+            <li>
+                <p>Sorgen Sie dafür, dass die Benutzer oder Gruppen nur über die <u>folgenden Rollen</u> in der Entität, zu der die Dateien gehören, verfügen:</p>
+                <ul>
+                    <li>
+                        <p>Rolle <b>Kontakt - Zugriff auf Entität</b> für Kontakte oder Kontaktgruppen.</p>
+                    </li>
+                    <li>
+                        <p>Rolle <b>Zugriff auf Entität</b> für Mitarbeiter oder Mitarbeitergruppen.</p>
+                    </li>
+                </ul>
+                <p>Wenn Sie z. B. dem Mitarbeiter Klaus Harald Maus Zugriff auf bestimmte Dateien in der Entität Musterdorf GmbH gewähren möchten, sollten Sie sicherstellen, dass Sie die Rolle <b>Zugriff auf Entität</b> für Klaus Harald Maus bei der Freigabe von Eigenschaften für Entität Musterdorf GmbH wählen.</p>
+                <p>Die folgende Abbildung zeigt das Symbol Freigabe Entitätseigenschaften.</p>
+                <p><img src="../Images/share-properties-entities.png" alt="Symbol Freigabe in den Entitätseigenschaften." style="width: 648px;height: 241px;" /></p>
+            </li>
+            <li>
+                <p>Klicken Sie im Caseware Cloud Hauptmenü (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) auf den Eintrag <b>Dateien</b>.</p>
+                <p>Wenn Sie Zugriff auf eine Aktivität gewähren möchten, wählen Sie <b>Aktivitäten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die Dateien oder Aktivitäten, für die Sie Rollen zuweisen möchten, und klicken Sie dann auf <b>Freigabe</b> (<img src="../Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Wählen Sie die Benutzer oder Gruppen aus, denen Sie Zugriff auf die Datei oder Aktivität erteilen wollen. Öffnen Sie dann die Drop-down-Liste <b>Rollen an (#) zuweisen</b>.</p>
+                <p>Die Liste der angezeigten Rollen unterscheidet sich in Abhängigkeit davon, ob es sich bei den ausgewählten Benutzern oder Gruppen um Mitarbeiter oder Kontakte handelt.</p>
+                <p><img src="../Images/share-files-contacts.PNG" alt="Bestimmte Dateien für einen Kontakt freigeben." /></p>
+            </li>
+            <li>
+                <p>Aktivieren Sie das Kontrollkästchen neben der Rolle, die Sie den Benutzern oder Gruppen zuweisen möchten.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Freigabe</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

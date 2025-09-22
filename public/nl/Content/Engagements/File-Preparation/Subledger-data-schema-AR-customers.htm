@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Debiteuren—klanten</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. Dit onderwerp beschrijft de velden in het subgrootboek Debiteuren-klanten.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rekening-ID klant</td>
+                    <td>
+                        <p>De ID van de klant van wie betaling wordt verwacht of bij wie ongebruikte kredieten zijn toegepast.</p>
+                        <p>
+                            <p>Gegevenstype Tekst</p>
+                        </p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam rekening klant</td>
+                    <td>De naam van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p><p>Primaire sleutel: Eerste plaatsvervanger. Als <b>de klantrekening-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p></td>
+                </tr>
+                <tr>
+                    <td>Klantengroep<code>(ar_customer_customer_group</code>)</td>
+                    <td>Als de organisatie klanten opdeelt in groepen, is dit de groep waaraan deze klant toegewezen is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Factuuradres van klant regel 1<code>(ar_customer_customer_physical_street_address1</code>)</td>
+                    <td>Adresregel 1 voor het postadres van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Factuuradres van klant regel 2<code>(ar_customer_customer_physical_street_address2</code>)</td>
+                    <td>Adresregel 2 voor het postadres van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Plaats klant</td>
+                    <td>De stad waar de klant fysiek gevestigd is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Staat of provincie klant</td>
+                    <td>De staat of provincie waar de klant fysiek gevestigd is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Postcode klant</td>
+                    <td>De postcode waar de klant fysiek gevestigd is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Fysiek land klant</td>
+                    <td>De code van het land waarin de klant fysiek gevestigd is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Klant TIN<code>(ar_customer_customer_tin</code>)</td>
+                    <td>Het belastingnummer van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Factuuradres van klant regel 1<code>(ar_customer_customer_billing_address1</code>)</td>
+                    <td>Adresregel 1 voor het factuuradres van de klant<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Factuuradres van klant regel 2<code>(ar_customer_customer_billing_address2</code>)</td>
+                    <td>Adresregel 2 voor het factuuradres van de klant<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Woonplaats voor facturatie klant</td>
+                    <td>De plaats van het factuuradres van de klant<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Staat/provincie factuur klant</td>
+                    <td>De staat of provincie van het factuuradres van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Postcode factuur klant</td>
+                    <td>De postcode van het factuuradres van de klant<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Land factuur klant</td>
+                    <td>De landcode van het factuuradres van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Actieve datum<code>(ar_customer_active_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de klant inactief is verklaard.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inactieve datum<code>(ar_customer_inactive_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de klant inactief is verklaard.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kredietlimiet transactie</td>
+                    <td>
+                        <p>De kredietlimiet per factuur zoals afgesproken voor deze klant.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Totale kredietlimiet</td>
+                    <td>
+                        <p>De kredietlimiet voor het totale uitstaande saldo van deze klant.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingspercentage</td>
+                    <td>
+                        <p>Het kortingspercentage dat de klant mag ontvangen als een factuur binnen een bepaald aantal dagen wordt betaald.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingsdagen</td>
+                    <td>
+                        <p>Het aantal dagen vanaf de factuurdatum dat de klant van de kortingsvoorwaarden kan profiteren.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden vervaldagen</td>
+                    <td>
+                        <p>Het aantal toegestane dagen om aan de verplichting te voldoen voordat een factuur achterstallig is.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam primair contactpersoon</td>
+                    <td>De naam van de primaire contactpersoon van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Primair telefoonnummer contactpersoon</td>
+                    <td>Het telefoonnummer van de primaire contactpersoon van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Primair telefoonnummer contactpersoon</td>
+                    <td>Het e-mailadres van de primaire contactpersoon van de klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>ID bovenliggende klant</td>
+                    <td>De unieke ID voor de bovenliggende klant.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Overeenkomstige leverancier-ID</td>
+                    <td>De unieke ID van de overeenkomstige leverancier als de klant ook een leverancier is.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>ID klanttype</td>
+                    <td>De unieke ID voor het klanttype.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Ingevoerd door<code>(ar_customer_entered_by</code>)</td>
+                    <td>De gebruikers-ID van de persoon die het record aanmaakte.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde datum<code>(ar_customer_entered_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entered Time (<code>ar_customer_entered_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door<code>(ar_customer_approved_by</code>)</td>
+                    <td>De gebruikers-ID van de persoon die toevoegingen of wijzigingen aan het hoofdbestand van de klant goedkeurde.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Goedkeuringsdatum<code>(ar_customer_approved_by_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de toevoegingen of wijzigingen aan het hoofdbestand van de klant zijn goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedkeuringstijd<code>(ar_customer_approved_by_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door<code>(ar_customer_last_modified_by</code>)</td>
+                    <td>De gebruikers-ID van de laatste persoon die deze post aanpaste.<p>Gegevenstype Tekst</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Last Modified Date (<code>ar_customer_last_modified_date</code>)</p>
+                        <p> </p>
+                    </td>
+                    <td>
+                        <p>De datum waarop het klantenrecord voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Modified Time (<code>ar_customer_last_modified_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

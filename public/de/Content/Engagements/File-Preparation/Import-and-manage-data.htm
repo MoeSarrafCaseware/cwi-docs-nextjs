@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="exclude[General.SE-Authoring]">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Daten importieren und verwalten</h1>
+        <p>You can import trial balance, general ledger, and subledger data into your engagement from a variety of sources.</p>
+        <p>Data import files, such as Excel or CSV files, are referred to as data sources, which you can then configure and assign to a dataset on the <strong>Datasets</strong> page. Multiple data sources can be assigned to a single dataset. In addition, you can also import unstructured data—data that cannot be readily assigned to any of the existing dataset types—by selecting the <b>Other</b> dataset type. The import source and dataset options available to you vary based on your product.</p>
+        <p>Any engagement can have several types of datasets, which are collections of data normally found in an engagement. Each dataset stores data related to a different aspect of an engagement and has predetermined fields. See descriptions of datasets and their fields in <a href="#Dataset">Dataset types described</a>.</p>
+        <p>To learn more about importing and managing your data, see these related topics:</p>
+        <ul>
+            <li><a href="Import-data-from-online-accounting-sofware-new-method.htm">Daten aus Online-Buchhaltungssoftware importieren</a></li>
+            <li><a href="Import-data-from-a-desktop-accounting-software.htm">Daten aus Desktop-Buchhaltungssoftware importieren</a></li>
+            <li><a href="Import-from-Sage-desktop.htm">Import aus Sage Desktop</a></li>
+            <li><a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client&apos;s data from a CSV or Excel file</a></li>
+            <li><a href="Import-the-trial-balance-from-an-engagement-file.htm">Hauptabschlussübersicht aus einer Engagementdatei importieren</a></li>
+            <li><a href="Manage-your-imported-data.htm">Importierte Daten verwalten</a></li>
+        </ul>
+        <h2>Data sources and datasets explained, an example</h2>
+        <p>The diagram conceptualizes the differences between data sources and datasets. See also <a href="Resolve-data-conflicts.htm">Resolve data import conflicts</a> for more information on how data conflicts can arise and how to solve them.</p>
+        <p><img src="../../Resources/Images/Dataset-versus-data-sources.png" alt="Data sources in relation to datasets" /></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>One or more data sources can be imported into a dataset. Each data import file is listed as a separate data source. There is a data conflict between ImportFileA and ImportFileB in the data row whose Supplier ID is 1234 in both files. In this case the user has opted to keep the data in ImportFileA.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>The resulting dataset does not necessarily contain all the data rows from all data sources depending on how any potential data conflicts are resolved.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>You can view the data making up a dataset by exporting the dataset.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Dataset"></a>Dataset types described</h2><MadCap:snippetBlock src="../../Resources/Snippets/dataset-descriptions.flsnp" /></body>
+</html>

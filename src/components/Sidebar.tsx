@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaChevronDown } from "react-icons/fa6";
-import sidebarNavigation from "../content/sidebar-navigation.json";
+import { useLanguage } from "./LanguageProvider";
 
 type NavigationItem = {
   name: string;
@@ -34,8 +34,8 @@ function NavigationItemComponent({
   parentPath?: string;
 }) {
   // Use href field directly for navigation, fallback to name-based slug
-  const itemSlug = item.href ? encodeURIComponent(item.href) : item.name.toLowerCase().replace(/\s+/g, "-");
-  const itemPath = parentPath ? `${parentPath}/${itemSlug}` : `/docs/${itemSlug}`;
+  const itemSlug = item.href ? item.href : item.name.toLowerCase().replace(/\s+/g, "-");
+  const itemPath = item.href ? `/docs${item.href}` : (parentPath ? `${parentPath}/${itemSlug}` : `/docs${itemSlug}`);
   const hasChildren = item.children && item.children.length > 0;
   const isExpanded = expandedItems.has(item.name);
   
@@ -45,8 +45,8 @@ function NavigationItemComponent({
     if (hasChildren) {
       const checkChildren = (children: NavigationItem[], currentParentPath: string): boolean => {
         return children.some(child => {
-          const childSlug = child.href ? encodeURIComponent(child.href) : child.name.toLowerCase().replace(/\s+/g, "-");
-          const childPath = currentParentPath ? `${currentParentPath}/${childSlug}` : `/docs/${childSlug}`;
+          const childSlug = child.href ? child.href : child.name.toLowerCase().replace(/\s+/g, "-");
+          const childPath = child.href ? `/docs${child.href}` : (currentParentPath ? `${currentParentPath}/${childSlug}` : `/docs${childSlug}`);
           if (pathname === childPath) return true;
           if (child.children) return checkChildren(child.children, childPath);
           return false;
@@ -77,7 +77,7 @@ function NavigationItemComponent({
           <div
             className={`block px-3 py-2 text-sm transition-colors relative flex-1 cursor-pointer hover:bg-gray-800 ${
               isActive
-                ? "text-white font-bold border-l border-blue-500"
+                ? "text-white font-bold border-l border-blue-500 sidebar-active-item"
                 : "text-gray-300 hover:text-white"
             }`}
             style={{ marginLeft: `${marginLeft}px` }}
@@ -100,7 +100,7 @@ function NavigationItemComponent({
             href={itemPath}
             className={`block px-3 py-2 text-sm transition-colors relative flex-1 ${
               isActive
-                ? "text-white font-bold border-l border-blue-500"
+                ? "text-white font-bold border-l border-blue-500 sidebar-active-item"
                 : "text-gray-300 hover:text-white hover:border-l hover:border-red-500"
             }`}
             style={{ marginLeft: `${marginLeft}px` }}
@@ -142,8 +142,47 @@ export default function Sidebar({
   indicatorOffsetClass = "left-3",
   indicatorWidthClass = "w-[2px]",
 }: SidebarProps) {
-  const navigationSections = sidebarNavigation.navigationSections;
+  const { currentLanguage, currentRegion, setLanguage } = useLanguage();
+  const [navigationSections, setNavigationSections] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
+
+  // Note: Removed automatic language detection from pathname
+  // Language selection should be controlled by the user via the header dropdown
+  // The sidebar will only respond to language changes, not initiate them
+
+  // Load navigation data for the current language
+  useEffect(() => {
+    const loadNavigation = async () => {
+      setIsLoading(true);
+      try {
+        // Try to load language-region specific navigation first
+        const response = await fetch(`/api/navigation/${currentLanguage}?region=${currentRegion}`);
+        if (response.ok) {
+          const data = await response.json();
+          setNavigationSections(data.navigationSections || []);
+        } else {
+          // Fallback to default navigation
+          const fallbackResponse = await fetch('/api/navigation');
+          if (fallbackResponse.ok) {
+            const fallbackData = await fallbackResponse.json();
+            setNavigationSections(fallbackData.navigationSections || []);
+          } else {
+            // No fallback - show empty navigation
+            setNavigationSections([]);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to load navigation:', error);
+        // No fallback - show empty navigation
+        setNavigationSections([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadNavigation();
+  }, [currentLanguage, currentRegion]);
   
   // Track which section id is expanded (accordion behavior)
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>(null);
@@ -160,8 +199,8 @@ export default function Sidebar({
       for (const section of navigationSections) {
         const findInItems = (items: NavigationItem[], parentPath = ""): boolean => {
           for (const item of items) {
-            const itemSlug = item.href ? encodeURIComponent(item.href) : item.name.toLowerCase().replace(/\s+/g, "-");
-            const itemPath = parentPath ? `${parentPath}/${itemSlug}` : `/docs/${itemSlug}`;
+            const itemSlug = item.href ? item.href : item.name.toLowerCase().replace(/\s+/g, "-");
+            const itemPath = item.href ? `/docs${item.href}` : (parentPath ? `${parentPath}/${itemSlug}` : `/docs${itemSlug}`);
             
             if (pathname === itemPath) {
               currentSectionId = section.id;
@@ -190,7 +229,45 @@ export default function Sidebar({
       setExpandedSectionId(currentSectionId);
     }
     setExpandedItems(newExpandedItems);
+
+    // Auto-scroll to the active item after a short delay to allow for expansion
+    setTimeout(() => {
+      const activeItem = document.querySelector('.sidebar-active-item');
+      const sidebarContainer = document.querySelector('aside.w-64.bg-gray-900');
+      
+      if (activeItem && sidebarContainer) {
+        // Get the position of the active item relative to the sidebar container
+        const activeItemRect = activeItem.getBoundingClientRect();
+        const sidebarRect = sidebarContainer.getBoundingClientRect();
+        
+        // Calculate the scroll position needed to center the active item
+        const itemTop = activeItemRect.top - sidebarRect.top + sidebarContainer.scrollTop;
+        const itemHeight = activeItemRect.height;
+        const containerHeight = sidebarContainer.clientHeight;
+        
+        // Calculate the target scroll position to center the item
+        const targetScrollTop = itemTop - (containerHeight / 2) + (itemHeight / 2);
+        
+        // Smooth scroll within the sidebar container only
+        sidebarContainer.scrollTo({
+          top: Math.max(0, targetScrollTop),
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   }, [pathname, navigationSections]);
+
+  if (isLoading) {
+    return (
+      <aside className="w-64 bg-gray-900 text-white overflow-y-auto h-[calc(100vh-4rem)] sticky top-16">
+        <nav className="p-4">
+          <div className="flex items-center justify-center h-32">
+            <div className="text-gray-400">Loading navigation...</div>
+          </div>
+        </nav>
+      </aside>
+    );
+  }
 
   return (
     <aside className="w-64 bg-gray-900 text-white overflow-y-auto h-[calc(100vh-4rem)] sticky top-16">
@@ -223,7 +300,7 @@ export default function Sidebar({
             </div>
             {expandedSectionId === section.id && (
               <ul className="space-y-1.5  ml-2">
-                {section.items.map((item, itemIndex) => (
+                {section.items.map((item: NavigationItem, itemIndex: number) => (
                   <NavigationItemComponent
                     key={itemIndex}
                     item={item}

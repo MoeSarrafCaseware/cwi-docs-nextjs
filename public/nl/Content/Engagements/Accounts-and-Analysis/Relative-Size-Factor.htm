@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Relatieve groottefactor</h1>
+        <p>Deze analyse identificeert afwijkingen waarbij de grootste hoeveelheid voor een subset in een bepaalde sleutel buiten de norm voor die subset valt. Een sleutel is een specifiek veld of combinatie van velden die worden gebruikt om gegevens te groeperen in subsets voor analyse.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Uitschieters of ongebruikelijke patronen</p>
+            </li>
+            <li>
+                <p>Transacties die aanzienlijk afwijken van de norm</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden worden gebruikt voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>Referentieveld(en)</b> - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld <b>Entry ID</b> voor de grootboekdataset. Deze kolommen maken geen deel uit van het resultaat, maar worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Dit veld is al gedefinieerd in de test en kan niet worden gewijzigd.</p>
+            </li>
+            <li>
+                <p><b>Numeriek veld</b> - Het veld dat gebruikt wordt om de relatieve grootte factor (RSF) te berekenen.</p>
+            </li>
+            <li>
+                <p><b>Een of meer</b> velden - Een of meer velden die worden gebruikt om de subsets te maken waarop de RSF wordt gegenereerd.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om deze test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>RSF Factor</b> - Voer het veelvoud in tussen het grootste en het op één na grootste bedrag in de subset. Als de RSF-factor bijvoorbeeld is ingesteld op twee, dan moet de grootste hoeveelheid twee keer zo groot zijn als de op één na grootste om te worden geselecteerd.</p>
+            </li>
+            <li>
+                <p><b>Kleine bedragen negeren</b> - Selecteer of kleine bedragen moeten worden uitgesloten.</p>
+            </li>
+            <li>
+                <p><b>Klein bedrag</b> - Als je hebt geselecteerd om kleine bedragen te negeren, voer dan de waarde in die wordt beschouwd als de minimumwaarde die moet worden meegenomen in de test. Als je bijvoorbeeld $100 invoert, dan worden alle transacties van minder dan $100 uitgesloten van de analyse.</p>
+            </li>
+            <li>
+                <p><b>Positieve of negatieve waarden</b> - Selecteer of de test op positieve of negatieve waarden moet worden uitgevoerd.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p>De enige configuratie die voor deze test beschikbaar is, is <b>Relatieve grootteklassefactor</b>. Deze analyse identificeert afwijkingen waarbij de grootste hoeveelheid voor een subset in een bepaalde sleutel buiten de norm voor die subset valt.</p>
+        <h2>Technische specificaties</h2>
+        <p class="note"><b>Let op:</b> Deze technische specificaties zijn gebaseerd op de selectie van positieve getallen. Voor negatieve getallen wordt het kleinste getal beschouwd als het grootste getal voor de volgende stappen.</p>
+        <p>Wanneer je de Zoekwoorden analytische test uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste.</p>
+                <p class="note"><b>Let op:</b> Filters zijn momenteel nog niet beschikbaar en zullen in een latere versie worden toegevoegd.</p>
+            </li>
+            <li>
+                <p>Valideer dat een bedragveld is geselecteerd.</p>
+            </li>
+            <li>
+                <p>Valideer een of meer velden (behalve het bedrag) die zullen worden gebruikt voor het maken van de subsets.</p>
+            </li>
+            <li>
+                <p>Vat het bestand samen op basis van de velden die zijn geselecteerd voor de subset, deze velden moeten op volgorde van selectie staan, de samenvatting moet het aantal records per subset bevatten. Voer de selectie alleen uit op negatieve of positieve waarden op basis van de vlag die aangeeft op welk type waarden de analyse moet worden uitgevoerd.</p>
+            </li>
+            <li>
+                <p>Extraheer alle records waarin het aantal records groter is dan 1 (dit sluit alle subsets uit waarin er slechts één transactie is, voor deze analyse heb je twee of meer transacties per subset nodig).</p>
+            </li>
+            <li>
+                <p>Koppel het bestand dat in stap 6 is gemaakt terug met het originele bestand door de geselecteerde subsetvelden. Het originele bestand moet ook worden gefilterd op het veld bedrag, afhankelijk van de positieve of negatieve vlag. Als de vlag positief is, moet het filter bedrag &gt; 0 zijn en als de vlag negatief is, moet het bedrag &lt; 0 zijn. Deze stap is het maken van een bestand met alle transacties die deel zullen uitmaken van de RSF-analyse.</p>
+            </li>
+            <li>
+                <p>Extraheer de top twee overgangen voor elke subset in stap 7. Neem alleen de subsetveld(en), het bedragveld en de recordsleutel op.</p>
+            </li>
+            <li>
+                <p>Extraheer uit stap 8 de toprecord op bedrag voor elke subset.</p>
+            </li>
+            <li>
+                <p>Hernoem het bedragveld in stap 8 in <b>Largest Amt</b>.</p>
+            </li>
+            <li>
+                <p>Haal uit stap 7 alle transacties behalve die in stap 6 (bovenste records). Dit geeft een lijst met transacties die de transactie met de hoogste waarde uitsluit.</p>
+            </li>
+            <li>
+                <p>Haal uit stap 11 de transactie met de grootste waarde per unieke subset, dit geeft de op één na grootste transactie voor de subsets.</p>
+            </li>
+            <li>
+                <p>Vanaf stap 11 hernoem je het veld Bedrag naar <b>Tweede grootste bedrag</b>.</p>
+            </li>
+            <li>
+                <p>Bereken vanaf stap 9 de gemiddelde waarde voor elke unieke sleutel. Dit gemiddelde zal de grootste hoeveelheid uitsluiten voor de unieke subset die in stap 9 werd geëxtraheerd.</p>
+            </li>
+            <li>
+                <p>Hernoem het veld Gemiddelde waarde in stap 14 in <b>Gemiddelde X Grootste</b>.</p>
+            </li>
+            <li>
+                <p>Combineer de transacties uit stap 9 (hoogste waarden) en stap 12 (op één na hoogste waarden) samen.</p>
+            </li>
+            <li>
+                <p>Combineer de transacties uit stap 16 (Topwaarde en Tweede grootste waarde) met stap 15 de Gemiddelde X Grootste. Het resultaat zou nu de subsetkolommen, kolom Grootste bedrag, kolom Tweede grootste bedrag, kolom Gemiddelde X grootste en kolom Aantal moeten bevatten.</p>
+            </li>
+            <li>
+                <p>Maak de kolom Relatieve Groottefactor op basis van Grootste Bedrag / Tweede Grootste Bedrag, gebruik over het algemeen 4 decimalen voor weergave.</p>
+            </li>
+            <li>
+                <p>Extraheer alle transacties die gelijk zijn aan of groter zijn dan de RSF-factorparameter. Als de parameter is dat kleine bedragen moeten worden genegeerd, sluit dan ook alle transacties uit waarbij de grootste Bedrag-waarde kleiner is dan de kleine Bedrag-waarde die in de parameters is opgenomen.</p>
+            </li>
+            <li>
+                <p>Extraheer de RSF-gerelateerde transacties.</p>
+            </li>
+            <li>
+                <p>Voeg het originele bronbestand samen met de RSF-bestandstest. De join zou alleen worden gematcht en de match zou worden gebaseerd op de velden die zijn geselecteerd voor de subset, samen met het bedragveld dat overeenkomt met het veld met het grootste bedrag.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Steekproef selectie</h1>
+        <p>Steekproefselectie is het proces van het maken van een subset van de totale beschikbare transacties om de gegevens te analyseren en conclusies te trekken. Als voorbeeldselectie is ingeschakeld in uw product, is de optie <b>Voorbeeldselectie</b> beschikbaar op het tabblad <b>Transacties</b> op de <b>gegevenspagina</b> . <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">De transacties van</a> je <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">klant</a> worden de populatie waaruit je een steekproef kunt genereren.</p>
+        <p><img src="../../Resources/Images/sample-selection.png" style="width: 842px;height: 293px;" alt="De optie Steekproefselectie op het tabblad Transacties van de gegevenspagina." /></p>
+        <p>Er zijn vier methodes om monsters te selecteren waaruit je kunt kiezen:</p>
+        <ul>
+            <li>
+                <p><b>Willekeurig</b> - Transacties worden willekeurig geselecteerd.</p>
+            </li>
+            <li>
+                <p><b>Systematisch</b> - Transacties worden geselecteerd vanuit een willekeurig startpunt, maar met een vast, periodiek interval. Het interval wordt bepaald door de totale populatiegrootte gedeeld door de steekproefgrootte.</p>
+            </li>
+            <li>
+                <p><b>Monetaire Eenheid</b> - Transacties worden geselecteerd vanuit een willekeurig startpunt, maar gebaseerd op een interval van een bedrag. Het interval wordt bepaald door de absolute hoeveelheid van de populatie gedeeld door de steekproefgrootte.</p>
+            </li>
+            <li>
+                <p><b>Handmatig</b> - Transacties worden handmatig geselecteerd.</p>
+            </li>
+        </ul>
+        <h2>Een steekproef genereren met de Random-methode</h2>
+        <p>De willekeurige methode genereert een steekproef op basis van een willekeurige selectie van transacties.</p>
+        <p><b>Een steekproef genereren met de methode Willekeurig:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Steekproefselectie</b>op het tabblad <b>Transacties</b> op de <b>gegevenspagina</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de <b>willekeurige</b> methode.</p>
+                <p><img src="../../Resources/Images/sample-random.png" alt="Selecteer de willekeurige methode." /></p>
+            </li>
+            <li>
+                <p>Voer de gewenste <b>steekproefgrootte</b> of <b>het percentage</b>in.</p>
+                <p>U kunt een waarde tot 65.000 invoeren.</p>
+            </li>
+            <li>
+                <p>Voer optioneel een <b>drempel Hoge hoeveelheid</b> in als je bepaalde hoge hoeveelheden wilt opnemen in het resultaat van de steekproefselectie.</p>
+                <p>Als je bijvoorbeeld een hoge drempelwaarde van $500 invoert, dan worden transacties groter dan of gelijk aan (&gt;=) $500 (tot een maximum van 1000 transacties) uitgesloten van de steekproefpopulatie en toegevoegd aan het resultaat van de steekproefselectie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Let op:</b> Als je een <b>drempelwaarde voor een hoog bedrag</b>hebt ingevoerd, wordt het sterpictogram (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) weergegeven naast de rijen die zijn opgenomen in de steekproef vanwege de drempelwaarde.</p>
+                <p><img src="../../Resources/Images/sample-high-value-threshold.png" alt="Transacties met hoge bedragen (gebaseerd op een drempel van 10) zijn opgenomen in het resultaat van de steekproefselectie, gemarkeerd met het sterpictogram." /></p>
+            </li>
+        </ol>
+        <h2>Een steekproef genereren met de systematische methode</h2>
+        <p>De systematische methode genereert een steekproef op basis van:</p>
+        <ul>
+            <li>
+                <p>Een vast periodiek interval dat wordt bepaald door het aantal totale transacties in de populatie te delen door het aantal transacties in de steekproefomvang</p>
+            </li>
+            <li>
+                <p>Een willekeurig startpunt dat een rij is tussen één en de intervalwaarde</p>
+            </li>
+        </ul>
+        <p>Als er bijvoorbeeld 500 transacties zijn in de populatie en de steekproefgrootte is 50, dan is het interval 500/50 = 10 en is het startpunt een willekeurige rij tussen rij één en tien. Als de eerste rij die geselecteerd wordt rij 2 is, dan is de volgende rij 12, dan rij 22 enzovoort tot het einde van de populatie.</p>
+        <p><b>Een steekproef genereren met de systematische methode:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Steekproefselectie</b>op het tabblad <b>Transacties</b> op de <b>gegevenspagina</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de <b>Systematische</b> methode.</p>
+                <p><img src="../../Resources/Images/sample-systematic.png" alt="Selecteer de Systematische methode." /></p>
+            </li>
+            <li>
+                <p>Voer de gewenste <b>steekproefgrootte</b> of het percentagein.</p>
+                <p>U kunt een waarde tot 65.000 invoeren. The fixed periodic interval is calculated by dividing the population size by the sample size.</p>
+            </li>
+            <li>
+                <p>Voer optioneel een <b>drempel Hoge hoeveelheid</b> in als je bepaalde hoge hoeveelheden wilt opnemen in het resultaat van de steekproefselectie.</p>
+                <p>Als je bijvoorbeeld een hoge drempelwaarde van $500 invoert, dan worden transacties die groter of gelijk zijn aan (&gt;=) $500 (tot een maximum van 1000 transacties) uitgesloten van de populatie en toegevoegd aan het resultaat van de steekproefselectie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Let op:</b> Als je een <b>drempelwaarde voor een hoog bedrag</b>hebt ingevoerd, wordt het sterpictogram (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) weergegeven naast de rijen die zijn opgenomen in de steekproef vanwege de drempelwaarde.</p>
+            </li>
+        </ol>
+        <h2>Een steekproef genereren met de Monetaire Eenheidsmethode</h2>
+        <p>De Monetaire Eenheid methode genereert een steekproef gebaseerd op:</p>
+        <ul>
+            <li>
+                <p>Een interval van een hoeveelheid bepaald door de absolute hoeveelheid van de populatie te delen door de steekproefgrootte</p>
+            </li>
+            <li>
+                <p>Een willekeurig startbedrag dat een waarde is tussen $1 en het intervalbedrag</p>
+            </li>
+            <li>
+                <p>Een beginpunt dat de eerste rij is in de populatie met een cumulatief absoluut saldo groter dan of gelijk aan het beginbedrag.</p>
+            </li>
+            <li>
+                <p>De volgende geselecteerde rijen zijn die met cumulatieve absolute saldi groter dan of gelijk aan het intervalbedrag plus het bedrag voor de eerder geselecteerde rij</p>
+            </li>
+        </ul>
+        <p>Bij deze methode wordt elke individuele dollar in de populatie beschouwd als een steekproefeenheid, dus transacties met een hogere waarde hebben een proportioneel hogere kans om geselecteerd te worden. Transacties kunnen meerdere keren in de selectie worden opgenomen als de transactiebedragen groter zijn dan het intervalbedrag.</p>
+        <p>Als je bijvoorbeeld een populatie hebt met een totaal absoluut bedrag van $300.000 en je voert een steekproefgrootte van 100 in, dan is het interval van het bedrag 300000/100 = $3000. Het startbedrag is een willekeurig bedrag tussen $1 en $3000. Het startpunt is de eerste rij in de populatie met een cumulatief absoluut saldo groter dan of gelijk aan het startbedrag. Laten we zeggen dat het geselecteerde startbedrag $2125 is en rij 1 een saldo heeft van $500 en rij 2 een cumulatief absoluut saldo van $2625. De eerste rij die in dit geval wordt geselecteerd is rij 2. De volgende geselecteerde rij is de rij met een cumulatief absoluut saldo groter dan of gelijk aan $5125 ($2125 + $3000) enzovoort tot het einde van de populatie.</p>
+        <p>Vergeet niet dat transacties meerdere keren in de selectie kunnen worden opgenomen. Laten we zeggen dat de tweede geselecteerde rij een cumulatief absoluut saldo van $10.250 heeft. De volgende geselecteerde rij daarna is de rij met een cumulatief absoluut saldo groter dan of gelijk aan $8125 ($5125 + $3000). Aangezien de huidige geselecteerde rij voldoet aan de selectiecriteria, wordt de transactie opnieuw in de selectie opgenomen. Dat wil zeggen, de rij met het cumulatieve absolute saldo van $10.250 wordt geselecteerd voor de intervallen van $5125 en $8125.</p>
+        <p>De kolom <b>Interval geeft aan</b> hoe vaak een transactie is geselecteerd.</p>
+        <p><img src="../../Resources/Images/sampling-interval-occurence.png" alt="De kolom Interval voorvallen." /></p>
+        <p><b>Om een steekproef te genereren met de Monetaire Eenheid methode:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Steekproefselectie</b>op het tabblad <b>Transacties</b> op de <b>gegevenspagina</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de Geldeenheid Steekproef</p>
+                <p><img src="../../Resources/Images/sample-monetary-unit.png" alt="Selecteer de Geldeenheid Steekproef" /></p>
+            </li>
+            <li>
+                <p>Voer de gewenste <b>steekproefgrootte</b> of het percentagein.</p>
+                <p>U kunt een waarde tot 65.000 invoeren. De hoeveelheid wordt berekend door de absolute hoeveelheid van de populatie te delen door de steekproefgrootte.</p>
+            </li>
+            <li>
+                <p>Voer optioneel een <b>drempel Hoge hoeveelheid</b> in als je bepaalde hoge hoeveelheden wilt opnemen in het resultaat van de steekproefselectie.</p>
+                <p>Als je bijvoorbeeld een hoge drempelwaarde van $500 invoert, dan worden transacties die groter of gelijk zijn aan (&gt;=) $500 (tot een maximum van 1000 transacties) uitgesloten van de populatie en toegevoegd aan het resultaat van de steekproefselectie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>GENERATE</b>.</p>
+                <p class="note inline"><b>Let op:</b> Als je een <b>drempelwaarde voor een hoog bedrag</b>hebt ingevoerd, wordt het sterpictogram (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) weergegeven naast de rijen die zijn opgenomen in de steekproef vanwege de drempelwaarde.</p>
+            </li>
+        </ol>
+        <h2>Een monster genereren met de handmatige methode</h2>
+        <p>De handmatige methode genereert een steekproef op basis van handmatige selectie van transacties.</p>
+        <p><b>Een monster genereren met de handmatige methode:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Steekproefselectie</b>op het tabblad <b>Transacties</b> op de <b>gegevenspagina</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de methode <b>Handmatig</b> .</p>
+                <p><img src="../../Resources/Images/sample-manual.png" alt="Selecteer de methode Handmatig." /></p>
+            </li>
+            <li>
+                <p>Schakel in de lijst met transacties het selectievakje in voor elke transactie die je in de steekproef wilt opnemen.</p>
+                <p><img src="../../Resources/Images/sample-manual-selection.png" alt="Schakel het selectievakje voor een transactie in om deze op te nemen in de steekproef." /></p>
+                <p>Je kunt de kolom <b>Boekingsdatum</b> of <b>Bedrag</b> selecteren om de lijst te sorteren op boekingsdatum of bedrag terwijl je selecties maakt. Er wordt een pijl naast de kolom weergegeven om aan te geven dat de lijst oplopend (<img src="../../Resources/Images/icon-sample-filter-ascend.png" style="vertical-align: text-bottom;" />) of aflopend (<img src="../../Resources/Images/icon-sample-filter-descend.png" style="vertical-align: text-bottom;" />) is gesorteerd. Merk op dat je selecties niet worden gewist als je sorteert. Selecteer de knop <b>Selectie wissen</b> om je selecties te wissen.</p>
+            </li>
+        </ol>
+        <h2>Een monster exporteren</h2>
+        <p>Nadat je een gegevensmonster hebt gegenereerd, kun je het monster exporteren naar een CSV-bestand of kopiëren naar het klembord.</p>
+        <p><b>Een voorbeeld exporteren:</b></p>
+        <ol>
+            <li>
+                <p>Genereer een monster.</p>
+            </li>
+            <li>
+                <p>Klik op de knop <b>Exporteren</b>.</p>
+                <p><img src="../../Resources/Images/sample-export.png" alt="Selecteer de knop EXPORT nadat je een monster hebt gegenereerd." /></p>
+            </li>
+            <li>
+                <p>Selecteer de exportmethode in het dialoogvenster Sample Export.</p>
+                <p>Als je <b>Exporteren naar CSV</b>selecteert, voer dan een naam in voor het CSV-bestand.</p>
+                <p><img src="../../Resources/Images/sample-export-dialog.png" alt="Selecteer een exportmethode in het dialoogvenster Sample Export. Als je Exporteren naar CSVselecteert, voer dan een naam in voor het CSV-bestand." /></p>
+            </li>
+            <li>
+                <p>Selecteer de <b>aard van de test</b> in het vervolgkeuzemenu.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>CONTINUE</b>.</p>
+                <p>Het monster wordt geëxporteerd als CSV-bestand of gekopieerd naar het klembord op basis van je selectie.</p>
+            </li>
+        </ol>
+    </body>
+</html>

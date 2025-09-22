@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Transactiegegevens beschreven</h1>
+        <p>Als je grootboektransacties <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importeert</a> vanuit een CSV- of Excel-bestand, moet je velden toewijzen, zodat de transactiegegevens goed worden weergegeven in de overeenkomst. Bovendien zijn bepaalde velden consistent over verschillende regels binnen een invoer. Tijdens het importeren worden deze velden apart opgeslagen en gevuld met de waarden van de eerste invoerregel binnen de invoer. Zie <a href="Understand-genledger-data.htm#Gen-ledger-data-storage">Hoe grootboekgegevens worden opgeslagen bij het importeren voor meer informatie</a>.</p>
+        <p>Dit onderwerp beschrijft de velden binnen de categorie <b>TRANSACTIEDETAILS</b> die verschijnen in de grootboekdataset.</p>
+        <p>Merk op dat sommige velden verplicht zijn om goed te functioneren bij specifieke tests voor gegevensanalyse. Zie voor meer informatie <a href="CSV-transaction-file-requirements.htm#Mandator2">Verplichte velden voor gegevensanalyse</a>.</p>
+        <h2>Toegangsnummer<code>(entry_number</code>)</h2>
+        <p>Een opeenvolgend nummer dat uniek is voor iedere post.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Groepeert transactieregels in transacties (als Entry ID niet is toegewezen).</li>
+                <li>Visuele identificatie voor transacties.</li>
+                <li>Als Entry Number en Entry ID niet zijn toegewezen, krijgt elke transactie een willekeurige unieke identifier.</li>
+                <li>In de Sequence Gaps AnalyticsAI-test.</li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Als Entry ID niet is toegewezen, mogen er geen lege Entry Number-cellen zijn.</p>
+                </li>
+                <li>
+                    <p>Als Entry ID is toegewezen, wordt alleen de eerste entry nummerwaarde voor elke unieke Entry ID geïmporteerd.</p>
+                </li>
+            </ul>
+        </p>
+        <h2>BEDRAG	Bedrag</h2>
+        <p>Bedrag van de transactieregel. Dit kan een positieve waarde zijn voor debet en een negatieve waarde voor credit.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Afstemming/volledigheid van gegevens.</li>
+                <li>In deze AnalyticsAI-tests:</li>
+                <ul>
+                    <li>Dubbele boekingen</li>
+                    <li>Eindigt op 999</li>
+                    <li>Hoge bedragen</li>
+                    <li>Afgeronde bedragen</li>
+                    <li>2-cijferige Benford&apos;s</li>
+                    <li>Nulbedragen</li>
+                </ul>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Positieve en negatieve waarden kunnen in beide worden opgenomen:</li>
+                <ul>
+                    <li>Eén kolom met negatieve waarden in een standaard negatieve opmaak. Voorbeelden zijn:</li>
+                    <ul>
+                        <li>-4000,00</li>
+                        <li>(4000,00)</li>
+                        <li>4000,00-</li>
+                    </ul>
+                    <li>Aparte kolommen met de tags &quot;debet&quot; en &quot;credit&quot;.</li>
+                </ul>
+                <li>Komma&apos;s of punten worden geïnterpreteerd als decimale scheidingstekens.</li>
+            </ul>
+        </p>
+        <h2>Detailcommentaar<code>(detail_commentaar</code>)</h2>
+        <p>Omschrijving van de boeking.</p>
+        <h3>Instructies</h3>
+        <p>In deze AnalyticsAI-tests:<ul><li>Ontbrekende omschrijving</li><li>Specifieke trefwoorden</li></ul></p>
+        <h2>Posting Date (<code>posting_date</code>)</h2>
+        <p>Ingangsdatum - de datum waarop de post is geboekt (gevalideerd) in het grootboek, de aanmaakdatum is hierop niet van toepassing.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Koppelt transacties aan een datum en fiscale periode.</li>
+                <li>In deze AnalyticsAI-tests:<ul><li>Dubbele boekingen</li><li>Ongebruikelijke dagen</li></ul></li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <p>Om in de lijst met transacties te worden weergegeven, moeten de transacties binnen het fiscale jaar vallen zoals ingesteld in de opdracht.</p>
+            <p>De datumnotatie moet correct zijn ingesteld:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><p><![CDATA[					
+						]]></p>
+        </p>
+        <h2>Plaatsingsstatus<code>(posting_status</code>)</h2>
+        <p>Geeft aan of de post al geboekt is of niet.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Transacties waarvan <b>de Boekingsstatus</b> is ingesteld op <code>Niet-Geboekt</code> worden niet gebruikt voor het berekenen van de som van transacties voor gegevensvolledigheidscontroles.</li>
+                <li>Transacties waarvan <b>de Boekingsstatus</b> is ingesteld op <code>geboekt</code> worden gebruikt in AnalyticsAI-tests.</li>
+            </ul>
+        </p>
+        <p>Voor meer informatie, zie <a href="../../Explore/AnalyticsAI/Analytics-ai-test-results.htm">AnalyticsAI testresultaten</a>.</p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Minder dan 2.500 unieke waarden. Deze waarden moeten gelabeld zijn aan een van:</p>
+                </li>
+                <ul>
+                    <li>Geboekt</li>
+                    <li>Niet geboekt</li>
+                </ul>
+            </ul>
+        </p>
+        <h2>Document Type (<code>document_type</code>)</h2>
+        <p>Opgesomd veld dat het originele brondocument beschrijft, met cheque, debetnota, creditnota, financieringskosten, factuur, bestelling-klant, bestelling-verkoper, betaling-overig, herinnering, tegata, voucher, verzending, ontvangst, handmatige correctie, andere.</p>
+        <h3>Instructies</h3>
+        <p>
+            <ul>
+                <li>Transacties filteren op basis van journaalsoort.</li>
+                <li>In de Unusual Users AnalyticsAI-test.</li>
+            </ul>
+        </p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Minder dan 2.500 unieke waarden.</li>
+                <li>De gegevens in de betreffende kolom in het transactie-importbestand (het CSV-bestand) moeten worden toegewezen aan de onderstaande <code>document_type</code> waarden:<ul><li>Grootboekposten</li><li>Kasuitgaven</li><li>Kasontvangsten</li><li>Verkoopfacturen</li><li>Inkoopfacturen</li><li>Loonjournaalposten</li><li>AR - Aanpassingen debiteuren (crediteringen, retouren, andere aanpassingen)</li><li>AP - Aanpassingen Crediteuren (crediteringen, retouren, andere aanpassingen)</li><li>Correcties Vaste activa</li><li>Aanpassing van de voorraden</li><li>Verkoopovereenkomsten</li><li>Verkooporders</li><li>Inkoopovereenkomsten</li><li>Inkoopaanvragen</li><li>Inkooporders</li><li>Verzonden goederen</li><li>Ontvangen goederen</li><li>OT - Andere</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

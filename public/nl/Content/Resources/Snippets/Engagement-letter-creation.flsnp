@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2>Tekst en veldplaatshouders vervangen</h2>
+        <p>De inhoud van de brief kan plaatshouders bevatten voor bepaalde tekst en velden die je moet vervangen door specifieke informatie over je opdracht, organisatie of klant.</p>
+        <p>De indicator <b>Plaatshouders</b> bovenaan het document houdt je voortgang bij met plaatshouders. Het toont het aantal placeholders dat nog niet is vervangen door echte informatie. Je kunt ook de indicator selecteren om naar de volgende lege plaatsaanduiding te navigeren.</p>
+        <p style="font-weight: bold;">Een plaatshouder voor tekst vervangen:</p>
+        <ol>
+            <li>
+                <p>Selecteer de plaatshouder voor de tekst.</p>
+                <p class="tip"><b>Tip:</b> De blauw gemarkeerde tekst in het document is een plaatshouder.</p>
+            </li>
+            <li>
+                <p>Vervang in het pop-upvenster <b>Tekst plaatshouder</b> de tekst van de plaatshouder en selecteer <b>Opslaan.</b></p>
+                <p class="note"><b>Let op</b>: Als u de tekst van de plaatsaanduiding niet wilt wijzigen, moet u de plaatsaanduiding selecteren en <b>Opslaan</b> selecteren in het dialoogvenster Tekstplaatsaanduiding, zodat deze wordt verwijderd uit de telling bij de indicator <b>Plaatsaanduidingen</b> .</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Een veldplaatshouder vervangen:</p>
+        <ol>
+            <li>
+                <p>Selecteer de plaatshouder voor de tekst.</p>
+                <p class="tip"><b>Tip:</b> De blauwe vervolgkeuzervelden in het document zijn veldplaatshouders.</p>
+            </li>
+            <li>
+                <p>Selecteer een waarde of geef een datum op zoals aangegeven in het plaatshouderveld.</p>
+            </li>
+        </ol>
+        <h2>Woordenlijst en dynamische tekst van opdracht wijzigen</h2>
+        <p class="note"><b>Let op</b>: Je kunt een bestaande woordenlijstterm of een dynamische tekstuitvoer alleen wijzigen als de override optie is ingeschakeld in je product.</p>
+        <p>Een verklarende woordenlijst bevat termen. Termen zijn woorden en zinnen die in het hele product kunnen worden hergebruikt. Als een term wordt gewijzigd, wordt hij overal gewijzigd waar de auteur hem definieert.</p>
+        <p>Dynamische tekstvelden veranderen als aan bepaalde voorwaarden wordt voldaan. Als de klant bijvoorbeeld &apos;Ja&apos; antwoordt op een procedure in een checklist, dan verschijnt &apos;Akkoord&apos; in het dynamische tekstveld.</p>
+        <p>Je documenten kunnen termen uit de woordenlijst of dynamische tekstvelden bevatten. Afhankelijk van je product kun je woordenlijsten en dynamische tekstuitvoer uitschakelen.</p>
+        <p><b>Een begrippenlijst of dynamische tekst wijzigen:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer het tekstgebied van het document waar je wijzigingen wilt aanbrengen.</p>
+                <p>Grijs gemarkeerde gebieden zijn ofwel woordenlijsttermen of dynamische tekstvelden.</p>
+            </li>
+            <li>
+                <p>Selecteer de woordenlijstterm of dynamische tekst om het dialoogvenster <b>Data Link</b> te openen.</p>
+                <p>Als je een woordenlijstterm selecteert, kun je informatie selecteren (<img src="../Images/icon-information-blue-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) om het aantal plaatsen te zien waar die term wordt gebruikt.</p>
+            </li>
+            <li>
+                <p>Wijzig de <b>uitvoer</b> naar wens en selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>Als aan de <b>Uitvoervoorwaarde</b> wordt voldaan, verandert de tekst op alle plaatsen in de overeenkomst. Als na de wijziging aan een andere voorwaarde wordt voldaan, verandert de <b>uitvoer</b> in de geconfigureerde uitvoertekst voor die voorwaarde.</p>
+        <h2>Bedrijfslogo invoegen</h2>
+        <p>Je kunt het bedrijfslogo invoegen in elk tekstgebied of in de kop- of voettekst van het document.</p>
+        <p style="font-weight: bold;">Het bedrijfslogo invoegen:</p>
+        <ol>
+            <li>
+                <p>Select the text field where you want to insert the logo.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Plaatshouder logo invoegen</b> (<img src="../Images/icon-insert-logo.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) op de werkbalk Opmaak.</p>
+            </li>
+            <p>Het bedrijfslogo wordt toegevoegd in het tekstveld.</p>
+            <p>Als er geen logo beschikbaar is in de bedrijfssjabloon, verschijnt er een plaatshouder met een link naar Cloud zodat je <a href="../../Engagements/Template-and-Authoring/Add-a-firm-logo-and-letterhead.htm">een logo kunt uploaden</a>.</p>
+        </ol>
+        <p class="note"><b>Let op:</b> Je kunt alleen een bedrijfslogo uploaden in de bedrijfssjabloon. Om toegang te krijgen tot de firmasjabloon moet je de rol <b>Settings Admin</b> of een vergelijkbare rol hebben. Zie voor meer informatie <a href="../../Setup/Security/Built-in-roles.htm">Ingebouwde rollen</a> en <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Beveiligingsrollen toewijzen</a>.</p>
+        <h2><a name="Add9"></a>Een pagina-einde toevoegen</h2>
+        <p>Je kunt overal in het document een pagina-einde invoegen om handmatig aan te geven waar een bepaalde pagina eindigt en een nieuwe begint. Hiermee kun je de paginaopmaak voor het afdrukken regelen.</p>
+        <p>Om een pagina-einde toe te voegen, selecteer je <b>+ Sectie | Pagina-einde toevoegen</b>. Een pagina-einde wordt ingevoegd met een standaardtitel <b>Pagina-einde</b>. Je kunt de standaardtitel selecteren om deze te wijzigen. Merk op dat deze titel geen deel uitmaakt van de inhoud van het document.</p>
+        <p class="note"><b>Let op:</b> U kunt geen pagina-einde toevoegen in een leeg groeperingsgebied. Je moet tekstgebieden of begeleidingssecties toevoegen.</p>
+        <p>Om een pagina-einde te verwijderen, selecteert u <b>Instellingen (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Verwijderen.</b></p>
+        <h2><a name="Set2"></a>Set up the print options</h2>
+        <p>De knop Afdrukken (<img src="../Icons/print-financial-statement-inline1.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) converteert het document naar een PDF-indeling zodat gebruikers het kunnen afdrukken of opslaan. Let op: begeleidingssecties worden nooit opgenomen in de PDF.</p>
+        <p style="font-weight: bold;">Afdrukopties instellen:</p>
+        <ol>
+            <li>
+                <p>Ga naar de Documentmap en selecteer <b>Meer acties (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Afdrukinstellingen.</b></p>
+            </li>
+            <p>Als u verschillende instellingen wilt voor een pagina-einde, een groeperingsgebied of de inhoudsopgave, selecteert u <b>Instellingen (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Afdrukinstellingen bewerken.</b></p>
+            <li>
+                <p>Geef de voorkeursinstellingen op voor <b>Briefhoofd</b>, <b>Paginaformaat</b> en <b>Marges.</b></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Liggend</b> om de paginastand te wijzigen.</p>
+            </li>
+            <p>The default is <b>Portrait.</b></p>
+            <li>
+                <p>Schakel het selectievakje <b>Tellen in paginanummering</b> uit als je wilt dat de paginanummering begint na de pagina <b>met de inhoudsopgave</b> .</p>
+            </li>
+        </ol>
+    </body>
+</html>

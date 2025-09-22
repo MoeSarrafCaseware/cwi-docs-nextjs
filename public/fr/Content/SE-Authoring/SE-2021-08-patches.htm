@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2021-08 rustines</h1>
+        <p>Voici un résumé des correctifs qui ont été déployés pour SE 2021-08.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-note-on-version-access.flsnp" /><h2>2021-08-U1</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 681</b></p>
+        <p>Voici la liste des problèmes qui ont été corrigés avec le déploiement de SE 2021-08-U1.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><ul>
+            <li>
+                <p>États financiers</p>
+                <ul>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29088">[SE-29088</a>] - Lorsque l&apos;arrondi est appliqué à un compte dans un tableau dynamique, les autres tableaux dynamiques qui incluent le compte ne sont pas mis à jour avec la valeur arrondie.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29229">[SE-29229</a>] - Amélioration des performances.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29163">[SE-29163</a>] - Dans les états financiers, les zéros ne s&apos;affichent pas comme des tirets lorsque l&apos;option <b>Afficher les zéros comme des tirets</b> est sélectionnée dans les paramètres du produit.</p>
+                    </li>
+                    <li>
+                        <p>[<a href="https://bugs.caseware.com/browse/SE-29113">SE-29113</a>] - Les sections d&apos;orientation ne s&apos;affichent pas dans les notes aux états financiers.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29119">[SE-29119</a>] - Lorsque les utilisateurs définissent des associations de notes pour les notes de niveau parent, l&apos;association ne s&apos;applique pas aux sous-notes correspondantes.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29284">[SE-29284</a>] - Lorsque les utilisateurs ouvrent un document PDF, les annotations ne s&apos;affichent pas et l&apos;option d&apos;ajout d&apos;annotations n&apos;est pas disponible.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-28920">[SE-28920</a>] - Dans les produits qui supportent plusieurs langues, lorsque les auteurs de cabinet marquent une langue comme inactive dans le modèle de cabinet, la langue n&apos;est plus visible pour l&apos;auteur de cabinet dans la liste des langues de contenu dans les paramètres du produit.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29161">[SE-29161</a>] |<a href="https://bugs.caseware.com/browse/SE-29329">[SE-29329</a>] - Les procédures de listes de contrôle dont le type de réponse est une <b>information sur l&apos;entité</b> et qui sont liées au champ du <b>type d&apos;</b> organisation affichent &quot;Non attribué&quot; comme réponse si le type d&apos;organisation est &quot;Société à responsabilité limitée (SARL)&quot;.</p>
+            </li>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-29226">SE-29226</a>] - Les documents externes sont supprimés des missions si un utilisateur tente de mettre à jour les propriétés du document en même temps qu&apos;un autre utilisateur remplace le document.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29231">[SE-29231</a>] - Lorsque les utilisateurs exportent des fichiers XBRL, les valeurs des tables de mouvement IFRS ne sont pas incluses dans l&apos;exportation, à moins que l&apos;utilisateur n&apos;ait ouvert les états financiers lorsqu&apos;il effectue l&apos;exportation.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29244">[SE-29244</a>] - Les utilisateurs ne peuvent pas utiliser la barre de défilement lors de l&apos;affichage de longs commentaires dans les requêtes.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29297">[SE-29297</a>] - Dans les produits qui supportent plusieurs langues, les noms de documents s&apos;affichent comme &quot;Sans titre&quot; dans le cas d&apos;utilisation suivant :</p>
+                <ol>
+                    <li>
+                        <p>Les utilisateurs changent la langue du contenu pour une langue autre que celle par défaut et téléchargent un fichier.</p>
+                    </li>
+                    <li>
+                        <p>Les utilisateurs passent ensuite à une autre langue de contenu.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29042">[SE-29042</a>] - Les modifications apportées à la section conclusion des listes de contrôle ne sont pas prises en compte lorsque les utilisateurs reportent une mission.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29050">[SE-29050</a>] - Dans les tableaux dynamiques, une erreur se produit lorsque les utilisateurs saisissent des valeurs non numériques dans des colonnes de type numérique. Le tableau dynamique ne peut pas être sauvegardé.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29084">[SE-29084</a>] - Les bordures des tableaux ne sont pas appliquées aux tableaux dynamiques dans les feuilles de calcul.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29218">[SE-29218</a>] - Lorsque les utilisateurs impriment des listes de contrôle, le PDF généré ne s&apos;affiche pas comme prévu. Les signatures des procédures dans la section conclusion ne sont pas alignées correctement.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29313">[SE-29313</a>] - Dans les produits qui supportent plusieurs langues, lorsque les utilisateurs changent la langue du contenu pour une langue autre que celle par défaut, les options de réponse de la liste de sélection dans les listes de contrôle ne s&apos;affichent pas.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29127">[SE-29127</a>] |<a href="https://bugs.caseware.com/browse/SE-29131">[SE-29131</a>] |<a href="https://bugs.caseware.com/browse/SE-29137">[SE-29137</a>] |<a href="https://bugs.caseware.com/browse/SE-29108">[SE-29108</a>] - Problèmes techniques identifiés après examen des journaux de production.</p>
+            </li>
+        </ul>
+        <h2>2021-08-U2</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 686</b></p>
+        <p>Voici la liste des problèmes qui ont été corrigés avec le déploiement de SE 2021-08-U2.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><ul>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29365">[SE-29365</a>] - Dans les notes aux états financiers, l&apos;option Insérer à partir de la bibliothèque n&apos;est pas disponible si les utilisateurs ont déjà ajouté toutes les notes cachées de niveau parent, même si des notes cachées de niveau inférieur sont disponibles dans la bibliothèque.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29484">[SE-29484</a>] - Dans les missions créées à partir d&apos;un report, les termes du glossaire de la mission qui ont été édités par les utilisateurs finaux dans le fichier de l&apos;année précédente ne sont pas reportés comme prévu.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29376">[SE-29376</a>] - Lorsque les utilisateurs importent des données depuis BGL Simple Fund 360, l&apos;écran d&apos;importation n&apos;affiche pas l&apos;entité BGL à partir de laquelle les données seront importées.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29334">[SE-29334</a>] - Lorsque les utilisateurs importent des données de balance de vérification, les données s&apos;affichent comme étant déséquilibrées si l&apos;un des soldes de compte comprend une notation exponentielle.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29449">[SE-29449</a>] - Si le contenu traduit n&apos;est pas disponible pour la langue de contenu sélectionnée, le contenu ne s&apos;affiche pas du tout au lieu de s&apos;afficher dans la langue par défaut.</p>
+            </li>
+        </ul>
+        <h2>2021-08-U5</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 690</b></p>
+        <p>Un problème a été corrigé lors du déploiement de la SE 2021-08-U5.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><p><a href="https://bugs.caseware.com/browse/SE-29885">[SE-29885</a>] - Amélioration des performances liées au développement de formulaires personnalisés.</p>
+        <h2>2021-08-U9</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 700</b></p>
+        <p>Voici la liste des problèmes qui ont été corrigés avec le déploiement de SE 2021-08-U9.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><ul>
+            <li>
+                <p>Tableaux dynamiques</p>
+                <ul>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29813">[SE-29813</a>] - Les étiquettes de diagnostic s&apos;affichent comme partiellement cachées et ne peuvent pas être modifiées.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29712">[SE-29712</a>] - L&apos;ajout d&apos;annotations à une ligne de tableau dynamique ne fonctionne pas comme prévu. Lorsque les utilisateurs actualisent ou quittent le site, l&apos;annotation n&apos;est pas sauvegardée.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29894">[SE-29894</a>] - Les décimales ne s&apos;affichent pas dans les colonnes de saisie.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29728">[SE-29728</a>] - Le menu <b>Modifier la taille de la police</b> ne s&apos;affiche pas comme prévu. Les utilisateurs ne peuvent pas accéder au menu pour sélectionner des options.</p>
+                    </li>
+                    <li>
+                        <p><a href="https://bugs.caseware.com/browse/SE-29852">[SE-29852</a>] - Les liens de données (fx) ne fonctionnent pas comme prévu lorsque les auteurs copient des tables dynamiques.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29826">[SE-29826</a>] - Les clients ne peuvent pas télécharger les fichiers téléchargés dans les documents de requête.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29918">[SE-29918</a>] - Les données fiscales de l&apos;année précédente ne s&apos;affichent pas dans les formulaires personnalisés.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29972">[SE-29972</a>] - Une erreur se produit lorsque les utilisateurs tentent d&apos;exporter des fichiers iXBRL. Les fichiers ne sont pas générés.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-23001">[SE-23001</a>] - Les liens de données (fx) avec des conditions de balance de vérification ne fonctionnent pas comme prévu si le paramètre de groupe financier pour la condition est un groupe de revenu net.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29317">[SE-29317</a>] - Dans les missions de consolidation, la page Données s&apos;affiche incorrectement comme étant déséquilibrée.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29474">[SE-29474</a>] - Dans les missions de consolidation, la page Données n&apos;affiche pas les noms corrects pour les entités subsidiaires.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29637">[SE-29637</a>] - Lorsque les utilisateurs créent des problèmes, il y a un délai entre la saisie de l&apos;utilisateur et l&apos;affichage du texte saisi dans la zone de texte de la description.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29769">[SE-29769</a>] - Dans les graphiques d&apos;analyse, les infobulles des soldes des comptes ne s&apos;affichent pas comme prévu. Un signe égal (=) s&apos;affiche à la fin de la valeur du solde du compte dans l&apos;info-bulle.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29858">[SE-29858</a>] - Lorsque les utilisateurs ouvrent un document à partir de la page Documents, c&apos;est le mauvais document qui s&apos;ouvre s&apos;ils ont choisi d&apos;afficher les éléments cachés de la page.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-30051">[SE-30051</a>] - Dans les produits qui prennent en charge plusieurs langues, lorsque les utilisateurs changent la langue du contenu de l&apos;engagement pour une langue autre que celle par défaut, le contenu continue de s&apos;afficher dans la langue par défaut.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-28565">[SE-28565</a>] - Une erreur se produit lorsque les utilisateurs tentent de reporter un engagement pour le cas d&apos;utilisation suivant :</p>
+                <ul>
+                    <li>
+                        <p>L&apos;auteur principal a supprimé une formule de données (fx) du modèle de l&apos;année précédente.</p>
+                    </li>
+                    <li>
+                        <p>L&apos;auteur principal a ensuite utilisé la fonction d&apos;annulation (CTRL + Z) pour annuler la suppression.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29529">[SE-29529</a>] - Lorsque les utilisateurs exportent des documents XBRL, les faits XBRL étiquetés avec des balises faux-y ne sont pas inclus dans le fichier généré.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29861">[SE-29861</a>] - Lorsque les utilisateurs impriment les états financiers, le texte dont l&apos;alignement est justifié ne s&apos;affiche pas comme prévu.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-29926">[SE-29926</a>] - Dans les états financiers, lorsque les utilisateurs sélectionnent une zone dans le plan du document, ils ne sont pas dirigés vers le début de la zone.</p>
+            </li>
+        </ul>
+        <h2>2021-08-U10</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 701</b></p>
+        <p>Voici la liste des problèmes qui ont été corrigés avec le déploiement de SE 2021-08-U10.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><ul>
+            <li>
+                <p>[<a href="https://bugs.caseware.com/browse/SE-30237">SE-30237</a>] - Un problème technique qui provoque des erreurs lors du report d&apos;une mission si des rôles d&apos;approbation identiques ont été ajoutés à la fois dans le fichier de mission de l&apos;année précédente et dans le modèle de cabinet de l&apos;année en cours.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-30090">[SE-30090</a>] - L&apos;onglet Risque dans les listes de contrôle ne fonctionne pas comme prévu. Les noms de certaines assertions ne sont pas affichés.</p>
+            </li>
+        </ul>
+        <h2>2021-08-U11</h2>
+        <p><i>Version : </i><b style="font-style: italic; font-weight: normal;">2021 / 08 / 707</b></p>
+        <p>Voici la liste des problèmes qui ont été corrigés avec le déploiement de SE 2021-08-U11.</p><MadCap:snippetBlock src="../Resources/Snippets/HF-issue-identifier-and-note.flsnp" /><ul>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-30443">[SE-30443</a>] - Lorsque les utilisateurs impriment des documents, les tableaux dynamiques qui s&apos;étendent sur plus d&apos;une page ne s&apos;affichent pas comme prévu dans le PDF généré. Après les sauts de page, les en-têtes de tableau ne sont pas formatés correctement.</p>
+            </li>
+            <li>
+                <p><a href="https://bugs.caseware.com/browse/SE-30323">[SE-30323</a>] - Lorsque les utilisateurs impriment les états financiers, les notes ne s&apos;affichent pas comme prévu dans le PDF généré si les notes au niveau de la société mère ont été supprimées par l&apos;auteur de la société dans le modèle de société. Les notes de sous-niveau pour les notes parentales supprimées sont incluses dans le PDF.</p>
+            </li>
+        </ul>
+    </body>
+</html>

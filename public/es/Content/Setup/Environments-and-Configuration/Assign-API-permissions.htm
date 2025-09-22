@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Asignar permisos de API (Azure AD)</h1>
+        <p>Configuring the API permissions will allow Caseware Cloud to read basic information from Microsoft Azure in order to properly authenticate users.</p>
+        <p style="font-weight: bold;">To assign API permissions:</p>
+        <ol>
+            <li>
+                <p>Select <b>Azure Active Directory</b> | <b>App Registrations</b>, then select your app.</p>
+            </li>
+            <li>
+                <p>In the left-hand navigation pane, select <b>API permissions</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Add a permission</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-permission.png" alt="Select Add a permission." /></p>
+            </li>
+            <li>
+                <p>Seleccione la opción <b>Microsoft Excel</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Delegated permissions</b>.</p>
+                <p><img src="../../Resources/Images/azure-delegated-permissions.png" alt="Select Delegated permissions" /></p>
+            </li>
+            <li>
+                <p>Use the checkbox to select the following permissions:</p>
+                <ul>
+                    <li>
+                        <p><b>Correo electrónico:</b></p>
+                    </li>
+                    <li>
+                        <p><b>Openid</b></p>
+                    </li>
+                    <li>
+                        <p><b>Perfil</b></p>
+                    </li>
+                    <li>
+                        <p><b>User.Read</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Select <b>Add permissions</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Grant admin consent for Default Directory</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Yes</b> when prompted, &quot;Do you want to grant consent for the requested permissions for all accounts in Default Directory?&quot;</p>
+                <p><img src="../../Resources/Images/azure-configured-permissions.png" alt="The API permissions are successfully configured." /></p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Test-your-single-sign-on-integration.htm">Test your single sign-on integration</a></p>
+    </body>
+</html>

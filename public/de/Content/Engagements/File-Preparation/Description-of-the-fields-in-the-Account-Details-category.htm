@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Account details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions data display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>ACCOUNT DETAILS</b> category that appear in the General ledger dataset..</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Account Identifier (<code>account_id</code>)</h2>
+        <p>An identifier or the account the entry has been recorded in. <br />Examples &quot;1001&quot; or &quot;Bank Account 1&quot;.</p>
+        <h3>Usage</h3>
+        <p>
+            <ul>
+                <li>Must be tagged for all transaction-related features to function.</li>
+                <li>Associating trial balance with transaction information.</li>
+                <li>Trial balance drill down into transactions.</li>
+                <li>In all AnalyticsAI tests - All tests require Account Identifier.</li>
+            </ul>
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>Less than 5,000 unique values.</li>
+                <li>Matches with imported trial balance accounts.</li>
+            </ul>
+        </p>
+        <h2>Main Account Description (<code>account_main_description</code>)</h2>
+        <p>An identifier description for the account group the entry has been recorded in. <br />Beispiele: &quot;Liquide Mittel&quot;, &quot;Sachanlagen&quot;.</p>
+        <h3>Usage</h3>
+        <p>Visual text description for accounts.</p>
+        <h2>Entered By (<code>entered_by</code>)</h2>
+        <p>Benutzer-ID der Person, die den Eintrag erfasst hat.</p>
+        <h3>Usage</h3>
+        <p>In these AnalyticsAI tests:<ul><li>Gleicher Benutzer bucht und erteilt Freigabe</li><li>Ungewöhnliche Benutzer</li></ul></p>
+        <h2>Entered Date (<code>entered_date</code>)</h2>
+        <p>Actual date/time entry was posted (validated) to the general ledger - provided automatically by system - does not necessarily correspond with the date when the entry was posted to the GL.</p>
+        <h3>Usage</h3>
+        <p>In the Unusual Times AnalyticsAI test.</p>
+        <h3>Requirements</h3>
+        <p>Date format must be properly set:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Entry Responsible Person (<code>entry_responsible_person</code>)</h2>
+        <p>Benutzer-ID der Person, die den Eintrag genehmigt hat.</p>
+        <h3>Usage</h3>
+        <p>In the Same User Entering and Approving AnalyticsAI test.</p>
+    </body>
+</html>

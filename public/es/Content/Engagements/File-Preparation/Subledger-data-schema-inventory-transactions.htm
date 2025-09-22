@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Inventory transactions described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Inventory transactions subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id. de transacción <br />(<code>inventory_transaction_transaction_id</code>)</td>
+                    <td>
+                        <p>El Id. de transacción asociado con el Estándar de datos de auditoría (ADS) del libro auxiliar de Compra al pago o Pedido al cobro.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de transacción <br />(<code>inventory_transaction_transaction_date</code>)</td>
+                    <td>
+                        <p>La fecha de actividad, por documento de transacción asociada si corresponde.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Third alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de producto de inventario <br />(<code>inventory_transaction_product_id</code>)</td>
+                    <td>
+                        <p>El Id. del producto es un código que identifica de forma única un artículo que se incluye en el inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de serie <br />(<code>inventory_transaction_serial_number</code>)</td>
+                    <td>
+                        <p>Si está en serie, el número de serie se captura aquí. Aunque el número de serie es el término común, el valor no se limita a valores numéricos. Si bien no es habitual que se controle el lote o serie de un artículo (el número de serie identifica de forma ambigua el artículo), no es necesariamente mutuamente excluyente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Fourth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de lote<br />(<code>inventory_transaction_lot_number</code>)</td>
+                    <td>
+                        <p>Si representa un lote, el número de lote se captura aquí. Aunque el número de lote es el término común, el valor no se limita a valores numéricos.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No Primary key: Fifth alternative. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de transacción <br />(<code>inventory_transaction_transaction_type</code>)</td>
+                    <td>
+                        <p>Los códigos que describen las acciones específicas del inventario principal que tienen lugar en las transacciones de inventario relacionadas con el movimiento de bienes, el comercio, ajustes de cantidades de los eventos comerciales internos y ajustes de costes, debido a daños o factores del mercado.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: No</p>
+                        <p>Example values: Goods Received (GR), Goods Shipped (GS), Inventory Transfers (IT), Inventory Adjustments (IA), Other (OT)</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sistema de tipo de transacción <br />(<code>inventory_transaction_transaction_type_system</code>)</td>
+                    <td>
+                        <p>Un código de transacción local para el sistema de software de contabilidad subyacente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de la transacción <br />(<code>inventory_transaction_transaction_time</code>)</td>
+                    <td>
+                        <p>La hora en la que transcurrió la actividad, por documento de transacción asociada si corresponde.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad de la transacción <br />(<code>inventory_transaction_transaction_quantity</code>)</td>
+                    <td>
+                        <p>La cantidad o artículo afectado expresado en la unidad de almacenamiento de ubicación.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ajuste de coste de transacción <br />(<code>inventory_transaction_transaction_cost_adjustment</code>)</td>
+                    <td>
+                        <p>El aumento o (disminución) por unidad en el coste de almacenamiento.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Descripción de transacción <br />(<code>inventory_transaction_transaction_description</code>)</td>
+                    <td>
+                        <p>Una descripción de la transacción.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de pedido asociado a la transacción <br />(<code>inventory_transaction_transaction_associated_order_id</code>)</td>
+                    <td>
+                        <p>El pedido del cliente, pedido de compra (proveedor) u otro documento asociado con la transacción. Se debe especificar si el número encontrado en el Id. de línea de pedido de la transacción asociada es de un Estándar de datos de auditoría (ADS) del libro auxiliar de Compra al pago o Pedido al cobro al utilizar el texto &quot;P2P&quot; u &quot;O2C&quot; respectivamente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de línea de pedido asociado a la transacción <br />(<code>inventory_transaction_transaction_associated_order_line_id</code>)</td>
+                    <td>
+                        <p>El número de artículo de línea de un pedido del cliente, pedido de compra (proveedor), para diferenciar varios artículos en un único pedido de diferentes cantidades. Se debe especificar si el número encontrado en el Id. de línea de pedido de la transacción asociada es de un Estándar de datos de auditoría (ADS) del libro auxiliar de Compra al pago o Pedido al cobro al utilizar el texto &quot;P2P&quot; u &quot;O2C&quot; respectivamente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de documento asociado a la transacción <br />(<code>inventory_transaction_transaction_associated_document_id</code>)</td>
+                    <td>
+                        <p>La lista de selección, aviso de envío u otro documento creado después/asociado con el movimiento. Se debe especificar si el número encontrado en el Id. de línea de pedido de la transacción asociada es de un ADS del libro auxiliar de Adquisición para pagar o Pedido al cobro al utilizar el texto «P2P» u «O2C» respectivamente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de línea de documento asociado a la transacción <br />(<code>inventory_transaction_transaction_associated_document_line_id</code>)</td>
+                    <td>
+                        <p>El número de línea de un documento que no sea un pedido del cliente ni un pedido de venta de &quot;proveedor&quot;. El documento debe especificar si el número encontrado en el Id. de partida de la transacción asociada es de un ADS del libro auxiliar de Adquisición para pagar o Pedido al cobro al utilizar el texto &quot;P2P&quot; u &quot;O2C&quot; respectivamente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventario desde la ubicación <br />(<code>inventory_transaction_inventory_from_location</code>)</td>
+                    <td>
+                        <p>The storage location from where the inventory originated.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventario hacia la ubicación <br />(<code>inventory_transaction_inventory_to_location</code>)</td>
+                    <td>
+                        <p>La ubicación del almacenamiento a la que se va enviar el inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fuente externa o sistema de inventario <br />(<code>inventory_transaction_inventory_system_or_external_source</code>)</td>
+                    <td>
+                        <p>Utilizado para indicar la información de asientos asociada con la transacción iniciada desde otro módulo de ADS (por ejemplo, P2P u O2C), o iniciado desde dentro del inventario. Si se inicia desde dentro del inventario, los siguientes campos se usan para capturar la información del usuario y del libro mayor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de cuenta debe de línea del libro mayor de inventario <br />(<code>inventory_transaction_gl_line_debit_account_number</code>)</td>
+                    <td>
+                        <p>El número de cuenta del libro mayor en el que se ha publicado el lado debe de la transacción.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de cuenta haber de línea del libro mayor <br />(<code>inventory_transaction_gl_line_credit_account_number</code>)</td>
+                    <td>
+                        <p>El número de cuenta del libro mayor en el que se ha publicado el lado haber de la transacción.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de proyecto <br />(<code>inventory_transaction_project_id</code>)</td>
+                    <td>
+                        <p>El identificador único del proyecto. Por lo general, el sistema lo genera de forma automática.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. del proveedor <br />(<code>inventory_transaction_supplier_account_id</code>)</td>
+                    <td>
+                        <p>El Id. único del proveedor. Por lo general, el sistema lo genera de forma automática.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de cuenta de cliente <br />(<code>inventory_transaction_customer_account_id</code>)</td>
+                    <td>
+                        <p>El identificador único del cliente receptor. Suele generarlo automáticamente el sistema.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de organización de inventario <br />(<code>inventory_transaction_inventory_organization_code</code>)</td>
+                    <td>
+                        <p>El código de la organización del inventario. Organización de inventario se refiere a la unidad organizativa, física o virtual, en la que los saldos y la transacción de inventario pueden seguirse y monitorizarse. Proporciona información de inventario a módulos como compra y ventas. La forma más sencilla de organización de inventario es el almacén.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de UdM del existencias de inventario <br />(<code>inventory_transaction_inventory_stocking_uom_code</code>)</td>
+                    <td>
+                        <p>The standardized measurement unit used to count stock items and to express them as specific quantities.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de UdM de coste de inventario <br />(<code>inventory_transaction_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>El código de la unidad de medida del coste del inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventario requerido por <br />(<code>inventory_transaction_inventory_required_by</code>)</td>
+                    <td>
+                        <p>La persona u organización que solicita el inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de organización de coste <br />(<code>inventory_transaction_cost_organization_code</code>)</td>
+                    <td>
+                        <p>El código de la organización de coste, que se refiere al nivel o unidad organizativo en el que se calculará el coste de inventario de salida. El cálculo puede realizarse a nivel corporativo, a nivel de organización de existencias o en las ubicaciones particulares en las que se almacena el inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coste de inventario <br />(<code>inventory_transaction_inventory_cost</code>)</td>
+                    <td>
+                        <p>El coste por unidad que utiliza el método encontrado en Método de costes de inventario, en Inventario disponible.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de unidad de negocio <br />(<code>inventory_transaction_business_unit_code</code>)</td>
+                    <td>
+                        <p>Se usa para identificar la unidad de negocio, región, sucursal, etc., al nivel en el que se estén auditando los estados financieros.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Creado por <br />(<code>inventory_transaction_entered_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que creó el registro.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de creación <br />(<code>inventory_transaction_entered_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que la transacción se creó en el sistema. Se conoce también como fecha de creación. Esto debería ser una fecha generada por el sistema (en lugar de una fecha que haya introducido el usuario), cuando sea posible. Esta fecha no tiene que corresponderse necesariamente con la fecha de la propia transacción.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de creación <br />(<code>inventory_transaction_entered_time</code>)</td>
+                    <td>
+                        <p>La hora en la que esta transacción se creó en el sistema. ISO 8601, que representa el tiempo en un formato de 24 horas (hhmm) (por ejemplo, 1:00 PM = 1300).</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprobado por <br />(<code>inventory_transaction_approved_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que aprobó los cambios.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de aprobación <br />(<code>inventory_transaction_approved_by_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se aprobó el asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de aprobación <br />(<code>inventory_transaction_approved_by_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se aprobó el asiento. ISO 8601, que representa el tiempo en un formato de 24 horas (hhmm) (por ejemplo, 1:00 PM = 1300).</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Última modificación realizada por: <br />(<code>inventory_transaction_last_modified_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la última persona que modificó este asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la última modificación <br />(<code>inventory_transaction_last_modified_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se realizó la última modificación del asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de la última modificación <br />(<code>inventory_transaction_last_modified_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se realizó la última modificación del asiento. ISO 8601, que representa el tiempo en un formato de 24 horas (hhmm) (por ejemplo, 1:00 PM = 1300).</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de divisa funcional <br />(<code>inventory_transaction_functional_currency_code</code>)</td>
+                    <td>
+                        <p>La divisa funcional o divisa de grupo relacionada con el saldo (ISO 4217:2015).</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Creado por <br />(<code>inventory_transaction_posted_user_id</code>)</td>
+                    <td>
+                        <p>El Id. único de la persona que contabilizó el registro. Por lo general, el sistema lo genera de forma automática.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de creación <br />(<code>inventory_transaction_posted_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que la transacción se registra en el sistema.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de creación <br />(<code>inventory_transaction_posted_time</code>)</td>
+                    <td>
+                        <p>La hora en la que la transacción en cuestión se registra.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

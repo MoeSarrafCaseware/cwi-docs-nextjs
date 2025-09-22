@@ -1,0 +1,1816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Aperçu</h1>
+        <p>Caseware Sherlock est un pionnier de l&apos;intelligence comptable pour les entreprises du monde entier. Il s&apos;agit d&apos;une plateforme de veille stratégique puissante, sécurisée et basée sur le cloud, dotée d&apos;une interface utilisateur élégante. Sherlock recueille et stocke automatiquement les données des missions Caseware actuelles et historiques de votre entreprise, et offre un chemin flexible pour transformer ces données en informations exploitables à l&apos;échelle de la pratique en temps quasi réel grâce à des analyses et des visualisations de données avancées. Désormais, vous pouvez contrôler la santé de votre cabinet, mieux gérer les risques, identifier les pistes de croissance et devenir le conseiller stratégique de confiance de vos clients grâce à ce nouveau portail aux possibilités illimitées.</p>
+        <h2>Comment cela fonctionne-t-il ?</h2>
+        <p>Sherlock analyse automatiquement et continuellement les données de tous les engagements qui résident dans l&apos;écosystème Caseware. Les données d&apos;engagement sont extraites, transformées, organisées et stockées dans le lac de données Sherlock, ce qui permet une analyse de l&apos;engagement à l&apos;échelle de la pratique. Les cabinets peuvent accéder à leurs données d&apos;engagement et les interroger pour prendre des décisions commerciales, tant pour leur cabinet que pour leurs clients.</p>
+        <p>La plateforme Sherlock de Caseware se compose de trois solutions principales : <MadCap:conditionalText MadCap:conditions="General.Online"><a href="#Reader">Sherlock Reader</a>, <a href="#Builder">Sherlock Builder</a> et <a href="#API">Sherlock API</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">Sherlock Reader, Sherlock Builder et Sherlock API.</MadCap:conditionalText> Ensemble, ces produits constituent une solution applicable à l&apos;ensemble de l&apos;entreprise et utilisable par des membres du personnel occupant des fonctions diverses.</p>
+        <p><img src="../../Resources/Images/sherlock-visualization.png" /></p>
+        <h2><a name="Reader"></a>Sherlock Reader</h2>
+        <p>Sherlock Reader permet au personnel de présenter les données clés de l&apos;engagement des entités clientes dans des visualisations faciles à utiliser. Vous pouvez exploiter les données de ces visualisations pour obtenir des informations sur les finances de vos clients, vous aider à gérer votre propre pratique, créer de nouvelles opportunités de revenus avec des services de conseil, et bien plus encore. Les visualisations sont disponibles auprès de votre distributeur Caseware, ou conçues sur mesure par l&apos;auteur de votre entreprise à l&apos;aide de Sherlock Builder.</p>
+        <p MadCap:conditions="General.Online"><a href="../../Explore/Getting-Started/Get-started-with-Sherlock-Reader.htm">Découvrez comment démarrer avec Sherlock Reader.</a></p>
+        <h2><a name="Builder"></a>Sherlock Builder</h2>
+        <p>Sherlock Builder est un outil de visualisation de données qui consomme les données des Working Papers et permet aux auteurs des entreprises de développer des modèles personnalisés.</p>
+        <p>Sherlock Builder se compose de trois éléments :</p>
+        <ul>
+            <li>Les analyses sont des modèles de visualisation personnalisables. Vous pouvez partager une analyse avec d&apos;autres utilisateurs de Sherlock Builder pour collaborer à son développement.</li>
+            <li>Les visualisations sont les versions en lecture seule des analyses que les utilisateurs de Sherlock Reader partagent avec leurs clients.</li>
+            <li>Les ensembles de données contiennent les données collectives qui alimentent une analyse. Les jeux de données dans Sherlock Builder sont préchargés et ne peuvent pas être modifiés. Les données sont actualisées quotidiennement.</li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="https://developers.caseware.com/sherlock-builder/v1/Sherlock-Builder/Get-started-with-Sherlock-Builder.htm">Découvrez comment démarrer avec Sherlock Builder</a>. (Identifiants MyCaseware et licence Sherlock Builder requis)</p>
+        <h1>Pour commencer</h1>
+        <p>Avant que le personnel puisse accéder à Sherlock, un administrateur doit lui attribuer une licence pour l&apos;application concernée (Sherlock Reader ou Sherlock Builder).</p>
+        <p class="warning"><b>Avertissement :</b> Ne pas modifier l&apos;adresse email ou révoquer la licence d&apos;un utilisateur de Sherlock Builder. Toutes les analyses créées par l&apos;utilisateur deviendront inaccessibles à tous les utilisateurs, y compris les administrateurs.</p>
+        <p><b>Pour attribuer une licence Sherlock à un membre du personnel :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur du personnel</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Nuage, sélectionnez <b>Personnel.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez le membre du personnel auquel vous souhaitez attribuer la licence, puis sélectionnez <b>Modifier</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Apps</b>, puis choisissez les autorisations appropriées ( <b>Sherlock Reader</b> ou <b>Sherlock Builder</b>).</p>
+            </li>
+            <li>Sélectionnez <b>Enregistrer</b>.</li>
+        </ol>
+        <h1>Sherlock Builder Créer une analyse</h1>
+        <p>Vous pouvez créer une analyse pour chaque ensemble de données et personnaliser la façon dont vous souhaitez présenter les données d&apos;engagement dans la visualisation.</p>
+        <p><b>To create an analysis:</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Sherlock Reader.</b></p>
+                <p>Un cadre interactif alimenté par les écrans <a href="https://docs.aws.amazon.com/quicksight/latest/user/welcome.html" target="_blank">QuickSight d&apos;Amazon.</a> </p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;onglet <b>Factures</b> .</p>
+                <p>Une liste des visualisations disponibles s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouvelle inscription.</b></p>
+                <p><img src="../../Resources/Images/sherlock-bi-analysis-01.png" alt="L&apos;interface de Sherlock BI Builder avec le bouton Nouvelles analyses en surbrillance." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;ensemble de données applicable à l&apos;analyse. Les options disponibles sont les suivantes :</p>
+                <table class="borderless">
+                    <col style="width: 55%;" />
+                    <col style="width: 45%;" />
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Résumé des comptes</li>
+                                    <li>cv (CaseView)</li>
+                                    <li>cvcontrol</li>
+                                    <li>cvmlp (management letter points)</li>
+                                    <li>cvrisk</li>
+                                    <li>Groupe</li>
+                                    <li>hi (histoire)</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Mises en correspondance</li>
+                                    <li>métadonnées (propriétés d&apos;engagement)</li>
+                                    <li>sh (document)</li>
+                                    <li>solde du procès</li>
+                                    <li>ts (questions)</li>
+                                    <li>Utilisateur</li>
+                                    <li>groupe d&apos;utilisateurs</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><div class="note"><p><b>Notes :</b></p>
+                    <ul>
+                        <li>Les noms des ensembles de données sont complétés par le nom abrégé de l&apos;entreprise (par exemple, trialbalance-testfirm-001).</li>
+                        <li>Le jeu de données <b>entityrls</b> contient des informations de sécurité au niveau de l&apos;entité et ne doit pas être utilisé comme jeu de données pour une analyse ou partagé avec d&apos;autres.</li>
+                    </ul></div></li>
+            <li>
+                <p>Sélectionnez <b>Créer un brouillon</b>.</p>
+                <p><img src="../../Resources/Images/sherlock-bi-analysis-02.png" alt="La boîte de dialogue de confirmation de l&apos;ensemble de données avec le bouton Créer une analyse en surbrillance." /></p>
+            </li>
+            <li>
+                <p>Personnaliser l&apos;analyse.</p>
+                <p>Des exemples de personnalisation pour différents scénarios peuvent être trouvés en suivant cette procédure.</p>
+                <p><img src="../../Resources/Images/sherlock-bi-analysis-03.png" alt="L&apos;interface de conception d&apos;une analyse." /></p>
+            </li>
+            <li>
+                <p>Si vous souhaitez collaborer à l&apos;analyse avec d&apos;autres utilisateurs de Sherlock Builder dans votre entreprise, sélectionnez <b>Partager (<img src="../../Resources/Icons/share-icon-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Partager l&apos;analyse.</b></p>
+                <p>La boîte de dialogue Partager l&apos;analyse s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Saisissez l&apos;adresse électronique de chaque utilisateur et sélectionnez <b>Partager.</b></p>
+                <p><img src="../../Resources/Images/sherlock-bi-analysis-04.png" alt="La boîte de dialogue Analyse de partage avec le champ et le bouton Partager en surbrillance." /></p>
+            </li>
+        </ol>
+        <h2>Personnaliser une analyse pour : Gestion de projet</h2>
+        <p>Les widgets suivants vous permettent de mettre en évidence l&apos;état des missions en cours d&apos;une entreprise et de vous assurer qu&apos;elles sont en bonne voie d&apos;achèvement.</p>
+        <h3>Progrès en matière d&apos;engagement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau des jauges (<img src="../../Resources/Icons/gauge-chart-23x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui comptabilise le nombre de documents complétés :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Établissez un calcul qui définit la logique de ce que vos utilisateurs considèrent comme un document &quot;terminé&quot;.</p>
+                        <p>Par exemple, si un document est considéré comme complet après la signature du rôle 1, le calcul sera le suivant :</p>
+                        <p><code>countIf(Role 1 Initials, isNotNull(nullIf(Role 1 Initials,&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><i>Valeur cible</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui compte le nombre de documents dans le gestionnaire de documents :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Appliquez les filtres d&apos;entité et/ou de fin d&apos;année au widget, si nécessaire.</p>
+            </li>
+        </ul>
+        <h3>Ventilation des approbations spécifiques à chaque rôle</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau des beignets (<img src="../../Resources/Icons/donut-chart-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe/couleur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter l&apos;un des éléments suivants :</p>
+                <ul>
+                    <li>
+                        <p><b>Rôle 1 Initiales</b> du rôle 1</p>
+                    </li>
+                    <li>
+                        <p><b>Rôle 2 Initiales</b> du rôle 2</p>
+                    </li>
+                    <li>
+                        <p>…</p>
+                    </li>
+                    <li>
+                        <p><b>Rôle 8 Initiales</b> du rôle 8</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Si vous souhaitez exclure les documents qui n&apos;ont pas été signés :</p>
+                <ol>
+                    <li>
+                        <p>Créer un filtre basé sur le champ Groupe/Couleur sélectionné (par exemple : Initiales du rôle 1, Initiales du rôle 2, etc.)</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Modifier le filtre, cliquez sur la première liste déroulante et sélectionnez <b>Uniquement ce visuel.</b></p>
+                    </li>
+                    <li>
+                        <p>Sous Type de filtre :</p>
+                        <ol>
+                            <li>
+                                <p>Dans la première liste déroulante, sélectionnez <b>Filtre personnalisé.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la deuxième liste déroulante, sélectionnez <b>N&apos;est pas égal.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la troisième liste déroulante, sélectionnez <b>Exclure les zéros</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Appliquer</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Appliquez les filtres d&apos;entité et/ou de fin d&apos;année au widget, si nécessaire.</p>
+            </li>
+        </ul>
+        <h3>Statut des produits livrables</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajouter un champ de calcul personnalisé qui fournit le numéro et le nom d&apos;un document livrable :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Construisez le calcul suivant, qui identifie un document ayant une date d&apos;échéance de livraison et renvoie son numéro de document et son nom :</p>
+                        <p><code>ifelse(isNotNull(duedate), concat(toString(schedule), &apos;-&apos;,{Description}), &quot;Inconnu&quot;)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>duedate</b> - Affiche la date d&apos;échéance du document livrable.</p>
+            </li>
+            <li>
+                <p><b>Initiales du rôle 1</b> - (Facultatif) Affiche le nom de signature du rôle 1.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b>).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Gestionnaire de documents</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p><b>Numéro de ligne</b> - Permet de trier le tableau pour refléter l&apos;ordre dans le gestionnaire de documents.</p>
+            </li>
+            <li>
+                <p><b>calendrier</b> - Affiche le numéro du document complété.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Affiche le nom du document.</p>
+            </li>
+            <li>
+                <p><b>Initiales du rôle 1</b> - Affiche le nom d&apos;approbation du rôle 1.</p>
+            </li>
+            <li>
+                <p><b>Date d&apos;achèvement 1</b> - Affiche la date d&apos;approbation du rôle 1.</p>
+            </li>
+            <li>
+                <p><b>Initiales du rôle 2</b> - Affiche le nom de la signature du rôle 2.</p>
+            </li>
+            <li>
+                <p><b>Date d&apos;achèvement 2</b> - Affiche la date d&apos;approbation du rôle 2.</p>
+            </li>
+            <li>
+                <p>…</p>
+            </li>
+            <li>
+                <p><b>Initiales du rôle 8</b> - Affiche le nom de la signature du rôle 8.</p>
+            </li>
+            <li>
+                <p><b>Date d&apos;achèvement 8</b> - Affiche la date d&apos;approbation du rôle 8.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Triez le tableau en utilisant le champ <b>Numéro de ligne par</b> ordre croissant. Une fois le tri effectué, cliquez sur l&apos;en-tête de la colonne et masquez le champ <b>Numéro de ligne.</b></p>
+            </li>
+            <li>
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b>).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Synthèse de tous les progrès réalisés en matière d&apos;engagement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme à barres horizontal (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe Y</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>nom de fichier</b> - Affiche le nom du fichier d&apos;engagement</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui détermine la progression globale de l&apos;engagement :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Créez un calcul qui comptabilise le nombre total de documents complétés et le divise par le nombre total de documents.</p>
+                        <p>Par exemple, si un document est considéré comme complet après la signature du rôle 1, le calcul sera le suivant :</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},&apos;&apos;))) / count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Synthèse de tous les progrès réalisés en matière d&apos;engagement (autre vue en tableau)</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i>.</p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>nom de fichier</b> - Affiche le nom du fichier d&apos;engagement</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui détermine la progression globale de l&apos;engagement :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Créez un calcul qui comptabilise le nombre total de documents complétés et le divise par le nombre total de documents.</p>
+                        <p>Par exemple, si un document est considéré comme complet après la signature du rôle 1, le calcul sera le suivant :</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},&apos;&apos;))) / count({Description})</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>yearend</b> - Affiche la date de fin d&apos;année du fichier.</p>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Qualité et conformité</h2>
+        <p>Les widgets suivants vous permettent de détecter les erreurs dès le début du processus de mission et de mener à bien des missions de grande qualité en toute conformité.</p>
+        <h3>Ordre des documents complétés</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>SH</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p><b>calendrier</b> - Affiche le numéro du document complété.</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Affiche le nom du document.</p>
+            </li>
+            <li>
+                <p><b>Date d&apos;achèvement 1</b> - Affiche la date d&apos;approbation du rôle 1.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Si vous souhaitez exclure les documents qui n&apos;ont pas été signés :</p>
+                <ol>
+                    <li>
+                        <p>Créez un filtre basé sur le champ <b>Date d&apos;achèvement 1.</b></p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Modifier le filtre, cliquez sur la première liste déroulante et sélectionnez <b>Uniquement ce visuel.</b></p>
+                    </li>
+                    <li>
+                        <p>Sous Type de filtre :</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Dans la première liste déroulante, sélectionnez <b>Filtre personnalisé.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la deuxième liste déroulante, sélectionnez <b>N&apos;est pas égal.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la troisième liste déroulante, sélectionnez <b>Exclure les zéros</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Appliquer</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b>).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Utilisateurs accédant à un engagement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui fournit une liste d&apos;utilisateurs ayant accédé à un engagement :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant, qui renvoie l&apos;utilisateur enregistré avec un type d&apos;activité d&apos;accès aux fichiers dans la base de données HI :</p>
+                        <p><code>ifelse(type=&apos;FACCUSR&apos;, UserValue, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui renvoie la date à laquelle l&apos;accès au fichier a été enregistré dans la base de données HI :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>left(startdate,8)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Statut de verrouillage de l&apos;engagement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Métadonnées</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p><b>nom de fichier</b> - Affiche le nom du fichier d&apos;engagement.</p>
+            </li>
+            <li>
+                <p><b>propertyname</b> - Affiche toutes les propriétés de métadonnées associées aux fichiers d&apos;engagement.</p>
+            </li>
+            <li>
+                <p><b>propertyvalue</b> - Affiche la valeur d&apos;une propriété de métadonnées donnée.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Après avoir défini les puits de champ, sélectionnez le widget et créez un filtre basé sur le champ <b>propertyname</b> . Configurez le filtre de manière à ce qu&apos;il n&apos;inclue que les éléments portant le nom de propriété <b>CWLockdownDate</b> .</p>
+            </li>
+            <li>
+                <p>Envisagez d&apos;ajouter des détails à la lettre de mission, par exemple la date de signature ou d&apos;achèvement, ou si le verrouillage doit être effectué dans un délai donné. Pour modifier la lettre de mission :</p>
+                <ul>
+                    <li>
+                        <p>Utiliser l&apos;ID ou le numéro du document.</p>
+                    </li>
+                    <li>
+                        <p>Demandez aux utilisateurs d&apos;associer une étiquette de document spécifique à leur lettre de mission, puis utilisez-la dans votre visualisation.</p>
+                    </li>
+                    <li>
+                        <p>Incluez dans votre modèle un mécanisme qui enregistre le numéro de document de la lettre de mission en tant que propriété de métadonnées.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Utilisation du numéro de carte</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau croisé dynamique (<img src="../../Resources/Icons/pivot-table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Rangs</i></p>
+        <ul>
+            <li>
+                <p><b>mapno</b> - Affiche le numéro de la carte utilisée dans les engagements.</p>
+            </li>
+            <li>
+                <p><b>mapdesc</b> - Affiche la description cartographique utilisée dans les engagements.</p>
+            </li>
+            <li>
+                <p><b>nom de fichier</b> - Affiche le nom du fichier qui utilise le numéro de carte actuel.</p>
+            </li>
+            <li>
+                <p><b>class</b> - Affiche la classe attribuée au numéro de carte actuel.</p>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Productivité et gestion de la charge de travail</h2>
+        <h3>Activité du dossier</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme à barres verticales (<img src="../../Resources/Icons/vertical-bar-chart-20x23.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe X</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>startdate</b> - Affiche la date à laquelle un événement s&apos;est produit.</p>
+            </li>
+        </ul>
+        <p><i>Groupe/couleur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui répertorie les identifiants de tous les types d&apos;activités possibles dans la base de données HI et les convertit en une description conviviale :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Construire le calcul suivant :</p><div><pre class="clipboard"><code>
+ifelse(
+type=&apos;AJECREAT&apos;, &apos;Adjustment created&apos;,
+type=&apos;DCHEKIN&apos;, &apos;Document checked in&apos;,
+type=&apos;DCHEKOUT&apos;, &apos;Document checked out&apos;,
+type=&apos;DOCAUSR&apos;, &apos;Document accessed&apos;,
+type=&apos;DOCCOPY&apos;, &apos;Document copied&apos;,
+type=&apos;DOCCREAT&apos;, &apos;Document created&apos;,
+type=&apos;DOCDEL&apos;, &apos;Document deleted&apos;,
+type=&apos;DOCDROP&apos;, &apos;Document dropped in&apos;,
+type=&apos;DOCMSAVE&apos;, &apos;Document saved&apos;,
+type=&apos;DOCPROP&apos;, &apos;Document properties changed&apos;,
+type=&apos;DOCSIGN1&apos;, &apos;Document signed off role 1&apos;,
+type=&apos;DOCSIGN2&apos;, &apos;Document signed off role 2&apos;,
+type=&apos;DOCSIGN3&apos;, &apos;Document signed off role 3&apos;,
+type=&apos;DOCSIGN4&apos;, &apos;Document signed off role 4&apos;,
+type=&apos;DOCSIGN5&apos;, &apos;Document signed off role 5&apos;,
+type=&apos;DOCSIGN6&apos;, &apos;Document signed off role 6&apos;,
+type=&apos;DOCSIGN7&apos;, &apos;Document signed off role 7&apos;,
+type=&apos;DOCSIGN8&apos;, &apos;Document signed off role 8&apos;,
+type=&apos;FACCUSR&apos;, &apos;Engagement file accessed&apos;,
+type=&apos;FCHEKIN&apos;, &apos;Engagement file checked in&apos;,
+type=&apos;FCHEKOUT&apos;, &apos;Engagement file checked out&apos;,
+type=&apos;FCREAFN&apos;, &apos;File created&apos;,
+type=&apos;FSIGNIN&apos;, &apos;File signed in&apos;,
+type=&apos;FSIGNOUT&apos;, &apos;File signed out&apos;,
+type=&apos;FYEC&apos;, &apos;Year end close performed&apos;,
+type=&apos;DOCRCYCL&apos;, &apos;Document moved to recycle bin&apos;,
+type=&apos;DOCREST&apos;, &apos;Document restored from recycle bin&apos;,
+type=&apos;DOCPASTE&apos;, &apos;Document pasted in document manager&apos;,
+type=&apos;DOCMOVE&apos;, &apos;Document moved in document manager&apos;,
+type=&apos;DOCTOPDF&apos;, &apos;Document converted to PDF&apos;,
+type=&apos;AJEDEL&apos;, &apos;Adjusting entry deleted&apos;,
+type=&apos;AJEIMPT&apos;, &apos;Adjusting entry imported&apos;,
+type=&apos;AJERENUM&apos;, &apos;Adjusting entry renumbered&apos;,
+type=&apos;UNDOSIGN&apos;, &apos;Signout undone&apos;,
+type=&apos;DOCLOCK&apos;, &apos;Document locked down&apos;,
+type=&apos;DOCLOCK2&apos;, &apos;Document milestones regenerated&apos;,
+type=&apos;DOCLOCK3&apos;, &apos;Document milestones converted&apos;,
+type=&apos;DOCSET&apos;, &apos;Document milestones set&apos;,
+type=&apos;FILELOCK&apos;, &apos;File locked down&apos;,
+type=&apos;FILEUNLK&apos;, &apos;File unlocked&apos;,
+type=&apos;LOCKSET&apos;, &apos;Future lockdown date set&apos;,
+type=&apos;LOCKREM&apos;, &apos;Pending lockdown removed&apos;,
+type=&apos;UNDOLOCK&apos;, &apos;Lockdown undone&apos;,
+type=&apos;LOCKMR&apos;, &apos;Lockdown milestones generated&apos;,
+type=&apos;LOCKMRA&apos;, &apos;Lockdown milestones generated (automatic documents)&apos;,
+type=&apos;FMSS&apos;, &apos;File milestones set&apos;,
+type=&apos;FCREAYEC&apos;, &apos;File created on year end close&apos;,
+type=&apos;FCREACT&apos;, &apos;File created from copy template&apos;,
+type=&apos;TEMPUPD&apos;, &apos;Template update initiated&apos;,
+type=&apos;(&quot;FCREACR&quot;)&apos;, &apos;Reviewer copy created&apos;,
+&apos;Other&apos;
+)</code></pre></div></li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <p>Vous pouvez modifier le calcul personnalisé pour changer le texte destiné à l&apos;utilisateur ou supprimer les événements que vous ne souhaitez pas afficher.</p>
+        <h3>Documents remplis par un utilisateur</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme à barres horizontal (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe Y</i></p>
+        <ul>
+            <li>
+                <p><b>Initiales du rôle 1</b> - Affiche le nom d&apos;approbation du rôle 1.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style:none;">
+                <p>Ajoutez un champ de calcul personnalisé qui comptabilise le nombre de documents remplis par un utilisateur spécifique :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>countIf({Rôle 1 Initiales}, isNotNull(nullIf({Rôle 1 Initiales},&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Administration informatique</h2>
+        <h3>Fichiers et versions de la mission (modèles d&apos;audit Caseware)</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Métadonnées</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajouter un champ de calcul personnalisé qui détermine la version fonctionnelle de l&apos;audit dans un fichier de mission :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>ifelse(propertyname = &apos;CWCustomProperty.TEMPLATE_VERSION&apos;, propertyvalue, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>nom de fichier</b> - Affiche le nom du fichier d&apos;engagement.</p>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Profilage des clients</h2>
+        <h3>Dépenses de fonctionnement par client</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme à barres horizontal (<img src="../../Resources/Icons/horizontal-bar-chart-23x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe des Y</i></p>
+        <ul>
+            <li>
+                <p><b>entityname</b> - Affiche une liste d&apos;entités par nom.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p><b>operatingexpenses</b> - Affiche la valeur des dépenses d&apos;exploitation pour chaque entité.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez modifier l&apos;affichage des frais de fonctionnement :</p>
+                <ol>
+                    <li>
+                        <p>Dans la zone Puits de champ, sélectionnez le menu déroulant à côté de <b>Dépenses de fonctionnement.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez la méthode d&apos;agrégation des données (par exemple : somme, moyenne, médiane, etc.).</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Conseil aux entreprises</h2>
+        <h3>Compte de résultat - Recettes</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui filtre les chiffres de la carte pour n&apos;inclure que les éléments de revenu :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Élaborer un calcul qui filtre les numéros de cartes qui ne sont pas associés à des numéros de cartes de revenus.</p>
+                        <p>Par exemple, pour la carte de recettes numéro 2.1, le calcul serait le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;2.1&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> -Affiche la description cartographique utilisée dans les engagements.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui détermine si une ligne contient des soldes nuls dans toutes les colonnes de l&apos;année finale, de l&apos;année précédente 1 et de l&apos;année précédente 2 :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>ifelse(solde final+py1+py2 = 0, 1, 0)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Affiche la valeur du solde final d&apos;un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez masquer les lignes de solde nul dans le tableau :</p>
+                <ol>
+                    <li>
+                        <p>Créez un filtre basé sur le champ de calcul &quot;solde zéro&quot; (créé ci-dessus).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Modifier le filtre, cliquez sur la première liste déroulante et sélectionnez <b>Uniquement ce visuel.</b></p>
+                    </li>
+                    <li>
+                        <p>Sous Type de filtre :</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Dans la première liste déroulante, sélectionnez <b>Somme</b>.</p>
+                            </li>
+                            <li>
+                                <p>Dans la deuxième liste déroulante, sélectionnez <b>N&apos;est pas égal.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans le champ de la valeur, entrez <b>1.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la troisième liste déroulante, sélectionnez <b>Inclure les zéros</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Appliquer</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Compte de résultat - Charges</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui filtre les numéros de cartes pour n&apos;inclure que les postes de dépenses :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Élaborer un calcul qui filtre les numéros de cartes qui ne sont pas associés à des numéros de cartes de dépenses.</p>
+                        <p>Par exemple, pour la carte de revenus numéro 2.5, le calcul serait le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;2.5&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> -Affiche la description cartographique utilisée dans les engagements.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui détermine si une ligne contient des soldes nuls dans toutes les colonnes de l&apos;année finale, de l&apos;année précédente 1 et de l&apos;année précédente 2 :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>ifelse(solde final+py1+py2 = 0, 1, 0)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Affiche la valeur du solde final d&apos;un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez masquer les lignes de solde nul dans le tableau :</p>
+                <ol>
+                    <li>
+                        <p>Créez un filtre basé sur le champ de calcul &quot;solde zéro&quot; (créé ci-dessus).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Modifier le filtre, cliquez sur la première liste déroulante et sélectionnez <b>Uniquement ce visuel.</b></p>
+                    </li>
+                    <li>
+                        <p>Sous Type de filtre :</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Dans la première liste déroulante, sélectionnez <b>Somme</b>.</p>
+                            </li>
+                            <li>
+                                <p>Dans la deuxième liste déroulante, sélectionnez <b>N&apos;est pas égal.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans le champ de la valeur, entrez <b>1.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la troisième liste déroulante, sélectionnez <b>Inclure les zéros</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Appliquer</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Ventilation des sources de revenus</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme circulaire (<img src="../../Resources/Icons/pie-chart-20x22.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui filtre les chiffres de la carte pour n&apos;inclure que les éléments de revenu :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Élaborer un calcul qui filtre les numéros de cartes qui ne sont pas associés à des numéros de cartes de revenus.</p>
+                        <p>Par exemple, pour la carte de recettes numéro 2.1, le calcul serait le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;2.1&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Dépenses d&apos;exploitation - Indice de référence</h2>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme combiné à barres groupées (<img src="../../Resources/Icons/clustered-bar-chart-22x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe X</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>fin d&apos;</b> année - Affiche la date de fin d&apos;année à laquelle le revenu et la dépense ont été enregistrés.</p>
+            </li>
+        </ul>
+        <p><i>Barres</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>operatingexpenses</b> - Affiche la valeur des dépenses d&apos;exploitation pour une année donnée.</p>
+            </li>
+        </ul>
+        <p><i>Lignes</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui calcule la moyenne des frais de fonctionnement de tous les dossiers et entités :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(avg(operatingexpenses))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez afficher le point de référence d&apos;une entité parmi plusieurs autres entités, assurez-vous que le widget est associé à un filtre d&apos;entité.</p>
+            </li>
+        </ul>
+        <h3>Taux d&apos;endettement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui calcule le taux d&apos;endettement :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(passif/actif)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Pensez à utiliser la mise en forme conditionnelle pour indiquer visuellement le ratio santé.</p>
+            </li>
+        </ul>
+        <h3>Ratio de liquidité générale</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui calcule le ratio de liquidité générale :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(actifs courants/passifs courants)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Pensez à utiliser la mise en forme conditionnelle pour indiquer visuellement le ratio santé.</p>
+            </li>
+        </ul>
+        <h3>Ratio d&apos;endettement</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui calcule le ratio d&apos;endettement :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(passif/fonds propres)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Pensez à utiliser la mise en forme conditionnelle pour indiquer visuellement le ratio santé.</p>
+            </li>
+        </ul>
+        <h3>Ratio de rendement des actifs</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui calcule le ratio de rendement des actifs :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(revenu net/actifs)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Pensez à utiliser la mise en forme conditionnelle pour indiquer visuellement le ratio santé.</p>
+            </li>
+        </ul>
+        <h3>Recettes et dépenses par année</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Graphique linéaire (<img src="../../Resources/Icons/line-chart-25x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe X</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>fin d&apos;</b> année - Affiche la date de fin d&apos;année à laquelle le revenu et la dépense ont été enregistrés.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui calcule les soldes des recettes :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Construire un calcul qui calcule le solde des comptes associés aux numéros de la carte des recettes.</p>
+                        <p>Par exemple, si le numéro de la carte des recettes est 2,1, le calcul sera le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;2.1&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Ajouter un champ de calcul personnalisé qui calcule les soldes des dépenses :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Construire un calcul qui calcule le solde des comptes associés aux numéros de cartes de dépenses.</p>
+                        <p>Par exemple, si le numéro de la carte des revenus est 2,5, le calcul sera le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;2.5&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li>
+                <p>Si vous souhaitez afficher une tendance d&apos;une année sur l&apos;autre, assurez-vous que seul le champ &quot; <b>fin d&apos;année&quot;</b> est trié par ordre croissant.</p>
+            </li>
+            <li>
+                <p>Si vous souhaitez modifier la couleur d&apos;un graphique, cliquez sur le graphique dans la visualisation pour afficher un menu avec une option <b>Couleur du graphique</b> .</p>
+            </li>
+        </ul>
+        <h3>Bilan - Actif</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Mises en correspondance</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui filtre les numéros de carte pour n&apos;inclure que les éléments de l&apos;actif :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Élaborer un calcul qui filtre les numéros de cartes qui ne sont pas associés à des numéros de cartes d&apos;actifs.</p>
+                        <p>Par exemple, si le numéro de la carte des actifs est 1,1, le calcul sera le suivant :</p>
+                        <p><code>ifelse(substring(mapno,1,3)=&apos;1.1&apos; AND strlen(mapno)&lt;9, mapno, NULL)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>mapdesc</b> - Affiche la description cartographique utilisée dans les engagements.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajoutez un champ de calcul personnalisé qui détermine si une ligne contient des soldes nuls dans toutes les colonnes finales, de l&apos;année précédente 1 et de l&apos;année précédente 2 :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>ifelse(solde final+py1+py2 = 0, 1, 0)</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>finalbalance</b> - Affiche la valeur du solde final d&apos;un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py1</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+            <li>
+                <p><b>py2</b> - Affiche la valeur du solde de l&apos;année précédente pour un numéro de carte donné.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez masquer les lignes de solde nul dans le tableau :</p>
+                <ol>
+                    <li>
+                        <p>Créez un filtre basé sur le champ de calcul &quot;solde zéro&quot; (créé ci-dessus).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Modifier le filtre, cliquez sur la première liste déroulante et sélectionnez <b>Uniquement ce visuel.</b></p>
+                    </li>
+                    <li>
+                        <p>Sous Type de filtre :</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Dans la première liste déroulante, sélectionnez <b>Somme</b>.</p>
+                            </li>
+                            <li>
+                                <p>Dans la deuxième liste déroulante, sélectionnez <b>N&apos;est pas égal.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans le champ de la valeur, entrez <b>1.</b></p>
+                            </li>
+                            <li>
+                                <p>Dans la troisième liste déroulante, sélectionnez <b>Inclure les zéros</b>.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Appliquer</b>.</p>
+                        <p>Une fois le filtre mis en place, vous pouvez également l&apos;utiliser pour masquer la colonne &quot;solde nul&quot; du tableau.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Actifs courants - Indice de référence</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme linéaire de surface (<img src="../../Resources/Icons/area-line-chart-25x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe X</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Affiche la date de fin d&apos;année à laquelle les actifs circulants ont été enregistrés.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajouter un champ de calcul personnalisé qui calcule la moyenne des actifs circulants de tous les dossiers et entités :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(avg(actifs actuels))</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>actifs circulants</b> - Affiche la valeur des actifs circulants pour une année donnée.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez afficher le point de référence d&apos;une entité parmi plusieurs autres entités, assurez-vous que le widget est associé à un filtre d&apos;entité.</p>
+            </li>
+        </ul>
+        <h3>Passif à court terme - Indice de référence</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>Résumé des comptes</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Diagramme à barres verticales (<img src="../../Resources/Icons/vertical-bar-chart-20x23.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Axe X</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>yearend</b> - Affiche la date de fin d&apos;année à laquelle les passifs courants ont été enregistrés.</p>
+            </li>
+        </ul>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li>
+                <p>Ajouter un champ de calcul personnalisé qui calcule la moyenne des dettes à court terme de tous les dossiers et entités :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>abs(avg(currentliabilities))</code></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b>currentliabilities</b> - Affiche la valeur des dettes à court terme pour une année donnée.</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez afficher le point de référence d&apos;une entité parmi plusieurs autres entités, assurez-vous que le widget est associé à un filtre d&apos;entité.</p>
+            </li>
+        </ul>
+        <h2>Personnaliser une analyse pour : Risques, contrôles et points de la lettre de gestion</h2>
+        <h3>Nombre de risques ne faisant l&apos;objet d&apos;aucun contrôle</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez un champ de calcul personnalisé qui compte le nombre de risques avec un champ de contrôle associé vide :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>count({assocd_ctrl}) - countIf({assocd_ctrl}, isNotNull(nullIf({assocd_ctrl},&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Nombre de contrôles non testés</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Indicateur clé de performance (<img src="../../Resources/Icons/kpi-24x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Valeur</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajouter un champ de calcul personnalisé qui compte le nombre de contrôles non testés :</p>
+                <ol>
+                    <li>
+                        <p>Dans le menu supérieur, sélectionnez <b>Ajouter (<img src="../../Resources/Icons/plus-13x13.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Ajouter un champ calculé.</b></p>
+                    </li>
+                    <li>
+                        <p>Entrez un nom pour le champ calculé.</p>
+                    </li>
+                    <li>
+                        <p>Effectuez le calcul suivant :</p>
+                        <p><code>count(testctrl) - countIf(testctrl, testctrl=&quot;No&quot;)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Rapport sur les risques</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez tous les champs de risque que vous souhaitez afficher (par exemple : Nom, description, risque inhérent, etc.)</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Matrice de contrôle</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez tous les champs de contrôle que vous souhaitez afficher (par exemple : Nom, description, cycles d&apos;activité, etc.)</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Rapport de la lettre de gestion</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvmlp</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Tableau (<img src="../../Resources/Icons/table-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Ajoutez tous les champs du point de la lettre de gestion que vous souhaitez afficher (par exemple : Nom, Observation, Raison, etc.)</p>
+            </li>
+        </ul>
+        <p><u><b>Autres considérations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Si vous souhaitez modifier les en-têtes de colonne du tableau :</p>
+                <ol>
+                    <li>
+                        <p>Sélectionnez le widget, puis dans le menu de droite, sélectionnez <b>Format visuel</b> (<img src="../../Resources/Icons/format-visual-16x17.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>Dans le panneau Format visuel, développez la section <b>Noms de colonne par groupe</b> et saisissez les noms d&apos;en-tête de colonne souhaités.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Risques couramment évoqués</h3>
+        <ul>
+            <li>
+                <p><b>Ensemble de données</b> : <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Type de visuel suggéré</b> : Nuage de mots (<img src="../../Resources/Icons/word-cloud-35x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Puits de champ</b></u>
+        </p>
+        <p><i>Groupe par</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>nom</b> - Identifie les risques les plus courants sur la base du champ &quot;nom&quot;.</p>
+            </li>
+        </ul>
+        <h1>Sherlock Builder Publier une analyse dans une visualisation</h1>
+        <p>Une fois l&apos;analyse finalisée, publiez-la dans une visualisation pour la partager avec d&apos;autres membres du personnel et des clients. Notez qu&apos;ils ne peuvent que visualiser la visualisation - ils ne peuvent pas la modifier.</p>
+        <p class="note"><b>Remarque :</b> Les visualisations achetées s&apos;affichent dans l&apos;onglet Tableaux de bord si une licence a été attribuée à un utilisateur de Sherlock Builder, mais elles ne peuvent pas être modifiées ou partagées.</p>
+        <p><b>Pour publier une visualisation :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;onglet <b>Factures</b> .</p>
+                <p>Une liste des visualisations disponibles s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;analyse que vous souhaitez publier dans une visualisation.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Partager (<img src="../../Resources/Icons/share-icon-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Publier le tableau de bord</b>.</p>
+                <p><img src="../../Resources/Images/sherlock-bi-dashboard-01.png" alt="La boîte de dialogue Publier un tableau de bord avec le bouton Publier un tableau de bord en surbrillance." /></p>
+            </li>
+            <li>Dans la boîte de dialogue Sélectionner un tableau de bord , sélectionnez Nouveau.<ul><li><p><b>Publier un nouveau tableau de bord pour</b> créer une nouvelle visualisation. Enter a title for the new visualization in the field.</p></li><li><p><b>Remplacer un tableau de bord existant</b> pour écraser une visualisation tout en conservant les paramètres de partage existants. Select the visualization to replace from the drop-down menu.</p></li></ul></li>
+            <li>
+                <p>Si nécessaire, appliquez des options supplémentaires à partir du menu déroulant <b>Options de publication avancées.</b> </p>
+            </li>
+            <li>
+                <p>Select <b>Publish dashboard</b>.</p>
+                <p>La boîte de dialogue Partager le tableau de bord s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Si vous souhaitez collaborer à la visualisation avec d&apos;autres utilisateurs de Sherlock Builder dans votre entreprise, entrez l&apos;email de chaque utilisateur et sélectionnez <b>Partager</b>.</p>
+                <p class="note"><b>Remarque :</b> N&apos;utilisez pas l&apos;option <b>Partager avec tous les membres de ce compte.</b>  Il ne fonctionne pas correctement avec Sherlock Builder.</p>
+                <p><img src="../../Resources/Images/sherlock-bi-dashboard-02.png" alt="La boîte de dialogue du tableau de bord Partager avec le champ et le bouton Partager en surbrillance." /></p>
+            </li>
+        </ol>
+        <h1>Sherlock Reader Afficher une visualisation</h1>
+        <p>Utilisez l&apos;application Sherlock Reader pour visualiser et personnaliser les visualisations disponibles sur votre compte. L&apos;icône précédant le nom de la visualisation indique si la visualisation est achetée (<img src="../../Resources/Icons/purchased-dashboard-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) ou partagée (<img src="../../Resources/Icons/shared-dashboard-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p><div class="note"><p><b>Notes :</b></p>
+            <ul>
+                <li>
+                    <p>Vous ne pouvez visualiser que les visualisations pour lesquelles votre entreprise a acheté des licences via <a href="https://my.caseware.com/">MyCaseware</a>, ou les visualisations qui ont été partagées avec vous par d&apos;autres membres du personnel via Sherlock Builder.</p>
+                </li>
+                <li>
+                    <p>Vous ne pouvez visualiser que les données des entités pour lesquelles vous disposez du droit <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Setup/Users-and-Groups/Grant-users-and-groups-access-to-entities.htm">Permis de visualisation</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">Permis de<b>visualisation</b> </MadCap:conditionalText>.</p>
+                </li>
+            </ul></div><p><b>Afficher une visualisation</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que l&apos;administrateur de votre entreprise <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Setup/Security/Enable-Cloud-apps.htm#Enable">vous a attribué des licences</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">vous a attribué des licences</MadCap:conditionalText> pour l&apos;application Sherlock Reader et toutes les visualisations applicables.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Sherlock Reader.</b></p>
+                <p>Une liste des visualisations disponibles s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Dans la liste, sélectionnez la visualisation que vous souhaitez visualiser.<MadCap:conditionalText MadCap:conditions="General.Online"> Pour plus d&apos;informations, voir <a href="https://docs.aws.amazon.com/quicksight/latest/user/viewing-visual-data.html">Affichage de données visuelles dans Amazon QuickSight</a>.</MadCap:conditionalText></p>
+                <p class="note"><b>Remarque :</b> La fonction de recherche n&apos;est pas disponible dans Sherlock Reader.</p>
+                <p>La visualisation s&apos;ouvre.</p>
+            </li>
+            <li>
+                <p>Si nécessaire, appliquez des filtres ou développez un widget pour personnaliser l&apos;apparence de la visualisation pour <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Explore/Sherlock/Print-a-visualization.htm">l&apos;impression</a></MadCap:conditionalText>l&apos;<MadCap:conditionalText MadCap:conditions="General.PDF">impression</MadCap:conditionalText>.</p>
+            </li>
+        </ol>
+        <h1>Sherlock Reader Imprimer une visualisation</h1>
+        <p>Lorsque vous <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Explore/Sherlock/View-a-visualization.htm">visualiser une visualisation</a></MadCap:conditionalText>lorsque vous visualisez<MadCap:conditionalText MadCap:conditions="General.PDF">une visualisation</MadCap:conditionalText>, vous pouvez personnaliser les données à afficher afin de rendre la visualisation présentable pour l&apos;impression.</p>
+        <p><b>Imprimer une visualisation</b></p>
+        <ol>
+            <li>
+                <p>Dans la visualisation, sélectionnez <b>Imprimer le tableau de bord.</b></p>
+                <p>Un aperçu avant impression s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Configurer</b> pour personnaliser la taille de la page, l&apos;orientation et la couleur d&apos;arrière-plan.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Imprimer</b>.</p>
+                <p>La boîte de dialogue Imprimer s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Personnalisez les paramètres d&apos;impression selon vos besoins.</p>
+                <table class="table">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Destination</p>
+                            </td>
+                            <td>
+                                <p>Sélectionnez une méthode d&apos;impression :</p>
+                                <ul>
+                                    <li>Imprimante locale</li>
+                                    <li>Enregistrer en PDF</li>
+                                    <li>OneNote (bureau)</li>
+                                    <li>Rédacteur de documents Microsoft XPS</li>
+                                    <li>Microsoft Print to PDF</li>
+                                    <li>Fax</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Pages</p>
+                            </td>
+                            <td>
+                                <p>Spécifiez les pages à imprimer.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Mise en page</p>
+                            </td>
+                            <td>
+                                <p>Spécifiez l&apos;orientation du document (portrait ou paysage).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Couleur</p>
+                            </td>
+                            <td>
+                                <p>Spécifiez la couleur du document (couleur ou noir et blanc).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Format du papier</p>
+                            </td>
+                            <td>
+                                <p>Spécifiez le format du papier.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Pages par feuille</p>
+                            </td>
+                            <td>
+                                <p>Combine le nombre de pages spécifié sur une seule feuille.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Marges</p>
+                            </td>
+                            <td>
+                                <p>Spécifiez la taille de la marge.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Échelle</p>
+                            </td>
+                            <td>
+                                <p>Augmenter ou réduire la taille du contenu de la page.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Options</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><b>En-têtes et pieds de page :</b> Sélectionnez cette option pour afficher ou masquer le contenu de l&apos;en-tête ou du pied de page, y compris le nom de la visualisation, l&apos;URL et l&apos;horodatage.</li>
+                                    <li><b>Graphiques de fond :</b> Permet d&apos;afficher ou de masquer les graphiques d&apos;arrière-plan (affichés dans la fenêtre de prévisualisation). L&apos;activation de cette option peut augmenter la consommation d&apos;encre des imprimantes locales.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Imprimer en utilisant le dialogue système...</p>
+                            </td>
+                            <td>
+                                <p>Sélectionnez l&apos;icône de la nouvelle fenêtre (<img src="../../Resources/Icons/new-window-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour lancer la boîte de dialogue d&apos;impression par défaut de votre ordinateur.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Imprimer</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

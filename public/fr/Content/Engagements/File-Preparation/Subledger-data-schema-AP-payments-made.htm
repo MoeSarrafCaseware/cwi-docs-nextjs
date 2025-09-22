@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes fournisseurs – Paiements effectués décrits</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du livre auxiliaire Comptes fournisseurs - Paiements effectués.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID de la transaction <br /><code>(ap_payment_made_transaction_id)</code></td>
+                    <td>
+                        <p>Une référence croisée à l&apos;écriture du grand livre. Il peut contenir de nombreux niveaux différents pour identifier la transaction. Les exemples incluent les centres de coûts tels que l&apos;entreprise, la division, la région, le groupe et la branche/le département.<![CDATA[
+]]></p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de paiement<br /><code>(ap_payment_made_payment_id)</code></td>
+                    <td>
+                        <p>L&apos;identifiant unique de chaque paiement effectué. Cet identifiant peut être créé en concaténant des champs, par exemple le fournisseur et le numéro de paiement, afin d&apos;identifier chaque transaction de manière unique.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date de paiement<br /><code>(ap_payment_made_payment_date)</code></p>
+                    </td>
+                    <td>
+                        <p>La date à laquelle le paiement a été effectué ou le crédit appliqué.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Année de paiement<br /><code>(ap_payment_made_fiscal_year)</code></p>
+                    </td>
+                    <td>
+                        <p>Année fiscale au cours de laquelle <b>la date de paiement</b> intervient.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Période de paiement <br /><code>(ap_payment_made_payment_period</code>)</td>
+                    <td>
+                        <p>Période fiscale au cours de laquelle <b>la date de paiement</b> intervient.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type de montant (débit / crédit)<br /> <code>(indicateur ap_payment_made_amount_credit_debit</code>)</td>
+                    <td>
+                        <p>Indique si le montant est un crédit ou un débit.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Valeurs possibles : <br /><code>C=crédit</code>; <br /><code>D=débit</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type de paiement <br /><code>(ap_payment_made_payment_type</code>)</td>
+                    <td>
+                        <p>La valeur du code ou l&apos;indicateur de la méthode par laquelle le montant du débit ou du crédit de la transaction a été éteint ou réparti sur la dette par le fournisseur. Il s&apos;agit par exemple de chèques, de virements électroniques, d&apos;espèces, etc.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant du paiement<br /> <code>(ap_payment_made_payment_amount</code>)</td>
+                    <td>
+                        <p>Montant monétaire de la transaction enregistré dans la monnaie fonctionnelle ou la monnaie du groupe.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Déclaration du montant du paiement<br /> <code>(ap_payment_made_payment_amount_reporting</code>)</td>
+                    <td>
+                        <p>Montant monétaire de la transaction enregistré dans la monnaie de présentation.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Montant du paiement local <br /><code>(ap_payment_made_payment_amount_local</code>)</td>
+                    <td>
+                        <p>Montant de la transaction dans la devise locale.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Statut du détachement <br /><code>(ap_payment_made_posting_status</code>)</td>
+                    <td>
+                        <p>Indique si la transaction a été enregistrée dans le grand livre.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Valeurs possibles : <code>Affiché</code> ou <code>non affiché</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot <br /><code>(ap_payment_made_batch_id</code>)</td>
+                    <td>
+                        <p>Un identifiant de lot généré par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description du paiement <br /><code>(ap_payment_made_description</code>)</td>
+                    <td>
+                        <p>Une description du paiement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source ID <br /><code>(ap_payment_made_source_id</code>)</td>
+                    <td>
+                        <p>Source d&apos;affichage. Le code de la source d&apos;où provient l&apos;écriture de journal, comme le journal des ventes, le journal des encaissements, le journal général, le journal des salaires, l&apos;écriture manuelle du comptable, la feuille de calcul, etc.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du fournisseur<code>(ap_payment_made_supplier_account_id)</code></td>
+                    <td>
+                        <p>Identifiant du fournisseur à qui le paiement est reçu ou à qui des crédits ont été appliqués.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du fournisseur <br /><code>(ap_payment_made_supplier_account_name</code>)</td>
+                    <td>
+                        <p>Le nom du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entré par <br /><code>(ap_payment_made_entered_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de saisie <br /><code>(ap_payment_made_entered_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la transaction a été introduite dans le système source. Cette date est parfois appelée date de création.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure d&apos;entrée <br /><code>(ap_payment_made_entered_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par <br /><code>(ap_payment_made_approved_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a approuvé l&apos;entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation <br /><code>(ap_payment_made_approved_by_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Délai d&apos;approbation <br /><code>(ap_payment_made_approved_by_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification <br /><code>(ap_payment_made_last_modified_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la dernière modification <br /><code>(ap_payment_made_last_modified_date</code>)</td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification <br /><code>(ap_payment_made_last_modified_time</code>)</td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de la facture <br /><code>(numéro de facture ap_payment_made_invoice_number</code>)</td>
+                    <td>
+                        <p>Numéro d&apos;identification d&apos;une transaction générée en interne ou en externe. Il s&apos;agit par exemple du numéro de chèque, du numéro de virement ou de l&apos;identifiant du document original.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la facture <br /><code>(ap_payment_made_invoice_date</code>)</td>
+                    <td>
+                        <p>La date d&apos;une transaction générée en externe. Il s&apos;agit par exemple de la date du chèque ou de la date du virement.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(ap_payment_made_business_unit_code</code>)</td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro du compte de débit GL <br /><code>(ap_payment_made_gl_debit_account_number</code>)</td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le débit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de compte de crédit GL <br /><code>(ap_payment_made_gl_credit_account_number</code>)</td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le crédit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - ID du compte <br /><code>(ap_payment_made_line_account_id</code>)</td>
+                    <td>
+                        <p>Code du compte de recettes du grand livre général (GL). Il peut s&apos;agir d&apos;un identifiant de sous-compte, ainsi que de plusieurs niveaux d&apos;identification du compte, y compris les centres de coûts, tels que l&apos;entreprise, la division, la région, le groupe et la succursale/département.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Détail de la ligne - Description du compte <br /><code>(ap_payment_made_line_account_description</code>)</td>
+                    <td>
+                        <p>Description du compte dont l&apos;identifiant apparaît dans <b>Détail de la ligne - ID du compte.</b></p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Devise de paiement <br /><code>(ap_payment_made_payment_amount_currency</code>)</td>
+                    <td>
+                        <p>La devise fonctionnelle ou de groupe liée au montant du paiement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Déclaration de la devise de paiement <br /><code>(ap_payment_made_payment_amount_reporting_currency</code>)</td>
+                    <td>
+                        <p>La devise de reporting liée au montant du paiement pour les rapports non consolidés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Monnaie de paiement locale <br /><code>(ap_payment_made_payment_amount_local_currency</code>)</td>
+                    <td>
+                        <p>La devise pour les exigences locales en matière de déclaration.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID d&apos;entrée <br /><code>(ap_payment_made_journal_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique d&apos;une écriture de journal.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

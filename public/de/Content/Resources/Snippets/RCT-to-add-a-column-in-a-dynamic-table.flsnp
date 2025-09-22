@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Eine Spalte in einer dynamischen Tabelle hinzufügen:</p><MadCap:snippetBlock src="RCT-to-edit-a-dynamic-table.flsnp" /><ol start="3">
+            <li>
+                <p>Gehen Sie zu der Stelle, an der Sie eine Spalte hinzufügen möchten.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Hinzufügen</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) am oberen Tabellenrand.</p>
+                <p>Der Tabelle wird eine Spalte hinzugefügt und die Spalteneinstellungen werden auf der Seite angezeigt.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">So bearbeiten Sie die Spalteneinstellungen:</p>
+        <ol>
+            <li>
+                <p>Markieren Sie die Spaltenüberschrift.</p>
+            </li>
+            <li>
+                <p>Ändern Sie die folgenden Einstellungen nach Bedarf:</p>
+                <ul>
+                    <li>
+                        <p><b>Typ</b></p>
+                        <p>Wählen Sie einen Spaltentyp. Die folgenden Spalten haben vordefinierte Werte:</p>
+                        <ul>
+                            <li>
+                                <p style="font-weight: bold;">Vorjahr - <span style="font-weight: normal;">Saldo aus dem Vorjahr</span></p>
+                            </li>
+                            <li>
+                                <p><b>Aktuelles Jahr</b> - Saldo des laufenden Jahres</p>
+                            </li>
+                            <li>
+                                <p><b>Aktuelle Periode</b> - Saldo für die laufende Periode (bei Engagements mit Zwischenabrechnung)</p>
+                            </li>
+                            <li>
+                                <p><b>Vergleichsperiode</b> - Saldo für den Vergleichszeitraum</p>
+                            </li>
+                            <li>
+                                <p><b>Differenz</b> - Differenz zwischen dem Saldo des Vorjahres und dem Saldo des laufenden Jahres</p>
+                            </li>
+                            <li>
+                                <p><b>Differenz in Prozent</b> - prozentuale Differenz zwischen dem Saldo des Vorjahres und dem Saldo des laufenden Jahres. Wenn Sie diesen Spaltentyp wählen, können Sie auch die Anzahl der Dezimalstellen auswählen, die in der Spalte angezeigt werden sollen. Standardmäßig werden in den Spalten für die prozentuale Abweichung Werte mit 2 Dezimalstellen angezeigt.</p>
+                            </li>
+                        </ul>
+                        <p>Sie können für die folgenden Spalten benutzerdefinierte Werte eingeben:</p>
+                        <ul>
+                            <li>
+                                <p><b>Eingabe</b> - geben Sie Text, Zahlen, Währungswerte oder Prozentsätze ein.</p>
+                            </li>
+                            <li>
+                                <p><b>Benutzerdefinierte Formel</b> - eine Formel mit Hilfe des Formeleditors eingeben. Die Formel wird auf alle Spaltenzellen angewendet.</p>
+                            </li>
+                            <li>
+                                <p><b>Nummerierungsreferenz</b> - Referenzen auf vorhandene Anmerkungen im Jahresabschluss hinzufügen.</p>
+                            </li>
+                            <li>
+                                <p><b>Referenz</b> - eine Referenzen-Spalte hinzufügen Wählen Sie <b>Hinzufügen</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) in jeder Zelle der Spalte, um Referenzen hinzuzufügen.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Überschrift</b></p>
+                        <p><b>Dynamischer Text</b> oder Formeln (<b style="font-style: italic;">fx</b>) können in die Überschrift eingefügt werden. Sie können auch einfachen Text in das Feld <b>Ausgabe</b> eingeben oder einfachen Text mit dynamischem Text und Formeln kombinieren.</p>
+                    </li>
+                    <li>
+                        <p><b>Dimension</b></p>
+                        <p>Dimensionen sind Gruppeneigenschaften, die Autoren für die Gruppierungen konfigurieren können, um eine weitere Kategorisierung der Konten vorzunehmen. Zum Beispiel, um eine weitere Kategorisierung für Konten auf der Grundlage des Standorts (Europa, Nordamerika, etc.).</p>
+                        <p>Sie können eine Dimension auswählen, um die Spalte so einzustellen, dass sie nur Daten für diese Dimension anzeigt.</p>
+                    </li>
+                    <li>
+                        <p><b>Entität</b></p>
+                        <p>Wenn Ihr Engagement konsolidiert ist, können Sie auswählen, ob Sie die gesamten konsolidierten Daten, die konsolidierten Daten oder die Daten für eine bestimmte Tochtergesellschaft anzeigen möchten. Wenn es mindestens 15 untergeordnete Einheiten gibt, können Sie das Suchfeld verwenden, um die gewünschte Einheit auszuwählen.</p>
+                    </li>
+                    <li>
+                        <p><b>Breite</b></p>
+                        <p>Wählen Sie eine Breite für Ihre Spalte. Die Breitenoptionen für alle Spalten sind <b>Verkleinern</b>, <b>Standard</b> und <b>Spezifisch</b>, mit Ausnahme der Spalten für Nummerierungsreferenzen, Referenzen und Beschreibungen, wo die Optionen <b>Schmal</b>, <b>Mittel</b> und <b>Breit</b> sind.</p>
+                        <p>Wenn Sie <b>Spezifisch</b> wählen, können Sie die Breite der Spalte in Zentimetern oder Zoll angeben. Die Maßeinheit richtet sich nach der in den <a href="../../Engagements/Template-and-Authoring/Customize-the-unit-of-measurement.htm">Produkteinstellungen</a> gewählten Einheit.</p>
+                    </li>
+                    <li>
+                        <p><b>Währungssymbol</b></p>
+                        <p>Hier können Sie auswählen, ob das Währungssymbol in der Spaltenüberschrift angezeigt werden soll.</p>
+                        <p>Verfügbare Optionen:</p>
+                        <ul>
+                            <li>
+                                <p><b>Standardeinstellungen des Dokuments verwenden</b> - die Tabelle verwendet die Standardeinstellungen für Währungssymbole in den Jahresabschlüssen. Weitere Informationen finden Sie unter <a href="../../Engagements/Template-and-Authoring/Set-default-currency-symbol-options-dynamic-tables.htm">Standardwährungssymbole für dynamische Tabellen festlegen</a>.</p>
+                            </li>
+                            <li>
+                                <p><b>In Kopfzeile anzeigen</b> - das Währungssymbol wird in der Kopfzeile der Spalte angezeigt.</p>
+                            </li>
+                            <li>
+                                <p><b>Nicht in Kopfzeile anzeigen</b> - wird das Währungssymbol nicht in der Kopfzeile angezeigt.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Format</b></p>
+                        <p>Für Eingabe- oder benutzerdefinierte Formelspalten können Sie eines der folgenden Formate für Ihre Zellwerte wählen:</p>
+                        <ul>
+                            <li>
+                                <p>Währung</p>
+                            </li>
+                            <li>
+                                <p>Nummer</p>
+                            </li>
+                            <li>
+                                <p>Prozent</p>
+                            </li>
+                            <li>
+                                <p>Text</p>
+                            </li>
+                        </ul>
+                        <p>Wenn Sie <b>Nummer</b> oder <b>Prozent</b> wählen, können Sie auch die Anzahl der Dezimalstellen wählen. </p>
+                    </li>
+                    <li>
+                        <p><b>Anzeigeoptionen</b></p>
+                        <p>Für einige Spaltentypen und -formate können Sie eine oder mehrere Anzeigeoptionen auswählen:</p>
+                        <ul>
+                            <li>
+                                <p><b>Erweitern, um die Breite der Seite zu füllen</b> - legt die Spaltenbreite so fest, dass die dynamische Tabelle die gesamte Breite der Seite einnimmt.</p>
+                                <p class="note"><b>Notiz</b>: Diese Einstellung ist in der Spalte <b>Beschreibung</b> standardmäßig aktiviert.</p>
+                            </li>
+                            <li>
+                                <p><b>Nullsalden anzeigen</b> - zeigt Konten mit Nullsalden in der Spalte an.</p>
+                            </li>
+                            <li>
+                                <p><b>Umgekehrtes Vorzeichen für Salden anzeigen</b> - zeigt das entgegengesetzte Vorzeichen (negativ oder positiv) für die Werte in der Spalte an.</p>
+                            </li>
+                            <li>
+                                <p><b>Von der Summe ausschließen</b> - schließt die Werte in dieser Spalte von der Berechnung in der Zeile <b>Summe</b> der Kontengruppe aus.</p>
+                            </li>
+                            <li>
+                                <p><b>Symbol in Spaltenüberschrift anzeigen</b> - zeigt das Währungssymbol oder das Prozentzeichen oben in der Spalte an.</p>
+                            </li>
+                            <li>
+                                <p><b>Jahr in Spaltenüberschrift anzeigen</b> - fügt die Jahreszahl in die Spaltenüberschriften <b>Aktuelles Jahr</b> oder <b>Vorjahr</b> ein.</p>
+                            </li>
+                            <li>
+                                <p><b>Nicht-konsolidierte Daten verwenden</b> - wenn es sich um ein konsolidiertes Engagement handelt, werden bei Auswahl dieser Option die konsolidierten Daten aus der Spalte entfernt und nur die nicht konsolidierten Daten angezeigt.</p>
+                            </li>
+                        </ul>
+                        <p>Sie können auf das Symbol <b>Anzeigeeinstellung</b> (<img src="../Images/icon-visibility-visible.png" alt=" " style="vertical-align: text-bottom;" />) klicken, um ein Drop-down-Menü mit den folgenden Optionen zu öffnen:</p>
+                        <ul>
+                            <li>
+                                <p><b>Standardverhalten zuweisen</b> - das Standardverhalten wird auf die Spalte angewendet. Beachten Sie, dass das Standardverhalten je nach Spaltentyp unterschiedlich ist.</p>
+                                <ul>
+                                    <li>
+                                        <p><b>Für die Spalten der Hauptabschlussübersicht:</b></p>
+                                        <p>Die Spalte wird in der Bilanz und in der Druckausgabe (PDF) immer dann angezeigt, wenn die Spalte Daten enthält (mindestens eine Zelle ist nicht leer und ihr Wert ist nicht Null). Beachten Sie, dass dieses Standardverhalten für eine einzelne dynamische Tabelle in den <a href="../../Engagements/Template-and-Authoring/Display-zero-balance-columns-in-dynamic-tables.htm">Tabelleneinstellungen</a> geändert werden kann.</p>
+                                        <p class="note"><b>Hinweis:</b> Die Spalten für das Vorjahr werden nicht angezeigt, wenn keine Vorjahresdaten vorhanden sind.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Für Eingabe- und benutzerdefinierte Formelspalten:</b></p>
+                                        <p>Die Spalte wird im Jahresabschluss immer angezeigt und erscheint in der Druckausgabe (PDF), wenn die Spalte Daten enthält (mindestens eine Zelle ist nicht leer und ihr Wert ist nicht Null).</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Diese Spalte immer anzeigen</b> - die Spalte wird immer im Jahresabschluss und in der Druckausgabe (PDF) angezeigt.</p>
+                            </li>
+                            <li>
+                                <p><b>Diese Spalte immer verbergen</b> - die Spalte ist im Jahresabschluss und in der Druckausgabe (PDF) immer ausgeblendet.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Löschen</b> (<img src="../Images/icon-dynamic-table-command-delete-12x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                        <p>Wählen Sie dieses Symbol, um die Spalte aus der Tabelle zu löschen.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Wählen Sie <b>FERTIG</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>SPEICHERN</b> oder <b>SPEICHERN &amp; SCHLIEßEN</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

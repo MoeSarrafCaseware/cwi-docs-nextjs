@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>2019-10 release notes</h1>
+        <p>SE 2019-10 bevat een nieuw ontwerp van de risicomodule, ondersteuning van Inline eXtensible Business Reporting Language (iXBRL) en meer.</p>
+        <h2>Nieuwe gebruikersinterface voor de risicomodule</h2>
+        <p>De module Cloud Engagements simple risk schakelt over op een nieuwe gebruikersinterface om complexere engagementen te ondersteunen, waarbij aanvullende documentatie en verbeterde workflows voor het identificeren, beoordelen en reageren op risico&apos;s nodig zijn.</p>
+        <p>De belangrijkste functies in één oogopslag:</p>
+        <ul>
+            <li>
+                <p>Een gecentraliseerde aanpak voor risico-identificatie en -beoordeling.</p>
+            </li>
+            <li>
+                <p>Een workflow om gebruikers door de risicobeoordeling te leiden, met een overzicht op hoog niveau en drill-down opties - gebruikers kunnen details bekijken terwijl ze door elk onderdeel van het financieel overzicht werken.</p>
+            </li>
+            <li>
+                <p>Uitbreiding van de risicodocumentatie om het platform op te schalen voor verschillende producten of engagementtypes en rechtsgebieden.</p>
+            </li>
+            <li>
+                <p>Het introduceren van aanpassingsmogelijkheden op productniveau, waarbij je de terminologie en het complexiteitsniveau dat vereist is voor hun markt kunt aanpassen, zoals veldnamen en labels, beoordelingsmethoden en het in kaart brengen van Risk of Material Misstatement (RMM).</p>
+            </li>
+        </ul>
+        <p>De nieuwe interface maakt gebruik van moderne UI best practices, met:</p>
+        <ul>
+            <li>
+                <p>risicokaarten en beoordelingskaarten met samengevouwen en uitgevouwen weergaven.</p>
+            </li>
+            <li>
+                <p>gegevens filteren en sorteren.</p>
+            </li>
+            <li>
+                <p>een verbeterde methode voor het koppelen aan checklistprocedures voor risico-identificatie en reactie.</p>
+            </li>
+            <li>
+                <p>koppeling met analysetabs in checklists.</p>
+            </li>
+            <li>
+                <p>verbeterde tagging van beweringen.</p>
+            </li>
+        </ul>
+        <p>De opschaling naar grotere en complexere opdrachten vereiste talrijke wijzigingen in de formulering. Zo is de term <i>Referentie</i> in de oude interface in de nieuwe interface gewijzigd in <i>Audit Response</i> .</p>
+        <p><img src="../Resources/Images/risk-control-module.PNG" alt="Nieuwe lay-out voor de risicomodule. In deze afbeelding: (1) risico toevoegen, (2) filters aan de linkerkant, (3) annoteren, kwestie toevoegen of risico verwijderen, (4) getagde beweringen voor gebied/cyclus waarop het risico betrekking heeft, (5) controles, referenties, gebieden/cycli en auditreactie toevoegen, (6) invoervelden voor opmerkingen en notities, (7) risicotype, (8) drop-down voor eenvoudige selectie van een conclusie. " /></p>
+        <p>Om over te schakelen naar de lay-out van de nieuwe risicomodule, gaat u naar de <a href="Enable-the-new-risk-module.htm">Productinstellingen</a> en selecteert u <b>Risico&apos;s</b> | <b>Algemeen</b>en schakelt u vervolgens het selectievakje <b>Nieuwe risicofunctionaliteit inschakelen in</b> .</p>
+        <p><img src="../Resources/Images/enable-new-risk.PNG" alt="Hoe schakel je de nieuwe risicomodule in je productinstellingen in?" /></p>
+        <p>Zodra u de nieuwe lay-out inschakelt, wordt de nieuwe pagina <b>Risico&apos;s</b> beschikbaar in de sjabloon, waar u eenvoudig toegang hebt tot de nieuwe risicomodule.</p>
+        <p>Als aanvulling op de nieuwe risicomodule hebben we de Risk of Material Misstatement (RMM) zichtbaarheidsconditie verbeterd om meer logica te ondersteunen. Naast het beweringstype zijn nu ook de volgende parameters beschikbaar:</p>
+        <ul>
+            <li>
+                <p>Bedrijfscyclus of -gebied.</p>
+            </li>
+            <li>
+                <p>Logische operatoren</p>
+            </li>
+            <li>
+                <p>RMM-waarde.</p>
+            </li>
+        </ul>
+        <p>Een RMM-conditielogica kan nu bijvoorbeeld zijn: Als &apos;Nauwkeurigheid&apos; voor &apos;Voorraad&apos; RMM &apos;minder dan&apos; &apos;Gemiddeld&apos; heeft, verberg dit item dan.</p>
+        <p class="note inline"><b>Please note that:</b><br />- de aanvullende parameters voor RMM-condities zijn alleen beschikbaar als de nieuwe risicomodule is ingeschakeld in het product.<br />- als u de nieuwe risicomodule inschakelt in uw product, worden bestaande RMM-zichtbaarheidsvoorwaarden in de oude risicomodule niet gemigreerd naar de nieuwe lay-out. Je moet je RMM-condities opnieuw instellen met behulp van de verbeterde parameterlogica.<br />- we raden u sterk aan om de nieuwe risicomodule grondig te testen en te controleren of alles werkt zoals verwacht, voordat u het inschakelt in de productieomgeving.</p>
+        <h2>iXBRL-ondersteuning</h2>
+        <p>We ondersteunen nu Inline eXtensible Business Reporting Language (iXBRL). iXBRL is een open standaard waarmee bedrijven jaarrekeningen kunnen opstellen in een indeling die de gestructureerde gegevens biedt die regelgevers en analisten nodig hebben, terwijl de opstellers volledige controle behouden over de lay-out en presentatie van hun rapport. Ga voor meer informatie over iXBRL naar <a href="https://www.xbrl.org/the-standard/what/ixbrl/">iXBRL.org.</a></p>
+        <p>Zie de <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">XBRL SDK-handleiding</a>voor informatie over het inschakelen van iXBRL.</p>
+        <h2>Formulierwaarden in zichtbaarheidsinstellingen en gegevenskoppelingen</h2>
+        <p>Waarden uit SE Builder-formulieren kunnen nu worden gebruikt om zichtbaarheidslogica in het product aan te sturen. Formulierwaarden kunnen ook worden opgehaald en ingevoegd in verschillende tekstvelden binnen documenten.</p>
+        <p class="note inline"><b>Let op:</b> Deze functie is alleen beschikbaar in het product als je aangepaste formulieren hebt ontwikkeld met SE Builder. Zie <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-SE-Builder/Get-started-with-SE-Builder.htm">Aan de slag met SE Verzoeken</a>voor meer informatie.</p>
+        <ul>
+            <li>
+                <p>Een nieuwe zichtbaarheidsvoorwaarde <b>Form Value</b> is nu beschikbaar met de volgende parameters:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>A list of the available forms in the product.</p>
+                    </li>
+                    <li>
+                        <p>Een lijst met beschikbare velden voor een geselecteerd formulier.</p>
+                    </li>
+                    <li>
+                        <p>De van toepassing zijnde waarden voor een geselecteerd formulierveld. Merk op dat de weergegeven waarden afhankelijk zijn van de veldtypes. Numerieke velden hebben bijvoorbeeld andere waardeopties dan datumvelden.</p>
+                    </li>
+                </ul>
+            </li>
+            <p class="note inline"><b>Let op:</b> Er kan meer dan één formulier geselecteerd worden bij het instellen van deze voorwaarde.</p>
+            <p><img src="../Resources/Images/forms-values-visibility-condition.PNG" alt="Hoe Formulierwaarde zichtbaarheid instellen." /></p>
+            <li>
+                <p>Een nieuwe datalink (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) optie <b>Forms Value</b> is nu beschikbaar. Deze optie haalt een specifieke waarde op in een formulier en voegt die in tekstvelden in. Voeg bijvoorbeeld de waarde voor Provinciale jurisdictie van een Belastingformulier in een tekstsectie in de jaarrekening in.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/form-values-data-link.PNG" alt="Vormen Waarde gegevenslink optie." /></p>
+        <h2>Nieuw voor auteurs</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2019-10.</p>
+        <p style="font-style: italic;">Elke functie heeft een hashtag met de rol waarop ze van toepassing is.</p>
+        <h3>Integratie van query&apos;s met werkdocumenten</h3>
+        <p><a href="Primary-author.htm">#primaryauteur</a><a href="Firm-author.htm">#hoofdauteur</a></p>
+        <p>Er is nu een nieuw veld <b>Author ID</b> beschikbaar in query-documenten waarmee gebruikers van Working Papers (WP) de geüploade bestanden binnen een specifiek query-document naar aangewezen locaties in een WP-bestand kunnen halen.</p>
+        <p>Merk op dat <b>Author ID</b> alleen beschikbaar is in query documenten, niet in query sjablonen. Het is een optioneel veld dat je alleen hoeft op te geven als je van plan bent querydocumenten in je product te integreren met Working Papers.</p>
+        <p>Hier volgt een korte beschrijving van de workflow voor Queries-WP integratie:</p>
+        <ol>
+            <li>
+                <p>Een Author ID-waarde instellen. Je kunt het instellen voor één of meer reacties.</p>
+            </li>
+            <p class="note inline"><b>Let op:</b> Je moet samenwerken met WP auteurs om te beslissen waar je Author ID&apos;s moet toevoegen in je query document.</p>
+            <li>
+                <p>Auteurs van Working Papers (WP) kunnen de auteurs-ID gebruiken om een locatie in WP in te stellen om bestanden van een query-document te ontvangen.</p>
+            </li>
+            <li>
+                <p>Zodra een bestand is geüpload in het SE query document, kunnen WP gebruikers op de Receive knop klikken om het bestand automatisch vanuit SE naar de locatie in het WP bestand te halen.</p>
+            </li>
+        </ol>
+        <p>Zie <a href="Add-Author-IDs-(new-design).htm">ID&apos;s van auteurs kopiëren</a>voor meer informatie.</p>
+        <h3>Pagina</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauteur</a></p>
+        <p>We hebben de lijst met importeerproviders uitgebreid op de pagina <b>Importeren</b> . Het bevat nu aangepaste importplatforms ontwikkeld door auteurs.</p>
+        <h3>Analysis charts development</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauteur</a></p>
+        <p>Je hoeft de beschrijving van analysegrafieken niet langer bij te houden in het bestand analysis.js. De tagbeschrijving wordt nu gebruikt als titel voor analysegrafieken.</p>
+        <h2>Nieuw voor eindgebruikers</h2>
+        <p>Dit is wat er nieuw is voor eindgebruikers in SE 2019-10.</p>
+        <h3>Query&apos;s (nieuw ontwerp)</h3>
+        <p>We hebben een paar functieverbeteringen geïntroduceerd voor querydocumenten en het Query Dashboard.</p>
+        <ul>
+            <li>
+                <p>Het Query Dashboard heeft nu een extra kolom <b>Contactpersonen</b> die het aantal toegewezen contactpersonen voor elk query-document in het dashboard weergeeft.</p>
+            </li>
+            <p>Gebruikers kunnen het nummer selecteren om een popup weer te geven met contactgegevens. Het pop-upvenster bevat ook de knop <b>Contacten toevoegen</b> , zodat gebruikers indien nodig een contactpersoon kunnen aanmaken.</p>
+            <p><img src="../Resources/Images/query-dashboard-assigned-contact.PNG" alt="Contactpersonen kolom in het Query Dashboard. Gebruiker selecteerde het aantal toegewezen contactpersonen voor 300-Q Klantvragen - Compilatieopdracht." /></p>
+            <li>
+                <p>In query-documenten,</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>gebruikers kunnen nu vragensets samenvouwen of uitvouwen in het linker navigatiedeelvenster.</p>
+                    </li>
+                    <li>
+                        <p>de vragen zijn niet langer genummerd.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Er wordt een melding weergegeven voor contactpersonen zodra ze alle vragen in het document hebben beantwoord. The notification message features the <b>Mark Responded</b> button so contacts can easily proceed to the next step in the workflow. Op dezelfde manier wordt er ook een melding weergegeven voor medewerkers zodra ze alle reacties in het document accepteren. Het meldingsbericht bevat in dit geval de knop <b>Markeren voltooid</b> .</p>
+            </li>
+            <p><img src="../Resources/Images/mark-complete-queries.PNG" alt="Bericht zodra alle reacties zijn geaccepteerd, met de knop MARK COMPLETE." /></p>
+        </ul>
+        <h3>Pagina</h3>
+        <p>We hebben een aantal UI-verbeteringen voor eindgebruikers geïntroduceerd, evenals functionaliteitswijzigingen op de pagina <b>Accounts</b> bekijken om nieuwe functies te ondersteunen.</p>
+        <ul>
+            <li>
+                <p>Gebruikers kunnen nu transacties van voorgaande jaren bekijken als ze de betreffende gegevens hebben geïmporteerd. Deze functie introduceert twee wijzigingen in de huidige functionaliteit op de pagina <b>Accounts</b> bekijken.</p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Om transacties voor een specifieke rekening in het huidige jaar te bekijken, selecteren gebruikers nu rekeningen in de kolom <b>Voorlopig</b> in plaats van de kolom <b>Definitief</b> om rekeningtransacties te bekijken. Voor boekhoudkundige transacties van vorig jaar selecteren gebruikers rekeningen uit de overeenkomstige kolom voor vorig jaar.</p>
+                </li>
+                <li>
+                    <p>Gebruikers kunnen de accountnaam of het accountnummer niet meer rechtstreeks op de pagina bewerken. In deze versie kunnen gebruikers het pictogram <b>Bewerken</b> (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) selecteren om accountgegevens te wijzigen. Er zijn ook twee extra velden beschikbaar in het dialoogvenster Rekening waarmee gebruikers indien nodig het huidige en vorige saldo kunnen bewerken.</p>
+                </li>
+            </ul>
+            <p><img src="../Resources/Images/eidt-account.PNG" alt="Dialoogvenster voor het bewerken van accounts op de gegevenspagina." /></p>
+            <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">Rekeningtransacties bekijken</a>voor meer informatie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">.</a></p>
+            <li>
+                <p>Openings- en eindsaldi zijn nu beschikbaar in de voettekst van de pagina Transacties voor de geselecteerde rekening. Dit helpt gebruikers om het nettototaal van accounttransacties in een bepaalde periode te vergelijken.</p>
+            </li>
+            <p><img src="../Resources/Images/opening-closing-balances.PNG" alt="Begin- en eindsaldo&apos;s worden weergegeven in de voettekst van de pagina voor transacties met CASH ON HAND." /></p>
+            <li>
+                <p>Weergaven van<b>Belastinggroepen</b> en <b>Voorgeschreven groepen</b> worden niet langer weergegeven voor gebruikers in het linker navigatiedeelvenster in groepsweergaven als je geen Belastingcode- of rekeningstelselgroepen hebt ingesteld in het product.</p>
+            </li>
+            <p>Ook worden de opties voor <b>Belastingcode</b> en <b>Belastingaanpassingen</b> niet meer weergegeven voor gebruikers in het vervolgkeuzemenu <b>Kolommen</b> in groepsweergaven als je geen Belastingcodegroepen en Belastingaanpassingen hebt ingesteld in het product.</p>
+        </ul>
+        <h3>Hulpmiddelen in financiële overzichten beoordelen</h3>
+        <p>Er zijn nu twee extra controlehulpmiddelen beschikbaar in financiële overzichten om eenvoudig afwijkende saldi en overschreven saldi in het document te vinden.</p>
+        <ul>
+            <li>
+                <p><b>Balance check</b> - marks all rows with identified balance discrepancies and all rows where balances agree (that is, all rows with a <a href="Set-up-diagnostics.htm">Diagnostics label</a>).</p>
+            </li>
+            <li>
+                <p><b>Overschreven saldi</b> - markeert alle rijen met overschreven saldi.</p>
+            </li>
+        </ul>
+        <p>Voor meer informatie, zie <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Bereide documenten controleren (Review-Tools)</a>.</p>
+        <h2>Fix</h2>
+        <p>De volgende lijst bevat een korte beschrijving van bugs die zijn opgelost in SE 2019-10.</p>
+        <h3>Dynamische tabellen</h3>
+        <p>Problemen met dynamische tabellen opgelost waarbij:</p>
+        <ul>
+            <li>
+                <p>aangepaste berekeningen in dynamische tabelkoppen geven onjuiste waarden of NaN weer.</p>
+            </li>
+            <li>
+                <p>kolombeschrijvingen met gegevenskoppelingen (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) worden niet correct weergegeven.</p>
+            </li>
+            <li>
+                <p>gebruikers ervaren een vertraging bij het weergeven van gegevens wanneer ze invoerrijen instellen.</p>
+            </li>
+            <li>
+                <p>het pop-upvenster Rekeningdetails toont geen aanpassingen voor een groep van vorig jaar.</p>
+            </li>
+            <li>
+                <p>kolomkoppen met lange beschrijvingen worden niet goed weergegeven op de pagina.</p>
+            </li>
+            <li>
+                <p>gebruikers kunnen het dialoogvenster Gegevenskoppeling niet opnieuw openen in tabelkoppen.</p>
+            </li>
+            <li>
+                <p>sommige posten van de proefbalans ontbreken.</p>
+            </li>
+        </ul>
+        <h3>Checklist documenten</h3>
+        <p>Problemen met checklistdocumenten opgelost waarbij:</p>
+        <ul>
+            <li>
+                <p>gebruikers krijgen een foutmelding wanneer ze proberen een gegevenskoppeling (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) toe te voegen in de sectie <b>Conclusies</b> in checklistdocumenten.</p>
+            </li>
+            <li>
+                <p>inhoud in controlelijstprocedures met meerdere rijen verkeerd is uitgelijnd.</p>
+            </li>
+        </ul>
+        <h3>Product authoring</h3>
+        <p>Problemen met product authoring opgelost waarbij:</p>
+        <ul>
+            <li>
+                <p>query&apos;s worden geopend in de oude lay-out, hoewel de nieuwe lay-out is ingeschakeld in de Productinstellingen.</p>
+            </li>
+            <li>
+                <p>de aangepaste termen die zijn ingevoerd voor <b>Voorlopige</b> en <b>Definitieve</b> kolomlabels worden niet toegepast.</p>
+            </li>
+            <li>
+                <p>de <b>gegevenspagina</b> is ingeschakeld in de sjabloon, hoewel deze is uitgeschakeld in de Productinstellingen.</p>
+            </li>
+            <li>
+                <p>de volgorde van gegevens in analysegrafieken volgt niet de volgorde van de proefbalans.</p>
+            </li>
+        </ul>
+        <h3>Zoekopdrachten</h3>
+        <p>Problemen opgelost in query-documenten waar:</p>
+        <ul>
+            <li>
+                <p>als u een opmerking toevoegt aan een vraag waarop is gereageerd, worden er meerdere meldingen op de pagina weergegeven.</p>
+            </li>
+            <li>
+                <p>onlangs geraadpleegde query-documenten worden niet weergegeven in het linker navigatiedeelvenster.</p>
+            </li>
+        </ul>
+        <h3>Pagina</h3>
+        <p>Problemen opgelost op de gegevenspagina waar:</p>
+        <ul>
+            <li>
+                <p>de indicator Out of balance (<img src="../Resources/Images/out-of-balance-indicator.PNG" style="vertical-align: text-bottom;" />) wordt weergegeven, hoewel alle rekeningen correct in balans zijn.</p>
+            </li>
+            <li>
+                <p>rekeningen zijn niet goed gesorteerd.</p>
+            </li>
+            <li>
+                <p>gebruikers moeten de pagina verversen zodat ze accounts goed kunnen zoeken op de pagina <b>Accounts toewijzen</b> .</p>
+            </li>
+        </ul>
+        <h3>Jaarrekening</h3>
+        <p>Problemen in financiële overzichten met betrekking tot opgelost:</p>
+        <ul>
+            <li>
+                <p>de reconciliatiefunctie, waarbij rijen met overeenkomende saldi worden geïdentificeerd en gemarkeerd als niet overeenkomend in het document.</p>
+            </li>
+            <li>
+                <p>de toelichting bij de jaarrekening, waar het toevoegen van pagina-einden in de <b>toelichting bij de jaarrekening</b> dubbele invoer in de <b>inhoudsopgave</b>genereert <b>. </b></p>
+            </li>
+        </ul>
+        <h3>Andere oplossingen</h3>
+        <p>De volgende algemene problemen zijn opgelost in SE 2019-10.</p>
+        <ul>
+            <li>
+                <p>Het woord Proefbalans wordt niet gemarkeerd terwijl gebruikers actief bezig zijn op de pagina <b>Proefbalans</b> .</p>
+            </li>
+            <li>
+                <p>De bestandsnamen voor sommige bestanden die gekopieerd zijn van Caseware Cloud naar een opdrachtbestand worden niet correct weergegeven.</p>
+            </li>
+            <li>
+                <p>GIFI-codes veranderen niet bij het opnieuw toewijzen van financiële groepsrekeningen.</p>
+            </li>
+            <li>
+                <p>Gebruikers ervaren vertragingen bij het gebruik van de afrondingsfunctie in financiële overzichten met een grote set proefbalansgegevens.</p>
+            </li>
+            <li>
+                <p>Interne koppelingen werken niet wanneer gebruikers ze proberen te openen in het linker navigatiedeelvenster van een document.</p>
+            </li>
+            <li>
+                <p>Probleem met vooruitboeken, waarbij door de gebruiker toegevoegde secties in financiële overzichten niet zichtbaar of beschikbaar zijn als selectie-item voor vooruitboeken nadat het bestand is vooruitgerold.</p>
+            </li>
+            <li>
+                <p>Het teken van een rekeningsaldo verandert wanneer gebruikers het saldo in het kasstroomoverzicht overschrijven.</p>
+            </li>
+            <li>
+                <p>Wanneer gebruikers importeren vanuit QuickBooks en vervolgens opnieuw importeren op de pagina Proefbalans in hetzelfde jaar (om saldi bij te werken), worden de saldi van het vorige jaar verdubbeld.</p>
+            </li>
+            <li>
+                <p>Het pictogram <b>Onderdrukken</b> (<img src="../Resources/Icons/suppress-content.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) wordt in bedrijfssjablonen weergegeven als uitgeschakeld, terwijl het in werkelijkheid is ingeschakeld.</p>
+            </li>
+            <li>
+                <p>Er zijn een paar vertaalproblemen opgelost.</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Écritures de date</h1>
+        <p>L&apos;analyse des écritures de date permet de repérer les transactions comportant certaines valeurs de date. Voir la section <a href="#Test">Configurations de test</a> pour obtenir une liste complète des types de valeurs de date qui peuvent être repérées.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>Les domaines de l&apos;information financière dont l&apos;exactitude ou la précision est moindre</p>
+            </li>
+            <li>
+                <p>Les transactions qui contiennent des estimations significatives</p>
+            </li>
+            <li>
+                <p>Des paramètres du système mal configurés pouvant nécessiter une amélioration et une évaluation plus poussée</p>
+            </li>
+            <li>
+                <p>Comptabilisation incorrecte de transactions dans la bonne période intermédiaire</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Des écarts dans la plage des dates prévues peuvent indiquer des problèmes de démarcation</p>
+            </li>
+            <li>
+                <p>Un long délai entre les dates saisies et les dates du report ou le fait que la date saisie soit antérieure à la date du report qui peut indiquer une rétrodatation ou une postdatation</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ <b>ID de l’écriture</b> pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champs principaux</b> – Un ou deux champs de date.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Les paramètres suivants doivent être définis pour exécuter ce test :</p>
+        <ul>
+            <li>
+                <p><b>Date</b> – Sélectionnez une ou plusieurs dates auxquelles l&apos;analyse sera effectuée.</p>
+            </li>
+            <li>
+                <p><b>Période saisie</b> – Si votre configuration de test recherche des plages de dates, saisissez le nombre de périodes qui seront utilisées. Par exemple, si vous sélectionnez 2 et choisissez <b>Semaines</b> comme type de période et <b>Entre</b> comme type d&apos;intervalle, le test recherchera les dates situées deux semaines avant et après la date sélectionnée.</p>
+            </li>
+            <li>
+                <p><b>Sélectionner le type de période</b> – Sélectionnez le type de période, par exemple jours, semaines ou mois.</p>
+            </li>
+            <li>
+                <p><b>Type de plage</b> – Pour certaines configurations de ce test, vous devez indiquer si vous recherchez des transactions à des dates antérieures, postérieures à la plage de dates spécifiée ou entre les dates.</p>
+            </li>
+        </ul>
+        <h2><a name="Test"></a>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Transactions autour d&apos;une certaine date</b> – Dresse la liste des transactions autour d&apos;une certaine date.</p>
+            </li>
+            <li>
+                <p><b>Transactions tombant dans une plage de dates</b> – Dresse la liste des transactions dans une plage de dates que l’analyse permet d&apos;extraire entre deux dates spécifiées.</p>
+            </li>
+            <li>
+                <p><b>Transactions avec deux dates dans une certaine plage de dates</b> – Dresse la liste des transactions avec deux dates tombant dans une certaine plage de dates.</p>
+            </li>
+            <li>
+                <p><b>Transactions dont deux dates se situent autour d&apos;une certaine date</b> – Dresse la liste des transactions dont les deux dates se situent dans une certaine plage.</p>
+            </li>
+            <li>
+                <p><b>Transactions à une certaine date</b> – Dresse la liste des transactions reportées certains jours de l&apos;année.</p>
+            </li>
+            <li>
+                <p><b>Transactions reportées un certain jour de la semaine</b> – Dresse la liste des transactions comptabilisées certains jours de la semaine.</p>
+            </li>
+            <li>
+                <p><b>Transactions comptabilisées un certain jour de l&apos;année</b> – Dresse la liste des transactions comptabilisées certains jours de l&apos;année.</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Écritures de date, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première. Notez qu’il n’est pas encore possible de définir des filtres et que ce le sera dans les versions ultérieures du test.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Obtenez la configuration du test à effectuer :</p>
+                <ul>
+                    <li>
+                        <p style="font-weight: bold;">Recherchez les transactions autour d&apos;une certaine date.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Recherchez les transactions dans une certaine plage de dates.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transactions ayant deux dates dans une certaine plage de dates.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transactions dans lesquelles deux dates se trouvent autour d&apos;une certaine date.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transactions reportées à une certaine date.</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transactions reportées certains jours de la semaine</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Transactions reportées certains jours de l&apos;année</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Pour le test des <b>transactions autour d&apos;une certaine date</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné une date.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a saisi le nombre de périodes.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné si le nombre de périodes correspond à des jours, à des semaines ou à des mois.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné l&apos;un des éléments suivants :</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p><b>Supérieur à (&gt;=)</b> – Indique que la valeur du champ de date est supérieure (ultérieure) à la date sélectionnée.</p>
+                            </li>
+                            <li>
+                                <p><b>Inférieur à (&lt;=)</b> – Indique que la valeur du champ de date est inférieure (antérieure) à la date sélectionnée.</p>
+                            </li>
+                            <li>
+                                <p><b>Entre</b> – Indique que la valeur du champ de date est comprise entre les dates sélectionnées.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extrayez toutes les transactions dans lesquelles la colonne de date sélectionnée est comprise dans la période définie par l&apos;utilisateur. Voici quelques exemples :</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>L&apos;utilisateur sélectionne une semaine avec la date du 31 décembre 2023. Le test extrait toutes les transactions effectuées entre le 31 décembre 2023 et le 7 janvier 2024.</p>
+                            </li>
+                            <li>
+                                <p>L&apos;utilisateur sélectionne Entre, puis toutes les transactions entre le 23 décembre 2023 et le 7 janvier 2024 seront sélectionnées.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour le test <b>Rechercher les transactions à l&apos;intérieur d&apos;une plage de dates</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a saisi une date inférieure et une date supérieure.</p>
+                    </li>
+                    <li>
+                        <p>Extrayez toutes les transactions dont le champ de date se situe entre les dates inférieure et supérieure, y compris les transactions qui se produisent aux dates inférieure et supérieure.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour le test <b>Transactions ayant deux dates dans une certaine plage de dates</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez la sélection d&apos;un deuxième champ de date différent du premier champ de date.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a saisi le nombre de périodes.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné si le nombre de périodes correspond à des jours, à des semaines ou à des mois.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné l&apos;un des éléments suivants :</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;=</p>
+                            </li>
+                            <li>
+                                <p>&lt;=</p>
+                            </li>
+                            <li>
+                                <p>Entre</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Extrayez les transactions sur la base des éléments suivants :</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>&gt;= – Extraire les transactions dont la date 2 est postérieure à la date 1 sur la base de la période sélectionnée.</p>
+                            </li>
+                            <li>
+                                <p>&lt;= – Extraire les transactions pour lesquelles la date 2 est antérieure à la date 1 sur la base de la période sélectionnée.</p>
+                            </li>
+                            <li>
+                                <p>Entre – Extraire les transactions dans lesquelles la date 2 est antérieure ou postérieure à la date 1 sur la base de la période sélectionnée.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour le test <b>Transactions dans lesquelles deux dates se trouvent autour d&apos;une certaine date</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez la sélection d&apos;un deuxième champ de date différent du premier champ de date.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a entré une date.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez que l&apos;utilisateur a sélectionné le champ de date.</p>
+                    </li>
+                    <li>
+                        <p>Extrayez les transactions dans lesquelles le champ de date sélectionné par l&apos;utilisateur est antérieur à la date saisie par l&apos;utilisateur, et le champ de la date non sélectionnée est postérieur à la date saisie par l&apos;utilisateur.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour le test <b>Transactions reportées certains jours de la semaine</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez qu&apos;un ou plusieurs jours de la semaine ont été sélectionnés.</p>
+                    </li>
+                    <li>
+                        <p>Extrayez les transactions qui tombent les jours de la semaine sélectionnés par l&apos;utilisateur pour le champ de date sélectionné.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour le test <b>Transactions reportées certains jours de l&apos;année</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Vérifiez qu&apos;un champ date a été sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Vérifiez qu&apos;un ou plusieurs jours de l’année ont été sélectionnés.</p>
+                    </li>
+                    <li>
+                        <p>Extrayez les transactions qui tombent les jours de l’année sélectionnés par l&apos;utilisateur pour le champ de date sélectionné.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

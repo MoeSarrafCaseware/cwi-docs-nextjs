@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Visualiser et gérer les résultats analytiques agrégés des tests</h1>
+        <p class="note"><b>Remarque :</b> Cette fonction n&apos;est disponible que si elle a été activée dans votre produit.</p>
+        <p>Lorsque plusieurs tests d&apos;analyse sont associés à une seule procédure de liste de contrôle dans votre engagement, vous pouvez consulter les résultats agrégés. Vous pouvez également les filtrer et afficher et définir le statut de chaque transaction qui a été signalée par les tests analytiques.</p>
+        <p><b>Pour afficher les résultats agrégés de plusieurs tests analytiques :</b></p>
+        <ol>
+            <li>Sur la page Documents, naviguez jusqu&apos;à une procédure de liste de contrôle où plusieurs tests analytiques ont été liés. L&apos;icône d&apos; <b>analyse</b> (<img src="../../Resources/Images/icon-analytics-test.png" style="vertical-align: text-bottom;" />) s&apos;affiche à côté de toutes les procédures de la liste de contrôle pour lesquelles un test d&apos;analyse est disponible.</li>
+        </ol>
+        <p><img src="../../Resources/Images/NavigatingToAnalyticTest.png" alt="Naviguer vers des tests analytiques à partir d&apos;une procédure de liste de contrôle." /></p>
+        <ol>
+            <li value="2">Sélectionnez l&apos;icône pour afficher les résultats du test.</li>
+        </ol>
+        <p class="indent">Si plusieurs tests analytiques ont été liés à la liste de contrôle de votre produit, le hub analytique s&apos;ouvre. Si un seul test analytique est disponible pour la procédure, un onglet Résultats s&apos;ouvre, ne présentant que les résultats de ce test analytique. Pour plus d&apos;informations, voir <a href="View-analytics-test-results-for-checklists.htm">Afficher les résultats des tests analytiques pour les listes de contrôle</a>.</p>
+        <p><img src="../../Resources/Images/AnalyticsHub-Multiple.png" alt="Affichage de plusieurs tests analytiques dans l&apos;Analytics Hub. " /></p>
+        <ol>
+            <li value="3">Select the analytic tests you want to run and click <b>Run</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/RunMultipleAnalyticTests.png" alt="Exécution des tests analytiques sélectionnés dans Analytics Hub." /><br />
+        </p>
+        <ol>
+            <li value="4">Une fois que la colonne <b>Statut</b> affiche des indicateurs de réussite (<img src="../../Resources/Images/SuccessIndicator.png" alt="" style="vertical-align: text-bottom;" />) pour les tests, cliquez sur <b>Résultats</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AnalyticsLastRun.png" alt="Navigation vers les résultats agrégés de plusieurs tests analytiques. " /></p>
+        <p class="indent">Sur la page des résultats agrégés, vous disposez des options suivantes :</p>
+        <ul>
+            <li>
+                <p><a href="#Exclude">Exclure les colonnes ou les tests analytiques</a></p>
+            </li>
+            <li>
+                <p><a href="#Filter">Filtrer les résultats des données agrégées</a></p>
+            </li>
+            <li>
+                <p><a href="#Set">Définir les statuts des transactions signalées dans les tests analytiques</a></p>
+            </li>
+            <li>
+                <p><a href="#Export">Export aggregate results</a></p>
+            </li>
+        </ul>
+        <h2><a name="Exclude"></a>Exclure les colonnes ou les tests analytiques</h2>
+        <p><b>Pour exclure des colonnes ou des tests analytiques des résultats agrégés :</b></p>
+        <ol>
+            <li>Cliquez sur <b>Colonnes</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/FilteringColumnsAggregateResults.png" alt="Filtrage des résultats agrégés sur les colonnes. " /></p>
+        <ol>
+            <li value="2">Désélectionnez les colonnes ou les tests analytiques que vous souhaitez exclure des résultats agrégés.</li>
+        </ol>
+        <p><img src="../../Resources/Images/DeselectingColumnsAggregateResults.png" alt="Désélectionner des colonnes ou des tests analytiques pour les exclure de la page des résultats agrégés. " /></p>
+        <p class="indent">Les colonnes ou les tests analytiques que vous avez désélectionnés sont exclus de la page des résultats agrégés.</p>
+        <h2><a name="Filter"></a>Filtrer les résultats des données agrégées</h2>
+        <p>Vous pouvez filtrer les résultats agrégés en cliquant sur <b>Filtres</b> puis, dans le panneau Filtres, en effectuant des sélections pour n&apos;importe quelle colonne de l&apos;ensemble de données. Tous les filtres de colonne utilisent l&apos;opérateur CONTAIN, tandis que l&apos;ensemble des filtres utilise l&apos;opérateur AND.</p>
+        <p><b>Pour filtrer les résultats des données agrégées :</b></p>
+        <ol>
+            <li>Cliquez sur Filtrer.</li>
+        </ol>
+        <p><img src="../../Resources/Images/FilterAggregateResults.png" alt="Navigation vers les filtres pour les résultats agrégés" /></p>
+        <ol>
+            <li value="2">Dans le panneau <b>Filtres</b> , effectuez des sélections pour filtrer les données dans les colonnes constituant les données des résultats agrégés. Les conditions de filtrage que vous pouvez appliquer dépendent du format des données dans la colonne que vous filtrez. Par exemple, dans une colonne de date telle que la <b>date comptable</b>, vous pouvez filtrer par plage de dates. Si la colonne contient des données numériques, vous pouvez filtrer par plages numériques ou par valeurs spécifiques.</li>
+        </ol>
+        <p class="indent">L&apos;ensemble des filtres utilise l&apos;opérateur AND.</p>
+        <p class="indent">Dans l&apos;exemple ci-dessous, les transactions seront retenues par le filtre si</p>
+        <p class="indent"><code>Checklist/Procedure = `1-1 Data Reliability Checklist`&gt;</code> (toute ligne de transaction où Checklist/Procedure a la valeur `1-1 Data Reliability Checklist`)</p>
+        <p class="indent">ET</p>
+        <p class="indent"><code>Status = `Open`</code> (any transaction line where Status is set to the value `Open`)</p>
+        <p><img src="../../Resources/Images/AggregateResultsFilterExample.png" alt="Mise en place de filtres sur les résultats agrégés de plusieurs tests analytiques." /></p>
+        <ol>
+            <li value="3">Cliquez sur <b>Appliquer</b>.</li>
+        </ol>
+        <h2><a name="Set"></a>Définir les statuts des transactions signalées dans les tests analytiques</h2>
+        <p>La page Résultats agrégés répertorie toutes les transactions signalées dans les tests analytiques effectués. Vous avez la possibilité de définir un statut pour suivre chaque transaction signalée. Toutes les transactions marquées sont d&apos;abord définies comme ouvertes.</p>
+        <p><b>Pour définir le statut d&apos;une ou de plusieurs transactions :</b></p>
+        <ol>
+            <li>Dans la colonne de gauche, sélectionnez le numéro de liste de la ou des transactions dont vous souhaitez modifier le statut.</li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus-AggregateResults.png" alt="Sélection des lignes de transaction dont vous souhaitez modifier le statut. " /></p>
+        <ol>
+            <li value="2">
+                <p>Click <b>Edit Status</b>.</p>
+            </li>
+            <li>
+                <p>Select the status to which you want to set the transactions you selected. Dans l&apos;exemple ci-dessous, nous définissons le statut de la transaction comme étant en cours d&apos;investigation.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus.png" alt="Sélection d&apos;un statut pour définir la ligne de transaction." /></p>
+        <ol>
+            <li value="4">
+                <p>Cliquez sur <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Remarque :</b> Les statuts disponibles peuvent varier en fonction du produit. Ceux qui figurent dans l&apos;exemple ci-dessus sont ceux qui sont disponibles par défaut.</p>
+        <h2><a name="Export"></a>Export aggregated results</h2>
+        <p>Vous pouvez exporter les résultats des tests analytiques agrégés affichés sur la page Résultats agrégés vers un fichier CSV.</p>
+        <p><b>Pour exporter des résultats agrégés :</b></p>
+        <ol>
+            <li>Cliquez sur <b>Exporter</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/ExportAggregateResults.png" alt="Exportation des résultats agrégés de plusieurs tests analytiques. " /></p>
+        <ol>
+            <li value="2">
+                <p>Un message vous indique que le processus d&apos;exportation des données agrégées peut prendre plusieurs minutes. Cliquez sur <b>Exporter</b>.</p>
+            </li>
+            <li>
+                <p>Lorsque vous y êtes invité, indiquez le nom du fichier d&apos;exportation CSV et son emplacement.</p>
+            </li>
+        </ol>
+    </body>
+</html>

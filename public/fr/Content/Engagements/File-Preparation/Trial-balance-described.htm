@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comprendre l&apos;ensemble de données de la balance</h1>
+        <p>Lorsque vous importez une balance de vérification à partir d&apos;un fichier CSV ou Excel, vous devez mettre en correspondance les champs afin que les données de la balance de vérification s&apos;affichent correctement dans la mission. Cette rubrique décrit les champs de l&apos;ensemble de données <strong>Balance de vérification </strong>. Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file-old-method.htm">Importer la balance de vérification à partir d&apos;un fichier CSV ou Excel</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Identifiant du compte<code>(account_id</code>)</td>
+                    <td>
+                        <p>Période du compte.</p>
+                        <p>Type de données : Chaîne</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account name (<code>account_main_description)</code></td>
+                    <td>
+                        <p>Le nom ou la description du compte.</p>
+                        <p>Exemples : &quot; Trésorerie &quot;, &quot; Immobilisations corporelles &quot;.</p>
+                        <p>Type de données : Chaîne</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de groupe financier<code>(financial_group_number)</code></td>
+                    <td>
+                        <p>Le numéro du groupe financier auquel le compte est affecté dans la structure de regroupement. Cette information n&apos;est pas fournie par le client et est utilisée pour rattacher automatiquement les comptes aux groupes financiers.</p>
+                        <p>Les comptes actuellement affectés à des groupes peuvent être réaffectés lors de l&apos;importation de ce champ de données.</p>
+                        <p>Type de données : Chaîne</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours<code>(année_en_cours</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente<code>(prior_year</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente<code>2 (prior_year_two)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3<code>(prior_year_three)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 3.</p>
+                        <p>Notez que si votre engagement fait l&apos;objet d&apos;une consolidation externe, vous verrez à la fois un champ <b>Solde parent - Exercice 3</b> et un champ <b>Solde consolidé - Exercice 3.</b>  Si vous attribuez l&apos;un de ces champs, vous devez également attribuer l&apos;autre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente<code>4 (prior_year_four</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 4.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde consolidé<code>(consolidated_current_year</code></td>
+                    <td>Le solde consolidé de l&apos;année en cours. Si vous affectez cette zone, vous devez également affecter un solde parent correspondant pour l&apos;année en cours.<p>Type de données : L&apos;argent</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Exercice précédent - solde consolidé<code>(consolidated_prior_year)</code></td>
+                    <td>
+                        <p>Le solde consolidé de l&apos;année précédente. Si vous affectez cette zone, vous devez également affecter un solde parent correspondant pour l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde consolidé<code>(consolidé_année_précédente_deux</code>)</td>
+                    <td>
+                        <p>Le solde consolidé de l&apos;année précédente 2. Si vous affectez cette zone, vous devez également affecter un solde parent correspondant pour l&apos;année précédente 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde consolidé<code>(consolidated_prior_year_three)</code></td>
+                    <td>
+                        <p>Le solde consolidé de l&apos;année précédente 3. Si vous affectez cette zone, vous devez également affecter un solde parent correspondant pour l&apos;année précédente 3.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde consolidé<code>(consolidated_prior_year_four)</code></td>
+                    <td>
+                        <p>Le solde consolidé de l&apos;année précédente 4. Si vous affectez cette zone, vous devez également affecter un solde parent correspondant pour l&apos;année précédente 4</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde du parent<code>(parent_current_year)</code></td>
+                    <td>
+                        <p>Le solde du parent pour l&apos;année en cours. Si vous affectez cette zone, vous devez également affecter un solde consolidé correspondant pour l&apos;année en cours.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Exercice précédent - solde du parent<code>(parent_prior_year)</code></td>
+                    <td>
+                        <p>Le solde du parent pour l&apos;année précédente. Si vous affectez cette zone, vous devez également affecter un solde consolidé correspondant pour l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du parent<code>(parent_prior_year_two)</code></td>
+                    <td>
+                        <p>Le solde du parent pour l&apos;année précédente 2. Si vous affectez cette zone, vous devez également affecter un solde consolidé correspondant pour l&apos;exercice précédent 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du parent<code>(parent_prior_year_three)</code></td>
+                    <td>
+                        <p>Le solde du parent pour l&apos;année précédente 3. Si vous affectez ce champ, vous devez également affecter un solde consolidé correspondant pour l&apos;exercice précédent 3.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du parent<code>(parent_prior_year_four)</code></td>
+                    <td>
+                        <p>Le solde du parent pour l&apos;année précédente 4. Si vous affectez ce champ, vous devez également affecter un solde consolidé correspondant pour l&apos;exercice précédent 4.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de janvier<code>(année en cours_janvier)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de janvier.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de février<code>(current_year_february</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de février.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours au mois de mars<code>(current_year_march</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de mars.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - avril<code>(current_year_april</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois d&apos;avril.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de mai<code>(current_year_may</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de mai.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de juin<code>(current_year_june</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de juin.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de juillet<code>(current_year_july</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de juillet.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde du mois d&apos;août<code>(current_year_august</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois d&apos;août.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de septembre<code>(current_year_september</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de septembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde d&apos;octobre<code>(current_year_october</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois d&apos;octobre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de novembre<code>(current_year_november</code>)</td>
+                    <td>
+                        <p>Le bilan de l&apos;année en cours pour le mois de novembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de décembre<code>(current_year_december</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le mois de décembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - premier trimestre<code>(current_year_first_quarter)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le premier trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - deuxième<code>trimestre (current_year_second_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le deuxième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - troisième<code>trimestre (current_year_third_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le troisième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - quatrième<code>trimestre (current_year_fourth_quarter)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le quatrième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de janvier<code>(prior_year_january</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de janvier.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de<code>février (prior_year_february</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de février.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de mars<code>(prior_year_march</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mars.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde d&apos;avril<code>(prior_year_april</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;avril.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de mai<code>(prior_year_may</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mai.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de juin<code>(prior_year_june</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juin.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de juillet<code>(prior_year_july</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juillet.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du mois d&apos;août<code>(prior_year_august</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;août.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de septembre<code>(prior_year_september</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de septembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde d&apos;octobre<code>(prior_year_october</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;octobre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de novembre<code>(prior_year_november</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de novembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de décembre<code>(prior_year_december</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de décembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du premier trimestre<code>(prior_year_first_quarter)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le premier trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du deuxième<code>trimestre (prior_year_second_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du troisième<code>trimestre (prior_year_third_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du quatrième<code>trimestre (prior_year_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - premier<code>mois (année_en_cours_premier_mois</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le premier mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - deuxième<code>mois (année en cours_deuxième_mois</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le deuxième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - troisième<code>mois (current_year_third_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le troisième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - quatrième<code>mois (année_en_cours_quatrième_mois</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le quatrième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - cinquième<code>mois (current_year_fifth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le cinquième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 6e mois<code>(current_year_sixth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le sixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 7ème<code>mois (current_year_seventh_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le septième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - huitième<code>mois (current_year_eighth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le huitième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 9e mois<code>(année en cours_neuvième mois)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le neuvième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 10e mois<code>(current_year_tenth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le dixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 11e<code>mois (current_year_eleventh_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le onzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - 12e mois<code>(current_year_twelfth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année en cours pour le douzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde du premier semestre<code>(current_year_first_half)</code></td>
+                    <td>
+                        <p>Le solde du premier semestre de l&apos;année en cours.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année en cours - deuxième semestre<code>(current_year_second_half</code>)</td>
+                    <td>
+                        <p>Le solde pour le second semestre de l&apos;année en cours.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Exercice précédent - solde du premier semestre<code>(prior_year_first_half)</code></td>
+                    <td>
+                        <p>Le solde du premier semestre de l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du second semestre<code>(prior_year_second_half</code>)</td>
+                    <td>
+                        <p>Le solde du second semestre de l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du premier semestre<code>(prior_year_two_first_half)</code></td>
+                    <td>
+                        <p>Le solde du premier semestre de l&apos;année précédente 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du second semestre<code>(prior_year_two_second_half)</code></td>
+                    <td>
+                        <p>Le solde du second semestre de l&apos;année précédente 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du premier semestre<code>(prior_year_three_first_half)</code></td>
+                    <td>
+                        <p>Le solde du premier semestre de l&apos;année précédente 3.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du second semestre<code>(prior_year_three_second_half)</code></td>
+                    <td>
+                        <p>Le solde du second semestre de l&apos;année précédente 3.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du premier semestre<code>(prior_year_four_first_half)</code></td>
+                    <td>
+                        <p>Le solde du premier semestre de l&apos;année précédente 4.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du second semestre<code>(prior_year_four_second_half)</code></td>
+                    <td>
+                        <p>Le solde du second semestre de l&apos;année précédente 4.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année en cours - solde de planification<code>(current_year_planning</code></td>
+                    <td>
+                        <p>Le solde de planification pour l&apos;année en cours.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde de planification<code>(prior_year_planning</code></td>
+                    <td>
+                        <p>Le solde de planification de l&apos;année précédente.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du premier mois<code>(prior_year_first_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le premier mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du deuxième<code>mois (prior_year_second_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du troisième<code>mois (prior_year_third_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du quatrième<code>mois (prior_year_fourth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du cinquième<code>mois (prior_year_fifth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le cinquième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 6e<code>mois (prior_year_sixth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le sixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 7e<code>mois (prior_year_seventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le septième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du huitième<code>mois (prior_year_eighth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le huitième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 9e mois<code>(prior_year_tenth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le neuvième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 10e<code>mois (prior_year_ninth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le dixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 11e<code>mois (prior_year_eleventh_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le onzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente - solde du 12e mois<code>(prior_year_twelfth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le douzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du premier mois<code>(prior_year_two_first_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le premier mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du deuxième mois<code>(prior_year_two_first_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 3e mois<code>(prior_year_two_third_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le troisième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 4e mois<code>(prior_year_two_fourth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le quatrième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 5ème mois<code>(prior_year_two_fifth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le cinquième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 6ème mois<code>(prior_year_two_sixth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le sixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 7ème mois<code>(prior_year_two_seventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le septième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 8ème mois<code>(prior_year_two_eighth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le huitième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 9ème mois<code>(prior_year_two_ninth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le neuvième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 10ème mois<code>(prior_year_two_tenth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le dixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 11ème mois<code>(prior_year_two_eleventh_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente 2 pour le onzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - 12ème mois<code>(prior_year_two_twelfth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;exercice précédent pour le douzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du premier mois<code>(prior_year_three_first_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le premier mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du deuxième<code>mois (prior_year_three_second_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde du troisième mois de l&apos;année précédente<code>(prior_year_three_third_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - mois 4<code>(prior_year_three_fourth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - mois 5<code>(prior_year_three_fifth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le cinquième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - mois 6<code>(prior_year_three_sixth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le sixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - 7ème mois<code>(prior_year_three_seventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le septième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - 8ème mois<code>(prior_year_three_eighth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le huitième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - 9ème mois<code>(prior_year_three_ninth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;exercice précédent pour le neuvième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - mois 10<code>(prior_year_three_tenth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le dixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - 11ème mois<code>(prior_year_three_eleventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;exercice précédent pour le onzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - mois 12<code>(prior_year_three_twelfth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le douzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du premier mois<code>(prior_year_four_first_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le premier mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du deuxième<code>mois (prior_year_four_second_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du troisième<code>mois (prior_year_four_third_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 4<code>(prior_year_four_fourth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 5<code>(prior_year_four_fifth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le cinquième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 6<code>(prior_year_four_sixth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le sixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - 7ème mois<code>(prior_year_four_seventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le septième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - 8ème mois<code>(prior_year_four_eighth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le huitième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - 9ème mois<code>(prior_year_four_ninth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le neuvième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 10<code>(prior_year_four_tenth_month)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le dixième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 11<code>(prior_year_four_eleventh_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le onzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - mois 12<code>(prior_year_four_twelfth_month</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le douzième mois de l&apos;exercice.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de janvier<code>(prior_year_two_january</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de janvier.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de février<code>(prior_year_two_february</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de février.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de mars<code>(prior_year_two_march</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mars.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde d&apos;avril<code>(prior_year_two_april</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;avril.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de mai<code>(prior_year_two_may</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mai.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de juin<code>(prior_year_two_june</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juin.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de juillet<code>(prior_year_two_july</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juillet.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du mois d&apos;août<code>(prior_year_two_august</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;août.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de septembre<code>(prior_year_two_september</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de septembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde d&apos;octobre<code>(prior_year_two_october</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;octobre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de novembre<code>(prior_year_two_november</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de novembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de décembre<code>(prior_year_two_december</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de décembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de janvier<code>(prior_year_three_january</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de janvier.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de<code>février (prior_year_three_february</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de février.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de mars<code>(prior_year_three_march</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mars.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde d&apos;avril<code>(prior_year_three_april</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;avril.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de mai<code>(prior_year_three_may</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mai.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de juin<code>(prior_year_three_june</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juin.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de juillet<code>(prior_year_three_july</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juillet.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du mois d&apos;août<code>(prior_year_three_august</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;août.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - Solde de septembre<code>(prior_year_three_september</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de septembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde d&apos;octobre<code>(prior_year_three_october</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;octobre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de novembre<code>(prior_year_three_november</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de novembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - décembre<code>(prior_year_three_december</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de décembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de janvier<code>(prior_year_four_january</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de janvier.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de février<code>(prior_year_four_february</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de février.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de mars<code>(prior_year_four_march</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mars.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde d&apos;avril<code>(prior_year_four_april</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;avril.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de mai<code>(prior_year_four_may</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de mai.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de juin<code>(prior_year_four_june</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juin.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de juillet<code>(prior_year_four_july</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de juillet.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du mois d&apos;août<code>(prior_year_four_august</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;août.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - Solde de septembre<code>(prior_year_four_september</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de septembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde d&apos;octobre<code>(prior_year_four_october</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois d&apos;octobre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de novembre<code>(prior_year_four_november</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de novembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de décembre<code>(prior_year_four_december</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le mois de décembre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du premier trimestre<code>(prior_year_two_first_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 2 pour le premier trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde du deuxième trimestre<code>(prior_year_two_second_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le deuxième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - trimestre 3<code>(année précédente_deux_troisième_trimestre)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 2 - trimestre 4<code>(prior_year_two_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du premier trimestre<code>(prior_year_three_first_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 3 pour le premier trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du deuxième trimestre<code>(prior_year_three_second_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 3 pour le deuxième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde du troisième trimestre<code>(prior_year_three_third_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le troisième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 3 - trimestre 4<code>(prior_year_three_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du premier trimestre<code>(prior_year_four_first_quarter)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 4 pour le premier trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du deuxième<code>trimestre (prior_year_four_second_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 4 pour le deuxième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solde de l&apos;année précédente 4 - trimestre 3<code>(prior_year_four_third_quarter</code>)</td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente est de 4 pour le troisième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde du quatrième trimestre<code>(prior_year_four_fourth_quarter)</code></td>
+                    <td>
+                        <p>Le solde de l&apos;année précédente pour le quatrième trimestre.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 2 - solde de planification<code>(prior_year_two_planning)</code></td>
+                    <td>
+                        <p>Le solde de planification de l&apos;année précédente 2.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 3 - solde de planification<code>(prior_year_three_planning)</code></td>
+                    <td>
+                        <p>Le solde de planification de l&apos;année précédente 3.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année précédente 4 - solde de planification<code>(prior_year_four_planning)</code></td>
+                    <td>
+                        <p>Le solde de planification de l&apos;année précédente 4.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Pour les organisations où le personnel accède aux Working Papers à partir d&apos;un serveur terminal, les administrateurs doivent désigner un site Cloud par défaut dans le registre du serveur terminal. L&apos;ajout de cette valeur de registre garantit que la fermeture de la session à distance n&apos;efface pas l&apos;URL du site cloud et que le personnel peut facilement se reconnecter lors de sa prochaine session.</p>
+        <p><b>Pour désigner un site Cloud par défaut pour un serveur de terminal :</b></p>
+        <ol>
+            <li>
+                <p>Connectez-vous au serveur terminal et ouvrez l&apos; <b>éditeur du registre.</b></p>
+            </li>
+            <li>
+                <p>Accédez à la clé de registre <i>HKEY_CURRENT_USER\SOFTWARE\Caseware International\Working Papers\20xx.00\Core</i>.</p>
+            </li>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur la clé du <b>serveur</b> et cliquez sur <b>Modifier....</b>.</p>
+            </li>
+            <li>
+                <p>Dans le champ Données de <b>valeur</b> , entrez l&apos;URL de votre site Cloud. Il n&apos;est pas nécessaire d&apos;inclure le protocole web<i>(http://</i> ou <i>https://)</i>. Cliquez sur <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>Le site Cloud par défaut est défini pour les connexions au serveur de terminal. Le personnel peut accéder au site Cloud intégré en entrant ses identifiants de connexion.</p>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>The OAuth Microservice</h1>
+        <p>The OAuth microservice provides OAuth certification capabilities. You can use the OAuth microservice to get authorization for someone&apos;s information, for purposes such as importing data.</p>
+        <h2>About OAuth</h2>
+        <p><b>OAuth</b> is an open standard for access delegation. CWI uses it to give applications access to stored information without providing the passwords, which would provide too much access. Companies such as Google use OAuth to permit users to share information about their accounts with third party applications or websites. OAuth provides a way to authorize access without sharing credentials, and to revoke access if necessary.</p>
+        <p>You are using OAuth every time you click a button that says &quot;Sign in with Google.&quot; The application that you are accessing requests your authorization from Google.</p>
+        <p>OAuth works with HTTP. The protocol lets an authorization server issue an access token if the resource owner allows. It allows for different access levels, such as <i>read</i> instead of <i>read-write</i>, or <i>unidirectional</i> instead of <i>bidirectional</i>. It allows the resource owner to set the granularity of access, and it allows the resource owner to revoke access, if necessary.</p>
+        <p>The OAuth Microservice from CWI currently supports only the OAuth 1.0a, but it is intended to support OAuth 2.0 as well.</p>
+        <p>Note that an application (client) that uses OAuth has to be registered with the provider first. That typically happens in the early stages of development, when you get the development information.</p>
+        <h2>The OAuth Workflow</h2>
+        <p>
+            <p>The general flow of requests and information goes like this:</p>
+            <p><img src="OAuthFlow.png" /></p>
+        </p>
+        <p>The client is your application. The Service API is the OAuth Microservice.</p>
+        <p>As you use the OAuth SDK, remember that:</p>
+        <ul>
+            <li>
+                <p>Implementations vary across providers.</p>
+            </li>
+            <li>
+                <p>We currently don&apos;t have any mechanism for refreshing access tokens if they expire.</p>
+            </li>
+        </ul>
+        <h2>Tools and Environment for the OAuth SDK</h2>
+        <p>When using Docker images, you need Docker itself, access to a repository where Docker images are stored, a registry of the available images, and an HTTP client.</p>
+        <h3>Required Tools</h3>
+        <p>To use the OAuth SDK, you must prepare or install the following programs:</p>
+        <ul>
+            <li>
+                <p>Docker; if you want a UI to make using docker easier, we recommend Kitematic.</p>
+            </li>
+            <li>
+                <p>AWS Client for connecting to the EC2 Container Registry.</p>
+            </li>
+            <li>
+                <p>An HTTP client, such as Postman.</p>
+            </li>
+        </ul>
+        <p>To use the system, you must install Docker. To store, manage and run Docker container images, we use the Amazon EC2 Container Registry (ECR).</p>
+        <h3>Install Docker</h3>
+        <p>To install Docker, go to <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/</a></p>
+        <p>Install the latest stable release for your platform.</p>
+        <h3>Install the AWS CLI</h3>
+        <p>Most of the controls are done through the Docker command line interface, but accessed through the AWS CLI.</p>
+        <p>To install the AWS CLI go to <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html">http://docs.aws.amazon.com/cli/latest/userguide/installing.html</a> and follow the instructions there.</p>
+        <h3>Install the Postman Client</h3>
+        <p>To work with the OAuth implementation, you need a client that deals with the https messages. We recommend the native Postman client. (Note that the Postman Chrome app is deprecated.)</p>
+        <p>To install the Postman client, go to <a href="https://www.getpostman.com/">https://www.getpostman.com/</a> and follow the instructions there.</p>
+        <h3>Create an AWS Profile</h3>
+        <p>To work with the Amazon system, you need a profile. This only needs to be done once.</p>
+        <ol>
+            <li>
+                <p>Get your AWS Key ID and Secret Access Key from Solutions.</p>
+            </li>
+            <li>
+                <p>If there is no AWS CLI profile for ECR, create one:<borderedcode>aws configure --profile <i>your-profile</i></borderedcode></p>
+            </li>
+            <ul>
+                <li>
+                    <p>The region must be <inlinecode>us-east-2</inlinecode></p>
+                </li>
+                <li>
+                    <p>You can define any default output format but these examples use json.</p>
+                </li>
+            </ul>
+        </ol>
+        <h3>Set up the OAuth Environment</h3>
+        <p>To set up a connection to the OAuth Microservice, you need to:</p>
+        <ol>
+            <li>
+                <p>Pull the image from the Caseware Docker Registry.</p>
+            </li>
+            <li>
+                <p>Prepare the local folder that will hold the configuration file.</p>
+            </li>
+            <li>
+                <p>Set the <inlinecode>SPRING.PROFILES.ACTIVE</inlinecode> environment variable for this runtime.</p>
+            </li>
+            <li>
+                <p>Configure each new provider. Existing providers are preconfigured.</p>
+            </li>
+        </ol>
+        <h3>Set Environment Variables for a Docker Image</h3>
+        <p>You can set or override existing environment variables for a docker image in one of three ways. These methods apply to simple (non-array) environment variables. (The other arguments to docker run have been left off for clarity.)</p>
+        <p>You can specify the environment variable with the <inlinecode>-e</inlinecode> flag to <inlinecode>docker run</inlinecode>.</p><code>$ docker run -e SPRING.PROFILES.ACTIVE=dev</code><p>You can list the environment variables in a file and include the file name with the <inlinecode>--env-file</inlinecode> flag to <inlinecode>docker run</inlinecode>.</p><code>$ docker run --env-file xero-dev-env</code><p>You can use any of these.</p>
+        <h3>Login and Get the OAuth SDK Docker Image</h3>
+        <p>Each microservice has its own repository, Different versions of the same microservice use a single repository.</p>
+        <ol>
+            <li>
+                <p>Login to your AWS profile on ECR.</p>
+            </li>
+            <ul>
+                <li>
+                    <p>On Windows:</p><code>Invoke-Expression -Command (aws ecr get-login --profile <i>your-profile</i> --region us-east-2)</code></li>
+                <li>
+                    <p>On Unix variants, Linux, or MacOS:</p>
+                </li><code>$ $(aws ecr get-login --profile <i>your-profile</i> --region us-east-2)</code></ul>
+            <li>
+                <p>Pull the image from Caseware Docker Registry.</p>
+            </li><code>$ docker pull cw-registry:9000/dev/cw-oauth</code><li>
+                <p>Verify that the OAuth Service image was pulled from Caseware Docker Registry.</p>
+            </li><code>$ docker images</code><code>REPOSITORY TAG IMAGE ID CREATED SIZE</code><code>cw-registry/cw-oauth latest ce717fdb2222 6 seconds ago 336.4 MB</code><li>
+                <p>Prepare a local folder to contain the config files shared with docker container. In this example from a Linux system, the folder has already been created and contains config files for Quickbooks and for Xero.</p>
+            </li><code>$ pwd &amp;&amp; ls</code><code>/home/user/oauth-configs</code><code>quickbooks.json xero.json</code><li>
+                <p>Set the <inlinecode>SPRING.PROFILES.ACTIVE</inlinecode> environment variable to define the runtime profile for this OAuth connection. There are three possible values: <inlinecode>dev</inlinecode>, <inlinecode>test</inlinecode>, and <inlinecode>prod</inlinecode>.</p>
+                <p>
+                    <inlinecode>dev</inlinecode> uses local in-memory token storage.</p>
+                <p>
+                    <inlinecode>test</inlinecode> and <inlinecode>prod</inlinecode> connect to Collaborate for token storage.</p><code>SPRING.PROFILES.ACTIVE=dev</code></li>
+        </ol>
+        <h2>Add a New Provider</h2>
+        <p>For each provider, you need:</p>
+        <ul>
+            <li>
+                <p>A configuration file, named for the provider.</p>
+            </li>
+            <li>
+                <p>Two environment variables set, named <inlinecode>PROVIDER_CONTENT_KEY</inlinecode> and <inlinecode>PROVIDER_CONTENT_SECRET</inlinecode>.</p>
+            </li>
+        </ul>
+        <p>The information for the configuration files and the environment variables comes from the provider.</p>
+        <h3>Create the OAuth Configuration Files</h3>
+        <p>
+            <p>The OAuth configuration files go in the folder you created. The configuration files are JSON files, named for the provider, and contain an object with these four properties. The values come from the provider.</p>
+            <p></p>
+            <p>
+                <table class="table table-striped">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>Eigenschaft</td>
+                            <td>Wert</td>
+                        </tr>
+                        <tr>
+                            <td>requestTokenURL</td>
+                            <td>URL specified by provider to acquire a request token.</td>
+                        </tr>
+                        <tr>
+                            <td>authorizationURL</td>
+                            <td>URL specified by provider to direct a resource owner (i.e. user) for login.</td>
+                        </tr>
+                        <tr>
+                            <td>accessTokenURL</td>
+                            <td>URL specified by provider to acquire an access token after receiving a grant from a resource owner.</td>
+                        </tr>
+                        <tr>
+                            <td>scopeKeyword</td>
+                            <td>Provider-specific parameter used to identify the resource. In the example, realmId refers to a Quickbooks Company ID.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </p><![CDATA[
+
+]]><p>Zum Beispiel:</p><code>{ <br /> &quot;requestTokenURL&quot;: &quot;https://oauth.intuit.com/oauth/v1/get_request_token&quot;,<br /> &quot;authorizationURL&quot;: &quot;https://appcenter.intuit.com/Connect/Begin&quot;, <br /> &quot;accessTokenURL&quot;: &quot;https://oauth.intuit.com/oauth/v1/get_access_token&quot;, <br /> &quot;scopeKeyword&quot;: &quot;realmId&quot; <br />}</code><h3>Set Environment Variables for the Provider</h3><p>The keys for a provider come from the provider. Typically they are available as part of the development package.</p><ol><li><p>For each provider, set two environment variables. The environment variable names are of the form <inlinecode>PROVIDER_CONSUMER_KEY</inlinecode> and <inlinecode>PROVIDER_CONSUMER_SECRET</inlinecode>. Zum Beispiel:</p><code>QUICKBOOKS_CONSUMER_KEY=xxxxxxxxxxxxxxxxxxxxx</code><code>QUICKBOOKS_CONSUMER_SECRET=xxxxxxxxxxxxxxxxxx</code></li></ol><h2>Connect to the OAuth Microservice</h2><p>To connect to the OAuth Microservice, you require:</p><ul><li><p>Docker</p></li><li><p>An HTTP client such as Postman or cURL</p></li><li><p>A text editor</p></li></ul><p>To connect, you need to:</p><ol><li><p>Start the OAuth Microservice</p></li><li><p>Start the OAuth flow</p></li><li><p>Get the information to create an OAuth1 authorization header</p></li></ol><h3>Start the OAuth Microservice</h3><ol><li><p>Start the OAuth Service with <inlinecode>docker run</inlinecode>, using the flags <inlinecode>-p hostport:containerport</inlinecode> and <inlinecode>-v</inlinecode>. The <inlinecode>-p</inlinecode> flag forwards the ports and the <inlinecode>-v</inlinecode> flag mounts the specified host directory to the container at <inlinecode>/etc/oauth</inlinecode>. The first half of the argument to the <inlinecode>-v</inlinecode> flag specifies the local folder you created earlier.</p></li><p><code>$ docker run -p 8000:8000 --env-file <i>your-env-file</i> -v </code></p><p><code>/home/user/oauth-configs:/etc/oauth cw-registry/cw-oauth</code></p><p><code>[2017-08-09 15:12:54.932] INFO [main] c.c.o.m.OAuthApplication - - Starting OAuthApplication on localhost with PID 1 (/opt/oauth/oauth.microservice-1.0-SNAPSHOT.jar started by root in /)</code></p></ol><h3>Start the OAuth Flow</h3><ol><li><p>To start the OAuth flow, send a <inlinecode>POST</inlinecode> request to <inlinecode>/getAuthUrl</inlinecode> with the following request body:</p></li><code>{ &quot;baseParams&quot;:{ &quot;provider&quot;: &quot;nameOfProvider&quot;, &quot;firmName&quot;: &quot;nameOfYourFirm&quot;, &quot;sessionId&quot;: &quot;yourSessionId&quot; }, &quot;callbackUrl&quot;: &quot;http://localhost:8000/debugPrintCallback&quot; }</code><ul><li><p>After the resource owner authenticates, the provider sends a request to the callback URL. The provider&apos;s request contains the resulting OAuth token and other parameters related to the resource. In this example, we use the <inlinecode>/debugPrintCallback</inlinecode> endpoint provided by our OAuth Service.</p></li><li><p>The body of the request contains a plaintext URL to redirect a client to log in and grant authentication:</p></li><code>https://appcenter.intuit.com/Connect/Begin?oauth_token=qyprdFnE2EH741CXUAXScJfgtwOWEcKlrykA6UEjVAVGXCb7&amp;oauth_callback=http%3A%2F%2Flocalhost:8000%2FdebugPrintCallback</code></ul><li><p>Login to the URL in the previous response and authenticate.</p></li><ul><li><p>After a successful authentication, the OAuth provider redirects to a page containing a bare callback string. Zum Beispiel:</p></li><code>oauth_token=qyprdFnE2EH741CXUAXScJfgtwOWEcKlrykA6UEjVAVGXCb7&amp;oauth_verifier=k1tzqb5&amp;realmId=193514496812594&amp;dataSource=QBO</code></ul><li><p>To complete the OAuth flow, send a <inlinecode>POST</inlinecode> request to <inlinecode>/completeOAuthFlow</inlinecode> with the following request body, which contains the callback string received in the previous step.</p></li><code>{ &quot;baseParams&quot;:{ &quot;provider&quot;: &quot;nameOfProvider&quot;, &quot;firmName&quot;: &quot;nameOfYourFirm&quot;, &quot;sessionId&quot;: &quot;yourSessionId&quot; }, &quot;callbackString&quot;: &quot;oauth_token=qyprdDy1MhEGj4IAV9XTgM4xBnVti2uSivvsF0xKrkPsT1iq&amp;oauth_verifier=d5ahpwg&amp;realmId=123145849620082&amp;dataSource=QBO&quot; }</code><li><p>Get a list of authorized resources by sending a <inlinecode>POST</inlinecode> request to <inlinecode>/getAuthorizedScopes</inlinecode> with the following request body:</p></li><code>{ &quot;provider&quot;: &quot;nameOfProvider&quot;, &quot;sessionId&quot;: &quot;yourSessionID&quot;, &quot;firmName&quot;: &quot;nameOfYourFirm&quot; }</code><li><p>The JSON returned contains a list of resources identified as <inlinecode>scope</inlinecode>.</p></li><code>[ { &quot;scope&quot;: &quot;193514496812594&quot;, &quot;oAuthServiceId&quot;: &quot;829jgp09825rg254r0t2g4&quot; }, { &quot;scope&quot;: &quot;164512345412232&quot;, &quot;oAuthServiceId&quot;: &quot;092w42s8d7g0vs98fs&quot; } ]</code></ol><h3>Get an OAuth1 Authorization Header</h3><p>Every outbound request to an OAuth1 provider requires a signature, generated from a combination of:</p><ul><li><p>Request URL with parameters</p></li><li><p>HTTP Verb</p></li><li><p>Request Params</p></li><li><p>Provider-issued Consumer Key and Consumer Secret</p></li></ul><p>To generate an OAuth1 authorization header:</p><ol><li><p>Send a <inlinecode>POST</inlinecode> request to <inlinecode>/getHeader</inlinecode> with the following request body:</p></li><code>{ &quot;baseParams&quot;: { &quot;provider&quot;: &quot;nameOfProvider&quot;, &quot;sessionId&quot;: &quot;yourSessionID&quot;, &quot;firmName&quot;: &quot;nameOfYourFirm&quot; }, &quot;oAuthServiceId&quot;: &quot;829jgp09825rg254r0t2g4&quot;, &quot;url&quot;: &quot;https://sandbox-quickbooks.api.intuit.com/v3/company/193514496812594/account/90?minorversion=4&quot; }</code><ul><li><p>The returned JSON contains a double-quote-escaped string for the Authorization header in the outbound request.</p></li></ul><code>{ &quot;headerName&quot;: &quot;Authorization&quot;, &quot;headerValue&quot;: &quot;OAuth oauth_nonce=\&quot;989043552\&quot;, oauth_signature=\&quot;uRttVCxc%2BbUQtO8ZZ7AvPQnSkgM%3D\&quot;, oauth_token=\&quot;qyprd9su2vdsQCGS37RmXZ74WowKG1dxH9j1HrM12R7Echi2\&quot;, oauth_consumer_key=\&quot;UUKVDZHWBYTxLniTfHBjJJDLLLKBUR\&quot;, oauth_timestamp=\&quot;1502288322\&quot;, oauth_signature_method=\&quot;HMAC-SHA1\&quot;, oauth_version=\&quot;1.0\&quot;&quot; }</code><li><p>Construct the OAuth1 Authorization Header to make a successful request. Remember to remove the escape backslash characters.</p></li><li><p>Place the header in your outbound request to the API URI.</p></li></ol><h2>Modify Your Repository for Imports</h2><p>For information on modifying your setup to handle specific types of imports, refer to the <a href="https://us.cwcloudtest.com/sdk-se-develop/p/documentation/cloud/Content/Reference/SE/tutorial-import-and-automap.html#">Import and Automap tutorial</a> in the SE API Reference.</p></body>
+</html>

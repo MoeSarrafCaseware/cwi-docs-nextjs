@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="CaseWare Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. CaseWare Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region." />
+    </head>
+    <body>
+        <h1>Récupérer une version précédente ou un fichier supprimé</h1>
+        <p>Caseware Cloud stocke les informations sur l&apos;infrastructure du serveur Amazon Web Services qui peut être situé en dehors du pays où vous travaillez. Caseware Cloud utilise les serveurs Web d&apos;Amazon aux Etats-Unis pour les Amériques, en Australie pour les clients d&apos;Asie-Pacifique, et en Irlande pour les autres juridictions. Toutes vos données, y compris les sauvegardes, se trouvent dans la même région.</p>
+        <p>Caseware Cloud utilise Amazon Glacier pour le stockage des sauvegardes. Les données relatives aux glaciers sont spécifiques à une seule région <a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-data-model.html">[1]</a> <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#glacier_region">[2]</a> et ne sont pas automatiquement répliquées ailleurs. Ainsi, si vous avez des exigences légales selon lesquelles vos données doivent être stockées géographiquement en Australie (par exemple), vos données ne seront stockées que dans ce pays.</p>
+        <h2 id="Recovering-previous-versions-of-uploaded-files">Récupérer une version précédente ou un fichier supprimé</h2>
+        <p>Lorsque vous remplacez un fichier téléchargé sur le cloud, vous pouvez facilement récupérer les versions précédentes de ce fichier. Accédez aux détails du fichier pour trouver les copies précédentes de votre document.</p>
+        <p style="font-weight: bold;">To recover a previous version of an uploaded file:</p>
+        <ol>
+            <li>
+                <p>Ouvrez la page <b>Fichiers</b> et sélectionnez une entité dans le sélecteur d&apos;entité.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le fichier.</p>
+            </li>
+            <li>
+                <p>Dans le volet <b>Détails du fichier</b> , sous le menu <b>Versions précédentes</b> , sélectionnez la version précédente du fichier.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;option <b>Plus d&apos;actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) :</p>
+                <p><img src="../../Resources/Images/Previous-version-630x530.png" alt="Récupérer une version précédente d&apos;un fichier téléchargé -- Versions précédentes d&apos;un fichier" /></p>
+                <ul>
+                    <li>
+                        <p><b>Télécharger</b> - Télécharger le fichier sur votre ordinateur</p>
+                    </li>
+                    <li>
+                        <p><b>View</b> - Voir le fichier dans Caseware Cloud</p>
+                    </li>
+                    <li>
+                        <p><b>Supprimer</b> - Pour supprimer définitivement la version précédente. Ce fichier n&apos;apparaîtra pas dans la corbeille.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2 id="Recovering-folders-and-files-from-the-Recycle-bin"><a name="Recoveri"></a>Récupération de dossiers et de fichiers dans la corbeille</h2>
+        <p>Lorsque vous supprimez un fichier ou un dossier, il est envoyé dans la corbeille. Vous pouvez récupérer n&apos;importe quel dossier ou fichier supprimé de la corbeille.</p>
+        <p style="font-weight: bold;">Pour récupérer des dossiers et des fichiers de la corbeille :</p>
+        <ol>
+            <li>
+                <p>Ensure you have <i>Admin</i>, <i>Entity Admin</i>, or <i>Owner</i> role, or equivalent permissions.</p>
+            </li>
+            <li>
+                <p>Dans le <b>menu Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Fichiers</b>.</p>
+                <p>Si vous souhaitez récupérer un fichier Working <b>Papers</b>, sélectionnez <b>Working Papers</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez la <b>corbeille</b> dans le volet de gauche pour accéder à vos fichiers supprimés.</p>
+                <p><img src="../../Resources/Images/Recycle-Bin630x350.png" alt="Corbeille" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez les fichiers à restaurer</p>
+            </li>
+            <li>
+                <p>Dans le panneau de <b>détails du fichier</b> , sélectionnez <b>Plus d&apos;actions</b>(<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Restaurer</b> pour déplacer ce fichier vers son entité d&apos;origine.</p>
+                <p><img src="../../Resources/Images/Restore-630x480.png" alt="Restaurer des fichiers à partir de la corbeille" /></p>
+            </li>
+        </ol>
+        <p>Si vous rencontrez toujours des problèmes pour récupérer vos fichiers, vous pouvez envoyer une demande de récupération de données à notre équipe d&apos;assistance. Pour plus d&apos;informations, voir <a href="Data-recovery-limitations.htm">Limites de la récupération des données</a>.</p>
+    </body>
+</html>

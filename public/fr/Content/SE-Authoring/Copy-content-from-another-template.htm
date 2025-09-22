@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Copier le contenu d&apos;un autre modèle</h1>
+        <p style="font-weight: normal;">Avant de commencer, notez que</p>
+        <ul>
+            <li><b>Modèle source</b> - désigne le modèle à partir duquel vous souhaitez effectuer une copie.</li>
+            <li><b>Modèle de destination</b> - fait référence au modèle que vous êtes en train de créer (votre modèle de produit).</li>
+        </ul>
+        <p>Prérequis :</p>
+        <ul>
+            <li>
+                <p>Le modèle source est publié et vous y avez accès. Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Setup/Security/Built-in-roles.htm">Rôles intégrés.</a></p>
+            </li>
+            <li>
+                <p>La propriété Importation de documents est activée dans le modèle de destination. Pour en savoir plus, voir <a href="List-of-product-features-(API).htm#Import">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+            </li>
+            <li>
+                <p>Si vous copiez des états financiers, les numéros de groupe et la structure du modèle de destination sont les mêmes que ceux du modèle source.</p>
+            </li>
+            <li>
+                <p>Si le modèle source contient des <a href="Develop-custom-forms.htm">formulaires personnalisés</a> , le fichier values.json du modèle de destination correspond au fichier values.json du modèle source.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Pour copier le contenu d&apos;un autre modèle :</p>
+        <ol>
+            <li>
+                <p>Dans la page <b>Documents</b> , sélectionnez <b>Ajouter</b> (<img src="../Resources/Images/icon-document-add-dropdown.png" />) | <b>Copier à partir d&apos;un autre produit</b>.</p>
+                <p><img src="../Resources/Images/copy-from-template.PNG" alt="Option Copier à partir d&apos;un autre produit." /></p>
+            </li>
+            <li>
+                <p>Dans la liste déroulante <b>Sélectionner un modèle</b> , sélectionnez le modèle à partir duquel vous souhaitez effectuer la copie.</p>
+            </li>
+            <p>Une liste des documents disponibles s&apos;affiche.</p>
+            <li>
+                <p>Dans la liste, sélectionnez la visualisation que vous souhaitez visualiser.</p>
+            </li>
+            <p>Vous pouvez sélectionner :</p>
+            <ul>
+                <li>
+                    <p>des documents individuels.</p>
+                </li>
+                <li>
+                    <p>un dossier pour copier tous les documents qu&apos;il contient.</p>
+                </li>
+                <li>
+                    <p>une phase pour copier tous les documents de la phase.</p>
+                </li>
+            </ul>
+            <p class="note inline"><b>Remarque :</b> Lorsque vous sélectionnez un dossier ou une phase, seuls les documents de cette phase ou de ce dossier sont copiés. Les structures de fichiers ne sont pas gérées.</p>
+            <li>
+                <p>Sélectionnez <b>OK</b>.</p>
+            </li>
+            <p class="note inline"><b>Remarque :</b> Si vous recopiez un document (c&apos;est-à-dire que vous copiez à nouveau le même document à partir du même modèle), vous remplacerez le document existant et perdrez toutes les modifications que vous y avez apportées.</p>
+        </ol>
+    </body>
+</html>

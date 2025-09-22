@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWare Cloud." />
+    </head>
+    <body>
+        <h1>Problemas conocidos de Caseware Cloud</h1>
+        <p>This topic describes known issues when using Caseware Cloud.</p>
+        <h2>Activity notification emails for SSO users</h2>
+        <p>Links to activities in notification emails do not work as expected for SSO users. If you&apos;re not logged in when you select the link, you&apos;ll be redirected to a broken link once you log in and will be unable to view the activity. In order to access the activity, you can select the link in the email again after logging in to Cloud.</p>
+        <h2>Activity notifications do not support rich text</h2>
+        <p>Activity notification emails that are sent to contacts do not support rich text. This means that any line breaks and other formatting, such as bolding or italics, that you apply to the text in the notification description will not display in the email.</p>
+        <p>Additionally, note that if you enter text in both the notification description field and the <b>Additional Message</b> field, the content of both fields will display as a single paragraph. We recommend that you enter content in only one of these fields when sending a activity notification to contacts.</p>
+        <h2>Manual date entry</h2>
+        <p>When you manually enter dates in date fields, such as the start and end date fields in the engagement creation dialog and the date of incorporation field in the entity creation dialog, the field automatically reverts to the date prior to the one selected. Note that this issue only occurs if your local time is set to UTC or any UTC+ time zone. We recommend that you select the date using the calendar date picker to avoid this issue.</p>
+        <h2>Chat notifications won&apos;t display if browser is inactive</h2>
+        <p>If you&apos;re logged into your Cloud site, but your browser is inactive or your computer is in sleep mode, notifications from the chat won&apos;t display and you can miss new messages from other users. We recommend that you close the page if you know you will be away from your computer or refresh the page to update the content.</p>
+        <h2>Linking existing Google files from a shared drive</h2>
+        <p>When attempting to link to an existing Google file that is stored on a shared drive, Cloud returns an error stating that the &quot;File does not exist in Google Drive&quot;. This is caused by a mismatch between the security settings in the shared drive and Cloud&apos;s security system. As a workaround, you can move the Google file to a non-shared drive, such as your &quot;My Drive&quot;, and link to the file from there.</p>
+        <h2>Multi-tenant Xero integration</h2>
+        <p>If you access your Xero account through a multi-tenant environment, you cannot integrate it with Caseware Cloud. Currently, Xero integration is only supported in a single-tenant environment.</p>
+        <h2>&quot;User Name must be unique&quot; error when creating new Contacts</h2>
+        <p>If you attempt to create a new Contact without providing an email address, the error &quot;User Name must be unique&quot; displays. A similar issue occurs in Cloud-integrated Time Desktop files where if any existing contacts are missing an email address, the &quot;User Name must be unique&quot; error displays when creating a new contact. As a temporary workaround, you can enter &apos;placeholder&apos; email addresses to bypass the error in both Cloud and Time Desktop.</p>
+    </body>
+</html>

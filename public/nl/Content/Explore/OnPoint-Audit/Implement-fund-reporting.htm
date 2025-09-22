@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Fondsrapportage implementeren</h1>
+        <p>U kunt fondsrapportage implementeren in uw jaarrekening bij controleopdrachten voor organisatievormen <b>zonder</b> winstoogmerk. Om fondsrapportage te implementeren, moet u eerst een set dimensies toevoegen, de financiële groepen toewijzen en vervolgens uw dynamische tabellen in de financiële overzichten aanpassen.</p>
+        <p>In OnPoint Audit hebben we standaard dimensiecategorieën gemaakt voor <b>Donorrestricties</b> en <b>Fondsen zonder winstoogmerk</b> met hun respectievelijke dimensies die u kunt gebruiken. Deze dimensiecategorieën zijn toegewezen aan de financiële groepen Operationele uitgaven.</p>
+        <p>Als u de standaard dimensiecategorieën niet gebruikt, kunt u de financiële groepen niet toewijzen en uw eigen set dimensies maken.</p>
+        <h2>Een set afmetingen toevoegen</h2>
+        <p>Dimensies zijn groepseigenschappen die u kunt configureren voor groepen om accounts verder te categoriseren. Selecteer om te beginnen het <b>Informatiepictogram</b> (<img src="../../Resources/Images/icon-information-menu-end-user.png" style="vertical-align: text-bottom;" />) in het bovenste menu en vervolgens <b>Instellingen</b>. Het dialoogvenster <b>Opdrachtinstellingen</b> wordt geopend, waarin u de instellingen kunt bekijken en aanpassen.</p>
+        <p><b>Een set afmetingen toevoegen:</b></p>
+        <ol>
+            <li>
+                <p>Ga naar <b>Functies</b> | <b>Componenten</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>+ Categorie</b>en voeg een naam toe voor de nieuwe dimensiecategorie.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Dimensie toevoegen</b> (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;" />) om een dimensie toe te voegen en voeg vervolgens een naam toe voor de nieuwe dimensie.</p>
+                <p>U kunt tot drie dimensieniveaus toevoegen.</p>
+            </li>
+        </ol>
+        <p>U kunt nu de dimensiecategorieën toewijzen aan financiële groepen.</p>
+        <p><b>Financiële groepen toewijzen:</b></p>
+        <ol>
+            <li>
+                <p>Ga naar de categorie in het dialoogvenster <b>Opdrachtinstellingen</b> . Selecteer <b>Meer acties</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) | <b>Groepen toewijzen</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer alle financiële groepen die van toepassing zijn.</p>
+                <p>U kunt financiële groepen uitvouwen en samenvouwen om subgroepen te bekijken en de zoekbalk gebruiken om de juiste groepen te vinden.</p>
+            </li>
+        </ol>
+        <p>Zie <a href="../../Engagements/Template-and-Authoring/Add-dimensions.htm">Gebieden toevoegen</a>voor meer informatie.</p>
+        <h2>Rekeningen toewijzen</h2>
+        <p>Nadat u een set dimensies hebt toegevoegd en financiële groepen hebt toegewezen, kunt u rekeningen toewijzen vanuit uw geïmporteerde klantgegevens.</p>
+        <p class="note"><b>Let op:</b> Als de rekeningsaldi uit uw geïmporteerde gegevens niet gescheiden zijn per fonds, is een journaalpost voor aanpassingen nodig om deze saldi toe te wijzen aan uw dimensies.</p>
+        <p><b>Rekeningen toewijzen</b></p>
+        <ol>
+            <li>
+                <p>Op de pagina <b>Gegevens</b>,ga naar het tabblad <b>Rekeningen toewijzen</b> .</p>
+            </li>
+            <li>
+                <p>Wijs uw accounts toe. In de onderstaande schermafbeelding hebt u bijvoorbeeld de optie om de rekening <b>Warehouse Rent</b> toe te wijzen aan een van de bestaande dimensies, zoals <b>Rent - Programmadiensten</b>, <b>Rent - Fondsenwerving of Rent - Algemeen en administratief</b>.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/assign-account-audit.png" alt="Accounttoewijzing aan een van de bestaande dimensies." /></p>
+        <p>Zie <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Rekeningen toewijzen aan groepen in de pagina Gegevens</a> voor meer informatie.</p>
+        <h2>Een tabel kopiëren in de jaarrekening</h2>
+        <p>Nadat u een set dimensies hebt toegevoegd, kunt u fondsrapportage implementeren in uw financiële overzichten door uw dynamische tabellen aan te passen.</p>
+        <p><b>Een dynamische tabel wijzigen:</b></p>
+        <ol>
+            <li>
+                <p>Navigeer in de <b>7-600 Financiële overzichten</b>naar de tabel waar u de fondsrapportage wilt zien.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Meer acties</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) en vervolgens <b>Dynamische tabel bewerken</b>.</p>
+                <p>De tabel wordt geopend in de bewerkingsmodus.</p>
+            </li>
+            <li>
+                <p>Selecteer de kolom Saldo <b>huidig jaar</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de toepasselijke dimensiecategorieën in de vervolgkeuzelijst <b>Indeling op dimensie</b> .</p>
+                <p>De toepasselijke maatkolommen en de <b>kolomgroepkop</b> worden automatisch toegevoegd.</p>
+                <p><img src="../../Resources/Images/dimensions-drop-down-audit.png" alt="Dimensie uitklapmenu met opties om verschillende dimensiecategorieën te selecteren." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>DONE</b>wanneer uw wijzigingen zijn voltooid.</p>
+            </li>
+        </ol>
+        <p>Zie <a href="../../Engagements/Template-and-Authoring/Edit-table-columns-in-the-financial-statements.htm">Tabelkolommen bewerken in de jaarrekening</a> en <a href="../../Engagements/Template-and-Authoring/Group-columns-in-dynamic-tables.htm">Kolommen groeperen in dynamische tabellen</a>voor meer informatie.</p>
+    </body>
+</html>

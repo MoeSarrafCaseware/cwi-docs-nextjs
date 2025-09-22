@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Use-case: A product with French and English language support</h1>
+        <p>This topic describes a use-case for adding French language support in a product template. You can use this use-case as a reference when setting up multiple languages in your template.</p>
+        <p class="note"><b>Note:</b> You must repeat the steps listed in this use-case for each active language in your template.</p>
+        <p><b>Assumptions:</b></p>
+        <ul>
+            <li>
+                <p>English content and deliverables have been added and authored in the template.</p>
+            </li>
+            <li>
+                <p>You&apos;ve added French in the template and marked it as an active language.</p>
+            </li>
+        </ul>
+        <p><b>Prerequisite:</b> Switch the content language of the template to <b>French</b>.</p>
+        <p><img src="../Resources/Images/swithing-language-in-template.PNG" alt="Select French from the Content language drop-down." /></p>
+        <h2>Schritt 1: Add the French language in the product settings</h2>
+        <p>Add the French language and make other changes if needed, such as changing the default language from English to French.</p>
+        <p>For detailed instructions, see <a href="Set-up-multiple-content-languages.htm">Set up multiple content languages</a>.</p>
+        <h2>Schritt 2: Rename assertions, phases, cycles, areas, dimensions and components</h2>
+        <p>To start, select the <b>Information</b> icon (<img src="../Resources/Images/icon-information.png" style="vertical-align: text-bottom;" />) at the top menu, then choose <b>Settings</b>. The Product Settings dialog opens.</p>
+        <p style="font-weight: bold;">To rename assertions, phases, cycles, areas, dimensions and components:</p>
+        <ol>
+            <li>
+                <p>Go to the appropriate tab.</p>
+            </li>
+            <li>
+                <p>Rename each item in the tab:</p>
+                <ul>
+                    <li>
+                        <p>In the <b>Assertions</b> tab, enter the French abbreviation and full name of each assertion.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Phases</b>, <b>Cycles</b> and <b>Areas</b> tabs, enter the French name of each phase, cycle and area.</p>
+                        <p class="note inline"><b>Note:</b> The Cycles and Areas tabs are only available in your product if they have been enabled in your product.json file. To learn more, see <a href="Enable-or-disable-features-in-your-product.htm">Enable or disable features in your product</a>.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Dimensions</b> tab, enter the French name of each dimension category and dimension</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Components</b> tab, enter the French name of each component category, component name and component ID.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2>Schritt 3: Rename folders, subfolders, documents and placeholders</h2><MadCap:snippetBlock src="../Resources/Snippets/To-rename-documents-page-content-for-multi-language-support.flsnp" /><h2>Schritt 4: Add the french content</h2>
+        <p>Here is the recommended approach to adding translated content in a multi-language product for letters/memos, checklists, queries, financial statements and trial balance groups.</p>
+        <h3>Letters/memos</h3>
+        <p>Add a french version for the letter or memo content, then set them to only show if the selected content language of the template is french.</p>
+        <p style="font-weight: bold;">To set up multi-language support in letters and memos:</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-letters.flsnp" /><h3>Checklists and queries</h3>
+        <p>Add the french versions of each procedure and query question.</p>
+        <p style="font-weight: bold;">To add the french procedures in a checklist:</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-checklist.flsnp" /><p style="font-weight: bold;">To add the French authoritative references for a checklist procedure:</p>
+        <ol>
+            <li>
+                <p>Select <b>+ Authoritative reference</b> link.</p>
+            </li>
+            <li>
+                <p>Enter the link text to be displayed in the procedure at <b>Label</b>.</p>
+            </li>
+            <li>
+                <p>Enter the URL address at <b>URL</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">To add the french questions in a query:</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-queries.flsnp" /> <MadCap:snippetBlock src="../Resources/Snippets/to-add-multi-lang-picklist-response.flsnp" /><h3>Bulk change trial balance group names</h3>
+        <p>Import the french names of trial balance groups. For detailed instructions, see <a href="Bulk-change-group-names.htm">Bulk change group names</a>.</p>
+        <h3>Jahresabschluss</h3>
+        <p>To add a French version for text sections, headers and footers, ensure the content language of the template is set to French and then edit the existing text areas, headers and footers to remove the existing English content and add the French content.</p><MadCap:snippetBlock src="../Resources/Snippets/OnPoint-Audit-Training/se-financial-statements-multi-language.flsnp" /><p style="font-weight: bold;">To set up multi-language support in financial statements using visibility logic:</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-for-fs.flsnp" /> <MadCap:snippetBlock src="../Resources/Snippets/to-set-up-visibility-settings-for-multilanguage-in-FS.flsnp" /></body>
+</html>

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="CaseWare Cloud comes with several built-in roles. These roles define both the type of access and operations a user can perform in Cloud. There are two types of built-in roles: Staff roles and Contact roles." />
+    </head>
+    <body>
+        <h1>Vorgegebene Rollen</h1>
+        <p>Caseware Cloud erhalten Sie mit einer Reihe von vorgegebenen Rollen. Diese Rollen bestimmen sowohl den Typ des Zugriffs als auch die Operationen, die ein Anwender in Cloud durchführen kann. Jede vorgegebene Rolle gilt entweder für <a href="#Staff_Roles">Mitarbeiter</a> oder <a href="#Contact_Roles">Kontakte</a>.</p>
+        <p>Um sich die vorgegebenen Rollen anzeigen zu lassen, wählen Sie <b>Einstellungen</b> und anschließend <b>Zugriffschutz | Rollenberechtigungen</b>.</p>
+        <p><img src="../../Resources/Images/settings-role-permissions.png" alt="Zugriffschutz - Rollenberechtigungen" /></p>
+        <p>Wählen Sie eine Rolle aus, um weitere Informationen im Menü auf der rechten Seite anzeigen zu lassen.</p>
+        <div class="note">
+            <p><b>Hinweise:</b></p>
+            <ul>
+                <li>
+                    <p>Vorgegebene Rollen können nicht geändert oder gelöscht werden.</p>
+                </li>
+                <li>
+                    <p>Jedes Unternehmen muss mindestens über einen Anwender mit der Rolle <i>Administrator</i> verfügen. Dieser Benutzer hat alle Berechtigungen und die Möglichkeit, alle Organisationseinstellungen zu ändern.</p>
+                </li>
+            </ul>
+        </div>
+        <h2><a name="Staff_Roles"></a>Mitarbeiterrollen</h2>
+        <p>Zu den vorgegebenen Rollen gehören <a href="#Organization">Unternehmensrollen</a> und <a href="#Content">Inhaltliche Rollen</a>. Mitarbeiterrollen können Mitarbeitern oder Mitarbeitergruppen zugewiesen werden.</p>
+        <h3><a name="Organization"></a>Unternehmensrollen</h3>
+        <p>Unternehmensrollen bieten unternehmensweite Rechte. Mitarbeiter mit diesen Rollen können die Cloud-Umgebung des Unternehmens gestalten und definieren.</p>
+        <ul>
+            <li>
+                <p>Wenn eine Unternehmensrolle in einer Firma zugewiesen wird, die die Funktion <a href="../Organization/About-business-units.htm">Business Units</a> verwendet, gilt sie für alle Business Units im Unternehmen.</p>
+            </li>
+            <li>
+                <p>Wenn eine Unternehmensrolle in einer Firma ohne Business Units zugewiesen wird, gilt sie für die gesamte Cloud-Instanz (d. h. systemweit).</p>
+            </li>
+        </ul>
+        <p>In der folgenden Tabelle werden die integrierten Unternehmensrollen für Mitarbeiter beschrieben.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Rolle</th>
+                    <th>Anwendungsbereich</th>
+                    <th>Beschreibung</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Unternehmensweit</td>
+                    <td>
+                        <p>Jedes Unternehmen muss mindestens über einen Mitarbeiter mit der Rolle <i>Administrator</i> verfügen. <i>Administratoren</i> verfügen über alle Berechtigungen und die Möglichkeit, alle Organisationseinstellungen zu ändern.</p>
+                        <p><b>Hinweis:</b> Sie müssen den Mitarbeitern mit der Rolle <i>Administrator</i> weiterhin Anwendungslizenzen (für Anwendungen, die sie benötigen) zuweisen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Einstellungen-Administrator</p>
+                    </td>
+                    <td>Unternehmensweit</td>
+                    <td>
+                        <p><i>Einstellungen-Administratoren</i> können alle Systemeinstellungen bearbeiten.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Mitarbeiteradministrator</p>
+                    </td>
+                    <td>Unternehmensweit</td>
+                    <td>
+                        <p><i>Mitarbeiteradministratoren</i> können Personal und Personalgruppen erstellen, anzeigen, bearbeiten und löschen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Content"></a>Inhaltliche Rollen</h3>
+        <p>Inhaltliche Rollen bieten systemweite Rechte, Rechte auf Entitätsebene oder Rechte auf Entitätsinhaltsebene.</p>
+        <ul>
+            <li>
+                <p>Wenn eine inhaltliche Rolle <b>systemweit</b> zugewiesen wird, gilt sie für alle Entitäten in der Cloud-Instanz (Firmen ohne Business Units) oder für einen einzelnen <a href="../Organization/About-business-units.htm">Business Unit</a> (Firmen mit Business Units).</p>
+            </li>
+            <li>
+                <p>Wenn eine inhaltliche Rolle is assigned auf der Ebene <b>Entität</b> zugewiesen wird, gilt sie für die angegebene Entität.</p>
+            </li>
+            <li>
+                <p>Wenn eine inhaltliche Rolle is assigned auf der Ebene <b>Inhalt</b> zugewiesen wird, gilt sie für den angegebenen Inhalt in einer Entität.</p>
+            </li>
+        </ul>
+        <p>In der folgenden Tabelle werden die vorgegebenen inhaltlichen Rollen für Mitarbeiter beschrieben.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Rolle</th>
+                    <th>Anwendungsbereich</th>
+                    <th>Beschreibung</th>
+                </tr>
+                <tr>
+                    <td>Entitätsadministrator</td>
+                    <td>Systemweit</td>
+                    <td><i>Entitätsadministratoren</i> können Kontakte, Kontaktgruppen, Entitäten und alle Inhalte innerhalb von Entitäten erstellen, bearbeiten und löschen.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Eigentümer</p>
+                    </td>
+                    <td>
+                        <p>Systemweit, Entitäten und Inhalte innerhalb dieser Entitäten</p>
+                    </td>
+                    <td>
+                        <p><i>Eigentümer</i> können den Inhalt von Entitäten anzeigen, bearbeiten und löschen und anderen Mitarbeitern Rollen zuweisen, wenn sie diese Rolle haben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Editor</p>
+                    </td>
+                    <td>
+                        <p>Systemweit, Entitäten und Inhalte innerhalb dieser Entitäten</p>
+                    </td>
+                    <td>
+                        <p><i>Editoren</i> können Inhalte von Entitäten anzeigen und bearbeiten, wenn sie diese Rolle haben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Beobachter</p>
+                    </td>
+                    <td>
+                        <p>Systemweit, Entitäten und Inhalte innerhalb dieser Entitäten</p>
+                    </td>
+                    <td>
+                        <p><i> Beobachter</i> können Inhalte von Entitäten anzeigen, wenn sie diese Rolle haben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Zugriff auf Entität</p>
+                    </td>
+                    <td>
+                        <p>Systemweit, Entitäten und Inhalte innerhalb dieser Entitäten</p>
+                    </td>
+                    <td>
+                        <p><i>Zugriff auf Entität</i> - der Entitätszugriff ermöglicht es den Mitarbeitern, auf Entitäten zuzugreifen, in denen sie diese Rolle haben, so dass ihnen eine Sicherheitsrolle für Inhalte wie eine Aktivität oder eine Datei zugewiesen werden kann. Sie können keine Mitarbeiter, Kontakte oder andere Inhalte der Entität anzeigen oder bearbeiten, aber sie können die Zusammenfassung und Details der Entität anzeigen.</p>
+                        <p>Diese Rolle wird normalerweise Mitarbeitern zugewiesen, die andernfalls nicht wissen würden, dass eine Entität existiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Contact_Roles"></a>Kontaktrollen</h2>
+        <p>Kontaktrollen bieten Rechte auf Entitätsebene (eine Entität) oder auf Inhaltsebene (Inhalt innerhalb einer Entität). Kontakte mit diesen Rollen können nur eingeschränkt oder gar nicht auf die Cloud zugreifen (mit der Rolle Zugewiesen).</p>
+        <p>In der folgenden Tabelle werden die vorgegebenen Rollen für Kontakte beschrieben.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Rolle</th>
+                    <th>Anwendungsbereich</th>
+                    <th>Beschreibung</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontakt - Entitätsmitarbeiter</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i>Kontakt - Entitätsmitarbeiter</i> können neue Inhalte erstellen und auf vorhandene Inhalte in Entitäten zugreifen, in denen sie diese Rolle haben. Sie können Dateianforderungen empfangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontakt - Zugriff auf Entität</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i>Kontakt - Zugriff auf Entität</i> ermöglicht Kontakten den Zugriff auf vorhandene Inhalte in Entitäten, in denen sie diese Rolle haben. Es erlaubt ihnen nicht, Dateianforderungen zu empfangen oder irgendeine Kommunikation zu initiieren.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Zugewiesen</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i>Zugewiesen</i> ermöglicht die Zuordnung von Kontakten zu einer Entität.  Sie können sich nicht bei der Cloud anmelden, keine Benachrichtigungen erhalten und auf keine Funktionen zugreifen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontakt - Eigentümer</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i> Kontakt - Eigentümer</i> können Inhalte anzeigen, bearbeiten und löschen, wenn sie diese Rolle haben. Sie können keine Inhalte teilen.</p>
+                        <p>Diese Rolle wird automatisch für Aktivitäten oder Dateien zugewiesen, die Kontakte erstellen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontakt - Editor</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i>Kontakt - Editoren</i> können Inhalte anzeigen und bearbeiten, wenn sie diese Rolle haben. Sie können keine Inhalte teilen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontakt - Beobachter</p>
+                    </td>
+                    <td>
+                        <p>Entitäten und deren Inhalte</p>
+                    </td>
+                    <td>
+                        <p><i>Kontakt - Beobachter</i> können Inhalte anzeigen, für die sie diese Rolle haben. Sie können keine Inhalte freigeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

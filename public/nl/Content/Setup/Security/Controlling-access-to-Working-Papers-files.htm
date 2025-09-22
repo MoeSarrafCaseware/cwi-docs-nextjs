@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.WP" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators and partners can set up Working Papers security roles in order to control staff access to the areas of a SmartSync Working Papers file." />
+    </head>
+    <body>
+        <h1>Toegang controleren tot Working Papers-bestanden</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresWorkingPapers.flsnp" /><p>Als jouw organisatie de beveiligingsfunctie Working Papers op Cloud gebruikt, krijg je het beste van twee werelden. De beveiliging van Working Papers combineert het gemak van gebruikersbeheer dat beschikbaar is op Cloud met de gedetailleerde beveiligingsinstellingen die beschikbaar zijn in Working Papers bestanden.</p>
+        <p>De beveiliging van Working Papers werkt op dezelfde manier als de beveiligingsrollen die in Cloud worden gebruikt voor het beheren van de toegang voor je gebruikers en groepen. Eerst maak je de rollen van Working Papers aan in Cloud en daarna kun je de beveiliging van Working Papers inschakelen voor jouw organisatie. Zodra de beveiliging is ingeschakeld, kun je deze geavanceerde bescherming activeren op Working Papers-bestanden die jouw organisatie heeft gepubliceerd in Cloud, door de rollen van Working Papers toe te wijzen aan je medewerkers om hen toegang te geven tot de juiste gedeelten van het bestand.</p>
+        <h2 id="import-WP-security"><a name="Import"></a>Hoe instellingen voor beveiligingsconfiguratie importeren uit Working Papers</h2>
+        <p>Als je organisatie al gebruikmaakt van de beveiligingsinstellingen die beschikbaar zijn in Working Papers, kun je <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">je gegevens exporteren</a> vanuit de Data Store Administration Tool en deze instellingen vervolgens importeren in Cloud.</p>
+        <p><b>Instellingen voor beveiligingsconfiguratie importeren uit Working Papers:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Werkdocumenten | Werkdocumenten Veiligheid De pagina Beveiliging werkdocumenten wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Select the <b>New</b> button, then select <b>Import</b>. Het dialoogvenster voor importeren wordt weergegeven.</p>
+                <p><img src="../../Resources/Images/WP-security-import-1-630x320.png" style="border:1px solid #3f66a3" alt="Het importvenster voor de beveiligingsinstellingen van Working Papers." /></p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Bestanden selecteren</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer het .txt-bestand dat u hebt <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">geëxporteerd</a> vanuit de Data Store-beheertool en selecteer <b>Openen</b>. The Import Staff and Groups dialog is displayed.</p>
+                <p><img src="../../Resources/Images/WP-security-import-2-630x514.png" style="border:1px solid #3f66a3" alt="Het dialoogvenster Importeren van personeel en groepen voor de beveiligingsinstellingen van werkdocumenten." /></p>
+            </li>
+            <li>
+                <p>Bekijk de personeelsleden, de groepen en de rollen die zullen worden geïmporteerd. Je kunt groepen of rollen een andere naam geven en hun beschrijvingen bewerken.</p>
+            </li>
+            <li>
+                <p>Als je klaar bent met het bekijken van de importinhoud, selecteer je <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p>De beveiligingsrollen uit je Working Papers-bestand worden aangemaakt in Cloud. Je zult automatisch nieuwe personeelsprofielen aanmaken voor alle gebruikers in de import die nog geen profiel hadden, en je zult ook automatisch groepen aanmaken.</p>
+        <h2 id="create-WP-roles">Hoe beveiligingsrollen voor werkdocumenten maken</h2>
+        <p>Als jouw organisatie geen gebruik maakt van bescherming via Working Papers, kun je beveiligingsrollen voor Working Papers maken in Cloud. Deze geavanceerde rollen gebruiken dezelfde lijst met rechten die Working Papers ondersteunt.</p>
+        <p><b>Beveiligingsrollen voor werkdocumenten maken:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Werkdocumenten | Werkdocumenten Veiligheid De pagina Beveiliging werkdocumenten wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Select the <b>New</b> button, then select <b>Create</b>. Het dialoogvenster Werkdocumentrol aanmaken wordt weergegeven.</p>
+                <p><img src="../../Resources/Images/WP-security-create-1-630x540.png" style="border:1px solid #3f66a3" alt="Het dialoogvenster Werkdocumenten maken. Toestemmingscategorieën worden links weergegeven en toestemmingen worden rechts weergegeven." /></p>
+            </li>
+            <li>
+                <p>Voer een andere naam in. Je kunt ook een beschrijving invoeren.</p>
+            </li>
+            <li>
+                <p>Als je aan de linkerkant een categorie kiest, worden de rechten aan de rechterkant weergegeven. Selecteer alle machtigingen voor werkdocumenten die van toepassing zijn op je nieuwe rol.</p>
+            </li>
+            <li>
+                <p>Als uw organisatie toegangsniveaus voor CaseView gebruikt, selecteer dan de categorie <b>toegangsniveaus voor CaseView-documenten</b> aan de linkerkant en selecteer een toegangsniveau dat geschikt is voor uw rol.</p>
+                <p><img src="../../Resources/Images/WP-security-create-2-630x541.png" style="border:1px solid #3f66a3" alt="Selecteer een van de toegangsniveaus voor CaseView-documenten om deze toe te kennen aan uw beveiligingsrol." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>Je hebt nu de nieuwe beveiligingsrol voor Werkdocumenten gemaakt. Zodra je een paar rollen hebt aangemaakt die het type bescherming weergeven dat je nodig hebt, zou je klaar moeten zijn om de beveiliging van Working Papers in te schakelen.</p>
+        <h2 id="enable-WP-security-firm">Hoe de beveiliging van Working Papers inschakelen</h2>
+        <p>Zodra je de beveiligingsrollen voor Working Papers hebt aangemaakt op Cloud, kun je de beveiliging van Working Papers inschakelen. Dit is een systeembrede instelling waarmee gebruikers geavanceerde bescherming kunnen activeren voor specifieke werkdocumenten.</p>
+        <p><b>De beveiliging van Working Papers inschakelen:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Werkdocumenten | Werkdocumenten Veiligheid De pagina Beveiliging werkdocumenten wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Afronden</b> .</p>
+                <p><img src="../../Resources/Images/WP-security-enable-1-630x280.png" style="border:1px solid #3f66a3" alt="Select the Disabled button near the top of the page." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Ja</b> wanneer daarom wordt gevraagd.</p>
+                <p><img src="../../Resources/Images/WP-security-enable-2-630x220.png" style="border:1px solid #3f66a3" alt="Dit dialoogvenster laat je weten dat geavanceerde beveiliging kan worden ingeschakeld voor individuele bestanden als je Working Papers beveiliging inschakelt." /></p>
+            </li>
+        </ol>
+        <p>Je hebt nu Working Papers Security ingeschakeld voor de hele organisatie, wat betekent dat je geavanceerde bescherming kunt inschakelen voor Working Papers-bestanden.</p>
+        <h2 id="enable-WP-security-file">Geavanceerde bescherming inschakelen voor een Working Papers-bestand</h2>
+        <p>Zodra de beveiliging van Working Papers is ingeschakeld voor de organisatie, kunnen eigenaren van gepubliceerde Working Papers bestanden geavanceerde beveiliging inschakelen. Hiermee kun je toegang verlenen aan medewerkers door hen Werkdocumenten beveiligingsrollen toe te wijzen op gepubliceerde bestanden.</p>
+        <p><b>Geavanceerde beveiliging inschakelen voor een bestand met werkdocumenten:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat je de rol <i>Eigenaar</i> of gelijkwaardige rechten hebt voor het bestand Werkdocumenten.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Working Papers</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer een Working Papers-bestand en selecteer vervolgens de zoekbalk <b>Toegewezen</b> .</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-1-630x302.png" style="border:1px solid #3f66a3" alt="Selecteer het pictogram Delen in het deelvenster Details." /></p>
+            </li>
+            <li>
+                <p>Select the <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Enable Advanced Protection</b>.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-2-630x195.png" style="border:1px solid #3f66a3" alt="Selecteer Geavanceerde beveiliging inschakelen in het dialoogvenster Delen." /></p>
+            </li>
+            <li>
+                <p>Selecteer een of meer gebruikers aan wie u de geavanceerde rol voor dit werkdocumentenbestand wilt geven.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Rollen toewijzen aan (#)</b> linksonder in het dialoogvenster Delen en selecteer vervolgens de van toepassing zijnde Geavanceerde rol.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-3-630x559.png" style="border:1px solid #3f66a3" alt="Selecteer een van de geavanceerde rollen om deze rechten voor werkdocumenten toe te kennen aan de geselecteerde gebruiker." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Delen</b>.</p>
+            </li>
+        </ol>
+        <p>Je hebt nu geavanceerde bescherming ingeschakeld voor dit Working Papers-bestand. De gebruikers die je geselecteerd hebt, krijgen toegang tot de onderdelen van het bestand op basis van hun rol en ze krijgen alle bijbehorende rechten voor Werkdocumenten.</p>
+    </body>
+</html>

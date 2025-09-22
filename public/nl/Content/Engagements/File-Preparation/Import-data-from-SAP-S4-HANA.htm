@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gegevens importeren vanuit SAP S4 HANA</h1>
+        <p>U kunt proefbalans- en grootboekgegevens importeren vanuit SAP S4 HANA.</p>
+        <h2>Gegevens importeren vanuit SAP S4 HANA</h2>
+        <p>Als je proefbalans- of grootboekgegevens wilt importeren in je engagement vanuit SAP S4 HANA, moet je die gegevens eerst exporteren vanuit SAP.</p>
+        <p><b>Grootboekgegevens exporteren uit SAP:</b></p>
+        <ol>
+            <li>
+                <p>Aanmelden bij SAP.</p>
+            </li>
+            <li>
+                <p>Voer in de SAP-menubalk <b>S_ALR_87012284</b> in als transactiecode en selecteer vervolgens <b>Uitvoeren</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-command.png" alt="De transactiecode die is ingevoerd in de menubalk van SAP." /></p>
+            </li>
+            <li>
+                <p>Voer in de volgende velden de juiste informatie in voor de gegevens die je wilt exporteren:</p>
+                <ul>
+                    <li>
+                        <p><b>Rekeningschema</b></p>
+                    </li>
+                    <li>
+                        <p><b>Bedrijfscode</b></p>
+                    </li>
+                    <li>
+                        <p><b>Financial statement version</b></p>
+                    </li>
+                    <li>
+                        <p><b>Taal:</b></p>
+                    </li>
+                    <li>
+                        <p><b>Verslagjaar</b></p>
+                    </li>
+                    <li>
+                        <p><b>Rapportageperiode</b></p>
+                    </li>
+                    <li>
+                        <p><b>Vergelijkingsjaar</b></p>
+                    </li>
+                    <li>
+                        <p><b>Vergelijkingsperioden</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-fields.png" alt="Het scherm Financiële overzichten van SAP met de juiste informatie ingevoerd in de vereiste velden." /></p>
+            </li>
+        </ol>
+        <ol>
+            <li>
+                <p>Selecteer <b>Uitvoeren</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer in het bovenste menu <b>Systeem</b> | <b>Lijst</b> | <b>Opslaan</b> | <b>Opslaan</b> om het rapport op te slaan.</p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster <b>Spreadsheet (XLSX)</b> om het rapport op te slaan als een .xlsx-bestand.</p>
+            </li>
+        </ol>
+        <p><b>Grootboekgegevens exporteren uit SAP:</b></p>
+        <ol>
+            <li>
+                <p>Aanmelden bij SAP.</p>
+            </li>
+            <li>
+                <p>Voer in de SAP-menubalk <b>FAGLL03</b> in als transactiecode en selecteer vervolgens <b>Uitvoeren</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-gl-command.png" alt="De transactiecode die is ingevoerd in de menubalk van SAP." /></p>
+            </li>
+            <li>
+                <p>Voer de <b>bedrijfscode</b> in voor de gegevens die je wilt exporteren.</p>
+            </li>
+            <li>
+                <p>Selecteer in het gedeelte <b>Regelitemselectie</b>  <b>Alle posten</b> en voer de einddatum van het boekjaar in voor de gegevens die je wilt exporteren.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Uitvoeren</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer op de werkbalk het pictogram <b>Lay-out wijzigen</b> (<img src="../../Resources/Icons/sap-change-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/sap-hana-toolbar-change-layout.png" title="Het pictogram Lay-out wijzigen in de werkbalk." /></p>
+            </li>
+            <li>
+                <p>Zorg ervoor dat in het dialoogvenster Lay-out wijzigen de volgende velden zijn geselecteerd en selecteer vervolgens <b>Kopiëren</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />):</p>
+                <ul>
+                    <li>
+                        <p><b>G/L -accountboeking</b></p>
+                    </li>
+                    <li>
+                        <p><b>Bedrag in plaatselijke valuta</b></p>
+                    </li>
+                    <li>
+                        <p><b>Tekst</b></p>
+                    </li>
+                    <li>
+                        <p><b>Documentnummer</b></p>
+                    </li>
+                    <li>
+                        <p><b>Documenttype</b></p>
+                    </li>
+                    <li>
+                        <p><b>Document Date</b></p>
+                    </li>
+                    <li>
+                        <p><b>Boekingsdatum</b></p>
+                    </li>
+                    <li>
+                        <p><b>Boekingssleutel</b></p>
+                    </li>
+                    <li>
+                        <p><b>Lokale valuta</b></p>
+                    </li>
+                    <li>
+                        <p><b>Grootboekposten</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-change-layout-dialog.png" alt="Het dialoogvenster Lay-out wijzigen." /></p>
+            </li>
+            <li>
+                <p>Selecteer op de werkbalk het pictogram <b>Subtotaal</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Zorg er in het dialoogvenster Sorteervolgorde definiëren voor dat de vakjes <b>Subtotaal</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) niet zijn aangevinkt voor alle velden en selecteer vervolgens <b>Kopiëren</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/sap-hana-define-sort-order-dialog.png" alt="Het dialoogvenster Sorteervolgorde definiëren." /></p>
+            </li>
+            <li>
+                <p>Je kunt de aangepaste lay-out opslaan om hem later opnieuw te gebruiken:</p>
+                <ol>
+                    <li>
+                        <p>Select the <b>Save Layout</b> (<img src="../../Resources/Icons/sap-save-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon from the toolbar.</p>
+                    </li>
+                    <li>
+                        <p>In de lay-out: Opslaan als dialoogvenster, geef de lay-out een andere naam, voeg een beschrijving toe en selecteer vervolgens <b>Opslaan</b>.</p>
+                        <p><img src="../../Resources/Images/sap-hana-layout-save-as-dialog.png" alt="De indeling: Opslaan als dialoogvenster." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Om het rapport te exporteren, selecteer je in het bovenste menu <b>Lijst</b> | <b>Exporteren</b> | <b>Spreadsheet</b>.</p>
+            </li>
+            <li>
+                <p>Voer in het dialoogvenster Exporteren als een naam in voor het bestand en zorg ervoor dat de bestandsindeling <b>Spreadsheet (.xlsx)</b>is.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Exporteren naar</b> om je gegevens te exporteren.</p>
+            </li>
+        </ol>
+        <h2>Import your data</h2>
+        <p>Nadat je je gegevens hebt geëxporteerd, kun je ze importeren in je engagementbestand.</p>
+        <p><b>De gegevens importeren in je engagement:</b></p>
+        <ol>
+            <li>
+                <p>Navigeer naar de pagina <b>Data</b> . De gegevenspagina wordt geopend op het tabblad Datasets.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                </li>
+                <li>
+                    <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="2">
+                <p>Selecteer onder IMPORT FROM DATA CONNECTOR <b>SAP (File)</b> in de lijst met gegevensbronnen.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+            <li>
+                <p>Selecteer in de Upload-fase van de importwizard de grootboek- en proefbalansgegevensbestanden die je hebt geëxporteerd of sleep ze naar de locatie en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>In het stadium Gegevens configureren van de importwizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Rapportageperiode</b> wordt automatisch gevuld met de rapportageperiode van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Kies in <b>Select dataset type</b>het type datasets dat je importeert.</p>
+                <p>Let op: momenteel zijn alleen proefbalans- en grootboekgegevensreeksen beschikbaar voor import vanuit SAP S4 HANA.</p>
+            </li>
+            <li>
+                <p>Als je <b>Proefbalans</b>hebt geselecteerd, selecteer dan de optie <b>De laatste 5 jaar TB importeren</b> om maximaal vijf jaar proefbalansgegevens te importeren als deze beschikbaar zijn in het bestand dat je hebt geëxporteerd.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Bekijk de informatie in de fase Bevestiging van de importwizard en selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p class="indent">Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p class="indent">Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p class="indent">Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p class="indent">Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+        <h2>De proefbalans opnieuw importeren</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

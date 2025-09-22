@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Mouvements de stock décrits</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du livre auxiliaire des transactions d&apos;inventaire.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID de la transaction <br /><code>(inventory_transaction_transaction_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la transaction associé aux normes de données d&apos;audit du grand livre auxiliaire (ADS) Procure to Pay ou Order to Cash.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la transaction <br /><code>(date_transaction_inventaire</code>)</td>
+                    <td>
+                        <p>La date de l&apos;activité, par document de transaction associé, le cas échéant.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Troisième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du produit en stock <br /><code>(inventory_transaction_product_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant du produit est un code qui identifie de manière unique un article que vous avez en stock.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de série <br /><code>(numéro de série de l&apos;opération d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>S&apos;il est sérialisé, le numéro de série est saisi ici. Bien que le numéro de série soit le terme courant, la valeur n&apos;est pas limitée à des valeurs numériques. S&apos;il est rare qu&apos;un article soit à la fois contrôlé par un numéro de série et par un lot (le numéro de série identifie l&apos;article sans ambiguïté), ces deux types de contrôle ne s&apos;excluent pas nécessairement l&apos;un l&apos;autre.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Quatrième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot<br /><code>(numéro de lot de l&apos;opération d&apos;inventaire)</code></td>
+                    <td>
+                        <p>S&apos;il s&apos;agit d&apos;un lot, le numéro de lot est saisi ici. Bien que le numéro de lot soit le terme courant, la valeur n&apos;est pas limitée à des valeurs numériques.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Pas de clé primaire : Cinquième solution. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type de transaction <br /><code>(type_transaction_inventaire</code>)</td>
+                    <td>
+                        <p>Les codes qui décrivent les principales actions spécifiques à l&apos;inventaire qui ont lieu dans les transactions d&apos;inventaire liées au mouvement des marchandises, au commerce, aux ajustements de quantité résultant d&apos;événements commerciaux internes et aux ajustements de coût, dus à des facteurs de marché ou à des dommages.</p>
+                        <p>Type de données : Enum</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Exemples de valeurs : Entrées de marchandises (GR), sorties de marchandises (GS), transferts de stocks (IT), ajustements de stocks (IA), autres (OT)</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Système de type de transaction <br /><code>(système_type_transaction_inventaire</code>)</td>
+                    <td>
+                        <p>Un code de transaction qui est local au système de logiciel comptable sous-jacent.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Durée de la transaction <br /><code>(inventory_transaction_transaction_time</code>)</td>
+                    <td>
+                        <p>L&apos;heure à laquelle l&apos;activité a eu lieu, par document de transaction associé, le cas échéant.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantité de transactions <br /><code>(quantité_de_transaction_d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>La quantité ou l&apos;article concerné exprimé en unité de stockage de localisation.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ajustement des coûts de transaction <br /><code>(ajustement du coût de la transaction de l&apos;inventaire)</code></td>
+                    <td>
+                        <p>L&apos;augmentation ou (la diminution) du coût de stockage par unité.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description de la transaction <br /><code>(inventaire_transaction_transaction_description</code>)</td>
+                    <td>
+                        <p>Une description de la transaction.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaction associée ID de l&apos;ordre <br /><code>(inventory_transaction_transaction_associated_order_id</code>)</td>
+                    <td>
+                        <p>La commande du client, le bon de commande du fournisseur ou tout autre document associé à la transaction. Doit préciser si le numéro trouvé dans <b>Transaction Associated Order Line ID</b> provient des normes de données d&apos;audit du grand livre auxiliaire (ADS) &quot;Procure to Pay&quot; ou &quot;Order to Cash&quot; en utilisant le texte <code>P2P</code> ou &quot;O2C&quot;, respectivement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID de ligne de commande associée à la transaction <br /><code>(inventory_transaction_transaction_associated_order_line_id</code>)</td>
+                    <td>
+                        <p>Le numéro d&apos;article d&apos;une commande client, d&apos;un bon de commande (fournisseur), pour différencier plusieurs articles dans une seule commande pour des quantités différentes. Doit préciser si le numéro trouvé dans <b>Transaction Associated Order Line ID</b> provient des normes de données d&apos;audit du grand livre auxiliaire (ADS) &quot;Procure to Pay&quot; ou &quot;Order to Cash&quot;, en utilisant le texte <code>P2P</code> ou <code>O2C</code>, respectivement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du document associé à la transaction <br /><code>(inventory_transaction_transaction_associated_document_id</code>)</td>
+                    <td>
+                        <p>Le ticket de prélèvement, l&apos;avis d&apos;expédition ou tout autre document créé lors du mouvement ou associé à celui-ci. Doit préciser si le numéro trouvé dans <b>Transaction Associated Order Line ID</b> provient du registre auxiliaire Procure to Pay ou Order to Cash ADS en utilisant le texte <code>P2P</code> ou <code>O2C</code>, respectivement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID de ligne du document associé à la transaction <br /><code>(inventory_transaction_transaction_associated_document_line_id</code>)</td>
+                    <td>
+                        <p>Numéro de ligne d&apos;un document autre qu&apos;une commande client ou un bon de commande fournisseur. Le document doit préciser si le numéro trouvé dans <b>Transaction Associated Order Line ID</b> provient du registre auxiliaire Procure to Pay ou Order to Cash ADS en utilisant le texte <code>P2P</code> ou <code>O2C</code>, respectivement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire de l&apos;emplacement <br /><code>(inventaire_transaction_inventaire_de_lieu</code>)</td>
+                    <td>
+                        <p>Le lieu de stockage d&apos;où provient l&apos;inventaire.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire à l&apos;emplacement <br /><code>(inventaire_transaction_inventaire_vers_lieu</code>)</td>
+                    <td>
+                        <p>Le lieu de stockage vers lequel l&apos;inventaire est envoyé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Système d&apos;inventaire ou source externe <br /><code>(inventaire_transaction_inventaire_systèmem_ou_source_externe</code>)</td>
+                    <td>
+                        <p>Utilisé pour indiquer les informations d&apos;entrée associées à la transaction initiée à partir d&apos;un autre module ADS (par exemple, P2P, O2C) ou initiée à partir de l&apos;inventaire. S&apos;ils sont lancés à partir de l&apos;inventaire, les champs ci-dessous sont utilisés pour saisir les informations relatives à l&apos;utilisateur et au GL.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire Ligne GL Numéro de compte débiteur <br /><code>(numéro du compte de débit en ligne de l&apos;opération d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le débit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire Numéro de compte de la ligne de crédit GL <br /><code>(numéro de compte de crédit de la ligne de transaction d&apos;inventaire)</code></td>
+                    <td>
+                        <p>Le numéro de compte du grand livre (GL) sur lequel le crédit de la transaction a été comptabilisé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du projet <br /><code>(inventory_transaction_project_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique du projet. Généralement autogénéré par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du fournisseur <br /><code>(inventory_transaction_supplier_account_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique du fournisseur. Généralement autogénéré par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du compte client <br /><code>(inventory_transaction_customer_account_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique du client destinataire. Généralement généré automatiquement par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code d&apos;organisation de l&apos;inventaire <br /><code>(code_organisation_transaction_inventaire)</code></td>
+                    <td>
+                        <p>Le code de l&apos;organisme d&apos;inventaire. L&apos;organisation de l&apos;inventaire fait référence à l&apos;unité organisationnelle, physique ou virtuelle, où les transactions et les soldes de l&apos;inventaire peuvent être suivis et contrôlés. Il fournit des informations sur les stocks à des modules tels que les achats et les ventes. La forme la plus simple d&apos;organisation des stocks est l&apos;entrepôt.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code UOM de l&apos;inventaire <br /><code>(inventory_transaction_inventory_stocking_uom_code</code>)</td>
+                    <td>
+                        <p>L&apos;unité de mesure standardisée utilisée pour compter les articles en stock et les exprimer en quantités spécifiques.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code UOM pour le calcul du coût de revient de l&apos;inventaire <br /><code>(code_d&apos;évaluation_des_transactions_de_l&apos;inventaire)</code></td>
+                    <td>
+                        <p>Le code de l&apos;unité de mesure du coût du stock.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire requis par <br /><code>(inventaire_transaction_inventaire_required_by</code>)</td>
+                    <td>
+                        <p>La personne ou l&apos;organisation qui effectue la demande d&apos;inventaire.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;organisation des coûts <br /><code>(code de l&apos;organisation des coûts de l&apos;opération d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>Le code de l&apos;organisation de coûts, qui fait référence à l&apos;unité/niveau organisationnel où le coût du stock sortant sera calculé. Le calcul peut être effectué au niveau de l&apos;entreprise, de l&apos;organisation de stockage ou des sites particuliers où les stocks sont entreposés.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coût des stocks <br /><code>(coût de l&apos;inventaire_transaction_inventaire</code>)</td>
+                    <td>
+                        <p>Le coût par unité en utilisant la méthode trouvée dans la <b>méthode du coût des stocks</b>, dans les <b>stocks en main.</b></p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(code de l&apos;unité commerciale de l&apos;opération d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entré par <br /><code>(inventaire_transaction_entered_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de saisie <br /><code>(inventory_transaction_entered_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la transaction a été introduite dans le système source. Cette date est parfois appelée date de création. Dans la mesure du possible, il s&apos;agit d&apos;une date générée par le système (plutôt qu&apos;une date saisie par l&apos;utilisateur). Cette date ne correspond pas nécessairement à la date de la transaction elle-même.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure d&apos;entrée <br /><code>(inventory_transaction_entered_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source. ISO 8601 représentant le temps en 24 heures (hhmm), par exemple, 1:00 PM = 1300.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par <br /><code>(inventaire_transaction_approved_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a approuvé les modifications.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation <br /><code>(transaction_inventaire_approuvée_par_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Délai d&apos;approbation <br /><code>(transaction_d&apos;inventaire_approuvée_par_temps</code>)</td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée. ISO 8601 représentant le temps en 24 heures (hhmm), par exemple, 1:00 PM = 1300.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification <br /><code>(inventaire_transaction_dernière_modification_par</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la dernière modification <br /><code>(inventory_transaction_last_modified_date</code>)</td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification <br /><code>(heure de la dernière modification de l&apos;opération d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée. ISO 8601 représentant le temps en 24 heures (hhmm), par exemple, 1:00 PM = 1300.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de la monnaie fonctionnelle <br /><code>(code_devise_fonctionnel_de_l&apos;opération_d&apos;inventaire</code>)</td>
+                    <td>
+                        <p>La monnaie fonctionnelle ou de groupe relative au solde (ISO 4217:2015).</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entré par <br /><code>(inventory_transaction_posted_user_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant unique de la personne qui a publié l&apos;enregistrement. Généralement autogénéré par le système source.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de saisie <br /><code>(inventory_transaction_posted_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la transaction a été enregistrée dans le système source.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure d&apos;entrée <br /><code>(inventory_transaction_posted_time</code>)</td>
+                    <td>
+                        <p>L&apos;heure à laquelle la transaction en question a été enregistrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

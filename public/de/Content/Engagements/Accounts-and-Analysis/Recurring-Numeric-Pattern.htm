@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Wiederkehrendes numerisches Muster</h1>
+        <p>The Recurring Numeric Pattern analytic test is designed to identify specific user-defined patterns that are part of a value. These patterns can be at the beginning, end or embedded within the value. You can select whether to search for a specific number combination or a certain number of recurring digits in the values.</p>
+        <p>Note that this test does not consider decimal values. The values 1000 and 1000.10 would be considered the same. You also have the option to ignore rounded values if you use the test to search for recurring digits.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Potentially unsupported transactions</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+            <li>
+                <p>Values with the combination 999 that may indicate values just below a threshold value</p>
+            </li>
+            <li>
+                <p>Recurring values that may indicate fictitious numbers</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Dieser Test verwendet ein oder mehrere numerische Felder, um gerundete Beträge oder gerundete Mengenwerte zu ermitteln. Sie können festlegen, welche Felder verwendet werden sollen, indem Sie den Parameter <b>Felder auswählen</b> ändern.</p>
+        <h2>Parameter</h2>
+        <p>The following parameters must be set in order to run the test:</p>
+        <ul>
+            <li>
+                <p><b>Felder auswählen</b> - Wählen Sie ein oder mehrere numerische Felder aus der Liste aus, die für die Durchführung des Tests verwendet werden sollen.</p>
+            </li>
+            <li>
+                <p>Select either the <b>Digit combination</b> or the number of <b>Recurring digits</b> you want to search for. Note that the test will not consider any digits beyond the decimal place. For example, the values 1,000 and 1,000.10 would be considered the same.</p>
+            </li>
+            <li>
+                <p>If you select <b>Digit combination</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Digit combination</b> - Enter the combination of digits to search for in the values. The default combination is 999.</p>
+                    </li>
+                    <li>
+                        <p><b>Digit Combination location</b> - Select whether to search for the digit combination at the beginning, end or within the values. If you select to search for it at the beginning of values, you can also optionally enter the total length of the values you want to search for. For example, you can search for values that start with 123 and that have a total length of 4 digits.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If you select <b>Recurring digits</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Number of recurring digits</b> - Enter the number of recurring digits to search for. Der Standardwert ist 3.</p>
+                    </li>
+                    <li>
+                        <p><b>Recurring digits location</b> - Select whether to search for recurring digits at the beginning or end of the values.</p>
+                    </li>
+                    <li>
+                        <p><b>Ignore rounded amounts</b> - Select whether to ignore rounded amount values.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Amounts with Recurring Numeric Pattern</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Quantity with Recurring Numeric Pattern</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numerics with Recurring Pattern - All fields</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>When you run the Recurring Numeric Pattern analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. If fields have not been selected then create a unique reference field. Dies ist nur gültig, wenn bestimmte Felder ausgewählt wurden. If all the columns are available, this is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that at least one numeric field has been selected for the core analytic.</p>
+            </li>
+            <li>
+                <p>Obtain the needed parameters for the core analytic:</p>
+                <ul>
+                    <li>
+                        <p>Digit pattern</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtain the digit pattern</p>
+                            </li>
+                            <li>
+                                <p>Obtain the location of the digit pattern.</p>
+                                <ul>
+                                    <li>
+                                        <p>If the digit pattern is at the beginning then obtain if there is an optional parameter for the total length of the value:</p>
+                                    </li>
+                                    <li>
+                                        <p>If the length is 0, then all values are included.</p>
+                                    </li>
+                                    <li>
+                                        <p>The length value must be larger or equal to the pattern. For example, if the pattern is 999, then the minimum length is 3.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>If a user selects 6 as the length and the beginning pattern is 999, then 999000 would be selected but 99900 would not as it is only five characters long.</p>
+                            </li>
+                            <li>
+                                <p>Extract all values that meet the selected parameters. Decimal values are ignored for digit patterns at the end of the value. Decimal values are not rounded.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Recurring digits</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtain the number of recurring digits.</p>
+                            </li>
+                            <li>
+                                <p>Obtain if the recurring digits are at the beginning or end of the numeric value. If they are at the end, ignore decimal values. Decimal values are not rounded.</p>
+                            </li>
+                            <li>
+                                <p>Obtain if the recurring digits pattern should ignore rounded amounts.</p>
+                            </li>
+                            <li>
+                                <p>Extract all values that meet the selected parameters.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

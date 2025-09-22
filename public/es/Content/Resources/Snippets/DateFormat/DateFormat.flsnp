@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><b>Día</b></p>
+        <p>D: One digit for days below 10 (for example, 2 for the 2nd day of the month)</p>
+        <p>DD: Two digits (for example, 02 for the 2nd day of the month)</p>
+        <p>DDD: Day of the year (for example, 365 for December 31st)</p>
+        <p>DDDD: Three-digit day of the year (for example, 002 for January 2nd)</p>
+        <p><b>Mes</b></p>
+        <p>M: One digit for months below 10 (for example, 4 for April)</p>
+        <p>MM: Two digits (for example, 04 for April)</p>
+        <p>MMM: Three-letter abbreviation (for example, Apr for April)</p>
+        <p>MMMM: Full month name (for example, April)</p>
+        <p style="font-weight: bold;">Year</p>
+        <p>YY: Two digits (for example, 19 for 2019)</p>
+        <p>YYYY: Four digits (for example, 2019)</p>
+        <p><b>Hora</b></p>
+        <p>H HH: Hours in 24-hour time (for example, 0 for midnight, 23 for 11 PM)</p>
+        <p>h hh: Hours in 12-hour time used with AM/PM (for example, 1 for 1 AM, 12 for noon)</p>
+        <p>k kk: Hours in 24-hour time from 1 to 24 (for example, 1 for 1 AM, 24 for midnight)</p>
+        <p>a A: Post or ante meridiem (for example, am for morning, pm for afternoon)</p>
+        <p>m mm: Minutes (for example, 0 for the top of the hour, 59 for the last minute of the hour)</p>
+        <p>s ss: Seconds (for example, 0 for the start of the minute, 59 for the last second of the minute)</p>
+        <p>S SS SSS ... SSSSSSSSS: Fractional seconds (for example, 0 for no fractional second, 999999999 for the last fractional second)</p>
+        <p>Z ZZ: Offset from UTC as +-HH:mm, +-HHmm, or Z (for example, +12:00 for 12 hours ahead of UTC)</p>
+        <h4>Example Transaction</h4>
+        <p>Let&apos;s say we have a transaction that occurred on April 2, 2019, at 1:30:45 PM with 123 milliseconds, and the UTC offset is +02:00. Here’s how it would look in different formats:</p>
+        <ul>
+            <li>
+                <p>Date: 2/4/19 or 02/04/2019</p>
+            </li>
+            <li>
+                <p>Time: 13:30:45.123 +02:00</p>
+            </li>
+        </ul>
+    </body>
+</html>

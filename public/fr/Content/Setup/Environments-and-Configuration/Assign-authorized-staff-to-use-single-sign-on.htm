@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Affecter le personnel autorisé pour utiliser l&apos;authentification unique (Azure AD)</h1>
+        <p>Si vous voulez vous assurer que seul le personnel autorisé au sein de votre entreprise est en mesure d&apos;accéder à Caseware Cloud via l&apos;authentification unique, vous pouvez assigner des utilisateurs autorisés à votre application dans Azure. Si vous souhaitez que tous les membres du personnel de votre entreprise puissent accéder à Caseware Cloud, vous pouvez sauter cette étape et procéder à l&apos; <a href="#Assign">attribution des permissions API</a>.</p>
+        <p style="font-weight: bold;">Pour affecter le personnel autorisé :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez <b>Azure Active Directory</b> | <b>Enterprise Applications</b>, puis sélectionnez votre application.</p>
+            </li>
+            <li>
+                <p>Dans le volet de navigation de gauche, sélectionnez <b>Propriétés</b>.</p>
+            </li>
+            <li>
+                <p>Réglez l&apos; <b>option Affectation de l&apos;utilisateur requise</b> sur <b>Oui.</b></p>
+                <p><img src="../../Resources/Images/azure-authorized-staff.png" alt="Attribuer la valeur Oui à l&apos;affectation de l&apos;utilisateur." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+            <li>
+                <p>Dans le volet de navigation de gauche, sélectionnez <b>Utilisateurs et groupes</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter un utilisateur</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-user.png" alt="Sélectionnez Ajouter un utilisateur." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Utilisateurs</b> et sélectionnez chaque utilisateur que vous souhaitez affecter à l&apos;application.</p>
+                <p class="note"><b>Remarque :</b> Si vous disposez d&apos;un compte Microsoft Azure Premium, vous pouvez créer des groupes d&apos;utilisateurs, puis sélectionner le groupe pour accorder l&apos;accès à tous ses membres. Pour plus d&apos;informations, voir <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal">Créer un groupe de base et ajouter des membres à l&apos;aide d&apos;Azure Active Directory</a>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Sélectionner</b> lorsque vous avez ajouté tous les utilisateurs qui doivent avoir accès.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Attribuer</b> pour permettre à ces utilisateurs d&apos;accéder à l&apos;application.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Assign-API-permissions.htm">Pour attribuer des autorisations API :</a></p>
+    </body>
+</html>

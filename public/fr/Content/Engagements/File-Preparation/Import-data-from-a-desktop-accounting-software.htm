@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Importin"></a>Importer des données à partir d&apos;un logiciel de comptabilité de bureau</h1>
+        <p>Pour importer des données clients à partir d&apos;un logiciel de comptabilité tiers, utilisez l&apos;utilitaire d&apos;importation Cloud pour générer un fichier d&apos;importation que vous pourrez ensuite importer à partir de l&apos;onglet <b>Datasets</b> de la page <b>Data</b> de votre engagement Caseware Cloud. L&apos;utilitaire d&apos;importation Caseware Cloud est compatible avec la plupart des logiciels de comptabilité.</p>
+        <p>Pour une liste complète des logiciels de comptabilité de tiers, voir <MadCap:xref href="Supported-third-party-accounting-packages.htm">Logiciel de comptabilité de bureau tiers pris en charge</MadCap:xref>. Notez que les options disponibles lors de l&apos;importation varient en fonction du produit.</p>
+        <h2>Conditions préalables</h2>
+        <p>Avant d&apos;importer les données de vos clients, assurez-vous d&apos;avoir effectué les étapes préalables pour votre logiciel de comptabilité. Pour plus d&apos;informations, voir <a href="Prerequisites-for-importing-from-desktop-accounting-packages.htm">Conditions préalables à l&apos;importation à partir d&apos;un logiciel de comptabilité de bureau.</a></p>
+        <p>Pour savoir comment importer des données à partir de QuickBooks desktop ou de Sage desktop, voir ce qui suit :</p>
+        <ul>
+            <li>
+                <p><a href="Import-from-QuickBooks.htm">Importer à partir de QuickBooks Desktop</a></p>
+            </li>
+            <li>
+                <p><a href="Import-from-Sage-desktop.htm">Importer à partir de Sage Desktop</a></p>
+            </li>
+        </ul>
+        <p>Pour tout autre logiciel de comptabilité tiers, utilisez les instructions de cette page.</p>
+        <p class="note"><b>Remarque :</b> Les comptes avec un solde nul ne sont pas automatiquement importés dans les applications Caseware Cloud, à l&apos;exception d&apos; <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Pour inclure les comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> manuellement aux groupes désignés.</p>
+        <h2>Générer le fichier d&apos;importation</h2>
+        <p>Au cours de cette étape, vous téléchargez et installez l&apos;utilitaire d&apos;importation Caseware Cloud. Utilisez-le pour importer les données de vos clients et générer un fichier d&apos;importation.</p>
+        <p><b>Pour générer le fichier d&apos;importation :</b></p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>Dans les champs <b>Importer de</b> et <b>Version</b> , indiquez le logiciel de comptabilité à partir duquel vous effectuez l&apos;exportation.</p>
+                <p>Le contenu de la page change en fonction de votre sélection.</p>
+            </li>
+            <li>
+                <p>Naviguez jusqu&apos;au <b>chemin d&apos;importation</b> du fichier client que vous souhaitez importer.</p>
+                <p>Si votre logiciel de comptabilité vous demande de spécifier un fichier client, vous verrez apparaître la liste déroulante <b>Sélectionner le fichier d&apos;identification du client</b> . S&apos;il y a plus d&apos;un fichier, assurez-vous de sélectionner le bon fichier ici.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b> La page de <b>fin d&apos;exécution de l&apos;assistant de nouveau fichier</b> s&apos;affiche.</p>
+                <p>Il indique l&apos;emplacement d&apos;un fichier temporaire qui sera utilisé pour générer le fichier .zip final contenant les données importées.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Terminer</b> pour effectuer la conversion.</p>
+                <p>Une fois les données générées, la boîte de dialogue Enregistrer sous s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Naviguez jusqu&apos;à l&apos;emplacement souhaité pour enregistrer le fichier .zip et sélectionnez <b>Enregistrer.</b></p>
+                <p><b>Remarque :</b> Si vous importez des données dans IDEA à l&apos;aide de l&apos;utilitaire d&apos;importation dans le nuage, ne procédez pas à l&apos;importation des données. L&apos;étape suivante consiste à importer le fichier zip dans IDEA. Voir l&apos;aide IDEA pour des instructions détaillées.</p>
+            </li>
+        </ol>
+        <h2>Importer les données</h2>
+        <p>Après avoir généré le fichier zip à l&apos;aide de l&apos;utilitaire d&apos;importation Caseware Cloud, vous pouvez importer les données dans votre engagement.</p>
+        <p><b>Pour importer les données dans votre engagement :</b></p>
+        <ol>
+            <li>
+                <p>Ouvrez votre fichier d&apos;engagement Caseware Cloud. Lorsque vous ouvrez l&apos;engagement pour la première fois, la fenêtre contextuelle Propriétés de l&apos;engagement s&apos;affiche. Définissez la <b>date de fin d&apos;année</b> comme étant la même que celle des données que vous êtes sur le point d&apos;importer.</p>
+                <p>La date de fin d&apos;année est le dernier élément du nom du fichier zip que vous avez généré. Par exemple, pour le fichier nommé CONSTRUCTION UNIVERSELLE 2025-06-30.zip, la date de fin d&apos;année est le 30 juin 2025.</p>
+            </li>
+            <li>
+                <p>Accédez à la page <b>Données</b> . The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Sélectionnez votre logiciel de comptabilité de bureau dans la liste des sources de données.</p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+            <li>
+                <p>A l&apos;étape Upload de l&apos;assistant d&apos;importation, sélectionnez ou glissez-déposez le fichier zip que vous avez généré en utilisant l&apos;utilitaire d&apos;importation Caseware Cloud, puis sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>A l&apos;étape Configuration des données de l&apos;assistant d&apos;importation :</p>
+                <ul>
+                    <li>
+                        <p>La période de<b>déclaration</b> est automatiquement remplie avec la période de déclaration des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>début</b> est automatiquement remplie avec la date de début des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>fin</b> est automatiquement remplie avec la date de fin des données.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Dans <b>Sélectionner le type de jeu</b>de données, choisissez le type de jeu de données que vous importez.</p>
+                <p>Pour en savoir plus sur les options des jeux de données, voir <a href="#Dataset">Types de jeux de données</a>. Tous les types de jeux de données ne sont pas disponibles s&apos;ils n&apos;ont pas été activés dans votre produit.</p>
+            </li>
+            <li>
+                <p>Si vous avez sélectionné <b>Balance de vérification</b>, réduisez la liste des types d&apos;ensembles de données en sélectionnant l&apos;icône de <b>réduction</b> (<img src="../../Resources/Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />). Remarquez que l&apos;option <b>Importer les 5 dernières années de TB</b> apparaît. Sélectionnez-le pour importer jusqu&apos;à cinq années de données de balance de vérification si elles sont disponibles dans le fichier zip que vous avez généré.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>À l&apos;étape de confirmation de l&apos;assistant d&apos;importation, vérifiez les informations et sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+        <h2>Réimporter la balance de vérification</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /><h2><a name="Dataset"></a>Types d&apos;ensembles de données</h2><MadCap:snippetBlock src="../../Resources/Snippets/dataset-descriptions.flsnp" /></body>
+</html>

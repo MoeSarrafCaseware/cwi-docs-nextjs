@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="Import2"></a>De transacties en andere subgrootboekgegevens van de klant importeren vanuit een CSV- of Excel-bestand</h1>
+        <p>Als je boekhoudpakket niet wordt ondersteund door een van onze importeerprogramma&apos;s, kun je je klantgegevens exporteren naar een CSV-bestand (door komma&apos;s gescheiden waarden) of Excel-bestand en deze vervolgens importeren met behulp van dit bestand. Het bestandsformaat kan .xlsx of .csv zijn en moet voldoen aan de bestandseisen voor succesvolle import. Zie <a href="CSV-transaction-file-requirements.htm">Een CSV- of Excel-bestand voorbereiden om transacties of subgrootboekgegevens te importeren</a> en <a href="#Date">Datumnotatie</a>voor meer informatie.</p>
+        <p><b>Let op:</b> Als u een proefbalans met dimensies importeert, zie <a href="../Planning/Set-up-trial-balance-with-dimensions.htm">Een proefbalans met dimensies instellen en importeren</a> voor meer informatie. Deze functie is mogelijk niet beschikbaar in uw product.</p>
+        <p>Nadat u het bestand hebt geüpload, moet u de gegevensvelden in het bestand toewijzen aan vooraf gedefinieerde doelvelden in een Casware-gegevensset om het importeren te voltooien. Voor meer informatie over de datasetopties, zie <a href="Import-and-manage-data.htm#Dataset">Dataset types beschreven</a>. Merk op dat sommige types datasets mogelijk niet beschikbaar zijn in uw product.</p>
+        <h2 class="collapsible"><a name="Date"></a>Datumnotatie</h2>
+        <p>In velden waar een datum vereist is, moet het datumformaat goed ingesteld zijn:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Gegevens van de klant importeren</h2>
+        <p><b>Klantgegevens importeren vanuit een Excel- of CSV-bestand:</b></p>
+        <ol>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De gegevenspagina wordt geopend op het tabblad <b>Datasets</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                </li>
+                <li>
+                    <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteert u de entiteit waarvoor u gegevens wilt importeren in de lijst.</p>
+                </li>
+            </ul>
+            <ol start="2">
+                <li>
+                    <p>ONDER DATA FILE UPLOAD bladert u door het CSV- of Excel-bestand of sleept u het naar het gebied voor het uploaden van bestanden. Als het bestand al is geüpload naar het tabblad <b>Documenten</b> , selecteer dan <b>Importeren uit documenten</b>en selecteer het uit de lijst met beschikbare documenten in de opdracht.</p>
+                </li>
+            </ol>
+        </p>
+        <ol start="3">
+            <li>
+                <p>Selecteer in het dialoogvenster <b>Nieuwe dataset configureren</b> het <b>type dataset</b> uit de vervolgkeuzelijst.</p>
+                <p>Voor meer informatie over de datasetopties, zie <a href="Import-and-manage-data.htm#Dataset">Dataset types beschreven</a>. Merk op dat sommige types datasets mogelijk niet beschikbaar zijn in uw product.</p>
+                <p>Als je een proefbalans importeert, selecteer je Proefbalans bij <b>Type dataset</b>. Als planningsbalansen zijn ingeschakeld in uw product, selecteert u of u de <b><a href="../../Glossary/F/final-balance.htm">Definitieve proefbalans</a></b> of een <b><a href="../../Glossary/P/planning-balance.htm">Planningstestbalans</a></b>.</p>
+            </li>
+            <li>
+                <p>Controleer de automatisch geselecteerde kopregel om er zeker van te zijn dat de juiste kop is geselecteerd. Als je de koprij handmatig wilt selecteren, selecteer je <b>Koprij aanpassen</b> en selecteer je de juiste rij.</p>
+                <p>Als je een CSV-bestand importeert en het scheidingsteken wilt wijzigen in iets anders dan de standaard komma (<b>,</b>), selecteer dan <b>Aanpassen kopregel</b> en selecteer het juiste scheidingsteken.</p>
+                <p class="note"><b>Let op:</b> Zowel de automatische kopdetectie als de handmatige kopselectie houden alleen rekening met de eerste 30 rijen van het geïmporteerde bestand. Rijen voorbij de eerste 30 rijen kunnen niet worden geselecteerd als koptekst.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ConfigureNewDataset.png" alt="Voorbeeld koptekstrij" /></p>
+        <ol>
+            <li value="5">
+                <p>Selecteer <b>Uploaden</b>.</p>
+            </li>
+            <li>
+                <p>Klik op het tabblad <b>Datasets</b> op <b>Configureren</b> om kolommen in de geïmporteerde gegevens toe te wijzen aan Caseware velden.</p>
+                <p><img src="../../Resources/Images/ConfigureDataset.png" alt="Klik op Configureren om velden in de geïmporteerde gegevens toe te wijzen aan Caseware velden." /></p>
+                <p>Je kunt kolommen automatisch of handmatig toewijzen:</p>
+                <p><b>Kolommen automatisch toewijzen:</b></p>
+                <ul>
+                    <li>
+                        <p>Nadat u uw proefbalans hebt geïmporteerd, selecteert u in het venster Velden toewijzen <b>kolommen toewijzen</b>. Kolommen worden automatisch toegewezen.</p>
+                    </li>
+                    <li>
+                        <p>Bekijk de auto-opdracht. Pas indien nodig aan.</p>
+                    </li>
+                    <p class="note inline"><b>Let op:</b> AI-kolom autotoewijzing ondersteunt alle Engelstalige invoer van proefbalansgegevens. AI-kolom automatisch toewijzen werkt ook op niet-Engelse proefbalansen, maar de resultaten zullen minder nauwkeurig zijn. Controleer altijd de kolomtoewijzing voordat u gegevens importeert.</p>
+                    <li>
+                        <p>Kolommen die automatisch worden toegewezen met behulp van AI hebben koppen met een symbool om onderscheid te maken tussen kolommen die handmatig worden toegewezen en kolommen die niet worden toegewezen.</p>
+                        <p><img src="../../Resources/Images/AI assign columns.png" style="width: 624px;height: 306px;" /></p>
+                        <p><img src="../../Resources/Images/AI-assign-columns2.png" /></p>
+                    </li>
+                </ul>
+                <p><b>Om handmatig kolommen toe te wijzen,</b> gaat u naar de pagina <b>Velden toewijzen</b> ,</p>
+                <ul>
+                    <li>
+                        <p>Gebruik de vervolgkeuzelijsten om handmatig een veld toe te wijzen aan elke kolom in het geïmporteerde bestand.</p>
+                    </li>
+                    <li>
+                        <p>Gebruik de vervolgkeuzelijst <b>Gegevenslay-out selecteren</b> om een eerder opgeslagen gegevenslay-out toe te passen en de velden automatisch toe te wijzen. Zie <a href="Manage-your-imported-data.htm">Een gegevenslay-out opslaan</a>voor meer informatie.</p>
+                    </li>
+                </ul>
+                <p>Als er fouten zijn, wordt er een indicator weergegeven voor de kolommen die de fouten bevatten. Je kunt dan de indicator en de fout selecteren om meer informatie over de fout en de specifieke rijen die gemarkeerd zijn te bekijken.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/ImportErrorExample.png" alt="Foutindicator voor importeren" /></p>
+        <ol>
+            <li value="7">
+                <p>Als je een proefbalans importeert, selecteer je <b>Rekeningen met een nulsaldo opnemen</b> als je rekeningen met een nulsaldo wilt opnemen in de import.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p><img src="../../Resources/Images/ViewData-TrialBalance.png" alt="De knop Gegevens weergeven selecteren om geïmporteerde gegevens weer te geven" /></p>
+        <p class="indent"> </p>
+        <p>Als je een proefbalans hebt geïmporteerd, verschijnt het tabblad <b>Rekeningen</b> . Als het grootboek of een van de subgrootboeken wordt weergegeven, verschijnt er een nieuwe pagina met de dataset.</p>
+        <p>Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p>Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p>Zie <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene gegevens en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+        <h2>De proefbalans opnieuw importeren</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

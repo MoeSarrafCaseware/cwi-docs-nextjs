@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importeren vanuit QuickBooks-desktop</h1>
+        <p>Je kunt gegevens importeren uit Sage door een zipbestand te genereren met de Caseware Cloud Import Utility en dit vervolgens te importeren in je engagement.</p>
+        <p class="note"><b>Let op:</b> Rekeningen met een nulsaldo worden niet automatisch geïmporteerd in Caseware Cloud apps, met uitzondering van <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Om rekeningen met een nulsaldo op te nemen, moet je ze handmatig <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">toevoegen</a> en <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">toewijzen</a> aan de juiste financiële groepen.</p>
+        <h2>Gegevens exporteren vanuit Quickbooks</h2>
+        <p>Voordat je begint, moet je ervoor zorgen dat je de noodzakelijke voorbereidende stappen uitvoert op basis van je QuickBooks-versie:</p>
+        <p style="font-weight: bold;">QuickBooks Canada / Verenigd Koninkrijk / Australië:</p>
+        <ul>
+            <li>
+                <p>Installeer een toepasselijke versie van QuickBooks op je werkstation.</p>
+            </li>
+            <li>
+                <p>De QuickBooks Export Utility is geïnstalleerd op je werkstation. Je kunt het downloaden van <a href="https://my.caseware.com/">MyCaseware</a> op de Support Bestanden pagina.</p>
+            </li>
+            <li>
+                <p>In QuickBooks moet je de QuickBooks Export Utility toegang geven tot het bestand. Klik op het lint op <b>Bewerken</b> | <b>Voorkeuren...</b> | <b>Geïntegreerde toepassingen</b> | <b>Bedrijfsvoorkeuren</b> en schakel de optie <b>Geef applicaties geen toegang tot dit bedrijfsbestand</b>.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">QuickBooks VS:</p>
+        <ul>
+            <li>
+                <p>Installeer een toepasselijke versie van QuickBooks op je werkstation.</p>
+            </li>
+        </ul>
+        <p>Nadat je aan de voorwaarden hebt voldaan, kun je gegevens exporteren vanuit QuickBooks Canada / VK / Australië of QuickBooks VS.</p>
+        <p style="font-weight: bold;">Om gegevens te exporteren vanuit QuickBooks Canada / VK / Australië:</p>
+        <ol>
+            <li>
+                <p>Log in op uw QuickBooks desktop account en open vervolgens het bedrijfsbestand dat u wilt importeren in Caseware Cloud.</p>
+            </li>
+            <li>
+                <p>Open de QuickBooks Export Utility.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer in het vervolgkeuzemenu <b>QuickBooks-versie</b> je QuickBooks-versie.</p>
+                    </li>
+                    <li>
+                        <p>selecteer <b>Browse....</b>in het veld <b>Exportpad</b> .</p>
+                    </li>
+                    <p>Het dialoogvenster Zoeken naar map wordt weergegeven.</p>
+                    <li>
+                        <p>Navigeer naar de plaats waar je het exportbestand wilt maken en selecteer <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Selecteer <b>Laatste transactiedatum opgeven</b> en voer de datum in die van toepassing is.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer in het vervolgkeuzemenu <b>Boekhoudmethode</b> de toepasselijke toerekeningsmethode.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/quickbooks-export-utility.png" alt="Het hulpprogramma QuickBooks exporteren" /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Exporteren</b>.</p>
+            </li>
+        </ol>
+        <p>De boekhoudgegevens van het QuickBooks Desktop-bestand worden geëxporteerd naar een .cwq-bestandsindeling op de opgegeven locatie.</p>
+        <p style="font-weight: bold;">Gegevens exporteren vanuit QuickBooks</p>
+        <ol>
+            <li>
+                <p>Log in op je QuickBooks desktopaccount en open het bedrijfsbestand dat je wilt importeren.</p>
+            </li>
+            <li>
+                <p>Selecteer op het lint <b>Bestand</b> | <b>Hulpprogramma&apos;s</b> | <b>Kopieer bedrijfsbestand voor QuickBooks Online....</b></p>
+                <p>Als u wordt gevraagd om open vensters te sluiten, selecteert u <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>Navigeer in het dialoogvenster Geëxporteerd bedrijfsbestand opslaan naar... naar de locatie op je werkstation waar je het QuickBooks Online-bestand wilt maken en selecteer <b>Opslaan</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>De boekhoudgegevens van het QuickBooks Desktop-bestand worden geëxporteerd naar een .cwq-bestandsindeling op de opgegeven locatie.</p>
+        <h2><a name="Generate"></a>Het importbestand voor Quickbooks genereren</h2>
+        <p>Nadat u uw gegevens uit QuickBooks hebt geëxporteerd, kunt u nu het importbestand genereren met de Caseware Cloud Import Utility.</p>
+        <p style="font-weight: bold;">Het importbestand voor Quickbooks genereren:</p>
+        <ol>
+            <li>
+                <p>Download het hulpprogramma Caseware Cloud importeren.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware hulpprogramma voor cloudimport (.exe)</a></p>
+            <p></p>
+            <li>
+                <p>Open het hulpprogramma, selecteer <b>Andere gegevensbron</b> en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Selecteer in de vervolgkeuzelijsten <b>Importeren van</b> en <b>Versie</b>  <b>Sage 50 Accounts</b> en de versie waaruit u importeert.</p>
+                <p class="note"><b>Let op:</b> Zie <a href="Supported-third-party-accounting-packages.htm">Ondersteunde boekhoudpakketten van derden</a>voor een lijst met versies die we ondersteunen.</p>
+            </li>
+            <li>
+                <p>Selecteer in <b>Importeren pad</b>, <b>Bladeren</b> en navigeer naar de map met de verzameling bestanden die je hebt geëxporteerd uit QuickBooks met het Caseware QuickBooks Export hulpprogramma.</p>
+                <ul>
+                    <li>
+                        <p>Het veld <b>Client ID</b> wordt automatisch gevuld met de naam van het clientbestand.</p>
+                    </li>
+                    <li>
+                        <p><b>Bestandsextensie</b> wordt automatisch gevuld met de juiste bestandsextensie voor het bestand. De instellingen variëren afhankelijk van de versie die je eerder hebt geselecteerd.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer in de vervolgkeuzelijst <b>Boekhoudjaar</b> het jaar waarvoor je gegevens wilt importeren.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/cloud-import-utility-quickbooks.png" alt="Cloud Importhulpprogramma" /></p>
+            </li>
+            <li>
+                <p>Bepaal de resterende instellingen voor het importeren.</p>
+                <p>De instellingen variëren afhankelijk van de versie die je eerder hebt geselecteerd.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>en vervolgens <b>Voltooien</b>.</p>
+            </li>
+            <li>
+                <p>Sla het gegenereerde zipbestand op met behulp van de weergegeven prompt.</p>
+            </li>
+        </ol>
+        <h2>Importeer de gegevens in je engagement</h2>
+        <p>Nadat je het zipbestand hebt gegenereerd met de Caseware Cloud Import Utility, kun je de gegevens importeren in je engagement.</p>
+        <p><b>De gegevens importeren in je engagement:</b></p>
+        <ol>
+            <li>
+                <p>Open je Caseware Cloud engagement bestand. Wanneer je de engagement voor het eerst opent, verschijnt het pop-upvenster met de eigenschappen van de engagement. Stel <b>de einddatum van het jaar</b> in op dezelfde datum als de gegevens die je gaat importeren.</p>
+                <p>De eindejaarsdatum is het laatste element van de naam van het zipbestand dat je hebt gegenereerd in <a href="#Generate">Importeerbestand voor Quickbooks genereren</a>. Bijvoorbeeld voor het bestand met de naam SUNBRIDGE FARMS LTD. Mastercard Mark 8386 2022-09-30.zip, de einddatum is 30 september 2022.</p>
+            </li>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De gegevenspagina wordt geopend op het tabblad <b>Datasets</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p>
+                </li>
+                <li>
+                    <p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Selecteer onder IMPORT FROM DATA CONNECTOR <b>QuickBooks Desktop</b> in de lijst met gegevensbronnen en selecteer vervolgens <b>Volgende</b>.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Zoek de gegevensconnector QuickBooks Desktop in de lijst op het tabblad Datasets." /></p>
+        <ol><li value="4"><p>Selecteer in de Upload-fase van de importwizard het zip-bestand dat u hebt gegenereerd met de Caseware Cloud Import Utility of sleep het naar een andere locatie en selecteer vervolgens <b>Volgende</b>.</p></li><li><p>In het stadium Gegevens configureren van de importwizard:</p><ul><li><p><b>Rapportageperiode</b> wordt automatisch gevuld met de rapportageperiode van de gegevens.</p></li><li><p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p></li><li><p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p></li></ul></li><li><p>Kies bij <b>Select dataset type</b>het type dat je importeert. Selecteer <b>Proefbalans</b> als je een proefbalans importeert en <b>Grootboek</b> als je transacties importeert.</p></li><li><p>Als je <b>Proefbalans</b>hebt geselecteerd, kun je de optie <b>De laatste 5 jaar TB importeren</b> selecteren om maximaal vijf jaar aan proefbalansgegevens te importeren als deze beschikbaar zijn in het zip-bestand dat je hebt gegenereerd.</p></li></ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p class="indent">Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p class="indent">Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p class="indent">Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p class="indent">Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+    </body>
+</html>

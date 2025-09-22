@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Facturen exporteren naar QuickBooks Online</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Na <a href="Integrate-online-accounting-software-with-Cloud.htm">de integratie</a> met QuickBooks Online kun je definitieve facturen exporteren.</p>
+        <h4>Facturen worden niet gesynchroniseerd tussen services</h4>
+        <p>Als je een factuur in Cloud moet aanpassen nadat deze is geëxporteerd naar je boekhoudsoftware, moet je de export opnieuw uitvoeren om ervoor te zorgen dat beide services up-to-date zijn. Voor meer informatie, zie <MadCap:xref href="#Modify">Een geëxporteerde factuur wijzigen</MadCap:xref>.</p>
+        <h4>Het exporteren en bewerken van klantgegevens is beperkt</h4>
+        <p>Wanneer je een factuur exporteert, probeert Time de factuur te koppelen aan een bestaande klant in je boekhoudsoftware. Als er geen overeenkomst wordt gevonden, wordt er een nieuwe client aangemaakt met de entiteitnaam uit Cloud. Als je klantgegevens wilt wijzigen na een export, moet je deze handmatig bijwerken in Cloud en je boekhoudsoftware.</p>
+        <h4>Facturen die zijn gemaakt in je boekhoudsoftware kunnen niet worden geëxporteerd naar Cloud</h4>
+        <p>Als je een factuur maakt in je boekhoudsoftware, kun je die factuur niet exporteren naar Cloud.</p>
+        <h4>Betaalde en goedgekeurde facturen worden automatisch afgesloten in Cloud</h4>
+        <p>Wanneer je een factuur als Betaald of Goedgekeurd markeert in je boekhoudsoftware, verandert de status van de factuur in Gesloten in Cloud. Dit proces kan tot twaalf uur duren, afhankelijk van je boekhoudsoftware.</p>
+        <h2>Een factuur exporteren</h2>
+        <p>Controleer voordat je begint of je de toestemming Tijd <i>exporteren naar boekhoudsoftware</i> hebt.</p><div class="note"><p><b>Let op:</b> Als je exporteert vanuit QuickBooks Online <b>US</b>, overweeg dan het volgende:</p>
+            <ul>
+                <li>Als de Primaire of Secundaire Belastingopties zijn uitgeschakeld of een tarief van <b>0</b> hebben in <b>Instellingen | Tijd | Belasting</b>, is de bijbehorende regel in de geëxporteerde factuur niet belastbaar.</li>
+                <li>Er wordt een fout weergegeven als de omzetbelasting is ingesteld op de factuur, maar niet in QuickBooks Online US.</li>
+                <li>Als de automatische omzetbelasting is ingeschakeld in QuickBooks Online US, wordt het bestaande belastingtarief op de factuur overschreven. Dit kan resulteren in een ander belastingtarief dan verwacht. Zorg ervoor dat de Primaire of Secundaire Belastingopties zijn ingesteld op het juiste tarief.</li>
+                <li>Als de geautomatiseerde omzetbelasting is uitgeschakeld in QuickBooks Online US (standaard voor bedrijven die zijn gemaakt voor 10 november 2017), zorg er dan voor dat het belastingtarief overeenkomt, anders wordt er een fout weergegeven.</li>
+            </ul></div><p><b>Een factuur exporteren naar QuickBooks Online:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer de voltooide facturen die je wilt exporteren en selecteer vervolgens <b>Meer acties</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Geselecteerde facturen exporteren naar QuickBooks Online</b>.</p>
+            </li>
+        </ol>
+        <p>Als er fouten of waarschuwingen optreden tijdens het exporteren, worden deze weergegeven in de kolom <b>QuickBooks Export</b> .</p>
+        <h2><a name="Modify"></a>Een geëxporteerde factuur wijzigen</h2>
+        <p>In sommige gevallen wil je een factuur wijzigen nadat deze is geëxporteerd. Bijvoorbeeld als een regelitem onjuist is op de factuur. Het proces voor het wijzigen van een factuur nadat deze is geëxporteerd, is afhankelijk van je boekhoudsoftware en de factuurstatus.</p>
+        <h3>Een onbetaalde factuur wijzigen</h3>
+        <p>Als je een factuur naar QuickBooks Online hebt geëxporteerd, maar nog geen betalingsgegevens hebt toegevoegd, raden we je aan de nodige wijzigingen in Cloud aan te brengen en niet in QuickBooks Online. Wijzigingen aan een factuur in QuickBooks Online worden niet gesynchroniseerd tussen de twee services en kunnen leiden tot onnauwkeurige records in Cloud.</p><MadCap:snippetBlock src="../../Resources/Snippets/to-modify-an-unpaid-invoice.flsnp" /><p>De factuur wordt verwijderd uit QuickBooks Online en kan nu worden gewijzigd. Nadat je de nodige wijzigingen hebt aangebracht, exporteer je de factuur opnieuw via het menu <b>Meer acties</b> .</p>
+        <h3>Een betaalde of goedgekeurde factuur wijzigen</h3>
+        <p>Facturen die in QBO als betaald zijn gemarkeerd, worden in Cloud automatisch als Gesloten gemarkeerd. Dit proces kan tot een uur duren.</p>
+        <ul>
+            <li>
+                <p>Als je wijzigingen wilt aanbrengen in een <b>definitieve</b> factuur die in QBO is gemarkeerd als Betaald, verander je de status in <b>Concept</b>.</p>
+            </li>
+            <li>
+                <p>Om wijzigingen aan te brengen in een <b>Gesloten</b> factuur die in QBO is gemarkeerd als Betaald, wijzig je de status van de factuur van <b>Gesloten</b> in <b>Gereed</b>en vervolgens wijzig je de status in <b>Concept</b>. Zie <a href="Send-an-invoice-to-a-client.htm#Display">Gesloten facturen weergeven</a>voor meer informatie over het bewerken van gesloten facturen.</p>
+            </li>
+        </ul>
+        <p>Nadat je de factuurstatus in Cloud hebt gewijzigd, verandert de status in QBO automatisch in Uitstaand. Merk op dat QBO alle betalingsinformatie bewaart.</p>
+    </body>
+</html>

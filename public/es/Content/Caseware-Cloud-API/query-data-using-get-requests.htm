@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Sintaxis de consulta en solicitudes GET</h1>
+        <p>Puede filtrar los objetos que desea recuperar especificando una consulta como valor del parámetro de consulta <code>de búsqueda</code> en las solicitudes GET. Los resultados se devuelven como una página de objetos en un mensaje de respuesta.</p>
+        <p>Puede haber varias páginas de resultados disponibles, pero la página que se devuelve es la que se solicita mediante el parámetro <code>page</code> . Si desea la página siguiente, debe realizar otra solicitud e incrementar el número de página. Establezca el parámetro <code>pageSize</code> en el número de objetos que desea que se devuelvan en el mensaje de respuesta.</p>
+        <p>La sintaxis de consulta para el parámetro de <code>búsqueda</code> en cualquier solicitud GET que utilice la API de Caseware Cloud es la siguiente:</p>
+        <p><code>&lt;nombre de campo&gt;&lt;operador&gt;&lt;valor de campo&gt;</code></p>
+        <p>Si deja la consulta en blanco, se mostrarán todos los objetos de la lista.</p>
+        <p><strong><code>&lt;nombreCampo&gt;</code></strong> es el nombre del campo de nivel superior sobre el que desea operar.</p>
+        <p class="note inline"><b>Nota:</b> No todos los fieldNames son válidos. El campo debe ser un tipo de dato primitivo como texto, números, booleanos y fechas. Los tipos de datos complejos, como las colecciones o los objetos, no permiten búsquedas.</p>
+        <p class="tip"><b>Consejo:</b> La mayoría de los campos (o parámetros de consulta) que pueden utilizarse para formar consultas (especificados como el valor del parámetro de consulta de búsqueda) se describen en el esquema del cuerpo de la solicitud en la operación POST Create para el objeto que está consultando. Por ejemplo, si está consultando entidades, consulte la operación POST Crear para entidades:</p>
+        <p><div><code><p>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk/caseware-cloud#tag/Entities/operation/createEntity</p></code></div></p>
+        <p><img src="../Resources/Images/Post-Operation.png" alt="Visualización del esquema del cuerpo de respuesta en la operación POST Crear para entidades. " /></p>
+        <h3>Operadores relacionales admitidos</h3>
+        <p><strong><code>&lt;operator&gt;</code></strong> puede ser cualquiera de los siguientes:</p>
+        <ul>
+            <li>= (igual a)</li>
+            <li>&lt; (menor que)</li>
+            <li>&gt; (mayor que)</li>
+            <li>&lt;&gt; (no igual a)</li>
+        </ul>
+        <p><strong><code>&lt;campoValor&gt;</code></strong> puede ser cualquier valor escalar, es decir, cualquier valor individual:</p>
+        <p>Para <strong>texto</strong>, es decir, cualquier campo cuyo tipo de datos sea String, debe especificar el valor entre comillas simples:</p>
+        <p><code>fieldName=&apos;prueba&apos;</code></p>
+        <p>Para los campos cuyo tipo de datos contenga caracteres especiales como &apos; o \ debe utilizar un carácter de escape (\) en la consulta de búsqueda:</p>
+        <p><code>fieldName=&apos;randomText\&apos;s randomText&apos;</code></p>
+        <p>Para los campos cuyo tipo de datos es <strong>numérico,</strong> especifique el valor numérico sin comillas:</p>
+        <p><code>fieldName=123</code></p>
+        <p>Para los campos cuyo tipo de datos es <strong>booleano</strong>,especifica &quot;true&quot; o &quot;false&quot;:</p>
+        <p><code>fieldName=&apos;true&apos;</code></p>
+        <p>Para los campos cuyo tipo de dato es <strong>la fecha</strong>, la fecha debe seguir este formato ISO:</p>
+        <p><code>fieldName=&apos;AAAA-MM-DDTHH:MM:SS:Z&apos;</code></p>
+        <h3>Operadores lógicos admitidos</h3>
+        <p>Para ayudar a filtrar los resultados, puede combinar dos o más sentencias de filtro con los operadores lógicos Y u O. El operador AND tiene prioridad sobre OR. Debe especificar un espacio antes y después del operador:</p>
+        <p><code>&lt;nombre de campo&gt;&lt;operador&gt;&lt;valor de campo&gt; AND &lt;nombre de campo&gt;&lt;operador&gt;&lt;valor de campo&gt;</code></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">AND</td>
+                    <td>Une dos o más sentencias de filtro mediante el operador AND.</td>
+                    <td><code>countryCode=&apos;CA&apos; AND modifyDate&gt;&apos;2022-01-01&apos;</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">.OR.</td>
+                    <td>Une dos o más sentencias de filtro mediante el operador OR.</td>
+                    <td><code>countryCode=&apos;US&apos; OR countryCode=&apos;CA&apos;</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

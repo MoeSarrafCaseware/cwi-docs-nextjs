@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="All" Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="title" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundImage="../../Print Only Topics/CaseWare PDF Template/CW_Training_Guide_FrontCover02.png" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch">
+        <Frame Y="6in" Bottom="240px" X="-0.5in" Right="-0.5in" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Right" Width="7.5in" Height="0.5in" Flow="header">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="Subtitle"><MadCap:variable xhtml:name="General.Subtitle" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Y="6.5in" Bottom="48px" X="-0.5in" Right="-0.5in" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Right" Width="7.5in" Height="2in" Flow="footer" FlowIndex="1">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="Title"><MadCap:variable xhtml:name="General.Title" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Y="8.5in" Bottom="38px" X="-0.5in" Right="-0.5in" ColumnCount="1" ColumnGap="30px" ColumnDivider="Solid 1px Red" Anchors="Right" Width="7.5in" Height="0.1041667in" Flow="body" FlowIndex="1">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:class="Subtitle"><MadCap:variable xhtml:name="General.Subtitle" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="firstleft" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch" BackgroundType="Solid" BackgroundImage="none">
+        <Frame X="-0.5in" Y="-0.5in" Width="7.5in" Height="10in" Flow="body" Right="-48px" Bottom="-48px" Anchors="" FlowIndex="1" />
+    </Page>
+    <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="firstright" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch" BackgroundType="Solid" BackgroundImage="none">
+        <Frame X="-0.5in" Y="-0.5in" Width="7.5in" Height="10in" Flow="body" Right="-48px" Bottom="-48px" Anchors="" FlowIndex="1" />
+    </Page>
+</PageStyles>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comparaisons</h1>
+        <p>L’analyse de comparaison peut être utilisée pour comparer deux ensembles de renseignements ou plus afin de vérifier que l&apos;information est la même ou différente selon vos choix. Par exemple, vous pouvez utiliser ce test pour confirmer que l&apos;utilisateur responsable de la saisie des détails de la transaction diffère de l&apos;utilisateur qui autorise ces transactions. Ce test peut être utile pour valider la cohérence entre les rapports de réception et les factures correspondantes.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>Les domaines de l&apos;information financière dont l&apos;exactitude ou la précision est moindre</p>
+            </li>
+            <li>
+                <p>Des problèmes systémiques dans le traitement des transactions par un service</p>
+            </li>
+            <li>
+                <p>Des paramètres du système mal configurés pouvant nécessiter une amélioration et une évaluation plus poussée</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ ID de l’écriture pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champs principaux</b> – Deux ou plusieurs champs de n&apos;importe quel type doivent être marqués aux fins de comparaison. Les champs marqués doivent être du même type.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Le paramètre suivant doit être défini pour exécuter ce test :</p>
+        <p><b>Type de comparaison</b> – Sélectionnez la manière dont les données des champs sélectionnés doivent être comparées les unes aux autres. Voici vos options :</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Égal</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Pas égal</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Supérieur à</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Supérieur ou égal à</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Inférieur à</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Inférieur ou égal à</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Comparaison de champs de caractères</b> – Compare deux champs de caractères et les répertorie selon qu&apos;ils sont égaux ou non.</p>
+            </li>
+            <li>
+                <p><b>Comparaison de champs de date</b> – Compare deux champs de date et les répertorie selon qu&apos;ils sont égaux ou non.</p>
+            </li>
+            <li>
+                <p><b>Comparaison de champs numériques</b> – Compare deux champs numériques et les répertorie selon qu&apos;ils sont égaux ou non.</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Comparaisons, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est valable seulement si des champs spécifiques ont été sélectionnés. Si toutes les colonnes sont accessibles, elle n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu’au moins deux champs ont été sélectionnés et que tous les champs sélectionnés sont du même type.</p>
+            </li>
+            <li>
+                <p>Obtenez le type de comparaison à partir des paramètres saisis. Les options sont les suivantes :</p>
+                <ul>
+                    <li>
+                        <p><b>Égal</b> (==)</p>
+                    </li>
+                    <li>
+                        <p><b>Pas égal</b> (!=)</p>
+                    </li>
+                    <li>
+                        <p><b>Supérieur ou égal à</b> (&gt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Supérieur à</b> (&gt;)</p>
+                    </li>
+                    <li>
+                        <p><b>Inférieur ou égal à</b> (&lt;=)</p>
+                    </li>
+                    <li>
+                        <p><b>Inférieur à</b> (&lt;)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Effectuez l&apos;analyse de base en comparant les champs sélectionnés avec le type de comparaison.</p>
+                <ul>
+                    <li>
+                        <p>Lorsque l&apos;on compare deux champs, extraire tous les enregistrements pour lesquels la comparaison renvoie true.</p>
+                    </li>
+                    <li>
+                        <p>Lors de la comparaison de trois champs ou plus, extraire tous les enregistrements pour lesquels la comparaison entre au moins deux des champs est true.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>En option, les filtres de l&apos;étape 1 peuvent être placés sur les données une fois l&apos;analyse de base terminée, plutôt qu&apos;avant.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

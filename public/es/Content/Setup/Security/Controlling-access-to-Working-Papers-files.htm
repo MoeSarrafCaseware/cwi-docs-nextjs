@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.WP" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators and partners can set up Working Papers security roles in order to control staff access to the areas of a SmartSync Working Papers file." />
+    </head>
+    <body>
+        <h1>Control de acceso a los archivos de Caseware Working Papers</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresWorkingPapers.flsnp" /><p>If your organization uses the Working Papers security feature on Cloud, you get the best of two worlds. Working Papers security combines the ease of user management available on Cloud with the detailed protection settings available in Working Papers files.</p>
+        <p>Working Papers security works very similarly to the security roles used in Cloud for managing access for your users and groups. First, you create Working Papers roles in Cloud, and then you can enable Working Papers security for your organization. Once security is enabled, you can activate this advanced protection on Working Papers files that your organization has published to Cloud, assigning the Working Papers roles to your staff members to grant them access to the appropriate areas of the file.</p>
+        <h2 id="import-WP-security"><a name="Import"></a>How to import security configuration settings from Working Papers</h2>
+        <p>If your organization already uses the protection settings available in Working Papers, you can <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">export your data</a> from the Data Store Administration Tool and then import these settings into Cloud.</p>
+        <p><b>To import security configuration settings from Working Papers:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Working Papers | Working Papers Security</b>. The Working Papers Security page is displayed.</p>
+            </li>
+            <li>
+                <p>Select the <b>New</b> button, then select <b>Import</b>. The Import dialog is displayed.</p>
+                <p><img src="../../Resources/Images/WP-security-import-1-630x320.png" style="border:1px solid #3f66a3" alt="The import dialog for Working Papers security settings." /></p>
+            </li>
+            <li>
+                <p>Select the <b>Select Files</b> button.</p>
+            </li>
+            <li>
+                <p>Select the .txt file you have <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">exported</a> from the Data Store Administration Tool, and select <b>Open</b>. The Import Staff and Groups dialog is displayed.</p>
+                <p><img src="../../Resources/Images/WP-security-import-2-630x514.png" style="border:1px solid #3f66a3" alt="The Import Staff and Groups dialog for Working Papers security settings." /></p>
+            </li>
+            <li>
+                <p>Review the staff members, the groups, and the roles that will be imported. You can rename any groups or roles and edit their descriptions.</p>
+            </li>
+            <li>
+                <p>Once you have finished reviewing the import content, select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>The security roles from your Working Papers file are created in Cloud. You will automatically create new staff profiles for any users in the import who did not already have a profile, and you will also automatically create groups.</p>
+        <h2 id="create-WP-roles">How to create Working Papers security roles</h2>
+        <p>If your organization does not use Working Papers protection, you can create Working Papers security roles in Cloud. These advanced roles use the same list of permissions that Working Papers supports.</p>
+        <p><b>To create Working Papers security roles:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Working Papers | Working Papers Security</b>. The Working Papers Security page is displayed.</p>
+            </li>
+            <li>
+                <p>Select the <b>New</b> button, then select <b>Create</b>. The Create Working Papers Role dialog is displayed.</p>
+                <p><img src="../../Resources/Images/WP-security-create-1-630x540.png" style="border:1px solid #3f66a3" alt="The Create Working Papers Role dialog. Permission categories are displayed on the left, and permissions are displayed on the right." /></p>
+            </li>
+            <li>
+                <p>Escriba un nombre significativo. You can also enter a description.</p>
+            </li>
+            <li>
+                <p>Choosing a category on the left will display its permissions on the right. Select all Working Papers permissions that apply to your new role.</p>
+            </li>
+            <li>
+                <p>If your organization uses CaseView access levels, select the <b>CaseView documents access level</b> category on the left and select an access level appropriate for your role.</p>
+                <p><img src="../../Resources/Images/WP-security-create-2-630x541.png" style="border:1px solid #3f66a3" alt="Select one of the CaseView documents access levels to grant it to your security role." /></p>
+            </li>
+            <li>
+                <p>Seleccione <b>Guardar</b>.</p>
+            </li>
+        </ol>
+        <p>You have now created the new Working Papers security role. Once you have created a few roles that reflect the type of protection you need, you should be ready to enable Working Papers security.</p>
+        <h2 id="enable-WP-security-firm">How to enable Working Papers security</h2>
+        <p>Once you have Working Papers security roles created on Cloud, you can enable Working Papers security. This is a system-wide setting that will enable users to activate advanced protection on specific Working Papers files.</p>
+        <p><b>To enable Working Papers security:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Working Papers | Working Papers Security</b>. The Working Papers Security page is displayed.</p>
+            </li>
+            <li>
+                <p>Seleccione el botón <b>EXPORT</b>.</p>
+                <p><img src="../../Resources/Images/WP-security-enable-1-630x280.png" style="border:1px solid #3f66a3" alt="Select the Disabled button near the top of the page." /></p>
+            </li>
+            <li>
+                <p>Select <b>Yes</b> when prompted.</p>
+                <p><img src="../../Resources/Images/WP-security-enable-2-630x220.png" style="border:1px solid #3f66a3" alt="This dialog notifies you that advanced protection can be enabled on individual files if you turn on Working Papers security." /></p>
+            </li>
+        </ol>
+        <p>You have now enabled Working Papers Security for the entire organization, which means that you can enable advanced protection on Working Papers files.</p>
+        <h2 id="enable-WP-security-file">How to enable advanced protection on a Working Papers file</h2>
+        <p>Once Working Papers security is enabled for the organization, owners for published Working Papers files can enable advanced protection for them. This will let you grant access to staff members by assigning them Working Papers security roles on published files.</p>
+        <p><b>To enable advanced protection on a Working Papers file:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Owner</i> role or equivalent privileges for the Working Papers file.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Working Papers</b>.</p>
+            </li>
+            <li>
+                <p>Select a Working Papers file, then select the <b>Share</b> button (<img src="../../Resources/Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-1-630x302.png" style="border:1px solid #3f66a3" alt="Select the Share icon in the details pane." /></p>
+            </li>
+            <li>
+                <p>Select the <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Enable Advanced Protection</b>.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-2-630x195.png" style="border:1px solid #3f66a3" alt="Select Enable Advanced Protection in the Share dialog." /></p>
+            </li>
+            <li>
+                <p>Select one or more users to whom you will give the Advanced Role for this Working Papers file.</p>
+            </li>
+            <li>
+                <p>Select the <b>Assign Roles to (#)</b> button at the bottom left corner of the Share dialog, then select the applicable Advanced Role.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-3-630x559.png" style="border:1px solid #3f66a3" alt="Select one of the advanced roles to grant these Working Papers permissions to the selected user." /></p>
+            </li>
+            <li>
+                <p>Select <b>Share</b>.</p>
+            </li>
+        </ol>
+        <p>You have now enabled advanced protection for this Working Papers file. The users you selected will have access to the areas of the file based on their role, and they will gain all corresponding Working Papers permissions for it.</p>
+    </body>
+</html>

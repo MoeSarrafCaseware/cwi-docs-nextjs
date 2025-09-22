@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger-gegevensreeksen beschreven</h1>
+        <p>Als je grootboektransacties <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importeert</a> vanuit een CSV- of Excel-bestand, moet je de velden in kaart brengen, zodat de transacties goed worden weergegeven in de overeenkomst.</p>
+        <p>Dit onderwerp beschrijft de velden in de categorie <b>PROCESDETAILS</b> die verschijnen in de grootboekdataset.</p>
+        <p>Merk op dat sommige velden verplicht zijn om goed te functioneren bij specifieke tests voor gegevensanalyse. Zie voor meer informatie <a href="CSV-transaction-file-requirements.htm#Mandator2">Verplichte velden voor gegevensanalyse</a>.</p>
+        <h2>Oorspronkelijk documentnummer</h2>
+        <p>Het ID-nummer van het oorspronkelijke document voor het begin van het bedrijfsproces. Dit is het document dat de voorloper is van deze geregistreerde transactie. <br />Voorbeelden: &quot;PO-001&quot;, &quot;132134&quot;.</p>
+        <h3>Benodigd</h3>
+        <p>
+            <ul>
+                <li>Minder dan 2.500 unieke waarden.</li>
+                <li>De gegevens in de betreffende kolom in het transactie-importbestand (het CSV-bestand) moeten worden toegewezen aan de onderstaande waarden <code>voor originating_document_number</code> :<![CDATA[ 
+					]]><ul><li>Grootboek</li><li>AR - Aanpassingen debiteuren (crediteringen, retouren, andere aanpassingen)</li><li>Inkoopovereenkomsten</li><li>Kasuitgaven</li><li>AP - Aanpassingen Crediteuren (crediteringen, retouren, andere aanpassingen)</li><li>Inkoopaanvragen</li><li>Kasontvangsten</li><li>Vaste Activa</li><li>Inkooporders</li><li>SJ - Verkoopboek (factuurlijst verkoop)</li><li>Beleggingsactiva</li><li>Verzonden goederen</li><li>PJ - Inkoopboek (lijst met inkoopfacturen)</li><li>Verkoopovereenkomsten</li><li>Ontvangen goederen</li><li>PL - Salarisjournaal</li><li>Verkooporders</li><li>OT - Andere</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

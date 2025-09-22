@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Copy content from another template</h1>
+        <p style="font-weight: normal;">Before you start, note that:</p>
+        <ul>
+            <li><b>Source template</b> - refers to the template you want to copy from.</li>
+            <li><b>Destination template</b> - refers to the template you&apos;re currently authoring (your product template).</li>
+        </ul>
+        <p>Voraussetzungen:</p>
+        <ul>
+            <li>
+                <p>The source template is published and you have access to it. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Setup/Security/Built-in-roles.htm">Built-in roles</a>.</p>
+            </li>
+            <li>
+                <p>The Import Documents property is enabled in the destination template. To learn more, see <a href="List-of-product-features-(API).htm#Import">Enable or disable features in your product</a>.</p>
+            </li>
+            <li>
+                <p>If you&apos;re copying financial statements, the grouping numbers and structure in the destination template are the same as the ones in the source template.</p>
+            </li>
+            <li>
+                <p>If there are <a href="Develop-custom-forms.htm">custom forms</a> in the source template, then the values.json file in that destination template match the values.json file in the source template.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">To copy content from another template:</p>
+        <ol>
+            <li>
+                <p>In the <b>Documents</b> page, select <b>Add</b> (<img src="../Resources/Images/icon-document-add-dropdown.png" />) | <b>Copy From Another Product</b>.</p>
+                <p><img src="../Resources/Images/copy-from-template.PNG" alt="Copy From Another Product option." /></p>
+            </li>
+            <li>
+                <p>From the <b>Select Template</b> drop-down, select the template you want to copy from.</p>
+            </li>
+            <p>A list of the available documents displays.</p>
+            <li>
+                <p>From the list, select the documents you want to copy.</p>
+            </li>
+            <p>You can select:</p>
+            <ul>
+                <li>
+                    <p>individual documents.</p>
+                </li>
+                <li>
+                    <p>a folder to copy all documents in the folder.</p>
+                </li>
+                <li>
+                    <p>a phase to copy all documents in the phase.</p>
+                </li>
+            </ul>
+            <p class="note inline"><b>Note:</b> When you select a folder or a phase, only documents in that phase or folder are copied. File structures are not maintained.</p>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>OK</b>.</p>
+            </li>
+            <p class="note inline"><b>Hinweis:</b> If you recopy a document (that is, copy the same document from the same template again), you will override the existing document and lose any changes you have made to it.</p>
+        </ol>
+    </body>
+</html>

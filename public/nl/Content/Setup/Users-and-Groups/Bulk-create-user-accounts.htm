@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can import a large number of users at once using a .csv file or block of delimited text; recommended for large firms" />
+    </head>
+    <body>
+        <h1>Gebruikersaccounts in bulk aanmaken</h1>
+        <p>Als alternatief voor het aanmaken van individuele gebruikersaccounts is de optie <b>Importeren</b> beschikbaar op de pagina&apos;s <b>Personeel</b> en <b>Contact</b> .</p>
+        <p><img src="../../Resources/Images/import-users.png" alt="Gebruikersaccounts in bulk aanmaken Merk op dat deze optie beschikbaar is voor medewerkers en contactpersonen." style="border:1px solid #3f66a3" /></p>
+        <p>Voor grote bedrijven gebruik je best de importoptie om in bulk gebruikersaccounts aan te maken door gebruikersinformatie uit een lijst te importeren. Dit gebeurt in twee stappen:</p>
+        <ol>
+            <li>Maak de lijst met gebruikersinformatie.</li>
+            <li>Importeer de lijst.</li>
+        </ol>
+        <p>Merk op dat:</p>
+        <ul>
+            <li>
+                <p>Om gebruikersaccounts voor medewerkers en contactpersonen in bulk aan te maken, moet je twee aparte lijsten maken: één voor de medewerkers en één voor de contactpersonen van de onderneming</p>
+            </li>
+            <li>
+                <p>U kunt de importoptie gebruiken om informatie voor bestaande gebruikersaccounts in bulk bij te werken</p>
+            </li>
+            <li>
+                <p>Als je bedrijf <a href="../Organization/About-business-units.htm">bedrijfseenheden</a>gebruikt, kun je het standaard <b>Personeel</b> importeren om personeel naar de huidige bedrijfseenheid te importeren. Als je personeel importeert naar andere bedrijfseenheden, meerdere bedrijfseenheden of personeel verplaatst tussen bedrijfseenheden, selecteer dan <b>Personeel naar bedrijfseenheden</b>. Voor deze optie is een bedrijfseenheidveld vereist in de importlijst. Medewerkers die al op de primaire Cloud site zijn, kunnen dezelfde inloggegevens en de business unit selector blijven gebruiken om tussen sites te navigeren.</p>
+            </li>
+            <li>
+                <p>Nadat u met succes een gebruikerslijst hebt geïmporteerd, stuurt Cloud een e-mailmelding naar elke gebruiker die is aangemaakt. Zie <a href="#What">Wat gebeurt er nadat je de lijst hebt geïmporteerd</a>voor meer informatie <a href="#What">.</a></p>
+            </li>
+        </ul>
+        <p>Caseware Cloud biedt twee methoden om medewerkers of contactpersonen aan je organisatie toe te voegen: een lijst importeren met behulp van een .csv-bestand of een afgebakend tekstblok of gebruikers individueel toevoegen in Cloud. Als je organisatie meer dan 50 werknemers of contactpersonen heeft, raden we aan een gebruikerslijst te importeren.</p>
+        <h2>Step 1: De lijst met gebruikersinformatie voorbereiden</h2>
+        <p>Door gebruikers uit een lijst toe te voegen, kun je een groot aantal gebruikers in één procedure toevoegen. Het lijstbestand of de tekst kan profiel- en contactinformatie van gebruikers toevoegen of wijzigen, evenals hun groepstoewijzing. Als een ingevoerde groep niet bestaat in Cloud, zal het importeren van de map deze aanmaken.</p>
+        <p>Je hebt een lijst met gebruikers nodig in een <b>.csv-bestand</b> of <b>een blok platte tekst</b>.</p>
+        <p>Zorg er bij beide methoden voor dat:</p>
+        <ul>
+            <li>Elke rij vertegenwoordigt een klantentiteit en</li>
+            <li>Elke kolom vertegenwoordigt een eigenschap, zoals hun naam, begindatum en tags. Om een gebruiker in meer dan één groep op te nemen, plaats je een tilde (~) tussen elke groepsnaam.</li>
+        </ul>
+        <p>Een beheerder wil bijvoorbeeld vier medewerkers toevoegen aan Cloud. Voor elke methode zou hun lijst met gebruikers er als volgt uit kunnen zien:</p>
+        <p><b>CSV-bestand</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-csv.png" alt="CSV-tabel met gebruikersinformatie" /></p>
+        <p><b>Afgesloten blok platte tekst:</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-plain-text.png" alt="Lijst met gebruikersinformatie in platte tekst, gescheiden door komma&apos;s" /></p>
+        <h2 id="Importing-the-list-to-Cloud">Step 2: De lijst importeren</h2>
+        <p>Zodra de lijst klaar is, ben je klaar om je gebruikers te importeren in Cloud.</p>
+        <p><b>Om een gebruikerslijst te importeren:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat je de <i>beheerdersrol</i> hebt.<i> Admin-rol</i> of gelijkwaardige rechten.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Nieuw</b> en selecteer onder Importeren <b>Personeel</b>.</p>
+                <p class="note"><b>Let op:</b> Als je bedrijf <a href="../Organization/About-business-units.htm">bedrijfseenheden</a>gebruikt, kun je het standaard <b>Personeel</b> importeren om personeel naar de huidige bedrijfseenheid te importeren. Als je personeel importeert naar andere bedrijfseenheden, meerdere bedrijfseenheden of personeel verplaatst tussen bedrijfseenheden, selecteer dan <b>Personeel naar bedrijfseenheden</b>.</p>
+            </li>
+            <li>
+                <p>Vul de importopties naar wens in.</p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <tbody>
+                        <tr>
+                            <th>Optie</th>
+                            <th>Omschrijving</th>
+                        </tr>
+                        <tr>
+                            <td>Bestaande personeelsinformatie bijwerken</td>
+                            <td>Selecteer om bestaande medewerkers bij te werken met gegevens uit het CSV-bestand.</td>
+                        </tr>
+                        <tr>
+                            <td>(Standaard) Niet-opgenomen personeel deactiveren en nieuw personeel activeren</td>
+                            <td>
+                                <p>Selecteer om medewerkers te deactiveren die bestaan in de Cloud site, maar niet zijn opgenomen in het CSV-bestand. Nieuwe medewerkers in de personeelslijst worden geactiveerd.</p>
+                                <p>Schakel het tweede selectievakje alleen in als je een volledige personeels- of contactpersonenlijst importeert.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>(Bedrijfsonderdelen) Deactiveer personeel in niet-beursgenoteerde bedrijfsonderdelen</td>
+                            <td>
+                                <p>Selecteer om personeel te deactiveren dat bestaat in business units die niet zijn opgenomen in het CSV-bestand.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bevat koptekst</td>
+                            <td>Selecteer of je CSV-bestand een header-rij bevat.</td>
+                        </tr>
+                        <tr>
+                            <td>Scheidingsteken</td>
+                            <td>Selecteer het scheidingsteken dat in het CSV-bestand wordt gebruikt om rijen te scheiden (bijv. , ; | ).</td>
+                        </tr>
+                        <tr>
+                            <td>Geef aan hoe het initiële wachtwoord moet worden ingesteld</td>
+                            <td>Selecteer of het initiële wachtwoord moet worden ingesteld door de gebruikers zelf, of door de identity provider (admin).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Selecteer <b>Importeren uit CSV</b> en blader naar uw .csv-mapbestand of plak uw lijsttekst in het tekstvak en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Breng de eigenschap in kaart die overeenkomt met elke kolom.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-3-829x595.png" style="border:1px solid #3f66a3" alt="Breng de kolommen van je personeelsimportlijst in kaart om het proces te voltooien" /></p><div class="note"><p><b>Notities:</b></p>
+                    <ul>
+                        <li>Als bestaande gebruikers hetzelfde <b>e-mailadres</b>hebben, worden ze bijgewerkt.</li>
+                        <li>Als je personeel naar business units importeert, moeten alle niet-lege waarden in de business unit kolom overeenkomen met een business unit naam. Meerdere bedrijfseenheden kunnen worden afgebakend met tildes (~).</li>
+                        <li>Als je een lijst met contactpersonen importeert, laat dan het e-mailadresveld leeg voor contactpersonen die je geen account in Cloud wilt geven.</li>
+                    </ul></div></li>
+            <li>
+                <p>Selecteer <b>Importeren</b>.</p>
+            </li>
+        </ol>
+        <p>Er verschijnt een bevestigingsvenster met het aantal gebruikers dat met succes is toegevoegd of gewijzigd. Als je groepen hebt ingevoerd, worden die ook toegevoegd of gewijzigd.</p>
+        <h2 id="After-the-import"><a name="What"></a>Wat gebeurt er nadat je de lijst hebt geïmporteerd?</h2>
+        <p>Nadat je een gebruikerslijst hebt geïmporteerd, stuurt Cloud ze automatisch een e-mail met een link naar hun inlogpagina. Een record van deze e-mail is te vinden in <b>Instellingen | E-mail | E-maillogboek</b>.</p>
+        <p>Op het inlogscherm worden ze gevraagd hun e-mailadres in te voeren en een wachtwoord in te voeren en te bevestigen. Normen voor hoe moeilijk wachtwoorden moeten zijn en hoe vaak ze moeten worden gewijzigd, kunnen worden ingesteld in <b>Instellingen | Beveiliging | Wachtwoordinstellingen</b>.</p>
+    </body>
+</html>

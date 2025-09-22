@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWareCloud Time." />
+    </head>
+    <body>
+        <h1>Problèmes connus dans CasewareCloud Time</h1>
+        <p>Les problèmes connus suivants affectent la version actuelle de CasewareCloud Time.</p>
+        <h2 id="Errors">Erreurs avec les utilisateurs de Time supprimés</h2>
+        <p>Si vous êtes connecté et que votre accès à Time a été révoqué par un administrateur, vous recevrez plusieurs messages d&apos;erreur lorsque vous tenterez d&apos;accéder à Time.</p>
+        <p MadCap:conditions="General.Ignore"><a href="https://bugs.caseware.com/browse/CORE-46707">CORE-46707</a></p>
+        <h2>Les factures exportées vers QuickBooks Online peuvent être affectées à des taxes inactives</h2>
+        <p>Au cours du processus d&apos;exportation, les factures peuvent être incorrectement affectées à des taxes inactives. Pour contourner ce problème, vous pouvez sélectionner manuellement une nouvelle taxe dans QuickBooks Online pour chaque facture concernée.</p>
+        <h2>Erreur de récupération des données après un changement de compte Xero</h2>
+        <p>Une erreur de récupération des données se produit lorsque vous dissociez un compte Xero de Time et que vous le reliez ensuite à un autre compte. L&apos;actualisation de la page ne résout pas l&apos;erreur. Pour contourner ce problème, vous pouvez gérer les organisations directement dans votre compte Xero au lieu de créer un nouveau compte. La possibilité de changer le compte Xero que vous avez lié à Time n&apos;est actuellement pas disponible.</p>
+        <h2>Impossible d&apos;exporter de nouvelles factures vers le compte Xero lié</h2>
+        <p>La tentative d&apos;exportation d&apos;une nouvelle facture vers Xero échouera si le compte a été lié avant août 2021.</p>
+        <p><b>Solution :</b> Reliez votre compte Xero. Dans Xero, sélectionnez <b>Paramètres | Applications connectées</b>. À côté de l&apos;application Caseware ImportHub, sélectionnez <b>Déconnecter</b>. Dans Caseware Cloud, sélectionnez le menu <b>Cloud</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)<b> | Paramètres | Temps | Intégration des logiciels de comptabilité</b>, puis sélectionnez <b>Unlink Xero</b>. Ensuite, sélectionnez <b>Link to Xero</b> et connectez-vous avec votre compte.</p>
+        <h2>erreur &quot;User Name must be unique&quot; lors de la création de nouveaux contacts</h2>
+        <p>Si l&apos;adresse électronique d&apos;un contact existant dans un fichier Time Desktop intégré au cloud est manquante, l&apos;erreur &quot;Le nom d&apos;utilisateur doit être unique&quot; s&apos;affiche lors de la création d&apos;un nouveau contact. Pour contourner temporairement ce problème, vous pouvez saisir des adresses électroniques &quot;fictives&quot;.</p>
+    </body>
+</html>

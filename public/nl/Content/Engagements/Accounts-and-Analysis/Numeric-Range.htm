@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Numeriek bereik</h1>
+        <p>Deze analytische test identificeert transacties met een bepaald waardebereik. Het hoofddoel is om transacties met een hoge waarde te markeren, maar je kunt de configuratie aanpassen om transacties te detecteren die onder een ingestelde drempel of binnen een specifiek waardebereik vallen. U kunt er ook voor kiezen om percentagegebaseerde drempels te gebruiken in plaats van numerieke drempels. U kunt de test bijvoorbeeld zo configureren dat hij de hoogste één procent van de transacties detecteert.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Transacties die belangrijke schattingen bevatten</p>
+            </li>
+            <li>
+                <p>Complexe, niet-routinematige of ongebruikelijke zakelijke transacties die nader onderzoek kunnen rechtvaardigen</p>
+            </li>
+            <li>
+                <p>Materiële transacties</p>
+            </li>
+            <li>
+                <p>Ontbrekende transacties die mogelijk ongeldig zijn gemaakt</p>
+            </li>
+            <li>
+                <p>Waarderingsproblemen</p>
+            </li>
+            <li>
+                <p>Materiële transacties binnen de populatie</p>
+            </li>
+            <li>
+                <p>Transacties met een lage of geen waarde vanuit de populatie</p>
+            </li>
+            <li>
+                <p>Nulwaarde transacties of saldi</p>
+            </li>
+            <li>
+                <p>Een reeks waarden zoals net onder een afkappunt</p>
+            </li>
+            <li>
+                <p>Debetrekeningen met creditverrichtingen of creditrekeningen met debetverrichtingen</p>
+            </li>
+            <li>
+                <p>Klanten met grote kredietlimieten</p>
+            </li>
+            <li>
+                <p>Debiteurensaldi boven een bepaald bedrag</p>
+            </li>
+            <li>
+                <p>Crediteurensaldi boven een bepaald bedrag</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>Deze analyse gebruikt één numeriek veld dat bedragen of hoeveelheden bevat. Je kunt kiezen welk veld je wilt gebruiken wanneer je de testparameters instelt.</p>
+        <h2>Parameters</h2>
+        <p>Er zijn meerdere parameters die moeten worden ingesteld om de test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Selecteer velden</b> - Selecteer een of meer numerieke velden uit de lijst om te gebruiken om de test uit te voeren.</p>
+            </li>
+            <li>
+                <p><b>Numeriek of Percentage</b> - Selecteer of de test moet worden uitgevoerd met de numerieke waarde van de velden of met percentagewaarden. <b>Som</b> is standaard geselecteerd. De optie die je hier selecteert, bepaalt wat de overige parameters zijn voor deze test.</p>
+            </li>
+        </ul>
+        <p>Als u <b>Numeriek</b>selecteert, maakt u selecties voor de volgende parameters:</p>
+        <ul>
+            <li>
+                <p><b>Drempel hoge waarde</b> - Voer een waarde in dit veld in om alle transacties met bedragen hoger dan deze waarde te extraheren.</p>
+            </li>
+            <li>
+                <p><b>Drempelwaarde lage waarde</b> - Voer een waarde in dit veld in om alle transacties met bedragen onder deze waarde eruit te halen.</p>
+            </li>
+            <li>
+                <p><b>Waardebereiken</b> - Voer een of meer waardebereiken in om alle transacties met bedragen in deze bereiken te extraheren.</p>
+            </li>
+            <li>
+                <p><b>Exacte waarden</b> - Voer een exacte waarde in om alle transacties met die waarde te extraheren. Je kunt deze parameter bijvoorbeeld gebruiken om alle transacties met een nulwaarde te extraheren.</p>
+            </li>
+        </ul>
+        <p>Als u <b>Percentage</b>selecteert, maakt u selecties voor de volgende parameters:</p>
+        <ul>
+            <li>
+                <p><b>Drempel hoog percentage</b> - Voer een percentage in dit veld in om alle transacties met een percentage hoger dan deze waarde te extraheren.</p>
+            </li>
+            <li>
+                <p><b>Laag percentage drempel</b> - Voer een percentage in dit veld in om alle transacties met percentages lager dan deze waarde eruit te halen.</p>
+            </li>
+            <li>
+                <p><b>Waardebereiken</b> - Voer een of meer percentagebereiken in om alle transacties met percentages in deze bereiken te extraheren.</p>
+            </li>
+            <li>
+                <p><b>Exacte waarden</b> - Voer een exact percentage in om alle transacties met dat percentage te extraheren.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Bedragbereik</b> - Identificeert transacties binnen een gedefinieerd bereik voor bedragvelden op basis van een numerieke waarde of een percentage.</p>
+            </li>
+            <li>
+                <p><b>Kortingsbereik</b> - Identificeert transacties binnen een gedefinieerd bereik voor kortingsvelden op basis van een numerieke waarde of een percentage.</p>
+            </li>
+            <li>
+                <p><b>Hoeveelheidsbereik</b> - Identificeert transacties binnen een gedefinieerd bereik voor hoeveelheidsvelden op basis van een numerieke waarde of een percentage.</p>
+            </li>
+            <li>
+                <p><b>Bereik vervaldagen</b> - Identificeert transacties binnen een gedefinieerd bereik voor velden met vervaldagen op basis van een numerieke waarde of een percentage.</p>
+            </li>
+            <li>
+                <p><b>Numeriek bereik</b> - Identificeert transacties binnen een gedefinieerd bereik op basis van een numerieke waarde of een percentage.</p>
+            </li>
+            <li>
+                <p><b>Hoge monetaire waarde</b> - Identificeert transacties waarbij het veld Bedrag groter is dan of gelijk is aan de gedefinieerde numerieke waarde.</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de Numeriek bereik analytische test uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste.</p>
+                <p class="note"><b>Let op:</b> Filters zijn momenteel nog niet beschikbaar en zullen in een latere versie worden toegevoegd.</p>
+            </li>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Controleer of het veld dat is geselecteerd om de test uit te voeren numeriek is.</p>
+            </li>
+            <li>
+                <p>Bepaal het extractietype op basis van de door de gebruiker geselecteerde parameters:</p>
+                <ul>
+                    <li>
+                        <p>Gelijk aan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Groter dan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Groter dan en gelijk aan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Minder dan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Minder dan en gelijk aan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Niet gelijk aan de waarde</p>
+                    </li>
+                    <li>
+                        <p>Een reeks waarden</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Vraag de gebruiker of de analytische waarde gebaseerd moet zijn op een percentage of op een waarde.</p>
+                <ul>
+                    <li>
+                        <p>Als waarde is geselecteerd, wordt de waarde verkregen van de gebruiker. Als de optie bereikextractie is, zijn er twee waarden nodig.</p>
+                    </li>
+                    <li>
+                        <p>Als een percentage is geselecteerd, vraag dan het percentage op bij de gebruiker en bereken vervolgens de waarde die het percentage vertegenwoordigt. Dit zal veranderen afhankelijk van het type extractie, zoals 10% voor hoge waarden een andere waarde zou geven dan 10% voor lage waarden. Als de optie bereikextractie is, zijn er twee waarden nodig.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extraheer de resultaatvelden die door de gebruiker zijn geselecteerd. Alle velden worden standaard geëxtraheerd.</p>
+                <p class="note"><b>Let op:</b> De mogelijkheid om resultaatvelden te selecteren is momenteel nog niet beschikbaar en zal in een latere release worden toegevoegd.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head><title>SE 2021-03 release notes</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2021-03 release notes</h1>
+        <p>Get ready for spring with SE 2021-03! Featuring review tools in checklists to view changes after signoff, updates to visibility logic for dynamic table columns and more, SE 2021-03 is full of exciting new additions to the platform.</p>
+        <h2>Enhanced Show/Hide logic for table columns</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The <b>Show/Hide</b> (<img src="../Resources/Images/icon-eye-03.png" style="width: 20px;height: 16px;vertical-align: text-bottom;" />/ <img src="../Resources/Images/icon-eye-01.png" style="width: 24px;height: 21px;vertical-align: text-bottom;" />) option for dynamic table columns now includes additional options.</p>
+        <ul>
+            <li>
+                <p><b>Standardverhalten zuweisen</b> - das Standardverhalten wird auf die Spalte angewendet. Beachten Sie, dass das Standardverhalten je nach Spaltentyp unterschiedlich ist.</p>
+                <ul>
+                    <li>
+                        <p>Für die Spalten der Hauptabschlussübersicht:</p>
+                        <p>The column always displays in the financial statements and the print copy (PDF).</p>
+                        <p class="note"><b>Note:</b> Die Spalten für das Vorjahr werden nicht angezeigt, wenn keine Vorjahresdaten vorhanden sind.</p>
+                    </li>
+                    <li>
+                        <p>Für Eingabe- und benutzerdefinierte Formelspalten:</p>
+                        <p>Die Spalte wird im Jahresabschluss immer angezeigt und erscheint in der Druckausgabe (PDF), wenn die Spalte Daten enthält (mindestens eine Zelle ist nicht leer und ihr Wert ist nicht Null).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Always show</b> - the column always displays in the financial statements and the print copy (PDF).</p>
+            </li>
+            <li>
+                <p><b>Always hide</b> - the column is always hidden in the financial statements and in the print copy (PDF).</p>
+            </li>
+        </ul>
+        <h2>UI enhancements for the new Documents page</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The design of the new <b>Documents</b> page has been enhanced.</p>
+        <ul>
+            <li>
+                <p>Signoff columns are now aligned to the right of the page.</p>
+            </li>
+            <li>
+                <p>The signoff icons are now aligned left within the columns.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/new-signoff-columns.png" alt="New design for signoff columns in the Documents page." /></p>
+        <h2>XBRL review mode</h2>
+        <p><a href="End-user.htm">#enduser</a> <a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>XBRL review mode is now available to end users and enabled by default. If you want to hide an XBRL taxonomy from end users, you can set the &quot;<code>hideFromReviewMode</code>&quot; property to <code>true</code> in the <code>XBRLTaxonomyDefinition</code>.</p>
+        <p>Note that if all taxonomies are hidden, the XBRL review mode is not available to end users.</p>
+        <p>To learn more, see <a href="XBRL-review-and-export.htm">XBRL review and export</a> and <a href="List-of-product-features-(API).htm#iXBRL">iXBRL</a>.</p>
+        <p>To view information for end users, see <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/XBRL-review-and-export.htm">XBRL review and export</a>.</p>
+        <h2>New for authors</h2>
+        <p>Here is what&apos;s new for authors in SE 2021-03.</p>
+        <h3>Context field in XBRL review</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>You can now add a context field when building XBRL facts. The context field is displayed in the review panel when you review XBRL facts.</p>
+        <p><img src="../Resources/Images/xbrl-context-field.png" alt="The context field in the XBRL review panel." /></p>
+        <h3>Customizable heading styles</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a> <a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Primary and firm authors can now customize the font size, emphasis type (bold, underline, italic) and color for document headings in the product settings. The heading styles apply to all documents in the engagement.</p>
+        <p>To learn more, see <a href="Formatting-and-localization.htm">Set up formatting preferences</a> and <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Authoring-index.htm">Customize display options, formatting and other settings for your firm template</a>.</p>
+        <p><img src="../Resources/Images/product-settings-customize-headings.png" alt="The Fonts and Headings settings." /></p>
+        <h3>Custom forms</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>A new setting <b>Custom Forms</b> is now available in the Product Settings dialog so you can conveniently replace the default pages for the following features with custom forms:</p>
+        <ul>
+            <li>
+                <p>Risks page</p>
+            </li>
+            <li>
+                <p>Controls page</p>
+            </li>
+            <li>
+                <p>Materiality document</p>
+            </li>
+            <li>
+                <p>Summary of Misstatements</p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="Set-up-custom-forms.htm">Set up custom forms</a>.</p>
+        <h2>New for end users</h2>
+        <p>Here is what&apos;s new for <a href="End-user.htm">end users</a> in SE 2021-03.</p>
+        <h3>Enhanced review tools in checklists</h3>
+        <p>You can now use review tools to track changes made in checklists after the reviewers have signed off.</p>
+        <p>If the <b>Modified since last review</b> option is turned on in the <b>Documents</b> page and users open a checklist that has been modified after reviewer signoff, the Review tools dialog opens automatically and the changes made since the last review display in the checklist.</p>
+        <p class="note"><b>Note:</b> If the <b>Modified since last review</b> option is turned off in the <b>Documents</b> page, users must manually turn on review tools in the checklist to view modifications since the last review.</p>
+        <p>Users can choose to view changes made since engagement creation instead using the drop-down.</p>
+        <p><img src="../Resources/Images/checklist-review-tools-dropdown.png" style="width: 395px;height: 593px;" alt="The Review Tools drop-down." /></p>
+        <p>When users clear the <b>Modified since last review</b> notification in either the checklist or the <b>Documents</b> page, the <b>Changes since last review</b> option is no longer available in the review tools.</p>
+        <p>A confirmation message also displays to ensure users are aware that clearing notifications permanently deletes information about changes made since the last review.</p>
+        <p>The following additions and updates are also now available for checklist review tools:</p>
+        <ul>
+            <li>
+                <p>The <b>Added</b> and <b>Overridden visibility</b> review tools are replaced by:</p>
+                <ul>
+                    <li>
+                        <p><b>Added predefined content</b> - Marks content that has been manually forced visible by staff members.</p>
+                    </li>
+                    <li>
+                        <p><b>Added engagement created content</b> - Marks content that was created by staff members</p>
+                    </li>
+                    <li>
+                        <p><b>Overridden to exclude</b> - Marks content that has been manually forced hidden by staff members.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>A new review tool <b>Deleted</b> is now available. It marks content that was added by staff members before review and then deleted after review. Note that this review tool is only available when using the <b>Changes since last review</b> option.</p>
+            </li>
+        </ul>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Work with Review Tools</a>.</p>
+        <h3>Empty Input columns in dynamic tables</h3>
+        <p>Empty <b>Input</b> columns in dynamic tables are now automatically excluded when you print the financial statements. When users view the financial statements in an engagement file, the headers of empty <b>Input</b> columns display in gray.</p>
+        <p>Note that a column is considered empty if its cells are blank or have zero values.</p>
+        <p><img src="../Resources/Images/dynamic-table-empty-input-column.png" alt="A dynamic table with an empty Input column." /></p>
+        <h3>Improved query UI</h3>
+        <p>The new query layout now features buttons available at the bottom of each question. Clients can select the <b>Submit Response</b> button to submit their responses to each question. Once they do, the button changes to reflect that a response has been submitted.</p>
+        <p>The <b>Submit Response</b> button is also available to staff members so they can submit responses on behalf of clients who have provided responses outside of the query.</p>
+        <p><img src="../Resources/Images/query-submit-response.png" style="width: 557px;height: 375px;" alt="The Submit Response button." /></p>
+        <p>When staff members review the query responses, they can use the buttons to <b>Accept</b> or <b>Return</b> each response. The status of each query question is also now displayed at the top right of the question.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Staff-Contact collaboration (Queries)</a>.</p>
+        <p><img src="../Resources/Images/query-return-accept-buttons.png" style="width: 551px;height: 457px;" alt="The Return and Accept buttons display at the bottom of the query question, while the query status in the top right corner." /></p>
+        <h3>Edit and delete comments in queries</h3>
+        <p>Users can now edit and delete their comments in the new query layout.</p>
+        <p><img src="../Resources/Images/query-comments-edit-delete.png" alt="The Edit and Delete options for query comments." /></p>
+        <p>Zeitstempel für bearbeitete und gelöschte Kommentare werden im Kommentarbereich angezeigt. Bei einem gelöschten Kommentar wird der Begriff <i>Gelöscht</i> zusammen mit dem Zeitstempel angezeigt. The timestamps and deleted comments are not visible to contacts.</p>
+        <p>Note that comments cannot be edited or deleted if the query is marked as complete or canceled.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Staff-Contact collaboration (Queries)</a>.</p>
+        <h3>Query question history</h3>
+        <p>The comments area in queries now also displays the history of each question. Der Abfrageverlauf enthält den Zeitstempel und den Benutzernamen für die folgenden Aktionen:</p>
+        <ul>
+            <li>
+                <p>Abfrage wird an den Kontakt gesendet</p>
+            </li>
+            <li>
+                <p>Kontaktperson antwortet auf die Frage</p>
+            </li>
+            <li>
+                <p>Kontaktperson kennzeichnet die Frage als beantwortet</p>
+            </li>
+            <li>
+                <p>Antwort wird akzeptiert</p>
+            </li>
+            <li>
+                <p>Antwort wird abgelehnt</p>
+            </li>
+        </ul>
+        <p>This information is also included in the engagement archive saved when you use the <b>Download reference copy</b> option. Beachten Sie, dass die Abfragehistorie für Kontakte nicht verfügbar ist.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Staff-Contact collaboration (Queries)</a>.</p>
+        <p><img src="../Resources/Images/query-history.png" style="width: 557px;height: 358px;" alt="Query question history." /></p>
+        <h3>Risks module</h3>
+        <p>A new filter <b>Signoffs</b> is now available in the new risk module - provided that individual risk signoff setting is enabled in the module. The filter includes three options:</p>
+        <ul>
+            <li>
+                <p><b>Not signed off</b> - shows the number of risks that have not been signed off by the preparer or reviewer (or reviewers if the second reviewer feature is enabled in the product).</p>
+            </li>
+            <li>
+                <p><b>Prepared</b> - shows the number of risks signed off by the engagement preparer.</p>
+            </li>
+            <li>
+                <p><b>Reviewed</b> - shows the number of risks signed off by the engagement reviewer (or reviewers if the second reviewer feature is enabled in the product).</p>
+                <p>Note that the <b>Reviewed</b> filter does not support the new roles and signoff schemes feature. It will be supported in a future release.</p>
+            </li>
+        </ul>
+        <h3>Customize format settings</h3>
+        <p>Users can now change the default product settings for the following format settings in an engagement:</p>
+        <ul>
+            <li>
+                <p>Währung</p>
+            </li>
+            <li>
+                <p>Datumsformat</p>
+            </li>
+            <li>
+                <p>Zahlen</p>
+            </li>
+            <li>
+                <p>Measurement unit</p>
+            </li>
+        </ul>
+        <p>The selections made by users are retained when the engagement is carried forward.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Authoring-index.htm">Customize display options, formatting and other settings for your firm template</a>.</p>
+        <h3>Drag and drop documents in the new Documents page</h3>
+        <p>You can now drag and drop external documents, such as PDFs, Word files and Excel files from your desktop into folders and placeholders in the new <b>Documents</b> page. Note that you currently cannot drag and drop documents from your desktop into phases.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm">Manage the engagement documents</a>.</p>
+        <h3>Transaktionen</h3>
+        <p>The <b>Columns</b> and <b>Filters</b> drop-downs in the <b>Transactions</b> tab in the <b>Data</b> page have witnessed a few additions and updates:</p>
+        <ul>
+            <li>
+                <p>A new column selection <b>Document Number</b> is added in the <b>Columns</b> drop-down.</p>
+            </li>
+            <li>
+                <p>The <b>Source</b> column selection and filter are renamed to <b>Document Type</b>.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/transactions-columns.png" style="width: 322px;height: 404px;" alt="The Columns drop-down." /></p>
+        <h3>Replace external documents</h3>
+        <p>Users can now replace external documents. They can either select <b>More actions</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) | <b>Replace</b> or drag and drop a new document onto the old document to replace it. When users replace a document, they can choose whether to remove pre-existing signoffs or retain them.</p>
+        <p class="note"><b>Note:</b> Die Versionierung von Dokumenten wird nicht unterstützt (eine Versionshistorie bleibt nicht erhalten).</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm">Manage the engagement documents</a>.</p>
+        <h3>Re-import trial balance data</h3>
+        <p>The <b>Reimport from different source</b> option is now available in the <b>Data</b> page to allow users to select a different source when re-importing trial balance data.</p>
+        <h2>Fixes</h2>
+        <p>The following list features a brief description of bugs that have been resolved in SE 2021-03.</p>
+        <ul>
+            <li>
+                <p>Translation issues.</p>
+            </li>
+            <li>
+                <p>UI issues related to the Documents panel and spacing in the <b>Data</b> and <b>Risks</b> pages.</p>
+            </li>
+            <li>
+                <p>In checklists, users can modify the <b>Analysis</b> tab even though the engagement is locked down.</p>
+            </li>
+            <li>
+                <p>The Sample Export dialog and exported CSV file display all transactions in dollars ($) instead of in the local currency.</p>
+            </li>
+        </ul>
+    </body>
+</html>

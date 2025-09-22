@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>API-machtigingen toewijzen (Azure AD)</h1>
+        <p>Door de API-rechten te configureren, kan Caseware Cloud basisinformatie van Microsoft Azure lezen om gebruikers op de juiste manier te authenticeren.</p>
+        <p style="font-weight: bold;">API-rechten toewijzen:</p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Azure Active Directory</b> | <b>App Registrations</b>en selecteer vervolgens je app.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>API-machtigingen</b>in het navigatiedeelvenster aan de linkerkant.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Een toestemming toevoegen</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-permission.png" alt="Selecteer Een toestemming toevoegen." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Microsoft Graph</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Gedelegeerde rechten</b>.</p>
+                <p><img src="../../Resources/Images/azure-delegated-permissions.png" alt="Selecteer gedelegeerde machtigingen" /></p>
+            </li>
+            <li>
+                <p>Gebruik het selectievakje om de volgende rechten te selecteren:</p>
+                <ul>
+                    <li>
+                        <p><b>E-mail</b></p>
+                    </li>
+                    <li>
+                        <p><b>Openid</b></p>
+                    </li>
+                    <li>
+                        <p><b>Profiel</b></p>
+                    </li>
+                    <li>
+                        <p><b>Gebruiker.lezen</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Selecteer <b>Voorwaarde toevoegen.</b></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Beheerdersrechten verlenen voor Standaardmap</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Ja</b> als wordt gevraagd: &quot;Wilt u toestemming geven voor de gevraagde machtigingen voor alle accounts in Standaardmap?&quot;</p>
+                <p><img src="../../Resources/Images/azure-configured-permissions.png" alt="De API-rechten zijn met succes geconfigureerd." /></p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Test-your-single-sign-on-integration.htm">Test de single sign-on integratie</a></p>
+    </body>
+</html>

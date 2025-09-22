@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Transfer data from Working Papers to Caseware ReviewComp</h1>
+        <p>After you <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Add-the-CloudBridge-document-to-the-Working-Papers-file.htm">add CLBG document to a Working Papers engagement</a>, you can transfer your trial balance and general ledger tax data to Caseware ReviewComp.</p>
+        <p><b>To export your engagement data to a Cloud engagement using CloudBridge:</b></p>
+        <ol>
+            <li>
+                <p>In the Document Manager, double-click <b>CLBG</b>. The CLBG document displays.</p>
+                <p><img src="../../Resources/Images/working-papers-CLBG-document.png" alt="The CLBG document displayed in the Working Papers Document Manager." /></p>
+            </li>
+            <li>
+                <p>In the Step 1 section, choose an appropriate entity and engagement.</p>
+            </li>
+            <li>
+                <p>In the Step 2 section, choose the appropriate trial balance data to export.</p>
+            </li>
+            <li>
+                <p>In the Step 2 section, select the <b>Use remap file</b> check box.</p>
+                <p>The remap file is used to transfer the current account mapping structure in Working Papers to your Cloud engagement. If your engagement uses the default Working Papers mapping or was created with the PEG template, use the remap file located in the folder where you installed CloudBridge (<b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge</b>).</p>
+                <p class="note"><b>Note:</b> If your engagement uses a custom mapping structure specific to your firm, <a href="#Create">create a custom remap file</a> then add it.</p>
+            </li>
+            <li>
+                <p>Select <b>Choose file</b> to browse and add the remap file.</p>
+            </li>
+            <li>
+                <p>(Optional) If you have other journal entries related to donations, meals and entertainment expenses or foreign advertising, the <b>Step 3</b> section is available in the page. <b>Step 3</b> section allows you to transfer GL data to the appropriate Tax Worksheet in the Caseware ReviewComp engagement.</p>
+                <p class="note"><b>Note: </b> <b>Step 3</b> section is only available on the page if your engagement file contains other entries.</p>
+                <p>In this example, we&apos;ll add gifts to client to the Donations worksheet.</p>
+                <p><img src="../../Resources/Images/transfer-GL-data.PNG" alt="Step 3: Transfer General Ledger data?" /></p>
+            </li>
+            <li>
+                <p>Once you&apos;re done, select <b>Transfer Data</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Create"></a>Create a custom remap file (.ini)</h2>
+        <p>If your firm uses a custom mapping structure, you need to create your own remap file (.ini) file based on Caseware ReviewComp mapping structure.</p><MadCap:snippetBlock src="../../Resources/Snippets/RCT-to-create-custom-remap-file.flsnp" /><p>You can now use this remap file in Cloudbridge to transfer your Working Papers data to Caseware ReviewComp.</p>
+    </body>
+</html>

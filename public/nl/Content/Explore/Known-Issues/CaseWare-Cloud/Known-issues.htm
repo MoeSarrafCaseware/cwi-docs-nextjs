@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="The following known issues affect the current version of CaseWare Cloud." />
+    </head>
+    <body>
+        <h1>Bekende problemen in Caseware Cloud</h1>
+        <p>Dit onderwerp beschrijft bekende problemen bij het gebruik van Caseware Cloud.</p>
+        <h2>E-mailberichten over activiteiten voor SSO-gebruikers</h2>
+        <p>Koppelingen naar activiteiten in notificatiemails werken niet zoals verwacht voor SSO-gebruikers. Als je niet bent aangemeld wanneer je de link selecteert, word je doorgestuurd naar een gebroken link zodra je bent aangemeld en kun je de activiteit niet bekijken. Om toegang te krijgen tot de activiteit, kun je de link in de e-mail opnieuw selecteren nadat je bent ingelogd in Cloud.</p>
+        <h2>Activiteitenmeldingen ondersteunen geen rijke tekst</h2>
+        <p>E-mails met activiteitsmeldingen die naar contactpersonen worden gestuurd, ondersteunen geen rijke tekst. Dit betekent dat regeleinden en andere opmaak, zoals vet of cursief, die je toepast op de tekst in de notificatiebeschrijving niet worden weergegeven in de e-mail.</p>
+        <p>Houd er bovendien rekening mee dat als je tekst invoert in zowel het veld Beschrijving van melding als het veld <b>Extra bericht</b> , de inhoud van beide velden als één alinea wordt weergegeven. We raden je aan om slechts in één van deze velden inhoud in te voeren wanneer je een activiteitsmelding verstuurt naar contactpersonen.</p>
+        <h2>Handmatige invoer van datum</h2>
+        <p>Wanneer u handmatig datums invoert in datumvelden, zoals de velden voor de begin- en einddatum in het dialoogvenster voor het maken van een opdracht en het veld voor de oprichtingsdatum in het dialoogvenster voor het maken van een entiteit, keert het veld automatisch terug naar de datum die voorafgaat aan de geselecteerde datum. Merk op dat dit probleem alleen optreedt als je lokale tijd is ingesteld op UTC of een UTC+ tijdzone. We raden je aan om de datum te selecteren met de datumkiezer van de kalender om dit probleem te voorkomen.</p>
+        <h2>Chatmeldingen worden niet weergegeven als browser inactief is</h2>
+        <p>Als je bent ingelogd op je Cloud site, maar je browser is inactief of je computer staat in de slaapstand, worden meldingen van de chat niet weergegeven en kun je nieuwe berichten van andere gebruikers missen. We raden je aan de pagina te sluiten als je weet dat je niet achter je computer zit of de pagina te verversen om de inhoud bij te werken.</p>
+        <h2>Bestaande Google-bestanden koppelen vanaf een gedeelde schijf</h2>
+        <p>Wanneer je probeert te linken naar een bestaand Google-bestand dat is opgeslagen op een gedeelde schijf, geeft Cloud een foutmelding dat het &quot;Bestand niet bestaat in Google Drive&quot;. Dit wordt veroorzaakt door een mismatch tussen de beveiligingsinstellingen in de gedeelde schijf en het beveiligingssysteem van Cloud. Als workaround kun je het Google-bestand verplaatsen naar een niet gedeelde schijf, zoals je &quot;My Drive&quot;, en vanaf daar een link naar het bestand maken.</p>
+        <h2>Multi-tenant Xero-integratie</h2>
+        <p>Als je toegang hebt tot je Xero account via een multi-tenant omgeving, kun je deze niet integreren met Caseware Cloud. Op dit moment wordt Xero-integratie alleen ondersteund in een single-tenant omgeving.</p>
+        <h2>fout &quot;Gebruikersnaam moet uniek zijn&quot; bij het maken van nieuwe Contactpersonen</h2>
+        <p>Als u een nieuw Contact probeert te maken zonder een e-mailadres op te geven, wordt de foutmelding &quot;Gebruikersnaam moet uniek zijn&quot; weergegeven. Een soortgelijk probleem doet zich voor in Cloud-geïntegreerde Time Desktop-bestanden waar, als een bestaand contact een e-mailadres mist, de fout &quot;Gebruikersnaam moet uniek zijn&quot; wordt weergegeven bij het maken van een nieuw contact. Als tijdelijke oplossing kun je &apos;placeholder&apos; e-mailadressen invoeren om de fout in zowel Cloud als Time Desktop te omzeilen.</p>
+    </body>
+</html>

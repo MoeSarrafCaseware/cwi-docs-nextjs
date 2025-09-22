@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Revisar los saldos de grupos y cuentas en los estados financieros</h1>
+        <p>Puede revisar los saldos de grupos y cuentas en el documento de estados financieros para entender cómo se calculan las cifras. La información sobre redondeos y discrepancias de saldos se marca en las tablas para ayudarle a elaborar estados financieros fiables, precisos y de alta calidad.</p>
+        <h2><a name="View2"></a>Ver los detalles del redondeo en los estados financieros</h2>
+        <p>Para ver los detalles de redondeo en una fila de la tabla, seleccione el asterisco (*) junto a la fila. Aparece una ventana emergente:</p>
+        <ul>
+            <li>El total de las diferencias de redondeo para el año en curso y el año anterior.</li>
+            <li>La cuenta en la que se aplican diferencias de redondeo para el año en curso y el año anterior.</li>
+        </ul>
+        <p>En este ejemplo, se añade una diferencia de redondeo total de 3 $ al saldo de <i>1.2.120.500 Inmovilizado material - Amortización acumulada y deterioro del</i> ejercicio en curso. Para el ejercicio anterior, se añade una diferencia total de redondeo de 2 $ al saldo de <i>1.1.000.050</i> <i>Efectivo</i>.</p>
+        <p><img src="../../Resources/Images/rouding-details.PNG" alt="Diálogo de Detalles del redondeo" /></p>
+        <p>Si selecciona el saldo de la cuenta en la que se aplican diferencias de redondeo, la ventana emergente Detalles de la cuenta muestra una línea resaltada con los detalles del redondeo.</p>
+        <p><img src="../../Resources/Images/account-details-popup-rounding.PNG" alt="Ventana emergente de detalles de la cuenta que muestra información de redondeo en los estados financieros" /></p>
+        <p class="note"><b>Nota:</b> Si un valor del balance de sumas y saldos se redondea a cero, la fila de la tabla aparece en gris en los estados financieros y no se incluye en la presentación preliminar ni en la copia impresa en PDF. Tenga en cuenta que esto no se aplica a las líneas de nivel superior, que siempre aparecen en los estados financieros y se incluyen en la vista previa de impresión y en la copia impresa en PDF.</p>
+        <p>Para obtener más información sobre la lógica del redondeo en los estados financieros, consulte <a href="../Statements-and-Conclusions/Rounding-in-financial-statements.htm">Redondeo en los estados financieros.</a></p>
+        <h2><a name="Change"></a>Modificar la cuenta en la que se aplican las diferencias de redondeo</h2>
+        <p>Puede cambiar la cuenta en la que se aplican las diferencias de redondeo para que se añadan a una partida de los estados financieros que se utilice con frecuencia en su mercado, por ejemplo.</p>
+        <p style="font-weight: bold;">Para cambiar la cuenta donde se aplican las diferencias de redondeo:</p>
+        <ol>
+            <li>
+                <p>Seleccione la fila con un asterisco (*).</p>
+            </li>
+            <p>Se abre la ventana Detalles del redondeo.</p>
+            <p class="tip"><b>Consejo:</b> Si la línea es una cuenta, el asterisco (*) indica que en esta cuenta se aplican diferencias de redondeo. Si la línea es un grupo, indica que las diferencias de redondeo se aplican a una cuenta de este grupo.</p>
+            <li>
+                <p>Seleccione el nombre de la cuenta en <b>Año en curso</b>.</p>
+            </li>
+            <p>Aparecerá una lista con los grupos y cuentas del balance de sumas y saldos.</p>
+            <li>
+                <p>Seleccione la cuenta deseada de la lista.</p>
+            </li>
+            <li>
+                <p>Seleccione el nombre de la cuenta en <b>Año</b> anterior y, a continuación, seleccione la cuenta deseada de la lista.</p>
+            </li>
+            <p>Las diferencias de redondeo de los ejercicios en curso y anteriores se aplican ahora a los saldos de las cuentas seleccionadas respectivamente.</p>
+        </ol>
+        <h2><a name="View"></a>Ver las discrepancias de saldo en los estados financieros</h2>
+        <p class="note inline"><b>Nota:</b> Esta función sólo está disponible si está configurada en su producto.</p>
+        <p>Para ayudarle a conciliar los saldos de las cuentas, las líneas de la tabla pueden compararse entre sí en los estados financieros. Por ejemplo, para ayudar a los contables a conciliar las partidas de los extractos con los totales de la sección de notas.</p>
+        <p>Tras la comparación, aparece un icono de señal de stop (<img src="../../Resources/Images/icon-discrepancy.PNG" style="width: 21px;height: 24px;vertical-align: text-bottom;" />) en cada línea en la que se han detectado discrepancias de saldo.</p>
+        <p>Tenga en cuenta que:<ul><li><p>No puede elegir las filas que la aplicación compara. Están predefinidos en su producto.</p></li><li><p>La aplicación compara los valores absolutos de las filas aplicables. Las diferencias de signo no se marcan como discrepancias de saldo.</p></li></ul></p>
+        <p>Para ver las discrepancias de saldo, seleccione el icono de la señal de stop (<img src="../../Resources/Images/icon-discrepancy.PNG" style="width: 21px;height: 24px;vertical-align: text-bottom;" />). Aparece una ventana emergente:</p>
+        <ul>
+            <li>Las filas de otras tablas del documento que se han comparado con la fila actual.</li>
+            <li>Saldos que coinciden con la fila actual.</li>
+            <li>Saldos que no coinciden con la fila actual.</li>
+        </ul>
+        <p class="tip"><b>Consejo:</b> También puede seleccionar el icono <b>Ver fila</b> (<img src="../../Resources/Images/icon-diagnostics-go-to-row.png" style="vertical-align: text-bottom;" />) para ir a la fila específica de cada cuenta de la lista y ver sus datos.</p>
+        <p><img src="../../Resources/Images/balance-check.PNG" alt="Comprobación de saldo que muestra una discrepancia." /></p>
+        <h2><a name="Override"></a>Anulación de saldos en los estados financieros</h2>
+        <p>Al revisar los saldos en el documento de los estados financieros, es posible que tenga que anular los valores del balance de sumas y saldos en las tablas. Por ejemplo, modificar un determinado saldo en los estados financieros para reflejar el saldo exacto que tenían sus clientes en sus estados financieros del año anterior.</p>
+        <p class="note"><b>Nota:</b> Si anula un valor de balance de sumas y saldos a cero, la fila de la tabla se muestra en gris en los estados financieros y no se incluye en la vista previa de impresión ni en la copia impresa en PDF. Tenga en cuenta que esto no se aplica a las líneas de nivel superior, que siempre aparecen en los estados financieros y se incluyen en la vista previa de impresión y en la copia impresa en PDF.</p>
+        <p style="font-weight: bold;">Para anular un saldo de cuenta:</p>
+        <ol>
+            <li>
+                <p>Seleccione el saldo que desea cambiar.</p>
+            </li>
+            <li>
+                <p>Introduzca el nuevo importe.</p>
+            </li>
+            <p>Aparece un borde discontinuo para marcar la celda como Saldo anulado.</p>
+        </ol>
+        <p><img src="../../Resources/Images/balance-overriden-cell.PNG" alt="Celda del balance de sumas y saldos en los estados financieros" /></p>
+        <p style="font-weight: bold;">Para anular un total de grupo:</p>
+        <ol>
+            <li>
+                <p>Seleccione el grupo que desea cambiar.</p>
+            </li>
+            <li>
+                <p>Introduzca el nuevo importe.</p>
+                <ul>
+                    <li>
+                        <p>Si hay una cuenta en el grupo, la diferencia se aplica automáticamente a esta cuenta.</p>
+                    </li>
+                    <li>
+                        <p>Si hay más de una cuenta en el grupo, aparece un cuadro de diálogo que muestra la diferencia (entre el nuevo importe y el antiguo). También le pide que seleccione la cuenta en la que desea que se aplique la diferencia.</p>
+                        <p><img src="../../Resources/Images/dialog-for-balance-override.PNG" alt="Diálogo para seleccionar una cuenta del grupo en la que desea que se aplique la diferencia" /></p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Tenga en cuenta que si selecciona una celda con saldo anulado, la ventana emergente Detalles de cuenta muestra una línea resaltada que muestra el saldo original de esa celda (el importe del balance de prueba).</p>
+        <p class="tip"><b>Consejo:</b> Para volver al importe original, seleccione <b>Revertir</b> (<img src="../../Resources/Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />).</p>
+        <p><img src="../../Resources/Images/account-details-popup-overridden-balance.PNG" alt="Detalles de la cuenta que muestran un saldo anulado" /></p>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: normal;">Laten we nu de notitiebibliotheek instellen om een pool met notities voor gebruikers te maken.</p>
+        <ol>
+            <li>
+                <p>Maak een notitie en voeg de inhoud van de notitie toe.</p>
+                <p>(Optioneel) Maak een hiërarchie in notities door subkoppen toe te voegen aan de notitie:</p>
+                <p>Subkoppen toevoegen:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer het gebied <b>Opmerkingen bij de financiële informatie</b> in de Document Map.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer de notitie waarvoor je een hiërarchie wilt maken en selecteer vervolgens <b>Toevoegen</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>De toepasselijke rubriek wordt weergegeven onder <b>Rubriek</b>.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer de rubriek die van toepassing is.</p>
+                        <p>Er wordt een groeperingsgebied toegevoegd aan het document met een standaardtitel <b>Groeperingsgebied</b>. Je kunt de standaardtitel selecteren om deze te wijzigen.</p>
+                    </li>
+                </ol>
+                <p>Je kunt ook een associatie met de notitie definiëren. Een associatie verwijst naar de proefbalansgroepen waaraan een specifieke notitie is gerelateerd. Gebruik associaties om notities verder te categoriseren door ze te associëren met specifieke proefbalansgroepen.</p>
+                <p style="font-weight: normal;">Om een notitie aan een proefbalansgroep te koppelen:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer de notitie die u wilt koppelen aan een proefbalansgroep.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Meer acties (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Instellingen.</b></p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Financiële groepen toevoegen (<img src="../Icons/financial-stat-add1.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) om de proefbalansgegevens in te vullen.</p>
+                    </li>
+                    <li>
+                        <p>Kies een proefbalansgroep om de notitie aan te koppelen.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Opslaan.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Sluit de notitie uit.</p>
+                <p>Wanneer een notitie wordt uitgesloten van het document, wordt deze opgeslagen in de notitiebibliotheek. Om een toelichting automatisch uit te sluiten van het document, stel je zichtbaarheidsvoorwaarden in voor elke toelichting in het jaarrekeningdocument. Zodra de voorwaarden op false uitkomen (er is niet voldaan aan de voorwaarden), wordt de notitie automatisch uitgesloten van het document en opgeslagen in de notitiebibliotheek.</p>
+                <p class="note"><b>Let op:</b> De notitiebibliotheek is alleen beschikbaar als er uitgesloten notities in het document staan.</p>
+                <p style="font-weight: normal;">Om handmatig een notitie uit te sluiten:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Ga naar de notitie die je wilt uitsluiten.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Meer acties (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Instellingen.</b></p>
+                    </li>
+                    <p>De notitie wordt uit het document verwijderd en opgeslagen in de notitiebibliotheek.</p>
+                </ol>
+            </li>
+            <li>
+                <p>Herhaal de bovenstaande stappen tot je een pool met notities hebt in de notitiebibliotheek.</p>
+            </li>
+        </ol>
+        <p>Als je nu het pictogram <b>Toevoegen</b> (<img src="../Icons/add-FS.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) in de <b>Document Map</b> selecteert, zie je dat er nog een optie <b>Invoegen vanuit bibliotheek</b> beschikbaar is. Alle nieuw aangemaakte <MadCap:conditionalText MadCap:conditions="PrintGuides.RCT">Caseware ReviewCompOnPoint</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint">PCR </MadCap:conditionalText>opdrachten hebben deze optie ook beschikbaar voor gebruikers, zodat ze notities kunnen toevoegen vanuit de notitiebibliotheek.</p>
+    </body>
+</html>

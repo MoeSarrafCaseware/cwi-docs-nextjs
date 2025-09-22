@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Valeurs arrondies</h1>
+        <p>Ce test analytique Valeurs arrondies repère les valeurs numériques qui peuvent être arrondies, comme 10, 500 ou 9 000. Dans les données comptables, la présence de montants arrondis est généralement rare et peut indiquer une manipulation potentielle des données.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>Diminution de l&apos;exactitude et de la précision de domaines de l&apos;information financière</p>
+            </li>
+            <li>
+                <p>Les transactions qui contiennent des estimations significatives</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <p class="note"><b>Remarque :</b> Remarque : Certaines industries ou entreprises peuvent avoir de nombreuses transactions arrondies en raison de la nature de leurs opérations.</p>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Ce test utilise un ou plusieurs champs numériques pour détecter les montants arrondis ou les valeurs de quantité arrondies. Vous pouvez définir les champs à utiliser en modifiant le paramètre <b>Sélectionner les champs</b>.</p>
+        <h2>Paramètres</h2>
+        <p>Trois paramètres doivent être définis pour que le test puisse être exécuté :</p>
+        <ul>
+            <li>
+                <p><b>Sélectionner les champs</b> – Sélectionnez dans la liste un ou plusieurs champs numériques à utiliser pour effectuer le test.</p>
+            </li>
+            <li>
+                <p><b>Valeur d&apos;arrondi</b> – Saisissez une valeur entière arrondie, telle que 10, 100 ou 1 000, à utiliser pour rechercher des valeurs arrondies. Par exemple, si vous saisissez 10, le test recherchera toutes les valeurs qui sont des multiples de 10, comme 10, 20 et 30. Ce test n&apos;est pas limité aux multiples de 10. Vous pouvez également saisir 5, 50, 500 ou toute autre valeur entière. La valeur par défaut est 100.</p>
+            </li>
+            <li>
+                <p><b>Ignorer les décimales</b> – Sélectionnez s&apos;il faut ignorer ou non les valeurs décimales. Ce champ détermine si les valeurs décimales sont considérées comme des valeurs arrondies. Par exemple, si vous choisissez d&apos;ignorer les décimales, la valeur 100,99 est considérée comme une valeur arrondie, mais si vous choisissez de ne pas ignorer les décimales, il ne s&apos;agit pas d&apos;une valeur arrondie. La valeur par défaut est d&apos;ignorer les décimales.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Montants arrondis</b> – Dresse la liste des lignes de transaction dont le montant est arrondi.</p>
+            </li>
+            <li>
+                <p><b>Quantité arrondie</b> – Dresse la liste des lignes de transaction dont la quantité est arrondie.</p>
+            </li>
+            <li>
+                <p><b>Valeurs arrondies</b> – Dresse la liste des lignes de transaction dont la valeur est arrondie.</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique des montants arrondis, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que le ou les champs analytiques principaux sont numériques, si ce n&apos;est pas le cas, quittez le test.</p>
+            </li>
+            <li>
+                <p>Déterminez si les décimales seront incluses dans l&apos;analyse.</p>
+            </li>
+            <li>
+                <p>Obtenez de l&apos;utilisateur la valeur numérique qui sera utilisée pour l&apos;arrondi, effectuez le test et extrayez toutes les transactions qui sont des valeurs arrondies de la valeur numérique pour le résultat. Veillez à intégrer si l&apos;utilisateur a inclus ou exclu les décimales. Si plusieurs colonnes ont été sélectionnées et qu&apos;une colonne échoue, la ligne échouera au test et sera placée dans les résultats.</p>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes fournisseurs – Fournisseurs décrits</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs de la comptabilité auxiliaire Fournisseurs.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID du fournisseur <br /><code>(ap_supplier_supplier_account_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant du fournisseur à qui le paiement est dû ou à qui des crédits non utilisés ont été appliqués.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du fournisseur<br /><code>(nom_du_fournisseur_du_compte_du_fournisseur</code>)</td>
+                    <td>
+                        <p>Le nom du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant du fournisseur</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de regroupement des fournisseurs <br /><code>(ap_supplier_supplier_group</code>)</td>
+                    <td>
+                        <p>Si l&apos;organisation segmente les fournisseurs en groupes, le groupe auquel ce fournisseur est affecté.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse du fournisseur 1 <br />(<code>ap_supplier_supplier_physical_street_address1</code>)</td>
+                    <td>
+                        <p>L&apos;adresse physique (ligne 1) du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse du fournisseur 2 <br />(<code>ap_supplier_supplier_physical_street_address2</code>)</td>
+                    <td>
+                        <p>L&apos;adresse physique (ligne 2) du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ville du fournisseur (<br /><code>ap_supplier_supplier_physical_city</code>)</td>
+                    <td>
+                        <p>La ville physique où se trouve le fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>État du fournisseur <br /><code>(ap_supplier_supplier_physical_state_province</code>)</td>
+                    <td>
+                        <p>L&apos;état physique ou la province où le fournisseur est situé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code postal du fournisseur <br /><code>(ap_supplier_supplier_physical_zip_postal_code</code>)</td>
+                    <td>
+                        <p>Code postal de la ville où le fournisseur est physiquement situé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pays du fournisseur <br /><code>(ap_supplier_supplier_physical_country</code>)</td>
+                    <td>
+                        <p>Code du pays où le fournisseur est physiquement situé.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>NIF du fournisseur <br /><code>(ap_supplier_supplier_tin</code>)</td>
+                    <td>
+                        <p>Le numéro d&apos;identification fiscale du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse de facturation 1 <br />(<code>ap_supplier_supplier_billing_address1</code>)</td>
+                    <td>
+                        <p>L&apos;adresse de facturation ligne 1 du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse de facturation 2 <br />(<code>ap_supplier_supplier_billing_address2</code>)</td>
+                    <td>
+                        <p>L&apos;adresse de facturation ligne 2 du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ville de facturation <br /><code>(ap_supplier_supplier_billing_city</code>)</td>
+                    <td>
+                        <p>La ville de facturation du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>État<code>de</code>facturation<code>(ap_supplier_supplier_billing_state_province</code>)</td>
+                    <td>
+                        <p>L&apos;état ou la province de facturation du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zip de facturation <br /><code>(ap_fournisseur_code_postal_de_facturation</code>)</td>
+                    <td>
+                        <p>Le code postal de facturation de la ville du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pays de facturation <br /><code>(ap_supplier_supplier_billing_country</code>)</td>
+                    <td>
+                        <p>Code du pays de facturation du fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;entrée en vigueur <br /><code>(ap_supplier_active_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle le fournisseur a été déclaré actif.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;inactivité <br /><code>(ap_supplier_inactive_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle le fournisseur a été déclaré inactif.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Limite de crédit de transaction <br /><code>(ap_supplier_transaction_credit_limit</code>)</td>
+                    <td>
+                        <p>La limite de crédit par facture établie avec ce fournisseur.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Limite de crédit globale <br /><code>(ap_supplier_overall_credit_limit</code>)</td>
+                    <td>
+                        <p>La limite de crédit pour le solde total approuvé pour le fournisseur.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Conditions de facturation Pourcentage de réduction <br /><code>(ap_supplier_terms_discount_percentage</code>)</td>
+                    <td>
+                        <p>Pourcentage d&apos;escompte que le fournisseur peut accorder si une facture est payée avant un certain nombre de jours.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Conditions de facturation Jours d&apos;escompte <br /><code>(ap_supplier_terms_discount_days</code>)</td>
+                    <td>
+                        <p>Nombre de jours à partir de la date de la facture que le fournisseur accorde pour bénéficier de conditions d&apos;escompte.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Durée de la facture Jours d&apos;échéance <br /><code>(ap_supplier_terms_due_days</code>)</td>
+                    <td>
+                        <p>Le nombre de jours accordés pour satisfaire à l&apos;obligation avant qu&apos;une facture ne devienne impayée.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du contact principal <br /><code>(nom_du_contact_primaire_du_fournisseur</code>)</td>
+                    <td>
+                        <p>Le nom du contact principal chez le fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Téléphone du contact principal <br /><code>(ap_supplier_primary_contact_phone</code>)</td>
+                    <td>
+                        <p>Le numéro de téléphone du contact principal chez le fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Courriel du contact principal (<br /><code>ap_supplier_primary_contact_email</code>)</td>
+                    <td>
+                        <p>L&apos;adresse électronique du contact principal chez le fournisseur.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Créé par <br /><code>(ap_supplier_entered_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de création <br /><code>(ap_supplier_entered_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la transaction a été introduite dans le système source. Cette date est parfois appelée date de création.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure de création <br /><code>(ap_supplier_entered_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par <br /><code>(ap_supplier_approved_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la personne qui a approuvé l&apos;entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation <br /><code>(ap_supplier_approved_by_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Période approuvée <br /><code>(ap_supplier_approved_by_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification <br /><code>(ap_supplier_last_modified_by</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de la dernière modification <br /><code>(ap_supplier_last_modified_date</code>)</td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification <br /><code>(ap_supplier_last_modified_time</code>)</td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

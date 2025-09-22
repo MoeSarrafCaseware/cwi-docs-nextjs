@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Fehlende Informationen</h1>
+        <p>Diese Analyse identifiziert Felder, die leer sind oder unvollständige Informationen enthalten, z. B. Pflichtfelder mit Beschreibungen.</p>
+        <p>Dieser Test kann zur Identifizierung von folgenden Punkten verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Fiktive Transaktionen</p>
+            </li>
+            <li>
+                <p>Transaktionen, die wenig oder gar nicht erklärt oder beschrieben werden</p>
+            </li>
+            <li>
+                <p>Systemische Probleme bei der Verarbeitung von Transaktionen in einer Abteilung</p>
+            </li>
+            <li>
+                <p>Unsachgemäß konfigurierte Systemeinstellungen</p>
+            </li>
+            <li>
+                <p>Fehlschlagen des Datenvalidierungsprozesses</p>
+            </li>
+            <li>
+                <p>Fehlende Belegdokumente</p>
+            </li>
+            <li>
+                <p>Nicht ordnungsgemäße Buchung von Transaktionen im richtigen Buchungszeitraum</p>
+            </li>
+            <li>
+                <p>Unzureichende interne Kontrollen</p>
+            </li>
+            <li>
+                <p>Schwache Überwachung und Aufdeckung von Aktivitäten</p>
+            </li>
+            <li>
+                <p>Mangelhafte Ausbildung</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Dieser Test verwendet ein oder mehrere Felder, um potenziell fehlende oder unvollständige Informationen zu ermitteln. Folgende Feldtypen können verwendet werden:</p>
+        <ul>
+            <li>
+                <p><b>Numerisch</b> - für die Suche nach Nullwerten</p>
+            </li>
+            <li>
+                <p><b>Text</b> - für die Suche nach leeren Feldern oder Feldern, deren Anzahl der Zeichen unter der angegebenen Länge liegt</p>
+            </li>
+            <li>
+                <p><b>Datum</b> - für die Suche nach fehlenden Datumsangaben</p>
+            </li>
+            <li>
+                <p><b>Zeit</b> - für die Suche nach fehlenden Zeiteinträgen</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Es gibt einen Parameter, der für die Durchführung des Tests festgelegt werden muss:</p>
+        <p><b>Felder auswählen</b> - Wählen Sie ein oder mehrere Felder aus, die für die Durchführung der Analyse verwendet werden sollen. Wenn Sie ein Textfeld, z. B. ein Beschreibungsfeld, auswählen, können Sie die maximale Anzahl von Zeichen angeben, die ein Feld haben darf, damit es als fehlende Information gilt. Wenn Sie z. B. 10 eingeben, werden alle Felder, die 10 Zeichen oder weniger enthalten, als potenziell fehlende Informationen identifiziert.</p>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p><b>Fehlende oder unzureichende Beschreibung</b> - Identifiziert Transaktionen mit unzureichender oder fehlender Beschreibung, die als potenziell fehlende Informationen identifiziert werden.</p>
+            </li>
+            <li>
+                <p><b>Fehlende Datumsangaben</b> - Identifiziert Transaktionen ohne Datum</p>
+            </li>
+            <li>
+                <p><b>Fehlende Zeitangaben</b> - Identifiziert Transaktionen mit fehlenden Zeiteinträgen</p>
+            </li>
+            <li>
+                <p><b>Fehlende numerische Werte</b> - Identifiziert Transaktionen ohne Zahlen, einschließlich der Felder Betrag, Rabatt, Menge und Fälligkeitstage</p>
+            </li>
+            <li>
+                <p><b>Fehlende ID/Nummer</b> - Identifiziert Transaktionen ohne Identifikatoren wie die Felder Eingangs-ID und <b>Eintrags-ID</b> und <b>Dokumentennummer</b></p>
+            </li>
+            <li>
+                <p><b>Fehlender Benutzer</b> - Identifiziert Transaktionen ohne Benutzerinformationen</p>
+            </li>
+            <li>
+                <p><b>Fehlende Codes/Typen</b> - Identifiziert Transaktionen mit fehlenden Codes</p>
+            </li>
+            <li>
+                <p><b>Fehlendes Geschäftsjahr / Periode</b> - Identifiziert Transaktionen mit fehlenden Informationen zum Geschäftsjahr oder zur Periode</p>
+            </li>
+            <li>
+                <p><b>Fehlende Währung</b> - Identifiziert Transaktionen mit fehlenden Währungsinformationen</p>
+            </li>
+            <li>
+                <p><b>Fehlende Kontaktinformationen</b> - Identifiziert Transaktionen mit fehlenden Kontaktinformationen</p>
+            </li>
+            <li>
+                <p><b>Fehlende Informationen - Alle Felder</b> - dentifiziert Transaktionen mit fehlenden Informationen in einem beliebigen ausgewählten Feld</p>
+            </li>
+            <li>
+                <p><b>Fehlende Mehrwertsteuernummern auf Einkaufs-/Verkaufsrechnungen</b> - Identifiziert fehlende Mehrwertsteuernummern auf Einkaufs- oder Verkaufsrechnungen</p>
+            </li>
+            <li>
+                <p><b>Fehlende IDs / Leere IDs</b> - Identifiziert Transaktionen mit fehlenden IDs</p>
+            </li>
+            <li>
+                <p><b>Lieferanten-/Kundenstammdatei - fehlende Daten</b> - Identifiziert leere Felder in den Datensätzen Kreditoren - Lieferanten und Kreditoren - Kunden</p>
+            </li>
+            <li>
+                <p><b>Kein Kreditlimit definiert</b> - Identifiziert Transaktionen ohne definiertes Kreditlimit</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analyse Fehlende Informationen ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Validieren, dass eine numerische, Text-, Datums- oder Zeitspalte(n) für das/die analytische(n) Kernfeld(er) ausgewählt wurde(n).</p>
+            </li>
+            <li>
+                <p>Wenn es sich um ein Textfeld handelt, geben Sie die maximale Anzahl von Zeichen an, die ein Feld haben darf, damit es als fehlende Information gilt. Standardmäßig wird nach Feldern gesucht, die leer sind.</p>
+            </li>
+            <li>
+                <p>Gehen Sie für die verschiedenen Feldtypen wie folgt vor:</p>
+                <ul>
+                    <li>
+                        <p><b>Numerisch</b> - Suche nach numerischen Werten, die leer oder gleich Null sind.</p>
+                    </li>
+                    <li>
+                        <p><b>Text</b> - Suche nach leeren Feldern oder Feldern, deren Länge gleich oder kleiner ist als die angegebene maximale Anzahl von Zeichen.</p>
+                    </li>
+                    <li>
+                        <p><b>Datum</b> - Suche nach leeren Datumseinträgen.</p>
+                    </li>
+                    <li>
+                        <p><b>Zeit</b> - Suche nach leeren Zeiteinträgen.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

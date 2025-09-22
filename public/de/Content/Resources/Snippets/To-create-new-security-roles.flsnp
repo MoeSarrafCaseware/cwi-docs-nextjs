@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>Benutzerdefinierte Zugriffsrollen erstellen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud-Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Zugriffschutz | Rollenberechtigungen</b>.</p>
+                <p><img src="../Images/settings-role-permissions.png" alt="Zugriffsrolle Berechtigungen" /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Rolle hinzufügen</b>.</p>
+            </li>
+            <li>
+                <p>Füllen Sie die folgenden Felder aus:</p>
+                <ul>
+                    <li>
+                        <p><b>Name</b></p>
+                    </li>
+                    <li>
+                        <p><b>Beschreibung</b></p>
+                    </li>
+                    <li>
+                        <p><b>Ist anwendbar auf:</b> (<b>Mitarbeiter</b> oder <b>Kontakte</b>)</p>
+                    </li>
+                    <li>
+                        <p><b>Anwendungsbereich</b> (<b>Systemweit</b>, <b>Inhalte innerhalb von Entitäten</b> oder beides)</p>
+                    </li>
+                </ul>
+                <p><img src="../Images/role-permissions-add-630x452.png" style="border:1px solid #3f66a3" alt="Der Dialog Neue Rolle." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie eine oder mehrere Berechtigungen, um diese zur Rolle hinzuzufügen. Wenn Sie fertig sind, wählen Sie <b>OK</b>.</p>
+                <p><img src="../Images/role-permissions-select-630x219.png" style="border:1px solid #3f66a3" alt="Im unteren Bereich des Dialogs Rollenberechtigungen. Die Berechtigungen zum Erstellen, Lesen, Bearbeiten, Löschen und Freigeben von Dateien sind ausgewählt." /></p>
+                <p class="bestpractice inline"><b>Best Practice:</b> Bitte beachten Sie, dass es zwei <b>Freigeben</b>-Berechtigungen gibt: <b>A</b> und <b>S</b>. Die Berechtigung <b>Freigeben (A)</b> erlaubt dem Benutzer, alle verfügbaren Berechtigungen auf Entitäten oder Entitäteninhalte für sich und andere Benutzer freizugeben, selbst wenn es ihnen eine höhere Zugriffsebene als die bisher besessene gewährt. Wenn Sie z. B. eine benutzerdefinierte systemweite Rolle erstellen, die nur über die Berechtigung <b>Freigeben (A)</b> für Entitäten verfügt, können Benutzer mit dieser Rolle sich und anderen Benutzern die Rolle <i>Eigentümer</i> für jede Entität gewähren. Sollte Ihre Firma diesbezüglich Sicherheitsbedenken haben, empfehlen wir Ihnen, stattdessen die Berechtigung <b>Freigeben (S)</b> zu verwenden, die die gleiche Funktionalität bietet, aber verhindert, dass der Benutzer Entitäten oder Entitäteninhalte für Benutzer freigeben kann, auf die sie nicht zugreifen können. Weitere Informationen zu <a href="../../Setup/Security/Built-in-roles.htm">Vorgegebenen Rollen</a>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

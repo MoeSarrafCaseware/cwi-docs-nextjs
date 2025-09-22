@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p><b>Appliquer le comportement par défaut</b></p>
+                <p>Le comportement par défaut diffère selon le type de ligne :</p>
+                <p>Pour les lignes d&apos;entrée :</p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Cette ligne doit toujours figurer dans les états financiers.</p>
+                </li>
+                <li>
+                    <p>Afficher cette ligne dans la copie d&apos;impression du document PDF si elle a un solde non nul (c&apos;est-à-dire que la cellule n&apos;est pas vide et que sa valeur n&apos;est pas nulle) - sinon, masquer la ligne dans la copie d&apos;impression du document PDF.</p>
+                </li>
+            </ul>
+            <p>Pour les lignes de groupe (groupe balance de vérification et groupe personnalisé <b>Total</b> ou <b>Titre</b>) :</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Cette ligne doit toujours figurer dans les états financiers.</p>
+                </li>
+                <li>
+                    <p>Afficher cette ligne dans la copie d&apos;impression du document PDF si le groupe comprend plus d&apos;un compte avec un solde non nul (c&apos;est-à-dire que les cellules ne sont pas vides et que leurs valeurs ne sont pas nulles) - sinon, masquer cette ligne dans la copie d&apos;impression du document PDF.</p>
+                </li>
+            </ul>
+            <p>Pour les lignes de la balance de vérification :</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Afficher cette ligne dans les états financiers et dans la copie imprimée du document PDF si les soldes de l&apos;année en cours ou des années précédentes existent - sinon, masquer cette ligne dans les deux cas.</p>
+                </li>
+            </ul>
+            <li>
+                <p><b>Toujours afficher cette ligne</b></p>
+                <p>La ligne s&apos;affiche toujours dans les états financiers et dans la version imprimée du PDF.</p>
+            </li>
+            <li>
+                <p><b>Toujours cacher cette ligne</b></p>
+                <p>La ligne est toujours cachée dans les états financiers et dans la version imprimée du PDF.</p>
+                <p class="note inline"><b>Remarque :</b> Cette option n&apos;est disponible que pour les lignes de saisie et les lignes de groupe (lignes de groupe de la balance générale, lignes <b>de</b> groupe personnalisées et lignes de <b>total</b> ).</p>
+            </li>
+        </ul>
+    </body>
+</html>

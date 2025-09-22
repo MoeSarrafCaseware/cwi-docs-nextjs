@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Générer l&apos;URL de réponse (ADFS)</h1>
+        <p>ADFS utilise une URL de réponse pour rediriger les utilisateurs vers Cloud après qu&apos;ils se soient connectés.</p>
+        <p><b>Pour générer une URL de réponse dans le nuage :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous d&apos;avoir le rôle d&apos; <i>administrateur des paramètres</i> ou des autorisations équivalentes.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page du fournisseur d&apos;identité, remplissez les champs suivants :</p>
+                <ul>
+                    <li>
+                        <p><b>Nom du fournisseur d&apos;identité:</b> Saisissez un nom significatif pour votre fournisseur d&apos;identité. Par exemple, ADFS. Ce nom sera affiché à côté de l&apos;URL de votre réponse pour l&apos;identifier.</p>
+                        <p class="note"><b>Remarque :</b> Ce nom ne peut pas dépasser 32 caractères et ne peut contenir que des lettres, des chiffres, des traits de soulignement, des signes plus et moins.</p>
+                    </li>
+                    <li>
+                        <p><b>Point d&apos;arrivée des métadonnées du fournisseur d&apos;identité:</b> Saisissez votre point de terminaison des métadonnées en utilisant le format suivant :</p>
+                        <p>https://your-adfs.com/adfs/.well-known/openid-configuration</p>
+                        <p>Remplacez <i>votre-adfs.com</i> par votre nom d&apos;hôte ADFS.</p>
+                    </li>
+                    <li>
+                        <p><b>ID du client :</b> Collez le <b>Secret du Client</b> que vous avez <a href="Create-a-new-application-group.htm">copié précédemment dans un document texte</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Secret du client :</b> Collez le <b>Secret du Client</b> que vous avez <a href="Create-a-new-application-group.htm">copié précédemment dans un document texte</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="La page des paramètres de l&apos;authentification unique." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>. L&apos;URL de votre réponse s&apos;affiche.</p>
+                <p class="warning"><b>Important :</b> Sélectionnez l&apos;icône <b>Copier dans le presse-papiers</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) et collez l&apos;URL de la réponse dans un document texte pour une utilisation ultérieure. Etiqueter l&apos; <b>URL de l&apos;application</b>.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Utilisez le bouton Copier dans le presse-papiers pour copier l&apos;URL de votre réponse." /></p>
+            </li>
+        </ol>
+        <h2>Set your Reply URL in ADFS</h2>
+        <p>Après avoir généré une URL de réponse, vous devrez l&apos;ajouter à l&apos;ADFS pour vous assurer que les utilisateurs peuvent se connecter avec succès.</p>
+        <p><b>Pour définir votre URL de réponse dans Azure :</b></p>
+        <ol>
+            <li>
+                <p>Dans la console d&apos;administration ADFS, cliquez sur le dossier <b>Groupes d&apos;application</b> , puis double-cliquez sur votre <a href="Create-a-new-application-group.htm">nouveau groupe d&apos;application</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Propriétés, double-cliquez sur l&apos;application Serveur.</p>
+                <p><img src="../../Resources/Images/adfs-reply-url-01.png" /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Propriétés de l&apos;application serveur, effacez le contenu du champ Redirect URI, puis collez l&apos; <b>URL de réponse</b> que vous avez copiée précédemment dans un document texte. Cliquez sur <b>Ajouter</b>, puis sur <b>OK.</b></p>
+                <p><img src="../../Resources/Images/adfs-reply-url-02.png" /></p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Test-your-single-sign-on-integration.htm">Tester l&apos;intégration de l&apos;authentification unique</a></p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Copier l&apos;URI des métadonnées (Okta)</h1>
+        <p>Un URI de métadonnées fournit les données nécessaires au fonctionnement du SSO. Vous l&apos;utiliserez lorsque vous configurerez le SSO dans le Cloud.</p>
+        <p><b>Pour copier le point de terminaison des métadonnées :</b></p>
+        <ol>
+            <li>
+                <p>Connectez-vous au tableau de bord Okta de votre entreprise avec un compte <b>administrateur</b> .</p>
+            </li>
+            <li>
+                <p>Développez le menu déroulant du compte et passez votre curseur sur l&apos;URI des métadonnées. Une icône de presse-papiers s&apos;affiche. Sélectionnez-le pour copier l&apos;URI des métadonnées.</p>
+                <p><img src="../../Resources/Images/okta-10.png" /></p>
+            </li>
+            <li>
+                <p>Coller l&apos;URI des métadonnées dans un document texte. Il se présentera sous la forme suivante :</p>
+                <p>&lt;compte&gt;.okta.com</p>
+            </li>
+            <li>
+                <p>Modifiez l&apos;URI des métadonnées pour qu&apos;il corresponde au format suivant :</p>
+                <p>https://$&lt;compte<b>&gt;.okta.com/</b>.well-known/openid-configuration</p>
+            </li>
+            <li>
+                <p>Attribuez-lui le nom de <b>Metadata URI</b> et enregistrez le document texte pour une utilisation ultérieure.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Manage-authorization-servers.htm">(Facultatif) Gérer les serveurs d&apos;autorisation</a></p>
+    </body>
+</html>

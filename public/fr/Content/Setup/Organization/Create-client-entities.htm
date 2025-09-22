@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entities to represent client firms, which can be used by contacts and staff to collaborate and store files" />
+    </head>
+    <body>
+        <h1>Créer des entités clientes</h1>
+        <p>Dans le nuage, les organisations clientes sont représentées par des <b>entités clientes</b>. Ces entités peuvent être classées et organisées de multiples façons, par exemple en formant des associations entre elles ou en leur attribuant des étiquettes ou des étapes de travail.</p>
+        <h2 id="Creating-client-workspaces-from-a-client-list"><a name="Creating"></a>Création d&apos;entités clients à partir d&apos;une liste de clients</h2>
+        <p>Cloud vous permet d&apos;ajouter plusieurs entités clientes en une seule procédure à l&apos;aide d&apos;un fichier .csv ou d&apos;un bloc de texte délimité.</p>
+        <p>Si vous utilisez l&apos;une ou l&apos;autre de ces méthodes, assurez-vous que</p>
+        <ul>
+            <li>
+                <p>Chaque ligne représente une entité client</p>
+            </li>
+            <li>
+                <p>Chaque colonne représente une propriété, telle que le nom, l&apos;adresse électronique et le groupe d&apos;utilisateurs. Pour attribuer plusieurs balises, placez les balises entre guillemets et séparez-les par des virgules. Toutes les étiquettes qui n&apos;existent pas encore dans le nuage seront créées lors de l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Les dates figurant dans les colonnes &quot; <b>Depuis&quot;</b> et &quot; <b>Date d&apos;inactivité</b> &quot; doivent être dans le même format que celui défini dans vos paramètres régionaux personnels.</p>
+            </li>
+        </ul>
+        <p>Dans cet exemple, un administrateur souhaite ajouter deux entités clientes :</p>
+        <p><i>Nom, localisation, numéro d&apos;entité, client depuis, fin d&apos;exercice, étiquettes</i><br style="font-style: italic;" /><i>Chockablock Industries, Toronto, 4829, 09/07/2012, décembre, &quot;Commerce de détail, partenariat&quot;</i><br style="font-style: italic;" /><i>Superior Furniture, Toronto, 5937, 22 /08/2010, Décembre, Commerce de détail</i></p><MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp" /><p>Les entités sont téléchargées dans le nuage. Toutes les entités existantes ayant la même valeur de numéro d&apos;entité seront modifiées.</p>
+        <h2 id="Creating-a-single-client-workspace"><a name="Single"></a>Creating a single client entity</h2>
+        <p>Si vous souhaitez plutôt créer des organisations individuellement, vous pouvez le faire à partir de la page <b>Entités</b> .</p>
+        <p><b>Pour créer une entité :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des entités</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Entités</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Nouveau</b> et le type d&apos;entité approprié.</p>
+                <p><img src="../../Resources/Images/Entity-new-create-types-630x220.png" alt="Lors de la création d&apos;une nouvelle entité, il faut d&apos;abord sélectionner le type d&apos;entité." /></p>
+            </li>
+            <li>
+                <p>Choisissez un <b>pays d&apos;enregistrement</b> et un <b>type d&apos;organisation</b>. Les types d&apos;organisations disponibles varient en fonction du pays d&apos;enregistrement sélectionné. Pour plus d&apos;informations, voir <MadCap:xref href="../../Explore/Interface/Entities/Entity-creation.htm">Création d&apos;entités</MadCap:xref>.</p>
+                <p><img src="../../Resources/Images/entities-create-new-entity-CAN.png" alt="La boîte de dialogue Create Entity (Créer une entité)." /></p>
+            </li>
+            <li>
+                <p>Saisissez un <b>nom</b> et un <b>numéro d&apos;entité</b>. Ces champs sont obligatoires.</p>
+                <p class="note"><b>Remarque :</b> La page Entités peut ne pas être triée correctement si elle contient des codes alphanumériques de longueur incohérente (par exemple 1 ABC, 23 DEF, 456 GHI). Pour remédier à ce problème, ajoutez des zéros à chaque numéro afin de garantir une longueur cohérente (par exemple, 001 ABC, 023 DEF, 456 GHI) ou utilisez des codes numériques.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p>L&apos;entité est ajoutée et s&apos;affiche sur la page Entités.</p>
+        <h2 id="Tagging-workspaces">Pour étiqueter les entités :</h2>
+        <p>L&apos;attribution de <b>balises</b> permet de classer et d&apos;identifier les personnes, les fichiers et les entités au sein de votre organisation. Vous pouvez étiqueter les entités en fonction de leur secteur d&apos;activité, de leur structure organisationnelle ou du type de travail que votre organisation effectue pour elles.</p>
+        <p style="font-weight: bold;">Pour étiqueter les entités :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle de <i>Staff Editor</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Dans le menu Cloud, sélectionnez <b>Entités</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;entité pour laquelle vous souhaitez modifier les balises. Dans le menu de l&apos;entité, sélectionnez <b>Tag</b> (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Tag-entity-select-630x80.png" alt="Sélectionnez l&apos;icône Tag sur une entité ou un fichier pour gérer ses tags" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez les balises <b>non affectées</b> appropriées pour les affecter.</p>
+                <p><img src="../../Resources/Images/Tags-assign-dialog-645x339.png" alt="La boîte de dialogue Attribuer des étiquettes" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b> pour appliquer vos modifications.</p>
+            </li>
+        </ol>
+        <p>Après avoir attribué des balises à une entité, vous pouvez filtrer les entités en fonction de leurs balises à partir de la barre de recherche.</p>
+        <p><img src="../../Resources/Images/caseware-cloud-searching-with-tags.png" alt="Tags affichés dans le menu déroulant Filtre." /></p>
+        <h2 id="Categori">Création d&apos;entités clientes</h2>
+        <p>Si vous avez créé un flux de travail pour les entités clientes, vous pouvez utiliser les étapes de ce flux de travail pour classer vos entités clientes de manière appropriée. Pour plus d&apos;informations sur la création de flux de travail, voir <a href="../Administration-and-Settings/Create-custom-fields-tags-and-workflows.htm">Créer des champs, des balises et des flux de travail personnalisés</a>.</p>
+        <p>Vous pouvez également classer les entités en fonction de leur statut. Les étapes du flux de travail et les statuts de l&apos;entité sont uniquement informatifs et n&apos;ont aucun impact sur les actions qu&apos;un membre du personnel peut entreprendre dans l&apos;entité.</p>
+        <p>Assurez-vous que vous avez le rôle d&apos; <i>accès à l&apos;</i> entité ou des droits équivalents sur l&apos;entité.</p>
+        <p style="font-weight: bold;">Pour définir l&apos;étape du flux de travail d&apos;une entité :</p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Entités</b> , puis l&apos;entité que vous souhaitez modifier.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;étape actuelle du flux de travail de l&apos;entité, puis sélectionnez l&apos;étape du flux de travail que vous souhaitez attribuer à l&apos;entité.</p>
+                <p><img src="../../Resources/Images/Workflow-update-client-640x433.png" alt="Mettre à jour le flux de travail de votre client pour en modifier le type" /></p>
+            </li>
+        </ol>
+        <p><b>Pour définir l&apos;étape du flux de travail d&apos;une entité :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Entités</b> , puis l&apos;entité que vous souhaitez modifier.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Editer</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Partager, sélectionnez l&apos;onglet <b>Contacts.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez le statut approprié dans la liste déroulante <b>Statut.</b> </p>
+                <p><img src="../../Resources/Images/entities-profile-status-active.png" /></p>
+            </li>
+        </ol>
+    </body>
+</html>

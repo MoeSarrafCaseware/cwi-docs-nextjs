@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Accounts payable—open balances described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the source file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts payable—open balances subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Feld</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaktions-ID <br /><code>(ap_open_balance_transaction_id)</code></td>
+                    <td>
+                        <p>The unique identifier for accounts payable—open balance transactions. These include invoice and cash paid.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsdatum<br /><code>(ap_open_balance_transaction_date)</code></td>
+                    <td>
+                        <p>Datum der Transaktion unabhängig vom Erstellungsdatum. Dies ist das Datum, anhand dessen das Fälligkeitsdatum auf der Grundlage der Rechnungsbedingungen berechnet wird.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Rechnungsdatum <br /><code>(ap_open_balance_invoice_date)</code></p>
+                    </td>
+                    <td>
+                        <p>Datum der Rechnung unabhängig vom Rechnungserfassungsdatum. Dies ist das Datum, anhand dessen das Fälligkeitsdatum auf der Grundlage der Rechnungsbedingungen berechnet wird.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Third alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kontensaldo <br /><code>(ap_open_balance_balance_amount)</code></p>
+                    </td>
+                    <td>
+                        <p>Betrag des offenen Postens in der Haus- oder Konzernwährung.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP-Betrag Berichtswährung <br /><code>(ap_open_balance_balance_amount_reporting)</code></td>
+                    <td>
+                        <p>Betrag des offenen Postens in der Berichtswährung.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP-Betrag lokale Währung <br /><code>(ap_open_balance_balance_amount_local)</code></td>
+                    <td>
+                        <p>The balance monetary amount in the local currency.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP-Betrag Original <br /><code>(ap_open_balance_original_balance_amount)</code></td>
+                    <td>
+                        <p>Ursprünglicher Betrag des offenen Postens (ursprünglicher Rechnungsbetrag) in der Haus- oder Konzernwährung.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Projekt-ID <br /><code>(ap_open_balance_project_id)</code></td>
+                    <td>
+                        <p>The unique identifier for the project, from which accounts payable (AP) is derived.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fiscal Year <code>(ap_open_balance_fiscal_year)</code></td>
+                    <td>
+                        <p>The fiscal year in which <b>Transaction Date</b> occurs.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Buchhaltungsperiode<br /> <code>(ap_open_balance_accounting_period)</code></td>
+                    <td>
+                        <p>The accounting period in which <b>Transaction Date</b> occurs.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsfälligkeitsdatum<br /> <code>(ap_open_balance_transaction_due_date)</code></td>
+                    <td>
+                        <p>Datum, an dem die Zahlung durch den Lieferanten fällig ist. Not all transactions have a due date.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beschreibung<br /> <code>(ap_open_balance_remark)</code></td>
+                    <td>
+                        <p>Freitextbeschreibung.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rechnungsnummer <br /><code>(ap_open_balance_invoice_number)</code></td>
+                    <td>
+                        <p>Nummer einer intern oder extern erzeugten Transaktion. Examples include check number, wire transfer number or original document identifier.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Ja</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rechnungsfälligkeitsdatum <br /><code>(ap_open_balance_invoice_due_date)</code></td>
+                    <td>
+                        <p>Datum, an dem die Zahlung an den Lieferanten fällig ist. Nicht alle Transaktionen haben ein Fälligkeitsdatum, zum Beispiel Gutschriften.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geschäftseinheitencode <br /><code>(ap_open_balance_business_unit_code)</code></td>
+                    <td>
+                        <p>Dient zur Identifizierung der Geschäftseinheit, Region, Niederlassung usw. auf der Ebene, auf der der Jahresabschluss geprüft wird.</p>
+                        <p>Data type:</p>
+                        <p>Text Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP-Betrag Währung <br /><code>(ap_open_balance_balance_amount_currency)</code></td>
+                    <td>
+                        <p>Die Haus- oder Konzernwährung des offenen Postens.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP Berichtswährung <br /><code>(ap_open_balance_balance_reporting_currency)</code></td>
+                    <td>
+                        <p>Berichtswährung bezogen auf den Betrag des offenen Postens für die nicht konsolidierte Berichterstattung.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP lokale Währung <br /><code>(ap_open_balance_balance_local_currency)</code></td>
+                    <td>
+                        <p>Währung für lokale Berichtsanforderungen.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eintrags-ID <br /><code>(ap_open_balance_journal_id)</code></td>
+                    <td>
+                        <p>Eindeutiger Identifikator des Buchungseintrags.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lieferanten-ID <br /><code>(ap_open_balance_supplier_account_id)</code></td>
+                    <td>
+                        <p>The identifier of the supplier to whom payment is expected or from whom unused credits have been applied.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier Name <br /><code>(ap_open_balance_ upplier_account_name)</code></td>
+                    <td>
+                        <p>Name des Lieferanten.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

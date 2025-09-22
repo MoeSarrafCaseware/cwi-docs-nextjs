@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Combinaisons de comptes complexes</h1>
+        <p>Ce test analytique Combinaisons de comptes complexes repère toutes les écritures qui contiennent un nombre de comptes supérieur à ce qui a été précisé. Ce test peut être utilisé pour repérer des transactions commerciales complexes, non courantes ou inhabituelles qui peuvent nécessiter un examen approfondi.</p>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Ce test utilise deux champs pour effectuer l&apos;analyse :</p>
+        <ul>
+            <li>
+                <p>Les champs d&apos;identifiants contenant des nombres ou des caractères qui indiquent la manière dont les combinaisons de comptes sont regroupées. Par exemple, le champ <b>Écriture de journal</b> peut être utilisé pour regrouper les comptes par écriture de journal.</p>
+            </li>
+            <li>
+                <p>Les champs de compte contenant des chiffres ou des caractères utilisés pour calculer le nombre de combinaisons par identifiant.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Un paramètre doit être défini pour que ce test puisse être exécuté :</p>
+        <p><b>Nombre de combinaisons de comptes</b> – Indiquez le nombre minimum de comptes qui permettraient d&apos;indiquer que le groupe de comptes est risqué ou inhabituel. Ce nombre doit être une valeur entière. Par exemple, si vous saisissez 11, le test repère tous les regroupements comportant un minimum de 11 comptes.</p>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Combinaisons de comptes complexes, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs d’analyse de base nécessaires ont été sélectionnés. Il s&apos;agit des champs « identifiant » et « compte ».</p>
+            </li>
+            <li>
+                <p>Vérifiez que le nombre de combinaisons a été saisi. Il doit s&apos;agir d&apos;un nombre entier positif. La valeur par défaut est 11.</p>
+            </li>
+            <li>
+                <p>Totalisez le fichier source par colonnes d’identifiants et par colonnes de comptes. Assurez-vous que le total est totalisé par le nombre d&apos;enregistrements.</p>
+            </li>
+            <li>
+                <p>Totalisez l&apos;étape 5 par colonnes d&apos;identifiants et totalisez le nombre d&apos;enregistrements pour chaque colonne d&apos;identifiants.</p>
+            </li>
+            <li>
+                <p>Extrayez tous les champs d’identifiants dont le nombre d&apos;enregistrements est supérieur ou égal au paramètre <b>Nombre de combinaisons</b>.</p>
+            </li>
+            <li>
+                <p>Extrayez toutes les transactions sources présentant la même combinaison de champs d&apos;identifiants que celle obtenue à l&apos;étape précédente.</p>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

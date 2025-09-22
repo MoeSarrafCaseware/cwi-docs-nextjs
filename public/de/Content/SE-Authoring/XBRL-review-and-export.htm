@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.Ignore">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">XBRL - Review und Export</h1>
+        <p>You can review XBRL facts in the financial statements, as well as export XBRL and iXBRL instance documents to ensure your financial statements are tagged correctly. Before you start testing XBRL Review and Export, you need to enable XBRL in your product. To learn more, see <a href="List-of-product-features-(API).htm#iXBRL">iXBRL</a>.</p>
+        <h2 MadCap:autonum="1.1 ">Review XBRL facts</h2>
+        <p>You can review XBRL facts in your product template.</p>
+        <p><b>To review XBRL facts:</b></p>
+        <ol>
+            <li>
+                <p>Select the <b>XBRL</b> icon (<img src="../Resources/Icons/xbrl-author.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>In the <b>XBRL REVIEW</b> section, select the taxonomy you want to review.</p>
+                <p><img src="../Resources/Images/xbrl-dialog-author.png" style="width: 375px;height: 427px;" alt="The XBRL dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>START REVIEW</b>.</p>
+                <p>The financial statements document opens showing the first area that contains XBRL facts. Facts are marked by a green underline.</p>
+                <p class="note"><b>Note:</b> The first XBRL fact in your selected taxonomy is highlighted first by default in review mode and its details display in the <b>XBRL REVIEW</b> pane at the bottom. However, if the first fact is not located on the current page, you may not see a highlighted field on the page (but its details will still display in the <b>XBRL REVIEW</b> pane).</p>
+                <p><img src="../Resources/Images/xbrl-review-pane.png" alt="The XBRL REVIEW pane." /></p>
+            </li>
+            <li>
+                <p>Select a fact to review it.</p>
+                <p>The fact is highlighted and its details display in the <b>XBRL REVIEW</b> pane.</p>
+            </li>
+        </ol>
+        <p>Note that, while you&apos;re in review mode, the only action that you can perform in the document is create issues.</p>
+        <p><img src="../Resources/Images/xbrl-issue.png" alt="The Issue icon for a dynamic table." /></p>
+        <p>To exit review mode, select <b>XBRL</b> and <b>STOP REVIEW</b> or select the <b>X</b> in the review panel</p>
+        <p><img src="../Resources/Images/xbrl-dialog-stop-review-author.png" style="width: 353px;height: 425px;" alt="The STOP REVIEW button in the XBRL dialog." /></p>
+        <p>You can stop the review process at any time and continue later. However, when you restart the review, you&apos;re not automatically directed to the last fact you reviewed.</p>
+        <p class="bestpractice"><b>Best Practice:</b> We recommend that you create a <b>To Do</b> issue and record the last reviewed fact before you stop a review.</p>
+        <h2 MadCap:autonum="1.2 ">Export XBRL instance documents</h2>
+        <p>After you review XBRL facts, you can export the XBRL instance documents to validate that they generate as expected.</p>
+        <p class="bestpractice"><b>Best Practice:</b> We recommend that you create an engagement file and import data before you export XBRL instance documents. Having data helps you better validate the exported documents.</p>
+        <p><b>To export an XBRL instance document:</b></p>
+        <ol>
+            <li>
+                <p>Select the <b>XBRL</b> icon (<img src="../Resources/Icons/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>In the <b>XBRL EXPORT</b> section, select the taxonomy you want to export.</p>
+                <p><img src="../Resources/Images/xbrl-dialog-export.png" style="width: 482px;height: 436px;" alt="The XBRL EXPORT section in the XBRL dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>Export</b>.</p>
+                <p>You can also select the <b>XBRL Export</b> button directly from the <b>XBRL REVIEW</b> pane. The taxonomy you&apos;re currently reviewing is exported.</p>
+                <p><img src="../Resources/Images/xbrl-review-pane-export.png" alt="The XBRL Export button in the XBRL REVIEW pane." /></p>
+                <p>If you export an iXBRL or XBRL document, it&apos;s automatically saved in either the <b>Documents</b> page or in the client entity in Cloud, based on how you&apos;ve configured your script.</p>
+                <p>For XBRL documents, you can also configure your script to automatically download the .xbrl file locally.</p>
+                <p>If the document contains validation errors, the file downloads successfully but an error message displays with the error details.</p>
+            </li>
+        </ol>
+    </body>
+</html>

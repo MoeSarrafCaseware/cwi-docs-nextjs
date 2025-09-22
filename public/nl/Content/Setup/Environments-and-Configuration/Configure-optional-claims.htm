@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Optionele claims configureren (Azure AD)</h1>
+        <p>Voordat je het SSO-integratieproces afrondt, moet je het manifest bewerken om de given_name en family_name claims op te nemen. Als een medewerker SSO gebruikt, geven deze claims hun voor- en achternaam door aan Cloud.</p>
+        <p style="font-weight: bold;">Om optionele claims te configureren:</p>
+        <ol>
+            <li>
+                <p>Meld u aan bij uw Azure-portaal.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>App-registraties</b>in het linker navigatiedeelvenster.</p>
+            </li>
+            <li>
+                <p>Selecteer de Import Component uit de lijst.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Manifest</b>in het linker navigatiedeelvenster.</p>
+            </li>
+            <li>
+                <p>Bewerk de eigenschap <b>optionalClaims</b> als volgt:</p>
+                <p><pre xml:space="preserve"><code class="language-python">&quot;optionalClaims&quot;: {<br />
+	&quot;idToken&quot;: [<br />
+		{<br />
+			Naam &quot;voornaam&quot;,<br />
+			&quot;essentieel&quot;: waar<br />
+		},<br />
+		{<br />
+			Naam &quot;family_name&quot;,<br />
+			&quot;essentieel&quot;: waar<br />
+		}<br />
+	]<br />
+},</code></pre>
+                </p>
+                <p class="note"><b>Let op:</b> U moet de bovenstaande informatie exact kopiëren om optionele claims correct te configureren.</p>
+                <p><img src="../../Resources/Images/azure-optional-claims.png" alt="De geconfigureerde eigenschap optionalClaims." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Generate-the-reply-URL-Azure-AD.htm">De antwoord-URL genereren (Okta)</a></p>
+    </body>
+</html>

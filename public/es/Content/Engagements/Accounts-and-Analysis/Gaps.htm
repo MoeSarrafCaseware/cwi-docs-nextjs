@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gaps</h1>
+        <p>The Gaps analytic test identifies missing transactions within a certain sequence of transactions.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Improperly configured system settings which may need improvement and further evaluation</p>
+            </li>
+            <li>
+                <p>Weak internal controls</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de las actividades de supervisión y detección</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>Los asientos YE se registran a menudo con una secuencia especial de numeración: el auditor podría determinar esa secuencia y generar una lista para su revisión</p>
+            </li>
+            <li>
+                <p>Missing transactions which were potentially voided</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <p><b>Core field</b> - The numeric, date or character field that will be used as the core field for the gap analysis.</p>
+        <h2>Parámetros</h2>
+        <p>The following parameters must be set to run this test:</p>
+        <ul>
+            <li>
+                <p><b>Lower range</b> - Select the starting point of the gap analysis. This is usually the first transaction but it may not be if transactions at the beginning are missing.</p>
+            </li>
+            <li>
+                <p><b>Upper range</b> -Select the ending point of the gap analysis. This is usually the last transaction, but it may not be if transactions at the end are missing.</p>
+            </li>
+            <li>
+                <p><b>Increment</b> - Enter the expected increment for the field being analyzed. Usually the increment is one.</p>
+            </li>
+            <li>
+                <p><b>Exclude holidays</b> - Select whether or not to include holidays for tests where the field being analyzed is a date field.</p>
+            </li>
+            <li>
+                <p><b>Select holidays</b> - If you have selected to exclude holidays, specify which dates are holidays.</p>
+            </li>
+            <li>
+                <p><b>Exclude weekends</b> - Select whether or not to include weekends for tests where the field being analyzed is a date field.</p>
+            </li>
+            <li>
+                <p><b>Mask</b> - If the field being analyzed is a character field, enter a mask to indicate what portion contains the numeric part to be used for the gap detection. For example, if you are using an invoice field in the format ABC123456, the mask would be CCCNNNNNN, with the Ns representing the numeric portion of the field. Para las omisiones, solo se analiza la parte numérica de la máscara.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Date gaps</b> - Search for dates that don’t have any transactions when they would be expected based on the parameters selected.</p>
+            </li>
+            <li>
+                <p><b>Document number gaps</b> - Search for gaps in numeric lists, such as missing cheque numbers.</p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Gaps analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that one field has been selected for the core analysis. These fields should be numeric, date or character fields. This analytic test does not work for time fields.</p>
+            </li>
+            <li>
+                <p>Order the database in ascending order based on the gap field.</p>
+            </li>
+            <li>
+                <p>The gap analysis will be performed differently depending on the type of field:</p>
+                <ul>
+                    <li>
+                        <p><b>Numeric</b> - Obtain the starting and ending points (range for the gap) along with the increment. The defaults should be the smallest and largest values and the increment default is 1. This can be changed by the user. Create a list of any gaps that are within the selected range and increment.</p>
+                        <p class="note"><b>Note:</b> If the column contains non-integer values, then the column is rounded to the nearest decimal point.</p>
+                    </li>
+                    <li>
+                        <p><b>Date</b> - Obtain the earliest and latest dates as entered by the user. The default increment is one day. This test also allows the user to exclude weekends and holidays from the gap detection.</p>
+                    </li>
+                    <li>
+                        <p><b>Character</b> - Obtain the mask to indicate which portions of the field value are the numeric parts that will be subject to the gap detection.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>There are two sets of results. The first set lists the start and end gap and the number of missing items, and the second set lists the missing items.</p>
+            </li>
+        </ol>
+    </body>
+</html>

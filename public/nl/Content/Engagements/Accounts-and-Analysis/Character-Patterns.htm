@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Tekenpatroon</h1>
+        <p>De Karakterpatronen analytische test identificeert of items zoals telefoonnummers of postcodes zich in het verwachte patroon bevinden. De Terugkerende Tekenpatroonanalyse maakt gebruik van de Regexp-taal en moet voldoen aan de Python Regexp-syntaxis</p>
+        <p>Deze analytische test kan worden gebruikt om tekenpatronen te identificeren die kunnen helpen om de integriteit van gegevens te valideren. Bijvoorbeeld, het valideren van telefoonnumers, e-mailadressen of postcodes tegen verwachte patronen kunnen helpen bij het identificeren van potentiële fouten in de gegevens.</p>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>Referentieveld(en)</b> - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld <b>Entry ID</b> voor de grootboekdataset. Deze kolommen maken geen deel uit van het resultaat, maar worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Dit veld is al gedefinieerd in de test en kan niet worden gewijzigd.</p>
+            </li>
+            <li>
+                <p><b>Kernveld(en)</b> - Een of meer velden met stringwaarden die worden gebruikt om de test uit te voeren. Als er meerdere velden zijn geselecteerd, zoekt de test voor elke test naar hetzelfde tekenpatroon.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om deze test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Inclusief of exclusief patroon</b> - Selecteer of velden die het gespecificeerde patroon volgen, moeten worden geïdentificeerd of velden die het gespecificeerde patroon niet volgen.</p>
+            </li>
+            <li>
+                <p><b>Karakterpatroon</b> - Geef het juiste python regexpatroon op om te gebruiken om de geselecteerde velden te analyseren.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p>De volgende configuratie is beschikbaar voor deze test:</p>
+        <p><b>Karakterpatroon</b> - Door de gebruiker gedefinieerd karakterpatroon gebaseerd op een python regex patroon.</p>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test Karakterpatronen uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste. Merk op dat de mogelijkheid om filters in te stellen momenteel nog niet beschikbaar is en in latere versies van de test beschikbaar zal zijn.</p>
+            </li>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Bevestig dat een of meer tekenvelden zijn geselecteerd voor de analytische analyse. Als er meerdere velden zijn geselecteerd, wordt dezelfde regexp gebruikt voor elk veld.</p>
+            </li>
+            <li>
+                <p>Valideer of de gebruiker heeft aangegeven of hij lijnen zoekt die het patroon volgen of niet volgen.</p>
+            </li>
+            <li>
+                <p>Verkrijg de regexp. Dit moet worden geformatteerd als een reguliere expressie die kan worden gebruikt in python. Zie <a href="https://docs.python.org/3/library/re.html">re - Reguliere expressiebewerkingen</a> voor meer informatie.</p>
+            </li>
+            <li>
+                <p>Afhankelijk van of de gebruiker heeft geselecteerd om waarden te identificeren die het patroon volgen of niet volgen, worden de waarden die aan de criteria voldoen geëxtraheerd op basis van de opgegeven regexp.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Als er meerdere velden zijn en de gebruiker heeft ervoor gekozen om waarden te identificeren die niet volgens het patroon zijn, dan wordt de transactieregel geëxtraheerd als ten minste één van de kolommen niet waar is.</p>
+                    </li>
+                    <li>
+                        <p>Als er meerdere velden zijn en de gebruiker heeft geselecteerd om waarden te identificeren die het patroon volgen, wordt de transactieregel alleen geëxtraheerd als alle velden het patroon volgen.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Extraheer de resultaatvelden die door de gebruiker zijn geselecteerd. Alle velden worden standaard geëxtraheerd. Merk op dat de mogelijkheid om resultaatvelden te selecteren momenteel nog niet beschikbaar is en in latere versies van de test beschikbaar zal zijn.</p>
+            </li>
+        </ol>
+    </body>
+</html>

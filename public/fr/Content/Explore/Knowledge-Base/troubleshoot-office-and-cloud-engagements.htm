@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Résoudre les problèmes liés aux missions Microsoft Office et Cloud</h1>
+        <p><b>Publié :</b> mercredi 10 janvier 2024</p>
+        <hr />
+        <p>Besoin d&apos;aide pour télécharger des documents Office dans Caseware Cloud ? Voir ci-dessous pour les solutions.</p>
+        <h2>Vérifier la politique de comportement d&apos;ouverture de session basée sur les formulaires définie dans le Centre Microsoft Trust</h2>
+        <p>Cette procédure suppose que vous êtes un administrateur et que vous disposez d&apos;une version d&apos;abonnement de Microsoft Office, telle que Microsoft 365 Apps for enterprise, pour voir l&apos;onglet <strong>Comportement de connexion basé sur un formulaire</strong> dans le Microsoft Trust Center.</p>
+        <p>Pour vérifier la politique de comportement d&apos;ouverture de session basée sur des formulaires :</p>
+        <ol>
+            <li>
+                <p>Ouvrez une application Office, telle que Word ou Excel.</p>
+            </li>
+            <li>
+                <p>Allez dans <b>Fichier | Options | Centre de confiance.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Paramètres du centre de confiance</b>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Connexion par formulaire</b>.</p>
+            </li>
+            <li>
+                <p>Sous <b>Comportement de l&apos;invite de connexion</b>, sélectionnez l&apos;option <b>Me demander quoi faire pour chaque hôte.</b> </p>
+            </li>
+            <li>
+                <p>Cliquez sur le bouton <b>OK</b> pour enregistrer les changements.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Microsoft Office ne bloquera pas les futures invites de connexion.</li>
+                <li>La liste des <strong>hôtes autorisés à afficher des invites de connexion</strong> sera automatiquement complétée en fonction de vos actions futures.</li>
+            </ul>
+        </p>
+        <ol>
+            <li value="7">Sur la page Documents d&apos;un engagement, effectuez l&apos;une des opérations suivantes : <ul><li>Ouvrir un fichier Microsoft Office existant. Voir <a href="../../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Access2">Accéder à un document Word ou Excel téléchargé</a> pour plus d&apos;informations.</li><li>Or add a new Word or Excel file. Voir <a href="../../Engagements/Documentation-and-Review/Add-new-Word-and-Excel-documents.htm">Ajouter de nouveaux documents Word et Excel</a> pour plus d&apos;informations.</li></ul></li>
+            <li>Apportez une modification au document, enregistrez-le et fermez-le.</li>
+            <li>Actualisez la page d&apos;engagement dans votre navigateur.</li>
+            <li>Ouvrez le document Microsoft Office que vous avez modifié et accédez aux paramètres du Trust Center comme décrit précédemment dans cette procédure.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>L&apos;entrée suivante devrait être automatiquement ajoutée pour Caseware Cloud dans la liste des <strong>hôtes autorisés à afficher des invites de connexion</strong> :</li>
+            </ul>
+        </p>
+        <p class="indent"><code>app.casewarecloud.com</code></p>
+        <h2>Vérifier si des compléments interfèrent avec Cloud</h2>
+        <p>Dépanner les compléments en les désactivant un par un.</p>
+        <p><strong>Pour désactiver les modules complémentaires un par un :</strong></p>
+        <ol>
+            <li>Ouvrir Excel.</li>
+            <li>Sélectionnez <strong>Fichier | Options | Compléments</strong>.</li>
+            <li>Réglez la liste déroulante <strong>Gérer</strong> sur les compléments d&apos;Excel et cliquez sur <strong>Aller.</strong></li>
+            <li>Si vous ne trouvez pas d&apos;option de compléments spécifiques à l&apos;application Office dans la liste Gérer, choisissez plutôt Compléments COM.</li>
+            <li>Décochez l&apos;un des compléments dans la liste et cliquez sur <strong>OK</strong>.</li>
+            <li>Essayez de télécharger des documents Word ou Excel vers un engagement Cloud et voyez si le problème est résolu.</li>
+            <li>Répétez ces étapes jusqu&apos;à ce que vous trouviez le complément à l&apos;origine du problème.</li>
+        </ol>
+        <h2>Vérifier HttpClient sous Windows</h2>
+        <p>HttpClient est une classe du framework .NET utilisée pour envoyer des requêtes HTTP et recevoir des réponses HTTP à partir d&apos;une ressource identifiée par un URI et est utilisée dans différents types d&apos;applications. Il peut interférer avec l&apos;échange d&apos;informations entre Microsoft Office et les engagements Cloud.</p>
+        <p><b>Pour vérifier si HttpClient est à l&apos;origine d&apos;un problème d&apos;échange d&apos;informations :</b></p>
+        <ol>
+            <li>Dans la boîte de recherche Windows, tapez services.msc</li>
+            <li>Sélectionnez les <strong>services</strong>.</li>
+            <li>Dans <strong>Nom</strong>, recherchez <strong>WebClient</strong>.</li>
+            <li>Cliquez avec le bouton droit de la souris et sélectionnez <strong>Copier vers...</strong> dans le menu contextuel qui apparaît.</li>
+            <li>Dans <strong>Type de démarrage</strong>, sélectionnez <strong>Automatique</strong>.</li>
+            <li>Cliquez sur <strong>Appliquer</strong>, puis sur <strong>OK.</strong></li>
+            <li>Quitter</li>
+            <li>Voyez si cela résout le problème.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AutomaticStartupHttpClient.png" alt="Modification de la configuration du type de démarrage pour le service WebClient. " /></p>
+        <h2>Résolution des problèmes liés à l&apos;enregistrement de documents Office dans le cadre d&apos;engagements de type &quot;cloud&quot;</h2>
+        <h3>Vérifier que la sauvegarde automatique a été désactivée</h3>
+        <p>L&apos;enregistrement automatique doit être désactivé pour que les interactions entre Microsoft Office et Cloud fonctionnent correctement.</p>
+        <p class="note inline"><b>Remarque :</b> Vous ne devez pas utiliser un site web tiers pour enregistrer ou sauvegarder un document Microsoft Office qui a été joint à un engagement Cloud.</p>
+        <p><strong>Pour vérifier que la sauvegarde automatique a été désactivée :</strong></p>
+        <ol>
+            <li>Ouvrez une application Office, telle que Word ou Excel.</li>
+            <li>Sélectionnez <strong>Fichiers | Options | Enregistrer.</strong></li>
+            <li>Désélectionnez l&apos;option <strong>Sauvegarde automatique des fichiers stockés dans le nuage par défaut dans Excel</strong> .</li>
+        </ol>
+        <h3>Vérifiez que vous ne téléchargez pas les fichiers Office à partir de l&apos;emplacement local par défaut</h3>
+        <p>Pour les applications Office, l&apos;emplacement du fichier local par défaut est le suivant :</p>
+        <p><code>C:\NUsers\N{nom.de.l&apos;utilisateur}\NDocuments</code></p>
+        <p><strong>Pour vérifier l&apos;emplacement de votre fichier local par défaut :</strong></p>
+        <ol>
+            <li>Ouvrir Excel.</li>
+            <li>Sélectionnez <strong>Fichiers | Options | Enregistrer.</strong></li>
+            <li>Recherchez le paramètre <strong>Emplacement du fichier local par défaut</strong> et vérifiez le chemin d&apos;accès. Assurez-vous que vous ne téléchargez pas de fichiers depuis cet emplacement vers le Cloud.</li>
+        </ol>
+        <h3>Vérifiez que vous ou d&apos;autres utilisateurs de Cloud Engagement n&apos;utilisez pas la fonction de partage dans Microsoft Office</h3>
+        <p>Assurez-vous que vous ou d&apos;autres utilisateurs n&apos;utilisez pas la fonction de partage de Microsoft Office dans les documents Microsoft Office que vous téléchargez ou créez dans le cadre d&apos;engagements Cloud. La fonction de partage de Microsoft Office n&apos;est pas supportée en conjonction avec Caseware Cloud :</p>
+        <p><img src="../../Resources/Images/ShareFeature.png" alt="Fonctionnalité de partage dans les applications Microsoft Office." /></p>
+        <ul>
+            <li>
+                <p>Si deux utilisateurs partagent les mêmes documents Office et y ont accès, des conditions de course à l&apos;enregistrement peuvent se produire, entraînant des résultats inattendus.</p>
+            </li>
+            <li>
+                <p>Lorsqu&apos;un utilisateur partage un document Office à l&apos;aide de la fonction de partage Office, un site est nécessaire pour prendre en charge les opérations de synchronisation. Par conséquent, les opérations de synchronisation doivent avoir lieu sur l&apos;ordinateur appartenant à l&apos;utilisateur qui a initié le partage. Plusieurs scénarios peuvent se produire lors de l&apos;enregistrement du document partagé, conduisant tous à une perte des informations enregistrées.</p>
+            </li>
+        </ul>
+        <p><strong>Pour y remédier :</strong></p>
+        <ol>
+            <li>Supprimer tous les partages sur les documents actuels en copiant le document à différents endroits.</li>
+            <li>Effectuez les mises à jour nécessaires des documents, par exemple les modifications qui n&apos;ont pas pu être effectuées lorsque le partage était activé.</li>
+            <li>Remplacer le fichier en téléchargeant la version enregistrée non partagée.</li>
+        </ol>
+        <h2>Fournir des journaux à la demande de l&apos;assistance technique</h2>
+        <p>La fourniture de ces journaux nous aidera à résoudre le problème si vous contactez l&apos;assistance technique.</p>
+        <h3>Mac</h3>
+        <p>Si vous ou votre client utilisez Mac OS et que nous devons vérifier les journaux, notre équipe d&apos;assistance technique aura besoin de votre aide ou de celle de votre client pour les rassembler.</p>
+        <p><b>Chemin d&apos;accès aux journaux</b></p>
+        <p><div><pre><code>/Users/user_name/Library/Containers/com.microsoft.Excel/Data/Library/Logs/Diagnostics</code></pre></div></p>
+        <p>Pour trouver les journaux, il se peut que vous ayez besoin de décacheter les fichiers journaux. Appuyer simultanément sur les touches Shift + (⌘) + (.).</p>
+        <p> </p>
+        <p><img src="../../Resources/Images/LogsonMac.png" alt="Localiser les journaux de documents Microsoft Office sur un Mac." /></p>
+        <p> </p>
+        <p>Pour plus d&apos;informations, voir <a href="https://support.apple.com/en-gb/guide/console/cnsl9361/mac">Localiser un fichier journal à l&apos;aide de la console sur Mac.</a></p>
+        <h3>Fenêtres</h3>
+        <p>Les instructions suivantes sont valables pour Windows 10.</p>
+        <ol>
+            <li>Ouvrez l&apos;explorateur Windows.</li>
+            <li>Go to C:\Users\{user.name}\AppData\Local\Temp</li>
+            <li>Localisez le dossier Diagnostics.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Recherchez le dossier portant le nom de l&apos;application avec laquelle vous rencontrez des problèmes.</li>
+            </ul>
+            <p><img src="../../Resources/Images/WindowsOfficeLogs.png" alt="Localisation des journaux pour les applications Microsoft Office. " /></p>
+        </p>
+        <h2>Vider le cache de Microsoft Office</h2>
+        <p>Voir les instructions relatives à votre système d&apos;exploitation :</p>
+        <h3>Fenêtres</h3>
+        <ol>
+            <li>Supprimez manuellement les fichiers mis en cache et rouvrez les fichiers.</li>
+        </ol>
+        <p class="note inline"><b>Note :</b>Le fichier actuellement ouvert dans Excel sera exclu. Cela devrait déclencher un téléchargement depuis Caseware Cloud.</p>
+        <ol>
+            <li value="2">Dans votre application Office, allez dans <b>Fichier | Options | Enregistrer.</b></li>
+            <li>Dans <b>Cache Settings</b>, sélectionnez <b>Delete files from the Office Document cache when they are closed</b>. Cela permet d&apos;effacer le cache du fichier lorsqu&apos;il est fermé.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CacheSettingsOfficeDocs.png" alt="Sélectionnez le paramètre Supprimer les fichiers du cache des documents Office lorsqu&apos;ils sont fermés. " /></p>
+        <h3>Mac OS</h3>
+        <p>Allez à l&apos;emplacement suivant, qui changera légèrement selon que vous utilisez Excel ou Word :</p>
+        <p><div><pre xml:space="preserve"><code>~/Bibliothèque/Conteneurs/MicrosoftExcel/Data/Bibliothèque/Caches</code></pre></div></p>
+        <p>Pour plus d&apos;informations, voir <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">Vider le cache de l&apos;Office.</a></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ClearCacheinMac.png" alt="Emplacement du cache des documents Office sur les ordinateurs fonctionnant sous Mac OS." /></p>
+        <p> </p>
+    </body>
+</html>

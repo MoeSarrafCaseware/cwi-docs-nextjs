@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Nadat u het importeren hebt voltooid, kunt u de proefbalansgegevens op elk gewenst moment opnieuw importeren of <a href="Import">een nieuwe proefbalans importeren</a>:</p>
+        <p>Wanneer u gegevens opnieuw importeert,</p>
+        <ul>
+            <li>
+                <p>Rekeningnamen en saldi worden overschreven met de opnieuw geïmporteerde gegevens voor rekeningen die al bestaan in de overeenkomst</p>
+            </li>
+            <li>
+                <p>Alle nieuwe accounts in de opnieuw geïmporteerde gegevens die nog niet bestaan in de overeenkomst worden toegevoegd aan de overeenkomst.</p>
+            </li>
+            <li>
+                <p>Accounts die bestaan in de overeenkomst en die niet zijn opgenomen in de opnieuw geïmporteerde gegevens, worden verwijderd, tenzij:</p>
+                <ul>
+                    <li>
+                        <p>De bestaande rekening heeft een saldo voor een periode, saldotype of andere entiteit die niet is opgenomen in de opnieuw geïmporteerde gegevens. Als de bestaande rekening bijvoorbeeld een saldo van vorig jaar heeft, maar de opnieuw geïmporteerde gegevens alleen gegevens voor saldi van het huidige jaar bevatten, wordt de bestaande rekening niet verwijderd.</p>
+                    </li>
+                    <li>
+                        <p>De bestaande rekening heeft een overeenkomstige aanpassing, kwestie of aantekening.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Alle aanpassingen, problemen en annotaties die vóór het opnieuw importeren zijn gemaakt, blijven bestaan nadat de gegevens opnieuw zijn geïmporteerd.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Let op:</b> Als je de gegevens opnieuw importeert vanuit een andere bron (bijvoorbeeld vanuit een andere bestandsnaam) en er zijn rekeningen in de bestaande gegevens die niet in de nieuwe gegevens staan, dan wordt het saldo van deze bestaande rekeningen op 0 gezet.</p>
+        <p class="note inline"><b>Let op:</b> In engagementbestanden die zijn gemaakt op basis van carry forward, worden rekeningsaldi van voorgaande jaren niet overschreven of verwijderd door de nieuwe gegevens van het opnieuw importeren.</p>
+        <p><b>De proefbalans opnieuw importeren</b></p>
+        <ol>
+            <li>
+                <p>Reassign the fields in the trial balance. Kies <b>Opties</b> (<img src="../Images/OptionsIcon.png" alt="" style="vertical-align: text-bottom;" />) | <b>Velden opnieuw toewijzen</b> op het tabblad <b>Datasets</b> op de gegevenspagina.</p>
+            </li>
+        </ol>
+        <p><img src="../Images/Reassign-fields-Datasets-tab.png" alt="De optie Velden opnieuw toewijzen selecteren om de proefbalans opnieuw te importeren." /></p>
+        <ol>
+            <li value="2">
+                <p>Breng in de vervolgkeuzelijsten de nodige wijzigingen aan in hoe velden in het gegevensbestand worden toegewezen aan Caseware velden. Selecteer <b>Opnieuw importeren</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Saldibalans importeren</h2>
+        <p>In een opdracht waar je al een proefbalans hebt geïmporteerd, kun je een nieuwe proefbalans importeren. Verwijder de bestaande proefbalans en ga dan verder met het importeren van de nieuwe proefbalans.</p>
+        <p><b>Saldibalans importeren</b></p>
+        <ol>
+            <li>
+                <p>Verwijder de bestaande proefbalans. Selecteer <b>Opties</b> (<img src="../Images/OptionsIcon.png" alt="" />) | <b>Gegevens verwijderen</b> op de pagina <b>Datasets</b> .</p>
+            </li>
+        </ol>
+        <p><img src="../Images/DeleteDataset.png" alt="Een proefbalansdataset verwijderen op de pagina Datasets." /></p>
+        <ol>
+            <li value="2">
+                <p>Ga verder met het importeren van de nieuwe proefbalans. ONDER DATA FILE UPLOAD bladert u door het CSV- of Excel-bestand of sleept u het naar het gebied voor het uploaden van bestanden.</p>
+            </li>
+        </ol>
+        <p> </p>
+    </body>
+</html>

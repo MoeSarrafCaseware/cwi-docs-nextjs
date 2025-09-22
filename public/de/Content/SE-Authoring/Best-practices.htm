@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Empfohlene Vorgehensweise</h1>
+        <p>The way you author your financial statements impacts the performance of the document, such as the time to load and display a selected area. It&apos;s important that you plan how you will add and set up content.</p>
+        <p>For the best experience while editing and working with the financial statements, consider the following tips as you set up content.</p>
+        <ul>
+            <li>
+                <p>An area with less visibility logic loads and functions faster than an area with many visibility rules.</p>
+                <p>Instead of having multiple content items where the same visibility rules are set for each item, group the items in one area and set the visibility logic on that area.</p>
+            </li>
+            <li>
+                <p>An area with less content items loads and functions faster than an area with many items.</p>
+                <p>Instead of having too many content items in one area, consider splitting the area to multiple areas and grouping items that share a similar context. For example, items having the same visibility logic.</p>
+            </li>
+        </ul>
+        <h4>Example</h4>
+        <p>Content setup - version 1:</p>
+        <p>When you set up content using the following method, the area loads slowly and functions poorly.</p>
+        <ul>
+            <li>
+                <p>Area 1</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Content 1 (visible when checklist response is review engagement)</p>
+                    </li>
+                    <li>
+                        <p>Content 3 (visible when checklist response is review engagement)</p>
+                    </li>
+                    <li>
+                        <p>Content 4 (always visible)</p>
+                    </li>
+                    <li>
+                        <p>Content 5 (visible when checklist response is compilation engagement)</p>
+                    </li>
+                    <li>
+                        <p>Content 6 (visible when checklist response is compilation engagement)</p>
+                    </li>
+                    <li>
+                        <p>Content 7 (visible when checklist response is compilation engagement)</p>
+                    </li>
+                    <li>
+                        <p>Content 2 (visible when checklist response is review engagement)</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Content setup - version 2:</p>
+        <p>When you set up content using the following method, each area loads much faster and functions better.</p>
+        <ul>
+            <li>
+                <p>Area 1 (visible when checklist response is review engagement)</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Content 1 (always visible)</p>
+                    </li>
+                    <li>
+                        <p>Content 2 (always visible)</p>
+                    </li>
+                    <li>
+                        <p>Content 3 (always visible)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Area 2 (always visible)</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Content 4 (always visible)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Area 3 (visible when checklist response is compilation engagement)</p>
+                <ul>
+                    <li>
+                        <p>Content 5 (always visible)</p>
+                    </li>
+                    <li>
+                        <p>Content 6 (always visible)</p>
+                    </li>
+                    <li>
+                        <p>Content 7 (always visible)</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3>File activity</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Vertical bar chart (<img src="../Images/vertical-bar-chart-20x23.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>X-Axis</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>startdate</b> - Displays the date when an event occurred.</p>
+            </li>
+        </ul>
+        <p><i>Group/Color</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that lists the identifiers of all possible activity types in the HI database and converts them to a user-friendly description:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Building the following calculation:</p>
+                        <div><pre class="clipboard"><code>
+ifelse(
+type=&apos;AJECREAT&apos;, &apos;Adjustment created&apos;,
+type=&apos;DCHEKIN&apos;, &apos;Document checked in&apos;,
+type=&apos;DCHEKOUT&apos;, &apos;Document checked out&apos;,
+type=&apos;DOCAUSR&apos;, &apos;Document accessed&apos;,
+type=&apos;DOCCOPY&apos;, &apos;Document copied&apos;,
+type=&apos;DOCCREAT&apos;, &apos;Document created&apos;,
+type=&apos;DOCDEL&apos;, &apos;Document deleted&apos;,
+type=&apos;DOCDROP&apos;, &apos;Document dropped in&apos;,
+type=&apos;DOCMSAVE&apos;, &apos;Document saved&apos;,
+type=&apos;DOCPROP&apos;, &apos;Document properties changed&apos;,
+type=&apos;DOCSIGN1&apos;, &apos;Document signed off role 1&apos;,
+type=&apos;DOCSIGN2&apos;, &apos;Document signed off role 2&apos;,
+type=&apos;DOCSIGN3&apos;, &apos;Document signed off role 3&apos;,
+type=&apos;DOCSIGN4&apos;, &apos;Document signed off role 4&apos;,
+type=&apos;DOCSIGN5&apos;, &apos;Document signed off role 5&apos;,
+type=&apos;DOCSIGN6&apos;, &apos;Document signed off role 6&apos;,
+type=&apos;DOCSIGN7&apos;, &apos;Document signed off role 7&apos;,
+type=&apos;DOCSIGN8&apos;, &apos;Document signed off role 8&apos;,
+type=&apos;FACCUSR&apos;, &apos;Engagement file accessed&apos;,
+type=&apos;FCHEKIN&apos;, &apos;Engagement file checked in&apos;,
+type=&apos;FCHEKOUT&apos;, &apos;Engagement file checked out&apos;,
+type=&apos;FCREAFN&apos;, &apos;File created&apos;,
+type=&apos;FSIGNIN&apos;, &apos;File signed in&apos;,
+type=&apos;FSIGNOUT&apos;, &apos;File signed out&apos;,
+type=&apos;FYEC&apos;, &apos;Year end close performed&apos;,
+type=&apos;DOCRCYCL&apos;, &apos;Document moved to recycle bin&apos;,
+type=&apos;DOCREST&apos;, &apos;Document restored from recycle bin&apos;,
+type=&apos;DOCPASTE&apos;, &apos;Document pasted in document manager&apos;,
+type=&apos;DOCMOVE&apos;, &apos;Document moved in document manager&apos;,
+type=&apos;DOCTOPDF&apos;, &apos;Document converted to PDF&apos;,
+type=&apos;AJEDEL&apos;, &apos;Adjusting entry deleted&apos;,
+type=&apos;AJEIMPT&apos;, &apos;Adjusting entry imported&apos;,
+type=&apos;AJERENUM&apos;, &apos;Adjusting entry renumbered&apos;,
+type=&apos;UNDOSIGN&apos;, &apos;Signout undone&apos;,
+type=&apos;DOCLOCK&apos;, &apos;Document locked down&apos;,
+type=&apos;DOCLOCK2&apos;, &apos;Document milestones regenerated&apos;,
+type=&apos;DOCLOCK3&apos;, &apos;Document milestones converted&apos;,
+type=&apos;DOCSET&apos;, &apos;Document milestones set&apos;,
+type=&apos;FILELOCK&apos;, &apos;File locked down&apos;,
+type=&apos;FILEUNLK&apos;, &apos;File unlocked&apos;,
+type=&apos;LOCKSET&apos;, &apos;Future lockdown date set&apos;,
+type=&apos;LOCKREM&apos;, &apos;Pending lockdown removed&apos;,
+type=&apos;UNDOLOCK&apos;, &apos;Lockdown undone&apos;,
+type=&apos;LOCKMR&apos;, &apos;Lockdown milestones generated&apos;,
+type=&apos;LOCKMRA&apos;, &apos;Lockdown milestones generated (automatic documents)&apos;,
+type=&apos;FMSS&apos;, &apos;File milestones set&apos;,
+type=&apos;FCREAYEC&apos;, &apos;File created on year end close&apos;,
+type=&apos;FCREACT&apos;, &apos;File created from copy template&apos;,
+type=&apos;TEMPUPD&apos;, &apos;Template update initiated&apos;,
+type=&apos;(&quot;FCREACR&quot;)&apos;, &apos;Reviewer copy created&apos;,
+&apos;Other&apos;
+)</code></pre>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <p>You can modify the custom calculation to change the user-facing text or remove events that you don&apos;t want to display.</p>
+        <h3>Documents completed by a user</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>HI</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../Images/horizontal-bar-chart-23x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-Axis</i></p>
+        <ul>
+            <li>
+                <p><b>Role 1 Initials</b> - Displays the Role 1 sign-off name.</p>
+            </li>
+        </ul>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style:none;">
+                <p>Add a custom calculation field that counts the number of documents completed by a specific user:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>countIf({Role 1 Initials}, isNotNull(nullIf({Role 1 Initials},&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>

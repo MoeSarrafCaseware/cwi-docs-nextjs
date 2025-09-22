@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Transférer des engagements individuels avec CloudBridge</h1>
+        <p>Utiliser CloudBridge pour transférer les données d&apos;un engagement individuel de Working Papers vers Cloud. Si vous n&apos;avez pas installé CloudBridge, voir <a href="Get-CloudBridge.htm">Obtenir CloudBridge</a>.</p>
+        <h2><a name="Setup"></a>Configurer CloudBridge</h2>
+        <p>Avant de pouvoir transférer des données d&apos;un engagement Working Papers vers Cloud, vous devez configurer CloudBridge en ajoutant le document CloudBridge (CLBG) au gestionnaire de documents dans Working Papers.</p>
+        <p><b>Ajouter le document CLBG aux documents de travail :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que votre copie des documents de travail est intégrée à votre entreprise en nuage. Pour en savoir plus, visitez <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Intégrer les documents de travail avec Caseware Cloud.</a></p>
+            </li>
+            <li>
+                <p>Assurez-vous que vous avez installé CloudBridge.</p>
+            </li>
+            <li>
+                <p>Ouvrez votre fichier client dans Working Papers.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;onglet <b>Document</b> , cliquez sur <b>À partir de la bibliothèque | CloudBridge</b>. La boîte de dialogue Bibliothèque de documents s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>CLBG</b> et cliquez sur <b>Ajouter.</b></p>
+            </li>
+        </ol>
+        <p>Le document CLBG s&apos;affiche dans le gestionnaire de documents.</p>
+        <h2><a name="Transfer"></a>Transfert des données d&apos;engagement</h2>
+        <p>After you add the CLBG document to a Working Papers engagement, you can transfer your trial balance and general ledger tax data to your Cloud engagement (adjustments posted to groups are not supported, only account balances).</p><div class="note"><p><b>Remarque :</b></p>
+            <p>Vous pouvez également inclure les données financières de votre client dans le transfert. Pour ce faire, vous devez remplir les conditions préalables suivantes :</p>
+            <ol>
+                <li>
+                    <p>Assurez-vous que <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Working Papers est intégré à votre site Cloud.</a></p>
+                </li>
+                <li>
+                    <p><a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32.htm#CSHID=YEC">Reportez</a> votre dossier d&apos;engagement des documents de travail.</p>
+                </li>
+                <li>
+                    <p>(Facultatif) Si vous transférez des données à partir d&apos;une version non licenciée de Working Papers, copiez et collez <b>cw:program/scripts/cloudbridge/index.html</b> dans le champ URL de la barre d&apos;outils Working Papers, puis appuyez sur la touche <b>Entrée</b> de votre clavier pour lancer CloudBridge.</p>
+                </li>
+                <li>
+                    <p>Complétez la procédure de transfert ci-dessous.</p>
+                </li>
+            </ol>
+            <p>Notez que les comptes dont le solde est nul ne seront pas transférés automatiquement. Si vous souhaitez inclure des comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> manuellement et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> aux groupes désignés.</p></div><p><b>Transférer les données relatives à l&apos;engagement dans le nuage :</b></p>
+        <ol>
+            <li>
+                <p>Dans le gestionnaire de documents, double-cliquez sur <b>CLBG</b>. Le document CLBG s&apos;affiche.</p>
+            </li>
+            <li>
+                <p>Dans la section Étape 1, choisissez une entité et un engagement appropriés.</p>
+            </li>
+            <li>
+                <p>Dans la section Étape 2, sélectionnez les données de balance de vérification appropriées à exporter.</p>
+            </li>
+            <li>
+                <p>Dans la section Étape 2, cochez la case <b>Utiliser un fichier de remappage</b> . Le fichier de remappage est utilisé pour transférer la structure de mappage des comptes actuels dans les Working Papers vers votre engagement Cloud.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p><b>Canada</b> Si votre engagement utilise le mappage par défaut des documents de travail ou a été créé avec le modèle PEG, utilisez le fichier de remappage situé dans le dossier où vous avez installé CloudBridge<b>(C:\NProgram Files (x86)\NCaseware\NScripts\Ncloudbridge</b>). Si votre mission utilise une structure de mappage personnalisée propre à votre entreprise, <a href="#Remap">créez un fichier de remappage personnalisé</a> , puis ajoutez-le.</p>
+                    </li>
+                    <li>
+                        <p><b>ÉTATS-UNIS :</b> Si votre engagement utilise le mappage par défaut des documents de travail ou a été créé avec le modèle PEG, utilisez le fichier de remappage situé dans le dossier où vous avez installé CloudBridge<b>(C:\NProgram Files (x86)\NCaseware\NScripts\Ncloudbridge</b>). Si votre mission utilise une structure de mappage personnalisée propre à votre entreprise, vous devrez modifier manuellement le fichier de remappage par défaut à l&apos;aide d&apos;un éditeur de texte (par exemple, le Bloc-notes).</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Choisir un fichier</b> pour rechercher et ajouter le fichier de remappage.</p>
+            </li>
+            <li>
+                <p><b>Canada</b> (Facultatif) Si vous avez d&apos;autres écritures de journal relatives aux dons, aux frais de repas et de représentation ou à la publicité étrangère, la section <b>Étape 3</b> est disponible sur la page. La section<b>Étape 3</b> vous permet de transférer les données GL à la feuille de calcul fiscale appropriée dans l&apos;engagement Caseware ReviewComp. Dans cet exemple, nous ajouterons les dons aux clients à la feuille de calcul Donations.</p>
+            </li>
+            <li>
+                <p>Une fois que vous avez terminé, sélectionnez <b>Transférer les données</b>.</p>
+            </li>
+        </ol>
+        <h3><a name="Remap"></a>Créer un fichier de remappage personnalisé (.ini)</h3>
+        <p>Si votre entreprise utilise une structure de mappage personnalisée, vous devez créer votre propre fichier de remappage (.ini) en fonction de votre structure de mappage personnalisée.</p>
+        <p><b>Pour créer un fichier de remappage personnalisé :</b></p>
+        <ol>
+            <li>
+                <p>Copier les composants.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Ouvrez votre fichier Working Papers.</p>
+                    </li>
+                    <li>
+                        <p>Nous vous recommandons de créer une copie de sauvegarde de votre fichier avant de continuer<b>(Fichier | Sauvegarde</b>).</p>
+                    </li>
+                    <li>
+                        <p>Sur le ruban, cliquez <b>sur Fichier | Copier les composants.</b> L&apos;assistant de copie des composants s&apos;affiche.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur <b>Copier dans ce fichier.</b></p>
+                    </li>
+                    <li>
+                        <p>Sur la page Sélectionner une source, cliquez sur l&apos;onglet <b>Fichier</b> , puis sur<b> Parcourir...</b></p>
+                    </li>
+                    <li>
+                        <p>Naviguez jusqu&apos;à <b>C:\NProgram Files (x86)\NCaseware\Scripts\Ncloudbridge\NCaseware ReviewComp et sélectionnez Caseware ReviewComp.ac</b>, puis cliquez sur <b>Suivant.</b></p>
+                    </li>
+                    <li>
+                        <p>Dans <b>la page Copier les composants</b>, sélectionnez <b>Groupements/Mappage.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Mapping</b> et cliquez sur <b>Options..</b> La boîte de dialogue Options de copie de mappage s&apos;affiche.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Numéros de remap.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Cliquez sur <b>Remap</b>. La boîte de dialogue Remap s&apos;affiche.</p>
+                    </li>
+                    <li>
+                        <p>Faites glisser un numéro de mappage de la liste <b>Numéros de mappage de fichiers de destination</b> et déposez-le dans le numéro de mappage approprié de la liste <b>Numéros de mappage de fichiers de source</b> .</p>
+                    </li>
+                    <li>
+                        <p>Répétez l&apos;opération pour attribuer d&apos;autres numéros de mappage.</p>
+                    </li>
+                    <li>
+                        <p>Une fois que vous avez terminé, cliquez sur <b>Appliquer</b> pour enregistrer vos paramètres, puis sur <b>OK.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Générer le fichier .ini .</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans la boîte de dialogue Options de copie de mappage , cliquez sur <b>Annuler</b>.</p>
+                    </li>
+                    <li>
+                        <p>Dans l&apos; assistant de copie des composants, cliquez sur <b>Annuler.</b></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Un fichier de remappage portant le nom <b>copy.ini</b> est créé dans le dossier de votre fichier Working Papers ( <b>C:\NProgram Files (x86)\NCaseware\NData</b>).</p>
+        <p>Vous pouvez maintenant utiliser ce fichier de remappage dans Cloudbridge pour transférer les données de vos Working Papers vers votre engagement.</p>
+    </body>
+</html>

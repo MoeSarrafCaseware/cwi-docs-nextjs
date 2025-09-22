@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Conclusiones</h1>
+        <p>The following Critical and High-security findings were found during our automated SAST scanning processes for Working Papers. We have summarized each tool&apos;s Critical and High findings, while medium and low classified findings have been left out for brevity. All findings were analyzed for security impact, and low/medium results were found to be related to in-progress code quality concerns, and not software vulnerabilities.</p>
+        <h2>Veracode</h2>
+        <h3>Medium - Insecure Temporary File (CWE-377, rule VC8593) - 2 instances</h3>
+        <p><strong>State: </strong><strong>Remediation scheduled</strong><strong>, Working Papers 2024 Update 1</strong></p>
+        <p>Some components in the Working Papers desktop application use temporary files as part of normal operations. Veracode found that some of those temporary files are created using an insecure random number generator, in a way that could be predicted by a malicious user having local access to the system.</p>
+        <p>We have created a ticket item for the development team to fix the issue. The recommended fix is to use a secure random number generator instead of a pseudo-random generator in the said function creating the temporary file.</p>
+        <MadCap:pageBreak />
+        <p>In the meantime, we assessed that the two detections from this rule have an overall <a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N/E:U/RL:U/RC:R/CR:M/IR:H/AR:M/MAV:L/MAC:L/MPR:L/MUI:N/MS:U/MC:N/MI:L/MA:N&amp;version=3.1">CVSSv3.1 score of 3.5</a>, so it was determined that no hotfix is needed. The randomness of the generated value does not affect the security of the component or file artifact.</p>
+        <h3>Medium - Use of Hard-coded Password (CVE-259, rule VC9191) - 1 instance</h3>
+        <p><strong>State: False Positive </strong></p>
+        <p>In order to provide a feature to import data from the MYOB Cloud, Working Papers initiates an OAUTH 2.0 flow through the MYOB AccountRight SDK. This process requires the use of a developer key, which is hardcoded in the source code. The developer key alone cannot be used to gather data, as client credentials are needed as well.</p>
+        <p>Because the provider only supports the Authorization Code grant type, there is no way to avoid hardcoding the secrets without making major architectural changes, which would imply transmitting data through a server controlled by Caseware and doing the OAUTH flow on behalf of the user. It was decided that the current flow is the optimal one.</p>
+        <h2>Dependabot</h2>
+        <h3>Chromium Embedded Framework (CefSharp)</h3>
+        <p><strong>State: Remediation scheduled, Working Papers 2024</strong></p>
+        <p>Most<strong></strong>findings (5 out of 7 high) found by Dependabot are related to CefSharp, a Google Chrome embedded component. The current version of CefSharp used in Working Papers is 109.1.110, which embeds Chromium 109.0.5414.87. The team will update the Chromium version in Working Papers 2024. Given this is an external browser component embedded into Working Papers, it requires significant testing.</p>
+        <p>The version of Chromium in Working Papers is known to have exploitable vulnerabilities reported by Google. However, the component used is not meant for general browsing. The intended use case consists of access sites and services controlled by Caseware, and is covered under our global security program. While we cannot block users from visiting other websites, due to the many different ways this component can be used, we advise users not to use it for general browsing.</p>
+    </body>
+</html>

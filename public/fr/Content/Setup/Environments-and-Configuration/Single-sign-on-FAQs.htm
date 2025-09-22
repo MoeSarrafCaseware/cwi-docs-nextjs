@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Authentification unique Foire aux questions (FAQ)</h1>
+        <p>Cette section contient des questions fréquemment posées sur l&apos;intégration de l&apos;authentification unique dans Cloud.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Quel est le niveau de sécurité de l&apos;intégration SSO de Cloud ?</p>
+        <p>Toutes les informations relatives à l&apos;utilisateur qui sont transmises entre votre fournisseur d&apos;identité et CWI sont cryptées via le protocole Secure Sockets Layer (SSL) et signées à l&apos;aide de JSON Web Encryption. Lorsque les utilisateurs sont connectés au fournisseur d&apos;identité de votre entreprise, les informations d&apos;identification de l&apos;utilisateur (login, nom d&apos;utilisateur et mot de passe) ne sont jamais partagées avec Cloud. Seules les informations de base du profil de l&apos;utilisateur (son nom et son adresse électronique) sont partagées avec nous pour authentifier l&apos;utilisateur.</p>
+        <hr>
+        </hr>
+        <p><b>Quel est le protocole d&apos;autorisation utilisé ?</b></p>
+        <p>Nous utilisons le protocole d&apos;autorisation OpenID Connect.</p>
+        <hr>
+        </hr>
+        <p><b>Les membres du personnel peuvent-ils encore se connecter à l&apos;aide des informations d&apos;identification du nuage après l&apos;activation du SSO ?</b></p>
+        <p>Une fois qu&apos;un membre du personnel a utilisé le SSO pour se connecter à Cloud, il ne pourra plus se connecter que par le biais de l&apos;authentification unique. Si un membre du personnel tente de se connecter à l&apos;aide de ses informations d&apos;identification Cloud, un message d&apos;erreur s&apos;affiche, invitant le membre du personnel à utiliser le SSO.</p>
+        <hr>
+        </hr>
+        <p><b>Après avoir supprimé mon fournisseur d&apos;identité et l&apos;avoir réintroduit, certains utilisateurs ne parviennent pas à se connecter. Pourquoi ?</b></p>
+        <p>Si vous avez supprimé votre fournisseur d&apos;identité et l&apos;avez réajouté, les utilisateurs authentifiés avant la suppression ne pourront pas se connecter. Pour que ces utilisateurs puissent se connecter à nouveau, créez de nouvelles informations d&apos;identification pour eux dans Azure AD. Cette procédure ne sera plus nécessaire dans les versions ultérieures.</p>
+        <hr>
+        </hr>
+        <p><b>Les contacts peuvent-ils utiliser le SSO ?</b></p>
+        <p>Actuellement, les contacts n&apos;ont pas la possibilité d&apos;utiliser le SSO.</p>
+        <hr>
+        </hr>
+        <p><b>We&apos;ve enabled two-factor authentication. Que se passe-t-il si nous activons également le SSO ?</b></p>
+        <p>Si le SSO est activé pour une entreprise, les utilisateurs du SSO ne pourront plus utiliser la fonction d&apos;authentification à deux facteurs de Cloud. En effet, la meilleure pratique veut que votre fournisseur d&apos;identité de confiance contrôle le processus d&apos;authentification. Si vous souhaitez activer l&apos;authentification à deux facteurs, nous vous recommandons de le faire par l&apos;intermédiaire de votre fournisseur d&apos;identité.</p>
+        <p>L&apos;authentification à deux facteurs sera toujours disponible pour les utilisateurs non SSO.</p>
+        <hr>
+        </hr>
+        <p><b>Que se passe-t-il si j&apos;ajoute le compte d&apos;un membre du personnel à Cloud avant de l&apos;ajouter à Azure AD ?</b></p>
+        <p>Si vous avez ajouté un compte de personnel à Cloud mais pas à Azure AD, cet utilisateur ne pourra pas se connecter à l&apos;aide de SSO. Pour permettre à un membre du personnel de se connecter avec SSO, ajoutez un nouvel utilisateur à Azure AD en utilisant comme nom d&apos;utilisateur l&apos;adresse électronique associée au compte Cloud de ce membre du personnel.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Que se passe-t-il si je me déconnecte de mon fournisseur d&apos;identité alors que je suis toujours connecté à Cloud ?</p>
+        <p>Vous resterez connecté à Cloud tant que votre session sera active. À la fin de votre session, vous devrez vous connecter à nouveau à votre fournisseur d&apos;identité avant de pouvoir vous connecter à Cloud à l&apos;aide de SSO.</p>
+        <hr>
+        </hr>
+        <p><b>Un membre du personnel dont le compte est inactif peut toujours se connecter à Cloud. Pourquoi ?</b></p>
+        <p>Après avoir activé l&apos;authentification unique, l&apos;accès au compte est géré par Azure AD. Pour empêcher un utilisateur d&apos;accéder au nuage, vous devez supprimer son compte. Pour en savoir plus, voir <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory">Types de réponses. Ajouter ou supprimer des utilisateurs à l&apos;aide d&apos;Azure Active Directory</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Un membre du personnel dont le compte a été supprimé dans Azure AD est toujours connecté à Cloud. Pourquoi ?</b></p>
+        <p>Si vous supprimez le compte d&apos;un utilisateur dans Azure AD alors qu&apos;il est toujours connecté à Cloud, il restera actif dans Cloud jusqu&apos;à ce que sa session se termine ou qu&apos;il se déconnecte, après quoi il ne pourra plus se connecter à Cloud.</p>
+        <hr>
+        </hr>
+        <p><b>Pourquoi ne puis-je pas modifier les noms de comptes, les adresses électroniques ou les mots de passe dans le nuage ?</b></p>
+        <p>Après avoir activé l&apos;authentification unique, les noms de comptes, les adresses électroniques et les mots de passe sont gérés par Azure AD. Pour en savoir plus, voir <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal">Types de réponses. Ajouter ou mettre à jour les informations du profil d&apos;un utilisateur à l&apos;aide d&apos;Azure Active Directory</a>.</p>
+        <hr>
+        </hr>
+        <p><b>Le domaine de messagerie de notre entreprise a changé, comment puis-je mettre à jour les adresses électroniques du personnel en masse ?</b></p>
+        <p>Les entreprises dont le SSO est activé ne peuvent pas modifier directement le champ de l&apos;adresse électronique du personnel. Si vous avez besoin de mettre à jour les adresses email de votre personnel en masse, contactez le <a href="mailto:support@caseware.com">support Caseware</a> pour obtenir de l&apos;aide. Nous devrons mettre à jour les adresses électroniques dans le nuage en même temps que vous mettez à jour votre Active Directory afin de garantir que votre personnel conserve l&apos;accès au nuage.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Si le fournisseur d&apos;identité de notre entreprise est en panne, comment les utilisateurs peuvent-ils se connecter au cloud ?</p>
+        <p>Les utilisateurs ne pourront pas se connecter à Cloud si votre fournisseur d&apos;identité subit une panne. Nous recommandons de conserver un compte administrateur qui n&apos;utilise pas votre fournisseur d&apos;identité pour garantir l&apos;accès au cloud en cas d&apos;urgence.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Que se passe-t-il si mon secret client expire ?</p>
+        <p>Si votre secret client expire, les utilisateurs SSO ne pourront plus se connecter à Cloud. Vous devez générer un nouveau secret client et mettre à jour les informations relatives à votre fournisseur d&apos;identité dans le nuage.</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à Cloud à l&apos;aide de vos identifiants Cloud.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Editer</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Saisissez les informations correctes pour votre fournisseur d&apos;identité dans les champs <b>Point de terminaison des métadonnées du fournisseur d&apos;identité</b>, <b>ID du client</b>et <b>Secret du client</b> .</p>
+            </li>
+        </ol>
+        <p>Nous vous recommandons de sélectionner &quot; <b>N&apos;expire jamais&quot;</b> lors de la création de votre secret client afin d&apos;éviter toute perte d&apos;accès inattendue pour les utilisateurs SSO.</p>
+        <hr>
+        </hr>
+        <p><b>Comment puis-je restreindre l&apos;accès au nuage de manière à ce que le personnel ne puisse y accéder qu&apos;à partir de son ordinateur professionnel ?</b></p>
+        <p>Si vous souhaitez restreindre l&apos;accès au cloud aux ordinateurs professionnels, envisagez d&apos;ajouter des <a href="https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-locations" target="_blank">emplacements de confiance</a> à Azure AD. Cela vous permet de restreindre l&apos;accès en fonction des adresses IP, telles que l&apos;adresse IP du bureau ou du VPN.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Comment puis-je désactiver le SSO pour mon entreprise ?</p>
+        <p>Si vous souhaitez désactiver le SSO pour votre entreprise, contactez votre distributeur local.</p>
+        <p>Une fois le SSO désactivé, les utilisateurs peuvent se connecter à l&apos;aide de leurs anciens identifiants Cloud. Les utilisateurs dont les mots de passe ont expiré ou qui n&apos;ont utilisé que le SSO pour se connecter à Cloud peuvent utiliser le lien <b>Mot de passe oublié ?</b> pour créer un mot de passe pour leur compte. Si nécessaire, l&apos;administrateur de votre entreprise peut également réinitialiser les mots de passe des utilisateurs.</p>
+        <hr>
+        </hr>
+        <h3><a name="Why"></a>Pourquoi est-ce que je reçois un message d&apos;erreur ?</h3>
+        <p>Si Cloud ou SSO est mal configuré, vous pouvez voir l&apos;un des messages d&apos;erreur ci-dessous lorsque vous essayez de vous connecter.</p>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur Réessayez plus tard. Le serveur a rencontré une erreur inconnue. Si le problème persiste, contactez votre administrateur&quot;</b></p>
+        <p>Ce problème est le plus souvent causé par un secret client expiré dans le fournisseur SSO. Un utilisateur administrateur de l&apos;entreprise doit mettre à jour sa configuration SSO.</p>
+        <ol>
+            <li>
+                <p>Régénérer le secret du client. Cette opération peut être effectuée par l&apos;intermédiaire de votre fournisseur SSO.</p>
+            </li>
+            <li>
+                <p>Log in to Caseware Cloud.</p><div class="note"><p><b>Remarque :</b> Si vous ne pouvez pas vous connecter, contactez votre <a href="https://www.caseware.com/contact/">distributeur local</a> et demandez-lui de désactiver le SSO pour votre compte administrateur. Veuillez inclure les informations suivantes dans votre demande :</p>
+                    <ul>
+                        <li>
+                            <p>L&apos;URL complète de l&apos;entreprise</p>
+                        </li>
+                        <li>
+                            <p>L&apos;adresse électronique de votre compte d&apos;administrateur où le SSO doit être désactivé</p>
+                        </li>
+                        <li>
+                            <p>Écriture de l&apos;autorisation du client pour désactiver le SSO pour le compte administrateur</p>
+                        </li>
+                    </ul>
+                    <p>Une fois que le SSO est désactivé pour le compte administrateur, utilisez l&apos;option <b>Mot de passe oublié</b> sur la page de connexion pour définir un nouveau mot de passe et vous connecter à Cloud.</p></div></li>
+            <li>
+                <p>Mettre à jour la configuration SSO dans le nuage avec le nouveau secret du client. Cela rétablira l&apos;accès à la connexion pour les autres utilisateurs.</p>
+            </li>
+            <li>
+                <p>Si le SSO a été désactivé pour votre compte d&apos;administrateur, connectez-vous à nouveau en utilisant le SSO pour le réactiver. Vous pouvez également laisser le SSO désactivé pour votre compte au cas où ce problème se poserait à l&apos;avenir.</p>
+            </li>
+            <li>
+                <p>Définir des rappels/surveillances pour l&apos;expiration du secret du client. L&apos;entreprise peut éviter de nouveaux blocages en changeant le secret du client avant la prochaine date d&apos;expiration.</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur &quot;Nous sommes désolés... Erreur inattendue lors de l&apos;authentification avec le fournisseur d&apos;identité&quot; </b></p>
+        <p>Lors de la configuration de votre fournisseur d&apos;identité, il se peut que vous ayez saisi un secret client ou un ID client incorrect.</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à Cloud à l&apos;aide de vos identifiants Cloud.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Editer</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Saisissez les informations correctes pour votre fournisseur d&apos;identité dans les champs <b>Point de terminaison des métadonnées du fournisseur d&apos;identité</b>, <b>ID du client</b>et <b>Secret du client</b> .</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur AADSTS70001) L&apos;application avec l&apos;identifiant ... n&apos;a pas été trouvée dans le répertoire ...&quot;</b></p>
+        <p>Lors de la configuration d&apos;Azure AD, il se peut que vous ayez saisi un fournisseur d&apos;identité incorrect.</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à Cloud à l&apos;aide de vos identifiants Cloud.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Editer</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Saisissez les informations correctes pour votre fournisseur d&apos;identité dans les champs <b>Point de terminaison des métadonnées du fournisseur d&apos;identité</b>, <b>ID du client</b>et <b>Secret du client</b> .</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur AADSTS50011) L&apos;url de réponse spécifiée dans la demande ne correspond pas aux urls de réponse configurées pour l&apos;application ...&quot;</b></p>
+        <p>Vous avez peut-être saisi une URL de réponse incorrecte dans Azure.</p>
+        <ol>
+            <li>
+                <p>Dans le volet de navigation gauche d&apos;Azure, sélectionnez <b>Azure Active Directory | App Registration.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez votre application, puis <b>Réglages | Répondre aux URL.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez le bouton du <b>menu contextuel</b> en regard de l&apos;URL de votre réponse, puis sélectionnez <b>Supprimer.</b></p>
+            </li>
+            <li>
+                <p>Ajoutez à nouveau l&apos;URL de votre réponse, puis sélectionnez <b>Enregistrer.</b></p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur AADSTS7000215) Le secret du client fourni n&apos;est pas valide. Veiller à ce que le secret envoyé dans la demande soit la valeur du secret du client, et non l&apos;ID du secret du client</b></p>
+        <p>Lors de la <a href="Generate-the-reply-URL-Azure-AD.htm">configuration d&apos;Azure AD</a>, il se peut que vous ayez saisi l&apos;ID du client dans le champ Secret du client.</p>
+        <ol>
+            <li>
+                <p>Vérifiez que la valeur du secret du client est correcte. Si la valeur a été copiée <a href="Generate-a-client-secret.htm">conformément aux instructions</a>, localisez les secrets du client stockés dans Azure AD et vérifiez s&apos;ils correspondent à des identifiants. Si la valeur copiée correspond à un ID, ou si vous n&apos;avez pas copié la valeur du secret du client, supprimez le secret actuel et <a href="Generate-a-client-secret.htm">créez-en un nouveau.</a> Veillez à copier la valeur secrète du client.</p>
+            </li>
+            <li>
+                <p>Connectez-vous à Cloud à l&apos;aide de vos identifiants Cloud.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Settings | Single Sign-On | Identity Provider</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Editer</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Saisissez les informations correctes pour votre fournisseur d&apos;identité dans les champs <b>Point de terminaison des métadonnées du fournisseur d&apos;identité</b>, <b>ID du client</b>et <b>Secret du client</b> . Le champ ID du client doit correspondre à l&apos;ID de l&apos;application et le champ secret du client doit correspondre à la valeur du secret du client de l&apos;étape 1 (et non à l&apos;ID secret).</p>
+            </li>
+        </ol>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur &quot;Aucune licence d&apos;accès au nuage n&apos;est disponible. Pour obtenir des licences supplémentaires, contactez votre administrateur&quot;</b></p>
+        <p>Le nombre d&apos;utilisateurs dans votre domaine Active Directory dépasse le nombre de licences Cloud disponibles. Lorsque le nombre d&apos;utilisateurs dans votre domaine Active Directory dépasse le nombre de licences disponibles, certains membres du personnel ne pourront pas se connecter. Pour permettre à tous les membres du personnel de se connecter, achetez une licence auprès de MyCaseware pour chaque membre du personnel ou contactez votre distributeur local.</p>
+        <hr>
+        </hr>
+        <p><b>Message d&apos;erreur &quot;Le compte existe déjà. L&apos;utilisateur avec l&apos;email ... existe déjà. Souhaitez-vous continuer ?</b></p>
+        <p>Cette erreur se produit lorsqu&apos;un utilisateur est supprimé d&apos;Azure et qu&apos;un autre utilisateur est ajouté avec la même adresse électronique. <br /></p>
+        <p>Pour résoudre ce problème, supprimez le compte Cloud associé à l&apos;adresse électronique affichée dans le message d&apos;erreur et demandez à l&apos;utilisateur de se connecter à nouveau à l&apos;aide du SSO. <br /></p>
+        <p>Cette procédure ne sera plus nécessaire dans les versions ultérieures.</p>
+        <hr>
+        </hr>
+        <p style="font-weight: bold;">Message d&apos;erreur &quot;Le jeton reçu ne contient pas les informations suivantes : email requis pour l&apos;accès au système. Communiquez avec votre administrateur système.</p>
+        <p>L&apos;intégration SSO de Caseware Cloud est conçue pour reconnaître les demandes &apos;nom d&apos;utilisateur&apos; et &apos;email&apos; comme des demandes distinctes. Notre intégration nécessite la mention &quot;email&quot; pour fonctionner correctement. La mention &quot;email&quot; n&apos;est fournie que par les utilisateurs invités et les utilisateurs gérés intégrés via Office365. Si les utilisateurs de votre entreprise sont configurés via Office365, assurez-vous de suivre les <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims">instructions d&apos;Azure</a> pour gérer la réclamation &quot;email&quot; via le portail d&apos;administration d&apos;Office.</p>
+        <hr>
+        </hr>
+    </body>
+</html>

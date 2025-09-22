@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Import aus QuickBooks Desktop</h1>
+        <p>You can import data from QuickBooks desktop by exporting it as a <i>.cwq</i> file, then importing the file to your engagement.</p>
+        <p class="note inline"><b>Note:</b> Accounts with zero balances are not automatically imported. If you want to include zero-balance accounts, you must manually <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> them and <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the designated groups.</p>
+        <p>Before you start, make sure that:</p>
+        <ul>
+            <li>
+                <p><a href="https://www.microsoft.com/en-ca/download/details.aspx?id=17851">Microsoft .NET Framework 4.0</a> is installed on your workstation.</p>
+            </li>
+            <li>
+                <p>The QuickBooks Export Utility is installed on your workstation.</p>
+            </li>
+            <p>You can download it from <a href="https://my.caseware.com/support/working-papers/">MyCaseware</a> on the <b>Support Files</b> page.</p>
+            <li>
+                <p>If <a href="https://documentation.caseware.com/2019/WorkingPapers/en/Content/Setup/Users-Groups/Protection/Enable-Protection.htm">Protection</a> is activated in the Working Papers file, you must have the <b>Import</b> file permission.</p>
+            </li>
+        </ul>
+        <h2>Schritt 1: Export data from QuickBooks desktop</h2>
+        <p style="font-weight: bold;">To export data from QuickBooks Desktop:</p>
+        <ol>
+            <li>
+                <p>Open your QuickBooks desktop account, then open the company file that you want to import.</p>
+            </li>
+            <li>
+                <p>Open the QuickBooks Export Utility.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the <b>QuickBooks Version</b> drop-down, select<b> QuickBooks 2008-2020 Canada.</b></p>
+                    </li>
+                    <li>
+                        <p>​In the <b>Export Path</b> field, select <b>Browse…</b>.</p>
+                    </li>
+                    <p>The <b>Browse For Folder</b> dialog opens.</p>
+                    <li>
+                        <p>Navigate to the where you want to create the export file, then select <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Select <b>Specify last transaction date</b> and enter the applicable date.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Accounting method</b> drop-down, select the applicable accrual method.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Select <b>Export</b>.</p>
+            </li>
+            <p>The accounting data from the QuickBooks Desktop file is exported to a <i>.cwq</i> file format in the specified location.</p>
+        </ol>
+        <h2>Schritt 2: Import the exported data to your engagement</h2>
+        <p style="font-weight: bold;">To import the exported data to your engagement:</p>
+        <ol>
+            <li>
+                <p><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Import-from-QuickBooks-desktop.htm#Step2:Importtheexporteddatatoyourengagement">Download</a> the Caseware Cloud Import Utility.</p>
+            </li>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <p class="note"><b>Note:</b> Do not select the <b>Existing File option</b> as it&apos;s irrelevant to Cloud users. For more information, see the platform&apos;s <a href="https://docs.caseware.com/latest/webapps/en/Explore/Known-Issues/CaseWare-Cloud/Known-issues.htm">list of known issues.</a></p>
+            <li>
+                <p>In the <b>Import</b><b>From</b> drop down, select <b>QuickBooks.</b></p>
+            </li>
+            <li>
+                <p>In the <b>Version</b> drop-down, select <b>QuickBooks 2019 Canada/UK/AUS.</b></p>
+            </li>
+            <li>
+                <p>At <b>Import Path</b>, browse and select the <i>.cwq</i> file.</p>
+            </li>
+            <li>
+                <p>Specify the desired settings for the import (Fiscal Year End, Period Date Sequence).</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+            </li>
+            <li>
+                <p>In your engagement file, go to the <b>Data</b> page and select <b>Desktop Accounting Software</b>.</p>
+            </li>
+            <li>
+                <p>Select or drag-drop the zip file you&apos;ve saved in Step 8.</p>
+            </li>
+            <p>The data is imported to the engagement file and becomes available in the <b>Data</b> page.</p>
+        </ol>
+    </body>
+</html>

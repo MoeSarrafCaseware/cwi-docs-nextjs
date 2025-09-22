@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importeren vanuit QuickBooks-desktop</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresRCT.flsnp" /><p>Je kunt gegevens importeren uit QuickBooks desktop door ze te exporteren als een <i>.cwq-bestand</i> en het bestand vervolgens te importeren in je opdracht.</p>
+        <p class="note inline"><b>Let op:</b> Rekeningen met een nulsaldo worden niet automatisch geïmporteerd. Als je rekeningen met een nulsaldo wilt opnemen, moet je ze handmatig <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">toevoegen</a> en <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">toewijzen</a> aan de aangewezen groepen.</p>
+        <p>Controleer voordat je begint of:</p>
+        <ul>
+            <li>
+                <p><a href="https://www.microsoft.com/en-ca/download/details.aspx?id=17851">Microsoft .NET Framework 4.0</a> is geïnstalleerd op je werkstation.</p>
+            </li>
+            <li>
+                <p>De QuickBooks Export Utility is geïnstalleerd op je werkstation.</p>
+            </li>
+            <p>Je kunt het downloaden van <a href="https://my.caseware.com/">MyCaseware</a> op de <b>Support Bestanden</b> pagina.</p>
+        </ul>
+        <h2>Stap Gegevens exporteren vanuit QuickBooks</h2>
+        <p style="font-weight: bold;">Gegevens exporteren vanuit QuickBooks</p>
+        <ol>
+            <li>
+                <p>Open je QuickBooks desktopaccount en open vervolgens het bedrijfsbestand dat je wilt importeren.</p>
+            </li>
+            <li>
+                <p>Open de QuickBooks Export Utility.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer<b> QuickBooks 2008-2020 Canada</b>in het vervolgkeuzemenu <b>QuickBooks versie</b> <b> .</b></p>
+                    </li>
+                    <li>
+                        <p>selecteer <b>Browse....</b>in het veld <b>Exportpad</b> .</p>
+                    </li>
+                    <p>Het dialoogvenster Zoeken naar map wordt weergegeven.</p>
+                    <li>
+                        <p>Navigeer naar de plaats waar je het exportbestand wilt maken en selecteer <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Selecteer <b>Laatste transactiedatum opgeven</b> en voer de datum in die van toepassing is.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer in het vervolgkeuzemenu <b>Boekhoudmethode</b> de toepasselijke toerekeningsmethode.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Selecteer <b>Exporteren</b>.</p>
+            </li>
+            <p>De boekhoudgegevens van het QuickBooks Desktop-bestand worden geëxporteerd naar een <i>.cwq-bestandsindeling</i> op de opgegeven locatie.</p>
+        </ol>
+        <h2>Stap Importeer de geëxporteerde gegevens naar je engagement</h2>
+        <p style="font-weight: bold;">Om de geëxporteerde gegevens te importeren naar je engagement:</p>
+        <ol>
+            <li>
+                <p>Download het hulpprogramma Caseware Cloud importeren.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware hulpprogramma voor cloudimport (.exe)</a></p>
+            <li>
+                <p>Open het hulpprogramma, selecteer <b>Andere gegevensbron</b> en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer QuickBooksin de vervolgkeuzelijstImportFrom  .</p>
+            </li>
+            <li>
+                <p>Selecteer <b>QuickBooks 2019 Canada/UK/AUS</b>in de vervolgkeuzelijst <b>Versie</b>  <b>.</b></p>
+            </li>
+            <li>
+                <p>Blader en selecteer het <i>.cwq-bestand</i> onder <b>Import Path</b>.</p>
+            </li>
+            <li>
+                <p>Geef de gewenste instellingen op voor de import (Einde boekjaar, Periode datumvolgorde).</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Volgende</b>en vervolgens <b>Voltooien</b>.</p>
+            </li>
+            <li>
+                <p>Sla het gegenereerde zipbestand op met behulp van de weergegeven prompt.</p>
+            </li>
+            <li>
+                <p>Ga in je engagementbestand naar de pagina <b>Data</b> . De gegevenspagina opent zoon de tab Datasets.</p>
+            </li>
+            <li>
+                <p>Selecteer onder IMPORT FROM DATA CONNECTOR <b>QuickBooks Desktop</b> in de lijst met gegevensbronnen en selecteer vervolgens <b>Volgende</b>.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Zoek de gegevensconnector QuickBooks Desktop in de lijst op het tabblad Datasets." /></p>
+        <ol>
+            <li value="11">
+                <p>Selecteer of sleep het zipbestand dat je in stap 8 hebt opgeslagen.</p>
+            </li>
+        </ol>
+        <p class="indent">Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p>
+        <p class="indent">Er verschijnt een nieuwe pagina met de gegevens.</p>
+        <p class="indent">Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p>
+        <p class="indent">Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p>
+        <p class="indent">Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p>
+    </body>
+</html>

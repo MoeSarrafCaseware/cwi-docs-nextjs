@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Individuele opdrachten overdragen met CloudBridge</h1>
+        <p>Gebruik CloudBridge om gegevens over te brengen van een individuele Working Papers-opdracht naar de Cloud. Als je CloudBridge nog niet hebt geïnstalleerd, zie <a href="Get-CloudBridge.htm">CloudBridge ophalen</a>.</p>
+        <p MadCap:conditions="General.CA">Deze instructies zijn alleen van toepassing op CloudBridge (Alle regio&apos;s, Bulk). For bulk transfer instructions, see <a href="Transfer-engagements-in-bulk-with-CloudBridge.htm">Transfer engagements in bulk with CloudBridge</a>.</p>
+        <p MadCap:conditions="General.US">Deze instructies zijn alleen van toepassing op CloudBridge (Alle regio&apos;s, Bulk). For bulk transfer instructions, see <a href="Transfer-engagements-in-bulk-with-CloudBridge.htm">Transfer engagements in bulk with CloudBridge</a>.</p>
+        <h2><a name="Setup"></a>CloudBridge instellen</h2>
+        <p>Voordat je gegevens kunt overzetten van een Working Papers-afspraak naar Cloud, moet je CloudBridge instellen door het CloudBridge-document (CLBG) toe te voegen aan de Document Manager in Working Papers.</p>
+        <p><b>Het CLBG-document toevoegen aan Working Papers:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat je exemplaar van Working Papers geïntegreerd is met je Cloudfirma. Voor meer informatie, zie <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Working Papers koppelen met Cloud</a>.</p>
+            </li>
+            <li>
+                <p>Zorg ervoor dat je CloudBridge hebt geïnstalleerd.</p>
+            </li>
+            <li>
+                <p>Open je klantbestand in Working Papers.</p>
+            </li>
+            <li>
+                <p>Klik op het tabblad <b>Document</b> op <b>Van bibliotheek | CloudBridge</b>. Het dialoogvenster Documentbibliotheek wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Klik op <b>CLBG</b> en klik op <b>Toevoegen</b>.</p>
+            </li>
+        </ol>
+        <p>Het CLBG-document wordt weergegeven in de Document Manager.</p>
+        <h2><a name="Transfer"></a>Gegevens over betrokkenheid overdragen</h2>
+        <p>Nadat je het CLBG-document hebt toegevoegd aan een Working Papers-opdracht, kun je je proefbalans- en grootboekbelastinggegevens overbrengen naar je Cloud-opdracht (aanpassingen die zijn geboekt op groepen worden niet ondersteund, alleen rekeningsaldi).</p><div class="note"><p><b>Let op:</b></p>
+            <p>Je kunt ook de financiële gegevens van je klant meenemen in de overdracht. Om dit te doen, moet je aan de volgende voorwaarden voldoen:</p>
+            <ol>
+                <li>
+                    <p>Zorg ervoor dat <a href="../../Explore/Hybrid-Cloud/Integrate-Working-Papers-with-Cloud.htm">Working Papers is geïntegreerd met je Cloud site</a>.</p>
+                </li>
+                <li>
+                    <p>Neem je Working Papers engagement dossier<a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32.htm#CSHID=YEC">mee</a> .</p>
+                </li>
+                <li>
+                    <p>(Optioneel) Als je gegevens overzet vanuit een versie van Working Papers zonder licentie, kopieer en plak dan <b>cw:program/scripts/cloudbridge/index.html</b> in het URL-veld op de werkbalk van Working Papers en druk op <b>Enter</b> op je toetsenbord om CloudBridge te starten.</p>
+                </li>
+                <li>
+                    <p>Voltooi het onderstaande overdrachtsproces.</p>
+                </li>
+            </ol>
+            <p>Let op: rekeningen met een nulsaldo worden niet automatisch overgezet. Als je rekeningen met een nulsaldo wilt opnemen, moet je ze handmatig <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">toevoegen</a> en <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">toewijzen</a> aan de aangewezen groepen.</p></div><p><b>Betrokkenheidsgegevens overbrengen naar de cloud:</b></p>
+        <ol>
+            <li>
+                <p>Dubbelklik in Documentbeheer op <b>CLBG</b>. Het CLBG-document wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Kies in Stap 1 een geschikte entiteit en opdracht.</p>
+            </li>
+            <li>
+                <p>Kies in het gedeelte Stap 2 de juiste proefbalansgegevens om te exporteren.</p>
+            </li>
+            <li>
+                <p>In the Step 2 section, select the <b>Use remap file</b> check box. Het remap-bestand wordt gebruikt om de huidige accountmappingstructuur in Working Papers over te zetten naar je Cloud-overeenkomst.</p>
+                <p MadCap:conditions="General.CA">Als uw opdracht de standaard Werkdocumenten-toewijzing gebruikt of is gemaakt met de PEG-sjabloon, gebruik dan het remap-bestand in de map waarin u CloudBridge hebt geïnstalleerd<b>(C:\Program Files (x86)\Caseware\Scripts\cloudbridge</b>). Als je engagement een aangepaste mappingstructuur gebruikt die specifiek is voor je bedrijf, <a href="#Remap">maak dan een aangepast remap-bestand</a>en voeg het toe.</p>
+                <p MadCap:conditions="General.US">Als uw opdracht de standaard Werkdocumenten-toewijzing gebruikt, gebruik dan het remap-bestand in de map waarin u OnPoint CloudBridge hebt geïnstalleerd<b>(C:\Program Files (x86)\Caseware\Scripts\cloudbridge</b>). Als je verbintenis een aangepaste mappingstructuur gebruikt die specifiek is voor jouw bedrijf, moet je het standaard remap-bestand handmatig bewerken in een teksteditor (bijv. Notepad).</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Bestand kiezen</b> om te bladeren en het remap-bestand toe te voegen.</p>
+                <p MadCap:conditions="General.CA">(Optioneel) Als je andere journaalposten hebt met betrekking tot donaties, maaltijden en representatiekosten of buitenlandse reclame, wordt het onderdeel <b>Stap 3</b> op de pagina weergegeven. <b>In stap 3</b> kunt u GL-gegevens overbrengen naar het juiste fiscale werkblad in de Caseware ReviewComp opdracht. We voegen bijvoorbeeld <b>Giften aan klanten</b> toe aan het werkblad <b>Donaties</b> .</p>
+            </li>
+            <li>
+                <p>Als je klaar bent, selecteer je <b>Gegevens overdragen</b>.</p>
+            </li>
+        </ol><div MadCap:conditions="General.CA"><h3><a name="Remap"></a>Een aangepast remap-bestand maken (alleen Canada)</h3>
+            <p>Als je bedrijf een aangepaste mapping-structuur gebruikt, moet je je eigen remap-bestand (.ini) maken op basis van je aangepaste mapping-structuur.</p>
+            <p><b>Om een aangepast remap-bestand te maken:</b></p>
+            <ol>
+                <li>
+                    <p>Componenten kopiëren.</p>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Open je Working Papers-bestand.</p>
+                        </li>
+                        <li>
+                            <p>We raden je aan om een reservekopie van je bestand te maken voordat je verder gaat<b>(Bestand | Reservekopie</b>).</p>
+                        </li>
+                        <li>
+                            <p>Klik op het lint op <b>Bestand | Componenten kopiëren</b>. De wizard Onderdelen kopiëren wordt weergegeven.</p>
+                        </li>
+                        <li>
+                            <p>Klik op <b>Kopieer in dit bestand</b>.</p>
+                        </li>
+                        <li>
+                            <p>Klik op de pagina Bron selecteren op het tabblad <b>Bestand</b> en klik vervolgens op <b>Bladeren</b>.</p>
+                        </li>
+                        <li>
+                            <p>Navigeer naar <b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge\Caseware ReviewComp</b> en selecteer <b>Caseware ReviewComp.ac</b>en klik op <b>Volgende</b>.</p>
+                        </li>
+                        <li>
+                            <p>Selecteer <b>Groeperingen/toewijzingen</b>op de pagina <b>Componenten kopiëren</b> .</p>
+                        </li>
+                        <li>
+                            <p>Selecteer <b>Mapping</b> en klik op <b>Opties</b>. Het dialoogvenster Opties voor het kopiëren van kaarten wordt weergegeven.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p>Remap-nummers.</p>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Klik op <b>Opnieuw toewijzen</b>. Het dialoogvenster Opnieuw toewijzen wordt weergegeven.</p>
+                        </li>
+                        <li>
+                            <p>Sleep een toewijzingsnummer uit de lijst <b>Bestemmingsbestand toewijzingsnummers</b> en zet het neer in het juiste toewijzingsnummer in de lijst <b>Bronbestand toewijzingsnummers</b> .</p>
+                        </li>
+                        <li>
+                            <p>Herhaal het proces om extra toewijzingsnummers toe te wijzen.</p>
+                        </li>
+                        <li>
+                            <p>Als je klaar bent, klik je op <b>Toepassen</b> om je instellingen op te slaan en vervolgens op <b>OK</b>.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p>Genereer het .ini-bestand.</p>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Klik op <b>Annuleren</b>in het dialoogvenster Opties voor het kopiëren van kaarten.</p>
+                        </li>
+                        <li>
+                            <p>Klik in de wizard Onderdelen kopiëren op <b>Annuleren</b>.</p>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+            <p>Een remapbestand met de naam <b>copy.ini</b> wordt aangemaakt in de map van je werkdocumentenbestand<b>(C:\Program Files (x86)\CasewareData</b>).</p>
+            <p>Je kunt nu dit remap-bestand in CloudBridge gebruiken om je Working Papers-gegevens over te zetten naar je engagement.</p></div></body>
+</html>

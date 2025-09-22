@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Informatieverschaffing</h1>
+        <p>Het <b>Disclosure</b> analytic package omvat een reeks tests die zijn ontworpen om kritieke financiële relaties en transacties te identificeren en te evalueren voor een correcte toelichting op de jaarrekening. Het richt zich op het detecteren van materiële concentraties in transacties met verbonden partijen, afhankelijkheden met klanten en leveranciers en saldi in debiteuren en crediteuren. Het zorgt voor transparantie, brengt financiële risico&apos;s onder de aandacht en pakt potentiële kwetsbaarheden met betrekking tot financiële stabiliteit en liquiditeit aan.</p>
+        <p>Deze analytische test kan worden gebruikt om:</p>
+        <ul>
+            <li>
+                <p>Transacties met verbonden partijen detecteren en materiële saldi identificeren voor een juiste toelichting op de jaarrekening</p>
+            </li>
+            <li>
+                <p>Risico&apos;s van omzetconcentratie en te grote afhankelijkheid van specifieke klanten voor de kasstroom benadrukken</p>
+            </li>
+            <li>
+                <p>De impact op de financiële stabiliteit van grote klanten beoordelen en potentiële liquiditeitskwetsbaarheden identificeren</p>
+            </li>
+            <li>
+                <p>Het risico van een te grote afhankelijkheid van een beperkt aantal leveranciers voor uitstaande verplichtingen.</p>
+            </li>
+            <li>
+                <p>Evalueer de impact van grote klanten op financiële stabiliteit en duurzaamheid.</p>
+            </li>
+            <li>
+                <p>Mogelijke kwetsbaarheden in het kasstroombeheer en de relaties met leveranciers als gevolg van de concentratie in crediteuren.</p>
+            </li>
+        </ul>
+        <h2>Analysevelden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>REFERENTIE</b> Referentieveld(en) - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld Entry ID voor de grootboekdataset. Ze worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Reference fields are predefined in the package and cannot be modified.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om deze test uit te voeren:</p>
+        <ul>
+            <li>
+                <p><b>Drempel(%)</b> Stel het percentage derden in dat moet worden geanalyseerd.</p>
+            </li>
+            <li>
+                <p><b>Selecteer groeperingskolom</b> Verwijst naar de kolom die informatie groepeert ten behoeve van de test, bijvoorbeeld de identificatiecode van de kolom leveranciers.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Overzicht gerelateerde partij</b> Identificeert belangrijke transacties met verbonden partijen om ervoor te zorgen dat deze correct in de jaarrekening worden vermeld.</p>
+            </li>
+            <li>
+                <p><b>JE - Klantenconcentratie</b> Detecteert klanten die 10% of meer bijdragen aan de totale omzet om afhankelijkheidsrisico&apos;s en financiële duurzaamheid te beoordelen.</p>
+            </li>
+            <li>
+                <p><b>Disclosure AR:</b> Identificeert klanten met 10% of meer van de debiteurensaldi om liquiditeitsrisico&apos;s en kasstroomconcentratie te evalueren.</p>
+            </li>
+            <li>
+                <p><b>JE - Aankoopconcentratie</b> Identificeert leveranciers die verantwoordelijk zijn voor 10% of meer van de totale uitgaven om afhankelijkheidsrisico&apos;s en operationele kwetsbaarheden te beoordelen.</p>
+            </li>
+            <li>
+                <p><b>AP-Openbaarmaking AP</b> Identificeert leveranciers met 10% of meer van de crediteurensaldi om concentratierisico&apos;s en leveranciersrelaties te analyseren.</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Het analysepakket <b>Disclosures</b> uitvoeren:</p>
+        <ol>
+            <li>
+                <p>Filter indien nodig de gegevens tot de subset die je wilt analyseren, anders wordt de analyse uitgevoerd op het hele gegevensbestand.</p>
+            </li>
+            <li>
+                <p>Zorg ervoor dat je de nodige referentievelden hebt geselecteerd.</p>
+            </li>
+            <li>
+                <p>Selecteer de te gebruiken testconfiguratie uit de volgende opties:</p>
+                <ul>
+                    <li>
+                        <p>AP-Openbaarmaking AP</p>
+                    </li>
+                    <li>
+                        <p>Informatieverschaffing</p>
+                    </li>
+                    <li>
+                        <p>JE - Klantenconcentratie</p>
+                    </li>
+                    <li>
+                        <p>JE - Aankoopconcentratie</p>
+                    </li>
+                    <li>
+                        <p>Overzicht gerelateerde partij</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Voor de <b>openbaarmakings-AP</b>, <b>openbaarmakings-AP</b>, <b>klantconcentratie</b>of <b>inkoopconcentratietest</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Bepaal de drempel (%) van derden om te analyseren.</p>
+                    </li>
+                    <li>
+                        <p>Voer de groeperingskolom in die derden in de GL identificeert.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer de kolom voor bedragen.</p>
+                    </li>
+                    <li>
+                        <p>Het resultaat wordt gepresenteerd als een ranglijst.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Voor de test <b>Overzicht verbonden partijen</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Bepaal de drempel (%) van derden om te analyseren.</p>
+                    </li>
+                    <li>
+                        <p>Voer de groeperingskolom in die derden in de GL identificeert.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer de kolom voor bedragen.</p>
+                    </li>
+                    <li>
+                        <p>Het resultaat wordt weergegeven in een tabel die transacties groepeert per verbonden partij.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

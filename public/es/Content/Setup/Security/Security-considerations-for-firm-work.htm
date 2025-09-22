@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Information about how administrators and partners can control access to content on Cloud. " />
+    </head>
+    <body>
+        <h1>Consideraciones de seguridad</h1>
+        <h2 id="roles-and-sharing">Roles and sharing</h2>
+        <p>A security role is a set of permissions that you can assign to your users on Cloud. Each role enables your staff to do one or more of the following things:</p>
+        <ul>
+            <li>
+                <p>view content</p>
+            </li>
+            <li>
+                <p>update existing content</p>
+            </li>
+            <li>
+                <p>create new content</p>
+            </li>
+            <li>
+                <p>delete content</p>
+            </li>
+            <li>
+                <p>share content with other users</p>
+            </li>
+        </ul>
+        <p>Your users can access information based on the roles that have been assigned to them. You can apply these roles very broadly, creating a security architecture that requires very little maintenance. Alternatively, you can assign these roles more selectively, providing you better control over who can access each file or activity on Cloud.</p>
+        <h2 id="firm-wide-role">Assigning a system-wide role</h2>
+        <p>This is the broadest way to grant access to content on Cloud. On a user&apos;s profile, you can grant security roles for all relevant content across the entire organization.</p>
+        <p><img src="../../Resources/Images/cloud-model-partner-630x240.png" alt="Firm-wide roles give this user permissions for all entities in a firm and for all content within these entities." /></p>
+        <p>For example, Abco Smith has the <i>Settings Admin</i> role and the <i>Viewer</i> role applied as system-wide roles.</p>
+        <p><img src="../../Resources/Images/staff-edit-abco-smith-1021x344.png" alt="Firm-Wide Roles can be granted from the Staff page." /></p>
+        <p>The <i>Settings Admin</i> role enables Abco to ready and modify the <b>Settings</b> page. The <i>Viewer</i> role lets him to see the details for all entities in his organization, and he can also view all files and activities for those entities.</p>
+        <h2 id="entity-wide-role">Sharing entities</h2>
+        <p>If you do not want a user to view all content in an organization, you can instead grant access to information on a client or departmental basis. When you share an entity, you grant a security role for the entity itself and for all files or activities under that entity.</p>
+        <p><img src="../../Resources/Images/cloud-model-manager-630x240.png" alt="Entity-wide roles give this user permission to this entity and to all content within it." /></p>
+        <p>For example, Jenkins Smith has been assigned the <i>Editor</i> role on the client entity <b>Diamond Jewelers</b>.</p>
+        <p><img src="../../Resources/Images/security-considerations-entitywide-630x409.png" style="border:1px solid #3f66a3" alt="This user has been granted the Editor role for a specific entity." /></p>
+        <p>When Jenkins accesses Cloud, he will be able to see the client entity for Diamond Jewelers. With the <i>Editor</i> role, he can edit the details for this entity, and he can also create and edit files and activities under this entity.</p>
+        <h2 id="content-specific-role">Sharing files and activities</h2>
+        <p>If you know that users should not have access to all content under an entity, you can instead grant access to each file or activity individually. This enables you to have very specific control over the information that your users can access.</p>
+        <p><img src="../../Resources/Images/cloud-model-associate-630x240.png" alt="This user can see this entity, but they only have access to one of the files within it." /></p>
+        <p>For example, Carl John is working on the audit for Superior Furniture. His manager will assign him some files for this client, but she does not want John to have access to all client files.</p>
+        <p>First, she assigns Carl the <i>Entity Access</i> role on Superior Furniture. This enables Carl to see the entity, but it doesn&apos;t grant access to any files or activities under the entity.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-630x299.png" style="border:1px solid #3f66a3" alt="This user has the Entity Access role for the selected entity." /></p>
+        <p>Next, she shares the VarianceAnalysis.xlsx file and she assigns the <i>Owner</i> role to Carl.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-2-630x272.png" style="border:1px solid #3f66a3" alt="This user has the Owner role for the selected file." /></p>
+        <p>Carl now has access to this file on Cloud. With the <i>Owner</i> role, he can view, edit, or even delete the file, and he can share this file with other Cloud users.</p>
+        <h2 id="limited-content">Limited content</h2>
+        <p>Normally, when you create new activities or add files to Cloud, users with a system-wide role for this type of content will be able to access these new items by default. Users who have roles on the entity for the new activities or files will also be able to access them.</p>
+        <p>You can choose to further restrict access to any files, activities, or entities by making them <i>Limited</i>. Limited content is only visible to the owner and staff members with the <i>Admin</i> role. The owner can share the content by granting roles to other staff members as normal, but it will not be visible to any other users.</p>
+        <p>Limited content has a small lock icon in the name field.</p>
+        <p><img src="../../Resources/Images/create-private-file-5-630x171.png" style="border:1px solid #3f66a3" alt="This document on the Files page is limited. Users will not be able to see this file unless the owner assigns them a specific role for the file." /></p>
+    </body>
+</html>

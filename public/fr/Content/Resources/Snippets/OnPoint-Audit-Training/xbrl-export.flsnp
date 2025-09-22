@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Après avoir examiné les balises XBRL, vous pouvez exporter le rapport XBRL pour vérifier qu&apos;il est généré comme prévu.</p>
+        <p><b>Pour exporter un rapport XBRL :</b></p>
+        <ol>
+            <li>
+                <p>Select the <b>XBRL</b> (<img src="../../Icons/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon in the top menu.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>XBRL Export</b> , sélectionnez la taxonomie XBRL que vous souhaitez exporter s&apos;il y a plusieurs options, puis sélectionnez <b>Export.</b></p>
+                <p><img src="../../Images/xbrl-popup-export.png" alt="La fenêtre contextuelle XBRL." /></p>
+            </li>
+            <li>
+                <p>S&apos;il existe des faits en double dans les états financiers, la boîte de dialogue Duplicate XBRL fact apparaît. Les faits en double se produisent lorsque la même étiquette est présente à plusieurs endroits dans les états financiers et contient des valeurs différentes. Elles sont souvent dues à des erreurs d&apos;arrondi.</p>
+                <p>Vous pouvez sélectionner les valeurs dupliquées à exporter dans la boîte de dialogue Duplicate XBRL Fact :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez un fait en double à corriger, puis sélectionnez <b>Corriger</b>.</p>
+                        <p><img src="../../Images/duplicate-xbrl-fact-dialog.png" alt="La boîte de dialogue Dupliquer un fait XBRL." style="width: 773px;height: 373px;" /></p>
+                    </li>
+                    <li>
+                        <p>Dans la boîte de dialogue Corriger le fait XBRL dupliqué, vous pouvez sélectionner les valeurs pour ouvrir les états financiers à l&apos;emplacement du fait étiqueté afin de déterminer la valeur à exporter.</p>
+                        <p>Vous pouvez déplacer et redimensionner les boîtes de dialogue Duplicate XBRL Fact et Correct Duplicate XBRL Fact pour visualiser le contenu de vos états financiers.</p>
+                        <p><img src="../../Images/xbrl-correct-duplicate-xbrl-fact-dialog.png" alt="Les boîtes de dialogue Duplicate XBRL Fact et Correct Duplicate XBRL Fact." style="width: 970px;height: 509px;" /></p>
+                    </li>
+                    <li>
+                        <p>Identifiez la valeur que vous souhaitez exporter et sélectionnez <b>Continuer.</b></p>
+                        <p>Si vous souhaitez combiner les valeurs pour les exporter, réglez l&apos;option <b>Combiner les valeurs</b> sur <b>Oui</b>et sélectionnez un nombre quelconque de valeurs à combiner. Si la balise est numérique, les valeurs sélectionnées seront additionnées. S&apos;il est alphanumérique, il concatène les valeurs.</p>
+                        <p><img src="../../Images/xbrl-correct-duplicate-xbrl-fact-dialog-2.png" alt="La boîte de dialogue Corriger le fait XBRL dupliqué." style="width: 701px;height: 527px;" /></p>
+                    </li>
+                    <li>
+                        <p>Répétez les étapes ci-dessus jusqu&apos;à ce que vous ayez corrigé tous les doublons, puis sélectionnez <b>Continuer.</b></p>
+                        <p class="note"><b>Remarque :</b> Vos choix n&apos;ont aucun impact sur les états financiers et n&apos;affectent que la génération des rapports. Chaque fois que vous produisez un rapport XBRL, vous devez à nouveau corriger les faits en double.</p>
+                        <p><img src="../../Images/xbrl-duplicate-xbrl-fact-proceed.png" alt="La boîte de dialogue Dupliquer un fait XBRL." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Si le rapport contient des erreurs de validation, celles-ci sont signalées à ce stade. Sélectionnez <b>Annuler</b> pour annuler le processus d&apos;exportation et corriger les erreurs ou sélectionnez <b>Continuer</b> pour poursuivre le processus d&apos;exportation.</p>
+                <p><img src="../../Images/xbrl-validation-failed-dialog.png" alt="La boîte de dialogue Échec de la validation XBRL." /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Generate XBRL Review, vous pouvez revoir le contenu du rapport avant de le générer.</p>
+                <p>La boîte de dialogue comporte quatre onglets. Sur chaque onglet, vous pouvez sélectionner <b>Exporter CSV</b> pour exporter le contenu de l&apos;onglet vers un fichier CSV afin de le revoir plus facilement.</p>
+                <p><img src="../../Images/xbrl-generate-xbrl-review-dialog.png" alt="La balise Errors de la boîte de dialogue Generate XBRL Review." style="width: 863px;height: 522px;" /></p>
+                <p>Les quatre onglets sont les suivants</p>
+                <ul>
+                    <li>
+                        <p><b>Erreurs</b> - Indique les erreurs de diagnostic qui n&apos;ont pas été détectées plus tôt dans le processus, telles que les balises contenant des données d&apos;un type incorrect ou les balises qui ne contiennent pas les phrases requises.</p>
+                    </li>
+                    <li>
+                        <p><b>Balises obligatoires</b> - Indique s&apos;il manque au rapport des balises considérées comme obligatoires par l&apos;organisme de réglementation concerné. Les balises manquantes sont affichées en rouge et un résumé de référence rapide est présenté dans l&apos;onglet correspondant à cette zone.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-mandatory-tags.png" style="width: 803px;height: 260px;" alt="L&apos;onglet Balises obligatoires de la boîte de dialogue Générer une révision XBRL." /></p>
+                    </li>
+                    <li>
+                        <p><b>Étiquettes du système</b> - Liste les étiquettes, la valeur et les informations pertinentes concernant les étiquettes du système dans votre rapport. Cela peut être utile pour confirmer que les valeurs en double traitées plus tôt dans le processus ont été traitées correctement.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-system-tags.png" style="width: 814px;height: 297px;" alt="L&apos;onglet System Tags de la boîte de dialogue Generate XBRL Review." /></p>
+                    </li>
+                    <li>
+                        <p><b>Balises personnalisées</b> - Liste les balises que vous avez appliquées dans l&apos;engagement.</p>
+                        <p><img src="../../Images/xbrl-generate-xbrl-review-custom-tags.png" style="width: 819px;height: 302px;" alt="L&apos;onglet Balises personnalisées de la boîte de dialogue Générer une révision XBRL." /></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Lorsque vous avez terminé d&apos;examiner les informations contenues dans la boîte de dialogue, sélectionnez <b>Continuer pour générer iXBRL</b>.</p>
+            </li>
+        </ol>
+        <p>Le rapport html iXBRL avec le nom de l&apos;entreprise, la date et l&apos;heure de l&apos;exportation est sauvegardé dans la page <b>Documents</b> de votre engagement.</p>
+    </body>
+</html>

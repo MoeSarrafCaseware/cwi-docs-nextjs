@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Voorraad beschreven</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. In dit onderwerp worden de velden in het subgrootboek Voorraad bij de hand beschreven.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transactie-ID <br /><code>(inventory_on_hand_transaction_id</code>)</td>
+                    <td>
+                        <p>De transactie-ID gekoppeld aan de grootboekauditrapportagenormen (“Audit Data Standards” (ADS)) Procure to Pay of Order to Cash.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadproduct-ID <br /><code>(inventory_on_hand_inventory_product_id</code>)</td>
+                    <td>
+                        <p>De product-ID is een code die een artikel in uw voorraad apart identificeert.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Serienummer <br /><code>(inventaris_bij_hand_serieel_nummer</code>)</td>
+                    <td>
+                        <p>Het nummer gekoppeld aan een individueel productartikel dat wordt gebruikt voor tracking en beheer. Een bedrijf koopt bijvoorbeeld 10 computers, waarbij aan elke computer een individueel serienummer wordt toegekend.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Zesde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Partijnummer <br /><code>(inventory_on_hand_lot_number</code>)</td>
+                    <td>
+                        <p>Het nummer gekoppeld aan een product dat wordt gebruikt voor het tracken en beheer van de partij.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Vijfde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Locatie-ID <br /><code>(inventaris_bij_hand_locatie_id</code>)</td>
+                    <td>De unieke ID van een specifieke locatie in een afdeling of site waar de voorraad in/uitstroomt of bewaard. Gegevenstype Tekst vereist: No</td>
+                </tr>
+                <tr>
+                    <td>Voorraad gehouden voor leveranciers <br /><code>(inventory_on_hand_inventory_held_for_vendors</code>)</td>
+                    <td>
+                        <p>Waar, als de voorraad fysiek aanwezig is en wordt vastgehouden voor leveranciers; Onwaar, in alle andere gevallen.</p>
+                        <p>Gegevenstype Enum</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: waar of onwaar.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraad gehouden voor klanten <br /><code>(inventory_on_hand_inventory_held_for_customers</code>)</td>
+                    <td>
+                        <p>Waar, als de voorraad fysiek aanwezig is en wordt vastgehouden voor klanten; Onwaar, in alle andere gevallen.</p>
+                        <p>Gegevenstype Enum</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: waar of onwaar.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraad gehouden voor anderen <br /><code>(inventory_on_hand_inventory_held_for_others</code>)</td>
+                    <td>Waar, als de voorraad fysiek aanwezig is en wordt vastgehouden voor anderen dan klanten of leveranciers; Onwaar, in alle andere gevallen. Gegevenstype Enum Vereist: Nee Mogelijke waarden: waar of onwaar.</td>
+                </tr>
+                <tr>
+                    <td>Vervallen of beschadigde voorraad <br /><code>(inventory_on_hand_obsolete_or_damaged_inventory</code>)</td>
+                    <td>
+                        <p>Deze voorraadstatus identificeert traag verkopende, beschadigde of vervallen voorraadhoeveelheden.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Example values: slow moving, damaged, or obsolete</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BIN-ID <br /><code>(inventaris_bij_hand_bin_id</code>)</td>
+                    <td>
+                        <p>De optionele ID van een voorraadsublocatie. Een code die in een voorraadbeheersysteem wordt gebruikt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Vierde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BIN-locatie <br /><code>(inventaris_bij_hand_bin_locatie</code>)</td>
+                    <td>De beschrijving van de in Bin-ID geïdentificeerde voorraadsublocatie. Gegevenstype Tekst vereist: No</td>
+                </tr>
+                <tr>
+                    <td>Hoeveelheid voorraad <br /><code>(inventaris_bij_hand_hoeveelheid</code>)</td>
+                    <td>
+                        <p>De voorraadtelling waarvan de meeteenheid wordt bepaald in Meeteenheid bevoorrading.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kostprijsberekeningsmethode voorraad <br /><code>(inventaris_bij_hand_inventaris_kosten_methode</code>)</td>
+                    <td>
+                        <p>De beschrijving van de kostenberekening, zoals LIFO, FIFO, Gemiddelde, Standaard en specifieke identificatie.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadkosten <br /><code>(inventaris_bij_hand_voorraad_kosten</code>)</td>
+                    <td>
+                        <p>De kosten per eenheid volgens de methode in Voorraadkosten.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Systeem voor Beschikbare hoeveelheid <br /><code>(inventaris_bij_hand_hoeveelheid_bij_hand_systeem</code>)</td>
+                    <td>
+                        <p>Ofwel de beschikbare hoeveelheid bij de laatste fysieke telling per systeem, ofwel de berekende beschikbare hoeveelheid.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vanaf-datum voorraad <br /><code>(inventaris_in_hand_voorraad_als_van_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop u de beschikbare hoeveelheid van een voorraadartikel begint bij te houden.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UOM-code Voorraadkosten <br /><code>(inventory_on_hand_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>De code van de meeteenheid voor de voorraadkosten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit <br /><code>(inventaris_bij_hand_bedrijfseenheid_code</code>)</td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meeteenheid voorraadaankoop <br /><code>(inventory_on_hand_inventory_purchasing_uom</code>)</td>
+                    <td>
+                        <p>De primaire meeteenheid om de hoeveelheden van de door de organisatie aangekochte goederen in uit te drukken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meeteenheid bevoorrading <br /><code>(inventaris_bij_hand_inventaris_voorraad_uom</code>)</td>
+                    <td>
+                        <p>De meeteenheid om de hoeveelheden artikelen in de voorraad in uit te drukken.<![CDATA[
+]]></p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meeteenheid voorraadverkoop <br /><code>(inventory_on_hand_inventory_selling_uom</code>)</td>
+                    <td>
+                        <p>De primaire meeteenheid om de hoeveelheden aan verkochte voorraad in uit te drukken.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Standaardkosten <br /><code>(inventaris_bij_hand_standaard_kosten</code>)</td>
+                    <td>
+                        <p>Indien gebruikt, de standaardkosten per eenheid.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gemiddelde kosten <br /><code>(inventaris_bij_hand_gemiddelde_kosten</code>)</td>
+                    <td>
+                        <p>Indien gebruikt, de gemiddelde kosten per eenheid.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Specifieke kosten <br /><code>(inventaris_bij_hand_specifieke_kosten</code>)</td>
+                    <td>
+                        <p>Indien gebruikt, de specifieke kosten per eenheid.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beschikbare hoeveelheid - fysiek aantal <br /><code>(inventory_on_hand_quantity_on_hand_physical_count</code>)</td>
+                    <td>
+                        <p>De beschikbare hoeveelheid bij de laatste fysieke telling.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum laatste telling <br /><code>(inventory_on_hand_last_count_date</code>)</td>
+                    <td>
+                        <p>De datum van laatste telling.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Catalogusprijs voorraad <br /><code>(inventory_on_hand_inventory_list_price</code>)</td>
+                    <td>
+                        <p>De catalogus- of aanbevolen verkoopprijs</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadaankoop lopend jaar <br /><code>(inventory_on_hand_inventory_purchase_year_to_date</code>)</td>
+                    <td>
+                        <p>De aangekochte hoeveelheden voor deze locatie in het lopende jaar.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorraadverkoop lopend jaar <br /><code>(inventory_on_hand_inventory_sold_year_to_date</code>)</td>
+                    <td>
+                        <p>De verkochte hoeveelheden vanaf deze locatie in het lopende jaar.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Valuta locatie <br /><code>(inventaris_bij_hand_locatie_valuta</code>)</td>
+                    <td>
+                        <p>De lokale valuta.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>We suggest that you validate your organization&apos;s engagement files to determine if they are ready for <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Migrate-engagement-files-to-Cloud">migration to Cloud</a>. Some common issues that will prevent validation of a file include:</p>
+        <ul>
+            <li>
+                <p>The file is corrupt</p>
+            </li>
+            <li>
+                <p>The file is a sync copy rather than a parent file</p>
+            </li>
+            <li>
+                <p>The file&apos;s name includes unicode characters</p>
+            </li>
+            <li>
+                <p>The file&apos;s version is older than Working Papers 2011</p>
+            </li>
+            <li>
+                <p>The compressed file does not include subfolders</p>
+            </li>
+        </ul>
+        <p>If possible, ensure that you resolve these issues prior to validation. If any of these issues are discovered after a validation attempt, resolve them and try the validation again.</p>
+        <p><b>To validate your engagement files for migration:</b></p>
+        <ol>
+            <li>
+                <p>Right-click the <b>Migration Manager</b> executable and click <b>Run as administrator</b>.</p>
+            </li>
+            <li>
+                <p>On the main menu, click <b>Validate Files</b>.</p>
+            </li>
+            <li>
+                <p>Click the folder icon and browse for the folder containing the files that you want to validate. Click <b>Select Folder</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>VALIDATE</b>.</p>
+            </li>
+        </ol>
+        <p>The results of the validation process display in the validation report. For more detailed information, view the automated log file by clicking the link provided. Click <b>CLOSE</b> to return to the main menu.</p>
+    </body>
+</html>

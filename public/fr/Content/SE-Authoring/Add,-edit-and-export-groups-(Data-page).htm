@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Ajouter, modifier et exporter des groupes (page Données)</h1><MadCap:snippetBlock src="../Resources/Snippets/se-disclaimer-for-data-page.flsnp" /><p>Vous pouvez ajouter des groupes ou modifier les propriétés des groupes existants. Vous pouvez également exporter des groupes vers un fichier CSV afin de revoir leurs propriétés ou d&apos;apporter des modifications facilement.</p>
+        <h2>Ajouter un groupe (page de données)</h2>
+        <p>Vous pouvez ajouter manuellement des groupes à une structure de regroupement.</p>
+        <p style="font-weight: bold;">Pour ajouter un groupe :</p>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> , puis sélectionnez <b>Ajouter</b> (<img src="../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Ajouter un groupe.</b></p>
+            </li>
+            <p>La boîte de dialogue Propriétés du groupe s&apos;affiche.</p>
+            <li>
+                <p>Définir les propriétés du nouveau groupe.</p>
+                <p>Reportez-vous à la section <a href="Group-properties.htm">Propriétés du groupe</a> pour une description de chaque propriété du groupe.</p>
+            </li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b> pour ajouter le groupe.</p>
+            </li>
+        </ol>
+        <h2><a name="Edit"></a>Modifier un groupe (page de données)</h2>
+        <p>Vous pouvez modifier les propriétés d&apos;un groupe dans la structure.</p>
+        <p style="font-weight: bold;">Pour modifier un groupe :</p>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> , puis sélectionnez la structure de regroupement dans le volet de gauche :</p>
+            </li>
+            <ul>
+                <li>Groupements<b>financiers</b></li>
+                <li>Groupements<b>fiscaux</b></li>
+                <li>Groupements<b>prescrits</b> .</li>
+            </ul>
+            <li>
+                <p>Sélectionnez le groupe que vous souhaitez modifier, puis sélectionnez <b>Editer</b> (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour ouvrir la boîte de dialogue Propriétés du groupe.</p>
+            </li>
+            <p class="tip"><b>Conseil :</b> Vous pouvez rechercher des groupes en utilisant le champ de recherche situé dans le coin supérieur droit de la page.</p>
+            <li>
+                <p>Modifiez les propriétés du groupe si nécessaire.</p>
+            </li>
+            <p>Reportez-vous à la section <a href="Group-properties.htm">Propriétés du groupe</a> pour une description de chaque propriété du groupe.</p>
+            <li>
+                <p>Une fois que vous avez terminé, sélectionnez <b>Enregistrer.</b></p>
+            </li>
+        </ol>
+        <h2><a name="Reorder"></a>Réorganiser un groupe (page de données)</h2>
+        <p>Vous pouvez faire glisser et déposer des groupes dans la page Données pour les réorganiser. Naviguez jusqu&apos;à la structure de regroupement de la page Données et faites glisser le groupe que vous souhaitez réorganiser à l&apos;endroit désiré.</p>
+        <p>Notez que vous ne pouvez utiliser le glisser-déposer pour réorganiser les groupes que dans les conditions suivantes :</p>
+        <ul>
+            <li>
+                <p>Les groupes que vous réordonnez sont tous des groupes frères dans la structure de regroupement. Vous ne pouvez pas glisser-déposer un groupe enfant pour qu&apos;il soit au même niveau ou à un niveau supérieur que le groupe parent.</p>
+            </li>
+            <li>
+                <p>Tous les groupes de frères et sœurs sont réduits ou n&apos;ont pas de groupes d&apos;enfants.</p>
+            </li>
+        </ul>
+        <h2>Exporter des groupes vers un fichier CSV</h2>
+        <p>You can export groups to a CSV file to review the properties. Vous pouvez également les exporter pour que tous les groupes soient alignés et que vous puissiez facilement apporter des modifications, puis enregistrer le fichier et l&apos;importer.</p>
+        <p>La réimportation des groupes conserve toutes les propriétés des groupes existants. Seules les mises à jour des propriétés existantes et l&apos;ajout de valeurs aux propriétés vides prennent effet.</p>
+        <p>Par exemple, vous pouvez exporter des groupes vers un fichier CSV et ajouter facilement la valeur<b>&quot;Y</b>&quot; à la propriété <b>Groupe par défaut</b> pour 15 groupes en copiant-collant<b>&quot;Y</b>&quot; sur 15 lignes. Une fois que vous avez terminé, enregistrez le fichier et <a href="Import-groupings-from-a-CSV-or-an-Excel-(Data-page).htm">réimportez-le</a> .</p>
+        <p class="note inline"><b>Remarque :</b> Lorsque vous exportez des groupes, l&apos;ordre des groupes dans la structure lors de l&apos;exportation est conservé lorsque vous les importez à nouveau. Dans le fichier CSV, cependant, les groupes seront affichés par ordre alphabétique ou numérique en fonction des valeurs de la première colonne. Voir <a href="#Reorder">Réorganiser un groupe</a> pour savoir comment réorganiser votre structure de regroupement dans la page <b>Données.</b> </p>
+        <p>Le fichier CSV exporté présente 19 colonnes pour les propriétés du groupe et leurs valeurs dans l&apos;ordre suivant :</p>
+        <ol>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Number">Nombre</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Consiste">Nom cohérent</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Allow">Allow account assignment</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Type">Type</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Sign">Signe</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Classifi">Classification du groupe</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Adjust">Ajuster la préférence du groupe</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Account">Restrictions sur le solde du compte</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Link">Lien vers un groupe dans la structure de regroupement du code des impôts</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Link">Lien vers un groupe dans la structure de regroupement prescrite </a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Cycle">Cycle</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Cycle">Zone</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Contrary">Nom contraire</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Inconsis">Nom incohérent</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Breakdow">Répartition par dimension</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Include">Inclure les dimensions</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Reassign">Réaffectation de l&apos;objectif pour les comptes contraires</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Default">Groupe par défaut</a></li>
+            <li style="font-weight: bold;"><a href="Group-properties.htm#Componen">Composants</a></li>
+        </ol>
+    </body>
+</html>

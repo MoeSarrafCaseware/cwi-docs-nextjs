@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Détails du processus décrits</h1>
+        <p>Lorsque vous <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importez des</a> transactions du grand livre à partir d&apos;un fichier CSV ou Excel, vous devez mettre en correspondance les champs afin que les transactions s&apos;affichent correctement dans la mission.</p>
+        <p>Cette rubrique décrit les champs de la catégorie <b>DÉTAILS DU PROCESSUS</b> qui apparaissent dans le jeu de données du grand livre.</p>
+        <p>Notez que certains champs sont obligatoires pour que certains tests d&apos;analyse de données fonctionnent correctement. Pour en savoir plus, voir <a href="CSV-transaction-file-requirements.htm#Mandator2">Champs obligatoires pour l&apos;analyse des données.</a></p>
+        <h2>Numéro du document d&apos;origine<code>(originating_document_number)</code></h2>
+        <p>Numéro d&apos;identification du document original qui lance le flux du processus de gestion. Il s&apos;agit du document qui est le précurseur de cette transaction enregistrée. <br />Exemples : &quot;PO-001&quot;, &quot;132134&quot;.</p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>Moins de 2 500 valeurs uniques.</li>
+                <li>Les données de la colonne applicable dans le fichier d&apos;importation de la transaction (le fichier CSV) doivent être affectées aux valeurs de <code>numéro de document d&apos;origine</code> ci-dessous :<![CDATA[ 
+					]]><ul><li>GJ - Journal général</li><li>AR - Ajustements des comptes clients (crédits, retours, autres ajustements)</li><li>PC - Contrats d&apos;achat</li><li>CD - Décaissements</li><li>AP - Ajustements des comptes fournisseurs (crédits, retours, autres ajustements)</li><li>PR - Demandes d&apos;achat</li><li>CR - Encaissements</li><li>FA - Immobilisations</li><li>PO - Bons de commande</li><li>SJ - Journal des ventes (liste des factures de vente)</li><li>IA - Actifs d&apos;investissement</li><li>GS - Marchandises expédiées</li><li>PJ - Journal des achats (liste des factures d&apos;achat)</li><li>SC - Contrats de vente</li><li>GR - Marchandises reçues</li><li>PL - Journal des salaires</li><li>SO - Commandes clients</li><li>OT - Autres</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

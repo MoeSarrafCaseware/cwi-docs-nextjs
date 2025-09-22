@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Introduction à l&apos;étude de cas Caseware ReviewComp</h1>
+        <h2>Ce qui est compris</h2>
+        <ul>
+            <li>
+                <p>Créer une phase d&apos;engagement et de planification</p>
+            </li>
+            <li>
+                <p>Phase d&apos;interrogation et de travail sur le terrain</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Trial balance (TB) Import/Mapping</p>
+                    </li>
+                    <li>
+                        <p>Écritures d&apos;ajustement</p>
+                    </li>
+                    <li>
+                        <p>Matérialité/champ d&apos;application</p>
+                    </li>
+                    <li>
+                        <p>Analyse/annotation/questions</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>États financiers</p>
+            </li>
+            <li>
+                <p>Verrouiller et reporter un engagement</p>
+            </li>
+        </ul>
+        <h2>Conditions préalables</h2>
+        <p>Avant de commencer cette étude de cas, assurez-vous d&apos;avoir déjà créé l&apos;entité ACME Inc. et d&apos;avoir mis en place un contact client fictif avec une adresse électronique personnelle à laquelle vous pouvez accéder.</p>
+        <MadCap:pageBreak />
+        <h2>Exercice préalable A : Créer une entité</h2>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre compte Caseware Cloud.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Nouveau</b> (<img src="../../Resources/Icons/New.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) situé dans la barre de navigation supérieure.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Entité</b>.</p>
+            </li>
+            <p>La boîte de dialogue <b>Nouvelle entité</b> apparaît.</p>
+            <li>
+                <p>Remplissez les champs comme indiqué dans la section <b>Informations générales</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/1 Create Entity - General Info.png" /></p>
+            <li>
+                <p>Remplissez les champs comme indiqué sous <b>Téléphone</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/2 Create Entity - Phone.png" /></p>
+            <li>
+                <p>Remplissez les champs comme indiqué sous <b>Profil social.</b></p>
+            </li>
+            <p> <img src="../../Resources/Images/3 Create Entity - Social Profile.png" /></p>
+            <li>
+                <p>Remplissez les champs comme indiqué sous <b>Business.</b></p>
+            </li>
+            <p><img src="../../Resources/Images/4 Create Entity - Business.png" /></p>
+            <li>
+                <p>Cliquez sur <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercice préalable B : Créer un contact</h2>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre compte Caseware Cloud.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Nouveau</b> (<img src="../../Resources/Icons/New.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) situé dans la barre de navigation supérieure.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Contact</b>.</p>
+            </li>
+            <p>La boîte de dialogue <b>Nouveau contact</b> apparaît. Vous allez vous créer un contact pour cette étude de cas.</p>
+            <li>
+                <p>Complétez les champs suivants :</p>
+            </li>
+            <ul>
+                <li><b>Adresse électronique (ou nom d&apos;utilisateur</b> ) - Saisissez une adresse électronique valide à laquelle vous avez accès, par exemple votre adresse électronique personnelle</li>
+                <p><b>Remarque :</b> Cette adresse email doit être différente de celle associée à votre compte Caseware Cloud.</p>
+                <li>
+                    <p><b>Prénom</b> - Saisissez votre prénom</p>
+                </li>
+                <li>
+                    <p><b>Nom de famille</b> - Saisissez votre nom de famille</p>
+                </li>
+                <li>
+                    <p><b>Entité</b> - Sélectionnez ACME Inc et cochez <b>Contact - Collaborateur de l&apos;entité</b></p>
+                </li>
+                <p><img src="../../Resources/Images/5 Add Contact.png" /></p>
+            </ul>
+            <li>
+                <p>Cliquez sur <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>Partie 1 Phase de préparation et de planification de l&apos;engagement</h1>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercice 1 : Accéder à l&apos;entité ACME</h2>
+        </p>
+        <p>Une fois dans l&apos;environnement cloud, accédez à l&apos;entité ACME et naviguez jusqu&apos;au bas de la page pour créer un nouvel engagement RC.</p>
+        <p><img src="../../Resources/Images/5 RC New Engagement.png" /></p>
+        <p>Remplir ces champs</p>
+        <ul>
+            <li>
+                <p><b>Entité</b> - Sélectionner ACME Inc</p>
+            </li>
+            <li>
+                <p><b>Nom</b> - Saisir ACME Inc Review - 31 décembre 20XX</p>
+            </li>
+            <li>
+                <p><b>Date de début</b> - Saisir la date du jour</p>
+            </li>
+            <li>
+                <p><b>Date de fin</b> - Saisir la date du vendredi suivant</p>
+            </li>
+            <li>
+                <p><b>Budget Heures</b> - Entrer 40</p>
+            </li>
+            <li>
+                <p><b>Montant du budget</b> - Saisir 12 000</p>
+            </li>
+            <li>
+                <p><b>Préparateur</b> - Inscrivez votre nom</p>
+            </li>
+            <li>
+                <p><b>Réviseur</b> - Saisissez votre nom</p>
+            </li>
+            <li>
+                <p><b>Description</b> - Facultatif</p>
+            </li>
+        </ul>
+        <p>Cliquez sur <b>Enregistrer</b>.</p>
+        <p>L&apos;engagement est créé et un nouvel onglet s&apos;ouvre. Si un nouvel onglet ne s&apos;ouvre pas, vérifiez les paramètres du bloqueur de fenêtres pop-up de votre navigateur.</p>
+        <p>Lorsque l&apos;engagement est ouvert, les <b>propriétés de l&apos;engagement</b>s&apos;ouvrent automatiquement.</p>
+        <p><img src="../../Resources/Images/6 Workflow 2023.png" /></p>
+        <p>Si nécessaire, modifiez la <b>date de fin d&apos;année</b> en la fixant au 31 décembre 2023.</p>
+        <p>Pour modifier les paramètres de l&apos;engagement, tels que la <b>devise, la date, le nombre, le format de l&apos;unité de mesure, les rôles et les schémas de signature</b>, sélectionnez <b>Information</b> (<img src="../../Resources/Images/icon-information-menu-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>|</b> <b>Paramètres</b>.</p>
+        <MadCap:pageBreak />
+        <h1>Partie 2 Optimiseur de planification</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 2A: Questionnaire sur l&apos;optimiseur de planification</h2>
+        <p>Ouvrez le document <b>0-10 Planning Optimiser</b> et remplissez le questionnaire comme indiqué ci-dessous.</p>
+        <ol>
+            <li>
+                <p>Ne s&apos; applique pas.</p>
+            </li>
+            <li>
+                <p>Type d&apos;organisation à la fin de l&apos;année. <b style="font-style: italic;">Pré-rempli et basé sur le type d&apos;organisation sélectionné lors de la création de l&apos;entité</b></p>
+            </li>
+            <li>
+                <p>Quel type de mission est effectué ? <b style="font-style: italic;">Révision du travail effectué</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez si l&apos;un des groupes de cartographie suivants s&apos;applique à votre engagement. <b style="font-style: italic;">Ne s&apos; applique pas.</b></p>
+            </li>
+            <li>
+                <p>S&apos;agit-il de la première année d&apos;activité de l&apos;entité ? <b style="font-style: italic;">Non</b></p>
+            </li>
+            <li>
+                <p>Etiez-vous le comptable qui a effectué une mission pour ce client au cours de l&apos;année précédente ? <b style="font-style: italic;">Oui</b></p>
+            </li>
+            <li>
+                <p>Voulez-vous voir les formulaires fiscaux de l&apos;IGRF dans le gestionnaire de documents ? <b style="font-style: italic;">Oui</b></p>
+            </li>
+            <li>
+                <p>S&apos;agit-il de la première année où l&apos;on remplit une déclaration d&apos;impôt sur les sociétés après la constitution de la société ? <i style="font-weight: bold;">Non</i></p>
+            </li>
+            <li>
+                <p>Quel est le cadre comptable utilisé par l&apos;entité ? <b style="font-style: italic;">ASPE</b></p>
+            </li>
+            <li>
+                <p>Les formulaires de la liste de contrôle de l&apos;ASPE concernant la divulgation doivent-ils être remplis pour cette mission ? <b style="font-style: italic;">Non</b></p>
+            </li>
+            <li>
+                <p>S&apos;agit-il de la première année où l&apos;entité a adopté les ASPE ? <b style="font-style: italic;">Non</b></p>
+            </li>
+            <li>
+                <p>Votre cabinet comptable ne compte qu&apos;un seul associé en exercice ? <b style="font-style: italic;">Oui</b></p>
+            </li>
+            <li>
+                <p>Souhaitez-vous permettre à vos clients d&apos;accepter électroniquement des documents grâce à l&apos;option Signature électronique simple dans les requêtes des clients (disponible uniquement pour les lettres) ? Pour en savoir plus, sélectionnez l&apos;icône Orientation. <i style="font-weight: bold;">Oui</i></p>
+            </li>
+            <li>
+                <p>Souhaitez-vous afficher un message d&apos;approbation lorsque vous passez à l&apos;étape suivante de votre flux de travail ? Si oui, sélectionnez le rôle de signature que vous souhaitez demander. <b style="font-style: italic;">Préparateur</b></p>
+            </li>
+            <li>
+                <p>Proceed to <b>1-20 Existing engagement - Continuance</b>. Signer ce document avant de passer au document suivant. Pour se déconnecter, sélectionnez l&apos;icône <b>PREPARE</b> (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />), puis sélectionnez <b>Se déconnecter</b>.</p>
+                <p><img src="../../Resources/Images/8 PREPARE icon.png" /></p>
+            </li>
+        </ol>
+        <p>Revenez à l&apos;étape 14 et cliquez sur le lien &quot;Continuer&quot;.</p>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 2B: 1-20 Engagement existant - Continuation ou</h2>
+        </p>
+        <p>Complétez le questionnaire comme indiqué ci-dessous.</p>
+        <ol start="5">
+            <li>
+                <p>Manuel d&apos;assurance qualité. <i style="font-weight: bold;">Complété, sans exception</i></p>
+            </li>
+            <li>
+                <p>Facteurs de risque liés à l&apos;engagement (a et b). <b style="font-style: italic;">Sélectionner Complété, pas d&apos;exception pour les deux</b></p>
+            </li>
+            <li>
+                <p>Liste des facteurs de risque potentiels d&apos;engagement (a et b). <b style="font-style: italic;">Sélectionnez Non applicable pour les deux</b></p>
+            </li>
+            <li>
+                <p>Intégrité de la gestion. <b style="font-style: italic;">Complété, sans exception</b></p>
+            </li>
+            <li>
+                <p>Données non disponibles ou non fiables. <b style="font-style: italic;">Complété, sans exception</b></p>
+            </li>
+            <li>
+                <p>Compétences de l&apos;entreprise. <b style="font-style: italic;">Complété, sans exception</b></p>
+            </li>
+            <li>
+                <p>Interdictions d&apos;indépendance. <b style="font-style: italic;">Complété, sans exception</b></p>
+            </li>
+            <li>
+                <p>Menaces sur l&apos;indépendance. <b style="font-style: italic;">Terminé, sans exception</b></p>
+            </li>
+            <li>
+                <p>Objectif de la mission d&apos;examen. <b style="font-style: italic;">Non</b></p>
+            </li>
+            <li>
+                <p>Conditions préalables à l&apos;engagement (a et b). <i style="font-weight: bold;">Sélectionner Complété, pas d&apos;exception pour les deux</i></p>
+            </li>
+            <li>
+                <p>Examiner une lettre de mission. <b style="font-style: italic;">Oui</b></p>
+            </li>
+            <li>
+                <p>Obtention d&apos;une lettre de mission actualisée. <b style="font-style: italic;">Sauter et laisser en blanc</b></p>
+            </li>
+            <li>
+                <p>Sur la base des informations et des facteurs de risque identifiés et documentés ci-dessus, le risque de mission pour le cabinet est évalué comme suit : <b style="font-style: italic;">Risque faible</b></p>
+            </li>
+            <li>
+                <p>Indiquer les raisons de toute modification de l&apos;évaluation des risques par rapport aux années précédentes : <b style="font-style: italic;">Sauter</b></p>
+            </li>
+            <li>
+                <p>Cette mission doit-elle faire l&apos;objet d&apos;un rapport d&apos;évaluation de la qualité de l&apos;environnement (EQCR) ? <b style="font-style: italic;">Non</b></p>
+            </li>
+            <li>
+                <p>J&apos;ai lu les réponses aux questions ci-dessus et : (a &amp; b): <b style="font-style: normal;">Oui</b></p>
+            </li>
+        </ol>
+        <p>La <b>phase de préparation et de planification de</b> la mission est ainsi achevée. Vous allez maintenant passer à l&apos;exercice 3 Requêtes.</p>
+        <p>Faites défiler l&apos;écran jusqu&apos;à la question 15 et sélectionnez la <b>lettre de mission 1-50 Review.</b></p>
+        <p><img src="../../Resources/Images/9 1-50 Review engagement letter.png" /></p>
+        <MadCap:pageBreak />
+        <h2>Exercise 2C: Examiner une lettre de mission.</h2>
+        <p>Cette lettre sera personnalisée par votre organisation. Dans cet exercice, vous remplirez des espaces réservés, puis vous produirez la lettre.</p>
+        <p>Faites défiler la page jusqu&apos;à ce que vous trouviez la section <b>Date, salutation, adresse.</b> </p>
+        <ol>
+            <li>
+                <p>Accédez à l&apos;espace réservé à <b>la date du jour</b> et sélectionnez la date du jour.</p>
+            </li>
+            <li>
+                <p>Accédez à l&apos;espace réservé <b>Personne à qui la lettre de mission est envoyée</b> et recherchez le client que vous avez configuré avant de commencer cette mission.</p>
+            </li>
+            <li>
+                <p>Accédez au caractère générique &quot; <b>Dear person to whom this letter is to be sent</b> &quot; et recherchez le même client qu&apos;à l&apos;étape 2.</p>
+            </li>
+            <li>
+                <p>Allez à la fin de la lettre, avant l&apos; <b>annexe A</b>, et accédez au champ <b>Select Staff</b> pour rechercher votre nom.</p>
+            </li>
+            <li>
+                <p>Vous êtes maintenant prêt à envoyer la lettre au client. Signez l&apos; <b>engagement 1-50 Review</b> en sélectionnant l&apos;icône <b>PREPARE</b> (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) située dans le coin supérieur droit de votre écran. Vous obtiendrez un message indiquant que 29 espaces réservés dans ce document ne sont pas définis. Ce nombre variera en fonction du nombre de caractères de remplissage auxquels vous avez accédé au cours de cette partie de l&apos;exercice. Click <b>Yes.</b></p>
+            </li>
+            <li>
+                <p>Naviguez jusqu&apos;à la page <b>Documents</b> et cliquez sur <b>1-55 Questions du client - Lettre de mission.</b></p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 2D: 1-55 Client queries - Engagement letter</h2>
+        <ol>
+            <li>
+                <p>Cliquez sur <b>Envoyer</b> dans le coin supérieur droit de l&apos;écran.</p>
+            </li>
+            <li>
+                <p>Sélectionnez la date du jour.</p>
+            </li>
+            <li>
+                <p>Choisissez le <b>contact d&apos;entité</b> que vous avez créé à l&apos;aide de votre adresse électronique personnelle.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>Corps de l&apos;e-mail</b> , saisissez une note à l&apos;intention du contact qui indique &quot; <i style="font-weight: bold;">Veuillez signer et renvoyer</i>&quot;.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>OK</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/10 Open query.png" style="width: 444px;height: 380px;" /></p>
+            <li>
+                <p>Dans un onglet incognito ou privé de votre navigateur actuel, ou dans un autre navigateur installé sur votre machine, connectez-vous à l&apos;adresse électronique que vous avez utilisée pour la personne de contact. L&apos;e-mail proviendra de <span style="color: #0000ff;">donotreply@casewarecloud.com</span>. Cliquez sur <b>Afficher les détails</b> pour ouvrir automatiquement un nouvel onglet de navigateur dans lequel vous devrez vous connecter pour voir la lettre. Vous devrez créer un mot de passe simple la première fois que vous vous connecterez.</p>
+            </li>
+            <p>Téléchargez une lettre de mission signée ou signez-la électroniquement. Il s&apos;agit de la valeur HASH du document, et non de la signature physique.</p>
+            <p><img src="../../Resources/Images/11 Upload signed document.png" style="width: 604px;height: 505px;" /></p>
+            <p>Vous pouvez rester connecté en tant que client dans le nouvel onglet ou la nouvelle fenêtre de votre navigateur ou vous déconnecter. Vous devrez vous connecter à nouveau pour consulter et traiter d&apos;autres demandes.</p>
+            <li>Ouvrez le document <b>1-55 Questions du client - Lettre de mission.</b> Acceptez la lettre et allez dans le coin supérieur droit de l&apos;écran pour marquer la requête comme étant <b>complète</b>. Cette opération a pour effet de verrouiller le document.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 2E: Retour à 1-20 Engagement existant</h2>
+        <p>Ouvrez le document <b>1-20 Engagement existant - Continuité</b> et remplissez le questionnaire comme indiqué ci-dessous.</p>
+        <ol start="15">
+            <li>
+                <p>Examiner une lettre de mission. <b style="font-style: italic;">Oui</b></p>
+            </li>
+            <li>
+                <p>Obtention d&apos;une lettre de mission actualisée. <b style="font-style: italic;">Complété</b></p>
+            </li>
+            <li>
+                <p>Signature du document <b>1-20 Engagement existant - Continuité</b>. Si vous recevez un message indiquant qu&apos;un certain nombre de procédures n&apos;ont pas été approuvées dans ce document, c&apos;est qu&apos;il existe des procédures au niveau du document qui doivent être traitées. Utilisez l&apos;icône de basculement des <b>outils de révision</b> (<img src="../../Resources/Images/icon-toggle-analysis.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour activer les <b>outils de révision</b> et déterminer ce qui doit être approuvé. Utilisez ensuite l&apos;interrupteur à bascule pour désactiver les <b>outils de révision</b> et signer les zones identifiées dans le document.</p>
+                <p><img src="../../Resources/Images/12 Review tools.png" /></p>
+            </li>
+        </ol>
+        <p>Passez à <b>2-03 Questions du client - Demande d&apos;information</b>.</p>
+        <MadCap:pageBreak />
+        <h1>Partie 3 Requêtes et phase de travail sur le terrain</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 3A: Demande d&apos;information</h2>
+        <p>Demander des informations au client pour compléter l&apos;examen et l&apos;analyse de l&apos;entité pour la période considérée.</p>
+        <ol>
+            <li>
+                <p>Dans la page <b>Documents</b> , sélectionnez <b>2-03 Requêtes du client - Demande d&apos;information.</b></p>
+            </li>
+            <li>
+                <p>Dans le cadre de cet examen, il n&apos;est pas nécessaire de demander des informations sur les salaires et les rémunérations, de sorte que ces éléments peuvent être masqués. Lorsque vous passez la souris sur chaque élément de la requête, l&apos;icône de <b>visibilité</b> (<img src="../../Resources/Images/icon-visibility-visible.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) apparaît. Pour masquer des éléments, cliquez sur <b>Visibilité</b> (<img src="../../Resources/Images/icon-visibility-visible.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Masquer</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/13 Visibility.png" /></p>
+            <p>Lorsque tous les éléments de la requête sont masqués, l&apos;intitulé <b>Paie et rémunération</b> disparaît.</p>
+            <p><b>Remarque :</b> Vous pouvez ajouter votre propre requête à ce document en cliquant sur l&apos;icône bleue <b>Ajouter une requête</b> (<img src="../../Resources/Icons/Add-30x30.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) qui apparaîtra lorsque vous passerez votre souris dans l&apos;espace entre les requêtes pré-remplies de ce document. Une liste de sélection apparaît, affichant les types de requêtes qui peuvent être ajoutées.</p>
+            <p><img src="../../Resources/Images/14 Query picklist.png" /></p>
+            <li>
+                <p>Vous êtes maintenant prêt à envoyer la requête au client. Cliquez sur <b>Envoyer</b> dans le coin supérieur droit de l&apos;écran.</p>
+            </li>
+            <li>
+                <p>Choisissez une date d&apos;échéance pour cette tâche. Il s&apos;agit d&apos;une date interne qui permet de suivre la date d&apos;échéance et d&apos;indiquer au client à quel moment vous souhaitez obtenir une réponse. Le fait de répondre tardivement à une question ouverte n&apos;entraîne aucune conséquence.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le contact que vous avez créé. Si vous le souhaitez, ajoutez une note dans le corps du message à l&apos;intention du client, puis cliquez sur <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>Retournez à votre autre navigateur ou à l&apos;onglet incognito et accédez à nouveau à votre compte client.</p>
+            </li>
+            <li>
+                <p>Ouvrez l&apos;email reçu de Caseware Cloud et cliquez sur le lien <b>Voir les détails</b> pour accéder aux questions en tant que client et répondre en conséquence.</p>
+            </li>
+            <li>
+                <p>Complétez la demande de balance de vérification (TB) en tant que client en utilisant le bouton <b>Glisser-déposer ou cliquer sur le</b> bouton <b>Parcourir</b> pour joindre la TB de l&apos;entreprise, puis cliquez sur <b>Soumettre la réponse</b> pour l&apos;envoyer au réviseur.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 3B: Pour importer la balance de vérification :</h2>
+        <ol>
+            <li>
+                <p>Retournez à la fenêtre ou à l&apos;onglet du navigateur que vous utilisez pour la mission et accédez à <b>2-03 Questions du client - Demande d&apos;information.</b></p>
+            </li>
+            <li>
+                <p>Accepter la TB envoyée par le client.</p>
+            </li>
+            <li>
+                <p>Naviguez vers <b>Données</b> situé dans la barre de navigation supérieure et choisissez le type d&apos;importation à partir d&apos; <b>Excel ou de CSV</b> .</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Balance de vérification finale | Suivant | Sélectionner le fichier à partir de l&apos;engagement</b>.</p>
+            </li>
+            <li>
+                <p>Faites défiler la liste jusqu&apos;en bas et sélectionnez le fichier Excel de balance générale reçu à partir de la requête de l&apos;exercice précédent.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;assistant d&apos;importation, affectez les colonnes comme indiqué.</p>
+            </li>
+            <p><img src="../../Resources/Images/Import.jpg" /></p>
+            <li>
+                <p>Faites défiler la liste jusqu&apos;à la dernière ligne. Désélectionnez la case à cocher située à côté de la ligne zéro en bas pour vous assurer que cette ligne n&apos;est pas importée.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <h2>Attribuer des comptes</h2>
+        <p>Après avoir cliqué sur &quot;Importer&quot;, vous accédez à l&apos;écran &quot; <b>Comptes&quot;</b> sous &quot; <b>Données&quot;</b>. Il s&apos;agit de la TB importée. Vous devriez voir un 21 en haut à droite au-dessus de l&apos;icône <b>Affecter des comptes</b> , ce qui indique que 21 comptes doivent être affectés à des groupes financiers. Les groupes financiers sont basés sur les normes ASPE, qui font partie du modèle CW. Les comptes sont affectés au groupe financier auquel ils se rapportent et les états financiers sont construits sur la base des groupes financiers.</p>
+        <p><img src="../../Resources/Images/Assignaccounts2.png" style="width: 279px;height: 89px;" /></p>
+        <ol>
+            <li>
+                <p>Cliquez sur l&apos;icône avec le 21. Vous accéderez à la section <b>Affectation des comptes</b> où tous les comptes importés du CT peuvent être affectés aux groupes financiers.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Petite caisse </b>et sur<b> Comptes bancaires nationaux et étrangers</b> dans la <b>colonne Non affectés</b>. Les comptes sont déplacés dans la section <b>Comptes sélectionnés.</b> </p>
+            </li>
+            <li>
+                <p>Au fur et à mesure que vous sélectionnez des comptes, le système vous suggère le groupe financier auquel le compte peut être rattaché en fonction de son nom. Passez votre souris sur l&apos; <b>argent liquide</b> et cliquez sur le bouton vert d&apos;affectation.</p>
+            </li>
+            <li>
+                <p>Une autre façon d&apos;attribuer des comptes consiste à rechercher un groupe de comptes. Tapez <i style="font-weight: bold;">comptes</i> dans la barre de recherche. Faites glisser et déposez le <b>compte Clients de</b> la zone <b>Non affecté</b> sur le compte<b>Clients de la zone Comptes</b>  <b>sélectionnés</b> .</p>
+            </li>
+            <p>Lors de l&apos;attribution des comptes, vous verrez des groupes et des sous-groupes pour chaque section.</p>
+            <p>Pour que la date du compte soit transmise aux autres documents, il est important d&apos;affecter le compte à un sous-groupe s&apos;il existe.</p>
+            <p>Par exemple, les comptes de trésorerie sont affectés au niveau supérieur.</p>
+            <p><img src="../../Resources/Images/16 Accounts.png" /></p>
+            <p>Ils devraient être affectés à leur sous-groupe en conséquence.</p>
+            <p><img src="../../Resources/Images/17 Accounts.png" style="width: 481px;height: 309px;" /></p>
+            <li>
+                <p>Attribuer les comptes restants en conséquence.</p>
+            </li>
+            <p><b>Remarque :</b> Vous pouvez utiliser le PDF &quot;ACME Inc-TrialBalance-FinancialGroups_Initial&quot; pour assurer une correspondance correcte. Par exemple, il y a un impôt sur le revenu courant [Actif courant] et une charge d&apos;impôt sur le revenu courant. Faites également correspondre la sous-catégorie, s&apos;il en existe une, afin d&apos;alimenter correctement votre tableau des flux de trésorerie. Par exemple, le poste 6010 Dépréciation des immobilisations corporelles doit être rattaché au sous-groupe <b>Amortissement des immobilisations corporelles</b> et non à l&apos;intitulé du groupe principal.</p>
+            <li>
+                <p>Une fois cette opération terminée, le <b>revenu net</b> devrait s&apos;élever à 92 856 $.</p>
+            </li>
+            <p>Vous avez la possibilité de créer votre propre groupe financier si vous ne trouvez pas de catégorie à laquelle un compte se rattache.</p>
+            <li>
+                <p>Sous <b>Données | Groupes financiers</b>, cliquez sur <b>Ajouter</b> (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) et sélectionnez <b>Ajouter un groupe.</b></p>
+            </li>
+            <p><img src="../../Resources/Images/18 Add.png" /></p>
+            <li>
+                <p>Remplissez la boîte de dialogue comme indiqué ci-dessous, puis cliquez sur <b>Enregistrer.</b></p>
+            </li>
+            <p><img src="../../Resources/Images/19 Add group.png" /></p>
+            <p>Vous venez de créer un nouveau poste dans les états financiers, intitulé &quot; <b>Frais de véhicule&quot;</b>.</p>
+            <li>
+                <p>Retournez à <b>Affecter des comptes</b> et recherchez <b>Dépenses auto.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>535.120 Auto Expense</b> pour le désaffecter et le déplacer vers le groupe que vous venez de créer.</p>
+            </li>
+            <li>
+                <p>Recherchez les <b>frais de véhicule</b>, puis glissez-déposez <b>6070 Frais d&apos;automobile</b> dans ce nouveau groupe.</p>
+            </li>
+            <p><img src="../../Resources/Images/19 Vehicle expenses.png" /></p>
+            <p>Vous avez déplacé le montant des <b>frais d&apos;automobile</b> de la rubrique <b>Autres dépenses</b> à la rubrique <b>Frais de véhicule</b>. Dans les états financiers, les <b>frais de véhicule</b> figurent dans un poste à la place des <b>autres frais.</b></p>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>
+            <p>Partie 4 Régularisations</p>
+        </h1>
+        <MadCap:pageBreak />
+        <h2>
+            <p>Exercice 4 : Procéder à des ajustements</p>
+        </h2>
+        <ol>
+            <li>
+                <p>Cliquez sur <b>Ajustements</b> dans la barre de navigation. C&apos;est ici que vous pouvez créer des entrées de journal.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>+ Ajustement</b>. La boîte de dialogue <b>Nouveau réglage</b> apparaît. Renseignez l&apos;écriture d&apos;ajustement comme indiqué, puis cliquez sur <b>Enregistrer.</b></p>
+            </li>
+            <p><img src="../../Resources/Images/20 New adjustment.png" /></p>
+            <p>Vous avez également la possibilité de créer des comptes qui ne faisaient pas partie de l&apos;importation initiale du CT et d&apos;y enregistrer des EJA.</p>
+            <li>Créer un nouvel EJA<b>(+ Ajustement</b>). Faites défiler vers le bas et cliquez sur la section <b>Sélectionner un compte</b> .</li>
+            <li>Utilisez la barre de défilement des onglets, située à l&apos;extrême droite de la barre de défilement, pour naviguer jusqu&apos;au bas de la page et cliquez sur <b>Ajouter un compte</b>. Saisissez les informations comme indiqué ci-dessous, puis cliquez sur <b>Enregistrer.</b></li>
+            <p><img src="../../Resources/Images/21 Add account.png" /></p>
+            <p><img src="../../Resources/Images/22 Account.png" /></p>
+            <li>Affichez l&apos;AJE suivante.</li>
+            <p><b>Remarque :</b> Il se peut que vous deviez cocher la case <b>Inclure les éléments à solde nul</b>, située au bas de la liste de sélection, pour que le compte nouvellement créé apparaisse à la sélection.</p>
+            <li>Cliquez sur le bouton <b>SAVE</b> pour enregistrer la valeur créée.</li>
+            <p><img src="../../Resources/Images/New Adjustment.jpg" /></p>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>Partie 5 Importance relative et champ d&apos;application</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 5A: Matérialité</h2>
+        <p>Après l&apos;importation de la TB, vous pouvez définir la matérialité.</p>
+        <ol>
+            <li>Cliquez sur la page <b>Documents</b> pour accéder au document <b>2-10 Matérialité</b>.</li>
+            <li>Dans la partie supérieure de ce document, vous pouvez compléter votre documentation et dans la partie inférieure, vous pouvez calculer le seuil de signification de la planification pour votre mission de contrôle. Les <b>bases de revenu et de revenu net</b> seront présentes par défaut et les chiffres seront renseignés sur la base des groupes financiers.</li>
+            <li>Attribuez 5 % à l&apos;indice de référence pour le <b>revenu net</b> et 0,5 % pour le revenu. Vous pouvez ajouter votre propre base en sélectionnant <b>+ Base de matérialité financière</b> ou <b>+ Autre base.</b></li>
+            <li>Dans la section de la boîte de <b>conclusions</b> sous <b>Planification</b>, saisissez 12500 comme niveau de matérialité pour cette révision.</li>
+            <p><img src="../../Resources/Images/23 Materiality.png" style="width: 593px;height: 178px;" /></p>
+            <li>Utilisez la barre de navigation située en haut de l&apos;écran pour sélectionner la page <b>Données</b> . Sélectionnez ensuite <b>Comptes | Indicateurs |→ Matérialité</b>. L&apos;icône de matérialité apparaît à côté de chaque compte significatif.</li>
+            <li>Retournez à <b>Documents</b> et signez le document <b>2-10 Materiality</b>.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 5B: Ouvrez le document 2-20-2 Étendue de la mission - Domaines des états financiers.</h2>
+        <p>Une fois les listes de contrôle initiales complétées, tous les documents pertinents pour la mission sont entrés dans le champ d&apos;application. Sous la rubrique <b>Travail sur le terrain</b> , on trouve des dossiers et des documents pour tous les différents domaines des états financiers. Toutefois, en fonction de la mission, tous les domaines des états financiers ne nécessiteront pas de travaux. Une fois que l&apos;importance relative a été fixée, nous pouvons également délimiter les domaines qui ne sont pas importants et qui ne nécessitent aucun travail.</p>
+        <ol>
+            <li>
+                <p>Allez au document <b>2-20-2 Étendue de la mission - Domaines des états financiers</b> et choisissez <b>Non</b> sous <b>Inclus dans l&apos;étendue de la mission ?</b> pour les domaines suivants :</p>
+            </li>
+            <ul>
+                <li>
+                    <p>Investissements</p>
+                </li>
+                <li>
+                    <p>Prêts et avances à recevoir</p>
+                </li>
+                <li>
+                    <p>Charges payées d&apos;avance et autres actifs</p>
+                </li>
+                <li>
+                    <p>Autres investissements</p>
+                </li>
+                <li>
+                    <p>Immobilisations incorporelles et goodwill</p>
+                </li>
+                <li>
+                    <p>Dettes bancaires</p>
+                </li>
+                <li>
+                    <p>Effets à payer et dettes bancaires</p>
+                </li>
+                <li>
+                    <p>Prêts et avances à payer</p>
+                </li>
+                <li>
+                    <p>Dette à long terme</p>
+                </li>
+                <li>
+                    <p>Fonds propres (partenariat)</p>
+                </li>
+            </ul>
+            <li>Accédez à la page <b>Documents</b> . Vous remarquerez dans la section <b>Travail sur le terrain</b> que les dossiers relatifs aux éléments qui ont été désactivés ont maintenant disparu.</li>
+            <li>Naviguez jusqu&apos;au document <b>2-20-2</b> et signez.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 5C:</h2>
+        </p>
+        <p>Ouvrez le document <b>3-00 Fieldwork Optimiser</b> et remplissez le questionnaire comme indiqué ci-dessous.</p>
+        <ol>
+            <li>
+                <p>Non - opérations de change</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Oui - question de la continuité de l&apos;exploitation</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Oui - questions relatives à la communication</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Documents facultatifs</p>
+            </li>
+            <li>
+                <p>Lettres types</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                    <li>
+                        <p>Non</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Signer ce document avant de passer au document suivant. Pour se déconnecter, sélectionnez l&apos;icône <b>PREPARE</b> (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />), puis sélectionnez <b>Se déconnecter</b>.</p>
+        <p><img src="../../Resources/Images/8 PREPARE icon.png" /></p>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 5D: Phase de travail sur le terrain - Section d&apos;analyse</h2>
+        </p>
+        <p>Cliquez sur <b>Documents | Travail sur le terrain | Analyse</b> et examinez les informations disponibles ici. Ces documents comportent des ratios calculés sur la base de la TB importée et des sections pour les différents domaines des états financiers où vous pouvez ajouter de la documentation.</p>
+        <p><img src="../../Resources/Images/24 Analysis.png" /></p>
+        <MadCap:pageBreak />
+        <p>
+            <h1>Partie 6 Annotations</h1>
+            <MadCap:pageBreak />
+            <p>
+                <h2>Exercice 6 : Phase de travail sur le terrain - Annotations</h2>
+            </p>
+            <p>Nous allons maintenant exécuter une autre requête pour demander à notre client des documents relatifs aux EPI.</p>
+            <ol>
+                <li>Sélectionnez la page <b>Documents</b> et accédez au <b>dossier Immobilisations corporelles</b>.</li>
+                <li>Passez la souris sur le dossier et cliquez sur l&apos;icône <b>Créer un document</b> (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li>
+                <li>Dans le menu de navigation, cliquez sur <b>Salle de classe</b>.</li>
+                <li>Sélectionnez <b>Créer une requête</b>. Dans le champ <b>Numéro</b> , entrez <i style="font-weight: bold;">P100</i> et dans le champ <b>Nom</b> , entrez <b style="font-style: italic;">PPE Docs</b>.</li>
+                <p><img src="../../Resources/Images/25 Query.png" style="width: 273px;height: 287px;" /></p>
+                <li>Cliquez sur <b>Créer une requête</b>.</li>
+                <li>Une nouvelle requête s&apos;ouvre. En haut à gauche, cliquez sur l&apos;icône <b>Ajouter une série de questions</b> (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) située à côté de <b>SITES DE QUESTIONS</b>.</li>
+                <li>Dans le champ <b>Nouveau groupe</b> , saisissez Documents sur les biens, les installations et l&apos;équipement.</li>
+                <li>Sous ce champ, cliquez sur <b>Ajouter une question</b> (<img src="../../Resources/Images/icon-add-section.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li>
+                <li>Sélectionnez <b>File Upload</b> dans la liste de sélection.</li>
+                <li>Remplissez les champs comme indiqué ci-dessous.</li>
+                <p><img src="../../Resources/Images/26 PPE.jpg" style="width: 691px;height: 489px;" /></p>
+                <li>
+                    <p>Cliquez sur <b>Envoyer</b>, fixez une date d&apos;échéance et choisissez votre client.</p>
+                </li>
+                <li>
+                    <p>À partir de votre autre navigateur ou d&apos;un onglet incognito, connectez-vous à votre instance cloud en tant que client et téléchargez les fichiers PPE Continuity.xlsx et Apple invoice 20XX.pdf, puis cliquez sur <b>Envoyer.</b></p>
+                </li>
+                <li>
+                    <p>Revenez à l&apos;engagement RC, acceptez la réponse à la requête et cliquez sur <b>Terminer</b>, situé en haut à droite, pour terminer la requête.</p>
+                </li>
+                <li>
+                    <p>Accédez à la page <b>Documents</b> . Les deux documents téléchargés doivent figurer en haut de la page, sous la rubrique <b>Non catégorisé</b>. Passez la souris sur la facture Apple, cliquez sur <b>Plus d&apos;actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), puis sur <b>Déplacer</b>.</p>
+                </li>
+                <li>
+                    <p>Dans le volet <b>Déplacer</b> , sélectionnez <b>Travail sur le terrain.</b> Sélectionnez ensuite le dossier <b>Immobilisations corporelles</b> et cliquez sur <b>Déplacer</b>.</p>
+                </li>
+                <li>
+                    <p>Répétez les étapes 14 et 15 pour le document <b>Excel</b> sur <b>la continuité des EPI</b> .</p>
+                </li>
+                <li>
+                    <p>Naviguez jusqu&apos;au dossier <b>Propriété, usine et équipement</b> . Cliquez ensuite sur <b>Plus d&apos;actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) situé à droite du fichier Excel Continuité EPI. Choisissez <b>Editer les propriétés</b> dans la liste de sélection, puis dans la section <b>Identifiant</b> , saisissez <b>3-U-1</b>.</p>
+                </li>
+                <li>
+                    <p>Cliquez sur <b>Enregistrer</b>.</p>
+                </li>
+                <p><img src="../../Resources/Images/27 PPE.jpg" style="width: 674px;height: 384px;" /></p>
+                <li>
+                    <p>Répétez l&apos;étape 17 pour la facture Apple et utilisez le document <b>3-U-2</b> comme identifiant.</p>
+                </li>
+                <li>
+                    <p>Cliquez sur la <b>feuille de travail 3-U-1 -</b> calendrier de <b>continuité des EPI</b> . Ce document s&apos;ouvrira dans Excel sur votre machine. Dans le fichier Queries, accédez à la page <b>Documents</b> .</p>
+                </li>
+                <p>Vos initiales doivent apparaître à côté du fichier Excel, accompagnées d&apos;une icône de <b>verrouillage</b> (<img src="../../Resources/Icons/lock icon.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />). Cela indiquera l&apos;utilisateur qui a ouvert la version en direct du document.</p>
+                <li>
+                    <p>Faites un clic droit sur le document <b>3-U-2</b> et ouvrez-le dans un nouvel onglet.</p>
+                </li>
+                <li>
+                    <p>Ouvrez la <b>feuille de calcul 3-U-1 - Immobilisations corporelles</b>. Le fichier Excel doit être ouvert dans Microsoft Excel et deux onglets doivent être ouverts dans votre navigateur. L&apos;un sera <b>3-U</b> et l&apos;autre <b>3-U-2</b>.</p>
+                </li>
+                <li>
+                    <p>Dans le fichier Excel, entrez <b style="font-style: italic;">3-U</b> dans la cellule <b>E11</b>. Ceci est fait pour référencer le calendrier dans le document 3-U à l&apos;intérieur de la CMR. Sélectionnez la <b>colonne D</b> , puis cliquez avec le bouton droit de la souris et sélectionnez <b>Insérer</b>. This will create a new column to the left. Dans la cellule <b>D8</b>, tapez <b style="font-style: italic;">3-U-2</b> pour référencer la facture de pommes aux 1 500 $ du calendrier de continuité.</p>
+                </li>
+                <li>
+                    <p>Retournez dans votre navigateur et naviguez jusqu&apos;à l&apos;onglet où se trouve le document <b>3-U-2</b> . Sur la facture Apple, cliquez à côté de $1500 dans la description de la facture. Click on the <b>Add</b> icon (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />). Remplissez la boîte de dialogue <b>Annotation</b> comme indiqué ci-dessous, puis cliquez sur <b>Enregistrer.</b></p>
+                </li>
+                <p><img src="../../Resources/Images/28 PPE.jpg" style="width: 329px;height: 299px;" /></p>
+                <li>
+                    <p>Copiez le lien URL de la page de la facture Apple sur laquelle vous vous trouvez actuellement.</p>
+                </li>
+                <li>
+                    <p>Retournez à la continuité PPE Excel et cliquez avec le bouton droit de la souris sur la cellule <b>D8</b>. Cliquez sur le lien après le lien URL dans le champ Adresse, puis cliquez sur <b>OK</b>.</p>
+                </li>
+                <p><img src="../../Resources/Images/29 PPE Continuity.jpg" /></p>
+                <li>
+                    <p>Vous avez maintenant créé un lien hypertexte dans votre fichier Excel directement vers le document de votre engagement RC. Cliquez sur la cellule <b>D8</b>. Cela ouvrira un nouvel onglet dans votre navigateur et vous amènera à la facture Apple.</p>
+                </li>
+                <li>
+                    <p>Revenez à votre fichier Excel et créez un lien hypertexte dans la cellule <b>F8</b> pour l&apos;ouvrir sur la <b>feuille de calcul 3-U-1 - Immobilisations corporelles</b>. Répétez l&apos;étape 26 pour créer l&apos;autre lien hypertexte.</p>
+                </li>
+                <li>
+                    <p>Retournez voir votre gestionnaire de <b>documents</b> et signez les documents <b>3-U-1</b> et <b>3-U-2</b>.</p>
+                </li>
+            </ol>
+            <MadCap:pageBreak />
+            <p>
+                <h1>
+                    <p>Partie 7 Problèmes</p>
+                </h1>
+                <MadCap:pageBreak />
+                <h2>
+                    <p>Exercice 7 : Phase de travail sur le terrain - Questions</p>
+                </h2>
+                <ol>
+                    <li>
+                        <p>Dans la barre de navigation, cliquez sur <b>Questions</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Dans la boîte de dialogue, tapez &quot; <b style="font-style: italic;">Veuillez réviser&quot;</b> et cliquez sur &quot; <b>Créer un problème&quot;</b>.</p>
+                        </li>
+                    </ol>
+                    <p>Vous avez créé un problème au niveau de l&apos;engagement.</p>
+                    <li>
+                        <p>Dans la barre de navigation, cliquez sur <b>Questions</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Cliquez sur l&apos;icône plus dans la boîte de dialogue. Dans la nouvelle boîte de dialogue, tapez, <b style="font-style: italic;">Veuillez demander les relevés bancaires du client</b>, puis tapez, <b style="font-style: italic;">@</b> et une liste déroulante apparaîtra. Dans la liste déroulante, sélectionnez vous-même.</p>
+                        </li>
+                        <li>
+                            <p>Vous avez la possibilité d&apos;associer des questions aux membres du personnel. Ils seront informés par courriel qu&apos;un problème a été créé et qu&apos;ils doivent le résoudre.</p>
+                        </li>
+                        <li>
+                            <p>Cliquez sur <b>Créer une requête</b>. Remarquez que le nombre de l&apos;icône &quot; <b>Questions&quot;</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) est passé de <b>1</b> à <b>2</b>.</p>
+                        </li>
+                    </ol>
+                    <li>Passez votre souris sur le document <b>3-A</b>.</li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Sélectionnez l&apos;icône <b>Questions</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                        </li>
+                        <li>
+                            <p>Dans le type de dialogue, <b style="font-style: italic;">demander des relevés bancaires</b>.</p>
+                        </li>
+                        <li>
+                            <p>Cliquez sur <b>À faire</b> et, dans le menu déroulant, sélectionnez <b>Note.</b></p>
+                        </li>
+                        <li>
+                            <p>Click on <b>Create issue</b>.</p>
+                        </li>
+                        <li>
+                            <p>Une icône de <b>problèmes</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) apparaît.</p>
+                        </li>
+                    </ol>
+                    <p>Remarquez que les <b>2</b> situés sur la barre de navigation n&apos;ont pas augmenté.</p>
+                    <ul>
+                        <li>
+                            <p>Les questions figurant sur la barre de navigation sont des questions de niveau d&apos;engagement</p>
+                        </li>
+                        <li>
+                            <p>Les questions relatives à <b>3-A</b> se posent au niveau des documents</p>
+                        </li>
+                    </ul>
+                    <p>Dans la barre de navigation, cliquez sur <b>Questions.</b> Toutes les questions relatives à l&apos;engagement sont visibles ici.</p>
+                </ol>
+            </p>
+            <MadCap:pageBreak />
+            <p>
+                <h1>Partie 8 États financiers</h1>
+                <MadCap:pageBreak />
+                <h2>Exercise 8A: États financiers</h2>
+                <p>Naviguez jusqu&apos;au document <b>6-15 Optimiseur d&apos;états financiers</b>.</p>
+                <p>Remplissez le document comme suit :</p>
+                <p><img src="../../Resources/Images/30 Financial statements optimiser.jpg" /></p>
+                <p>Signer le document. Sous <b>Étape suivante</b> , cliquez sur le lien pour passer au document <b>6-20 États financiers.</b></p>
+                <ol>
+                    <li>
+                        <p>Dans le menu latéral, cliquez sur <b>Notes to the Financial Statements</b>.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur <b>Ajouter</b>(<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Insérer de la bibliothèque</b> | <b>Immobilisations corporelles</b>.</p>
+                    </li>
+                    <li>
+                        <p>Cochez la case du premier élément de la liste.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>REOPEN</b> (en haut à droite de l&apos;écran).</p>
+                    </li>
+                </ol>
+                <p>Vous avez maintenant inséré la note EPI de la bibliothèque.</p>
+                <p>Cette note fait automatiquement référence au poste des états financiers concernés. Voir l&apos;état de la situation financière.</p>
+                <MadCap:pageBreak />
+                <p>
+                    <h2>Exercise 8B: Create your own note</h2>
+                </p>
+                <ol>
+                    <li>
+                        <p>Ouvrir le document <b>6-20 États financiers</b>.</p>
+                    </li>
+                    <li>
+                        <p>Dans le menu latéral, cliquez sur <b>Notes to the Financial Statements</b>.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Ajouter (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Créer une note.</b></p>
+                    </li>
+                    <li>
+                        <p>Passez votre souris sur la note créée et cliquez sur l&apos;icône bleue <b>Ajouter</b> (<img src="../../Resources/Images/icon-add-section.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>Vous pouvez créer ces sections dans votre note.</p>
+                    </li>
+                    <p><img src="../../Resources/Images/31 Content.jpg" /></p>
+                    <li>
+                        <p>Sélectionnez <b>Remplir le tableau</b>.</p>
+                    </li>
+                    <li>
+                        <p>Passez la souris sur le tableau dynamique nouvellement créé et cliquez sur <b>Plus d&apos;actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Modifier le tableau dynamique</b>.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur l&apos;icône <b>Ajouter</b> (<img src="../../Resources/Icons/Add-30x30.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) située sous la description.</p>
+                    </li>
+                    <li>
+                        <p>Pour insérer les données de la balance de vérification :</p>
+                    </li>
+                    <li>
+                        <p>Dans le champ de <b>recherche</b> , tapez <b style="font-style: italic;">dépenses d&apos;exploitation</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Operating expenses</b>.</p>
+                    </li>
+                    <li>
+                        <p>À l&apos;extrémité droite de la ligne, cliquez sur l&apos;icône <b>Développer</b> (<img src="../../Resources/Images/icon-expand-in-dynamic-tables.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour développer les détails.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur <b>Enregistrer</b> et fermer dans la barre de navigation supérieure.</p>
+                    </li>
+                    <li>
+                        <p>Modifier le <b>titre de la note</b> en &quot; <b>Dépenses d&apos;exploitation&quot;</b>.</p>
+                    </li>
+                    <p>Cette note ayant été créée manuellement, vous devrez la référencer au poste financier concerné.</p>
+                    <li>
+                        <p>Naviguez jusqu&apos;à l&apos; <b>état des revenus et des pertes</b>.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur l&apos;icône de <b>référence de la note</b> (#) à côté des dépenses d&apos;exploitation.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez la note de frais d&apos;exploitation et cliquez en dehors du dialogue.</p>
+                    </li>
+                </ol>
+                <p>Vous avez maintenant référencé la note nouvellement créée.</p>
+                <MadCap:pageBreak />
+                <p>
+                    <h2>Exercise 8C: Tableau des flux de trésorerie</h2>
+                </p>
+                <p>Ajustez le flux de trésorerie de manière à ce qu&apos;il apparaisse comme ci-dessous.</p>
+                <p><img src="../../Resources/Images/32 Cash flow.jpg" /></p>
+                <p>
+                    <MadCap:pageBreak />
+                    <h2>Exercise 8D: Après l&apos;achèvement du SF</h2>
+                    <ol>
+                        <li>
+                            <p>Retournez dans le gestionnaire de <b>documents</b> .</p>
+                        </li>
+                        <li>
+                            <p>Document ouvert <b>6-00 Conclusions de l&apos;examen.</b> Il s&apos;agit d&apos;une lettre. Cliquez sur l&apos;icône <b>Modifier</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour apporter des modifications.</p>
+                        </li>
+                        <li>
+                            <p>Signez le document <b>6-00</b> et retournez dans le gestionnaire de <b>documents.</b> </p>
+                        </li>
+                        <li>
+                            <p>Ouvrir le document <b>6-10 Transmission du rapport</b>.</p>
+                        </li>
+                    </ol>
+                    <p>Remplissez le document comme suit :</p>
+                    <ul>
+                        <li>
+                            <p><b>Partenaire d&apos;engagement</b> - Saisissez votre nom</p>
+                        </li>
+                        <li>
+                            <p><b>Date limite</b> - Saisir la date d&apos;une semaine à partir de la date actuelle</p>
+                        </li>
+                        <li>
+                            <p><b>Contact client</b> - Cliquez sur le contact que vous avez créé et sélectionnez-le dans la liste déroulante</p>
+                        </li>
+                        <li>
+                            <p><b>Adresse électronique</b> - Cliquez sur le contact que vous avez créé et sélectionnez-le dans la liste déroulante</p>
+                        </li>
+                        <li>
+                            <p><b>Copies des états financiers</b> - Tapez le chiffre <b style="font-style: italic;">1</b> dans tous les champs de saisie pour un total de 6</p>
+                        </li>
+                        <li>
+                            <p><b>Instructions spéciales et mode de livraison</b> - Ne rien indiquer</p>
+                        </li>
+                        <li>
+                            <p><b>Autorisation de publication du rapport</b> - Sous <b>Signature</b> , tapez votre nom dans les quatre premières cases. Leave the <b>Other (specify)</b> box empty. Sous <b>Date</b> , indiquez la date du jour pour les 4 premières cases. Leave the <b>Other (specify)</b> box empty</p>
+                        </li>
+                        <li>
+                            <p><b>Date du rapport</b> - Saisir la date du jour</p>
+                        </li>
+                        <li>
+                            <p><b>Date de publication du rapport</b> - Saisir la date à une semaine de la date actuelle</p>
+                        </li>
+                        <li>
+                            <p><b>Date d&apos;assemblage final</b> - Saisir la même date que la date de <b>publication du rapport</b> </p>
+                        </li>
+                        <li>
+                            <p><b>Approbation des modifications ou changements apportés au dossier après la date d&apos;assemblage</b> - Laisser en blanc</p>
+                        </li>
+                        <li>
+                            <p>Signer le document et retourner au gestionnaire de <b>documents</b> </p>
+                        </li>
+                        <li>
+                            <p>Aller aux <b>6-30 questions des clients</b> situées à la fin de la mission</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>Cliquez sur <b>Envoyer</b> pour envoyer le document à votre contact</p>
+                        </li>
+                    </ul>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h2>Exercise 8E: L&apos;exportation des informations de l&apos;IGRF vers un logiciel de préparation des déclarations de revenus sera utilisée</h2>
+                    </p>
+                    <ul>
+                        <li>
+                            <p>Accédez à la page <b>Documents</b> .</p>
+                        </li>
+                        <li>
+                            <p>Naviguez jusqu&apos;à la section <b>Taxe</b> .</p>
+                        </li>
+                        <li>
+                            <p>Ouvrir <b>S100 - Bilan.</b> Un bouton d&apos;exportation vous permet d&apos;exporter vos notes FS et votre fichier GIFI. Cela créera un fichier *.gfi qui pourra être importé dans le programme de préparation des déclarations fiscales de votre choix.</p>
+                        </li>
+                    </ul>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h1>Partie 9 Verrouiller l&apos;engagement</h1>
+                    </p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h2>Exercise 9A: Verrouiller un fichier</h2>
+                    </p>
+                    <p>Lorsque vous avez terminé l&apos;engagement, vous pouvez verrouiller le fichier pour empêcher toute modification ultérieure.</p>
+                    <ol>
+                        <li>
+                            <p>Cliquez sur le nom de l&apos;entité en haut à gauche et cliquez sur <b>Lockdown</b>.</p>
+                        </li>
+                        <li>
+                            <p>Cliquez sur le bouton <b>Police</b>.</p>
+                        </li>
+                    </ol>
+                    <p>Après avoir verrouillé l&apos;engagement, une icône de verrouillage (<img src="../../Resources/Icons/lock icon.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) apparaît à côté du nom de l&apos;entité dans le coin supérieur gauche.</p>
+                    <p>Vous pouvez cliquer sur l&apos;entité et un bouton de <b>déverrouillage</b> apparaîtra, vous permettant de déverrouiller le fichier et d&apos;y apporter des modifications si nécessaire. Pour déverrouiller un fichier, vous devez fournir une raison avant de pouvoir le déverrouiller.</p>
+                    <p><img src="../../Resources/Images/33 Lockdown.jpg" /></p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h1>Partie 10 Transmettre les données</h1>
+                    </p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <p>
+                            <h2>Exercice 10A : Transmettre les suggestions.</h2>
+                        </p>
+                        <p>Lorsqu&apos;une mission existe dans le cadre d&apos;une entité, il est possible de reporter les informations de cette mission sur une mission future.</p>
+                        <ol>
+                            <li>
+                                <p>Dans votre nuage, allez à <b>ACME Inc</b> et faites défiler vers le bas jusqu&apos;à <b>Engagements</b>. Cliquez sur <b>Nouveau | ReviewComp</b> pour démarrer un nouvel engagement.</p>
+                            </li>
+                            <li>
+                                <p>Nommez cet engagement ACME Review - 31 décembre 2023.</p>
+                            </li>
+                            <li>
+                                <p>Cliquez sur l&apos;icône de la <b>liste déroulante</b> (<img src="../../Resources/Icons/dropdown20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la section <b>Report des données de</b> et sélectionnez l&apos;engagement que vous venez de terminer pour le 31 décembre 2023.</p>
+                                <p><img src="../../Resources/Images/34 Carry forward.jpg" /></p>
+                            </li>
+                        </ol>
+                        <p>Remplissez ces champs :</p>
+                        <ul>
+                            <li>
+                                <p><b>Date de début</b></p>
+                            </li>
+                            <li>
+                                <p><b>Date de fin</b></p>
+                            </li>
+                            <li>
+                                <p><b>Heures du budget</b></p>
+                            </li>
+                            <li>
+                                <p><b>Budget Montant</b></p>
+                            </li>
+                            <li>
+                                <p><b>Préparateur</b></p>
+                            </li>
+                            <li>
+                                <p><b>Commentaires</b></p>
+                            </li>
+                            <li>
+                                <p><b>Description</b></p>
+                            </li>
+                        </ul>
+                        <p>Cliquez ensuite sur <b>Enregistrer</b> pour créer le nouvel engagement avec les points de données 2023 suivants.</p>
+                        <ul>
+                            <li>
+                                <p>Les chiffres de la balance de vérification importée pour l&apos;année précédente</p>
+                            </li>
+                            <li>
+                                <p>Réponses apportées dans les différents documents Caseware</p>
+                            </li>
+                            <li>
+                                <p>Tout document externe apporté à la mission (PDF, fichiers Excel, etc.)</p>
+                            </li>
+                        </ul>
+                    </p>
+                </p>
+            </p>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Crear un nuevo grupo de aplicaciones (ADFS)</h1>
+        <p>To integrate Cloud with ADFS, you must first create a new application group for Cloud.</p>
+        <p><b>Crear un nuevo grupo de aplicaciones (ADFS)</b></p>
+        <ol>
+            <li>
+                <p>Launch the <b>ADFS Administration Console</b>.</p>
+            </li>
+            <li>
+                <p>Click the <b>Application Groups</b> folder, then in the Actions menu, click <b>Add Application Groups</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-01.png" /></p>
+            </li>
+            <li>
+                <p>Escriba un nombre único para el panel de información. On the Template list, select <b>Server application</b>. Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-02.png" /></p>
+            </li>
+            <li>
+                <p>The Client Identifier field is populated automatically.</p>
+                <p class="warning"><b>Important:</b> Copy the Client Identifier and paste it to a text document for later use. Label it <b>Client Identifier</b>.</p>
+                <p>In the Redirect URI field, enter a placeholder URL (for example, https://www.caseware.com) and click <b>Add</b>. Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-03.png" /></p>
+            </li>
+            <li>
+                <p>Select <b>Generate a shared secret</b>.</p>
+                <p class="warning"><b>Important:</b> Click <b>Copy to clipboard</b> and paste the secret to a text document for later use. Label it <b>Client Secret</b>.</p>
+                <p>Haga clic en <b>Siguiente</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-04.png" /></p>
+            </li>
+            <li>
+                <p>Haga clic en <b>Sí</b> para completar la configuración.</p>
+            </li>
+        </ol>
+        <p class="note">Next: <a href="Create-a-Web-API-application.htm">Create a Web API application</a></p>
+    </body>
+</html>

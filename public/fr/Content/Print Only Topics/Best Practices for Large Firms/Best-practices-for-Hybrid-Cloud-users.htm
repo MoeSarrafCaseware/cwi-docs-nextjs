@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Meilleures pratiques pour les utilisateurs de nuages hybrides</h1>
+        <p>Afin d&apos;optimiser les performances du site Cloud, nous recommandons aux utilisateurs de Cloud hybride de suivre les directives détaillées ci-dessous.</p>
+        <h2 MadCap:autonum="1.1 ">Utiliser le nuage uniquement pour les fichiers d&apos;engagement</h2>
+        <p>Nous recommandons aux utilisateurs de Cloud hybride d&apos;utiliser leur site Cloud uniquement pour les missions et de minimiser leur utilisation d&apos;autres fonctionnalités telles que les activités, le temps Cloud et les fichiers. L&apos;application Fichiers, en particulier, peut entraîner des problèmes de performance pour les utilisateurs qui travaillent sur des missions si une grande quantité de fichiers est stockée sur votre site en nuage.</p>
+        <h2 MadCap:autonum="1.2 ">Désactiver le suivi du temps pour les fichiers d&apos;engagement</h2>
+        <p>Le suivi du temps permet de suivre automatiquement le temps passé par les membres du personnel dans les dossiers d&apos;engagement. Nous recommandons aux utilisateurs de Cloud hybride de désactiver cette fonctionnalité dans les Working Papers afin d&apos;optimiser les performances du Cloud.</p>
+        <p class="note"><b>Remarque :</b> La désactivation du suivi du temps n&apos;est possible qu&apos;avec les Working Papers 2020 : Update 1 or later. Les utilisateurs de versions antérieures de Working Papers ne pourront pas désactiver le suivi du temps.</p>
+        <p><b>Pour désactiver le suivi du temps :</b></p>
+        <ol>
+            <li>
+                <p>Naviguez jusqu&apos;au répertoire <b>Caseware</b> .</p>
+                <p>L&apos;emplacement par défaut de ce répertoire est le répertoire <b>Program Files (x86)</b> .</p>
+            </li>
+            <li>
+                <p>Ouvrez le fichier <b>CV.ver</b> à l&apos;aide du Bloc-notes ou d&apos;un programme similaire.</p>
+                <p><img src="../../Resources/Images/cv-ver-file.png" /></p>
+            </li>
+            <li>
+                <p>Ajoutez la ligne suivante au fichier : DisableTimeEntries=1</p>
+                <p><img src="../../Resources/Images/disable-time-entries.png" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Fichier</b> &gt; <b>Enregistrer</b> ou appuyez sur <b>CTRL + S</b> pour enregistrer le fichier.</p>
+            </li>
+        </ol>
+        <h2 MadCap:autonum="1.3 ">Définir les paramètres du délai d&apos;attente</h2>
+        <p>Nous recommandons également d&apos;ajouter les paramètres suivants au fichier CV.ver pour améliorer encore les performances.</p>
+        <p style="font-weight: bold;">Pour définir les paramètres régionaux :</p>
+        <ol>
+            <li>
+                <p>Naviguez jusqu&apos;au répertoire <b>Caseware</b> .</p>
+                <p>L&apos;emplacement par défaut de ce répertoire est le répertoire <b>Program Files (x86)</b> .</p>
+            </li>
+            <li>
+                <p>Ouvrez le fichier <b>CV.ver</b> à l&apos;aide du Bloc-notes ou d&apos;un programme similaire.</p>
+                <p><img src="../../Resources/Images/cv-ver-file.png" /></p>
+            </li>
+            <li>
+                <p>Ajoutez les lignes suivantes au fichier :</p>
+                <p>MasterAvailabilityTimeout=30000</p>
+                <p>LongerMasterAvailabilityTimeout=40000</p>
+                <p>SSSTimeout=50000</p>
+                <p><img src="../../Resources/Images/wp-timeout-settings.png" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Fichier</b> &gt; <b>Enregistrer</b> ou appuyez sur <b>CTRL</b> + <b>S</b> pour enregistrer le fichier.</p>
+            </li>
+        </ol>
+    </body>
+</html>

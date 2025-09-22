@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Set up diagnostics</h1>
+        <p>You can set up diagnostics in the financial statements to help users identify and locate discrepancies between balances across the financial statements tables.</p>
+        <p>To set up diagnostics in financial statements, you need to:</p>
+        <ol>
+            <li>Create the diagnostics labels.</li>
+            <li>Label the groups and accounts that you want the application to compare their balances to each other.</li>
+        </ol>
+        <p>When you label groups or accounts, the application automatically compares the balances for rows having the same label.</p>
+        <p>Comparison happens in real time. If you have labeled rows that are sourced from trial balance data, then once users import the trial balance, the results of the comparison display.</p>
+        <p>To learn more about how users view diagnostics, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Review-group-and-account-balances-in-the-financial-statements.htm#Viewbalancediscrepanciesinfinancialstatements">View balance discrepancies.</a></p>
+        <p style="font-weight: bold;">To label rows in financial statements tables:</p>
+        <ol>
+            <li>
+                <p>Select the dynamic table where you want to label accounts or groups.</p>
+            </li>
+            <p>Symbole für Tabellenoptionen werden rechts angezeigt.</p>
+            <li>
+                <p>Wählen Sie <b>Weitere Aktionen</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) | <b>Dynamische Tabelle bearbeiten</b>.</p>
+            </li>
+            <p>Table opens in edit mode.</p>
+            <li>
+                <p>Select the row that you want to label.</p>
+            </li>
+            <p>The row can be an account or a group.</p>
+            <li>
+                <p>Go to the <b>Diagnostic Label</b> field at the top. You can either create a label or select an existing label to assign it to the selected row.</p>
+            </li>
+            <ul>
+                <li>
+                    <p>To create a label, enter the desired name in the field. The label is created and assigned to the selected row once you press Enter or the Spacebar.</p>
+                </li>
+                <p class="note inline"><b>Hinweis:</b> Diagnostics labels cannot have spaces.</p>
+                <li>
+                    <p>To find an existing label, start typing the keyword in the field to populate a list of matching results. Choose a label from the list to assign it to the selected row.</p>
+                </li>
+                <li>
+                    <p>To select an existing label, select the drop-down and choose a label to assign it to the selected row.</p>
+                </li>
+                <p>The assigned label displays at the top replacing the <b>Diagnostic Label</b> field.</p>
+                <p class="tip"><b>Tipp:</b> To remove the assigned label, select <b>Delete</b> (<img src="../Resources/Images/icon-remove-label.PNG" style="vertical-align: text-bottom;" />) next to the label. Note that if this is a new label (that is, you have not selected it from the drop-down), this button also deletes the label.</p>
+            </ul>
+            <li>
+                <p>Deselect the row.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>SPEICHERN</b> oder <b>SPEICHERN &amp; SCHLIEßEN</b>.</p>
+            </li>
+        </ol>
+        <h2>Important notes for diagnostics setup</h2>
+        <p>Note the following when setting up diagnostics,</p>
+        <ul>
+            <li>The application only compares rows having the same label. Make sure you assign the <u>same label</u> to the rows that you want the application to compare them to each other.</li>
+            <li>The application compares the absolute values of the labeled rows. Vorzeichenunterschiede werden nicht als Saldoabweichungen gekennzeichnet.</li>
+            <li>If you label a group, the application compares the <u>total balance of the group</u> to other rows having the same label. It does not compare the balance of each account in the group to rows having the same label.</li>
+            <li>You can assign one label to a row.</li>
+        </ul>
+    </body>
+</html>

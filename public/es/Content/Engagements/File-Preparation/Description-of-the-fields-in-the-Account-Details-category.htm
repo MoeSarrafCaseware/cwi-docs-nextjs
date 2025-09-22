@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Account details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions data display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>ACCOUNT DETAILS</b> category that appear in the General ledger dataset..</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Account Identifier (<code>account_id</code>)</h2>
+        <p>Un identificador o la cuenta en la que se ha registrado el asiento; debe coincidir con el plan de cuentas <br />Ejemplos: &quot;1001&quot; o &quot;Bank Account 1&quot;.</p>
+        <h3>Uso</h3>
+        <p>
+            <ul>
+                <li>Must be tagged for all transaction-related features to function.</li>
+                <li>Associating trial balance with transaction information.</li>
+                <li>Trial balance drill down into transactions.</li>
+                <li>In all AnalyticsAI tests - All tests require Account Identifier.</li>
+            </ul>
+        </p>
+        <h3>Requisitos</h3>
+        <p>
+            <ul>
+                <li>Less than 5,000 unique values.</li>
+                <li>Matches with imported trial balance accounts.</li>
+            </ul>
+        </p>
+        <h2>Main Account Description (<code>account_main_description</code>)</h2>
+        <p>Descripción del identificador del grupo de cuentas en el que se ha registrado el asiento. <br />Ejemplos: &quot;efectivo&quot;, &quot;propiedad, planta y equipamiento&quot;.</p>
+        <h3>Uso</h3>
+        <p>Visual text description for accounts.</p>
+        <h2>Entered By (<code>entered_by</code>)</h2>
+        <p>El Id. de usuario de la persona que creó el asiento.</p>
+        <h3>Uso</h3>
+        <p>In these AnalyticsAI tests:<ul><li>Entrada y autorización por el mismo usuario</li><li>Usuarios inusuales</li></ul></p>
+        <h2>Entered Date (<code>entered_date</code>)</h2>
+        <p>Fecha/hora reales en las que el asiento se registró en el sistema, aprobado de forma automática por el sistema, no se corresponde necesariamente con la fecha en la que se publicó el asiento en el libro mayor.</p>
+        <h3>Uso</h3>
+        <p>In the Unusual Times AnalyticsAI test.</p>
+        <h3>Requisitos</h3>
+        <p>Date format must be properly set:</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Persona responsable de la entrada</h2>
+        <p>El Id. de usuario de la persona que aprobó el asiento.</p>
+        <h3>Uso</h3>
+        <p>In the Same User Entering and Approving AnalyticsAI test.</p>
+    </body>
+</html>

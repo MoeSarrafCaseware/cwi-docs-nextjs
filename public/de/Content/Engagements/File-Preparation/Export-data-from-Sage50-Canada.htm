@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Export data from Sage 50 Canada to Caseware Cloud</h1>
+        <p>The data you need to export from Sage 50 Canada varies according to the Caseware dataset type into which you want to import data. See the table below to proceed to the instructions to export the data you need. Caseware Cloud data is organized into several standard datasets depending on the purpose of the data, such as trial balance, general ledger and subledger data among others.</p>
+        <p>For more information on importing data into Caseware Cloud, as well as dataset type descriptions, see <a href="Import-and-manage-data.htm">Import and manage data.</a></p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>If you need this type of dataset In Caseware Cloud</th>
+                    <th>Esport this file from Sage 50 Canada</th>
+                    <th>This Sage 50 file is optional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="Understand-genledger-data.htm#General">Hauptbuch</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions by Account</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Trial-balance-described.htm">Hauptabschlussübersicht</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions by Account</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-invoices.htm">Accounts payable - invoices</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Vendor Ledger record</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Vendor Ledger record</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-payments-made.htm">Accounts payable - payments made</a></td>
+                    <td><a href="#Export_Vendor_Purchases_Detail_report">Vendor Purchases Detail</a></td>
+                    <td><a href="#Export_the_Vendor_Ledger_record">Vendor Ledger record</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-suppliers.htm">Accounts payable - suppliers</a></td>
+                    <td><a href="#Export_the_Payments_Transactions_record">Payment Transactions</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AP-open-balances.htm">Accounts payable - open balances</a></td>
+                    <td><a href="#Export_the_Aged_Overdue_Purchase_Invoices_Detail_report">Aged Overdue Purchase Invoices Detail</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-customers.htm">Accounts receivable - customers</a></td>
+                    <td><a href="#Export_the_Customer_Ledger_record">Customer Ledger record</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-invoices.htm">Accounts receivable - invoices</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions by Account</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Customer Aged Detail</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-cash-received.htm">Accounts receivable - cash received</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions by Account</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Customer Aged Detail</a><br />
+                    </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-AR-open-balances.htm">Accounts receivable - open balances</a></td>
+                    <td><a href="#Export_Transactions_by_Account_report">Transactions by Account</a><br /><a href="#Export_the_Customer_Aged_Detail_report">Customer Aged Detail</a><br /><a href="#Export_the_Aged_Overdue_Sales_Invoices_Detail_report">Aged Overdue Sales Invoices Detail</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-transactions.htm">Bestandstransaktionen</a></td>
+                    <td><a href="#Export_the_Transaction_Detail_report">Transactions Detail</a></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><a href="Subledger-data-schema-inventory-on-hand.htm">Aktueller Bestand</a></td>
+                    <td><a href="#Export_the_Quantity_report">Quantity</a></td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export_Transactions_by_Account_report"></a>Export Transactions by Account report</h2>
+        <p><b>To export the Transactions by Account report from Sage 50 Canada: </b></p>
+        <ol>
+            <li>From the <b>Reports</b> menu, select <b>Report Centre</b>.</li>
+            <li>On the <b>Report Centre</b> dialog, in <b>Select a report type</b>, select <b>Financials</b> | <b>Transactions by account</b>.</li>
+            <li>Click <b>Create</b>. A preview of the report that will be exported is displayed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionsbyAccount-Sage50.png" alt="Transactions by Account report preview" /></p>
+        <p class="note inline"><b>Note:</b> The <b>Report Centre</b> exports data for the current financial year by default. If your engagement dates are from the previous financial year, you can click the <b>Modify this report</b> option, and from the <b>Report on Fiscal Year</b> dropdown, select <b>Previous Year (YYYY)</b>.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifying the Transactions by Account report" /></p>
+        <p><img src="../../Resources/Images/SelectAccounts-TransactionsbyAccount-Sage50.png" alt="Modifying the fiscal year on the Transactions by Account report." /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export...</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Customer_Ledger_record"></a>Export the Customer Ledger record</h2>
+        <p><strong>To export the Customer Ledger record from Sage 50 Canada: </strong></p>
+        <ol>
+            <li>From the <strong>File</strong> menu, select <strong>Import/Export | Export records…</strong></li>
+            <li>On the <strong>Export Records Wizard</strong> dialog, in <strong>Select a report type</strong>, select <strong>Export records to a Sage 50 Import file format</strong>. Klicken Sie auf <strong>Next</strong>.</li>
+            <li>In <strong>Select the type of records to export</strong>, select <strong>Customers.</strong></li>
+            <li>Specify a name and location for the export file and click <strong>Next</strong>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerLedgerRecord-Sage50.png" alt="Selecting Customer records to export" /></p>
+        <ol>
+            <li value="3">In the <strong>Select the customers you want to export</strong> box, select the customers whose ledger records you want to export or click <strong>Select All</strong> to export all customer ledger records.</li>
+            <li>Klicken Sie auf <strong>Next</strong>.</li>
+            <li>View the Export Records Summary and click <strong>OK</strong>.</li>
+            <li>Click <strong>Finish</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Customer_Aged_Detail_report"></a>Export the Customer Aged Detail report</h2>
+        <p><strong>To export the Customer Aged Detail report from Sage 50 Canada: </strong></p>
+        <ol>
+            <li>From the <strong>Reports</strong> menu, select <strong>Report Centre</strong>.</li>
+            <li>On the <b>Report Centre</b> dialog, in <strong>Select a report type</strong>, select <strong>Customers &amp; Sales | Customer Aged Detail</strong>.</li>
+            <li>Click <strong>Create</strong>. A preview of the report that will be exported is displayed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CustomerAgedDetail-Sage50.png" alt="Selecting the Customer Aged Detail report" /></p>
+        <p class="note inline"><strong>Note: </strong>The Report Centre exports all invoices paid in the last 999 days as of the closing date of the current fiscal year by default. You can modify the <strong>As at</strong> date by clicking the <strong>Modify this report</strong> option. Make sure that the selected date is later than or equal to the End Date of your Caseware engagement.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyCustomerAgedReport-Sage50.png" alt="Modifying the Customer Aged Detail report." /></p>
+        <p> </p>
+        <ol>
+            <li value="4">From the <strong>File</strong> menu, select <strong>Export…</strong></li>
+            <li>In <strong>File name</strong>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <strong>Save</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Sales_Invoices_Detail_report"></a>Export the Aged Overdue Sales Invoices Detail report</h2>
+        <p><strong>To export the Aged Overdue Sales Invoices Detail report from Sage 50 Canada:</strong></p>
+        <ol>
+            <li>From the <strong>Reports</strong> menu, select <strong>Report Centre</strong>.</li>
+            <li>On the <b>Report Centre</b> dialog, in <strong>Select a report type</strong>, select <strong>Customers &amp; Sales | Aged Overdue Sales </strong><strong>Invoices</strong><strong> Detail</strong>.</li>
+            <li>Click <strong>Create</strong>. A preview of the report that will be exported is displayed.</li>
+        </ol>
+        <p><img src="../../Resources/Images/OverdueSalesInvoicesDetail-Sage50.png" alt="Selecting the Aged Overdue Sales Invoices Detail report. " /></p>
+        <p class="note inline"><strong>Note: </strong>The Report Centre exports payments made in the last 999 days as at the closing date of the current fiscal year by default. You can modify the <strong>As at</strong> date by selecting the <strong>Modify this report</strong> option. Make sure that the date you select is equal to the End Date of of your Caseware engagement.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverdueSalesInvoicesReport-Sage50.png" alt="Modifying the Aged Overdue Sales Invoices report." /></p>
+        <ol>
+            <li value="4">From the <strong>File</strong> menu, select <strong>Export…</strong></li>
+            <li>In <strong>File name</strong>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <strong>Save</strong>.</li>
+        </ol>
+        <h2><a name="Export_the_Vendor_Ledger_record"></a>Export the Vendor Ledger record</h2>
+        <p><b>To export the Vendor Ledger record from Sage 50 Canada:</b></p>
+        <ol>
+            <li>From the <b>File</b> menu, select <b>Import/Export | Export records…</b></li>
+            <li>On the <b>Export Records Wizard</b> dialog, in <b>Select a report</b> type, select <b>Export records to a Sage 50 Import file</b> format. Click <b>Next.</b></li>
+            <li>In <b>Select the type of records to export</b>, select <b>Vendors</b>.</li>
+            <li>Specify a name and location for the export file and click <b>Next</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorLedger-Sage50.png" alt="Selecting Vendor Ledger records to export from Sage 50 Canada." /></p>
+        <ol><li value="5">In the <b>Select the vendors you want to export</b> box, select the customers whose ledger records you want to export or click <b>Select All</b> to export all vendor ledger records.</li><li>Klicken Sie auf <b>Next</b>.</li><li>View the Export Records Summary and click <b>OK</b>.</li><li>Click <b>Finish</b>.</li></ol>
+        <h2><a name="Export_the_Payments_Transactions_record"></a>Export the Payments Transactions report</h2>
+        <p><b>To export the Payment Transactions report from Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>From the <b>Reports</b> menu, select <b>Report Centre</b>.</p>
+            </li>
+            <li>
+                <p>In <b>Select a report type</b>, select <b>Vendors &amp; Purchases | Payment Transactions</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Create</b>. A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/PaymentTransactions-Sage50.png" alt="Selecting the Payment Transactions report." /></p>
+        <p class="note inline"><b>Note:</b> The Report Centre exports data for the current financial year by default. If your engagement dates are from the previous financial year, click the <b>Modify this report</b> option. Select the <b>Report on Fiscal Year</b> dropdown and then the <b>Previous Year (YYYY)</b> option.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ModifyingPaymentTransactions.png" alt="Modifying the Payment Transactions report." /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export…</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Export_Vendor_Purchases_Detail_report"></a>Export Vendor Purchases Detail report</h2>
+        <p><b>To export the Vendor Purchases Detail report:</b></p>
+        <ol>
+            <li>From the <b>Reports</b> menu, select <b>Report Centre</b>.</li>
+            <li>
+                <p>On the <b>Report Centre</b> dialog, in <b>Select a report type</b>, select <b>Vendors &amp; Purchases | Vendor Purchases Detail</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Create</b>. A preview of the report that will be generated is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/VendorPurchaseDetail-Sage50.png" alt="Selecting the Vendor Purchases Detail report. " /></p>
+        <p class="note inline"><b>Note:</b> The Report Centre exports data for the current financial year by default. If your engagement dates are from the previous financial year, you can click the <b>Modify this report</b> option and and change the <b>Start</b> and <b>Finish</b> dates.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p><img src="../../Resources/Images/ModifyVendorPurchases-Sage50.png" alt="Modifying the Vendor Purchases report." /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export…</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Aged_Overdue_Purchase_Invoices_Detail_report"></a>Export the Aged Overdue Purchase Invoices Detail report</h2>
+        <p><b>To export the Aged Overdue Purchase Invoices Detail report form Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>From the <b>Reports</b> menu, select <b>Report Centre</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Report Centre</b> dialog, in Select a report type, select <b>Vendors &amp; Purchases | Aged Overdue Purchase Invoices Detail</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Create</b>. A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/AgedOverduePurchaseInvoicesDetail.png" alt="Modifying the Aged Overdue Purchase Invoices Detail report. " /></p>
+        <p class="note inline"><b>Note:</b> The Report Centre exports Payments made in the last 999 days as of the closing date of the current fiscal year by default. You can modify the <b>As at</b> date by selecting the <b>Modify this report</b> option. Make sure that the selected date is equal to the End Date of your Caseware engagement.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p><img src="../../Resources/Images/ModifyingAgedOverduePurchaseInvoices-Sage50.png" alt="Modifying the Aged Overdue Purchase Invoices Report." /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export…</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Quantity_report"></a>Export the Quantity report</h2>
+        <p><b>To export the Quantity report from Sage 50 Canada:</b></p>
+        <ol>
+            <li>
+                <p>From the <b>Reports</b> menu, select <b>Report Centre</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Report Centre</b> dialog, in <b>Select a report type</b>, select <b>Inventory &amp; Services | Quantity</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Create</b>. A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/QuantityReport-Sage50.png" alt="Selecting the Quantity report." /></p>
+        <p class="note inline"><b>Note:</b> You can modify the default settings of the report by selecting the <b>Modify this report</b> option. Make any changes necessary and click <b>OK</b>.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modifythis report option" /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export…</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Export_the_Transaction_Detail_report"></a>Export the Transaction Detail report</h2>
+        <p><b>To export the Transaction Detail report:</b></p>
+        <ol>
+            <li>
+                <p>From the <b>Reports</b> menu, select <b>Report Centre</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Report Centre</b> dialog, in <b>Select a report type</b>, select <b>Inventory &amp; Services | Transaction Detail</b>.</p>
+            </li>
+            <li>
+                <p>Click <b>Create</b>. A preview of the report that will be exported is displayed.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/TransactionDetail-Sage50.png" alt="Modifying the Transaction Detail report." /></p>
+        <p class="note inline"><b>Note:</b> The Report Centre exports data for the current financial year by default. If your engagement dates are from the previous financial year, select the <b>Modify this report</b> option and change the <b>Start</b> and <b>Finish</b> dates.</p>
+        <p><img src="../../Resources/Images/ModifyReportOption-Sage50.png" alt="Modify this report option" /></p>
+        <p><img src="../../Resources/Images/ModifyingTransactionDetail=Sage50.png" alt="Modifying the Transaction Detail report. " /></p>
+        <ol>
+            <li value="4">From the <b>File</b> menu, select <b>Export…</b></li>
+            <li>In <b>File name</b>, specify a name for the report that you will recognize when importing it into Caseware Cloud and click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

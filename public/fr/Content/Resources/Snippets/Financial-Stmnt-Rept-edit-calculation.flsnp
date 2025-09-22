@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Pour ajouter ou modifier un calcul dans les cellules d&apos;un tableau :</p>
+        <ol>
+            <li>
+                <p>Ouvrez le <b>bilan</b>, sélectionnez le tableau.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Autres actions</b> (<img src="../Images/icon-more-actions-inline.png" style="width: 24px;height: 13px;vertical-align: text-bottom;" />), puis choisissez <b>Modifier le tableau dynamique</b>.</p>
+            </li>
+            <p>Le tableau s&apos;ouvre en mode édition.</p>
+            <li>
+                <p>Allez dans la cellule souhaitée et sélectionnez l&apos;icône <b>fx</b> .</p>
+            </li>
+            <p>L&apos;onglet <b>Calcul</b> s&apos;ouvre.</p>
+            <p class="note inline"><b>Remarque :</b> La cellule doit être une cellule de <b>la ligne d&apos;entrée</b> ou de la colonne d&apos; <b>entrée.</b></p>
+            <p><img src="../Images/insert-calculation-end-user.png" alt="fx s&apos;affiche dans le bord gauche de la cellule." /></p>
+            <li>
+                <p>Dans l&apos;onglet <b>Calcul</b> :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez <b>Lien</b> (<img src="../Images/icon-link.png" style="width: 20px;height: 20px;vertical-align: text-bottom;" />) pour insérer un lien de données de balance générale dans la formule.</p>
+                    </li>
+                    <p>La boîte de dialogue <b>Liaison de données</b> s&apos;ouvre avec les <b>états financiers</b> sélectionnés par défaut comme source des données de la balance de vérification.</p>
+                    <p class="note inline"><b>Remarque :</b> Si vous avez importé des données d&apos;années antérieures, la boîte de dialogue affiche des données pour un maximum de quatre années antérieures.</p>
+                    <p>Vous pouvez modifier la valeur par défaut à l&apos;aide du menu déroulant <b>Source</b> :<ul><li><b>Balance de vérification</b> - les données de la balance de vérification proviennent de la colonne <b>Finale</b> de la page <b>Données.</b> C&apos;est-à-dire les montants définitifs après ajustement.</li><li><b>États financiers</b> - les données de la balance de vérification proviennent des états financiers. C&apos;est-à-dire les montants arrondis et les montants qui ont été remplacés manuellement.</li></ul></p>
+                    <p>Lorsque vous insérez des liens de données, le préfixe (<img src="../Images/icon-fs-data-source.png" style="width: 22px;height: 25px;vertical-align: text-bottom;" />) ou (<img src="../Images/icon-tb-data-source.png" style="vertical-align: text-bottom;width: 22px;height: 22px;" />) indique la source des données.</p>
+                    <p class="note" MadCap:conditions="PrintGuides.Teacher"><b>Remarque :</b> Si des formulaires sont disponibles dans votre produit, l&apos;onglet <b>Formulaires</b> est disponible dans la boîte de dialogue <b>Liaison de données</b> . Cet onglet permet d&apos;insérer des valeurs à partir de formulaires.</p>
+                    <li>
+                        <p>Sélectionnez <b>Numbers</b> (<img src="../Images/icon-number.png" style="width: 26px;height: 18px;vertical-align: text-bottom;" />) pour insérer des nombres dans la formule.</p>
+                        <p class="tip"><b>Conseil :</b> Vous pouvez utiliser votre clavier pour insérer des chiffres.</p>
+                    </li>
+                    <li>
+                        <p>Ajoutez les opérateurs souhaités pour construire la formule.</p>
+                        <p class="tip"><b>Conseil :</b> Vous pouvez utiliser votre clavier pour insérer des opérateurs.</p>
+                        <p><img src="../Images/end-user-build-calculation.PNG" alt="L&apos;utilisateur a ajouté une formule dans l&apos;onglet Calcul." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Sélectionnez <b>FAIT</b> pour fermer l&apos;onglet <b>Calcul.</b></p>
+            </li>
+            <p>Si vous avez saisi une formule non valide, l&apos;icône <b>fx</b> s&apos;affiche en rouge (<img src="../Images/icon-red-fx-invalid-calculation.png" style="width: 20px;height: 25px;vertical-align: text-bottom;" />) pour indiquer une erreur.</p>
+            <p class="instNotes note" MadCap:conditions="PrintGuides.Teacher"><b>Remarque :</b> Si vous modifiez un calcul qui fait partie du <MadCap:conditionalText MadCap:conditions="General.PDF"><a href="https://docs.caseware.com/latest/webapps/en/Practice/Templates-and-Authoring/Manage-the-firm-template.htm">contenu par défaut</a> </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">contenu par défaut</a></MadCap:conditionalText>fourni avec votre produit, une icône <b>Revert</b> (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />) est disponible dans la cellule pour vous permettre de revenir au calcul d&apos;origine, si nécessaire.</p>
+        </ol>
+        <p><img src="../Images/revert-calculation1.png" alt="L&apos;icône Revenir n&apos;est disponible que si vous remplacez un calcul prédéfini." /></p>
+        <p>De retour dans le document, vous pouvez revoir les formules de calcul que vous avez ajoutées. Sélectionnez une cellule pour afficher les détails du calcul.</p>
+        <p><img src="../Images/view-calculation-end-user.PNG" alt="La fenêtre contextuelle des détails du compte affiche le calcul de la cellule." /></p>
+        <p>Si vous remplacez une valeur de cellule calculée, vous pouvez sélectionner la cellule pour afficher le calcul et la valeur d&apos;origine. La fenêtre contextuelle Détails du compte présente également une option <b>Revenir</b> (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />).</p>
+        <p><img src="../Images/calculation-popup=post-override1.png" alt="L&apos;option Revenir est toujours disponible si vous remplacez une valeur de cellule provenant d&apos;une formule de calcul." /></p>
+    </body>
+</html>

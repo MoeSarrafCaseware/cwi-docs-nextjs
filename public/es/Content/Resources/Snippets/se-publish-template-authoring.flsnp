@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>After you customize your draft template, you can review and publish it. When you publish a draft, it becomes the current firm template and applies to new engagements.</p>
+        <p style="font-weight: bold;">Publicar un borrador</p>
+        <ol>
+            <li MadCap:conditions="General.Online">
+                <p>Ensure that you have the <b>Settings Admin</b> role or similar. For more information, see <a href="../../Setup/Security/Built-in-roles.htm">Built-in roles</a> and <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Assign security roles</a>.</p>
+            </li>
+            <li MadCap:conditions="General.Online">
+                <p>From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Manage Template.</b></p>
+            </li>
+            <li MadCap:conditions="General.PDF">
+                <p>From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>OnPoint PCR</b></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT"><b>Caseware ReviewComp</b></MadCap:conditionalText> | <b>Manage Template </b><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>Primary</b></MadCap:conditionalText><b>.</b></p>
+            </li>
+            <li>
+                <p>Select <b>Publish Template.</b></p>
+                <p>The published template is automatically added to the archived templates list. The template version and publish date display in the list.</p>
+                <p class="note inline"><b>Note</b>: Once a template is published, it cannot be deleted. You can however<MadCap:conditionalText MadCap:conditions="General.PDF"> revert to an older version.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../../Engagements/Template-and-Authoring/Revert-to-a-previous-template-version.htm">revert to an older version</a>.</MadCap:conditionalText></p>
+            </li>
+        </ol>
+        <p>The options available to you on the <b>Manage Template</b> page are <b>Use Default</b> and <b>Create Draft</b>.</p>
+        <p>Select <b>Use Default</b> if you want to use the product template instead of having a custom firm template.</p>
+        <p>Select <b>Create Draft</b> if you want to start a new draft then, select <b>Open Draft</b> to start customizing it.</p>
+    </body>
+</html>

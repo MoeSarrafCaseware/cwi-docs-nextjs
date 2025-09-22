@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Risk profile</h1>
+        <p>In this stage, you will complete the following:</p>
+        <ul>
+            <li style="font-weight: normal;"><b>2-1 Influencers (Organizational Risk)</b></li>
+            <li style="font-weight: normal;"><b>2-2 Risk Analysis (Transaction Risk)</b></li>
+            <li style="font-weight: normal;"><b>2-3 Analytical Review</b></li>
+        </ul>
+        <h2>Influencers</h2>
+        <p>Influencers are applied to accounts that you want to emphasize as part of your risk analysis. They capture macroeconomic and organizational risk and highlight transactions that may be of interest in light of those risks.</p>
+        <p>For example, if you suspect that an organization&apos;s controls for cash accounts are lax, you might set the influencer for any cash accounts to raise the risk score by a specific percentage. You could set the influencer for cash accounts to, say 50%, and the risk scores of any transactions which contain cash accounts will be automatically increased by 50%. Transactions with zero risk will not be adjusted, and therefore will remain at zero risk.</p>
+        <p>See <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Adjust-influencers.htm">Adjust influencers</a> for more information.</p>
+        <MadCap:pageBreak />
+        <p></p><MadCap:snippetBlock src="../../Resources/Snippets/adjust-influencers.flsnp" /><MadCap:pageBreak />
+        <h2>Risk analysis</h2>
+        <p>The <b>RESULTS</b> page gives you an overview of the engagement&apos;s test results using different widgets.</p>
+        <p><b>To view the test results:</b></p>
+        <ul>
+            <li>Select <b>2-2 Risk Analysis (Transaction Risk)</b> from the <b>Documents</b> page.</li>
+        </ul>
+        <p><img src="../../Resources/Images/results-page.png" alt="Test results as displayed from 2-2 Risk Analysis (Transaction Risk) on the Documents page" /></p>
+        <MadCap:pageBreak />
+        <h3>Widgets</h3>
+        <p>Click labels or charts in any of the widgets to display more information. The information shown in the widgets changes to reflect your selection.</p>
+        <p>You click on the <b>Risk Summary</b>, <b>High Risk Exceptions</b>, <b>High Risk Users</b> and <b>High Risk Journals</b> widgets to see further details. See <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Analytics-ai-test-results.htm#Navigateawidget">Navigate a widget</a> for more information.</p>
+        <h4>Risk summary</h4>
+        <p>This widget ranks the transactions in terms of overall risk score.</p>
+        <p><img src="../../Resources/Images/insight-risk-summary.png" alt="Transactions in terms of overall risk score" /></p>
+        <MadCap:pageBreak />
+        <h4>High risk exceptions</h4>
+        <p>This widget shows transactions with a risk score that are grouped by test. The top four tests with the highest dollar amount display.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-exceptions.png" alt="The top four tests with their dollar amounts" /></p>
+        <MadCap:pageBreak />
+        <h4>High risk users</h4>
+        <p>This widget shows the top five users that posted transactions with the highest risk score.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-users.png" alt="The top five users that posted transactions with the highest risk score" /></p>
+        <MadCap:pageBreak />
+        <h4>High risk journals</h4>
+        <p>This widget shows the top five journals with the highest risk score.</p>
+        <p><img src="../../Resources/Images/insight-high-risk-journals.png" alt="Top five journals with the highest risk score" /></p>
+        <MadCap:pageBreak />
+        <h4>Time series chart</h4>
+        <p>Use the <b>Time Series Risk to Value of Transactions</b> chart to observe the risk score and dollar value of the evaluated transactions for the previous 13 months from the uploaded data set. Hover over the chart to display more information.</p>
+        <p><img src="../../Resources/Images/aai-time-series-with-details.png" alt="Time Series Risk to Value of Transactions Chart" /></p>
+        <h3>Change the configuration on specific tests</h3>
+        <p>From the <b>CONFIGURATION</b> tab, you can see all the tests that are run in AnalyticsAI. You can also configure the tests here by doing the the following:</p>
+        <ul>
+            <li>Select what tests to run.</li>
+            <li>Change the emphasis (<b>Risk Score</b>) on specific tests.</li>
+            <li>Refine test parameters.</li>
+        </ul>
+        <MadCap:pageBreak /><MadCap:snippetBlock src="../../Resources/Snippets/view-configuration-page.flsnp" /><p>Deselect a test&apos;s check box if you don&apos;t want it to run.</p>
+        <p>You can also use this page to change the emphasis (<b>Risk Score</b>) on specific tests and their parameters.</p><MadCap:snippetBlock src="../../Resources/Snippets/change-risk-score.flsnp" /><h4>Charts and graphs</h4>
+        <p>Tests include a pie chart that shows the percentage and quantity of the flagged transactions for that test. Pie charts appear when a test has flagged transactions.</p>
+        <p><img src="../../Resources/Images/aai-duplicate-entries.png" alt="Duplicate entries AnalyticsAI test" /></p>
+        <MadCap:pageBreak />
+        <p>Some tests, such as <b>High Amounts</b> include a pie chart and an additional graph that helps you configure parameters.</p>
+        <p><img src="../../Resources/Images/aai-high-amounts.png" alt="High amounts AnalyticsAI test" /></p>
+        <p>The test-specific bar graphs show the data distribution relative to the default test parameter, so that an auditor can have a clear picture of where to set the parameter. For example, the <b>High Amounts</b> bar graph shows the transactions&apos; line counts distribution across dollar amounts. You can adjust the <b>Percentile</b> to flag transactions to the right of the orange bar (the default parameter).</p>
+        <p>In this example, the default percentile value has been changed to 99.7. Notice that for the default percentile value of 99.1 there are 21 transactions flagged. When we change the <b>Percentile</b> to 99.7 and rerun the tests, the number of transactions flagged drops to five.</p>
+        <p><img src="../../Resources/Images/aai-high-amounts-adjusted.png" alt="High amounts adjusted" /></p>
+        <MadCap:pageBreak />
+        <h4>Outlier detection</h4>
+        <p>AnalyticsAI has a number of machine learning (ML) based outlier detection tests. These tests are turned off by default.</p>
+        <p><b>To turn on the outlier detection tests:</b></p>
+        <ul>
+            <li>Select the check boxes of the outlier detection tests on the <b>CONFIGURATION</b> page</li>
+        </ul>
+        <p><img src="../../Resources/Images/enable-outlier-test.png" alt="Enable AnalyticsAI outlier tests" /></p>
+        <p>See <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Analytics-ai-configuration.htm#Teststatus">Test status</a> for more information.</p>
+        <h2>Analytische Durchsicht</h2>
+        <p>The <b>2-3 Analytical Review</b> document identifies relationships (for possible use in substantive analytical procedures), risks and inconsistencies. The analysis charts in this document are linked to data throughout the engagement to help auditors visually compare data and discover trends and patterns using predefined data analytics.</p>
+        <p>Use the drop-down to select <b>Preliminary</b> or <b>Final</b> results. Use the filter switches to display the desired analyses widgets. The widgets are interactive. Hover over a specific item in a graph to see more information.</p>
+        <MadCap:pageBreak /><MadCap:snippetBlock src="../../Resources/Snippets/show-analytical-review.flsnp" /></body>
+</html>

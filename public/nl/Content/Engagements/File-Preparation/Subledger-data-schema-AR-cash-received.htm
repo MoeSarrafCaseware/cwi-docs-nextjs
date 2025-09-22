@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Debiteuren—ontvangen betalingen</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. In dit onderwerp worden de velden in het subgrootboek Debiteuren-Geïnde kas beschreven.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Transactie-ID <br /><code>(ar_cash_received_transaction_id</code>)</p>
+                    </td>
+                    <td>
+                        <p>Een kruisverwijzing naar de grootboekpost. Deze kan verschillende niveaus bevatten die de transactie kunnen identificeren, waaronder kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Ontvangstbewijsnummer <br /><code>(ar_cash_received_receipt_id</code>)</p>
+                    </td>
+                    <td>
+                        <p>De unieke identificatiecode voor elke ontvangen betaling, waarvan debiteuren is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Ontvangstdatum <br /><code>(ar_cash_received_receipt_date</code>)</p>
+                    </td>
+                    <td>
+                        <p>De datum waarop de betaling van of kredietverlening aan de klant wordt geregistreerd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Fiscaal jaar ontvangstbewijs <br /><code>(ar_cash_received_receipt_fiscal_year</code>)</p>
+                    </td>
+                    <td>
+                        <p>Het fiscaal jaar waarin de <b>Ontvangstdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Periode ontvangstbewijs <br /><code>(ar_kas_ontvangen_ontvangst_periode</code>)</p>
+                    </td>
+                    <td>
+                        <p>De fiscale periode waarin de <b>Ontvangstdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Type bedrag (debet / credit) <br /><code>(ar_cash_received_amount_credit_debit_indicator</code>)</p>
+                    </td>
+                    <td>
+                        <p>Geeft aan of het bedrag een credit of debet is.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Mogelijke waarden: &quot;C&quot;=credit; &quot;D&quot;=debet.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Type ontvangstbewijs <br /><code>(ar_cash_received_receipt_type</code>)</p>
+                    </td>
+                    <td>
+                        <p>De codewaarde of indicator van de methode waarmee het debet- of creditbedrag van de transactie door de klant is opgeheven of toegerekend aan de schuld. Voorbeelden zijn cheque, overboeking, kasgeld, etc.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Bedrag ontvangstbewijs <br /><code>(ar_cash_received_receipt_amount</code>)</p>
+                    </td>
+                    <td>
+                        <p>Het geldbedrag van de transactie vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Rapport bedrag ontvangstbewijs <br /><code>(ar_cash_received_receipt_amount_reporting</code>)</p>
+                    </td>
+                    <td>
+                        <p>Het geldbedrag van de transactie dat in de gerapporteerde valuta is vastgelegd.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Lokaal bedrag ontvangstbewijs<br /><code>(ar_cash_received_receipt_amount_local</code>)</p>
+                    </td>
+                    <td>
+                        <p>Geldbedrag van de transactie vastgelegd in de lokale valuta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Boekingsstatus <br /><code>(ar_cash_received_posting_status</code>)</p>
+                    </td>
+                    <td>Geeft aan of de transactie ingeboekt is op het grootboek. Gegevenstype Tekst vereist: Nee Mogelijke waarden: <code>Geplaatst</code>, <code>niet geplaatst</code></td>
+                </tr>
+                <tr>
+                    <td>Ontvangstbewijsnummer <br /><code>(ar_kas_ontvangen_ontvangst_nummer</code></td>
+                    <td>
+                        <p>Het nummer van het ontvangstbewijs, waarvan debiteuren is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project-ID <br /><code>(ar_geld_ontvangen_project_id</code></td>
+                    <td>
+                        <p>De unieke identificatiecode voor het project, waarvan debiteuren is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Functioneel bedrag <br /><code>(ar_geld_ontvangen_functioneel_bedrag</code></td>
+                    <td>
+                        <p>Het geldbedrag van de transactie vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Omschrijving <br /><code>(ar_kas_ontvangen_opmerking</code></td>
+                    <td>
+                        <p>Een beschrijving (vrije tekst).</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batchnummer <br /><code>(ar_cash_received_batch_id</code></td>
+                    <td>
+                        <p>Een batch identifier gegenereerd door het bronsysteem.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Betalingsomschrijving <br /><code>(ar_cash_ontvangen_omschrijving</code></td>
+                    <td>
+                        <p>Een omschrijving van de betaling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bron-ID <br /><code>(ar_cash_received_source_id</code></td>
+                    <td>
+                        <p>De boekingsbron. De code voor de bron van waaruit de journaalpost is geplaatst, zoals een verkoopjournaal, kassabonnenjournaal, algemeen journaal, loonkostenjournaal, handmatige invoer door accountant, spreadsheet, etc.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rekening-ID klant <br /><code>(ar_kas_ontvangen_klant_rekening_id</code></td>
+                    <td>
+                        <p>ID van de klant van wie betaling wordt ontvangen of bij wie kredieten zijn toegepast.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam rekening klant <br /><code>(ar_kas_ontvangen_klant_rekening_naam</code></td>
+                    <td>
+                        <p>De naam van de klant.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit <br /><code>(ar_cash_received_business_unit_code</code></td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurnummer <br /><code>(ar_kas_ontvangen_factuur_nummer</code></td>
+                    <td>
+                        <p>Het identificatienummer van een intern of extern gegenereerde transactie. Voorbeelden zijn het chequenummer, betalingskenmerk, of origineel document-ID.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurdatum <br /><code>(ar_kas_ontvangen_factuur_datum</code></td>
+                    <td>
+                        <p>De datum bij een extern gegenereerde transactie. Voorbeelden zijn de chequedatum of uitvoerdatum van de overboeking.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overig referentienummer <br /><code>(ar_cash_received_reference_number</code></td>
+                    <td>
+                        <p>Een identificatienummer voor een intern of extern gegenereerde transactie. Voorbeelden zijn het chequenummer, betalingskenmerk, of origineel document-ID.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige referentiedatum <br /><code>(ar_kas_ontvangen_referentie_datum</code></td>
+                    <td>
+                        <p>De datum bij een extern gegenereerde transactie. Voorbeelden zijn de chequedatum of uitvoerdatum van de overboeking.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Verkoopovereenkomst-ID <br /><code>(ar_geld_ontvangen_verkoop_contract_id</code></td>
+                    <td>
+                        <p>De unieke identificatiecode voor de verkoopovereenkomst, waarvan DEB is afgeleid.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Valuta bedrag ontvangstbewijs <br /><code>(ar_kas_ontvangen_ontvangst_bedrag_valuta</code></td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het bedrag van het ontvangstbewijs.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gerapporteerde valuta bedrag ontvangstbewijs <br /><code>(ar_contant_ontvangen_ontvangst_bedrag_rapporterende_valuta</code></td>
+                    <td>
+                        <p>De gerapporteerde valuta die betrekking heeft op het bedrag van het ontvangstbewijs voor niet-geconsolideerde rapporten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bedrag ontvangstbewijs lokale valuta <br /><code>(ar_geld_ontvangen_ontvangst_bedrag_lokale_valuta</code></td>
+                    <td>
+                        <p>De valuta voor lokale rapportageverplichtingen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Functionele valutacode <br /><code>(ar_geld_ontvangen_functionele_valuta_code</code></td>
+                    <td>
+                        <p>De geregistreerde valuta die wordt gebruikt bij boekhoudsoftware.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grootboekrekeningnummer (debet) <br /><code>(ar_kas_ontvangen_gl_debet_rekening_nummer</code></td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de debetzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grootboekrekeningnummer (krediet) <br /><code>(ar_kas_ontvangen_gl_krediet_rekening_nummer</code></td>
+                    <td>
+                        <p>Het nummer van de grootboekrekening waarop de creditzijde van de transactie is geplaatst.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Rekening-ID <br /><code>(ar_kas_ontvangen_regel_rekening_id</code></td>
+                    <td>
+                        <p>De grootboekrekeningcode van de grootboekomzetrekening. Deze code kan een subrekening-ID bevatten, net als verschillende niveaus die de rekening kunnen identificeren, waaronder kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Omschrijving van rekening <br /><code>(ar_kas_ontvangen_regel_rekening_omschrijving</code></td>
+                    <td>
+                        <p>De beschrijving van Factuurregel.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboekt door <br /><code>(ar_cash_received_entered_by</code></td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die het record aanmaakte.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van invoer <br /><code>(ar_kas_ontvangen_ingevulde_datum</code></td>
+                    <td>
+                        <p>De datum waarop deze transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde tijd <br /><code>(ar_cash_received_entered_time</code></td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door <br /><code>(ar_kas_ontvangen_goedgekeurd_door</code></td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die toevoegingen of wijzigingen aan het hoofdbestand van de klant goedkeurde.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum goedkeuring <br /><code>(ar_kas_ontvangen_goedgekeurde_datum</code></td>
+                    <td>
+                        <p>De datum waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijdstip van goedkeuring <br /><code>(ar_kas_ontvangen_goedgekeurde_tijd</code></td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door <br /><code>(ar_kas_ontvangen_laatst_gewijzigd_bij</code></td>
+                    <td>
+                        <p>De gebruikers-ID van de laatste persoon die deze post aanpaste.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van laatste wijziging <br /><code>(ar_kas_ontvangen_laatste_gewijzigde_datum</code></td>
+                    <td>
+                        <p>De datum waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijd laatste wijziging <br /><code>(ar_kas_ontvangen_laatste_gewijzigde_tijd</code></td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boekings-ID <br /><code>(ar_cash_ontvangen_journaal_id</code></td>
+                    <td>
+                        <p>De unieke identificatiecode voor de journaalpost. Dit wordt automatisch gegenereerd door het bronsysteem.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

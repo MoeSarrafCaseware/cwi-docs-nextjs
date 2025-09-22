@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Modifier le groupe par défaut pour les différences d&apos;arrondi</h1>
+        <p>Dans les tableaux des états financiers, les différences d&apos;arrondi sont appliquées par défaut au premier compte non nul du niveau enfant le plus bas qui apparaît dans le premier groupe de la balance générale.</p>
+        <p>Par exemple, si le premier groupe parent de la balance comptable est <i>Actif</i> et qu&apos;il est structuré comme suit :</p>
+        <p><img src="../Resources/Images/show-default-plug-location.PNG" alt="Trial balance Assets group hierarchy" /></p>
+        <p>Ensuite, lorsque les utilisateurs importent les données de la balance de vérification, les différences d&apos;arrondi s&apos;appliquent au premier compte non nul dans <i>Land.</i></p>
+        <p>Vous pouvez modifier le groupe par défaut pour vous assurer que la différence d&apos;arrondi est appliquée à un poste des états financiers fréquemment utilisé sur votre marché.</p>
+        <p>Dans les tableaux dynamiques, la ligne du groupe où les différences d&apos;arrondi s&apos;appliquent est marquée d&apos;un astérisque<b>(*).</b></p>
+        <p style="font-weight: bold;">Pour modifier le compte où la différence d&apos;arrondi est appliquée :</p>
+        <ol>
+            <li>
+                <p>Accédez au tableau dynamique dans lequel se trouvent les données de la balance générale.</p>
+            </li>
+            <p>Par exemple, lors de l&apos;établissement du bilan.</p>
+            <li>
+                <p>Sélectionnez la ligne avec un astérisque (*).</p>
+            </li>
+            <li>
+                <p>Sélectionnez le nom du compte dans <b>Année en cours</b>.</p>
+            </li>
+            <p>Une liste des groupes de balances de vérification et des comptes s&apos;affiche.</p>
+            <li>
+                <p>Sélectionnez le compte souhaité dans la liste.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le nom du groupe dans <b>Exercice précédent</b> pour afficher la liste des groupes de balances de vérification.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le compte souhaité dans la liste.</p>
+            </li>
+        </ol>
+        <p>Une fois que les utilisateurs ont importé les données de la balance de vérification dans l&apos;engagement, les différences d&apos;arrondi sont automatiquement ajoutées au premier compte non nul dans les groupes que vous avez sélectionnés pour l&apos;année en cours et l&apos;année précédente respectivement.</p>
+        <p>Si vous réduisez les groupes parents pour le groupe que vous avez sélectionné pour les différences d&apos;arrondi, l&apos;astérisque est déplacé vers les groupes parents. Cela vous aide à repérer l&apos;endroit où se trouve le groupe sélectionné.</p>
+        <p>Par exemple, supposons que le groupe sélectionné pour les différences d&apos;arrondi soit <i>Land</i>.</p>
+        <p><img src="../Resources/Images/plug-in-land.PNG" alt="Groupe sélectionné pour les différences d&apos;arrondi dans les terres" /></p>
+        <p>Remarquez que l&apos;astérisque se déplace vers les groupes parents lorsqu&apos;ils sont réduits. Lorsque le groupe parent &quot; <i>Immobilisations corporelles</i> &quot; est réduit, l&apos;astérisque y est déplacé.</p>
+        <p><img src="../Resources/Images/third-level-parent-plug-group.PNG" alt="Astérix à côté de Immobilisations corporelles" /></p>
+        <p>Lorsque le groupe parent <i>Actifs non courants</i> est réduit, l&apos;astérisque y est déplacé.</p>
+        <p><img src="../Resources/Images/second-level-parent-plug-group.PNG" alt="Lorsque le groupe parent Actifs non courants est réduit, l&apos;astérisque y est déplacé" /></p>
+        <p>Lorsque le groupe parent <i>Actifs</i> est réduit, l&apos;astérisque y est déplacé.</p>
+        <p><img src="../Resources/Images/first-level-parent-plug-group.PNG" alt="Un astérisque indiquant que l&apos;actif a été réduit" /></p>
+    </body>
+</html>

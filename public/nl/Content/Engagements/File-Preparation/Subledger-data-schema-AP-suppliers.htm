@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Crediteuren—leveranciers</h1>
+        <p>Bij het importeren van subgrootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. In dit onderwerp worden de velden in het subgrootboek Crediteuren-leveranciers beschreven.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Leveranciers (ID) <br /><code>(ap_leverancier_account_id</code>)</td>
+                    <td>
+                        <p>De ID van de leverancier aan wie betaling is verschuldigd of van wie kredieten zijn toegepast.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam leverancier<br /><code>(ap_leverancier_account_naam</code>)</td>
+                    <td>
+                        <p>De naam van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>de ID van de leverancier</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de vermelding te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Groeperingscode leverancier <br /><code>(ap_leverancier_leverancier_groep</code>)</td>
+                    <td>
+                        <p>Als de organisatie leveranciers opdeelt in groepen, is dit de groep waaraan deze leverancier toegewezen is.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresregel 1 leverancier <br />ap_supplier_supplier_physical_street_address1</td>
+                    <td>
+                        <p>Adresregel 1 voor het postadres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresregel 2 leverancier <br />ap_supplier_supplier_physical_street_address2</td>
+                    <td>
+                        <p>Adresregel 2 voor het postadres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plaats leverancier<br /><code>ap_leverancier_leverancier_fysieke_stad</code>)</td>
+                    <td>
+                        <p>De stad waar de leverancier fysiek is gevestigd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Staat/provincie leverancier <br /><code>(ap_leverancier_leverancier_fysieke_staat_provincie</code>)</td>
+                    <td>
+                        <p>De staat of provincie waar de leverancier fysiek is gevestigd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Postcode leverancier <br /><code>(ap_leverancier_leverancier_fysieke_postcode</code>)</td>
+                    <td>
+                        <p>De postcode waar de leverancier fysiek is gevestigd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Land leverancier <br /><code>(ap_leverancier_leverancier_fysiek_land</code>)</td>
+                    <td>
+                        <p>De code van het land waar de leverancier fysiek is gevestigd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Belastingnummer leverancier <br /><code>(ap_leverancier_leverancier_tin</code>)</td>
+                    <td>
+                        <p>Het belastingnummer van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factureringsadres 1 <br />ap_supplier_supplier_billing_address1</td>
+                    <td>
+                        <p>Adresregel 1 voor het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factureringsadres 2 <br />ap_supplier_supplier_billing_address2</td>
+                    <td>
+                        <p>Adresregel 2 voor het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurplaats <br /><code>(ap_leverancier_leverancier_factuur_stad</code>)</td>
+                    <td>
+                        <p>De plaats van het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurstaat<code>(ap_supplier_supplier_billing_state_province</code>)</td>
+                    <td>
+                        <p>De staat of provincie van het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Facturering Zip <br /><code>(ap_leverancier_leverancier_factuur_postcode</code>)</td>
+                    <td>
+                        <p>De postcode van het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Land factuur <br /><code>(ap_leverancier_leverancier_factuur_land</code>)</td>
+                    <td>
+                        <p>De landcode van het factuuradres van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Actieve datum <br /><code>(ap_leverancier_actieve_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop de leverancier actief is verklaard.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inactieve datum <br /><code>(ap_leverancier_inactieve_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop de leverancier inactief is verklaard.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kredietlimiet transactie <br /><code>(ap_leverancier_transactie_kredietlimiet</code>)</td>
+                    <td>
+                        <p>De kredietlimiet per factuur zoals afgesproken met de leverancier.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Totale kredietlimiet <br /><code>(ap_leverancier_overall_credit_limit</code>)</td>
+                    <td>
+                        <p>De kredietlimiet voor de totale openstaande balans, goedgekeurd voor de leverancier.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingspercentage <br /><code>(ap_leverancier_voorwaarden_korting_percentage</code>)</td>
+                    <td>
+                        <p>Het kortingspercentage dat de leverancier mag opgeven als een factuur vóór een bepaald aantal dagen wordt betaald.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingsdagen <br /><code>(ap_leverancier_voorwaarden_korting_dagen</code>)</td>
+                    <td>
+                        <p>Het aantal dagen vanaf de factuurdatum dat de leverancier van kortingsvoorwaarden kan profiteren.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden vervaldagen <br /><code>(ap_leverancier_termijnen_due_dagen</code>)</td>
+                    <td>
+                        <p>Het aantal toegestane dagen om aan de verplichting te voldoen voordat een factuur achterstallig is.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam primair contactpersoon <br /><code>(ap_leverancier_primaire_contact_naam</code>)</td>
+                    <td>
+                        <p>De naam van de primaire contactpersoon van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Primair telefoonnummer contactpersoon <br /><code>(ap_leverancier_primair_contact_telefoon</code>)</td>
+                    <td>
+                        <p>Het telefoonnummer van de primaire contactpersoon van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Primair telefoonnummer contactpersoon<br /><code>ap_leverancier_primair_contact_email</code>)</td>
+                    <td>
+                        <p>Het e-mailadres van de primaire contactpersoon van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aangemaakt door <br /><code>(ap_leverancier_ingegeven_door</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die het record aanmaakte.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum aangemaakt <br /><code>(ap_leverancier_ingevoerde_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop de transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gecreëerde tijd <br /><code>(ap_leverancier_ingevoerde_tijd</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door <br /><code>(ap_leverancier_goedgekeurd_door</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die de post goedkeurde.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum goedkeuring <br /><code>(ap_leverancier_goedgekeurd_door_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijdstip van goedkeuring <br /><code>(ap_leverancier_goedgekeurd_door_tijd</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door <br /><code>(ap_leverancier_laatst_gewijzigd_bij</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de laatste persoon die deze post aanpaste.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van laatste wijziging <br /><code>(ap_leverancier_laatste_gewijzigde_datum</code>)</td>
+                    <td>
+                        <p>De datum waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijd laatste wijziging <br /><code>(ap_leverancier_laatste_gewijzigde_tijd</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

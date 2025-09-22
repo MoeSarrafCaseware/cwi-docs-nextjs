@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importer à partir de QuickBooks Desktop</h1>
+        <p>Vous pouvez importer des données de QuickBooks desktop en les exportant sous forme de fichier, en générant un fichier zip à l&apos;aide de l&apos;utilitaire d&apos;importation Caseware Cloud, puis en les important dans votre engagement.</p>
+        <p class="note"><b>Remarque :</b> Les comptes avec un solde nul ne sont pas automatiquement importés dans les applications Caseware Cloud, à l&apos;exception d&apos; <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Pour inclure les comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> manuellement aux groupes désignés.</p>
+        <h2>Exporter des données à partir de Quickbooks</h2>
+        <p>Avant de commencer, assurez-vous d&apos;avoir effectué les étapes préalables nécessaires en fonction de votre version de QuickBooks :</p>
+        <p style="font-weight: bold;">QuickBooks Canada / UK / Australie :</p>
+        <ul>
+            <li>
+                <p>Installez une version applicable de QuickBooks sur votre poste de travail.</p>
+            </li>
+            <li>
+                <p>Installez l&apos;utilitaire d&apos;exportation QuickBooks sur votre poste de travail. Vous pouvez le télécharger à partir de <a href="https://my.caseware.com/">MyCaseware</a> sur la page Support Downloads.</p>
+            </li>
+            <li>
+                <p>Dans QuickBooks, vous devez autoriser l&apos;utilitaire d&apos;exportation QuickBooks à accéder au fichier. Sur le ruban, cliquez sur <b>Édition</b> | <b>Préférences</b>. <b>..</b> | Pour ce faire, cliquez sur <b>Applications intégrées</b> | <b>Préférences de l&apos;entreprise</b> et désélectionnez l&apos;option <b>Ne permettre à aucune application d&apos;accéder à ce fichier d&apos;entreprise</b>.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">QuickBooks USA :</p>
+        <ul>
+            <li>
+                <p>Installez une version applicable de QuickBooks sur votre poste de travail.</p>
+            </li>
+        </ul>
+        <p>Après avoir rempli les conditions préalables, vous pouvez exporter des données à partir de QuickBooks Canada / UK / Australie ou QuickBooks US.</p>
+        <p style="font-weight: bold;">Pour exporter des données de QuickBooks Canada / UK / Australie :</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre compte QuickBooks, puis ouvrez le fichier de l&apos;entreprise que vous souhaitez importer dans Caseware Cloud.</p>
+            </li>
+            <li>
+                <p>Ouvrez l&apos;utilitaire d&apos;exportation QuickBooks.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans la liste déroulante <b>Version de QuickBooks</b> , sélectionnez votre version de QuickBooks.</p>
+                    </li>
+                    <li>
+                        <p>dans le champ <b>Chemin d&apos;exportation</b> , sélectionnez <b>Browse....</b></p>
+                    </li>
+                    <p>La boîte de dialogue <b>Browse For Folder (Rechercher un dossier)</b> s&apos;ouvre.</p>
+                    <li>
+                        <p>Naviguez jusqu&apos;à l&apos;endroit où vous souhaitez créer le fichier d&apos;exportation, puis sélectionnez <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Sélectionnez <b>Spécifier la date de la dernière transaction</b> et saisissez la date applicable.</p>
+                    </li>
+                    <li>
+                        <p>Dans la liste déroulante <b>Méthode comptable</b> , sélectionnez la méthode de comptabilité d&apos;exercice applicable.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/quickbooks-export-utility.png" alt="L&apos;utilitaire d&apos;exportation QuickBooks" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Exporter</b>.</p>
+            </li>
+        </ol>
+        <p>Les données comptables du fichier QuickBooks Desktop sont exportées vers un fichier à l&apos;emplacement spécifié.</p>
+        <p style="font-weight: bold;">Pour exporter des données à partir de QuickBooks US :</p>
+        <ol>
+            <li>
+                <p>Connectez-vous à votre compte QuickBooks desktop, puis ouvrez le fichier de l&apos;entreprise que vous souhaitez importer.</p>
+            </li>
+            <li>
+                <p>Sur le ruban, sélectionnez <b>Fichier</b> | <b>Utilitaires</b> | <b>Copier le fichier de l&apos;entreprise pour QuickBooks Online....</b></p>
+                <p>Si vous êtes invité à fermer les fenêtres ouvertes, sélectionnez <b>OK.</b></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Enregistrer le fichier de la société exportée dans..., naviguez jusqu&apos;à l&apos;emplacement de votre poste de travail où vous souhaitez créer le fichier QuickBooks Online et sélectionnez <b>Enregistrer.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>Les données comptables du fichier QuickBooks Desktop sont exportées vers un fichier à l&apos;emplacement spécifié.</p>
+        <h2><a name="Generate"></a>Générer le fichier d&apos;importation pour Quickbooks</h2>
+        <p>Après avoir exporté vos données depuis QuickBooks, vous pouvez maintenant générer le fichier d&apos;importation en utilisant l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+        <p style="font-weight: bold;">Pour générer le fichier d&apos;importation pour Quickbooks :</p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <p></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans les menus déroulants <b>Importer de</b> et <b>Version</b> , sélectionnez <b>QuickBooks</b> et la version à partir de laquelle vous effectuez l&apos;importation.</p>
+                <p class="note"><b>Remarque :</b> Pour une liste des versions que nous prenons en charge, voir <a href="Supported-third-party-accounting-packages.htm">Logiciels comptables tiers pris en charge.</a></p>
+            </li>
+            <li>
+                <p>Dans <b>Chemin d&apos;importation</b>, sélectionnez <b>Parcourir</b> et naviguez jusqu&apos;au dossier contenant la collection de fichiers que vous avez exportés de QuickBooks en utilisant l&apos;utilitaire d&apos;exportation QuickBooks de Caseware.</p>
+                <ul>
+                    <li>
+                        <p><b>Sélectionner le fichier d&apos;identification du client</b> est automatiquement complété par le nom du fichier d&apos;identification du client.</p>
+                    </li>
+                    <li>
+                        <p>L&apos;<b>extension de fichier</b> est automatiquement remplie avec l&apos;extension correcte du fichier. (Les options d&apos;extension de fichier varient en fonction de la version que vous avez sélectionnée précédemment)</p>
+                    </li>
+                    <li>
+                        <p>Dans la liste déroulante <b>Année comptable</b> , sélectionnez l&apos;année pour laquelle vous souhaitez importer des données.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/cloud-import-utility-quickbooks.png" alt="L&apos;utilitaire d&apos;importation dans le nuage" /></p>
+            </li>
+            <li>
+                <p>Déterminez les autres paramètres de l&apos;importation.</p>
+                <p>Les paramètres varient en fonction de la version que vous avez sélectionnée précédemment.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Suivant</b>, puis <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>Enregistrez le fichier zip généré à l&apos;aide de l&apos;invite affichée.</p>
+            </li>
+        </ol>
+        <h2>Importer les données dans votre engagement</h2>
+        <p>Après avoir généré le fichier zip à l&apos;aide de l&apos;utilitaire d&apos;importation Caseware Cloud, vous pouvez importer les données dans votre engagement.</p>
+        <p><b>Pour importer les données dans votre engagement :</b></p>
+        <ol>
+            <li>
+                <p>Ouvrez votre fichier d&apos;engagement Caseware Cloud. Lorsque vous ouvrez l&apos;engagement pour la première fois, la fenêtre contextuelle Propriétés de l&apos;engagement s&apos;affiche. Définissez la <b>date de fin d&apos;année</b> comme étant la même que celle des données que vous êtes sur le point d&apos;importer.</p>
+                <p>La date de fin d&apos;année est le dernier élément du nom du fichier zip que vous avez généré dans <a href="#Generate">Générer le fichier d&apos;importation pour Quickbooks</a>. Par exemple, pour le fichier nommé SUNBRIDGE FARMS LTD. Mastercard Mark 8386 2022-09-30.zip, la date de fin d&apos;année est le 30 septembre 2022.</p>
+            </li>
+            <li>
+                <p>Accédez à la page <b>Données</b> . Les paramètres du produit s&apos;ouvrent sur l&apos;onglet <b>Zones</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Sous IMPORTATION DEPUIS UN CONNECTEUR DE DONNÉES, sélectionnez <b>QuickBooks Desktop</b> dans la liste des sources de données, puis cliquez sur <b>Suivant.</b></p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Recherchez le connecteur de données QuickBooks Desktop dans la liste de l&apos;onglet Datasets." /></p>
+        <ol><li value="4"><p>A l&apos;étape Upload de l&apos;assistant d&apos;importation, sélectionnez ou glissez-déposez le fichier zip que vous avez généré en utilisant l&apos;utilitaire d&apos;importation Caseware Cloud, puis sélectionnez <b>Next.</b></p></li><li><p>A l&apos;étape Configuration des données de l&apos;assistant d&apos;importation :</p><ul><li><p>La période de<b>déclaration</b> est automatiquement remplie avec la période de déclaration des données.</p></li><li><p>La date de<b>début</b> est automatiquement remplie avec la date de début des données.</p></li><li><p>La date de<b>fin</b> est automatiquement remplie avec la date de fin des données.</p></li></ul></li><li><p>Dans <b>Sélectionner le type de jeu</b>de données, choisissez le type de jeu de données que vous importez. Sélectionnez <b>Balance de vérification</b> si vous importez une balance de vérification et <b>Grand livre</b> si vous importez des transactions.</p></li><li><p>Si vous avez sélectionné <b>Balance de vérification</b>, vous pouvez sélectionner l&apos;option <b>Importer les 5 dernières années de TB</b> pour importer jusqu&apos;à cinq années de données de balance de vérification si elles sont disponibles dans le fichier zip que vous avez généré.</p></li></ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+    </body>
+</html>

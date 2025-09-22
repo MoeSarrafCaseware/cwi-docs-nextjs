@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Inventory transactions described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Inventory transactions subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Feld</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaktions-ID <br />(<code>inventory_transaction_transaction_id</code>)</td>
+                    <td>
+                        <p>The transaction identifier associated with either the Procure to Pay or Order to Cash Subledger Audit Data Standards (ADS).</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsdatum <br />(<code>inventory_transaction_transaction_date</code>)</td>
+                    <td>
+                        <p>Datum der Aktivität pro zugehörigem Transaktionsbeleg, falls anwendbar.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Third alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventarprodukt-ID <br />(<code>inventory_transaction_product_id</code>)</td>
+                    <td>
+                        <p>The product identifier is a code that uniquely identifies an item that you carry in inventory.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Ja</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seriennummer <br />(<code>inventory_transaction_serial_number</code>)</td>
+                    <td>
+                        <p>Im Falle einer Serienfertigung wird hier die Seriennummer erfasst. Obwohl Seriennummer der gängige Begriff ist, ist der Wert nicht auf numerische Werte beschränkt. Es ist zwar ungewöhnlich, dass ein Artikel sowohl einer Seriennummern- als auch einer Losnummernsteuerung unterliegt (die Seriennummer identifiziert den Artikel eindeutig), aber das schließt sich nicht unbedingt gegenseitig aus.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Fourth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Losnummer<br />(<code>inventory_transaction_lot_number</code>)</td>
+                    <td>
+                        <p>Wenn es sich um ein Los handelt, wird hier die Losnummer erfasst. Obwohl Losnummer der gängige Begriff ist, ist der Wert nicht auf numerische Werte beschränkt.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No Primary key: Fifth alternative. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionstyp <br />(<code>inventory_transaction_transaction_type</code>)</td>
+                    <td>
+                        <p>Codes, die die wichtigsten bestandsspezifischen Aktionen beschreiben, die in Bestandstransaktionen im Zusammenhang mit der Bewegung von Waren, Handel, Mengenanpassungen aufgrund interner Geschäftsvorfälle und Kostenanpassungen aufgrund von Marktfaktoren oder Schäden vorkommen.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: Nein</p>
+                        <p>Example values: Goods Received (GR), Goods Shipped (GS), Inventory Transfers (IT), Inventory Adjustments (IA), Other (OT)</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionstyp System <br />(<code>inventory_transaction_transaction_type_system</code>)</td>
+                    <td>
+                        <p>A transaction code that is local to the underlying accounting software system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionszeit <br />(<code>inventory_transaction_transaction_time</code>)</td>
+                    <td>
+                        <p>Zeit, zu der die Aktivität stattgefunden hat, falls anwendbar pro zugehörigem Transaktionsbeleg.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsmenge <br />(<code>inventory_transaction_transaction_quantity</code>)</td>
+                    <td>
+                        <p>Betroffene Menge oder Position, ausgedrückt in der Bestandseinheit des Lagerorts.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionskostenänderung <br />(<code>inventory_transaction_transaction_cost_adjustment</code>)</td>
+                    <td>
+                        <p>Anstieg (oder Rückgang) der Lagerhaltungskosten pro Einheit.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsbeschreibung <br />(<code>inventory_transaction_transaction_description</code>)</td>
+                    <td>
+                        <p>Beschreibung der Transaktion.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsbezogene Bestell-ID <br />(<code>inventory_transaction_transaction_associated_order_id</code>)</td>
+                    <td>
+                        <p>Debitorenbestellung, Kreditorenbestellung oder ein anderer mit der Transaktion verbundener Beleg. Should specify whether the number found in <b>Transaction Associated Order Line ID</b> is from the Procure to Pay or Order to Cash Subledger Audit Data Standards (ADS) by using the text <code>P2P</code> or &quot;O2C”, respectively.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsbezogene Bestellzeilen-ID <br />(<code>inventory_transaction_transaction_associated_order_line_id</code>)</td>
+                    <td>
+                        <p>Zeilennummer einer Debitorenbestellung oder Kreditorenbestellung zur Unterscheidung zwischen mehreren Positionen in einer einzigen Bestellung für unterschiedliche Mengen. Should specify whether the number found in <b>Transaction Associated Order Line ID</b> is from the Procure to Pay or Order to Cash Subledger Audit Data Standards (ADS) by using the text <code>P2P</code> or <code>O2C</code>, respectively.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsbezogene Beleg-ID <br />(<code>inventory_transaction_transaction_associated_document_id</code>)</td>
+                    <td>
+                        <p>Kommissionierschein, Lieferschein oder ein anderer Beleg, der bei einer Bewegung erstellt wurde oder mit dieser verbunden ist. Should specify whether the number found in <b>Transaction Associated Order Line ID</b> is from the Procure to Pay or Order to Cash Subledger ADS by using the text <code>P2P</code> or <code>O2C</code>, respectively.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transaktionsbezogene Belegzeilen-ID <br />(<code>inventory_transaction_transaction_associated_document_line_id</code>)</td>
+                    <td>
+                        <p>The line number for a document other than a Customer Order, or Vendor Purchase Order. The document should specify whether the number found in <b>Transaction Associated Order Line ID</b> is from the Procure to Pay or Order to Cash Subledger ADS by using the text <code>P2P</code> or <code>O2C</code>, respectively.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestände von Lagerstandort <br />(<code>inventory_transaction_inventory_from_location</code>)</td>
+                    <td>
+                        <p>The storage location from where the inventory originated.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestände zu Lagerstandort <br />(<code>inventory_transaction_inventory_to_location</code>)</td>
+                    <td>
+                        <p>Lagerort, an den die Bestände verbracht werden.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandssystem oder externe Quelle <br />(<code>inventory_transaction_inventory_system_or_external_source</code>)</td>
+                    <td>
+                        <p>Dient zur Kennzeichnung von Eingabeinformationen bei Transaktionen, die von einem anderen ADS-Modul (z. B. P2P, O2C) oder aus dem Bestandssystem heraus angestoßen wurden. Wenn sie aus dem Bestandssystem heraus angestoßen wurden, werden die folgenden Felder zur Erfassung von Benutzer- und Hauptbuchinformationen verwendet.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sachkonto Vorräte (Soll) Hauptbuch Zeileneintrag <br />(<code>inventory_transaction_gl_line_debit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the debit side of the transaction has been posted.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sachkonto Vorräte (Haben) Hauptbuch Zeileneintrag <br />(<code>inventory_transaction_gl_line_credit_account_number</code>)</td>
+                    <td>
+                        <p>The general ledger (GL) account number on which the credit side of the transaction has been posted.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Projekt-ID <br />(<code>inventory_transaction_project_id</code>)</td>
+                    <td>
+                        <p>The unique identifier for the project. Typically autogenerated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lieferanten-ID <br />(<code>inventory_transaction_supplier_account_id</code>)</td>
+                    <td>
+                        <p>The unique identifier for the supplier. Typically autogenerated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debitorenkontonummer <br />(<code>inventory_transaction_customer_account_id</code>)</td>
+                    <td>
+                        <p>The unique identifier for the receiving customer. Typically auto-generated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandsorganisation Code <br />(<code>inventory_transaction_inventory_organization_code</code>)</td>
+                    <td>
+                        <p>Code der Bestandsorganisation. Die Bestandsorganisation bezieht sich auf die physische oder virtuelle organisatorische Einheit, in der die Bestandstransaktionen und -salden nachverfolgt und überwacht werden können. Sie liefert Bestandsinformationen an Module wie Einkauf und Verkauf. Die einfachste Form der Bestandsorganisation ist ein Lager.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandsmengeneinheit Code <br />(<code>inventory_transaction_inventory_stocking_uom_code</code>)</td>
+                    <td>
+                        <p>The standardized measurement unit used to count stock items and to express them as specific quantities.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandskostenmaßeinheit Code <br />(<code>inventory_transaction_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>Code der Maßeinheit für die Kosten des Bestands.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandsanforderung gestellt von <br />(<code>inventory_transaction_inventory_required_by</code>)</td>
+                    <td>
+                        <p>Die Person oder Organisation, die eine Bestandsanforderung stellt.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kostenorganisation Code <br />(<code>inventory_transaction_cost_organization_code</code>)</td>
+                    <td>
+                        <p>Code der Kostenorganisation, der sich auf die organisatorische Einheit/Ebene bezieht, auf der die Kosten für ausgehende Bestände berechnet werden. Die Berechnung kann auf Unternehmensebene, auf der Ebene der Lagerhaltungsorganisation oder an den einzelnen Standorten, an denen die Bestände gelagert werden, erfolgen.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandskosten <br />(<code>inventory_transaction_inventory_cost</code>)</td>
+                    <td>
+                        <p>The cost per unit using the method found in <b>Inventory Cost Method</b>, in <b>Inventory on Hand</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geschäftseinheitencode <br />(<code>inventory_transaction_business_unit_code</code>)</td>
+                    <td>
+                        <p>Dient zur Identifizierung der Geschäftseinheit, Region, Niederlassung usw. auf der Ebene, auf der der Jahresabschluss geprüft wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfasser <br />(<code>inventory_transaction_entered_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who created the record.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungsdatum <br />(<code>inventory_transaction_entered_date</code>)</td>
+                    <td>
+                        <p>Date the transaction was entered into the source system. Dies wird gelegentlich auch als Erstellungsdatum bezeichnet. This should be a system-generated date (rather than user-entered date), when possible. Dieses Datum entspricht nicht unbedingt dem Datum der Transaktion selbst.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungszeit <br />(<code>inventory_transaction_entered_time</code>)</td>
+                    <td>
+                        <p>The time this transaction was entered into the source system. ISO 8601 representing time in 24-hour time (hhmm), for example, 1:00 PM = 1300.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigt von <br />(<code>inventory_transaction_approved_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the person who approved changes.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigungsdatum <br />(<code>inventory_transaction_approved_by_date</code>)</td>
+                    <td>
+                        <p>Datum, an dem der Eintrag freigegeben wurde.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genehmigungszeit <br />(<code>inventory_transaction_approved_by_time</code>)</td>
+                    <td>
+                        <p>Uhrzeit, zu der der Eintrag freigegeben wurde. ISO 8601 representing time in 24-hour time (hhmm), for example, 1:00 PM = 1300.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geändert von <br />(<code>inventory_transaction_last_modified_by</code>)</td>
+                    <td>
+                        <p>The user identifier of the last person to modify this entry.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Änderungsdatum <br />(<code>inventory_transaction_last_modified_date</code>)</td>
+                    <td>
+                        <p>Datum, an dem der Eintrag zum letzten Mal geändert wurde.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Änderungszeit <br />(<code>inventory_transaction_last_modified_time</code>)</td>
+                    <td>
+                        <p>Uhrzeit, zu der der Eintrag zum letzten Mal geändert wurde. ISO 8601 representing time in 24-hour time (hhmm), for example, 1:00 PM = 1300.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hauswährungscode <br />(<code>inventory_transaction_functional_currency_code</code>)</td>
+                    <td>
+                        <p>Die Haus- oder Konzernwährung des offenen Postens (ISO 4217:2015).</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfasser <br />(<code>inventory_transaction_posted_user_id</code>)</td>
+                    <td>
+                        <p>The unique identifier of the person who posted the record. Typically autogenerated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungsdatum <br />(<code>inventory_transaction_posted_date</code>)</td>
+                    <td>
+                        <p>The date when the transaction was posted into the source system.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Erfassungszeit <br />(<code>inventory_transaction_posted_time</code>)</td>
+                    <td>
+                        <p>Zeit, zu der die betreffende Transaktion gebucht wurde.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

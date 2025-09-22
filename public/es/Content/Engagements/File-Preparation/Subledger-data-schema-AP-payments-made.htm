@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cuentas por pagar - pagos efectuados</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts payable—payments made subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id. de transacción <br /><code>(ap_payment_made_transaction_id)</code></td>
+                    <td>
+                        <p>Una referencia cruzada para el registro del libro mayor. Puede incluir varios niveles diferentes para identificar la transacción. Los ejemplos incluyen centros de costes como empresa, división, región, grupo y sucursal/departamento.<![CDATA[
+]]></p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de pago<br /><code>(ap_payment_made_payment_id)</code></td>
+                    <td>
+                        <p>El Id. único para cada pago efectuado. Este Id. puede que tenga que crearse mediante la concatenación de campos (por ejemplo, proveedor y número de pago) para identificar cada transacción de una manera única.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Fecha de pago<br /><code>(ap_payment_made_payment_date)</code></p>
+                    </td>
+                    <td>
+                        <p>La fecha en la se efectuó el pago o se aplicó el crédito.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Año de pago<br /><code>(ap_payment_made_fiscal_year)</code></p>
+                    </td>
+                    <td>
+                        <p>Ejercicio fiscal en el que transcurre la fecha de pago</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Clave primaria</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Período de pago <br />(<code>ap_payment_made_payment_period</code>)</td>
+                    <td>
+                        <p>Período fiscal en el que transcurre la fecha de pago</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Clave primaria</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de importe (Debe / Haber)<br /> (<code>ap_payment_made_amount_credit_debit_indicator</code>)</td>
+                    <td>
+                        <p>Indica si el importe es debe o haber.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Possible values: <br /><code>C</code>=credit; <br /><code>D</code>=debit</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de pago <br />(<code>ap_payment_made_payment_type</code>)</td>
+                    <td>
+                        <p>El valor, código o indicador del método por el cual la transacción de cargo o abono se anula o asigna a deuda por el proveedor. Los ejemplos incluyen cheques, transferencias bancarias, efectivo, etc.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de pago<br /> (<code>ap_payment_made_payment_amount</code>)</td>
+                    <td>
+                        <p>Importe monetario de la transacción registrado en la divisa funcional o divisa de grupo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe del pago del informe<br /> (<code>ap_payment_made_payment_amount_reporting</code>)</td>
+                    <td>
+                        <p>Importe monetario de la transacción registrado en la divisa de informe.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa local del pago <br />(<code>ap_payment_made_payment_amount_local</code>)</td>
+                    <td>
+                        <p>El importe monetario de la transacción en la divisa local.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Estado de registro <br />(<code>ap_payment_made_posting_status</code>)</td>
+                    <td>
+                        <p>Indica si la transacción se ha registrado en el libro mayor:</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Possible values: <code>Posted</code> or <code>Not Posted</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de lote <br />(<code>ap_payment_made_batch_id</code>)</td>
+                    <td>
+                        <p>A batch identifier generated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Descripción de pago <br />(<code>ap_payment_made_description</code>)</td>
+                    <td>
+                        <p>Una descripción del pago.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de origen <br />(<code>ap_payment_made_source_id</code>)</td>
+                    <td>
+                        <p>Origen del registro. El código del origen de la entrada del diario, tal como diario de ventas, diario de recibos de efectivo, diario general, diario de nóminas, entrada manual del contable, hoja de cálculo, etc.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier ID (<code>ap_payment_made_supplier_account_id</code>)</td>
+                    <td>
+                        <p>Identificador del proveedor al que se realiza el pago o cuyos créditos se han aplicado.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre de proveedor <br />(<code>ap_payment_made_supplier_account_name</code>)</td>
+                    <td>
+                        <p>El nombre del proveedor.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Creado por <br />(<code>ap_payment_made_entered_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que creó el registro.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de creación <br />(<code>ap_payment_made_entered_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que la transacción se creó en el sistema. Se conoce también como fecha de creación.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de creación <br />(<code>ap_payment_made_entered_time</code>)</td>
+                    <td>
+                        <p>La hora en la que esta transacción se creó en el sistema.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprobado por <br />(<code>ap_payment_made_approved_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la persona que aprobó el asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de aprobación <br />(<code>ap_payment_made_approved_by_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se aprobó el asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de aprobación <br />(<code>ap_payment_made_approved_by_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se aprobó el asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Última modificación realizada por: <br />(<code>ap_payment_made_last_modified_by</code>)</td>
+                    <td>
+                        <p>El Id. de usuario de la última persona que modificó este asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la última modificación <br />(<code>ap_payment_made_last_modified_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que se realizó la última modificación del asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de la última modificación <br />(<code>ap_payment_made_last_modified_time</code>)</td>
+                    <td>
+                        <p>La hora en la que se realizó la última modificación del asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de factura <br />(<code>ap_payment_made_invoice_number</code>)</td>
+                    <td>
+                        <p>Un número de identificación de una transacción generada de forma interna o externa. Los ejemplos incluyen número de cheque, número de transferencia bancaria o Id. del documento original.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la factura <br />(<code>ap_payment_made_invoice_date</code>)</td>
+                    <td>
+                        <p>La fecha de una transacción generada de forma externa. Los ejemplos incluyen la fecha del cheque o la fecha de la transferencia bancaria.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de unidad de negocio <br />(<code>ap_payment_made_business_unit_code</code>)</td>
+                    <td>
+                        <p>Se usa para identificar la unidad de negocio, región, sucursal, etc., al nivel en el que se estén auditando los estados financieros.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de cuenta debe del libro mayor <br />(<code>ap_payment_made_gl_debit_account_number</code>)</td>
+                    <td>
+                        <p>El número de cuenta del libro mayor en el que se ha publicado el lado debe de la transacción.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de cuenta haber del libro mayor <br />(<code>ap_payment_made_gl_credit_account_number</code>)</td>
+                    <td>
+                        <p>El número de cuenta del libro mayor en el que se ha publicado el lado haber de la transacción.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Detalle de línea: Id. de cuenta <br />(<code>ap_payment_made_line_account_id</code>)</td>
+                    <td>
+                        <p>Código de cuenta del libro mayor de la cuenta de ingresos del libro mayor. Esto puede contener un Id. de subcuenta, así como numerosos niveles diferentes para identificar la cuenta, incluidos centros de costes, tales como empresa, división, región, grupo y sucursal/departamento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Detalle de línea: descripción de la cuenta <br />(<code>ap_payment_made_line_account_description</code>)</td>
+                    <td>
+                        <p>A description of the account whose identifier appears in <b>Line Detail - Account ID</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa del pago <br />(<code>ap_payment_made_payment_amount_currency</code>)</td>
+                    <td>
+                        <p>La divisa funcional o divisa de grupo relacionada con el importe del pago.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa del pago de informe <br />(<code>ap_payment_made_payment_amount_reporting_currency</code>)</td>
+                    <td>
+                        <p>La divisa de informe relacionada con el importe del pago para informes no consolidados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa local del pago <br />(<code>ap_payment_made_payment_amount_local_currency</code>)</td>
+                    <td>
+                        <p>La divisa para requisitos de informes locales.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de asiento <br />(<code>ap_payment_made_journal_id</code>)</td>
+                    <td>
+                        <p>El identificador único de un asiento contable.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

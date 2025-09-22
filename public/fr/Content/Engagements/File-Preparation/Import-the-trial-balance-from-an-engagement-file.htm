@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importer la balance à partir d&apos;un fichier de mission</h1>
+        <p>Vous pouvez importer la balance de vérification d&apos;un autre fichier de mission si l&apos;option d&apos;importation de <b>fichiers de mission</b> est activée dans votre produit.</p>
+        <p><img src="../../Resources/Images/ImportFromExistingEngagement.png" alt="Possibilité d&apos;importer des données à partir d&apos;un engagement Cloud existant" /></p>
+        <p>Notez que :</p>
+        <ul>
+            <li>
+                <p>Pour importer un fichier d&apos;engagement appartenant à une autre application Cloud, vous devez avoir accès à cette application et à l&apos;entité à laquelle le fichier appartient. Pour en savoir plus, voir <a href="../../Setup/Users-and-Groups/Review-security-settings-for-the-default-groups.htm">Définir les niveaux d&apos;accès du personnel</a></p>
+            </li>
+            <li>
+                <p>Les données périodiques entre les engagements source et destination sont automatiquement mises en correspondance. Par exemple, la colonne de données <b>Année en cours de</b> la mission source est automatiquement importée dans la colonne <b>Année en cours de</b> la mission de destination</p>
+            </li>
+            <li>
+                <p>Une fois les données importées, la date de fin d&apos;exercice de la mission de destination est automatiquement fixée à la date de fin d&apos;exercice de la mission source</p>
+            </li>
+            <li>
+                <p>Les annotations et les questions ne sont pas importées</p>
+            </li>
+            <li>
+                <p>L&apos;importation à partir d&apos;une mission de consolidation permet d&apos;importer les données de l&apos;entité mère uniquement dans la mission de destination</p>
+            </li>
+            <li>
+                <p>Si les regroupements de sources et de destinations ne correspondent pas ou partiellement, des comptes non attribués apparaîtront dans l&apos;onglet <b>Attribuer des comptes</b> et vous devrez les attribuer manuellement. Pour en savoir plus, voir <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Attribuer des comptes aux groupes dans la page Données</a>.</p>
+            </li>
+        </ul>
+        <p>Lorsque vous importez des données d&apos;une autre mission, vous avez la possibilité d&apos;activer l&apos;option <b>Synchroniser la balance de vérification.</b>  Si vous activez cette option, les données de l&apos;engagement source sont automatiquement synchronisées avec l&apos;engagement de destination. Cela vous permet de modifier les données dans l&apos;engagement source et de partager automatiquement ces modifications avec les engagements synchronisés. Notez que vous ne pouvez pas sélectionner des engagements consolidés comme engagements sources.</p>
+        <p>Lorsque les données d&apos;un engagement sont synchronisées à partir d&apos;un autre engagement :</p>
+        <ul>
+            <li>
+                <p>Un lien vers l&apos;engagement source s&apos;affiche sur la page <b>Données</b> et pour les ajustements qui sont synchronisés à partir de l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Vous ne pouvez pas modifier les comptes, les groupes ou les ajustements synchronisés à partir de l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Vous ne pouvez pas assigner des comptes qui ont été synchronisés à partir de l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Vous pouvez créer des problèmes et des annotations pour les comptes et les groupes synchronisés, mais vous ne pouvez pas créer d&apos;annotations pour les ajustements synchronisés.</p>
+            </li>
+            <li>
+                <p>Lorsque des modifications sont apportées à l&apos;engagement source, les utilisateurs de l&apos;engagement de destination reçoivent une notification les informant que ces modifications ont été appliquées à leur dossier. Les engagements sont resynchronisés toutes les cinq minutes.</p>
+                <p>Si des modifications ont été apportées à l&apos;engagement source alors qu&apos;un utilisateur était déconnecté de l&apos;engagement de destination, il recevra une notification indiquant que des modifications sont en attente lors de sa prochaine connexion au fichier, puis les modifications en attente seront synchronisées avec l&apos;engagement de destination selon le cycle habituel de cinq minutes.</p>
+                <p class="note"><b>Remarque :</b> Les noms de groupes modifiés dans l&apos;engagement source ne sont pas synchronisés avec l&apos;engagement de destination.</p>
+            </li>
+            <li>
+                <p>Lorsque vous effectuez des ajustements dans l&apos;engagement de destination, les ajustements ne sont pas synchronisés avec l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Si vous verrouillez un engagement qui contient des données synchronisées à partir d&apos;un engagement source, les modifications apportées à l&apos;engagement source ne sont plus synchronisées.</p>
+            </li>
+            <li>
+                <p>Si la mission source et la mission de destination sont reportées, les fichiers reportés sont automatiquement liés afin que vous puissiez continuer à synchroniser les données de la mission source de l&apos;année en cours.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Pour importer la balance à partir d&apos;un autre fichier de mission :</p>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> . Les pages Données s&apos;ouvrent sur l&apos;onglet Ensembles de données.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;option <b>Importer à partir de Caseware Cloud Engagement</b> </p>
+                <p>Dans la liste, sélectionnez l&apos;engagement à partir duquel vous souhaitez importer la balance de vérification.</p>
+                <p>Notez que vous ne pouvez sélectionner qu&apos;un seul engagement.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ImportFromCloudEngagement.png" alt="Recherche d&apos;un engagement à partir duquel importer des données. " /></p>
+        <p class="tip"><b>Conseil :</b> Pour sélectionner un engagement appartenant à une autre entité, cochez la case <b>Rechercher dans toutes les entités</b> .</p>
+        <ol>
+            <li value="3">
+                <p>Si vous souhaitez synchroniser automatiquement les mises à jour des données de la balance de vérification de la mission source à la mission de destination, sélectionnez l&apos;option <b>Synchroniser la balance de vérification.</b> </p>
+                <p><img src="../../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="L&apos;option Synchroniser la balance de vérification dans la boîte de dialogue Recherche d&apos;engagement." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>CONFIRMER</b>.</p>
+            </li>
+        </ol>
+        <h2>Réimporter la balance de vérification</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

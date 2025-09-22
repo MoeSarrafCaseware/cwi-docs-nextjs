@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Introduction to Caseware ReviewComp Case Study</h1>
+        <h2>What’s Included</h2>
+        <ul>
+            <li>
+                <p>Create an Engagement and Planning phase</p>
+            </li>
+            <li>
+                <p>Queries and Fieldwork phase</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Trial balance (TB) Import/Mapping</p>
+                    </li>
+                    <li>
+                        <p>Adjusting entries</p>
+                    </li>
+                    <li>
+                        <p>Materiality/Scope</p>
+                    </li>
+                    <li>
+                        <p>Analysis/Annotation/Issues</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Jahresabschluss</p>
+            </li>
+            <li>
+                <p>Lock down and Carry forward an Engagement</p>
+            </li>
+        </ul>
+        <h2>Prerequisite Requirements</h2>
+        <p>Before starting this case study ensure you have already created the ACME Inc. entity and you have a fictional client contact setup with a personal email address you can access.</p>
+        <MadCap:pageBreak />
+        <h2>Exercise Prerequisite A: Eine Entität erstellen</h2>
+        <ol>
+            <li>
+                <p>Log in to your Caseware Cloud account.</p>
+            </li>
+            <li>
+                <p>Click on <b>New</b> (<img src="../../Resources/Icons/New.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) located at the top navigation bar.</p>
+            </li>
+            <li>
+                <p>Click on <b>Entity</b>.</p>
+            </li>
+            <p>The <b>New Entity</b> dialogue box will appear.</p>
+            <li>
+                <p>Populate the fields as shown under <b>General Info</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/1 Create Entity - General Info.png" /></p>
+            <li>
+                <p>Populate the fields as shown under <b>Phone</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/2 Create Entity - Phone.png" /></p>
+            <li>
+                <p>Populate the fields as shown under <b>Social Profile</b>.</p>
+            </li>
+            <p> <img src="../../Resources/Images/3 Create Entity - Social Profile.png" /></p>
+            <li>
+                <p>Populate the fields as shown under <b>Business</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/4 Create Entity - Business.png" /></p>
+            <li>
+                <p>Click <b>Save</b>.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise Prerequisite B: Create a Contact</h2>
+        <ol>
+            <li>
+                <p>Log in to your Caseware Cloud account.</p>
+            </li>
+            <li>
+                <p>Click on <b>New</b> (<img src="../../Resources/Icons/New.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) located at the top navigation bar.</p>
+            </li>
+            <li>
+                <p>Click on <b>Contact</b>.</p>
+            </li>
+            <p>The <b>New Contact</b> dialogue box will appear. You will be creating yourself as a contact for this case study.</p>
+            <li>
+                <p>Populate the following fields</p>
+            </li>
+            <ul>
+                <li><b>Email (or Username)</b> – Enter a valid email address that you have access to, such as your personal email</li>
+                <p><b>Note:</b> This email address must be different from the email associated with your Caseware Cloud account.</p>
+                <li>
+                    <p><b>First Name</b> – Enter your first name</p>
+                </li>
+                <li>
+                    <p><b>Last Name</b> – Enter your last name</p>
+                </li>
+                <li>
+                    <p><b>Entity</b> – Select ACME Inc and check off <b>Contact - Entity Collaborator</b></p>
+                </li>
+                <p><img src="../../Resources/Images/5 Add Contact.png" /></p>
+            </ul>
+            <li>
+                <p>Click <b>Save</b>.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>Section 1: Engagement Setup &amp; Planning Phase</h1>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 1: Access the ACME entity</h2>
+        </p>
+        <p>Once you enter the cloud environment, access the ACME entity and navigate to the bottom of the page to create a new RC engagement.</p>
+        <p><img src="../../Resources/Images/5 RC New Engagement.png" /></p>
+        <p>Fill in these fields</p>
+        <ul>
+            <li>
+                <p><b>Entity</b> – Select ACME Inc</p>
+            </li>
+            <li>
+                <p><b>Name</b> – Enter ACME Inc Review - December 31, 20XX</p>
+            </li>
+            <li>
+                <p><b>Start Date</b> – Enter today’s date</p>
+            </li>
+            <li>
+                <p><b>End Date</b> – Enter the following Friday’s date</p>
+            </li>
+            <li>
+                <p><b>Budget Hours</b> – Enter 40</p>
+            </li>
+            <li>
+                <p><b>Budget Amount</b> – Enter $12,000</p>
+            </li>
+            <li>
+                <p><b>Preparer</b> – Enter your name</p>
+            </li>
+            <li>
+                <p><b>Reviewer</b> – Enter your name</p>
+            </li>
+            <li>
+                <p><b>Description</b> – Optional</p>
+            </li>
+        </ul>
+        <p>Click <b>Save</b>.</p>
+        <p>The engagement is created and a new tab will open. If a new tab doesn’t open, check your browser pop-up blocker settings.</p>
+        <p>When the engagement is opened, it will automatically open the <b>Engagement properties</b>.</p>
+        <p><img src="../../Resources/Images/6 Workflow 2023.png" /></p>
+        <p>If necessary, change the <b>Year end date</b> to December 31, 2023.</p>
+        <p>To change any settings in the engagement, such as <b>Currency, Date, Number, Measurement unit format, Signoff Roles and schemes</b>, select <b>Information</b> (<img src="../../Resources/Images/icon-information-menu-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>|</b> |<b>Settings</b>.</p>
+        <MadCap:pageBreak />
+        <h1>Section 2: Planning Optimiser</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 2A: Planning Optimiser Questionnaire</h2>
+        <p>Open document <b>0-10 Planning Optimiser</b> and complete the questionnaire as shown below.</p>
+        <ol>
+            <li>
+                <p>Not applicable.</p>
+            </li>
+            <li>
+                <p>Organization type at year’s end. <b style="font-style: italic;">Prefilled and based on Organization type selected when the entity was created</b></p>
+            </li>
+            <li>
+                <p>What type of engagement is being performed? <b style="font-style: italic;">Review</b></p>
+            </li>
+            <li>
+                <p>Select if any of the following mapping groups apply to your engagement. <b style="font-style: italic;">Not applicable</b></p>
+            </li>
+            <li>
+                <p>Is this the first year of operations for the entity? <b style="font-style: italic;">Nein</b></p>
+            </li>
+            <li>
+                <p>Were you the accountant that performed an engagement for this client in the previous year? <b style="font-style: italic;">Ja</b></p>
+            </li>
+            <li>
+                <p>Do you want to see the GIFI tax forms in the Document manager? <b style="font-style: italic;">Ja</b></p>
+            </li>
+            <li>
+                <p>Is this the first year of filling a corporate tax return after incorporation? <i style="font-weight: bold;">Nein</i></p>
+            </li>
+            <li>
+                <p>What accounting framework is used by the entity? <b style="font-style: italic;">ASPE</b></p>
+            </li>
+            <li>
+                <p>Are ASPE Disclosure checklist forms required to be completed for this engagement? <b style="font-style: italic;">Nein</b></p>
+            </li>
+            <li>
+                <p>Is this the first year that the entity has adopted ASPE? <b style="font-style: italic;">Nein</b></p>
+            </li>
+            <li>
+                <p>Does your accounting practice have only one practicing partner? <b style="font-style: italic;">Ja</b></p>
+            </li>
+            <li>
+                <p>Do you want to allow clients to electronically accept documents through the Simple Electronic Signature option in client queries (only available for letters)? To learn more, select the Guidance icon. <i style="font-weight: bold;">Ja</i></p>
+            </li>
+            <li>
+                <p>Would you like to display a sign-off prompt when continuing to the next step in your workflow? If yes, select the sign-off role you want to prompt. <b style="font-style: italic;">Preparer</b></p>
+            </li>
+            <li>
+                <p>Proceed to <b>1-20 Existing engagement - Continuance</b>. Sign off on this document prior to proceeding to the next document. To sign off, select the <b>PREPARE</b> icon (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />), then select <b>Sign off</b>.</p>
+                <p><img src="../../Resources/Images/8 PREPARE icon.png" /></p>
+            </li>
+        </ol>
+        <p>Return to step 14 and click the proceed link.</p>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 2B: Document 1-20 Existing engagement - Continuance</h2>
+        </p>
+        <p>Complete the questionnaire as shown below.</p>
+        <ol start="5">
+            <li>
+                <p>Quality Assurance Manual. <i style="font-weight: bold;">Completed, no exceptions</i></p>
+            </li>
+            <li>
+                <p>Engagement Risk Factors (a &amp; b). <b style="font-style: italic;">Select Completed, no exceptions for both</b></p>
+            </li>
+            <li>
+                <p>Listing of potential engagement risk factors (a &amp; b). <b style="font-style: italic;">Select Not applicable for both</b></p>
+            </li>
+            <li>
+                <p>Management’s Integrity. <b style="font-style: italic;">Completed, no exceptions</b></p>
+            </li>
+            <li>
+                <p>Unavailable or unreliable data. <b style="font-style: italic;">Completed, no exceptions</b></p>
+            </li>
+            <li>
+                <p>Firm competencies. <b style="font-style: italic;">Completed, no exceptions</b></p>
+            </li>
+            <li>
+                <p>Independence prohibitions. <b style="font-style: italic;">Completed, no exceptions</b></p>
+            </li>
+            <li>
+                <p>Independence threats. <b style="font-style: italic;">Completed, non exceptions</b></p>
+            </li>
+            <li>
+                <p>Purpose of the review engagement. <b style="font-style: italic;">Nein</b></p>
+            </li>
+            <li>
+                <p>Engagement preconditions (a &amp; b). <i style="font-weight: bold;">Select Completed, no exceptions for both</i></p>
+            </li>
+            <li>
+                <p>Signed engagement letter. <b style="font-style: italic;">Ja</b></p>
+            </li>
+            <li>
+                <p>Obtained an updated engagement letter. <b style="font-style: italic;">Skip and leave blank</b></p>
+            </li>
+            <li>
+                <p>Based on the information and risk factors identified and the documented above, the engagement risk to the firm is assessed as: <b style="font-style: italic;">Low Risk</b></p>
+            </li>
+            <li>
+                <p>Provide reasons for any change in the risk assessment from prior years: <b style="font-style: italic;">Skip</b></p>
+            </li>
+            <li>
+                <p>Is an EQCR required on this engagement? <b style="font-style: italic;">Nein</b></p>
+            </li>
+            <li>
+                <p>I have read the responses the questions above and: (a &amp; b): <b style="font-style: normal;">Ja</b></p>
+            </li>
+        </ol>
+        <p>This completes the <b>Setup and planning phase</b> of the engagement. You will now move to Exercise 3 Queries.</p>
+        <p>Scroll up to question 15 and select the <b>1-50 Review engagement letter</b>.</p>
+        <p><img src="../../Resources/Images/9 1-50 Review engagement letter.png" /></p>
+        <MadCap:pageBreak />
+        <h2>Exercise 2C: 1-50 Review engagement letter</h2>
+        <p>This letter will be personalized by your organization. In this exercise you will complete placeholders then produce the letter.</p>
+        <p>Scroll down the page until you find the <b>Date, salutation, addressing</b> section.</p>
+        <ol>
+            <li>
+                <p>Access the <b>Today’s date</b> placeholder and select the current date.</p>
+            </li>
+            <li>
+                <p>Access the <b>Person to whom the engagement letter is sent</b> placeholder and search for the client you setup prior to starting this engagement.</p>
+            </li>
+            <li>
+                <p>Access the <b>Dear person to whom this letter is to be sent</b> placeholder and search for the same client as in step 2.</p>
+            </li>
+            <li>
+                <p>Scroll to the end of the letter, before <b>Appendix A</b>, and access the <b>Select Staff</b> placeholder to search for your name.</p>
+            </li>
+            <li>
+                <p>You are now ready to send the letter to the client. Sign off on <b>1-50 Review engagement</b> by selecting the <b>PREPARE</b> (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon located at the top right corner of your screen. You will get a message that 29 placeholders in this document are not set. This number will vary based on how many placeholders you accessed during this part of the exercise. Click <b>Yes.</b></p>
+            </li>
+            <li>
+                <p>Navigate to the <b>Documents</b> page and click <b>1-55 Client queries - Engagement letter</b>.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 2D: 1-55 Client queries - Engagement letter</h2>
+        <ol>
+            <li>
+                <p>Click <b>Send</b> located in the upper right corner of the screen.</p>
+            </li>
+            <li>
+                <p>Select today’s date.</p>
+            </li>
+            <li>
+                <p>Choose the <b>Entity Contact</b> you created using your personal email address.</p>
+            </li>
+            <li>
+                <p>Enter a note for the contact in the <b>Email Body</b> section that says, <i style="font-weight: bold;">Please sign and return</i>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>OK</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/10 Open query.png" style="width: 444px;height: 380px;" /></p>
+            <li>
+                <p>In an incognito or private tab of your current browser, or in a different browser installed on your machine, log in to the email you used for the contact person. The email will be from <span style="color: #0000ff;">donotreply@casewarecloud.com</span>. Click <b>View details</b> to automatically open a new browser tab where you will need to sign in to see the letter. You will need to create a simple password the first time you sign in.</p>
+            </li>
+            <p>Upload a signed Engagement Letter or sign off electronically. This will be in HASH of the document, not the physical signature.</p>
+            <p><img src="../../Resources/Images/11 Upload signed document.png" style="width: 604px;height: 505px;" /></p>
+            <p>You can stay signed in as the client on your new browser tab or window or sign out. You will have to sign in again to view and action other queries.</p>
+            <li>Return to document <b>1-55 Client queries - Engagement letter</b>. Accept the letter and navigate to the upper right hand corner of the screen and mark the query as <b>Complete</b>. This will lock the document.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 2E: Return to 1-20 Existing engagement</h2>
+        <p>Open document <b>1-20 Existing engagement - Continuance</b> and complete the questionnaire as shown below.</p>
+        <ol start="15">
+            <li>
+                <p>Signed engagement letter. <b style="font-style: italic;">Ja</b></p>
+            </li>
+            <li>
+                <p>Obtained an updated engagement letter. <b style="font-style: italic;">Completed</b></p>
+            </li>
+            <li>
+                <p>Sign off on document <b>1-20 Existing engagement - Continuance</b>. If you receive a message that a number of procedures weren’t signed off in this document, you have procedures at the document level that need to be addressed. Use the <b>Review tools</b> toggle switch icon (<img src="../../Resources/Images/icon-toggle-analysis.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to turn on <b>Review tools</b> and determine what needs to be signed off. Then use the toggle switch to turn off <b>Review tools</b> and sign off the identified areas in the document.</p>
+                <p><img src="../../Resources/Images/12 Review tools.png" /></p>
+            </li>
+        </ol>
+        <p>Proceed to <b>2-03 Client queries - Information request</b>.</p>
+        <MadCap:pageBreak />
+        <h1>Section 3: Queries and Fieldwork Phase</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 3A: Request information</h2>
+        <p>Request information from the client to complete the review and analysis of the entity for the period under review.</p>
+        <ol>
+            <li>
+                <p>From the <b>Documents</b> page, choose <b>2-03 Client queries - Information request</b>.</p>
+            </li>
+            <li>
+                <p>For this review there is no need to request any payroll and compensation information so these items can be hidden. As you hover your mouse over each query item, the <b>Visibility</b> icon (<img src="../../Resources/Images/icon-visibility-visible.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) will appear. To hide items, click on <b>Visibility</b> (<img src="../../Resources/Images/icon-visibility-visible.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Hide</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/13 Visibility.png" /></p>
+            <p>After all the Query items are hidden the heading <b>Payroll and compensation</b> will disappear.</p>
+            <p><b>Note:</b> You can add your own query to this document by clicking the blue <b>Add Query</b> icon (<img src="../../Resources/Icons/Add-30x30.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) which will appear when you hover your mouse in the space between the pre-populated queries in this document. A pick list will appear displaying the types of queries that can be added.</p>
+            <p><img src="../../Resources/Images/14 Query picklist.png" /></p>
+            <li>
+                <p>You are now ready to send the query to the client. Click <b>Send</b> in the upper right corner of the screen.</p>
+            </li>
+            <li>
+                <p>Choose a due date for the queries. This is an internal date to help track the due date and will let the client know when you would like a response. There is no consequence for replying late to an open query.</p>
+            </li>
+            <li>
+                <p>Select the contact you created. Put a note in the email body for the client if you wish, then click <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>Return to your other browser or incognito tab and access your client account again.</p>
+            </li>
+            <li>
+                <p>Open the email received from Caseware Cloud and click the <b>View Details</b> link to gain access to the queries as the client and respond accordingly.</p>
+            </li>
+            <li>
+                <p>Complete the Trial balance (TB) query as the client by using the <b>Drag and drop here or click to browse</b> button to attach the company TB, then click <b>Submit Response</b> to send it to the reviewer.</p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 3B: Import the Trial balance</h2>
+        <ol>
+            <li>
+                <p>Return to the browser window/tab you are using for the engagement and access <b>2-03 Client queries - Information request</b>.</p>
+            </li>
+            <li>
+                <p>Accept the TB sent by the client.</p>
+            </li>
+            <li>
+                <p>Navigate to <b>Data</b> located at the top navigation bar and choose the <b>Excel or CSV</b> import from type.</p>
+            </li>
+            <li>
+                <p>Select <b>Final Trial Balance | Next | Select file from engagement</b>.</p>
+            </li>
+            <li>
+                <p>Scroll to the bottom of the list and select the Excel file trial balance received from the query in the previous exercise.</p>
+            </li>
+            <li>
+                <p>In the import wizard, assign the columns as shown.</p>
+            </li>
+            <p><img src="../../Resources/Images/Import.jpg" /></p>
+            <li>
+                <p>Scroll down to the last line in the list. De-select the checkbox next to the unnmed zero line at the bottom to ensure that line is not imported.</p>
+            </li>
+            <li>
+                <p>Click <b>Import</b>.</p>
+            </li>
+        </ol>
+        <h2>Konten zuordnen</h2>
+        <p>After you hit import, you will be taken to the <b>Accounts</b> screen under <b>Data</b>. This is the TB imported. You should see a 21 on the top right over the <b>Assign Accounts</b> icon, which indicates that 21 accounts need to be assigned to financial groups. Financial groups are based on ASPE standards, part of the CW template. Accounts are assigned to the financial group they relate to and financial statements (FS) are built on the financial groups.</p>
+        <p><img src="../../Resources/Images/Assignaccounts2.png" style="width: 279px;height: 89px;" /></p>
+        <ol>
+            <li>
+                <p>Click on the icon with the 21. This will take you to the <b>Assign Accounts</b> section where all the accounts imported from the TB can be assigned to the financial groups.</p>
+            </li>
+            <li>
+                <p>Click <b>Petty cash </b>and<b> Domestic bank and foreign bank accounts</b> under the <b>Unassigned column</b>. The accounts will move to the <b>Selected Accounts</b> section.</p>
+            </li>
+            <li>
+                <p>As you select accounts, it will suggest what financial group the account may relate to based on the account name. Hover your mouse over <b>Cash</b> and click the green assign button.</p>
+            </li>
+            <li>
+                <p>Another way to assign accounts is to search for an account grouping. Type <i style="font-weight: bold;">accounts</i> in the search bar. Drag and drop the <b>Accounts receivable account</b> in the <b>Unassigned</b> area onto the<b>Trade accounts receivable</b> in the <b>Selected Accounts</b> area.</p>
+            </li>
+            <p>When assigning accounts, you will see groups and sub groups for each section.</p>
+            <p>In order for the account date to flow through to other documents accordingly, it’s important to map the account to a subgroup if it is available.</p>
+            <p>For example, the cash accounts are mapped to the top level.</p>
+            <p><img src="../../Resources/Images/16 Accounts.png" /></p>
+            <p>They should get mapped to their sub group accordingly.</p>
+            <p><img src="../../Resources/Images/17 Accounts.png" style="width: 481px;height: 309px;" /></p>
+            <li>
+                <p>Assign the remaining accounts accordingly.</p>
+            </li>
+            <p><b>Note:</b> You can use the “ACME Inc-TrialBalance-FinancialGroups_Initial” PDF to ensure correct mapping. For example, there’s a current income taxes [Current Asset] and Current income tax expense. Also map to the subcategory if one exists to properly populate your statement of cash flows. For example, 6010 Depreciation of tangible assets should be mapped to the sub group <b>Amortization of tangible assets</b> not the main group heading.</p>
+            <li>
+                <p>Once completed, the <b>Net income</b> should appear as $92,856.</p>
+            </li>
+            <p>You have the ability to create your own financial group if you don&apos;t find a category an account relates to.</p>
+            <li>
+                <p>Under <b>Data | Financial Groups</b>, click <b>Add</b> (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) and select <b>Add group</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/18 Add.png" /></p>
+            <li>
+                <p>Populate the dialogue box as shown below, then click <b>Save</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/19 Add group.png" /></p>
+            <p>You have now created a new line item for the financial statements called <b>Vehicle Expenses</b>.</p>
+            <li>
+                <p>Return to <b>Assign accounts</b> and search for <b>Auto Expense</b>.</p>
+            </li>
+            <li>
+                <p>Click on <b>535.120 Auto Expense</b> to unassign it and move it to the group you just created.</p>
+            </li>
+            <li>
+                <p>Search for <b>Vehicle Expenses</b>, then drag and drop <b>6070 Auto Expense</b> to this new group.</p>
+            </li>
+            <p><img src="../../Resources/Images/19 Vehicle expenses.png" /></p>
+            <p>You have moved the amount for <b>Auto Expenses</b> from <b>Other expenses</b> to <b>Vehicle Expenses</b>. On the financial statements you will see <b>Vehicle expenses</b> as a line item instead of <b>Other expenses</b>.</p>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>
+            <p>Section 4: Buchungen</p>
+        </h1>
+        <MadCap:pageBreak />
+        <h2>
+            <p>Exercise 4: Making Adjustments</p>
+        </h2>
+        <ol>
+            <li>
+                <p>Click on <b>Adjustments</b> located on the navigation bar. This is where you can create Journal entries.</p>
+            </li>
+            <li>
+                <p>Click <b>+ Adjustment</b>. The <b>New Adjustment</b> dialogue box will appear. Populate the adjusting entry as shown, then click <b>Save</b>.</p>
+            </li>
+            <p><img src="../../Resources/Images/20 New adjustment.png" /></p>
+            <p>You also have the ability to create accounts that weren’t part of the initial TB import and post AJE to them.</p>
+            <li>Create a new AJE (<b>+ Adjustment</b>). Scroll down and click in the <b>Select account</b> section.</li>
+            <li>Use the tab scroll bar, located furthest right scroll bar, to navigate to the bottom of the page and click on <b>Add account</b>. Enter the information as shown below, then click <b>Save</b>.</li>
+            <p><img src="../../Resources/Images/21 Add account.png" /></p>
+            <p><img src="../../Resources/Images/22 Account.png" /></p>
+            <li>Post the following AJE.</li>
+            <p><b>Note:</b> You may need to check off <b>Include zero-balance items</b>, located at the bottom of the pick list, to have the newly created account show up for selection.</p>
+            <li>Click <b>SAVE</b> to save the <b>New Adjustment</b>.</li>
+            <p><img src="../../Resources/Images/New Adjustment.jpg" /></p>
+        </ol>
+        <MadCap:pageBreak />
+        <h1>Section 5: Materiality and Scope</h1>
+        <MadCap:pageBreak />
+        <h2>Exercise 5A: Wesentlichkeit</h2>
+        <p>After the TB is imported you can set materiality.</p>
+        <ol>
+            <li>Click on the <b>Documents</b> page to access document <b>2-10 Materiality</b>.</li>
+            <li>The top section of this document is where you can complete your documentation and the bottom section is where you can calculate the planning materiality for your review engagement. The <b>Revenue and Net income basis</b> will be there by default and the numbers will be populated based on the financial groups.</li>
+            <li>Assign 5% for the benchmark for <b>Net income</b> and 0.5% for Revenue. You can add your own basis as you wish by selecting <b>+ Financial materiality basis</b> or <b>+ Other basis</b>.</li>
+            <li>In the <b>Conclusions</b> box section under <b>Planning</b>, enter 12500 as the materiality level for this review.</li>
+            <p><img src="../../Resources/Images/23 Materiality.png" style="width: 593px;height: 178px;" /></p>
+            <li>Use the navigation bar located at the top of the screen to select the <b>Data</b> page. Then select <b>Accounts | Indicators |→ Materiality</b>. The materiality icon will appear beside each account that is material.</li>
+            <li>Navigate back to <b>Documents</b> and sign off on <b>2-10 Materiality</b>.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Exercise 5B: 2-20-2 Engagement scope - Financial statement areas</h2>
+        <p>After the initial checklists were completed, all of the relevant documents for the engagement were scoped in. Under <b>Fieldwork</b> there are folders and documents for all the different financial statement areas. However, depending on the engagement, not all financial statement areas will require work to be done. After materiality is set, we can also scope out areas that are immaterial and don&apos;t require any work to be done on them.</p>
+        <ol>
+            <li>
+                <p>Go to document <b>2-20-2 Engagement scope - Financial statement areas</b> and choose <b>No</b> under <b>Included in engagement scope?</b> for the following areas:</p>
+            </li>
+            <ul>
+                <li>
+                    <p>Investments</p>
+                </li>
+                <li>
+                    <p>Loans and advances receivable</p>
+                </li>
+                <li>
+                    <p>Prepaid expenses and other assets</p>
+                </li>
+                <li>
+                    <p>Other investments</p>
+                </li>
+                <li>
+                    <p>Intangibles and goodwill</p>
+                </li>
+                <li>
+                    <p>Bank indebtedness</p>
+                </li>
+                <li>
+                    <p>Notes payable and bank debt</p>
+                </li>
+                <li>
+                    <p>Loans and advances payable</p>
+                </li>
+                <li>
+                    <p>Long term debt</p>
+                </li>
+                <li>
+                    <p>Equity (partnership)</p>
+                </li>
+            </ul>
+            <li>Return to the <b>Documents</b> page. You will notice in the <b>Fieldwork</b> section that the folders relating to the items that were turned off are now gone.</li>
+            <li>Navigate to document <b>2-20-2</b> and sign off.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 5C:</h2>
+        </p>
+        <p>Open document <b>3-00 Fieldwork Optimiser</b> and complete the questionnaire as shown below.</p>
+        <ol>
+            <li>
+                <p>No - foreign exchange transactions</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Yes - going concern issue</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Yes - matters for communication</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Optional documents</p>
+            </li>
+            <li>
+                <p>Sample letters</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                    <li>
+                        <p>Nein</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Sign off on this document prior to proceeding to the next document. To sign off, select the <b>PREPARE</b> icon (<img src="../../Resources/Images/icon-signoff-for-documents-2.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) and then select <b>Sign off</b>.</p>
+        <p><img src="../../Resources/Images/8 PREPARE icon.png" /></p>
+        <MadCap:pageBreak />
+        <p>
+            <h2>Exercise 5D: Field work phase - Analysis section</h2>
+        </p>
+        <p>Click on <b>Documents | Fieldwork | Analysis</b> and review the information available here. These documents have ratios calculated based on the TB imported and have sections for the different financial statement areas where you can add in documentation.</p>
+        <p><img src="../../Resources/Images/24 Analysis.png" /></p>
+        <MadCap:pageBreak />
+        <p>
+            <h1>Section 6: Referenzen</h1>
+            <MadCap:pageBreak />
+            <p>
+                <h2>Exercise 6: Fieldwork Phase - Annotations</h2>
+            </p>
+            <p>Now we will run another query to request documents related to PPE from our client.</p>
+            <ol>
+                <li>Select the <b>Documents</b> page and navigate to the <b>Property, plant and equipment folder</b>.</li>
+                <li>Hover your mouse over the folder and click the <b>Create a document</b> icon (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li>
+                <li>From the dropdown menu click <b>Query</b>.</li>
+                <li>Select <b>Blank Query</b>. In the field <b>Number</b> enter <i style="font-weight: bold;">P100</i> and in the field <b>Name</b> enter <b style="font-style: italic;">PPE Docs</b>.</li>
+                <p><img src="../../Resources/Images/25 Query.png" style="width: 273px;height: 287px;" /></p>
+                <li>Click <b>Create Query</b>.</li>
+                <li>A new query will open. On the top left, click the <b>Add question set</b> icon (<img src="../../Resources/Images/icon-add-data-page.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) located next to <b>QUESTION SETS</b>.</li>
+                <li>In the field <b>New Group</b> enter Property, plant and equipment documents.</li>
+                <li>Under that field, click <b>Add Query question</b> (<img src="../../Resources/Images/icon-add-section.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li>
+                <li>Select <b>File Upload</b> from the pick list.</li>
+                <li>Populate the fields as shown below.</li>
+                <p><img src="../../Resources/Images/26 PPE.jpg" style="width: 691px;height: 489px;" /></p>
+                <li>
+                    <p>Click <b>Send</b>, set a due date and choose your client.</p>
+                </li>
+                <li>
+                    <p>From your other browser or incognito tab, sign in to your cloud instance as a client and upload the PPE Continuity.xlsx and Apple invoice 20XX.pdf, then click <b>Send</b>.</p>
+                </li>
+                <li>
+                    <p>Go back to the RC engagement, accept the response to the query and click <b>Complete</b>, located in the top right to complete the query.</p>
+                </li>
+                <li>
+                    <p>Navigate to the <b>Documents</b> page. The 2 documents uploaded should be at the top under <b>Uncategorized</b>. Hover your mouse over the Apple invoice, click <b>More Actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), then click <b>Move</b>.</p>
+                </li>
+                <li>
+                    <p>In the <b>Move</b> pane, select <b>Fieldwork</b>. Then select <b>Property, plant and equipment</b> folder and click <b>Move</b>.</p>
+                </li>
+                <li>
+                    <p>Repeat steps 14 and 15 for the <b>PPE Continuity Excel</b> document.</p>
+                </li>
+                <li>
+                    <p>Navigate down to the <b>Property, plant and equipment</b> folder. Then click on <b>More Actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) located on the right side of the PPE Continuity Excel file. Choose <b>Edit Properties</b> from the pick list, then in the <b>Identifier</b> section input <b>3-U-1</b>.</p>
+                </li>
+                <li>
+                    <p>Click <b>Save</b>.</p>
+                </li>
+                <p><img src="../../Resources/Images/27 PPE.jpg" style="width: 674px;height: 384px;" /></p>
+                <li>
+                    <p>Repeat step 17 for the Apple invoice and use document <b>3-U-2</b> as the identifier.</p>
+                </li>
+                <li>
+                    <p>Click on the <b>3-U-1 Worksheet - PPE continuity</b> schedule. This document will open into Excel on your machine. Once the Excel file is open, navigate to the <b>Documents</b> page.</p>
+                </li>
+                <p>Your initials should appear beside the Excel file with a <b>Lock</b> icon (<img src="../../Resources/Icons/lock icon.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) next to it. This will indicate the user who has the live version of the document open.</p>
+                <li>
+                    <p>Right click on document <b>3-U-2</b> and open it in a new tab.</p>
+                </li>
+                <li>
+                    <p>Open the <b>3-U-1 Worksheet - Property, plant and equipment</b>. You should now have the Excel file open inside Microsoft Excel, and you should have 2 tabs open in your browser. One will be <b>3-U</b> and the other will be <b>3-U-2</b>.</p>
+                </li>
+                <li>
+                    <p>In the Excel file enter <b style="font-style: italic;">3-U</b> in cell <b>E11</b>. This is done to reference the schedule to the 3-U document inside wRC. Select <b>Column D</b> then right click and select <b>Insert</b>. This will create a new column to the left. In cell <b>D8</b>, type in <b style="font-style: italic;">3-U-2</b> to reference the apple invoice to the $1500 in the continuity schedule.</p>
+                </li>
+                <li>
+                    <p>Go back into your browser and navigate to the tab that has document <b>3-U-2</b> open. On the Apple invoice, click beside $1500 in the invoice description. Click on the <b>Add</b> icon (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />). Populate the <b>Annotation</b> dialogue as below, then click <b>Save</b>.</p>
+                </li>
+                <p><img src="../../Resources/Images/28 PPE.jpg" style="width: 329px;height: 299px;" /></p>
+                <li>
+                    <p>Copy the URL link for the Apple invoice page you’re currently on.</p>
+                </li>
+                <li>
+                    <p>Go back to the PPE continuity Excel and right click on cell <b>D8</b>. Click on the link past the URL link in the Address field, then click <b>OK</b>.</p>
+                </li>
+                <p><img src="../../Resources/Images/29 PPE Continuity.jpg" /></p>
+                <li>
+                    <p>You have now created a hyperlink in your Excel file directly to the document in your RC engagement. Click on cell <b>D8</b>. It will open a new tab in your browser and take you to the Apple invoice.</p>
+                </li>
+                <li>
+                    <p>Go back to your Excel file and create a hyperlink in cell <b>F8</b> to have it open up to the <b>3-U-1 Worksheet - Property, plant and equipment</b>. Repeat step 26 to create the other hyperlink.</p>
+                </li>
+                <li>
+                    <p>Go back to your <b>Documents</b> manager and sign off on document <b>3-U-1</b> and <b>3-U-2</b>.</p>
+                </li>
+            </ol>
+            <MadCap:pageBreak />
+            <p>
+                <h1>
+                    <p>Section 7: Aufgaben</p>
+                </h1>
+                <MadCap:pageBreak />
+                <h2>
+                    <p>Exercise 7: Field work phase - Issues</p>
+                </h2>
+                <ol>
+                    <li>
+                        <p>In the navigation bar, click <b>Issues</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>In the dialogue box type, <b style="font-style: italic;">Please review</b> and click <b>Create issue</b>.</p>
+                        </li>
+                    </ol>
+                    <p>You have created an issue at the engagement level.</p>
+                    <li>
+                        <p>In the navigation bar, click <b>Issues</b> (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Click the plus icon in the dialogue box. In the new dialogue, type, <b style="font-style: italic;">Please request bank statements from client</b>, then type, <b style="font-style: italic;">@</b> and a dropdown will appear. From the dropdown select yourself.</p>
+                        </li>
+                        <li>
+                            <p>You have the ability to tag issues to staff members. They will be notified via email that an issue has been created that they need to address.</p>
+                        </li>
+                        <li>
+                            <p>Click <b>Create issue</b>. Notice the number on the <b>Issues</b> icon (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) increased from <b>1</b> to <b>2</b>.</p>
+                        </li>
+                    </ol>
+                    <li>Hover your mouse over document <b>3-A</b>.</li>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>
+                            <p>Click the <b>Issues</b> icon (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                        </li>
+                        <li>
+                            <p>In the dialogue type, <b style="font-style: italic;">Request bank statements</b>.</p>
+                        </li>
+                        <li>
+                            <p>Click <b>To do</b> and from the drop down menu select <b>Note</b>.</p>
+                        </li>
+                        <li>
+                            <p>Click on <b>Create issue</b>.</p>
+                        </li>
+                        <li>
+                            <p>An <b>Issues</b> icon (<img src="../../Resources/Images/icon-issues-in-document-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) will appear.</p>
+                        </li>
+                    </ol>
+                    <p>Notice that the <b>2</b> located on the navigation bar did not go up.</p>
+                    <ul>
+                        <li>
+                            <p>The issues on the navigation bar are engagement level issues</p>
+                        </li>
+                        <li>
+                            <p>The issue on <b>3-A</b> are document level issues</p>
+                        </li>
+                    </ul>
+                    <p>On the navigation bar, click <b>Issues</b>. All the issues in the engagement are visible here.</p>
+                </ol>
+            </p>
+            <MadCap:pageBreak />
+            <p>
+                <h1>Section 8: Jahresabschluss</h1>
+                <MadCap:pageBreak />
+                <h2>Exercise 8A: Jahresabschluss</h2>
+                <p>Navigate to document <b>6-15 Financial statements optimiser</b>.</p>
+                <p>Fill in the document as follows:</p>
+                <p><img src="../../Resources/Images/30 Financial statements optimiser.jpg" /></p>
+                <p>Sign off on the document. Under <b>Next step</b> click on the link to proceed to document <b>6-20 Financial statements</b>.</p>
+                <ol>
+                    <li>
+                        <p>On the side menu, click on <b>Notes to the Financial Statements</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Add</b>(<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Insert from library</b> | <b>Property, plant and equipment</b>.</p>
+                    </li>
+                    <li>
+                        <p>Check off the box for the first item in the list.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Add</b> located at the top right of the screen.</p>
+                    </li>
+                </ol>
+                <p>You have now inserted the PPE note from the library.</p>
+                <p>This note is automatically referencing the relevant financial statement line item. See Statement of financial position.</p>
+                <MadCap:pageBreak />
+                <p>
+                    <h2>Exercise 8B: Create your own note</h2>
+                </p>
+                <ol>
+                    <li>
+                        <p>Open document <b>6-20 Financial Statements</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the side menu, click on <b>Notes to the Financial Statements</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Add</b> (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Create Note</b>.</p>
+                    </li>
+                    <li>
+                        <p>Hover your mouse over the note created and click on the blue <b>Add</b> icon (<img src="../../Resources/Images/icon-add-section.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </li>
+                    <li>
+                        <p>You can create these sections in your note.</p>
+                    </li>
+                    <p><img src="../../Resources/Images/31 Content.jpg" /></p>
+                    <li>
+                        <p>Select <b>Dynamic Table</b>.</p>
+                    </li>
+                    <li>
+                        <p>Hover your mouse over the newly created dynamic table and click <b>More Actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Edit dynamic table</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b>Add</b> icon (<img src="../../Resources/Icons/Add-30x30.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) located under description.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>trial balance data</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Search</b> field type <b style="font-style: italic;">operating expenses</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Operating expenses</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the right end of the row click the <b>Expand</b> icon (<img src="../../Resources/Images/icon-expand-in-dynamic-tables.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to expand details.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Save</b> and close in the top navigation bar.</p>
+                    </li>
+                    <li>
+                        <p>Change the <b>Note title</b> to <b>Operating expenses</b>.</p>
+                    </li>
+                    <p>Since this note was manually created you will need to reference it to the relevant financial line item.</p>
+                    <li>
+                        <p>Navigate to <b>Statement of Income and Loss</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click on the <b>Note reference</b> icon (#) beside operating expenses.</p>
+                    </li>
+                    <li>
+                        <p>Select the operating expense note and click outside of the dialogue.</p>
+                    </li>
+                </ol>
+                <p>You have now referenced the newly created note.</p>
+                <MadCap:pageBreak />
+                <p>
+                    <h2>Exercise 8C: Cash Flow statement</h2>
+                </p>
+                <p>Adjust the cash flow so it appears as below.</p>
+                <p><img src="../../Resources/Images/32 Cash flow.jpg" /></p>
+                <p>
+                    <MadCap:pageBreak />
+                    <h2>Exercise 8D: After the FS is completed</h2>
+                    <ol>
+                        <li>
+                            <p>Go back to the <b>Documents</b> manager.</p>
+                        </li>
+                        <li>
+                            <p>Open document <b>6-00 Review findings</b>. This is a letter document. Click the <b>Edit</b> icon (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to make any changes.</p>
+                        </li>
+                        <li>
+                            <p>Sign off on document <b>6-00</b> and go back to the <b>Documents</b> manager.</p>
+                        </li>
+                        <li>
+                            <p>Open document <b>6-10 Report transmittal</b>.</p>
+                        </li>
+                    </ol>
+                    <p>Populate the document as follows:</p>
+                    <ul>
+                        <li>
+                            <p><b>Engagement partner</b> – Enter your name</p>
+                        </li>
+                        <li>
+                            <p><b>Deadline</b> – Enter the date 1 week from the current date</p>
+                        </li>
+                        <li>
+                            <p><b>Client contact</b> – Click and select the contact you created from the dropdown</p>
+                        </li>
+                        <li>
+                            <p><b>E-mail address</b> – Click and select the contact you created from the dropdown</p>
+                        </li>
+                        <li>
+                            <p><b>Financial Statement Copies</b> – Type the number <b style="font-style: italic;">1</b> in all the input number fields for a total of 6</p>
+                        </li>
+                        <li>
+                            <p><b>Special instructions and Delivery Method</b> – Leave blank</p>
+                        </li>
+                        <li>
+                            <p><b>Authorization to Release Report</b> – Under <b>Signature</b> type your name for the first 4 boxes. Leave the <b>Other (specify)</b> box empty. Under <b>Date</b> enter today’s date for the first 4 boxes. Leave the <b>Other (specify)</b> box empty</p>
+                        </li>
+                        <li>
+                            <p><b>Report date</b> – Enter the current date</p>
+                        </li>
+                        <li>
+                            <p><b>Report release date</b> – Enter the date 1 week from the current date</p>
+                        </li>
+                        <li>
+                            <p><b>Final assembly date</b> – Enter the same date as the <b>Report release</b> date</p>
+                        </li>
+                        <li>
+                            <p><b>Approval of modifications or changes to the file after assembly date</b> – Leave blank</p>
+                        </li>
+                        <li>
+                            <p>Sign off on the document and go back to the <b>Documents</b> manager</p>
+                        </li>
+                        <li>
+                            <p>Go to <b>6-30 client queries</b> located at the end of the engagement</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>Click <b>Send</b> to send the document to your contact</p>
+                        </li>
+                    </ul>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h2>Exercise 8E: Export GIFI information to a tax preparation software will be used</h2>
+                    </p>
+                    <ul>
+                        <li>
+                            <p>Go to the <b>Documents</b> manager.</p>
+                        </li>
+                        <li>
+                            <p>Navigate to the <b>Tax</b> section.</p>
+                        </li>
+                        <li>
+                            <p>Open <b>S100 - Balance sheet</b>. There is an export button which will allow you to export your FS notes and GIFI file. This will create a *.gfi file that can be imported into your tax preparation program of choice.</p>
+                        </li>
+                    </ul>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h1>Section 9: Lockdown the Engagement</h1>
+                    </p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h2>Exercise 9A: Lockdown a File</h2>
+                    </p>
+                    <p>When you are done with the engagement, you can lock down the file to prevent further changes.</p>
+                    <ol>
+                        <li>
+                            <p>Click on the Entity name in the top left and click <b>Lockdown</b>.</p>
+                        </li>
+                        <li>
+                            <p>Click the <b>Lockdown</b> button.</p>
+                        </li>
+                    </ol>
+                    <p>After locking down the engagement, a lock icon (<img src="../../Resources/Icons/lock icon.jpg" style="vertical-align: text-bottom;height: 20px;" alt="" />) will appear beside the entity name in the top left corner.</p>
+                    <p>You can click on the entity and an <b>Unlock</b> button will appear, allowing you to unlock the file and make changes if needed. To unlock a file a reason will need to be provided before you are able to unlock it.</p>
+                    <p><img src="../../Resources/Images/33 Lockdown.jpg" /></p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <h1>Section 10: Carrying Data Forward</h1>
+                    </p>
+                    <MadCap:pageBreak />
+                    <p>
+                        <p>
+                            <h2>Exercise 10A: Carry forward file</h2>
+                        </p>
+                        <p>When an engagement exists under an entity, you are able to carry forward the information from that engagement to a future engagement.</p>
+                        <ol>
+                            <li>
+                                <p>In your cloud, go to <b>ACME Inc</b> and scroll down to <b>Engagements</b>. Click <b>New | ReviewComp</b> to start a new engagement.</p>
+                            </li>
+                            <li>
+                                <p>Name this engagement ACME Review - December 31, 2023.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b>Drop down</b> icon (<img src="../../Resources/Icons/dropdown20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in the <b>Carry forward data from</b> section and select the engagement you just completed for December 31, 2023.</p>
+                                <p><img src="../../Resources/Images/34 Carry forward.jpg" /></p>
+                            </li>
+                        </ol>
+                        <p>Fill in these fields:</p>
+                        <ul>
+                            <li>
+                                <p><b>Startdatum</b></p>
+                            </li>
+                            <li>
+                                <p><b>End Date</b></p>
+                            </li>
+                            <li>
+                                <p><b>Budget Hours</b></p>
+                            </li>
+                            <li>
+                                <p><b>Budget Amount</b></p>
+                            </li>
+                            <li>
+                                <p><b>Preparer</b></p>
+                            </li>
+                            <li>
+                                <p><b>Reviewer</b></p>
+                            </li>
+                            <li>
+                                <p><b>Beschreibung</b></p>
+                            </li>
+                        </ul>
+                        <p>Then click <b>Save</b> to create the new engagement with the following 2023 data points included in it.</p>
+                        <ul>
+                            <li>
+                                <p>The imported trial balance figures for Prior year</p>
+                            </li>
+                            <li>
+                                <p>Responses made in all different Caseware documents</p>
+                            </li>
+                            <li>
+                                <p>Any external documents brought into the engagement (PDFs, Excel files, etc.)</p>
+                            </li>
+                        </ul>
+                    </p>
+                </p>
+            </p>
+        </p>
+    </body>
+</html>

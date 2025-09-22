@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Groepen definiëren</h1>
+        <p>Groeperingen geven context aan de accounts die gebruikers importeren in het product. Je moet groepen definiëren om een structuur voor de proefbalansrekeningen in te stellen.</p>
+        <p>De saldi in het jaarrekeningdocument worden georganiseerd en weergegeven op basis van de groepen die je hebt gedefinieerd. Als je gebruikers een proefbalans in het product kunnen importeren, moet je een groeperingsstructuur definiëren.</p>
+        <p>De volgende gegevenskoppelingen zijn beschikbaar:</p>
+        <ul>
+            <li>
+                <p><b>Financiële groepering</b> - Lijkt op de indeling van de balans en winst- en verliesrekening. Je kunt maximaal drie verschillende financiële groeperingsstructuren toevoegen aan een product. Het ondersteunt:</p>
+                <ul>
+                    <li>
+                        <p>het genereren van de jaarrekening en de toelichting.</p>
+                    </li>
+                    <li>
+                        <p>risicobeoordeling uitvoeren in het RMM-rapport.</p>
+                        <p class="note"><b>Let op:</b> Alleen de standaard financiële groeperingsstructuur kan worden gebruikt om risicobeoordelingen uit te voeren.</p>
+                    </li>
+                    <li>
+                        <p>het juiste detailniveau bieden voor analysegrafieken, materialiteitsbenchmarks, <a href="Visibility-conditions.htm"><span>zichtbaarheidsvoorwaarden</span></a> en leadsheets.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Een belastinggroepstructuur lijkt op de belastingwetten die van toepassing zijn op jouw markt. Automapping tussen de financiële groep en de overeenkomstige belastingcode is beschikbaar.</p>
+            </li>
+            <li>
+                <p>Bepaalde Caseware Cloud apps kunnen een standaard rekeningstelsel gebruiken dat niet noodzakelijk overeenkomt met de posten in de jaarrekening.</p>
+            </li>
+        </ul>
+        <p>Voordat u groepen toevoegt, moet u deze inschakelen in de <a href="Enable-tax-and-prescribed-accounts-groupings.htm">productinstellingen</a>. Je kunt dan handmatig groeperingen toevoegen of je kunt ze importeren vanuit een Excel-bestand of een CSV-bestand, of vanuit Working Papers.</p><div class="note"><p><b>Let op:</b> Om ervoor te zorgen dat secundaire financiële groeperingsstructuren worden opgenomen in de PDF die wordt gegenereerd wanneer gebruikers de optie Referentiekopie downloaden selecteren, moet u het volgende toevoegen aan uw product.json-bestand:</p><div><pre><code><p>Titel: &quot;Secundaire Financiële Groepen 2&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groepen/financieel-2&quot; },</p><p>Titel: &quot;Secundaire Financiële Groepen 3&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groepen/financieel-3&quot; },</p></code></pre></div></div></body>
+</html>

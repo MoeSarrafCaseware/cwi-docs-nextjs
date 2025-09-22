@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="You can post a number of different entries to your trial balance. Options include adjusting entries, reclassifying entries, uncorrected entries, and tax entries, which are all accessible from the Adjustment menu." />
+    </head>
+    <body>
+        <h1>Aanpassingen aanbrengen aan de saldibalans</h1>
+        <p>U kunt aanpassingen toevoegen aan de proefbalansrekeningen of -groepen.</p>
+        <h2><a name="Post"></a>Een aangepaste boeking op de proefbalans plaatsen (gegevenspagina)</h2>
+        <p>Je kunt aanpassingsboekingen op rekeningen of groepen plaatsen en een beschrijving van de boeking en een <a href="../Documentation-and-Review/Add-annotations.htm#Annotate3">aantekening</a>toevoegen.</p>
+        <p style="font-weight: bold;">Een boeking voor een aanpassing maken:</p>
+        <ol>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Accounts</b> in het linkerpaneel.</p>
+            </li>
+            <p>Je kunt ook aanpassingen toevoegen in de weergaveoptie <b>FINANCIËLE GROEPEN</b> .</p>
+            <p class="note inline"><b>Let op:</b> Je kunt ook <b>BELASTINGGROEPEN</b> en <b>VOORAFGAANDE GROEPEN</b>selecteren, als deze zijn ingeschakeld in je product.</p>
+            <li>
+                <p>Selecteer <b>Toevoegen</b> (<img src="../../Resources/Icons/add-button-data-page.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Aanpassing toevoegen.</b></p>
+            </li>
+            <li>
+                <p>Voeg de details van de aanpassingsboeking toe in het dialoogvenster.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Voer het <b>aanpassingsnummer</b>in.</p>
+                    </li>
+                    <p class="note inline"><b>Let op:</b> Als dit niet de eerste boeking van aanpassingen is, verhoogt de applicatie automatisch het laatst ingevoerde aanpassingsnummer en geeft dit weer in het veld <b>Aanpassingsnummer</b> . Als dit de eerste aanpassingsvermelding is, wordt <i>1</i> in het veld weergegeven als het standaard aanpassingsnummer. Je kunt de standaardwaarde opheffen.</p>
+                    <li>
+                        <p>Kies een <b>aanpassingstype.</b></p>
+                    </li>
+                    <p class="note inline"><b>Let op:</b> De beschikbare aanpassingstypes in het vervolgkeuzemenu zijn gebaseerd op je productinstelling.</p>
+                    <li>
+                        <p>Voer een beschrijving voor het veld in.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer bij <b>Details</b>de <b>regel + Rekening</b> om de aanpassingsboeking op een rekening te boeken, of selecteer <b>de regel + Groep</b> om de boeking op een groep te boeken.</p>
+                        <p class="tip"><b>Tip:</b> Je kunt een account aanmaken terwijl je de regels toevoegt met de knop <b>Account toevoegen</b> .</p>
+                        <p><img src="../../Resources/Images/add-account-in-adjustments2.png" alt="Voeg een rekening toe terwijl je de aanpassingsregels invoert." /></p>
+                        <p>Als er meerdere groeperingsstructuren zijn ingeschakeld in je product en je voegt een groepsregelaanpassing toe, dan kun je de juiste groeperingsstructuur selecteren in het vervolgkeuzemenu. De aanpassing is alleen van toepassing op die groeperingsstructuur en niet op gekoppelde groepen in andere groeperingsstructuren.</p>
+                        <p>Als de verloving een consolidatieverloving is en je ervoor kiest om,</p>
+                        <ul>
+                            <li>een rekeningregelaanpassing toevoegt, verschijnt er een lijst met de moeder- en dochterrekeningen in het dialoogvenster.</li>
+                            <li>een groepsregelaanpassing toevoegt, verschijnt er een lijst van de bovenliggende entiteitgroepen in het dialoogvenster.</li>
+                            <p>Merk op dat als het aanpassingstype <i>Elimineren</i>is, je de aanpassing ook voor een dochtergroep kunt boeken. Selecteer de naam van de entiteit om een lijst met beschikbare entiteiten weer te geven (moedermaatschappij en alle dochterondernemingen). Zie <a href="#Common">Gemeenschappelijke aanpassingstypes</a>voor meer informatie over aanpassingstypes <a href="#Common">.</a></p>
+                        </ul>
+                        <p><img src="../../Resources/Images/eliminiating-adj-parent-and-subsidiary.PNG" alt="Hoe boek je een aanpassing voor een dochtergroep in Aanpassingen elimineren." /></p>
+                    </li>
+                    <li>
+                        <p>Selecteer een rekening of groep en voer het aanpassingsbedrag in. Als je een berekening wilt invoeren voor het aanpassingsbedrag, selecteer je <b>fx</b> in het veld <b>Bedrag</b> en voer je de berekening in. Raadpleeg het gedeelte <a href="#Calculat">Berekende aanpassingen</a> voor meer informatie.</p>
+                        <p class="note"><b>Let op:</b> Als u een groep selecteert en afmetingen zijn ingeschakeld in uw product, kunt u ook afmetingen selecteren om toe te wijzen aan de aanpassing. Je kunt één dimensie selecteren voor elke dimensiecategorie die is toegewezen aan de groep.</p>
+                    </li>
+                    <li>
+                        <p>Voltooi de invoer door <b>+ Rekeningregel</b> of <b>+ Groepsregel</b> te selecteren om nog een rekening of groep toe te voegen om de aanpassing in evenwicht te brengen.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Opslaan.</b></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Je aanpassingsboeking wordt op de rekening of groep geboekt. De gegevens worden onmiddellijk bijgewerkt met de nieuwe waarden. Je kunt je aanpassingen bekijken op de pagina <b>Aanpassingen</b> en indien nodig filters toepassen.</p>
+        <p>Je kunt ook een correctieboeking boeken door <b>Dupliceren</b> te selecteren voor een bestaande correctie om er een kopie van te maken.</p>
+        <p>Wanneer je een aanpassing dupliceert, heeft de nieuwe aanpassing hetzelfde type, dezelfde beschrijving en dezelfde rekeninggegevens als de oorspronkelijke aanpassing. Dubbele aanpassingen worden standaard ingesteld op het huidige jaar, zelfs als de oorspronkelijke aanpassing voor het vorige jaar is.</p>
+        <p>Merk op dat alle annotaties, problemen of aftekeningen die bij de aanpassing horen niet worden gekopieerd.</p>
+        <h2><a name="Calculat"></a>Berekende aanpassingen</h2>
+        <p>Wanneer je het aanpassingsbedrag invoert, kun je <b>fx</b> selecteren om een berekening voor het bedrag in te voeren. Je kunt in de berekening verwijzen naar andere rekeningen en groepen, waardoor je een aanpassing kunt maken die eenvoudig kan worden bijgewerkt als het saldo van de rekening of groep waarnaar wordt verwezen, verandert.</p>
+        <p>Als een berekende aanpassing een referentie bevat waarvan het saldo is gewijzigd, wordt de knop <b>Herberekenen</b> weergegeven naast de aanpassing op de pagina <b>Aanpassingen</b> . Je kunt ook eenvoudig meerdere aanpassingen tegelijk herberekenen door de knop <b>Alles herberekenen</b> bovenaan de pagina te selecteren.</p>
+        <p><img src="../../Resources/Images/adjustments-page-recalculate.png" alt="Op de pagina Aanpassingen wordt een aanpassing weergegeven die opnieuw berekend moet worden." /></p>
+        <p>Wanneer je berekende aanpassingen maakt, moet je circulaire afhankelijkheden vermijden. Om dit te doen, moet je ervoor zorgen dat je niet verwijst naar moedergroepen en -rekeningen of groepen waarvan het eindsaldo ook afhankelijk is van berekende aanpassingen.</p>
+        <p>Als je bijvoorbeeld een aanpassing maakt op de <i>Petty Cash-rekening</i> en in de berekening verwijst naar de bovenliggende groep, <i>Geldmiddelen en kasequivalenten</i>, creëer je een cirkelvormige afhankelijkheid. Wanneer de aanpassing wordt berekend en toegepast op de <i>kleine kasrekening</i> , verandert ook het saldo van de moedergroep. Hierdoor wordt de knop <b>Herberekenen</b> weergegeven voor de aanpassing. Als je ervoor kiest om de aanpassing opnieuw te berekenen, wordt het saldo van de moedergroep opnieuw bijgewerkt en moet de aanpassing opnieuw worden berekend. Dit resulteert in onnauwkeurige saldi voor zowel de account als de bovenliggende groep.</p>
+        <p><img src="../../Resources/Images/calculated-adjustment-circular-dependency.png" alt="Een voorbeeld van een berekende aanpassing met een cirkelvormige afhankelijkheid. Deze aanpassing betreft de groep Petty Cash, maar de berekening maakt gebruik van de bovenliggende groep, Geldmiddelen en kasequivalenten." /></p>
+        <p>Een ander voorbeeld dat kan leiden tot een cirkelvormige afhankelijkheid is wanneer je een berekende aanpassing toevoegt aan één groep die een rekeningsaldo gebruikt van een tweede groep, en vervolgens een andere aanpassing toevoegt aan de tweede groep die het eindsaldo van de eerste groep gebruikt.</p>
+        <p>Stel bijvoorbeeld dat je een aanpassing toevoegt aan de <i>kleine kasrekening</i> en verwijst naar het saldo van de groep <i>Kortetermijnbeleggingen</i> . Als u nu een tweede aanpassing toevoegt aan de groep <i>Kortetermijnbeleggingen</i> die verwijst naar het eindsaldo van de bovenliggende groep van de <i>kassarekening</i> , <i>Geldmiddelen en kasequivalenten</i>, creëert u een cirkelvormige afhankelijkheid.</p>
+        <p>Als het saldo van <i>de kortetermijnbeleggingen</i> verandert, moet de aanpassing voor de <i>kleine kas</i> opnieuw worden berekend. Hierdoor zal het eindsaldo van de groep <i>Geldmiddelen en kasequivalenten</i> veranderen, wat betekent dat de aanpassing voor de groep <i>Kortetermijnbeleggingen</i> ook opnieuw moet worden berekend. Zodra deze aanpassing opnieuw is berekend, moet de eerste aanpassing opnieuw worden berekend enzovoort.</p>
+        <h2><a name="Common"></a>Gebruikelijke soorten aanpassingen</h2>
+        <p>Soorten aanpassingen zijn normale boekingen, herclassificerende boekingen, niet-gecorrigeerde boekingen en fiscale boekingen. Hier volgen enkele voorbeelden van de meest voorkomende aanpassingen en een korte beschrijving.</p>
+        <ul>
+            <li>
+                <p>Normaal Gebruik dit om alle relevante automatische documenten bij te werken, zoals journalen, grootboeken, proefbalansen, financiële overzichten en leadsheets. Bij het bijwerken van de ene periode naar de andere, inclusief een jaarafsluiting, worden deze boekingen overgeboekt van de aanpassingskolom naar de openings- of voorlopige saldokolom op de documenten van de proefbalans en het leadsheet.</p>
+            </li>
+            <li>
+                <p><b>Herindelen</b>: Deze worden niet opgenomen in de normale boekhouding. Ze worden echter wel opgenomen in alle financiële overzichten en werkdocumenten zoals leadsheets. Wanneer ze worden gemaakt in een andere periode dan de laatste periode van het boekjaar, worden herindelingsboekingen niet opgenomen in de boekhouding. In dit geval hoeven de boekingen naar niet-geconsolideerde saldi niet te worden teruggeboekt.</p>
+                <p>Herclassificatieboekingen die in de laatste periode van het boekjaar worden gemaakt, worden opgenomen in de openingsbalansen van het volgende jaar wanneer een van de volgende keuzes wordt gemaakt tijdens de jaarafsluiting: Werk de openingsbalans van volgend jaar bij met geconsolideerd of rapport. Deze herclassificerende boekingen moeten dan worden teruggedraaid.</p>
+            </li>
+            <li>
+                <p><b>Elimineren</b>: Te gebruiken om combinaties of consolidaties van divisies of bedrijven voor te bereiden. Deze boekingen verschijnen in geconsolideerde proefbalansen, leadsheets en financiële overzichten.</p>
+            </li>
+            <li>
+                <p><b>Niet opgenomen - Feitelijk</b>: Dit zijn feitelijke onjuistheden die niet zullen worden opgenomen vanwege materialiteit of voorgestelde boekingen die later kunnen worden gewijzigd in een normale status. Deze vermeldingen verschijnen op het document Samenvatting van niet-gecorrigeerde onjuistheden.</p>
+            </li>
+            <li>
+                <p><b>Niet opgenomen - Verwacht</b>: Dit zijn verwachte afwijkingen die niet zijn opgenomen op basis van de beste schattingen van de accountant van afwijkingen in populaties, meestal op basis van steekproeven. Deze vermeldingen verschijnen op het document Samenvatting van niet-gecorrigeerde onjuistheden.</p>
+            </li>
+            <li>
+                <p><b>Niet opgenomen - Oordelend</b>: Dit zijn onjuiste beoordelingen die niet zijn opgenomen op basis van verschillen die voortvloeien uit de oordelen van het management over schattingen of de selectie of toepassing van grondslagen voor financiële verslaggeving die de accountant ongepast of onredelijk vindt. Deze vermeldingen verschijnen op het document Samenvatting van niet-gecorrigeerde onjuistheden.</p>
+            </li>
+            <li>
+                <p><b>Belasting - federaal</b>: Deze passen het federale belastingsaldo aan. Ze worden niet opgenomen in de normale boekhouding. Gebruik de documenten van de proefbalans, het journaal en de leadsheet om de federale belastingboekingen weer te geven. Als je een Journaal - Journaalposten aanpassen automatisch document maakt, wordt elke permanente of tijdelijke correctie weergegeven in de kolom Verschil van het rapport.</p>
+            </li>
+            <li>
+                <p><b>Belasting - Staat</b>: Deze passen de staatsbelastingsbalans aan. Ze worden niet opgenomen in de normale boekhouding. Gebruik de documenten van de proefbalans, het journaal en de leadsheet om de staatsbelastingboekingen weer te geven.</p>
+            </li>
+            <li>
+                <p><b>Belasting - Stad</b>: Deze passen het saldo van de gemeentebelastingen aan. Ze worden niet opgenomen in de normale boekhouding. Gebruik de documenten van de proefbalans, het journaal en de leadsheet om de invoer van de gemeentebelastingen weer te geven.</p>
+            </li>
+        </ul>
+    </body>
+</html>

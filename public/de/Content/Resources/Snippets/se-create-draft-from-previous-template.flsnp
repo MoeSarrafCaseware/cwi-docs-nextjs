@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="instNotes">You can create a draft using a previous version of your template.</p>
+        <p class="instNotes" style="font-weight: bold;">To create a draft using a previous template version:</p>
+        <ol>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">Stellen Sie sicher, dass Sie über die Rolle <b>Einstellungen-Administrator</b> oder gleichwertige Rechte verfügen. Weitere Informationen finden Sie in <a href="../../Setup/Security/Built-in-roles.htm">Vorgegebene Rollen</a> und <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Zugriffsrollen zuweisen</a>.</p>
+            </li>
+            <li MadCap:conditions="General.Online">
+                <p class="instNotes">From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Manage Template.</b></p>
+            </li>
+            <li MadCap:conditions="General.PDF">
+                <p class="instNotes">From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>), select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>OnPoint PCR</b></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT"><b>Caseware ReviewComp</b></MadCap:conditionalText> | <b>Manage Template </b><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>Primary</b></MadCap:conditionalText><b>.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Go to the archived templates list.</p>
+            </li>
+            <li>
+                <p class="instNotes">Open an archived template to create a draft based on that template.</p>
+            </li>
+            <p class="instNotes">The new draft opens.</p>
+            <li>
+                <p class="instNotes">Make changes as necessary.</p>
+            </li>
+            <li>
+                <p class="instNotes">From the Cloud menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) , select <b>Settings</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Manage Template.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Select <b>Publish Template</b> to have the changes applied to new engagements.</p>
+                <p class="instNotes">The published template is added to the archive and a record of it displays in the archived templates list.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can import a large number of users at once using a .csv file or block of delimited text; recommended for large firms" />
+    </head>
+    <body>
+        <h1>Creación masiva de cuentas de usuario</h1>
+        <p>As an alternative to create individual user accounts, the <b>Import</b> option is available in the <b>Staff</b> and the <b>Contact</b> pages.</p>
+        <p><img src="../../Resources/Images/import-users.png" alt="Creación masiva de cuentas de usuario Note that this option is available for staff and contacts." style="border:1px solid #3f66a3" /></p>
+        <p>For large-size firms, it&apos;s best to use the import option to bulk create user accounts by importing user information from a list. This happens in two steps:</p>
+        <ol>
+            <li>Prepare the user information list.</li>
+            <li>Import the list.</li>
+        </ol>
+        <p>Tenga en cuenta que:</p>
+        <ul>
+            <li>
+                <p>To bulk create user accounts for firm staff and contacts, you must create two separate lists; one for the firm staff and one for firm contacts</p>
+            </li>
+            <li>
+                <p>You can use the import option to bulk update information for existing user accounts</p>
+            </li>
+            <li>
+                <p>If your firm is utilizing <a href="../Organization/About-business-units.htm">business units</a>, you can use the standard <b>Staff</b> import to import staff to the current business unit. If you are importing staff to other business units, multiple business units, or moving staff between business units, select <b>Staff to Business Units</b>. For this option, a business unit field is required in the import list. Staff members that already exist in the primary Cloud site can continue using the same login credentials and the business unit selector to navigate between sites.</p>
+            </li>
+            <li>
+                <p>After you successfully import a user list, Cloud sends an email notification to each user that has been created. To learn more, see <a href="#What">What happens after you import the list.</a></p>
+            </li>
+        </ul>
+        <p>Caseware Cloud offers two methods for adding staff or contacts to your organization: importing a list using a .csv file or delimited block of text or adding users individually in Cloud. If your organization has more than 50 employees or contacts, we recommend importing a user list.</p>
+        <h2>Step 1: Prepare the user information list</h2>
+        <p>Adding users from a list enables you to add a large number of users in a single procedure. The list file or text can add or modify users&apos; profile and contact information, as well as their group assignment. If an entered group does not exist in Cloud, importing the directory will create it.</p>
+        <p>You&apos;ll need a list of users in a <b>.csv file</b> or <b>delimited block of plain text</b>.</p>
+        <p>When using either method, ensure that:</p>
+        <ul>
+            <li>Each row represents one user, and</li>
+            <li>Each column represents a property, such as their name, email, and user group. To include a user in more than one group, place a tilde (~) between each group name.</li>
+        </ul>
+        <p>For example, an administrator wants to add four staff members to Cloud. For each method, their list of users could look like the following:</p>
+        <p><b>Archivo CSV</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-csv.png" alt="CSV table of user information" /></p>
+        <p><b>Delimited block of plain text:</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-plain-text.png" alt="Plain text list of user information, separated by commas" /></p>
+        <h2 id="Importing-the-list-to-Cloud">Step 2: Import the list</h2>
+        <p>Once the list is prepared, you&apos;re ready to import your users to Cloud.</p>
+        <p><b>To import a user list:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Staff: Admin</i> role or equivalent rights.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Staff</b> or <b>Contacts</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>New</b> and, under Import, select <b>Staff</b> or <b>Contacts</b>.</p>
+                <p class="note"><b>Note:</b> If your firm is utilizing <a href="../Organization/About-business-units.htm">business units</a>, you can use the standard <b>Staff</b> import to import staff to the current business unit. If you are importing staff to other business units, multiple business units, or moving staff between business units, select <b>Staff to Business Units</b>.</p>
+            </li>
+            <li>
+                <p>Complete the import options as required.</p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <tbody>
+                        <tr>
+                            <th>Opción</th>
+                            <th>Descripción</th>
+                        </tr>
+                        <tr>
+                            <td>Update existing staff information</td>
+                            <td>Select to update existing staff with details from the CSV file.</td>
+                        </tr>
+                        <tr>
+                            <td>(Standard) Deactivate unlisted staff and activate new staff</td>
+                            <td>
+                                <p>Select to deactivate any staff that exist in the Cloud site, but are not included in the CSV file. New staff in the staff list will be activated.</p>
+                                <p>Only select this option if you are importing a complete staff or contacts list.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>(Business units) Deactivate staff in unlisted business units</td>
+                            <td>
+                                <p>Select to deactivate any staff that exist in business units that are not included in the CSV file.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Contains Header</td>
+                            <td>Select if your CSV file contains a header row.</td>
+                        </tr>
+                        <tr>
+                            <td>Delimitador</td>
+                            <td>Select the delimiter that is used in the CSV file to separate rows (e.g. , ; | ).</td>
+                        </tr>
+                        <tr>
+                            <td>Specify how the initial password should be set</td>
+                            <td>Select whether the initial password should be set by the users themselves, or the identity provider (admin).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Select <b>Import from CSV</b> and browse to your .csv directory file, or paste your delimited list text into the text box, then select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>Map the property that matches each column.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-3-829x595.png" style="border:1px solid #3f66a3" alt="Map the columns of your staff import list to complete the process" /></p><div class="note"><p><b>Notas:</b></p>
+                    <ul>
+                        <li>If any existing users have the same <b>email address</b>, they will be updated.</li>
+                        <li>If you are importing staff to business units, any non-empty values in the business unit column must match a business unit name. Multiple business units can be delimited using tildes (~).</li>
+                        <li>If you are importing a list of contacts, leave the email address field empty for any contacts that you do not want to have an account in Cloud.</li>
+                    </ul></div></li>
+            <li>
+                <p>Select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>A confirmation dialog appears showing the number of users successfully added or modified. If you entered any groups, they would be added or modified as well.</p>
+        <h2 id="After-the-import"><a name="What"></a>What happens after you import the list?</h2>
+        <p>After you import a user list, Cloud will automatically send them an email with a link to their login page. A record of this email can be found in <b>Settings | Email | Email Log</b>.</p>
+        <p>On the login screen, they will be asked to enter their email address and to enter and confirm a password. Standards for how difficult passwords must be and how often they need to be changed can be set in <b>Settings | Security | Password Settings</b>.</p>
+    </body>
+</html>

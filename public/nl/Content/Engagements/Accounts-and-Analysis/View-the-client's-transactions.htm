@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>De grootboek- en subgrootboekgegevens van de klant bekijken</h1>
+        <p>Als je <a href="../File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">de grootboek- en subgrootboekgegevens van je klant</a>hebt <a href="../File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">geïmporteerd</a>, klik je op het tabblad <b>Datasets</b> op de pagina <b>Gegevens op Gegevens</b>  <b>weergeven</b>.</p>
+        <p class="note inline"><b>Let op:</b> De knop <b>Gegevens weergeven</b> is alleen zichtbaar op het tabblad <b>Datasets</b> als je met succes gegevens hebt geïmporteerd.</p>
+        <p style="font-weight: bold;"><img src="../../Resources/Images/GL-ViewData.png" alt="Selecteren om gegevens te bekijken na het importeren. " /></p>
+        <h2>Gegevens sorteren</h2>
+        <h3>Sorteren op kolommen</h3>
+        <p>De kolommen waarop de gegevens in de dataset kunnen worden gesorteerd, worden gemarkeerd met een pijl naar boven (<img src="../../Resources/Icons/upward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) om aan te geven dat de gegevens oplopend zijn gesorteerd, of een pijl naar beneden (<img src="../../Resources/Icons/downward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) om aan te geven dat de gegevens aflopend zijn gesorteerd. Klik op de kolomkop om de sorteerrichting te wijzigen.</p>
+        <h3>Sorteren in meerdere kolommen</h3>
+        <p>Een nummer en een sorteerpijl (<img src="../../Resources/Images/MulticolumnSortIndicator.png" alt="" style="vertical-align: text-bottom;" />) verschijnen op meerdere kolommen om sorteren op meerdere kolommen aan te geven. In het onderstaande voorbeeld sorteren de gegevens standaard op <b>Entry ID</b> en vervolgens op <b>Regelnummer</b> .</p>
+        <p><b>Om de gesorteerde kolom eerst te wijzigen:</b></p>
+        <p>Ga met de muis over de kolom gemarkeerd met 2 en houd <b>Shift</b> ingedrukt terwijl je op de kolomkop klikt.</p>
+        <p><img src="../../Resources/Images/MulticolumnSortExample.png" alt="Voorbeeld van sorteren op meerdere kolommen met twee kolommen die kunnen worden gebruikt om de dataset te sorteren." /></p>
+        <h2>Opties op kolomniveau</h2>
+        <p>Selecteer de dropdown (<img src="../../Resources/Images/ColumnSortOptions-DataViewer.png" alt="" style="vertical-align: text-bottom;" />) op een kolomkop om een lijst met opties te laten verschijnen.</p>
+        <p>Selecteer <b>Pinnen kolom</b> om de kolom te verplaatsen naar de eerste kolom aan de linkerkant.</p>
+        <p><img src="../../Resources/Images/PinColumn.png" alt="Door de optie Pin Column te selecteren, verschijnt de kolom als eerste aan de linkerkant." /></p>
+        <ul>
+            <li>
+                <p>Selecteer <b>Kolom verbergen</b> om de kolom te verbergen.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Filteren op kolom</b> om rijen in de gegevens te filteren zodat alleen die rijen worden weergegeven die de waarde bevatten die je opgeeft. In het onderstaande voorbeeld worden alleen die gegevensrijen getoond waarvan het regelnummer de waarde `96` bevat.</p>
+            </li>
+        </ul>
+        <p><img src="../../Resources/Images/FilterColumn.png" alt="De kolom Regelnummer filteren." /></p>
+        <h2>Filter de volledige dataset</h2>
+        <p>Je kunt de hele dataset filteren door op <b>Filters</b> te klikken en vervolgens in het paneel Filters selecties te maken voor een van de kolommen in de dataset. Alle kolomfilters gebruiken de CONTAIN operator, terwijl de hele reeks filters de AND operator gebruikt.</p>
+        <p>In het onderstaande voorbeeld worden gegevensrijen behouden door het filter als</p>
+        <p><code><b>Source</b> = Xero — 11/14/24 4:40 pm</code></p>
+        <p>EN</p>
+        <p><code><b>Account number</b> = *96*</code> (elk rekeningnummer dat de waarde `96` bevat)</p>
+        <p>EN</p>
+        <p><code><b>Account number</b> = *Receivable*</code> (elke rekeningnaam die de waarde `Vordering` bevat)</p>
+        <h2>Kolommen uitsluiten van de weergave</h2>
+        <p>Je kunt kolommen uitsluiten van de weergegeven gegevens door op <b>Kolommen te</b>klikken en vervolgens de kolommen te selecteren die je niet wilt weergeven.</p>
+        <p><img src="../../Resources/Images/ExcludeColumnsFromDataViewer.png" alt="Hele kolommen uitfilteren door ze te verwijderen uit de lijst met kolommen in de dataset." /></p>
+    </body>
+</html>

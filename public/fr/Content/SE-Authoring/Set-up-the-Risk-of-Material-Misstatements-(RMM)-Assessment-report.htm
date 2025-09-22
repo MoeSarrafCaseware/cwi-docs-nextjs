@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Établir le rapport d&apos;évaluation du risque d&apos;anomalies significatives (RMM)</h1>
+        <p class="note"><b>Remarque :</b> Cette rubrique ne s&apos;applique pas aux applications en nuage pour lesquelles le nouveau module de risque <a href="Enable-the-new-risk-module.htm">est activé</a>.</p>
+        <p>Vous pouvez activer le rapport d&apos;évaluation RMM pour permettre aux utilisateurs d&apos;évaluer la RMM par domaine financier. Par exemple, ils examineront la trésorerie et décideront s&apos;il existe ou non un risque d&apos;anomalies significatives dans la trésorerie.</p>
+        <p>Pour activer le rapport d&apos;évaluation des risques dans votre produit :</p>
+        <ul>
+            <li>
+                <p>Attribuer la valeur <code>true</code>à la propriété <code>riskAssessment</code> </p>
+            </li>
+            <li>
+                <p>Spécifiez la propriété <code>com.caseware.ca.general.risk-assessment</code> dans la propriété <code>form</code> du fichier product.json. Pour en savoir plus, voir <a href="Enable-or-disable-features-in-your-product.htm">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+            </li>
+        </ul>
+        <p>Une fois que vous avez activé le rapport dans votre produit, vous pouvez l&apos;ajouter à votre projet et le configurer.</p>
+        <p>Pour ajouter le rapport d&apos;évaluation des risques, sélectionnez <b>Ajouter (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) dans la page des documents, puis choisissez <b>Rapport d&apos;évaluation des risques.</b></p>
+        <p style="font-weight: bold;">Pour établir le rapport d&apos;évaluation des risques :</p>
+        <ol>
+            <li>
+                <p>Dans la liste déroulante <b>Filtres</b> , en haut à gauche, sélectionnez le filtre que vous souhaitez appliquer au document.</p>
+            </li>
+            <li>
+                <p>Sous <b>Paramètres (<img src="../Resources/Icons/risk-assessment-settings1.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) <b>,</b> modifiez les paramètres par défaut si nécessaire.</p>
+            </li>
+            <p>Les options suivantes sont disponibles :</p>
+        </ol>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Paramètre</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Utiliser des données non consolidées</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Utilisation ou non de données consolidées</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Montrer l&apos;importance relative</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indiquer ou non l&apos;importance relative (les informations proviennent du document relatif à l&apos;importance relative)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Conclusion</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Whether or not to include the Conclusion section at the end of the report</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Colonne supplémentaire</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Ajout ou non d&apos;une colonne supplémentaire à côté de la colonne <b>Raison</b> pour chaque domaine financier</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Autoriser les évaluations dans le cadre de cycles ou de domaines</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Autoriser ou non les évaluations par <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">cycle ou par domaine.</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Dans la liste déroulante <b>Grouper par</b> , sélectionnez si vous souhaitez que les informations contenues dans le rapport soient groupées ou non.</p>
+            </li>
+            <p>Si vous souhaitez regrouper les informations, vous pouvez choisir de les regrouper par <b>domaines</b> ou par <b>cycles.</b></p>
+            <li>
+                <p>Pour ajouter des informations d&apos;orientation :</p>
+            </li>
+            <p>Sélectionnez le champ de texte pour commencer à ajouter du contenu. La barre d&apos;outils de formatage s&apos;affiche. Utilisez la barre d&apos;outils pour effectuer les modifications suivantes :</p>
+        </ol><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" /><ol MadCap:continue="true">
+            <li>
+                <p>Renommez les en-têtes de colonne pour personnaliser les termes si nécessaire.</p>
+            </li>
+            <p>Vous pouvez renommer les colonnes intitulées <b>RMM, Motif</b> et <b>Informations complémentaires.</b></p>
+            <li>
+                <p>Ajouter une conclusion.</p>
+            </li>
+            <p>Sélectionnez le champ de texte pour commencer à ajouter du contenu. La barre d&apos;outils de formatage s&apos;affiche. Utilisez la barre d&apos;outils pour mettre en forme et modifier le texte.</p>
+        </ol>
+        <h2>Ajouter ou supprimer un lien dans la description de la procédure</h2><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" /></body>
+</html>

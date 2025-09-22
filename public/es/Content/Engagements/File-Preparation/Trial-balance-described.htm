@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comprender el conjunto de datos del balance de comprobación</h1>
+        <p>When importing a trial balance from a CSV or Excel file, you must map the fields, so the trial balance data is displayed properly in the engagement. This topic describes the fields within the <strong>Trial balance </strong>dataset. For more information on importing transaction data from CSV files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file-old-method.htm">Import the trial balance from a CSV or Excel</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Account number (<code>account_id</code>)</td>
+                    <td>
+                        <p>El identificador para la cuenta.</p>
+                        <p>Valor devuelto: Cadena</p>
+                        <p>Required: Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account name (<code>account_main_description)</code></td>
+                    <td>
+                        <p>El nombre o la descripción para la cuenta.Ejemplos:</p>
+                        <p>efectivo, propiedad, planta y equipamiento, ventas</p>
+                        <p>Valor devuelto: Cadena</p>
+                        <p>Required: Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de grupo financiero</td>
+                    <td>
+                        <p>El número para el grupo financiero al que está asignada la cuenta en la estructura de grupos. This information is not provided by the client and is used to automatically map accounts to financial groups.</p>
+                        <p>Las cuentas actualmente asignadas a grupos podrían reasignarse cuando importe este campo de datos.</p>
+                        <p>Valor devuelto: Cadena</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo del ejercicio actual</td>
+                    <td>
+                        <p>El saldo del ejercicio en curso.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo del ejercicio anterior</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo del ejercicio anterior 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo del ejercicio anterior 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3.</p>
+                        <p>Note that if your engagement is externally consolidated, you will see both a <b>Parent balance - PY 3</b> and a <b>Consolidated balance - PY 3</b> field. If you assign one of those fields, you must also assign the other.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo del ejercicio anterior 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo consolidado</td>
+                    <td>El saldo planificado del ejercicio actual. El saldo consolidado del ejercicio anterior.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior.<p>Data type: Money</p><p>Required: No</p></td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo consolidado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior. El saldo consolidado del ejercicio anterior.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo consolidado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 2. El saldo consolidado del ejercicio anterior 4.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo consolidado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 3. El saldo consolidado del ejercicio anterior 4.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo consolidado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 4. El saldo consolidado del ejercicio anterior 4.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo primario</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio actual. El saldo consolidado del ejercicio anterior.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo primario</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior. El saldo primario para ejercicio anterior.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo primario</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 2. El saldo primario del ejercicio anterior 3.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo primario</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 3. El saldo primario del ejercicio anterior 3.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo primario</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 4. El saldo primario del ejercicio anterior 3.Si asigna este campo, también debe asignar un saldo primario correspondiente para el ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de enero</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de enero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de febrero</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de febrero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de marzo</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de marzo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de abril</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de abril.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de mayo</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de mayo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de junio</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de junio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de julio</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de julio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de agosto</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de agosto.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de septiembre</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de septiembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de octubre</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de octubre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de noviembre</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de noviembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo de diciembre</td>
+                    <td>
+                        <p>El saldo del ejercicio actual de diciembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del trimestre 1</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del primer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del trimestre 2</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del segundo trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del trimestre 3</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del tercer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del trimestre 4</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del cuarto trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de enero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de enero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de febrero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de febrero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de marzo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de marzo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de abril</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de abril.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de mayo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de mayo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de junio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de junio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de julio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de julio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de agosto</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de agosto.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de septiembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de septiembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de octubre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de octubre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de noviembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de noviembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo de diciembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior de diciembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del trimestre 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del primer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del trimestre 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del segundo trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del trimestre 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del tercer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del trimestre 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del cuarto trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 1</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del primer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 2</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del segundo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 3</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del tercer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 4</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del cuarto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 5</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del quinto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 6</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del sexto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 7</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del séptimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 8</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del octavo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 9</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del noveno mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 10</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del décimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 11</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del undécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del mes 12</td>
+                    <td>
+                        <p>El saldo del ejercicio actual del duodécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del primer semestre</td>
+                    <td>
+                        <p>El saldo del primer semestre del ejercicio actual.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo del segundo semestre</td>
+                    <td>
+                        <p>El saldo del segundo semestre del ejercicio actual.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del primer semestre</td>
+                    <td>
+                        <p>El saldo del primer semestre del ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del segundo semestre</td>
+                    <td>
+                        <p>El saldo del segundo semestre del ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del primer semestre</td>
+                    <td>
+                        <p>El saldo del primer semestre del ejercicio anterior 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del segundo semestre</td>
+                    <td>
+                        <p>El saldo del segundo semestre del ejercicio anterior 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del primer semestre</td>
+                    <td>
+                        <p>El saldo del primer semestre del ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del segundo semestre</td>
+                    <td>
+                        <p>El saldo del segundo semestre del ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del primer semestre</td>
+                    <td>
+                        <p>El saldo del primer semestre del ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del segundo semestre</td>
+                    <td>
+                        <p>El saldo del segundo semestre del ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio actual: saldo planificado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio actual.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo planificado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del primer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del segundo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del tercer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del cuarto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 5</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del quinto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 6</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del sexto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 7</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del séptimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 8</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del octavo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 9</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del noveno mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 10</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del décimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 11</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del undécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior: saldo del mes 12</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior del duodécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del primer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del segundo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del tercer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del cuarto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 5</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del quinto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 6</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del sexto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 7</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del séptimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 8</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del octavo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 9</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del noveno mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 10</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del décimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 11</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del undécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del mes 12</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del duodécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del primer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del segundo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del tercer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del cuarto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 5</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del quinto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 6</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del sexto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 7</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del séptimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 8</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del octavo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 9</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del noveno mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 10</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del décimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 11</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del undécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del mes 12</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del duodécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del primer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del segundo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del tercer mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del cuarto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 5</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del quinto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 6</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del sexto mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 7</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del séptimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 8</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del octavo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 9</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del noveno mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 10</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del décimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 11</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del undécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del mes 12</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del duodécimo mes del ejercicio financiero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de enero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de enero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de febrero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de febrero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de marzo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de marzo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de abril</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de abril.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de mayo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de mayo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de junio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de junio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de julio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de julio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de agosto</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de agosto.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de septiembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de septiembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de octubre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de octubre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de noviembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de noviembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo de diciembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 de diciembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de enero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de enero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de febrero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de febrero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de marzo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de marzo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de abril</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de abril.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de mayo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de mayo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de junio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de junio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de julio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de julio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de agosto</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de agosto.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de septiembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de septiembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de octubre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de octubre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de noviembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de noviembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo de diciembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 de diciembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de enero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de enero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de febrero</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de febrero.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de marzo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de marzo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de abril</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de abril.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de mayo</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de mayo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de junio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de junio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de julio</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de julio.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de agosto</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de agosto.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de septiembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de septiembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de octubre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de octubre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de noviembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de noviembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo de diciembre</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 de diciembre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del trimestre 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del primer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del trimestre 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del segundo trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del trimestre 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del tercer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo del trimestre 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 2 del cuarto trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del trimestre 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del primer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del trimestre 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del segundo trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del trimestre 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del tercer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo del trimestre 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 3 del cuarto trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del trimestre 1</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del primer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del trimestre 2</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del segundo trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del trimestre 3</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del tercer trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo del trimestre 4</td>
+                    <td>
+                        <p>El saldo del ejercicio anterior 4 del cuarto trimestre.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 2: saldo planificado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 3: saldo planificado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio anterior 4: saldo planificado</td>
+                    <td>
+                        <p>El saldo planificado del ejercicio anterior 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

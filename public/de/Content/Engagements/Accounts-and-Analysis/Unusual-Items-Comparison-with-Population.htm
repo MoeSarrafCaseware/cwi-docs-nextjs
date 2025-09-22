@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Ungewöhnliche Elemente</h1>
+        <p>Die Analyse Ungewöhnliche Elemente (Vergleich mit der Grundgesamtheit) identifiziert Transaktionen, die im Vergleich zu einer ausgewählten Gruppe von Transaktionen als ungewöhnlich gelten.</p>
+        <p>Dieser Test kann zum Beispiel dazu verwendet werden, Transaktionen zu identifizieren, die von Benutzern gebucht werden, die im Vergleich mit anderen Transaktionen selten buchen. Die Nutzer werden mit der Grundgesamtheit zusammengefasst, um einen Prozentsatz der Transaktionen zu erhalten, und alle Nutzer, die unter einem bestimmten Schwellenwert liegen, werden im Ergebnis angezeigt.</p>
+        <p>Sie können diesen Test auch für die Analyse von Datumsfeldern verwenden. Die Transaktionspopulation wird nach Datum zusammengefasst, und Daten mit einer geringen Anzahl von Transaktionen werden im Ergebnis gekennzeichnet.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Fiktive oder nicht belegte Transaktionen</p>
+            </li>
+            <li>
+                <p>Systemische Probleme bei der Verarbeitung von Transaktionen in einer Abteilung</p>
+            </li>
+            <li>
+                <p>Unsachgemäß konfigurierte Systemeinstellungen, die möglicherweise verbessert und weiter ausgewertet werden müssen</p>
+            </li>
+            <li>
+                <p>Aufdeckung von möglichen Versuchen zur Manipulation von Jahresabschlüssen</p>
+            </li>
+            <li>
+                <p>Bereiche der Finanzberichterstattung, die eine geringere Genauigkeit und Präzision aufweisen</p>
+            </li>
+            <li>
+                <p>Schwächen bei internen Kontrollen, die weitere Auswirkungen haben, die es zu berücksichtigen gilt</p>
+            </li>
+            <li>
+                <p>Schwache Überwachung und Aufdeckung von Aktivitäten</p>
+            </li>
+            <li>
+                <p>Transaktionen, die außerhalb der normalen Geschäftstage stattfanden</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <ul>
+            <li>
+                <p><b>Referenzfeld(er)</b> - Eindeutige(s) Feld(er), das/die zur Erstellung einer eindeutigen Transaktions-ID verwendet wird/werden, wie z. B. das Feld <b>Eintrags-ID</b> für den Hauptbuch-Datensatz. Diese Spalten sind nicht Teil des Ergebnisses, sondern dienen der Identifizierung der Transaktionen, die Teil des Ergebnisses sind. Dieses Feld wurde bereits im Test definiert und kann nicht geändert werden.</p>
+            </li>
+            <li>
+                <p><b>Ungewöhnliche(s) Feld(er)</b> - Die Felder, deren Werte untersucht werden, um festzustellen, ob sie ungewöhnlich sind. Bei diesen Feldern kann es sich um numerische, Datums-, Zeit- oder Zeichenfelder handeln, die eine Art von wiederkehrendem Muster enthalten. Ein numerisches Feld, das Benutzer-IDs enthält, könnte zum Beispiel dazu verwendet werden, Transaktionen zu identifizieren, die von Benutzern gebucht werden, die nur selten buchen. Felder, die Beträge oder Mengen enthalten, eignen sich nicht so gut für diesen Test, da sie normalerweise kein wiederkehrendes Muster aufweisen.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <ul>
+            <li>
+                <p><b>Prozentwert</b> - Geben Sie den Prozentwert ein, den der Test verwenden soll, um zu bestimmen, welche Werte als ungewöhnlich betrachtet werden sollen. Wenn Sie beispielsweise einen Prozentwert von 3 % eingeben, wird jedes Element in der Spalte, das 3 % oder weniger der Population ausmacht, als ungewöhnlich betrachtet und in die Testergebnisse einbezogen.</p>
+            </li>
+            <li>
+                <p><b>Typ des Prozentsatzes</b> - der Typ gibt an, ob der Prozentsatz kleiner, kleiner oder gleich, gleich, größer oder größer oder gleich dem Prozentwert sein soll.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Ungewöhnliche Elemente im Vergleich zur Grundgesamtheit</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Ungewöhnliche Datumseinträge im Vergleich zur Grundgesamtheit</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analysefunktion Ungewöhnliche Elemente ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Legen Sie bei Bedarf Filter über die Daten, damit eine Teilmenge für die Analyse verwendet wird. Wenn kein Filter gesetzt ist, wird die Analyse für die gesamte Datei durchgeführt. Dieser Schritt kann auch als letzter statt als erster Schritt durchgeführt werden.</p>
+                <p class="note"><b>Hinweis:</b> Filter sind derzeit nicht verfügbar und werden erst in einer späteren Version enthalten sein.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Beziehen Sie die Spalten, um die Teilmenge zu erstellen, für die diese Analyse durchgeführt werden soll. Diese Teilmenge kann auf einer oder mehreren Spalten basieren. Die Spalten können von beliebigem Typ und in beliebiger Reihenfolge sein.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie den Prozentsatz zum Vergleich.</p>
+                <ul>
+                    <li>
+                        <p>Wenn der Benutzer eine der folgenden Möglichkeiten gewählt hat, ist nur ein Prozentsatz erforderlich:</p>
+                        <ul>
+                            <li>
+                                <p>Kleiner als (&lt;)</p>
+                            </li>
+                            <li>
+                                <p>Kleiner als oder gleich (&lt;=)</p>
+                            </li>
+                            <li>
+                                <p>Gleich (==)</p>
+                            </li>
+                            <li>
+                                <p>Größer als oder gleich (&gt;=)</p>
+                            </li>
+                            <li>
+                                <p>Größer als (&gt;)</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Wenn der Benutzer einen Bereich auswählt, muss es einen Prozentsatz für einen niedrigen und einen für einen hohen Wert geben. Der Bereich kann auf folgenden Faktoren basieren:</p>
+                        <ul>
+                            <li>
+                                <p>Größer als (&gt;)</p>
+                            </li>
+                            <li>
+                                <p>Größer als oder gleich (&gt;=)</p>
+                            </li>
+                            <li>
+                                <p>Kleiner als oder gleich (&lt;=)</p>
+                            </li>
+                            <li>
+                                <p>Kleiner als (&lt;)</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Fassen Sie die Spalten der Teilmenge zusammen, um die Anzahl der Datensätze pro eindeutiger Teilmenge zu erhalten.</p>
+            </li>
+            <li>
+                <p>Berechnen Sie den Prozentsatz jeder Teilmenge auf der Grundlage der Gesamtzahl der Datensätze in der Grundgesamtheit.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie alle Teilmengen, die in den in Schritt 4 ausgewählten prozentualen Vergleich fallen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die Transaktionen (Zeilen), die sich auf die in Schritt 7 extrahierten Teilmengen beziehen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

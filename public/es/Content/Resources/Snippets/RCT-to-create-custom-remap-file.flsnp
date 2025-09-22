@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">To create a custom remap file:</p>
+        <ol>
+            <li>
+                <p style="font-weight: bold;"><span style="font-weight: normal;">Copy components.</span></p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Open your Working Papers file.</p>
+                </li>
+                <p>We recommend that you create a backup copy of your file before you proceed (<b>File | Back Up</b>).</p>
+                <li>
+                    <p>On the ribbon, click <b>File | Copy Components. </b></p>
+                </li>
+                <p>The Copy Components Wizard displays.</p>
+                <li>
+                    <p>Click <b>Copy Into This File.</b></p>
+                </li>
+                <li>
+                    <p>On the Select Source page, click the <b>File</b> tab, then click<b> Browse...</b></p>
+                </li>
+                <li>
+                    <p>Navigate to <b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge\Caseware ReviewComp and select Caseware ReviewComp.ac</b>, then click <b>Next.</b></p>
+                </li>
+                <li>
+                    <p>On <b>the Copy Components page</b>, select <b>Groupings/Mapping</b>.</p>
+                </li>
+                <li>
+                    <p>Select <b>Mapping</b> and click <b>Options…</b></p>
+                </li>
+                <p>The <b>Mapping Copy Options</b> dialog displays.</p>
+            </ol>
+            <li>
+                <p>Remap numbers.</p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Click <b>Remap</b>.</p>
+                    <p>The Remap dialog displays.</p>
+                </li>
+                <li>
+                    <p>Drag a mapping number from the <b>Destination File Mapping Numbers</b> list and drop it into the appropriate mapping number in the <b>Source File Mapping Numbers</b> list.</p>
+                </li>
+                <li>
+                    <p>Repeat the process to assign additional mapping numbers.</p>
+                </li>
+                <li>
+                    <p>Once you&apos;re done, click <b>Apply</b> to save your settings, then click <b>OK.</b></p>
+                </li>
+            </ol>
+            <li>
+                <p>Generate the <b>.ini</b> file.</p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>In the <b>Mapping Copy Options</b> dialog, click <b>Cancel</b>.</p>
+                </li>
+                <li>
+                    <p>In the <b>Copy Components Wizard</b>, click <b>Cancel.</b></p>
+                </li>
+                <p>A remap file with the name <b>copy.ini</b> is created in the folder of your Working Papers file ( <b>C:\Program Files (x86)\Caseware\Data</b>).</p>
+            </ol>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Information financière</h1>
+        <p>Cette visualisation hybride de Sherlock Canada fournit des informations pour un engagement plus efficace :</p>
+        <ul>
+            <li><a href="#Trial">Aperçu de la balance de vérification</a></li>
+            <li><a href="#Financial">Aperçus des états financiers</a></li>
+            <li><a href="#Benchmarking">Analyse comparative</a></li>
+        </ul>
+        <p>Chaque onglet comprend des contrôles permettant d&apos;afficher les données en fonction du nom du client et de la fin de l&apos;année.</p><div class="note"><p><b>Remarque :</b> Avant d&apos;utiliser les visualisations Sherlock pour la première fois, vous devez les configurer en utilisant les options de l&apos;onglet <b>Configuration</b> . Voici quelques exemples de ces options :</p>
+            <ul>
+                <li><b>Actifs circulants :</b> Indiquez les feuilles de route qui sont classées dans les actifs circulants. Ces feuilles de route seront utilisées pour calculer différents ratios financiers et générer des graphiques dans Sherlock à des fins d&apos;analyse comparative. Notez que les feuilles de route de la liste des feuilles de route par défaut des Working Papers sont sélectionnées par défaut, mais qu&apos;elles peuvent être supprimées si elles ne sont pas applicables.</li>
+            </ul></div><h2><a name="Trial"></a>Aperçu de la balance de vérification</h2>
+        <p><img src="../../Resources/Images/scv-in-trial-balance-insights.png" style="border:1px solid #3f66a3" /></p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Comptes manquants</p>
+                    </td>
+                    <td>
+                        <p>Affiche le nombre de comptes qui ne sont pas inclus dans la balance de vérification de l&apos;année en cours, mais qui étaient présents dans les années précédentes.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Analyse des comptes manquants</td>
+                    <td>Affiche les détails des comptes manquants pour l&apos;année sélectionnée.</td>
+                </tr>
+                <tr>
+                    <td>Nouveaux comptes</td>
+                    <td>Affiche le nombre de nouveaux comptes dans l&apos;engagement pour l&apos;année sélectionnée.</td>
+                </tr>
+                <tr>
+                    <td>Analyse de la balance de vérification</td>
+                    <td>Affiche les détails de la balance de vérification importée pour l&apos;année sélectionnée.</td>
+                </tr>
+                <tr>
+                    <td>Dépasse le seuil de variance ($)</td>
+                    <td>
+                        <p>Affiche le nombre de comptes dont l&apos;écart est supérieur au montant du contrôle du <b>seuil d&apos;écart ($)</b> , par rapport à l&apos;année précédente.</p>
+                        <p>Ce widget peut être utilisé en tandem avec le widget <b>Dépasse le seuil d&apos;écart (%)</b> , mais il ne mettra en évidence que les lignes de l&apos; <b>analyse de la balance de vérification</b> qui répondent à l&apos;un des deux seuils, et non aux deux.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dépasse le seuil de variance (%)</td>
+                    <td>
+                        <p>Affiche le nombre de comptes dont l&apos;écart est supérieur au montant indiqué dans le champ <b>Seuil d&apos;écart (%)</b> , par rapport à l&apos;année précédente.</p>
+                        <p>Ce widget peut être utilisé en tandem avec le widget <b>Dépasse le seuil de variance ($)</b> , mais il ne mettra en évidence que les lignes de l&apos; <b>analyse de la balance de vérification</b> qui atteignent l&apos;un des deux seuils, et non les deux.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Financial"></a>Aperçus des états financiers</h2>
+        <p><img src="../../Resources/Images/scv-in-financial-statement-insights.png" style="border:1px solid #3f66a3" /></p>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez générer des données comparatives qu&apos;entre des fichiers qui ont été téléchargés dans le nuage. Par exemple, si votre fichier Cloud contient des soldes comparatifs de l&apos;année précédente, vous devrez télécharger le fichier de l&apos;année précédente dans Cloud pour que ces données s&apos;affichent dans les visualisations Sherlock.</p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Tendances des ratios actuels</td>
+                    <td>
+                        <p>Affiche les tendances du ratio actuel, d&apos;une année sur l&apos;autre.</p>
+                        <p><![CDATA[
+]]><b>Formule :</b> Actif à court terme / Passif à court terme</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Évolution du ratio d&apos;endettement</td>
+                    <td>
+                        <p>Affiche l&apos;évolution du taux d&apos;endettement d&apos;une année sur l&apos;autre.</p>
+                        <p><![CDATA[
+]]><b>Formule :</b> Total du passif / Total de l&apos;actif</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Évolution du ratio d&apos;endettement</td>
+                    <td>
+                        <p>Affiche les tendances du ratio d&apos;endettement, d&apos;une année sur l&apos;autre.</p>
+                        <p><![CDATA[
+]]><b>Formule :</b> Total du passif / Total des capitaux propres</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Évolution du ratio de rendement des actifs</td>
+                    <td>
+                        <p>Affiche les tendances du ratio de rendement des actifs, d&apos;une année sur l&apos;autre.</p>
+                        <p><![CDATA[
+]]><b>Formule :</b> Résultat net / Total des actifs</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Évolution du ratio de marge brute</td>
+                    <td>
+                        <p>Affiche les tendances du ratio de marge brute, d&apos;une année sur l&apos;autre.</p>
+                        <p><![CDATA[
+]]><b>Formule :</b> (Ventes nettes - Coût des marchandises vendues) / Ventes nettes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Actifs</td>
+                    <td>Affiche une ventilation par compte de la catégorie d&apos;actifs, d&apos;une année sur l&apos;autre.</td>
+                </tr>
+                <tr>
+                    <td>Passif et capitaux propres (hors résultat net)</td>
+                    <td>Affiche une ventilation par compte de la catégorie des passifs et des capitaux propres, d&apos;une année sur l&apos;autre.</td>
+                </tr>
+                <tr>
+                    <td>Recettes</td>
+                    <td>Affiche une ventilation par compte de la catégorie de revenus, d&apos;une année sur l&apos;autre.</td>
+                </tr>
+                <tr>
+                    <td>Dépenses</td>
+                    <td>Affiche une ventilation par compte de la catégorie des dépenses, d&apos;une année sur l&apos;autre.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Benchmarking"></a>Analyse comparative</h2>
+        <p><img src="../../Resources/Images/scv-in-benchmarking.png" style="border:1px solid #3f66a3" /></p><div class="note"><p><b>Notes :</b></p>
+            <ul>
+                <li>Vous ne pouvez générer des données comparatives qu&apos;entre des fichiers qui ont été téléchargés dans le nuage. Par exemple, si votre fichier Cloud contient des soldes comparatifs de l&apos;année précédente, vous devrez télécharger le fichier de l&apos;année précédente dans Cloud pour que ces données s&apos;affichent dans les visualisations Sherlock.</li>
+                <li>Les données d&apos;étalonnage de l&apos;année dans le contrôle <b>Fin d&apos;année</b> s&apos;afficheront dans les widgets, qu&apos;elles soient ou non sélectionnées dans le contrôle <b>Fin d&apos;année(s) pour l&apos;étalonnage</b> .</li>
+            </ul></div><table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>Widget</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Référentiel de l&apos;actif circulant</td>
+                    <td>Compare la catégorie actuelle des états financiers de l&apos;actif d&apos;une entité à celle d&apos;entités sélectionnées servant de référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Actifs à long terme (benchmark)</td>
+                    <td>Compare la catégorie des états financiers des actifs à long terme d&apos;une entité par rapport à des entités sélectionnées utilisées comme référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Passifs à court terme</td>
+                    <td>Compare la catégorie des états financiers du passif à court terme d&apos;une entité par rapport à des entités sélectionnées utilisées comme référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Passifs à long terme indice de référence</td>
+                    <td>Compare la catégorie des états financiers des passifs à long terme d&apos;une entité par rapport à des entités sélectionnées utilisées comme référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Référence en matière de recettes</td>
+                    <td>Compare la catégorie d&apos;états financiers des recettes d&apos;une entité par rapport à des entités sélectionnées utilisées comme référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Référentiel des dépenses</td>
+                    <td>Compare la catégorie des charges d&apos;exploitation d&apos;une entité par rapport à des entités sélectionnées servant de référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Revenu net de référence</td>
+                    <td>Compare le revenu net d&apos;une entité à celui d&apos;entités sélectionnées servant de référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+                <tr>
+                    <td>Marge brute de référence</td>
+                    <td>Compare la marge brute d&apos;une entité à celle d&apos;entités sélectionnées servant de référence. L&apos;indice de référence est calculé comme une moyenne sur l&apos;ensemble des années et des entités.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

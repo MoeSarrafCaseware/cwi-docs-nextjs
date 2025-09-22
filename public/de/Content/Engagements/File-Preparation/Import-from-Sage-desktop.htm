@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Import aus Sage Desktop</h1>
+        <p>You can import data from Sage by generating a zip file using the Caseware Cloud Import Utility, then importing it into your engagement. We currently support the following Sage accounting software:</p>
+        <ul>
+            <li>
+                <p>Import from Sage 50 Accounts (Sage-Line50)</p>
+            </li>
+            <li>
+                <p>Import from Sage 50 Accounting CDN Edition (Simply)</p>
+            </li>
+        </ul>
+        <p>For a list of versions we support, see <a href="Supported-third-party-accounting-packages.htm">Supported third-party accounting packages</a>.</p>
+        <p class="note"><b>Note:</b> Accounts with zero balances do not automatically import into Caseware Cloud apps with the exception of <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. To include zero-balance accounts, you must manually <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> and <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the appropriate financial groups.</p>
+        <h2><a name="Generate"></a>Generate the import file for Sage 50 Accounts (Sage-Line50)</h2>
+        <p>Before you start, make sure that you have the necessary import files:</p>
+        <ul>
+            <li>
+                <p>Profile Information: ACCDATA\ACCOUNT.DTA</p>
+            </li>
+            <li>
+                <p>Chart of Accounts: ACCDATA\NOMINAL.DTA</p>
+            </li>
+            <li>
+                <p>CoA Index: ACCDATA\NOMINDEX.DTA</p>
+            </li>
+            <li>
+                <p>GL Detail: ACCDATA\SPLITS.DTA</p>
+            </li>
+            <li>
+                <p>Company Information: ACCDATA\SETUP.DTA</p>
+            </li>
+            <li>
+                <p>Account Types: ACCDATA\COA</p>
+            </li>
+            <li>
+                <p>Bank Information: ACCDATA\BANK.DTA</p>
+            </li>
+            <li>
+                <p>Ledger Index: ACCDATA\HEADER.DTA</p>
+            </li>
+            <li>
+                <p>Department Information: DEPARTM.DTA</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">To generate the import file for Sage 50 Accounts (Sage-Line50):</p>
+        <ol>
+            <li>
+                <p>Download the Caseware Cloud Import Utility.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility(.exe)</a></p>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the <b>Import From</b> and <b>Version</b> drop-downs, select <b>Sage 50 Accounts</b> and the version you&apos;re importing from.</p>
+            </li>
+            <li>
+                <p>In <b>Import Path</b>, select <b>Browse</b> and navigate to the folder that contains the ACCDATA folder, where the .DTA files you want to import are located.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage50.png" alt="The Cloud Import Utility." /></p>
+            </li>
+            <li>
+                <p>Determine the remaining settings for the import.</p>
+                <p>The settings vary based on the version you previously selected.</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+                <p>To continue the import process, see Import the data into your engagement.</p>
+            </li>
+        </ol>
+        <h2><a name="Generate2"></a>Generate the import file for Sage 50 Accounting CDN Edition (Simply)</h2>
+        <p>Before you start, make sure that you install either Sage 50 Accounting (CDN Edition) or the Sage 50 Connection Manager utility from <a href="https://my.caseware.com/">MyCaseware</a>. You must have one of these applications to perform the import; however, do not install both.</p>
+        <p style="font-weight: bold;">To generate the import file for Sage 50 Accounting CDN Edition (Simply):</p>
+        <ol>
+            <li>
+                <p>Download the Caseware Cloud Import Utility.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility(.exe)</a></p>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the <b>Import From</b> and <b>Version</b> drop-downs, select <b>Sage 50 Accounting CDN Edition (Simply)</b> and the version you&apos;re importing from.</p>
+            </li>
+            <li>
+                <p>In <b>Import Path</b>, select <b>Browse</b> and navigate to the folder containing the client file you want to import. Client files for Sage have the .SAI file name extension.</p>
+                <p>The <b>Client ID</b> field automatically fills with the name of the client file.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage-simply.png" alt="The Cloud Import Utility." /></p>
+            </li>
+            <li>
+                <p>Determine the remaining settings for the import.</p>
+                <p>The settings vary based on the version you previously selected.</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+            </li>
+        </ol>
+        <h2>Import the data into your engagement</h2>
+        <p>After you generate the zip file using the Caseware Cloud Import Utility, you can import the data into your engagement.</p>
+        <p><b>To import the data into your engagement:</b></p>
+        <ol>
+            <li>
+                <p>Open your Caseware Cloud engagement file. When you first open the engagement, the Engagement properties popup appears. Set <b>Year end date</b> to be the same as the data you are about to import.</p>
+                <p>The year-end date is the last element of the name of the zip file you generated in either <a href="#Generate">Generate the import file for Sage 50 Accounts (Sage-Line50)</a> or <a href="#Generate2">Generate the import file for Sage 50 Accounting CDN Edition (Simply)</a>. For example, for the file named UNIVERSAL CONSTRUCTION 2025-06-30.zip, the year-end date is June 30, 2025.</p>
+            </li>
+            <li>
+                <p>Gehen Sie auf die Seite <b>Daten</b>. The Data page opens to the Datasets tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                </li>
+                <li>
+                    <p>If your engagement is consolidated and has internal subsidiary entities, select which entity you want to import data for from the list.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Select <b>Sage 50 - Canada</b> from the list of data sources, then select <b>Next</b>.</p>
+                <p>If the option is not visible, you can use the Search box to find it.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SageDesktopDataConnector.png" alt="Selecting the Sage 50 - Canada data connector on the Datasets page." /></p>
+        <ol>
+            <li value="4">
+                <p>At the Upload stage of the import wizard, select or drag-drop the zip file you generated using the Caseware Cloud Import Utility, then select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>At the Configure Data stage of the import wizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Reporting period</b> is automatically filled with the reporting period of the data.</p>
+                    </li>
+                    <li>
+                        <p><b>Year start Date</b> is automatically filled with the start date of the data.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> is automatically filled with the end date of the data.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>In <b>Select dataset type</b>, choose the type of dataset you are importing. Select <b>Trial balance</b> if you are importing a trial balance and <b>General ledger</b> if you are importing transactions.</p>
+            </li>
+            <li>
+                <p>If you selected <b>Trial balance</b>, collapse the list of dataset types by selecting the <b>Collapse</b> icon (<img src="../../Resources/Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />). Notice the I<b>mport the last 5 years of TB</b> option appears. Select it to import up to five years of trial balance data if it is available in the zip file you generated.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>At the Confirmation stage of the import wizard, review the information and select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p class="indent">A new page appears displaying the data.</p>
+        <p class="indent">By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p class="indent">Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p class="indent">For more information, refer to <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>.</p>
+    </body>
+</html>

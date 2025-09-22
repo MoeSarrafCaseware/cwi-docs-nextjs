@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Splitsen van posten</h1>
+        <p>De analytische test voor het splitsen van items zoekt naar mogelijke gesplitste transacties. Deze analyse zoekt naar mogelijke gesplitste transacties, dit zijn transacties die in twee of meer delen zijn gesplitst om bepaalde controles te omzeilen. Als een persoon bijvoorbeeld alleen de bevoegdheid heeft om betalingen onder een bepaalde drempel te autoriseren, kan hij een betaling in twee of meer delen opsplitsen zodat elke betaling onder die drempel blijft. Hierdoor kunnen ze elke betaling afzonderlijk autoriseren en de regels omzeilen die hen zouden verhinderen om dit te doen als het een enkele betaling was.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Systemische problemen in de manier waarop een afdeling transacties verwerkt</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de interne controles die verdere implicaties kunnen hebben voor overweging</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de monitoring- en opsporingsactiviteiten</p>
+            </li>
+            <li>
+                <p>Ongepaste of voorbarige transacties</p>
+            </li>
+            <li>
+                <p>Belangenverstrengeling of samenspanning tussen werknemers</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden zijn vereist voor deze analyse:</p>
+        <ul>
+            <li>
+                <p><b>Referentieveld(en)</b> - Uniek(e) veld(en) die worden gebruikt om een unieke transactie-ID te maken, zoals het veld Entry ID voor de grootboekdataset. Deze kolommen maken geen deel uit van het resultaat, maar worden gebruikt om de transacties te identificeren die deel uitmaken van het resultaat. Dit veld is al gedefinieerd in de test en kan niet worden gewijzigd.</p>
+            </li>
+            <li>
+                <p>Y-veld(en):</p>
+                <ul>
+                    <li>
+                        <p>Het bedragveld dat wordt geanalyseerd voor gesplitste invoer</p>
+                    </li>
+                    <li>
+                        <p>Een of meer velden die de groepen vormen om de gesplitste transacties te zoeken. Je kunt bijvoorbeeld transacties zoeken die dezelfde leverancier en datum hebben en door dezelfde gebruiker zijn geboekt.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>De volgende parameters zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>Bedrag cutoff</b> - Voer een bedrag in dat als cutoff wordt gebruikt. Transacties boven dit bedrag worden genegeerd wanneer de test wordt uitgevoerd. Deze parameter is verplicht.</p>
+            </li>
+            <li>
+                <p><b>Percentage onder</b> - Voer het percentage onder de drempel voor transacties in die in de test moeten worden opgenomen. Als de grens bijvoorbeeld $10.000 is en het percentage is ingesteld op 10%, dan worden transacties tussen $9.000 en $10.000 meegenomen.</p>
+            </li>
+            <li>
+                <p><b>Aantal keer tijdens dezelfde periode</b> - Selecteer het maximum aantal items waarin een transactie kan worden gesplitst om als gesplitste transactie te worden beschouwd. Gesplitste transacties worden vaak opgesplitst in twee of drie items, dus door een maximum in te stellen kun je fout-positieven uitsluiten van de testresultaten. Als een bedrijf met tien eigendommen bijvoorbeeld al zijn elektriciteitsrekeningen voor die eigendommen op dezelfde datum aan hetzelfde bedrijf betaalt, kan dit per ongeluk worden gemarkeerd als een gesplitste transactie.</p>
+            </li>
+            <li>
+                <p><b>Positief, negatief of beide</b> - Selecteer of alleen positieve bedragen, alleen negatieve bedragen of zowel positieve als negatieve bedragen in aanmerking moeten worden genomen.</p>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p><b>JE - Splitsen van boekingen op basis van grenswaarden</b></p>
+            </li>
+            <li>
+                <p><b>JE - Splitsen van boekingen op basis van percentage grenswaarden</b></p>
+            </li>
+            <li>
+                <p><b>JE - Splitsen van posten op basis van grenswaarden met maximaal aantal transacties</b></p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Als je de analytische test Invoer splitsen uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Plaats indien nodig filters op de gegevens zodat een subset wordt gebruikt voor de analyse. Als er geen filter is geplaatst, wordt de analyse uitgevoerd op het volledige gegevensbestand. Deze stap kan ook als laatste stap worden uitgevoerd in plaats van als eerste.</p>
+                <p class="note"><b>Let op:</b> Filters zijn momenteel nog niet beschikbaar en zullen in een latere versie worden toegevoegd.</p>
+            </li>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Deze stap wordt alleen uitgevoerd als er specifieke velden zijn geselecteerd. Als alle velden beschikbaar zijn, is deze stap niet nodig.</p>
+            </li>
+            <li>
+                <p>Valideer dat een bedragveld is geselecteerd en dat het numeriek is.</p>
+            </li>
+            <li>
+                <p>Valideer dat een of meer velden zijn geselecteerd voor de groepering.</p>
+            </li>
+            <li>
+                <p>Controleer of er een <b>grenswaarde</b> is ingevoerd en bepaal welke waarde is geselecteerd voor de parameter <b>Positief, Negatief of beide</b> . Als de keuze <b>Positief</b> is, dan moet de cutoff groter zijn dan nul. Als het <b>negatief</b>is, dan moet de cutoff minder dan nul zijn. Indien <b>Beide</b>, dan wordt de absolute waarde gebruikt.</p>
+            </li>
+            <li>
+                <p>Als er een waarde is ingevoerd voor de parameter <b>Percentage onder</b> geselecteerd, controleer dan of het percentage groter is dan nul.</p>
+            </li>
+            <li>
+                <p>Als er een waarde is ingevoerd voor de parameter <b>Aantal keer tijdens dezelfde periode</b> , controleer dan of deze groter is dan nul.</p>
+            </li>
+            <li>
+                <p>Splits transacties onder een bepaalde waarde:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Extraheer alle waarden tussen nul en de afkapwaarde:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Als positief of negatief wordt geselecteerd, worden alle waarden tussen nul en de grenswaarde geëxtraheerd.</p>
+                            </li>
+                            <li>
+                                <p>Als beide zijn geselecteerd, worden alle waarden tussen de negatieve en positieve waarden van de cutoff en nul geëxtraheerd.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Groepeer de transacties uit 8a op basis van de groepering.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer elke groepering die gelijk is aan of groter is dan de grenswaarde.</p>
+                    </li>
+                    <li>
+                        <p>Voeg de items uit 8c terug naar het oorspronkelijke bestand om het volledige regelitem te extraheren.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Transacties splitsen op basis van een bepaald percentage onder:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Bereken het percentage gebaseerd op de cutoff.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer op basis van het percentage de waarden voor dit bereik. Een drempelwaarde van $10.000 bij 10% zou bijvoorbeeld $1.000 zijn, dus waarden groter dan of gelijk aan $9.000 maar kleiner dan $10.000 zouden worden meegenomen.</p>
+                    </li>
+                    <li>
+                        <p>Voer stappen 8b tot 8d uit.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Splits transacties onder x aantal keren tijdens dezelfde periode.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Extraheer de transactie op basis van de geselecteerde parameters, dit kan met percentages zijn of voor positieve, negatieve of zowel positieve als negatieve waarden.</p>
+                    </li>
+                    <li>
+                        <p>Vat de transacties samen op basis van de groepering.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer alle transacties uit stap 10b die minder dan het aantal keren tijdens dezelfde periode variabele stap 7 hebben.</p>
+                    </li>
+                    <li>
+                        <p>Extraheer elke groepering die gelijk is aan of groter is dan de grenswaarde.</p>
+                    </li>
+                    <li>
+                        <p>Voeg de items van terug naar het originele bestand om het volledige regelitem te extraheren.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Voeg groeperingsverwijzingen toe zodat items die gegroepeerd zijn gemakkelijk te begrijpen zijn.</p>
+            </li>
+            <li>
+                <p>Extraheer de resultaatvelden die door de gebruiker zijn geselecteerd. Alle velden worden standaard geëxtraheerd.</p>
+                <p class="note"><b>Let op:</b> De mogelijkheid om resultaatvelden te selecteren is momenteel nog niet beschikbaar en zal in een latere release worden toegevoegd.</p>
+            </li>
+        </ol>
+    </body>
+</html>

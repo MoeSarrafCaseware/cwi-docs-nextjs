@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Information about how administrators and partners can control access to content on Cloud. " />
+    </head>
+    <body>
+        <h1>Sicherheitserwägungen</h1>
+        <h2 id="roles-and-sharing">Rollen und Freigabe</h2>
+        <p>Eine Zugriffschutzrolle ist ein Satz von Berechtigungen, die Sie Ihren Benutzern in Cloud zuordnen können. Jede Rolle erlaubt Ihren Mitarbeitern eine oder mehrere der folgenden Rechte zu haben:</p>
+        <ul>
+            <li>
+                <p>Inhalt anzeigen</p>
+            </li>
+            <li>
+                <p>Vorhandenen Inhalt aktualisieren</p>
+            </li>
+            <li>
+                <p>Neuen Inhalt erstellen</p>
+            </li>
+            <li>
+                <p>Inhalt löschen</p>
+            </li>
+            <li>
+                <p>Inhalt für andere Benutzer freigeben</p>
+            </li>
+        </ul>
+        <p>Ihre Benutzer können basierend auf den Rollen, die Sie ihnen zugewiesen haben, auf Informationen zugreifen. Sie können diese Rollen sehr breit zuweisen und eine Sicherheitsarchitektur erstellen, die nur wenig Wartung erfordert. Alternativ können Sie diese Rollen selektiver zuordnen, was Ihnen eine bessere Kontrolle darüber ermöglicht, wer auf eine Datei oder Aktivität in Cloud zugreifen kann.</p>
+        <h2 id="firm-wide-role">Eine systemweite Rolle zuweisen</h2>
+        <p>Dies ist die umfangreichste Möglichkeit, um Zugriff auf den Inhalt in Cloud zu gewähren. Für ein Benutzerprofil können Sie Sicherheitsrollen für alle relevanten Inhalte im gesamten Unternehmen erteilen.</p>
+        <p><img src="../../Resources/Images/cloud-model-partner-630x240.png" alt="Systemweite Rollen gewähren diese Benutzerrechte für alle Entitäten in einer Firma und für alle Inhalte innerhalb dieser Entitäten." /></p>
+        <p>Janine Meier wurde z. B. die Rolle <i>Einstellungen-Administrator</i> und die Rolle <i>Beobachter</i> als systemweite Rolle zugewiesen.</p>
+        <p><img src="../../Resources/Images/staff-edit-abco-smith-1021x344.png" alt="Systemweite Rollen können ausgehend von der Seite Mitarbeiter gewährt werden." /></p>
+        <p>Die Rolle <i>Einstellungen-Administrator</i> erlaubt Janine die Seite <b>Einstellungen</b> zu lesen und zu ändern. Die Rolle <i>Beobachter</i> lässt sie die Details für alle Entitäten in Ihrem Unternehmen sehen, und er kann auch alle Dateien und Aktivitäten für diese Entitäten sehen.</p>
+        <h2 id="entity-wide-role">Entitäten freigeben</h2>
+        <p>Wenn Sie nicht möchten, dass ein Benutzer alle Inhalte in einem Unternehmen ansehen kann, können Sie stattdessen Zugriff auf Informationen auf einer Mandanten- oder Abteilungsbasis gewähren. Wenn Sie eine Entität freigeben, gewähren Sie eine Sicherheitsrolle für die Entität selbst und für alle Dateien oder Aktivitäten unterhalb dieser Entität.</p>
+        <p><img src="../../Resources/Images/cloud-model-manager-630x240.png" alt="Entitätsweite Rollen erteilen diesem Benutzer die Berechtigung für diese Entität und zu allen darin enthaltenen Inhalten." /></p>
+        <p>Janine Meier wurde hier z. B. die Rolle <i>Editor</i> für die Mandantenentität <b>Musterdorf GmbH</b> zugewiesen.</p>
+        <p><img src="../../Resources/Images/security-considerations-entitywide-630x409.png" style="border:1px solid #3f66a3" alt="Diesem Benutzer wurde die Rolle Editor für eine spezifische Entität zugewiesen." /></p>
+        <p>Wenn Janine auf Cloud zugreift, kann sie die Mandantenentität für Musterdorf GmbH sehen. Mit der Rolle <i>Editor</i> kann er die Details für diese Entität sehen und er kann auch Dateien und Aktivitäten unter dieser Entität erstellen und bearbeiten.</p>
+        <h2 id="content-specific-role">Dateien und Aktivitäten freigeben</h2>
+        <p>Wenn Sie wissen, dass Benutzer keinen Zugriff auf alle Inhalte unter der Entität haben sollten, können Sie stattdessen individuell Zugriff auf jede Datei oder Aktivität gewähren. Dies ermöglicht Ihnen, eine sehr spezifische Kontrolle über die Informationen zu haben, auf die Ihre Benutzer Zugriff haben.</p>
+        <p><img src="../../Resources/Images/cloud-model-associate-630x240.png" alt="Dieser Benutzer kann diese Entität sehen, aber Benutzer mit dieser Berechtigung haben nur Zugriff auf eine der darin enthaltenen Dateien." /></p>
+        <p>Karl Johansen arbeitet als Prüfer für Musterhauszaun GmbH. Sein Manager weist ihm einige Dateien für diesen Mandanten zu, aber er möchte nicht, dass Karl Zugriff auf alle Mandantendateien hat.</p>
+        <p>Zuerst weist er Karl die Rolle <i>Zugriff auf Entität</i> für Musterhauszaun GmbH zu. Dies ermöglicht Karl, die Entität zu sehen, aber es wird kein Zugriff auf Dateien oder Aktivitäten unter der Entität gewährt.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-630x299.png" style="border:1px solid #3f66a3" alt="Dieser Anwender hat die Rolle Zugriff auf Entität für die ausgewählte Entität." /></p>
+        <p>Dann teilt er die Datei VarianceAnalysis.xlsx mit ihm und weist Karl die Rolle <i>Eigentümer</i> zu.</p>
+        <p><img src="../../Resources/Images/security-considerations-entity-access-2-630x272.png" style="border:1px solid #3f66a3" alt="Dieser Anwender verfügt über die Rolle Eigentümer für die ausgewählte Datei." /></p>
+        <p>Karl hat nun Zugriff auf diese Datei in Cloud. Mit der Rolle <i>Eigentümer</i> kann er die Datei anzeigen, bearbeiten oder sogar löschen und sie für andere Cloud-Benutzer freigeben.</p>
+        <h2 id="limited-content">Eingeschränkter Inhalt</h2>
+        <p>Wenn Sie in Cloud neue Aktivitäten erstellen oder Dateien hinzufügen, können Benutzer mit einer systemweiten Rolle für diesen Typ standardmäßig auf diese neuen Elemente zugreifen. Benutzer, die in dieser Entität für die neuen Aktivitäten oder Dateien über Rollen verfügen, können auch darauf zugreifen.</p>
+        <p>Sie können den Zugriff auf jede Datei, Aktivität oder Entität weiter begrenzen, indem Sie die Option <i>Eingeschränkt</i> aktivieren. Eingeschränkte Inhalte sind nur für den Eigentümer und Mitarbeiter mit der Rolle <i>Administrator</i> sichtbar. Der Eigentümer kann den Inhalt freigeben, indem er anderen Mitarbeitern Rollen zuweist, aber für andere Benutzer bleibt der Inhalt nicht sichtbar.</p>
+        <p>Eingeschränkter Inhalt ist mit einem kleinen Schloss-Symbol im Namensfeld gekennzeichnet.</p>
+        <p><img src="../../Resources/Images/create-private-file-5-630x171.png" style="border:1px solid #3f66a3" alt="Dieses Dokument auf der Seite Dateien ist eingeschränkt. Benutzern ist es nicht möglich, diese Datei zu sehen, bis der Eigentümer ihnen eine spezifische Rolle für die Datei zuweist." /></p>
+    </body>
+</html>

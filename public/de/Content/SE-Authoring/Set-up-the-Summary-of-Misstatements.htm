@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Set up the Summary of Misstatements document</h1>
+        <p>You can enable the summary of misstatements document which summarizes the impact of misstatements (omissions) of information in the financial statements areas, and presents a conclusion (whether or not the misstatements are considered to be material or immaterial).</p>
+        <p>To enable the Summary of Misstatements report in your product, specify the <code>com.caseware.ca.general.misstatements-summary</code> in the <code>form</code> property in the product.json file. To learn more, see <a href="Enable-or-disable-features-in-your-product.htm">Enable or disable features in your product.</a></p>
+        <p>Once you enable the document in your product, you can add it in your draft and set it up.</p>
+        <p>To add the summary of misstatements document, select <b>Add (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />)</b> at the documents page, then choose<b> Summary of Misstatements.</b></p>
+        <p style="font-weight: bold;">To set up the Summary of Misstatements document:</p>
+        <ol>
+            <li>
+                <p>Add guidance information.</p>
+            </li>
+            <p>Select the text field to start adding content. Die Formatierungssymbolleiste wird angezeigt. Sie können die Symbolleiste verwenden, um die folgenden Änderungen vorzunehmen:</p>
+        </ol><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" /><ol MadCap:continue="true">
+            <li>
+                <p>Use the <b>Applicable</b> toggle (<img src="../Resources/Icons/applicable-toggle.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to specify which sections are included or excluded from the document.</p>
+            </li>
+            <li>
+                <p>In the <b>Actual and Proposed Journal Entries</b>, select the <b>Specify classification groups</b> option to specify the classification trial balance groups for the actual and proposed journal entries.</p>
+                <p class="note inline"><b>Note:</b> The <b>Use group classification</b> option is currently not functional.</p>
+            </li>
+            <li>
+                <p>Select <b>+New group</b>, then select the text field to display a list of the trial balance groups. Choose the desired group for <b>Assets</b>, <b>Liabilities</b>, <b>Equity</b>, <b>Revenues</b> and <b>Expenses</b>.</p>
+            </li>
+            <li>
+                <p>Rename the items under <b>Key Data</b> to customize the terms if needed.</p>
+            </li>
+            <p>Once you rename an item, a <b>Revert</b> icon (<img src="../Resources/Icons/override-summary-of-misstatements.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) is available so you can revert back to the original name.</p>
+            <li>
+                <p>Add the following information:</p>
+                <ul>
+                    <li>
+                        <p>Qualitative Evaluation</p>
+                    </li>
+                    <li>
+                        <p>Summary of Omitted Disclosures (Description of Omission or Other Misstatement, Other Area Affected, Discussion with Client, Reason for Not Disclosing)</p>
+                    </li>
+                    <li>
+                        <p>Evaluation</p>
+                    </li>
+                    <li>
+                        <p>Schlussfolgerung</p>
+                    </li>
+                    <li>
+                        <p>Sign-off</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>Select the text field to start adding content. Die Formatierungssymbolleiste wird angezeigt. Use the toolbar described in Step 1 to format and edit the text.</p>
+        <p>The figure below shows an example of how the Summary of Misstatements shows for end users. In the example, users have imported the trial balance and posted uncorrected adjusting entries. Adjustments display per financial area in a table. Users can view the tax rate applied to the <b>Total uncorrected</b> column and use it to calculate the <b>Income tax</b> and <b>Total uncorrected after tax</b> values.</p>
+        <p><img src="../Resources/Images/misstatements-setup-example.PNG" alt="Example of end user view for the Summary of Misstatements report." /></p>
+        <h2>Add or remove a link in the guidance information</h2><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" /></body>
+</html>

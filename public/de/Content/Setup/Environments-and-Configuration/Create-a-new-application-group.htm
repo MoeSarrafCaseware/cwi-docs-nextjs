@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Neue Anwendungsgruppe erstellen (ADFS)</h1>
+        <p>Um Caseware Cloud in ADFS zu integrieren, müssen Sie zuerst eine neue Anwendungsgruppe für Cloud erstellen.</p>
+        <p><b>Eine neue Anwendungsgruppe erstellen:</b></p>
+        <ol>
+            <li>
+                <p>Starten Sie <b>ADFS Administration Console</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf den Ordner <b>Application Groups</b> und anschließend im Menü <b>Actions</b> auf <b>Add Application Groups</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-01.png" /></p>
+            </li>
+            <li>
+                <p>Geben Sie einen Namen für die Gruppe ein. Wählen Sie aus der Template-Liste <b>Web API</b>. Klicken Sie auf <b>Next</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-02.png" /></p>
+            </li>
+            <li>
+                <p>Das Feld <b>Client Identifier</b> wird automatisch ausgefüllt.</p>
+                <p class="warning"><b>Hinweis:</b> Kopieren Sie die Client-ID und fügen Sie sie zur späteren Verwendung in ein Textdokument ein. Nennen Sie das Textdokument <b>Client-ID</b>.</p>
+                <p>Geben Sie im Feld <b>Redirect URI</b> einen URL-Platzhalter (zum Beispiel https://www.caseware.com) ein und klicken Sie auf <b>Add</b>. Klicken Sie auf <b>Next</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-03.png" /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Generate a shared secret</b>.</p>
+                <p class="warning"><b>Hinweis:</b> Klicken Sie auf <b>Copy to clipboard</b> und fügen Sie es zur späteren Verwendung in ein Textdokument ein. Nennen Sie das Textdokument <b>Geheimer Clientschlüssel</b>.</p>
+                <p>Klicken Sie auf <b>Next</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-04.png" /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Next</b>, um die Konfiguration abzuschließen.</p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Create-a-Web-API-application.htm">Eine Web-API-Anwendung erstellen</a></p>
+    </body>
+</html>

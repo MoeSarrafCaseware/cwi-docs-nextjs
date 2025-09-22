@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Häufig gestellte Fragen</h1>
+        <p>Nachfolgend finden Sie einige der am häufigsten gestellten Fragen (FAQs) zu Caseware Sherlock.</p>
+        <h2>Setup (Einrichten)</h2>
+        <ul>
+            <li>
+                <p><b>Wie kann ich meine Engagementdaten in Caseware Sherlock anzeigen?</b></p>
+                <p>Sie können Ihre Engagementdaten in Caseware Sherlock anzeigen, wenn Sie die folgenden Voraussetzungen erfüllen:</p>
+                <ul>
+                    <li>
+                        <p>Sie sind ein aktiver Hybrid Cloud-Benutzer mit einer <b>Sherlock Builder</b>- oder <b>Sherlock Reader</b>-Lizenz</p>
+                    </li>
+                    <li>
+                        <p>Die Engagementdatei wurde in Caseware Cloud publiziert</p>
+                    </li>
+                    <li>
+                        <p>Sie haben die <b>Lese</b>berechtigung in der Entität, in der die Engagementdatei gespeichert ist.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Daten</h2>
+        <ul>
+            <li>
+                <p><b>Woher weiß Caseware Sherlock, wann Daten aus meinen Engagementdateien zu extrahieren sind?</b></p>
+                <p>Eine Datenextraktionsanfrage wird automatisch in den folgenden drei Szenarien gestellt:</p>
+                <ul>
+                    <li>
+                        <p>Eine Engagementdatei wird aus Ihrer lokalen Working Papers-Anwendung in Caseware Cloud mit Änderungen des <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/Sync-Log.htm">Schwellenwerts</a> publiziert</p>
+                    </li>
+                    <li>
+                        <p>Eine Engagementdatei wird in Caseware Cloud mit Hilfe der Cloud-Oberfläche hochgeladen</p>
+                    </li>
+                    <li>
+                        <p>Engagementdateien werden en gros mit dem Migration Manager-Tool in Caseware Cloud hochgeladen.</p>
+                    </li>
+                </ul>
+                <p>Sobald die Datenextraktionsanfrage ausgelöst ist, werden die Daten im nächsten geplanten Zyklus extrahiert.</p>
+                <table class="table">
+                    <col />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <th>Region</th>
+                            <th>Zyklus (UTC)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Asien-Pazifik</p>
+                            </td>
+                            <td>
+                                <p>Monday - Thursday: 13:00-22:00</p>
+                                <p>Friday: 13:00 - 23:59</p>
+                                <p>Saturday: 0:00 - 16:00, 17:00-23:59</p>
+                                <p>Sunday: 0:00 - 22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Kanada</p>
+                            </td>
+                            <td>
+                                <p>Sunday - Thursday: 4:00 - 12:00</p>
+                                <p>Saturday: 4:00 - 6:30, 7:30 - 12:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Europa</p>
+                            </td>
+                            <td>
+                                <p>Monday - Friday: 0:00 - 5:30, 21:30 - 23:59</p>
+                                <p>Saturday: 5:30 - 21:30</p>
+                                <p>Sunday: 5:30 - 22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Vereinigte Staaten</p>
+                            </td>
+                            <td>
+                                <p>Monday: 0:00 - 13:00</p>
+                                <p>Tuesday - Friday: 1:00 - 13:00</p>
+                                <p>Saturday: 1:00 - 6:30, 7:30 - 23:59</p>
+                                <p>Sunday: 0:00 - 23:59</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><b>Warum sehe ich meine kürzlich vorgenommenen Änderungen am Engagement in Caseware Sherlock nicht?</b></p>
+                <p>Aufgrund eines der folgenden Umstände werden möglicherweise keine aktuellen Änderungen für bestehende Engagementdaten angezeigt:</p>
+                <ul>
+                    <li>
+                        <p>Der Datenextraktionsprozess konnte aufgrund der hohen Anzahl von Anfragen innerhalb des geplanten Zyklus nicht abgeschlossen werden. Die Extraktion wird automatisch auf den nächsten Tageszyklus verschoben.</p>
+                    </li>
+                    <li>
+                        <p>Sie haben nicht die <b>Lese</b>berechtigung in der Entität, in der die Engagementdatei gespeichert ist.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Dashboards</h2>
+        <ul>
+            <li>
+                <p><b>Warum kann ich keine Dashboards in Sherlock Reader sehen?</b></p>
+                <p>Wenn die Dashboards von einem Sherlock Builder-Benutzer in Ihrem Unternehmen erstellt wurden, müssen die Dashboards für Sie freigegeben werden.</p>
+                <p>Kommen die Dashboards von einem Caseware Distributor, muss Ihr Firmenadministrator Ihnen die Lizenzen für die Dashboards zuweisen.</p>
+            </li>
+        </ul>
+        <h2>Zugriffschutz</h2>
+        <p class="note"><b>Hinweis:</b> Diese Informationen gelten für alle Caseware Cloud-Daten, einschließlich, aber nicht beschränkt auf Caseware Sherlock.</p>
+        <ul>
+            <li>
+                <p><b>Wo werden meine Daten gespeichert?</b></p><MadCap:snippetBlock src="../../Resources/Snippets/cloud-data-location.flsnp" /></li>
+            <li>
+                <p><b>Sind meine Daten verschlüsselt?</b></p>
+                <p>Die Speicherung der Daten (Data-at-Rest) erfolgt verschlüsselt, wobei die gleiche Verschlüsselungsstufe wie beim Online-Banking verwendet wird.</p>
+            </li>
+            <li>
+                <p><b>Zugriffschutz und Sicherheitsrichtlinien</b></p>
+                <p>Caseware Cloud verwendet eine erweiterte von Cloud bereitgestellte Endpoint-Protection-Platform, um bekannte und unbekannte Attacken zu erkennen und abzuwehren.</p>
+                <p>Caseware Cloud vertraut ebenfalls auf Amazon Web Services-Sicherheitsrichtlinien und deren Akkreditierungen, die ein Schlüsselelement für den Schutz Ihrer sensitiven Informationen sind.</p>
+                <p>For Canadian Clients: The Office of the Privacy Commissioner of Canada has stated that outsourcing arrangements do not offend the Personal Information Protection and Electronic Documents Act where the confidentiality and security provisions in the outsourcing agreement satisfy the requirement to provide a comparable level of protection of personal information.</p>
+            </li>
+        </ul>
+    </body>
+</html>

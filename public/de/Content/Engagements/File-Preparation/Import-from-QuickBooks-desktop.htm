@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Import aus QuickBooks Desktop</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresRCT.flsnp" /><p>You can import data from QuickBooks desktop by exporting it as a <i>.cwq</i> file, then importing the file to your engagement.</p>
+        <p class="note inline"><b>Note:</b> Accounts with zero balances are not automatically imported. If you want to include zero-balance accounts, you must manually <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> them and <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the designated groups.</p>
+        <p>Before you start, make sure that:</p>
+        <ul>
+            <li>
+                <p><a href="https://www.microsoft.com/en-ca/download/details.aspx?id=17851">Microsoft .NET Framework 4.0</a> is installed on your workstation.</p>
+            </li>
+            <li>
+                <p>The QuickBooks Export Utility is installed on your workstation.</p>
+            </li>
+            <p>You can download it from <a href="https://my.caseware.com/">MyCaseware</a> on the <b>Support Files</b> page.</p>
+        </ul>
+        <h2>Schritt 1: Export data from QuickBooks desktop</h2>
+        <p style="font-weight: bold;">To export data from QuickBooks Desktop:</p>
+        <ol>
+            <li>
+                <p>Open your QuickBooks desktop account, then open the company file that you want to import.</p>
+            </li>
+            <li>
+                <p>Open the QuickBooks Export Utility.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the <b>QuickBooks Version</b> drop-down, select<b> QuickBooks 2008-2020 Canada.</b></p>
+                    </li>
+                    <li>
+                        <p>​In the <b>Export Path</b> field, select <b>Browse…</b>.</p>
+                    </li>
+                    <p>The <b>Browse For Folder</b> dialog opens.</p>
+                    <li>
+                        <p>Navigate to the where you want to create the export file, then select <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Select <b>Specify last transaction date</b> and enter the applicable date.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Accounting method</b> drop-down, select the applicable accrual method.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Select <b>Export</b>.</p>
+            </li>
+            <p>The accounting data from the QuickBooks Desktop file is exported to a <i>.cwq</i> file format in the specified location.</p>
+        </ol>
+        <h2>Schritt 2: Import the exported data to your engagement</h2>
+        <p style="font-weight: bold;">To import the exported data to your engagement:</p>
+        <ol>
+            <li>
+                <p>Download the Caseware Cloud Import Utility.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility(.exe)</a></p>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>In the <b>Import</b><b>From</b> drop down, select <b>QuickBooks.</b></p>
+            </li>
+            <li>
+                <p>In the <b>Version</b> drop-down, select <b>QuickBooks 2019 Canada/UK/AUS.</b></p>
+            </li>
+            <li>
+                <p>At <b>Import Path</b>, browse and select the <i>.cwq</i> file.</p>
+            </li>
+            <li>
+                <p>Specify the desired settings for the import (Fiscal Year End, Period Date Sequence).</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+            </li>
+            <li>
+                <p>In your engagement file, go to the <b>Data</b> page. The Data page open son the Datasets tab.</p>
+            </li>
+            <li>
+                <p>Under IMPORT FROM DATA CONNECTOR, select <b>QuickBooks Desktop</b> from the list of data sources, then select <b>Next</b>.</p>
+                <p>If the option is not visible, you can use the Search box to find it.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Finding the QuickBooks Desktop data connector in the list on the Datasets tab." /></p>
+        <ol>
+            <li value="11">
+                <p>Select or drag-drop the zip file you saved in Step 8.</p>
+            </li>
+        </ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p class="indent">A new page appears displaying the data.</p>
+        <p class="indent">By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p class="indent">Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p class="indent">For more information, refer to <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>.</p>
+    </body>
+</html>

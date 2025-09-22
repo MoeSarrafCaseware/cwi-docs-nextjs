@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head><title>Een risicobibliotheekversie toevoegen</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Een risicobibliotheekversie toevoegen</h1>
+        <p>U kunt een Excel-bestand met de inhoud van uw risicobibliotheek uploaden om een hoofdversie van de risicobibliotheek toe te voegen.</p>
+        <p>Bekijk de sjabloon en het voorbeeldbestand hieronder om te leren hoe je je Excel-bestand instelt.</p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><span aria-hidden="true">X</span><h3 class="modalheading">Toegang krijgen tot meer inhoud</h3>
+                        <p class="modalmaintext">Meld je aan om updates te ontvangen over de nieuwste artikelen en nieuws voor Caseware-producten.</p>
+                        <p class="modalsubtext">Je download begint direct nadat je je hebt aangemeld.</p>
+                        <p class="emailmodalinputlabel">E-mail:</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Aanmelden</button><a class="modalnoemail" onclick="downloadFilenoemail()">Geen dank. I just want to download the file.</a> <div id="emailerrormsg"></div></div> <div class="modal-footer"><a href="https://casewarecloud.com">Heb je nog geen Cloud? Klik hier voor meer informatie.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Template.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Sjabloon risicobibliotheek</a></p><div class="modal" id="myModal" role="dialog"><div class="modal-dialog"><div class="modal-content"><span aria-hidden="true">X</span><h3 class="modalheading">Toegang krijgen tot meer inhoud</h3>
+                    <p class="modalmaintext">Meld je aan om updates te ontvangen over de nieuwste artikelen en nieuws voor Caseware-producten.</p>
+                    <p class="modalsubtext">Je download begint direct nadat je je hebt aangemeld.</p>
+                    <p class="emailmodalinputlabel">E-mail:</p><input type="text" id="email"></input> <button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Aanmelden</button><a class="modalnoemail" onclick="downloadFilenoemail()">Geen dank. I just want to download the file.</a> <div id="emailerrormsg"></div> <div class="modal-footer"><a href="https://casewarecloud.com">Heb je nog geen Cloud? Klik hier voor meer informatie.</a></div></div></div></div><p><a class="downloadLink" data-toggle="modal" filename="Risk Library Sample.xlsx" data-target="#myModal"><i class="fa fa-download downloadicon"></i>Voorbeeldbestand risicobibliotheek</a></p>
+        <p>De sjabloon kan ook worden gedownload in het dialoogvenster Ongepubliceerde versie.</p>
+        <p><img src="../Resources/Images/risk-library-download-template.png" alt="Het dialoogvenster Ongepubliceerde versie." /></p>
+        <p>Als je voor de eerste keer een versie van een risicobibliotheek toevoegt, wordt de versie automatisch toegevoegd als een <b>Major-versie</b> . Je kunt ook latere risicobibliotheekversies toevoegen: <b>Minor</b> of <b>Patch</b>. Gebruik minor versies voor geplande updates van de bibliotheek en gebruik patch versies voor urgente updates. Hierdoor kun je tegelijkertijd werken aan een geplande update en kritieke updates uitbrengen.</p>
+        <p class="note inline"><b>Let op:</b> Je kunt maar één ongepubliceerde minor versie en één ongepubliceerde patch versie tegelijk hebben.</p>
+        <p>Selecteer om te beginnen <b>Instellingen</b> in het <b>menu Cloud</b>(<img src="../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) en selecteer vervolgens <b>Risicobibliotheek</b> | <b>Risicobibliotheek beheren</b>.</p>
+        <p><b>Om een risicobibliotheekversie toe te voegen:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer de risicobibliotheek aan de linkerkant.</p>
+            </li>
+            <li>
+                <p>Als u de eerste versie van deze risicobibliotheek toevoegt, selecteert u <b>CREATE VERSION</b> en gaat u naar stap 4</p>
+            </li>
+            <li>
+                <p>Als dit niet de eerste versie is voor deze risicobibliotheek:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer <b>ADD</b>.</p>
+                        <p>Het dialoogvenster Ongepubliceerde versie wordt geopend.</p>
+                    </li>
+                    <li>
+                        <p>Selecteer het extractietype.</p>
+                        <p>Beschikbare opties:</p>
+                        <ul>
+                            <li>
+                                <p><b>Klein</b> - Selecteer deze optie voor geplande updates.</p>
+                            </li>
+                            <li>
+                                <p><b>Patch</b> - Selecteer deze optie voor dringende updates.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select the <b>Upload Excel File</b> box to browse or drag and drop the file.</p>
+                <p>Je kunt <b>DOWNLOAD TEMPLATE</b> selecteren om een lege sjabloon te downloaden die je kunt gebruiken om je risicobibliotheek Excel-bestand op te zetten.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>CREATE</b>.</p>
+                <p>Fouten en waarschuwingen worden weergegeven in het dialoogvenster - als er problemen zijn met de gegevens in het Excel-bestand.</p>
+                <p>Je kunt waarschuwingen negeren, maar je moet alle fouten herstellen en het bestand opnieuw uploaden om verder te gaan.</p>
+                <p><img src="../Resources/Images/risk-library-upload-errors.png" alt="Het dialoogvenster Ongepubliceerde versie met fouten en waarschuwingen voor het geüploade bestand." /></p>
+            </li>
+        </ol>
+        <p>Zodra je de versie hebt toegevoegd, kun je ook:</p>
+        <ul>
+            <li>
+                <p>Selecteer <b>Bewerken</b> (<img src="../Resources/Images/icon-edit-gray.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) om het Excel-bestand te vervangen.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Overzichtsrapport</b> (<img src="../Resources/Images/icon-risk-library-summary-report.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) om een samenvatting van de inhoud van de risicobibliotheek te bekijken.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Ja</b> om het probleem te verwijderen.</p>
+            </li>
+        </ul>
+    </body>
+</html>

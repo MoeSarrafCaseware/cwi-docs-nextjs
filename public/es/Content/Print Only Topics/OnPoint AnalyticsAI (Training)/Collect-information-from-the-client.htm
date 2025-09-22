@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Recopilar información del cliente</h1>
+        <p>In this section, we&apos;ll gather some required information for the engagement.</p>
+        <h2>Inquiries document</h2>
+        <p>An OnPoint AnalyticsAI engagement includes an inquiries document that you can send to your client for completion.</p>
+        <h3>Practice set</h3>
+        <p><b>To access the inquiries document:</b></p>
+        <ul>
+            <li>Select <b>0-1 Client Inquiries (Query)</b> from the <b>Documents</b> page.</li>
+        </ul>
+        <p><img src="../../Resources/Images/onpoint-aai-client-inquiries.png" /></p>
+        <p>You can adjust which procedures you want to send by using the show/hide functionality. For example, under <b>File Upload</b>, you can hide <b>Upload Trial Balance</b> if you intend to use a different method for adding a trial balance to the engagement.</p>
+        <p><img src="../../Resources/Images/hide-file-upload-procedure.png" alt="The show/hide functionality" /></p>
+        <p>You can also add comments to individual procedures in the query document.</p>
+        <p>For this exercise, we will leave all of the procedures in the <b>0-1 Client Inquiries (Query)</b> document with their default content.</p><MadCap:snippetBlock src="../../Resources/Snippets/add-comment-to-procedure.flsnp" /><p><b>To send the query:</b></p>
+        <ol>
+            <li>Select <b>0-1 Client Inquiries (Query)</b> from the <b>Documents</b> page.</li>
+            <li>From the top-right of the page, select <b>Send</b>.<p>The Open Query dialog displays.</p></li>
+            <li>Enter a <b>Query Due Date</b> - use today.</li>
+            <li>Select an <b>Assignee</b> - use your contact persona.</li>
+            <li>Enter a message in the <b>Email Body</b> - &quot;Please provide the requested information.&quot;</li>
+            <li>Seleccione <b>OK</b>.<p><img src="../../Resources/Images/onpoint-aai-open-query.png" /></p><p>An email is automatically sent to the assignee, and the status of the document changes to <b>Awaiting response</b>.</p><p>The assignee&apos;s email includes a link to view the details of the query.</p><p><img src="../../Resources/Images/new-activity.png" alt="Option to view details of the query " /></p><p>When the assignee selects the link, a version of the document appears. The assignee can answer the questions and provide the required files and then select <b>Responded</b> to indicate that the item has been completed.</p><p class="note"><b>Note:</b> The assignee can see any comments that have been entered.</p></li>
+        </ol>
+        <h2>Anotar el balance de sumas y saldos (Página de datos)</h2>
+        <p>You&apos;ll need to import a trial balance for your engagement to reconcile your data in the <b>Data Completeness</b> page, and to be able to use <b>Influencers</b>.</p>
+        <p>You can import a trial balance from:</p>
+        <ul>
+            <li>Caseware Working Papers</li>
+            <li>Software de contabilidad de escritorio</li>
+            <li>No existen archivos Excel o CSV</li>
+            <li>Online platforms such as Quickbooks Online and Xero</li>
+        </ul>
+        <p>If you&apos;re importing from online accounting software, you have the option to choose to import transaction data as you import the trial balance data.</p>
+        <p>To populate the trial balance, you&apos;ll have to import the financial data to your engagement file. In some cases, you can import this data directly from another accounting software package using the native import utility (for online accounting software) or a desktop utility import we provide.</p>
+        <h3>Practice set</h3>
+        <p>In this example, we&apos;ll import a trial balance from a CSV file.</p>
+        <p><b>Importar el balance de comprobación de un archivo de encargo</b></p>
+        <ol>
+            <li>Select <b>0-2 Import Trial Balance &amp; Online Transactions</b> from the <b>Documents</b> page.</li>
+            <li>Select <b>Excel or CSV</b>.<br />The import dialog displays.</li>
+            <li>Drag and drop the TrialBalance.csv file into the import area in the grey dashed box.</li>
+            <li>To map the columns in the import file, choose the field that best matches the data from the drop-down. If you don&apos;t want to import a column, select <b>Do not import</b> to exclude it. <p><img src="../../Resources/Images/import-tb-aai.png" alt="Columns being mapped in the input file with the data best matching each column" /></p></li>
+            <li>Select <b>Import</b>. <br />The <b>TRIAL BALANCE- ACCOUNTS</b> page displays with the imported trial balance.</li>
+        </ol>
+        <h2>Asignar cuentas</h2>
+        <p>When you import a trial balance, OnPoint maps as many accounts as possible, but in some cases, you may need to evaluate accounts and assign them manually.</p>
+        <h3>Practice set</h3>
+        <p>At the top of the page, in the Data menu (on the left side of the screen), notice that the Assign accounts icon now includes a number.</p>
+        <p><img src="../../Resources/Images/onpoint-aai-unassigned-account.png" /></p>
+        <p>This indicates that one account is currently not assigned to a group. Select the icon to open the <b>Assign Accounts</b> page.</p>
+        <p>On this page, one account is displayed in the <b>Unassigned</b> column.</p>
+        <p><img src="../../Resources/Images/onpoint-aai-unassigned-account-2.png" /></p>
+        <MadCap:pageBreak />
+        <p>Select it to move it to the <b>Selected Accounts</b> section. A number of <b>Suggestions</b> display. Select <b>2.2.1.1 Accounts payable</b>.</p>
+        <p><img src="../../Resources/Images/onpoint-aai-unassigned-account-3.png" /></p>
+        <p>Select the <b>Financial Groups</b> category to to view the grouped <b>Trial Balance</b>. Select the <b>Documents</b> tabs.</p>
+        <h2>Import transactions</h2>
+        <p>If you&apos;ve imported the client&apos;s data from a CSV file, you&apos;ll need to import the transactions CSV to store and run analyses on your data.</p>
+        <MadCap:pageBreak />
+        <h3>Practice set</h3>
+        <p style="font-weight: bold;">To import transactions from Transactions.csv:</p>
+        <ol>
+            <li>Select <b>0-3 Import Transactions</b> from the <b>Data</b> page.</li>
+            <li>Drag and drop the Transactions.csv file to the <b>File Upload</b> area or click and browse to its location.<br /><img src="../../Resources/Images/onpoint-aai-import-transactions.png" /><br /></li>
+            <li>For this example, select <b>Comma ( , )</b> for the <b>Delimiter</b>, and <b>CONTINUE</b>.<br />Information about the imported transactions file appears in the <b>Transactions</b> section at the bottom of the page.<br /><br /><img src="../../Resources/Images/onpoint-aai-map-transactions.png" /></li>
+            <li>Seleccione <b>MAP</b>. La página Proyectos muestra lo siguiente: This is where you will map the source fields in the CSV file to target fields that match the data. The page has two sections. The upper section shows the source fields from the CSV and the lower section shows the data in each field. <MadCap:pageBreak /></li>
+            <li>Map each of the values from the <b>IMPORT AS</b> drop-down as shown below. Ignore any values that are not shown.</li>
+            <table style="margin-left: 0;margin-right: auto;">
+                <col style="width: 50%" />
+                <col style="width: 50%" />
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Map to</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>jrn_id</p>
+                        </td>
+                        <td>
+                            <p>Id. de asiento</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>nr</p>
+                        </td>
+                        <td>
+                            <p>Número de asiento</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>cw_js</p>
+                            <p>The MAP COLUMN VALUES drop-down appears when you map this value.</p>
+                        </td>
+                        <td>
+                            <p>Tipo de documento<br />(See image below this table)</p>
+                            <p>Asignar valores de columnas</p>
+                            <p>Asientos del libro mayor (GJ)</p>
+                            <p>Desembolsos de efectivo (CD)</p>
+                            <p>Recibos de efectivo (CR)</p>
+                            <p>Facturas de ventas (SJ)</p>
+                            <p>Facturas de compra (PJ)</p>
+                            <p>Asientos de libro de nóminas (PL)</p>
+                            <p>Other (OT) -&gt; SR, TX</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>tr_desc</td>
+                        <td>Comentarios detallados</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>ef_2018</p>
+                        </td>
+                        <td>
+                            <p>Fecha de registro<br />Do not adjust the default date format.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tr_2018</p>
+                        </td>
+                        <td>
+                            <p>Fecha de creación<br />Do not adjust the default date format.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>post_by</p>
+                        </td>
+                        <td>
+                            <p>Creado por</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>approved_by</p>
+                        </td>
+                        <td>
+                            <p>Persona responsable de la entrada</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>transaction_line_number</p>
+                        </td>
+                        <td>
+                            <p>Número de línea</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>acc_id</p>
+                        </td>
+                        <td>
+                            <p>Identificador de cuenta</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>acc_name</p>
+                        </td>
+                        <td>
+                            <p>MAIN ACCOUNT DESCRIPTION</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tr_amount</p>
+                        </td>
+                        <td>
+                            <p>IMPORTE</p>
+                            <p>OPCIONES DE DEBE / HABER<br />Select DEBIT AND CREDIT</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Tipo de documento original</b></p>
+            <p><img src="../../Resources/Images/originating-document-type.png" /></p>
+            <li>Select <b>IMPORT</b> from the top right of the page.<br />The <b>Import Transactions | ACME Inc.</b> page displays. The <b>Transactions</b> section at the bottom indicates that the transactions are being mapped.<br /></li>
+            <li>Close this page.</li>
+            <li>Select the <b>Data</b> page to see the imported transactions.</li>
+        </ol>
+        <p>You can save the layout of the data mapping you&apos;ve just completed. This allows you to reuse the mapping structure you&apos;ve initially defined in subsequent reimports of transactions.</p>
+        <p><b>To save a DATA LAYOUT:</b></p>
+        <ol>
+            <li>Select <b>0-3 Import Transactions</b> from the <b>Data</b> page.</li>
+            <li>Select <b>SAVE</b> from the <b>Import Transactions | ACME Inc</b>. page.<br />This option is only available for mapped transaction data files.<img src="../../Resources/Images/onpoint-aai-save-data-layout.png" /><br /></li>
+            <li>Enter a <b>Data Layout Name</b> in the Save Data Layout dialog, for example, Standard Import Layout.<br />The <b>DATA LAYOUT</b> name is updated on the <b>Import Transactions</b> page.<img src="../../Resources/Images/onpoint-aai-standard-import-layout.png" /><br />Now, when you select <b>MAP</b> or <b>REMAP</b>, a drop-down containing available layouts displays.<img src="../../Resources/Images/onpoint-aai-standard-import-layout-map.png" /><br /><![CDATA[          ]]></li>
+            <li>Close the MAP/REMAP tab.</li>
+        </ol>
+    </body>
+</html>

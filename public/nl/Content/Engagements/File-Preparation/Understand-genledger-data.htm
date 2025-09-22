@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>De gegevensset van het grootboek begrijpen</h1>
+        <p>Bij het importeren van grootboektransacties uit een CSV- of Excel-bestand moet je velden in het bestand toewijzen aan Caseware-velden in het type <strong>grootboekdataset</strong> dat je selecteert bij het importeren, zodat de grootboekgegevens correct worden weergegeven in de overeenkomst. In dit onderwerp wordt uitgelegd hoe unieke identificaties automatisch worden gegenereerd bij het importeren, evenals beschrijvingen van grootboekgegevens.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <h2>Hoe unieke identifiers voor rijen grootboekgegevens automatisch worden gegenereerd</h2>
+        <p>Weten hoe unieke identifiers automatisch worden gegenereerd is belangrijk als er ooit gegevensconflicten ontstaan bij het importeren van gegevens. Zie <a href="Resolve-data-conflicts.htm">Gegevensimportconflicten oplossen</a> voor meer informatie over hoe dit kan gebeuren en wat je kunt doen om het op te lossen.</p>
+        <p>Wanneer je grootboekgegevens importeert in CSV- of Excel-bestanden, moet elke gegevensrij uniek identificeerbaar zijn. Om dit te bereiken, creëert Cloud een unieke identifier die bestaat uit de waarden van de velden die u toewijst aan de Caseware velden <strong>Entry ID</strong> <code>(entry_id</code>) en <strong>Line Number</strong> <code>(line_number</code>) om een unieke identifier te vormen voor elke gegevensrij:</p>
+        <p><code>{entry_id}-{line_number}</code></p>
+        <ul>
+            <li>Als velden uit het inkomende importbestand zijn toegewezen aan <strong>Entry ID</strong> maar niet aan <strong>Lijnnummer</strong> of omgekeerd, wordt automatisch een unieke waarde gegenereerd voor <strong>Entry ID</strong> of <strong>Lijnnummer</strong>, afhankelijk van wat ontbreekt.</li>
+            <li>Als velden uit het inkomende importbestand helemaal niet zijn toegewezen aan zowel Entry ID als Lijnnummer, worden unieke combinaties automatisch gegenereerd voor deze beide Caseware velden.</li>
+            <li>Als gebruikers een veld toewijzen aan <strong>Entry Nummer</strong> maar niet aan <strong>Entry ID</strong>, wordt <strong>Entry ID</strong> automatisch ingevuld met de waarden van <strong>Entry Nummer</strong>.</li>
+        </ul>
+        <h2><a name="General"></a>Grootboekgegevensreeks beschreven</h2>
+        <p>Zie de links hieronder voor veldbeschrijvingen in het type grootboekdataset.</p>
+        <ul>
+            <li><a href="Description-of-the-fields-in-the-Transaction-Details-category.htm">Transactiegegevens</a></li>
+            <li><a href="Description-of-the-fields-in-the-Account-Details-category.htm">Rekeninggegevens</a></li>
+            <li><a href="Description-of-the-fields-in-the-Additional-Details-category.htm">Extra gegevens</a></li>
+            <li><a href="Description-of-the-fields-in-the-Subledger-Details-category.htm">Details subgrootboek</a></li>
+            <li><a href="Description-of-the-fields-in-the-Process-Details-category.htm">Details proces</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>When you link an engagement to an AnalyticsAI file, you can upload the engagement&apos;s trial balance data to begin performing tests. Prior to the upload, ensure that each account in the trial balance is assigned a map or group number. Note that you cannot upload trial balance data from consolidated engagement files.</p>
+        <p><b>To upload trial balance data to AnalyticsAI:</b></p>
+        <ol>
+            <li>
+                <p>On the ribbon, click <b>Cloud | Upload</b>.</p>
+            </li>
+            <li>
+                <p>In the prompt to upload the trial balance, click <b>Yes</b>.</p>
+            </li>
+            <li>
+                <p>If the mapping structure between the file and AnalyticsAI doesn&apos;t match, a prompt displays to provide an optional mapping file (.ini) to map the accounts. Click <b>Yes</b> to apply a mapping file, <b>No</b> to continue without a mapping file, or <b>Cancel</b> to abort the upload process.</p>
+            </li>
+            <li>
+                <p>If the upload will produce unassigned accounts, a prompt displays to confirm that you will need to manually map the accounts. Click <b>Yes</b> to continue.</p>
+            </li>
+        </ol>
+        <p>The trial balance data is uploaded to AnalyticsAI. You can view the uploaded data from the Data page of the Cloud pane and map any unmapped accounts by clicking <b>Assign Accounts</b>.</p>
+    </body>
+</html>

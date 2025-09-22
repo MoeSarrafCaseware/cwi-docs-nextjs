@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Démarrer avec OnPoint API</h1>
+        <p class="note inline"><b>Remarque :</b> Si vous êtes un utilisateur existant de Caseware Cloud API et que vous avez implémenté la V1, planifiez votre transition vers la V2. Si vous êtes un nouvel utilisateur, commencez par la V2. Tous les exemples sont tirés de la V2.</p>
+        <p>Caseware Cloud API fournit un ensemble d&apos;opérations API pour automatiser la gestion des données de votre cabinet, telles que les clients, les utilisateurs, les groupes, les permissions et plus encore.</p>
+        <p>L&apos;application SDK illustre ce qui suit :</p>
+        <ul>
+            <li>
+                <p>Points d&apos;extrémité disponibles et opérations sur chaque point d&apos;extrémité</p>
+            </li>
+            <li>
+                <p>Paramètres d&apos;entrée et de sortie pour chaque opération</p>
+            </li>
+            <li>
+                <p>En-têtes requis et en-têtes de réponse</p>
+            </li>
+        </ul>
+        <h2>Authentification et autorisation</h2>
+        <p>En enregistrant un client API et en obtenant un jeton API, vous pouvez envoyer des demandes aux points d&apos;extrémité de l&apos;API du cloud. L&apos;API de Caseware Cloud est structurée autour de REST. Les URL prévisibles orientées ressources fournissent des réponses codées en JSON, ainsi que des codes de réponse HTTP standard.</p>
+        <p>Cloud API respecte les exigences d&apos;authentification du flux d&apos;octroi des informations d&apos;identification du client du protocole OAuth 2.0. Ce flux est conçu pour des communications confidentielles, de serveur à serveur, sans utilisateur final.</p>
+        <p><b>Pour commencer :</b></p>
+        <ol>
+            <li>
+                <p>Obtenir un identifiant et un secret client. Pour plus d&apos;informations, reportez-vous à la section <a href="../Explore/Interface/Firm-Settings/Integration.htm">Paramètres de l&apos;entreprise - Intégration</a> .</p>
+            </li>
+            <li>
+                <p>Ensuite, utilisez l&apos;ID et le secret du client générés pour obtenir un jeton d&apos;API sur POST /auth/token :</p>
+            </li>
+        </ol>
+        <p><b>requests</b></p><div><pre><code>curl --location &apos;https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/auth/token&apos; \ --header &apos;accept : application/json&apos; \N-header &apos;Content-Type : application/json&apos; \N --data &apos;{ &quot;ClientId&quot; : &quot;966592b3-8586-4541-9909-f7a901ef0b9a&quot;, &quot;ClientSecret&quot;: &quot;sg1eb53tkbn6dez0momdxr0gm87fih1kkoekm40u&quot;, &quot;Langue&quot; : &quot;en&quot; }&apos;</code></pre></div><p><b>Réponse</b></p>
+        <p><code>Code d&apos;état : 200</code></p><div><pre><code>
+            {&quot;Token&quot; : YTA1NGNiOTgtOWJjOS02NDg5LWIyYTgtZTZhNDA5MDJiNGQwOjk1Y2U2YmRjLWUzMDktMmMxZS00ZDYyLWY5NWJmZGE4MGY1ZjpiYTk4OTc1YS04Mjc4LTRhZWEtOWVjOC0wMDcyM2FhMjRjNGY).</code></pre></div><p>Utilisez le jeton API comme jeton porteur dans un en-tête d&apos;autorisation pour effectuer des demandes API supplémentaires. Le jeton API reste valide pendant 30 minutes.<br /></p>
+        <h2>Durée de vie de la session</h2>
+        <p>Chaque authentification de l&apos;API Cloud génère une nouvelle session qui dure 30 minutes et qui n&apos;invalide pas les sessions précédentes. La réinitialisation du secret d&apos;un client invalide toutes les sessions existantes de ce client API. Par conséquent, une nouvelle autorisation est nécessaire.</p>
+        <h2>Politique de plafonnement des taux</h2>
+        <p>La limite de débit a pour but d&apos;éviter que les ressources de l&apos;API en nuage ne soient épuisées. Lorsqu&apos;un client de l&apos;API fait une demande, la disponibilité des ressources est temporairement réduite et reconstituée après un certain délai.</p>
+        <p>Si aucune ressource n&apos;est disponible, le statut HTTP 429 (trop de demandes) est renvoyé. Vous pouvez utiliser l&apos;en-tête de réponse ratelimit pour déterminer le nombre restant de demandes, la capacité de rafale, le taux de réapprovisionnement et le nombre de jetons demandés. L&apos;algorithme du &quot;token bucket&quot; régule les demandes entrantes. Imaginez un seau de jetons. Lorsqu&apos;une demande d&apos;API est faite, un jeton doit être prélevé dans le panier pour que la demande soit traitée. La demande d&apos;API est rejetée si aucun jeton n&apos;est disponible dans le panier. Les jetons sont automatiquement ajoutés à la réserve au taux de réapprovisionnement au fur et à mesure que les demandes d&apos;API consomment des jetons de la réserve disponible.</p>
+        <p><b>En-têtes de réponse</b></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>&lt;Header&gt;</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x-ratelimit-burst-capacity</td>
+                    <td>Le nombre maximum de jetons que le seau peut contenir et qui peuvent être utilisés en une seconde.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-remaining</td>
+                    <td>Le nombre de jetons restant dans le seau.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-replenish-rate</td>
+                    <td>Le nombre de jetons réapprovisionnés en une seconde.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-requested-tokens</td>
+                    <td>Le nombre de jetons que coûte une demande d&apos;API.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note inline"><b>Remarque :</b> Les valeurs de la configuration de limitation de débit sont susceptibles de changer. Ces valeurs ne doivent pas être codées en dur.</p>
+        <h2>Voir la documentation de l&apos;API</h2>
+        <p>Les points de terminaison et les paramètres de l&apos;API Cloud sont décrits dans l&apos;application Caseware Cloud SDK :</p>
+        <p><b>Afficher la compatibilité API :</b></p>
+        <ol>
+            <li>Dans votre navigateur, allez à cette URL :</li>
+        </ol><div><pre><code>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk</code></pre>
+            <p> </p></div><ol>
+            <li value="2">Sur la gauche, développez <b>/caseware-cloud</b></li>
+            <li>Sélectionnez la version que vous utilisez.</li>
+            <li>Utilisez la fonction de recherche pour trouver l&apos;opération dont vous avez besoin :</li>
+        </ol>
+        <p><img alt="Utiliser la recherche pour trouver une opération API" src="../Resources/Images/SearchAPI.png" /></p>
+        <p>Les paramètres de requête qui peuvent être utilisés dans l&apos;API de votre demande sont décrits.</p>
+        <p>Voir le format de l&apos;URL de la demande en développant le menu déroulant de la signature du point de terminaison :</p>
+        <p><img src="../Resources/Images/API-endpoint-signature.png" alt="Voir le format de l&apos;URL de la demande" /></p>
+        <ol>
+            <li value="5">Reportez-vous aux exemples de réponses à droite pour obtenir des listes et des descriptions des données que vous pouvez vous attendre à trouver dans la réponse.</li>
+        </ol>
+        <p><img src="../Resources/Images/GetEntityDetails.png" alt="View response samples for an API request" /></p>
+    </body>
+</html>

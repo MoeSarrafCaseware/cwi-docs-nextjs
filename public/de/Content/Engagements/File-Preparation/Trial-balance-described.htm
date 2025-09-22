@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Understand the Trial balance dataset</h1>
+        <p>When importing a trial balance from a CSV or Excel file, you must map the fields, so the trial balance data is displayed properly in the engagement. This topic describes the fields within the <strong>Trial balance </strong>dataset. For more information on importing transaction data from CSV files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file-old-method.htm">Import the trial balance from a CSV or Excel</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Feld</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Account number (<code>account_id</code>)</td>
+                    <td>
+                        <p>Die Kennung für das Konto.</p>
+                        <p>Data type: String</p>
+                        <p>Required: Ja</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Account name (<code>account_main_description)</code></td>
+                    <td>
+                        <p>The name or description for the account.</p>
+                        <p>Beispiele: Liquide Mittel, Sachanlagen, Verkäufe</p>
+                        <p>Data type: String</p>
+                        <p>Required: Ja</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Financial group number (<code>financial_group_number</code>)</td>
+                    <td>
+                        <p>Die Standardpositionsnummer, der das Konto in der Gruppenstruktur zugeordnet ist. This information is not provided by the client and is used to automatically map accounts to financial groups.</p>
+                        <p>Konten, die aktuell Gruppen zugeordnet sind, könnten neu zugeordnet werden, wenn Sie dieses Datenfeld importieren.</p>
+                        <p>Data type: String</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year balance (<code>current_year</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year balance (<code>prior_year</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 balance (<code>prior_year_two</code>)</td>
+                    <td>
+                        <p>Der Saldo für Vorjahr 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 balance (<code>prior_year_three</code>)</td>
+                    <td>
+                        <p>Der Saldo für Vorjahr 3.</p>
+                        <p>Note that if your engagement is externally consolidated, you will see both a <b>Parent balance - PY 3</b> and a <b>Consolidated balance - PY 3</b> field. If you assign one of those fields, you must also assign the other.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 balance (<code>prior_year_four</code>)</td>
+                    <td>
+                        <p>Der Saldo für Vorjahr 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - consolidated balance (<code>consolidated_current_year</code></td>
+                    <td>The consolidated balance for the current year. If you assign this field, you must also assign a corresponding parent balance for the current year.<p>Data type: Money</p><p>Required: Nein</p></td>
+                </tr>
+                <tr>
+                    <td>Prior year - consolidated balance (<code>consolidated_prior_year</code>)</td>
+                    <td>
+                        <p>The consolidated balance for the prior year. If you assign this field, you must also assign a corresponding parent balance for the prior year.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - consolidated balance (<code>consolidated_prior_year_two</code>)</td>
+                    <td>
+                        <p>The consolidated balance for prior year 2. If you assign this field, you must also assign a corresponding parent balance for prior year 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - consolidated balance (<code>consolidated_prior_year_three</code>)</td>
+                    <td>
+                        <p>The consolidated balance for prior year 3. If you assign this field, you must also assign a corresponding parent balance for prior year 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - consolidated balance (<code>consolidated_prior_year_four</code>)</td>
+                    <td>
+                        <p>The consolidated balance for prior year 4. If you assign this field, you must also assign a corresponding parent balance for prior year 4</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - parent balance (<code>parent_current_year</code>)</td>
+                    <td>
+                        <p>The parent balance for the current year. If you assign this field, you must also assign a corresponding consolidated balance for the current year.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - parent balance (<code>parent_prior_year</code>)</td>
+                    <td>
+                        <p>The parent balance for the prior year. If you assign this field, you must also assign a corresponding consolidated balance for the prior year.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - parent balance (<code>parent_prior_year_two</code>)</td>
+                    <td>
+                        <p>The parent balance for prior year 2. If you assign this field, you must also assign a corresponding consolidated balance for prior year 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - parent balance (<code>parent_prior_year_three</code>)</td>
+                    <td>
+                        <p>The parent balance for prior year 3. If you assign this field, you must also assign a corresponding consolidated balance for prior year 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - parent balance (<code>parent_prior_year_four</code>)</td>
+                    <td>
+                        <p>The parent balance for prior year 4. If you assign this field, you must also assign a corresponding consolidated balance for prior year 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - January balance (<code>current_year_january</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Januar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - February balance (<code>current_year_february</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Februar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - March balance (<code>current_year_march</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für März.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - April balance (<code>current_year_april</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für April.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - May balance (<code>current_year_may</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Mai.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - June balance (<code>current_year_june</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Juni.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - July balance (<code>current_year_july</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Juli.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - August balance (<code>current_year_august</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für August.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - September balance (<code>current_year_september</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für September.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - October balance (<code>current_year_october</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Oktober.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - November balance (<code>current_year_november</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für November.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - December balance (<code>current_year_december</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für Dezember.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - quarter 1 balance (<code>current_year_first_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für das erste Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - quarter 2 balance (<code>current_year_second_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für das zweite Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - quarter 3 balance (<code>current_year_third_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für das dritte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - quarter 4 balance (<code>current_year_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für das vierte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - January balance (<code>prior_year_january</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Januar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - February balance (<code>prior_year_february</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Februar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - March balance (<code>prior_year_march</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für März.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - April balance (<code>prior_year_april</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für April.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - May balance (<code>prior_year_may</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Mai.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - June balance (<code>prior_year_june</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Juni.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - July balance (<code>prior_year_july</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Juli.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - August balance (<code>prior_year_august</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für August.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - September balance (<code>prior_year_september</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für September.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - October balance (<code>prior_year_october</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Oktober.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - November balance (<code>prior_year_november</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für November.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - December balance (<code>prior_year_december</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für Dezember.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - quarter 1 balance (<code>prior_year_first_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für das erste Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - quarter 2 balance (<code>prior_year_second_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für das zweite Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - quarter 3 balance (<code>prior_year_third_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für das dritte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - quarter 4 balance (<code>prior_year_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für das vierte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 1 balance (<code>current_year_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den ersten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 2 balance (<code>current_year_second_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den zweiten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 3 balance (<code>current_year_third_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den dritten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 4 balance (<code>current_year_fourth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den vierten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 5 balance (<code>current_year_fifth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den fünften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 6 balance (<code>current_year_sixth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den sechsten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 7 balance (<code>current_year_seventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den siebten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 8 balance (<code>current_year_eighth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den achten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 9 balance (<code>current_year_ninth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den neunten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 10 balance (<code>current_year_tenth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den zehnten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 11 balance (<code>current_year_eleventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den elften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - month 12 balance (<code>current_year_twelfth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des aktuellen Jahres für den zwölften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - first half balance (<code>current_year_first_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das erste Halbjahr des aktuellen Jahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - second half balance (<code>current_year_second_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das zweite Halbjahr des aktuellen Jahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - first half balance (<code>prior_year_first_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für die erste Hälfte des Vorjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - second half balance (<code>prior_year_second_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das zweite Halbjahr des Vorjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - first half balance (<code>prior_year_two_first_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für die erste Hälfte von Vorjahr 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - second half balance (<code>prior_year_two_second_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das zweite Halbjahr von Vorjahr 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - first half balance (<code>prior_year_three_first_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für die erste Hälfte von Vorjahr 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - second half balance (<code>prior_year_three_second_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das zweite Halbjahr von Vorjahr 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - first half balance (<code>prior_year_four_first_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für die erste Hälfte von Vorjahr 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - second half balance (<code>prior_year_four_second_half</code>)</td>
+                    <td>
+                        <p>Der Saldo für das zweite Halbjahr von Vorjahr 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current year - planning balance (<code>current_year_planning</code></td>
+                    <td>
+                        <p>Die Planungsbilanz für das aktuelle Jahr.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - planning balance (<code>prior_year_planning</code></td>
+                    <td>
+                        <p>Die Planungsbilanz für das Vorjahr.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 1 balance (<code>prior_year_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den ersten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 2 balance (<code>prior_year_second_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den zweiten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 3 balance (<code>prior_year_third_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den dritten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 4 balance (<code>prior_year_fourth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den vierten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 5 balance (<code>prior_year_fifth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den fünften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 6 balance (<code>prior_year_sixth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den sechsten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 7 balance (<code>prior_year_seventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den siebten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 8 balance (<code>prior_year_eighth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den achten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 9 balance (<code>prior_year_tenth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den neunten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 10 balance (<code>prior_year_ninth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den zehnten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 11 balance (<code>prior_year_eleventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den elften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year - month 12 balance (<code>prior_year_twelfth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo des Vorjahres für den zwölften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 1 balance (<code>prior_year_two_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den ersten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 2 balance (<code>prior_year_two_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den zweiten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 3 balance (<code>prior_year_two_third_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den dritten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 4 balance (<code>prior_year_two_fourth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den vierten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 5 balance (<code>prior_year_two_fifth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den fünften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 6 balance (<code>prior_year_two_sixth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den sechsten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 7 balance (<code>prior_year_two_seventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den siebten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 8 balance (<code>prior_year_two_eighth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den achten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 9 balance (<code>prior_year_two_ninth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den neunten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 10 balance (<code>prior_year_two_tenth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den zehnten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 11 balance (<code>prior_year_two_eleventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den elften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - month 12 balance (<code>prior_year_two_twelfth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für den zwölften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 1 balance (<code>prior_year_three_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den ersten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 2 balance (<code>prior_year_three_second_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den zweiten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 3 balance (<code>prior_year_three_third_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den dritten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 4 balance (<code>prior_year_three_fourth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den vierten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 5 balance (<code>prior_year_three_fifth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den fünften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 6 balance (<code>prior_year_three_sixth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den sechsten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 7 balance (<code>prior_year_three_seventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den siebten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 8 balance (<code>prior_year_three_eighth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den achten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 9 balance (<code>prior_year_three_ninth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den neunten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 10 balance (<code>prior_year_three_tenth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den zehnten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 11 balance (<code>prior_year_three_eleventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den elften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - month 12 balance (<code>prior_year_three_twelfth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für den zwölften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 1 balance (<code>prior_year_four_first_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den ersten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 2 balance (<code>prior_year_four_second_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den zweiten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 3 balance (<code>prior_year_four_third_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den dritten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 4 balance (<code>prior_year_four_fourth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den vierten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 5 balance (<code>prior_year_four_fifth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den fünften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 6 balance (<code>prior_year_four_sixth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den sechsten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 7 balance (<code>prior_year_four_seventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den siebten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 8 balance (<code>prior_year_four_eighth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den achten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 9 balance (<code>prior_year_four_ninth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den neunten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 10 balance (<code>prior_year_four_tenth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den zehnten Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 11 balance (<code>prior_year_four_eleventh_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den elften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - month 12 balance (<code>prior_year_four_twelfth_month</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für den zwölften Monat des Geschäftsjahres.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - January balance (<code>prior_year_two_january</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Januar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - February balance (<code>prior_year_two_february</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Februar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - March balance (<code>prior_year_two_march</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für März.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - April balance (<code>prior_year_two_april</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für April.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - May balance (<code>prior_year_two_may</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Mai.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - June balance (<code>prior_year_two_june</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Juni.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - July balance (<code>prior_year_two_july</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Juli.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - August balance (<code>prior_year_two_august</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für August.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - September balance (<code>prior_year_two_september</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für September.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - October balance (<code>prior_year_two_october</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Oktober.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - November balance (<code>prior_year_two_november</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für November.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - December balance (<code>prior_year_two_december</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für Dezember.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - January balance (<code>prior_year_three_january</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Januar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - February balance (<code>prior_year_three_february</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Februar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - March balance (<code>prior_year_three_march</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für März.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - April balance (<code>prior_year_three_april</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für April.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - May balance (<code>prior_year_three_may</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Mai.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - June balance (<code>prior_year_three_june</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Juni.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - July balance (<code>prior_year_three_july</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Juli.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - August balance (<code>prior_year_three_august</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für August.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - September balance (<code>prior_year_three_september</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für September.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - October balance (<code>prior_year_three_october</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Oktober.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - November balance (<code>prior_year_three_november</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für November.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - December balance (<code>prior_year_three_december</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für Dezember.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - January balance (<code>prior_year_four_january</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Januar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - February balance (<code>prior_year_four_february</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Februar.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - March balance (<code>prior_year_four_march</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für März.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - April balance (<code>prior_year_four_april</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für April.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - May balance (<code>prior_year_four_may</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Mai.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - June balance (<code>prior_year_four_june</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Juni.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - July balance (<code>prior_year_four_july</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Juli.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - August balance (<code>prior_year_four_august</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für August.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - September balance (<code>prior_year_four_september</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für September.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - October balance (<code>prior_year_four_october</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Oktober.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - November balance (<code>prior_year_four_november</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für November.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - December balance (<code>prior_year_four_december</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für Dezember.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - quarter 1 balance (<code>prior_year_two_first_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für das erste Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - quarter 2 balance (<code>prior_year_two_second_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für das zweite Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - quarter 3 balance (<code>prior_year_two_third_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für das dritte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - quarter 4 balance (<code>prior_year_two_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 2 für das vierte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - quarter 1 balance (<code>prior_year_three_first_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für das erste Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - quarter 2 balance (<code>prior_year_three_second_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für das zweite Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - quarter 3 balance (<code>prior_year_three_third_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für das dritte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - quarter 4 balance (<code>prior_year_three_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 3 für das vierte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - quarter 1 balance (<code>prior_year_four_first_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für das erste Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - quarter 2 balance (<code>prior_year_four_second_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für das zweite Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - quarter 3 balance (<code>prior_year_four_third_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für das dritte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - quarter 4 balance (<code>prior_year_four_fourth_quarter</code>)</td>
+                    <td>
+                        <p>Der Saldo von Vorjahr 4 für das vierte Quartal.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 2 - planning balance (<code>prior_year_two_planning</code>)</td>
+                    <td>
+                        <p>Die Planungsbilanz für Vorjahr 2.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 3 - planning balance (<code>prior_year_three_planning</code>)</td>
+                    <td>
+                        <p>Die Planungsbilanz für Vorjahr 3.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prior year 4 - planning balance (<code>prior_year_four_planning</code>)</td>
+                    <td>
+                        <p>Die Planungsbilanz für Vorjahr 4.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

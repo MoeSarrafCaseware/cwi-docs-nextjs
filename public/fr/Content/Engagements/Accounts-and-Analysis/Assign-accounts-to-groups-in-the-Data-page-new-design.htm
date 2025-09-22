@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Affecter des comptes à des groupes</h1>
+        <p>Sur la page <b>Données</b> , l&apos;icône <b>Affectation des comptes</b> peut parfois afficher un badge rouge ( <img src="../../Resources/Images/AssignAccountsBadge.png" alt="" style="vertical-align: text-bottom;" />) lorsque vous importez la balance générale. Cela signifie qu&apos;un ou plusieurs comptes n&apos;ont pas été mappés avec succès à des groupes. Il en va de même lorsque vous ajoutez manuellement un ou plusieurs comptes. Notez que le badge rouge indique le nombre de comptes non attribués. Par exemple, s&apos;il y a un compte non attribué, le badge indique <b>3</b> (<img src="../../Resources/Images/AssignAccountsBadge.png" alt="" style="vertical-align: text-bottom;" />).</p>
+        <p><img src="../../Resources/Images/AccountsTab-AccountsUnassigned.png" alt="Onglet Comptes avec un badge de comptes non attribués indiquant le nombre de comptes qui doivent être attribués." /></p>
+        <p>Vous devez affecter manuellement les comptes non affectés aux groupes appropriés afin que vos données financières soient correctement renseignées tout au long de la mission. Si plusieurs structures de regroupement sont disponibles, l&apos;affectation d&apos;un compte à un groupe dans la structure par défaut l&apos;affecte automatiquement à des groupes liés dans d&apos;autres structures.</p>
+        <h2>Affecter des comptes à des groupes</h2>
+        <p style="font-weight: normal;">Vous pouvez affecter manuellement des comptes non affectés à des groupes à partir de la page <b>Affecter des comptes</b> .</p>
+        <p style="font-weight: bold;">Pour affecter un compte à un groupe :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;icône d&apos; <b>affectation des comptes</b> (<img src="../../Resources/Images/AssignAccountsBadge.png" alt="" />) dans le coin supérieur droit de la page <b>Données</b> .</p>
+                <p>Vous pouvez également sélectionner l&apos;onglet <b>Attribution de comptes</b> dans le panneau latéral gauche.</p>
+                <p>Dans l&apos;onglet <b>Assigner des comptes</b> , les comptes non assignés s&apos;affichent dans la section <b>Non assignés</b> .</p>
+                <p>Si votre mission est consolidée, vous pouvez utiliser la liste déroulante du sélecteur d&apos;entité pour sélectionner l&apos;entité à laquelle vous attribuez des comptes.</p>
+                <p>Les groupes financiers sont affichés dans la liste <b>Groupes</b> . Si votre produit possède plusieurs structures de regroupement, vous pouvez utiliser la liste déroulante pour sélectionner la structure de regroupement à laquelle vous souhaitez affecter des comptes.</p>
+                <p>Vous pouvez cocher la case <b>Afficher les</b> groupes cachés pour afficher les groupes qui ont été cachés dans l&apos;engagement en raison de leur manque de pertinence. Si vous sélectionnez <b>Afficher les</b>groupes cachés, l&apos;icône d&apos;invisibilité (<img src="../../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;" />) s&apos;affiche à côté des groupes cachés afin que vous puissiez les repérer dans la liste.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/AssignAccounts-DA-2024-09.png" alt="Affecter des comptes à des groupes" /></p>
+        <ol><li value="2"><p>Sélectionnez un groupe pour affecter le compte sélectionné à ce groupe.</p><p>Vous pouvez également faire glisser le compte depuis la section <b>Non attribué</b> et le déposer dans un groupe pour le mapper.</p><p>Vous pouvez utiliser le champ de recherche ou les filtres pour trouver le compte que vous souhaitez affecter. Le champ de recherche vous permet de rechercher des comptes sur la base de leur numéro ou de leur nom. Les filtres disponibles vous permettent de filtrer les comptes non affectés par nom de compte, numéro de compte, si le compte a un solde créditeur ou débiteur, et le montant du solde.</p></li></ol>
+        <p><img src="../../Resources/Images/FiltersUnassignedAccounts.png" alt="Filtrage des comptes non attribués." /></p>
+        <p class="indent">Si des dimensions sont disponibles dans votre produit, vous pouvez affecter le compte aux dimensions après l&apos;avoir affecté à un groupe en sélectionnant l&apos;icône <b>Dropdown</b> (<img src="../../Resources/Images/icon-assign-accounts-dropdown.png" style="width: 40px;height: 23px;vertical-align: text-bottom;" alt=" " />) puis <b>Assign dimensions</b>. Notez que si vous pouvez affecter un compte à plusieurs dimensions, vous ne pouvez affecter qu&apos;une seule dimension par catégorie de dimension.</p>
+        <p><img src="../../Resources/Images/ShowingDimensions-AssignAccounts.png" alt="Pour affecter un compte à un groupe :" /></p>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez affecter des comptes à un groupe de niveau inférieur que si aucun compte n&apos;est affecté à son groupe parent. Par exemple, supposons que vous ayez deux groupes de comptes, <i>Revenu</i> et <i>Revenu de location</i>, qui sont tous deux affectés au groupe parent <i>Revenu</i> . Si vous affectez un compte au groupe <i>Revenu</i> , vous ne pouvez pas affecter de comptes aux groupes <i>Revenu</i> ou Revenu <i>de location</i> . Si vous souhaitez affecter des comptes à un groupe de niveau inférieur, vous devez d&apos;abord désaffecter manuellement les comptes affectés au groupe parent. Pour en savoir plus, voir <a href="#Unassign">Désaffecter des comptes de groupes</a>.</p>
+        <p>Après avoir attribué un compte, vous pouvez sélectionner <b>Annuler</b> (<img src="../../Resources/Images/icon-undo-assign-accounts.png" style="vertical-align: text-bottom;" />), si nécessaire, pour annuler à nouveau l&apos;attribution du compte.</p>
+        <p><img src="../../Resources/Images/assign-accounts-undo.png" /></p>
+        <h2>Visualiser et comparer plusieurs balances de vérification</h2>
+        <p>Vous pouvez visualiser et comparer les balances de vérification avec un maximum de quatre dates différentes lors de l&apos;affectation des comptes. Voici quelques exemples courants :</p>
+        <ul>
+            <li>
+                <p>Année en cours (planification et finale)</p>
+            </li>
+            <li>
+                <p>Année précédente (planification et finale)</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Remarque :</b> Tous les produits ne permettent pas d&apos;importer des soldes de planification.</p>
+        <p>Notez que le comportement de l&apos;onglet Affectation des comptes est différent lorsqu&apos;il y a des soldes à plus d&apos;une date. L&apos;exemple ci-dessous montre l&apos;onglet Affectation des comptes après l&apos;importation d&apos;une balance de vérification contenant :</p>
+        <ul>
+            <li>
+                <p>Solde de planification de l&apos;année en cours - 30/09/2024</p>
+            </li>
+            <li>
+                <p>Solde final de l&apos;année précédente 31/12/2023</p>
+            </li>
+            <li>
+                <p>Solde de planification de l&apos;année précédente-309/2023</p>
+            </li>
+        </ul>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomie de l&apos;onglet Affectation des comptes lorsqu&apos;une balance de vérification a plus d&apos;une date de fin." /></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Liste des comptes non affectés</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Sélecteur de balance de vérification pour la liste des comptes non affectés</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Liste des groupes</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Pour les colonnes de la balance de vérification :</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>Pour les colonnes de la balance de vérification :</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Sélecteur de balance comptable pour la colonne Balance comptable alternative</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Les dates sont synchronisées de gauche à droite. Lorsque l&apos;on choisit une date différente<b>(2)</b>dans la liste des <b>comptes non affectés</b> <b>(1)</b>, les soldes de la colonne Balance de vérification alternative<b>(4</b>) dans la liste des <b>groupes</b> changent automatiquement pour correspondre. Dans l&apos;exemple ci-dessous, nous sélectionnons le solde de planification de l&apos;année précédente - 30/09/2023<b>(2).</b></p>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs.png" alt="Anatomie de l&apos;onglet Affectation des comptes lorsqu&apos;une balance de vérification a plus d&apos;une date de fin." /></p>
+        <p>Ce qui fait que la colonne<b>(4)</b>de la balance comptable alternative de la liste des <b>groupes</b> est modifiée de la même façon.</p>
+        <p><img src="../../Resources/Images/Assign-accounts-multiple-TBs-part2.png" alt="Visualisation de la synchronisation des soldes de gauche à droite, en fonction de la date de fin du solde sélectionné dans la liste des comptes non affectés." /></p>
+        <p>Le choix des soldes à une date différente<b>(6</b>) dans la colonne Balance générale alternative de la liste <b>Groupes</b> n&apos;a pas d&apos;effet sur les soldes indiqués dans la liste <b>Comptes non affectés</b> <b>(1).</b></p>
+        <h3>Priorité de l&apos;affichage</h3>
+        <p>Si vous importez une balance de vérification à deux dates ou plus dans la mission, deux colonnes s&apos;affichent dans la liste des <b>groupes</b> , avec les soldes les plus prioritaires dans la colonne Balance de vérification principale et les autres soldes dans la colonne Balance de vérification alternative.</p>
+        <p><b>Ordre de priorité</b></p>
+        <ul>
+            <li>
+                <p>Solde final de l&apos;année en cours</p>
+            </li>
+            <li>
+                <p>Solde de planification de l&apos;année en cours</p>
+            </li>
+            <li>
+                <p>Solde final de l&apos;année précédente</p>
+            </li>
+            <li>
+                <p>Solde de planification de l&apos;année précédente</p>
+            </li>
+        </ul>
+        <h2>Copier l&apos;imputation d&apos;une autre mission</h2>
+        <p>Pour simplifier le processus d&apos;imputation, vous pouvez copier la structure d&apos;imputation d&apos;une autre mission. Cela vous permet de tirer parti des engagements qui utilisent la même structure de regroupement financier et les mêmes numéros de groupe, de sorte que vous pouvez automatiquement attribuer des comptes dans votre engagement actuel pour correspondre à l&apos;engagement que vous copiez.</p>
+        <p><b>Remarque :</b> Les étapes pour sélectionner un engagement à copier diffèrent légèrement si l&apos;engagement que vous sélectionnez pour le copier est un engagement consolidé.</p>
+        <p>Lorsque vous sélectionnez une mission à copier, les comptes de votre mission actuelle qui ont le même numéro de compte que les comptes de l&apos;autre mission seront affectés aux groupes financiers appropriés.</p>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez copier que des imputations de missions auxquelles vous avez accès.</p>
+        <p style="font-weight: bold;">Pour copier une imputation d&apos;un autre engagement :</p>
+        <ol>
+            <li>
+                <p>Sur la page <b>Affecter des comptes</b> , sélectionnez <b>Autres actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Copier l&apos;affectation des comptes d&apos;une autre mission</b>.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/CopyAssignment-DA-2024-09.png" alt="Sélection de l&apos;option permettant de copier une imputation d&apos;une autre mission vers la mission actuelle." /></p>
+        <ol>
+            <li value="2">
+                <p>Dans la boîte de dialogue <b>Copier l&apos;affectation à partir de la mission</b> , dans <b>Entité</b>, sélectionnez l&apos;entité qui contient la mission que vous voulez copier.</p>
+            </li>
+            <li>
+                <p>Dans <b>Engagement</b>, sélectionnez l&apos;engagement à partir duquel vous souhaitez copier l&apos;imputation.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectingEntitySuccess-AssignAccounts.png" alt="Sélection de l&apos;entité contenant la mission dont vous voulez copier l&apos;imputation. " /></p>
+        <p class="indent"><ol style="list-style-type: lower-alpha;"><li><p>Si vous effectuez une copie à partir d&apos;une mission consolidée, vous êtes invité à sélectionner l&apos;entité à laquelle appartient la mission consolidée :</p></li></ol></p>
+        <p><img src="../../Resources/Images/Copying-assignment-consolidated-DA-2024-09.png" alt="Lorsque vous copiez l&apos;imputation d&apos;une mission consolidée, vous êtes invité à sélectionner l&apos;entité à laquelle appartient la mission consolidée. " /></p>
+        <p class="indent">Vous pouvez également copier des imputations à partir de plusieurs structures de groupe financier en sélectionnant les groupes financiers dans l&apos;engagement source à copier, dans <b>Structure de regroupement</b>.</p>
+        <p class="note inline"><b>Remarque :</b> Si la mission source comporte plusieurs groupes financiers disponibles dans la <b>structure de regroupement</b>et que vous n&apos;effectuez pas de sélection, le groupe financier principal est sélectionné par défaut et apparaît dans la <b>structure de regroupement</b>.</p>
+        <p class="note inline"><b>Remarque :</b> Pour les missions sources avec un seul groupe financier, le seul groupe financier disponible est sélectionné par défaut, et vous ne pouvez pas le désélectionner ou le modifier.</p>
+        <p class="indent">Si la structure de regroupement des comptes correspond à l&apos;engagement actuel, un indicateur de réussite apparaît et le nom de la structure de regroupement apparaît dans <b>Structure de regroupement</b>.</p>
+        <p><img src="../../Resources/Images/Copying-account-assignments-from-multiple-financial-groups.png" alt="Sélection de plusieurs groupes financiers à partir desquels copier des imputations." /></p>
+        <ol>
+            <li value="4">
+                <p>Dans l&apos; <b>entité Engagement</b> , sous Destination, sélectionnez l&apos;engagement auquel vous souhaitez appliquer l&apos;imputation. Vous pouvez copier des imputations d&apos;une autre mission vers plusieurs entités de votre mission actuelle en sélectionnant les entités de destination dans la liste déroulante.</p>
+            </li>
+        </ol>
+        <p class="indent">Si vous souhaitez remplacer les imputations existantes que vous avez effectuées, sélectionnez <b>Remplacer l&apos;imputation existante</b>. Si vous ne sélectionnez pas cette option, vos imputations existantes restent inchangées et seuls les comptes actuellement non affectés sont affectés.</p>
+        <ol>
+            <li value="5">
+                <p>Sélectionnez <b>Terminé</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Désaffecter des comptes de groupes</h2>
+        <p>Vous pouvez manuellement désaffecter des comptes de groupes dans l&apos;onglet <b>Affecter des comptes</b> .</p>
+        <p><b>Pour retirer un compte d&apos;un groupe :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Attribution de comptes</b> , naviguez jusqu&apos;au groupe dont vous souhaitez annuler l&apos;attribution de comptes.</p>
+            </li>
+            <li>
+                <p>Sélectionnez et faites glisser les comptes affectés au groupe parent vers la section <b>Non affectés.</b></p>
+            </li>
+        </ol>
+    </body>
+</html>

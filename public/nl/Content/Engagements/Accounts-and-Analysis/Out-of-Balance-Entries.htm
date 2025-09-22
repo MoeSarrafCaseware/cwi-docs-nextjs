@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Niet-sluitende journaalposten</h1>
+        <p>Deze analytische test genereert een lijst met journaalposten waarbij het totaalbedrag voor elke journaalpost niet gelijk is aan nul.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Mogelijke pogingen tot manipulatie van financiële overzichten.</p>
+            </li>
+            <li>
+                <p>Lagere nauwkeurigheid en precisie van de financiële rapportage</p>
+            </li>
+            <li>
+                <p>Systemische problemen in de manier waarop een afdeling transacties verwerkt</p>
+            </li>
+            <li>
+                <p>Systeeminstellingen die niet goed zijn geconfigureerd</p>
+            </li>
+            <li>
+                <p>Falen van gegevensvalidatie</p>
+            </li>
+            <li>
+                <p>Zwakke interne controles</p>
+            </li>
+            <li>
+                <p>Zwakke punten in de monitoring- en opsporingsactiviteiten</p>
+            </li>
+            <li>
+                <p>Slechte training</p>
+            </li>
+            <li>
+                <p>Rekeningen die niet tijdig zijn aangesloten of niet-aangepaste verschillen bevatten</p>
+            </li>
+            <li>
+                <p>Eenzijdige transacties</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>De volgende velden worden gebruikt voor deze analyse:</p>
+        <ul>
+            <li>
+                <p>Een veld dat een unieke transactie-ID bevat, zoals het veld <b>Entry ID</b> in de grootboekdataset. Dit veld wordt gebruikt om het transactiesaldo te bepalen en te beoordelen of het in of uit balans is. Voor dubbelboektransacties moet je het veld selecteren dat je als unieke identificatie wilt gebruiken. Dit is de parameter voor <b>het veld Groepering</b> .</p>
+            </li>
+            <li>
+                <p>Het veld dat het bedrag voor de transactieregel bevat. Positieve waarden worden beschouwd als debet transacties en negatieve waarden als credit transacties.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>Er is één parameter die moet worden ingesteld om deze test uit te voeren:</p>
+        <p><b>Groeperingsveld</b> - Selecteer het veld dat u wilt gebruiken als unieke identificatie voor dubbele boekingen, zoals het veld <b>Entry ID</b> of <b>Entry nummer</b> . Standaard wordt het <b>Entry nummer</b> veld gebruikt voor deze parameter.</p>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test Afgeronde bedragen uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Vat het bedrag samen voor elke unieke transactie-identificatiecode.</p>
+            </li>
+            <li>
+                <p>Extraheer alle items waarvoor het samengevatte totaal niet nul is.</p>
+            </li>
+            <li>
+                <p>Koppel de niet-nulbedragen terug naar het oorspronkelijke bestand met behulp van de unieke identificatiecode voor de transactie en exporteer deze als het testresultaat.</p>
+            </li>
+            <li>
+                <p>Extraheer de resultaatvelden die door de gebruiker zijn geselecteerd. Alle velden worden standaard geëxtraheerd.</p>
+                <p class="note"><b>Let op:</b> De mogelijkheid om resultaatvelden te selecteren is momenteel nog niet beschikbaar en zal in een latere release worden toegevoegd.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Attribuer des autorisations API (Azure AD)</h1>
+        <p>La configuration des permissions API permettra à Caseware Cloud de lire les informations de base de Microsoft Azure afin d&apos;authentifier correctement les utilisateurs.</p>
+        <p style="font-weight: bold;">Pour attribuer des autorisations API :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez <b>Azure Active Directory</b> | <b>App Registrations</b>, puis sélectionnez votre application.</p>
+            </li>
+            <li>
+                <p>Dans le volet de navigation de gauche, sélectionnez <b>Autorisations API.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter une autorisation</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-permission.png" alt="Sélectionnez Ajouter une autorisation." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Microsoft Graph</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Autorisations déléguées</b>.</p>
+                <p><img src="../../Resources/Images/azure-delegated-permissions.png" alt="Sélectionnez Autorisations déléguées" /></p>
+            </li>
+            <li>
+                <p>Utilisez la case à cocher pour sélectionner les autorisations suivantes :</p>
+                <ul>
+                    <li>
+                        <p><b>Courriel</b></p>
+                    </li>
+                    <li>
+                        <p><b>Openid</b></p>
+                    </li>
+                    <li>
+                        <p><b>Profil</b></p>
+                    </li>
+                    <li>
+                        <p><b>Utilisateur.Lire</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter des autorisations</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Accorder le consentement de l&apos;administrateur pour le répertoire par défaut</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Oui</b> à la question &quot;Souhaitez-vous accorder les autorisations demandées pour tous les comptes du répertoire par défaut ?&quot;</p>
+                <p><img src="../../Resources/Images/azure-configured-permissions.png" alt="Les autorisations de l&apos;API ont été configurées avec succès." /></p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Test-your-single-sign-on-integration.htm">Tester l&apos;intégration de l&apos;authentification unique</a></p>
+    </body>
+</html>

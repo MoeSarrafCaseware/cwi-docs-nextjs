@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Outil de sécurité des applications</h1>
+        <h2>CodeQL</h2>
+        <p>CodeQL est un outil d&apos;analyse statique développé par GitHub. Il traite le code comme des données et permet d&apos;interroger les schémas de flux de données<MadCap:footnote style="mc-footnote-position: page;">https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql</MadCap:footnote> pour détecter les failles les plus courantes sur la base de l&apos;énumération des faiblesses communes (Common Weakness Enumeration), ainsi que certaines vulnérabilités spécifiques au cadre de travail. Nous utilisons le pack de requêtes Security Extended, et les analyses sont effectuées à chaque Pull Request.</p>
+        <p>En raison de certaines limitations techniques propres aux documents de travail, CodeQL est utilisé pour analyser le composant serveur (Smart Sync), mais l&apos;application de bureau est actuellement analysée avec Semgrep, tandis que les limitations techniques susmentionnées sont traitées par GitHub.</p>
+        <h2>Semgrep</h2>
+        <p>Semgrep est un outil d&apos;analyse statique rapide et open-source qui permet de trouver des bogues, de détecter les vulnérabilités dans les dépendances tierces et de faire respecter les normes du code<MadCap:footnote style="mc-footnote-position: page;">https://semgrep.dev/</MadCap:footnote>. Nous utilisons des préréglages par défaut et les analyses sont effectuées à chaque Pull Request. Semgrep est utilisé pour analyser les composants du bureau et du serveur.</p>
+        <h2>Kics</h2>
+        <p>Kics est une solution open-source pour l&apos;analyse statique du code de l&apos;Infrastructure as Code<MadCap:footnote style="mc-footnote-position: page;">https://kics.io/</MadCap:footnote>. Nous utilisons des préréglages par défaut et l&apos;analyse est effectuée à chaque demande de retrait.</p>
+        <h2>Dépendante</h2>
+        <p>Dependabot est un outil qui recherche les vulnérabilités de sécurité connues dans les dépendances tierces sur Github. Le flux de travail des équipes de développement comprend le triage de ces résultats sur les demandes d&apos;extraction, tandis que l&apos;équipe de sécurité des applications aide à l&apos;interprétation et à l&apos;explication, si nécessaire, pour plus de clarté.</p>
+        <h2>Numérisation secrète</h2>
+        <p>GitHub Advanced Security comprend un scanner de secrets qui empêche l&apos;introduction de secrets dans notre base de code. Nous avons activé l&apos;analyse des secrets pour tous les produits avec application, de sorte que le code ne peut pas être approuvé s&apos;il contient des secrets, à moins qu&apos;un développeur ne mette explicitement cette instance sur liste blanche pour une exigence spécifique. L&apos;équipe chargée de la sécurité des applications examine tous les secrets figurant sur la liste blanche pour s&apos;assurer qu&apos;ils n&apos;ont pas d&apos;incidence sur la confidentialité ou les informations sensibles.</p>
+        <h2>Veracode Static Analysis - Pipeline scan (obsolète en décembre 2022)</h2>
+        <p>Veracode était auparavant utilisé comme scanner SAST pour cette application. Aucune nouvelle analyse n&apos;a été effectuée sur la demande depuis décembre 2022, mais les résultats historiques sont inclus dans le rapport. Notre méthodologie, processus et outils décrits avec GitHub Advanced Security sont en place pour Caseware Cloud depuis novembre 2021.</p>
+    </body>
+</html>

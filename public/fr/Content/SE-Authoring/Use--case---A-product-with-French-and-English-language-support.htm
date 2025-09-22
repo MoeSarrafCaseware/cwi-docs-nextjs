@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Cas d&apos;utilisation : Un produit qui prend en charge les langues française et anglaise.</h1>
+        <p>Cette rubrique décrit un cas d&apos;utilisation pour ajouter la prise en charge de la langue française dans un modèle de produit. Vous pouvez utiliser ce cas d&apos;utilisation comme référence lorsque vous configurez plusieurs langues dans votre modèle.</p>
+        <p class="note"><b>Remarque :</b> Vous devez répéter les étapes énumérées dans ce cas d&apos;utilisation pour chaque langue active de votre modèle.</p>
+        <p><b>Hypothèse :</b></p>
+        <ul>
+            <li>
+                <p>Le contenu et les produits à livrer en anglais ont déjà été ajoutés et rédigés dans le modèle.</p>
+            </li>
+            <li>
+                <p>Vous avez ajouté le français dans le modèle et l&apos;avez marqué comme langue active.</p>
+            </li>
+        </ul>
+        <p><b>Prérequis :</b> Changez la langue du contenu du modèle en <b>français</b>.</p>
+        <p><img src="../Resources/Images/swithing-language-in-template.PNG" alt="Sélectionnez Français dans la liste déroulante Langue du contenu." /></p>
+        <h2>Étape 1 : Add the French language in the product settings</h2>
+        <p>Ajoutez la langue française et effectuez d&apos;autres modifications si nécessaire, comme le changement de la langue par défaut de l&apos;anglais vers le français.</p>
+        <p>For detailed instructions, see <a href="Set-up-multiple-content-languages.htm">Set up multiple content languages</a>.</p>
+        <h2>Étape 2 : Renommer les assertions, les phases, les cycles, les zones, les dimensions et les composants</h2>
+        <p>Pour commencer, sélectionnez l&apos;icône <b>Information</b> (<img src="../Resources/Images/icon-information.png" style="vertical-align: text-bottom;" />) dans le menu supérieur, puis choisissez <b>Paramètres</b>. La boîte de dialogue Product Settings s&apos;ouvre.</p>
+        <p style="font-weight: bold;">Renommer les assertions, les phases, les cycles, les zones, les dimensions et les composants :</p>
+        <ol>
+            <li>
+                <p>Allez dans l&apos;onglet Importation .</p>
+            </li>
+            <li>
+                <p>Renommer chaque élément de l&apos;onglet :</p>
+                <ul>
+                    <li>
+                        <p>Dans l&apos;onglet <b>Assertions</b> , saisissez l&apos;abréviation française et le nom complet de chaque assertion.</p>
+                    </li>
+                    <li>
+                        <p>Dans les onglets <b>Phases</b>, <b>Cycles</b> et <b>Domaines</b> , saisissez le nom français de chaque phase, cycle et domaine.</p>
+                        <p class="note inline"><b>Remarque :</b> Les onglets Cycles et Zones ne sont disponibles dans votre produit que s&apos;ils ont été activés dans votre fichier product.json. Pour en savoir plus, voir <a href="Enable-or-disable-features-in-your-product.htm">Activer ou désactiver des fonctionnalités dans votre produit.</a></p>
+                    </li>
+                    <li>
+                        <p>Dans l&apos;onglet <b>Dimensions</b> , saisissez le nom français de chaque catégorie de dimension et de chaque dimension</p>
+                    </li>
+                    <li>
+                        <p>Dans l&apos;onglet <b>Composants</b> , saisissez le nom français de chaque catégorie de composant, le nom du composant et l&apos;ID du composant.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2>Étape 3 : Renommer des dossiers, des sous-dossiers, des documents et des espaces réservés</h2><MadCap:snippetBlock src="../Resources/Snippets/To-rename-documents-page-content-for-multi-language-support.flsnp" /><h2>Étape 4 : Ajouter le contenu français</h2>
+        <p>Voici l&apos;approche recommandée pour ajouter du contenu traduit dans un produit multilingue pour les lettres/mémos, les listes de contrôle, les requêtes, les états financiers et les groupes de balances de vérification.</p>
+        <h3>Lettres/mémos</h3>
+        <p>Ajoutez une version française au contenu de la lettre ou du mémo, puis configurez-les pour qu&apos;ils ne s&apos;affichent que si la langue sélectionnée pour le contenu du modèle est le français.</p>
+        <p style="font-weight: bold;">Pour configurer la prise en charge multilingue dans les lettres et les mémos :</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-letters.flsnp" /><h3>Listes de contrôle et questions</h3>
+        <p>Ajouter les versions françaises de chaque procédure et question d&apos;interrogation.</p>
+        <p style="font-weight: bold;">Pour ajouter les procédures françaises dans une liste de contrôle :</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-checklist.flsnp" /><p style="font-weight: bold;">Ajouter les références françaises faisant autorité pour une procédure de liste de contrôle :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez <b>+</b> Lien de <b>référence faisant autorité</b> .</p>
+            </li>
+            <li>
+                <p>Saisissez le texte du lien à afficher dans la procédure à la rubrique <b>Étiquette</b>.</p>
+            </li>
+            <li>
+                <p>Saisissez l&apos;adresse URL dans <b>URL</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Pour ajouter les questions françaises dans une requête :</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-in-queries.flsnp" /> <MadCap:snippetBlock src="../Resources/Snippets/to-add-multi-lang-picklist-response.flsnp" /><h3>Modification en bloc des noms de groupes de la balance de vérification</h3>
+        <p>Importer les noms français des groupes de balances de vérification. Pour des instructions détaillées, voir <a href="Bulk-change-group-names.htm">Modification en bloc des noms de groupes.</a></p>
+        <h3>États financiers</h3>
+        <p>Pour ajouter une version française aux sections de texte, aux en-têtes et aux pieds de page, assurez-vous que la langue du contenu du modèle est le français, puis modifiez les zones de texte, les en-têtes et les pieds de page existants afin de supprimer le contenu anglais et d&apos;ajouter le contenu français.</p><MadCap:snippetBlock src="../Resources/Snippets/OnPoint-Audit-Training/se-financial-statements-multi-language.flsnp" /><p style="font-weight: bold;">Mise en place d&apos;un support multilingue dans les états financiers à l&apos;aide de texte dynamique :</p><MadCap:snippetBlock src="../Resources/Snippets/to-support-multilanguage-for-fs.flsnp" /> <MadCap:snippetBlock src="../Resources/Snippets/to-set-up-visibility-settings-for-multilanguage-in-FS.flsnp" /></body>
+</html>

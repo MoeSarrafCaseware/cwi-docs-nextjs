@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Subledger details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transaction data display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>SUBLEDGER DETAILS</b> category that appear in the General ledger dataset.</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Identifier Type (<code>identifier_type</code>)</h2>
+        <p>Identification type for data within the subledger.</p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>Less than 2,500 unique values. These values must be tagged to one of:<ul><li>CU - Customers</li><li>PE - Prepaid Expenses</li><li>SU - Suppliers</li><li>EM - Employees</li><li>IA - Investment Assets</li><li>OT - Other</li><li>CA - Capital Assets (Fixed Assets)</li><li>IN - Inventory</li><li>DL - Debt Liabilities</li></ul></li>
+            </ul>
+        </p>
+        <h2>Identifier Code (<code>identifier_code</code>)</h2>
+        <p>Identifying code for data within the subledger. <br />Beispiel: Debitorennummer, Kreditorennummer, Mitarbeiternummer. <br />Beispiele: &quot;C123&quot;, &quot;V6589&quot;, &quot;6597&quot;.</p>
+        <h3>Requirements</h3>
+        <p>If the identifier type is tagged, this must also be tagged.</p>
+        <h2>Identifier Description (<code>identifier_description</code>)</h2>
+        <p>Mit dem Identifikatorcode verknüpfter Name. <br />Beispiele: &quot;ABC Customer Ltd.&quot;, &quot;DEF Purchase Inc.&quot;, &quot;Sally Jones&quot;.</p>
+        <h2>Identifier Active (<code>identifier_active</code>)</h2>
+        <p>Zeigt an, ob der Identifikatorcode aktiv oder inaktiv ist.</p>
+        <h2>Identifier Street (<code>identifier_street</code>)</h2>
+        <p>Identifier&apos;s street - line 1. <br />Beispiele: &quot;123 Musterstraße&quot;, &quot;Mustergasse 26&quot;.</p>
+        <h2>Identifier Street 2 (<code>identifier_address_street2</code>)</h2>
+        <p>Anschrift (Details) des Identifikators (Zeile 2). <br />Beispiele: &quot;Suite 1100&quot;, &quot;Unit 002B&quot;</p>
+        <h2>Identifier City (<code>identifier_city</code>)</h2>
+        <p>City where the identifier is located in. <br />Beispiele: &quot;Toronto&quot;, &quot;Los Angeles&quot;.</p>
+        <h2>Identifier State or Province (<code>identifier_state_or_province</code>)</h2>
+        <p>State or province where the identifier is located in. <br />Beispiele: &quot;Ontario&quot;, &quot;Kalifornien&quot;.</p>
+        <h2>Identifier Zip or Postal Code (<code>identifier_zip_or_postal_code</code>)</h2>
+        <p>Anschrift (Postleitzahl) des Identifikators. <br />Beispiele: &quot;94704&quot;, &quot;M5A 0L6&quot;.</p>
+        <h2>Identifier Country (<code>identifier_country</code>)</h2>
+        <p>Anschrift (Land) des Identifikators.</p>
+        <h2>Document Number (<code>document_number</code>)</h2>
+        <p>Mit dem Ursprungsbeleg verbundener Identifikator. This is the document that supports the transaction entered into the ERP. <br />Beispiele: &quot;PO4569&quot; for purchase order, &quot;7956&quot; for cheque.</p>
+        <h2>Document Apply to Number (<code>document_Apply_To_Number</code>)</h2>
+        <p>Document number associated with the source document used to offset debits and credits. Wird zur Berechnung des offenen Saldos verwendet, wenn die Zahlung, die Vorauszahlung oder die Gutschrift/Lastschrift nicht vollständig erfolgt ist; dies ermöglicht die Berechnung des offenen Postens. <br />Beispiele: &quot;INV-001&quot;, &quot;121296&quot;.</p>
+    </body>
+</html>

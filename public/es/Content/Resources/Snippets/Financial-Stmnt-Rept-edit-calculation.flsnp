@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">To add or edit a calculation in table cells:</p>
+        <ol>
+            <li>
+                <p>Open the <b>Balance Sheet</b>, select the table.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../Images/icon-more-actions-inline.png" style="width: 24px;height: 13px;vertical-align: text-bottom;" />), then choose <b>Edit Dynamic Table</b>.</p>
+            </li>
+            <p>The table opens in edit mode.</p>
+            <li>
+                <p>Go to the desired cell and select the <b>fx</b> icon.</p>
+            </li>
+            <p>The <b>Calculation</b> tab opens.</p>
+            <p class="note inline"><b>Note:</b> The cell must be an <b>Input row</b> or <b>Input</b> column cell.</p>
+            <p><img src="../Images/insert-calculation-end-user.png" alt="fx icon displays in the left border of the cell." /></p>
+            <li>
+                <p>In the <b>Calculation</b> tab:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select <b>Link</b> (<img src="../Images/icon-link.png" style="width: 20px;height: 20px;vertical-align: text-bottom;" />) to insert a trial balance data link in the formula.</p>
+                    </li>
+                    <p>The <b>Data Link</b> dialog opens with <b>Financial statements</b> selected by default as the source for trial balance data.</p>
+                    <p class="note inline"><b>Note:</b> If you&apos;ve imported prior years data, the dialog displays data for up to four prior years.</p>
+                    <p>You can change the default using the <b>Source</b> drop-down:<ul><li><b>Trial balance</b> - trial balance data is sourced from the <b>Final</b> column in the <b>Data</b> page. That is, the final amounts after adjustments.</li><li><b>Financial statements</b> - trial balance data is sourced from the financial statements. That is, the rounded amounts and amounts that have been manually overridden.</li></ul></p>
+                    <p>As you insert data links, the (<img src="../Images/icon-fs-data-source.png" style="width: 22px;height: 25px;vertical-align: text-bottom;" />) or (<img src="../Images/icon-tb-data-source.png" style="vertical-align: text-bottom;width: 22px;height: 22px;" />) prefix indicates the data source.</p>
+                    <p class="note" MadCap:conditions="PrintGuides.Teacher"><b>Note:</b> If forms are available in your product, the <b>Forms value</b> tab is available in the <b>Data Link</b> dialog. You can insert values from forms using this tab.</p>
+                    <li>
+                        <p>Select <b>Numbers</b> (<img src="../Images/icon-number.png" style="width: 26px;height: 18px;vertical-align: text-bottom;" />) to insert numbers in the formula.</p>
+                        <p class="tip"><b>Tip:</b> You can use your keyboard to insert numbers.</p>
+                    </li>
+                    <li>
+                        <p>Add the desired operators to build the formula.</p>
+                        <p class="tip"><b>Tip:</b> You can use your keyboard to insert operators.</p>
+                        <p><img src="../Images/end-user-build-calculation.PNG" alt="User added a formula in the Calculation tab." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Select <b>DONE</b> to close the <b>Calculation</b> tab.</p>
+            </li>
+            <p>If you&apos;ve entered an invalid formula, the <b>fx</b> icon displays in red (<img src="../Images/icon-red-fx-invalid-calculation.png" style="width: 20px;height: 25px;vertical-align: text-bottom;" />) to indicate an error.</p>
+            <p class="instNotes note" MadCap:conditions="PrintGuides.Teacher"><b>Note:</b> If you edit a calculation that&apos;s part of the <MadCap:conditionalText MadCap:conditions="General.PDF"><a href="https://docs.caseware.com/latest/webapps/en/Practice/Templates-and-Authoring/Manage-the-firm-template.htm">default content</a> </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">default content</a></MadCap:conditionalText>that came with your product, a <b>Revert</b> icon (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />) is available at the cell so you can revert to the original calculation, if needed.</p>
+        </ol>
+        <p><img src="../Images/revert-calculation1.png" alt="Revert icon is only available if you are overriding a predefined calculation." /></p>
+        <p>Back in the document, you can review the calculation formulas you&apos;ve added. Select a cell to view details of the calculation.</p>
+        <p><img src="../Images/view-calculation-end-user.PNG" alt="Account Details popup showing the cell calcualtion." /></p>
+        <p>If you override a calculated cell value, you can select the cell to view the original calculation and value. The Account Details popup also presents a <b>Revert</b> (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />) option.</p>
+        <p><img src="../Images/calculation-popup=post-override1.png" alt="Revert option is always available if you override a cell value originating from a calculation formula." /></p>
+    </body>
+</html>

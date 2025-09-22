@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Permisos</h1>
+        <p>Permissions, granted by roles and by apps, control how users access content within Cloud.</p>
+        <h2 id="role-permissions">Role permissions<br /></h2>
+        <p>Each role has a set of permissions that define the rights available to that role. There are five permissions, and each can be applied to objects in the system.</p>
+        <h3>Permission types</h3>
+        <p>Object permissions include the ability to Create (C), Read (R), Edit (E), Delete (D), and Share (A &amp; S). Each object type has its own set of object permissions. With custom roles, you can enable your own unique set of permission types for each object permission.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Permisos</th>
+                    <th>Rights granted to user</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Create (C)</td>
+                    <td>&apos; Crear objeto.</td>
+                </tr>
+                <tr>
+                    <td>Read (R)</td>
+                    <td>View object</td>
+                </tr>
+                <tr>
+                    <td>Edit (E)</td>
+                    <td>Modify object</td>
+                </tr>
+                <tr>
+                    <td>Delete (D)</td>
+                    <td>Delete object</td>
+                </tr>
+                <tr>
+                    <td>Share (A)</td>
+                    <td>Assign or remove any user role</td>
+                </tr>
+                <tr>
+                    <td>Share (S)</td>
+                    <td>Assign or remove owned user roles</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Objetos</h3>
+        <p>Objects are named according to their interface labels in Caseware Cloud, such as Activities, Contact, Entity, and Uploaded Files.</p>
+        <p>The following tables outline all object permissions with their descriptions (the full list of object permissions is also available from the Roles Permission interface on the <b>Settings</b> page):</p>
+        <ul>
+            <li><a href="#System_objects">Organization objects</a></li>
+            <li><a href="#Entity_objects">Entity objects</a></li>
+            <li><a href="#App_objects">Content objects</a></li>
+        </ul>
+        <h3><a name="System_objects"></a>Organization objects</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Permisos</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contáctenos</td>
+                    <td>D</td>
+                    <td>The contact itself, including all information for <i>Contact - Details</i> and <i>Contact - Summary</i>.</td>
+                </tr>
+                <tr>
+                    <td>Contact - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the contact form:</p>
+                        <ul>
+                            <li>Phone Number (Home, Mobile)</li>
+                            <li>Tipo</li>
+                            <li>Etiqueta</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact - Summary</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the contact form:</p>
+                        <ul>
+                            <li>Email Address (Username)</li>
+                            <li>Name (First, Last)</li>
+                            <li>Occupation</li>
+                            <li>Phone Number (Business)</li>
+                            <li>System-wide Roles (roles assigned from the People page)</li>
+                            <li>Staff Groups</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact Group</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Contact Groups, including assigning and removing contacts.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Organización</td>
+                    <td>R</td>
+                    <td>
+                        <p>The organization itself and the following areas:</p>
+                        <ul>
+                            <li>Configuración</li>
+                        </ul>
+                        <p><b>Time considerations</b></p>
+                        <ul>
+                            <li>Viewing work codes (R)</li>
+                            <li>Editing work codes (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personal</td>
+                    <td>D</td>
+                    <td>The staff member itself, including all information for <i>Staff - Details</i> and <i>Staff - Summary</i>.</td>
+                </tr>
+                <tr>
+                    <td>Staff - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the staff form:</p>
+                        <ul>
+                            <li>Phone Number (Home, Mobile)</li>
+                            <li>Etiqueta</li>
+                            <li>Role Assignments on Entities</li>
+                            <li>System-wide Roles (roles assigned from the People page)</li>
+                        </ul>
+                        <p><b>Time considerations</b></p>
+                        <ul>
+                            <li>Viewing staff rates for staff members (R)</li>
+                            <li>Editing staff rates for staff members (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Staff - Summary</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the staff form:</p>
+                        <ul>
+                            <li>Name (First, Last)</li>
+                            <li>Email Address (Username)</li>
+                            <li>Tipo</li>
+                            <li>Título</li>
+                            <li>Posición</li>
+                            <li>Phone Number (Business)</li>
+                            <li>Estado</li>
+                            <li>Staff Groups</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Staff Group</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Staff Groups, including assigning and removing staff.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Etiqueta</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>The tag item itself and the following areas:</p>
+                        <ul>
+                            <li>Tag Management interface on the Settings page.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Entity_objects"></a>Entity objects</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Permisos</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entidad</td>
+                    <td>C D A S</td>
+                    <td>The entity itself, including all information for <i>Entity - Details</i> and <i>Entity - Summary</i>.</td>
+                </tr>
+                <tr>
+                    <td>Entity - Details</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the entity form:</p>
+                        <ul>
+                            <li>Estado</li>
+                            <li>Fecha de inicio</li>
+                            <li>Fecha de cierre del ejercicio</li>
+                            <li>Fecha inactiva</li>
+                            <li>Phone Numbers (Business, Business Fax, Home and Mobile)</li>
+                            <li>Social Profile (website, Twitter, Facebook, LinkedIn)</li>
+                            <li>Correo electrónico:</li>
+                            <li>Memorándum</li>
+                            <li>Etiqueta</li>
+                            <li>Códigos de industria</li>
+                            <li>Tax Info</li>
+                            <li>Historial</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entity - Summary</td>
+                    <td>R</td>
+                    <td>
+                        <p>The following information from the entity form:</p>
+                        <ul>
+                            <li>Nombre</li>
+                            <li>Tipo</li>
+                            <li>Número</li>
+                            <li>Address 1 (Street, City, Province, Country, Postal Code)</li>
+                            <li>Address 2 (Street, City, Province, Country, Postal Code)</li>
+                        </ul>
+                        <p><b>Time considerations</b></p>
+                        <ul>
+                            <li>Entering time or expense entries for clients (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="App_objects"></a>Content objects</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Permisos</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Activo</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>The following activity types:</p>
+                        <ul>
+                            <li>en grupo</li>
+                            <li>Tareas</li>
+                            <li>File Requests</li>
+                            <li>Comments (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activity - Comment</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Comments on the following activity types:</p>
+                        <ul>
+                            <li>en grupo</li>
+                            <li>Tareas</li>
+                            <li>File Requests</li>
+                            <li>System Activities</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Archivo</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>The following objects on the Files page:</p>
+                        <ul>
+                            <li>Carpetas</li>
+                            <li>URL Links</li>
+                        </ul>
+                        <p>For other File objects, access is granted on the <b>Apps</b> tab when creating or modifying Staff, Contacts, or Groups.</p>
+                        <p class="note"><b>Note:</b> The <b>Edit</b> permission for files also enables users to delete empty folders.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="app-permissions">App permissions</h2>
+        <p>Each app has a set of permissions that define the rights available to users or groups that have been granted access to that app. Ensure you have the <i>Staff Admin</i> role to enable access for staff members or staff groups, or the <i>Entities Admin</i> role to enable access for a contact or contact group.</p><MadCap:snippetBlock src="../../../Resources/Snippets/To-set-app-access-for-a-user-or-group.flsnp" /><h3 id="time-app">Time app permissions</h3>
+        <p><img src="../../../Resources/Images/edit-staff-time-app-permissions.png" alt="A list of available permissions associated with the Time app." /></p>
+        <p>You can assign the following app permissions to any group or any staff member with a valid Time license.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Permisos</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Process own entries</td>
+                    <td>Submit personal time and expense entries</td>
+                </tr>
+                <tr>
+                    <td>Process all staff entries</td>
+                    <td>Submit time and expense entries on behalf of other staff members.</td>
+                </tr>
+                <tr>
+                    <td>Transfer all staff entries</td>
+                    <td>Transfer time and expense entries between entities and engagements</td>
+                </tr>
+                <tr>
+                    <td>Tramitar</td>
+                    <td>Access the Billing app, view WIP totals and create invoices</td>
+                </tr>
+                <tr>
+                    <td>View own entries</td>
+                    <td>Use personal time and expense entries to generate Analysis reports</td>
+                </tr>
+                <tr>
+                    <td>View all staff entries</td>
+                    <td>Use all staff members&apos; time and expense entries to generate Analysis reports</td>
+                </tr>
+                <tr>
+                    <td>View WIP and Billing</td>
+                    <td>Use WIP and Billing information to generate Analysis reports</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

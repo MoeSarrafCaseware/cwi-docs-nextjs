@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Consolidation allows you to combine several entities into one engagement file (the parent company) for the purpose of publishing consolidated financial statements." />
+    </head>
+    <body>
+        <h1>Créer une mission de consolidation</h1>
+        <p>La consolidation permet de regrouper plusieurs entités en un seul fichier d&apos;engagement (la société mère) dans le but de publier des états financiers consolidés.</p>
+        <h2 id="define">Définir une hiérarchie de consolidation</h2>
+        <p>Pour consolider un dossier de mission, vous devez d&apos;abord définir la hiérarchie de consolidation. Il s&apos;agit de la relation entre une société mère et ses filiales. Il est utilisé pour combiner les résultats financiers des filiales dans les résultats financiers de leur société mère.</p>
+        <p>Notez que vous pouvez ajouter plusieurs niveaux d&apos;engagements subsidiaires. Par exemple, l&apos;entité mère peut avoir deux entités filiales et ces entités filiales peuvent également avoir leurs propres entités filiales.</p>
+        <p>La page <b>Hiérarchie de consolidation</b> affiche cette relation sous la forme d&apos;un organigramme ou d&apos;une grille.</p>
+        <p><img src="../../Resources/Images/consolidation-graph-view.png" style="width: 1385px;height: 621px;" alt="La vue graphique de la page Hiérarchie de consolidation." /></p>
+        <p><img src="../../Resources/Images/consolidation-grid-view.png" style="width: 1392px;height: 387px;" alt="La grille de la page Hiérarchie de consolidation." /></p>
+        <p>Vous pouvez définir les filiales de deux manières différentes dans la hiérarchie de consolidation :</p>
+        <ul>
+            <li>
+                <p><b>Mission liée</b> - Si la filiale a besoin de son propre dossier de mission dans une entité distincte de votre site Cloud, vous pouvez lier le dossier de mission de la filiale au dossier de mission de la société mère.</p>
+            </li>
+            <li>
+                <p><b>TB importé</b> - Si la filiale n&apos;a pas besoin de son propre dossier de mission, vous pouvez ajouter la filiale en interne dans le dossier de mission parent et importer la balance de vérification de la filiale dans le dossier.</p>
+            </li>
+        </ul><MadCap:snippetBlock src="../../Resources/Snippets/To-create-a-consolidation-hierarchy.flsnp" /><p>Si vous souhaitez afficher ou modifier la hiérarchie de consolidation après l&apos;avoir définie, sélectionnez l&apos;icône Consolidation (<img src="../../Resources/Images/icon-consolidation.png" style="vertical-align: bottom;" />) qui apparaît maintenant dans le menu supérieur.</p>
+        <p>Une fois que vous avez ajouté une filiale à la page <b>Hiérarchie de consolidation</b> , le bouton <b>Consolider</b> (<img src="../../Resources/Images/icon-consolidate-47x16.png" style="vertical-align: bottom;" />) n&apos;apparaît plus dans la fenêtre contextuelle des propriétés de la mission. Vous pouvez ajouter d&apos;autres filiales à partir de la page Hiérarchie de consolidation.</p>
+        <h2>Importer une balance de vérification pour une filiale interne</h2>
+        <p>Si vous utilisez l&apos;option <b>Ajouter TB importé</b> pour ajouter des filiales qui n&apos;ont pas de dossiers de mission distincts, vous pouvez importer les balances de vérification de ces entités à partir de la page <b>Données.</b> Vous pouvez sélectionner l&apos;entité pour laquelle vous importez la balance de vérification au cours de la procédure d&apos;importation.</p>
+        <p>Pour plus d&apos;informations, voir <a href="Import-and-manage-data.htm">Importer et gérer des données</a> .</p>
+        <p><img src="../../Resources/Images/import-data-subsidiary-selection.png" alt="L&apos;étape Sélectionner l&apos;entité à importer dans le processus d&apos;importation des données." /></p>
+        <h2 id="link">Lier un engagement de consolidation à un autre dossier d&apos;engagement</h2>
+        <p>Dans certaines juridictions, l&apos;information financière de l&apos;entité mère doit être séparée de l&apos;information financière de la consolidation elle-même.</p>
+        <p>La page <b>Hiérarchie de consolidation</b> permet de lier un dossier de mission consolidé au dossier de mission de l&apos;entité mère à l&apos;aide de la boîte de dialogue <b>Mission mère.</b> Le fait de lier les deux fichiers de mission permet de s&apos;assurer que les deux missions sont affichées comme une seule entité dans la hiérarchie de consolidation.</p>
+        <p>Le dialogue sur l <b>&apos;engagement des parents</b> :</p>
+        <ul>
+            <li>
+                <p>Ne permet de sélectionner qu&apos;un seul fichier d&apos;engagement</p>
+            </li>
+            <li>
+                <p>Filtres pour les missions basées sur le même produit SE et la même fin d&apos;année</p>
+            </li>
+            <li>
+                <p>N&apos;indique pas les missions qui sont consolidées (qui ont des filiales)</p>
+            </li>
+        </ul><MadCap:snippetBlock src="../../Resources/Snippets/To-link-a-consolidation-engagement-to-another-engagement-file.flsnp" /><h2 id="updating">Mise à jour de la balance de vérification d&apos;une filiale liée</h2>
+        <p>Vous pouvez mettre à jour les données de la balance de vérification d&apos;une mission auxiliaire dans une mission consolidée en intégrant les modifications apportées à la mission auxiliaire, tout en conservant les modifications apportées à la mission consolidée.</p>
+        <p>Si une mise à jour de la balance de vérification d&apos;un fichier d&apos;engagement d&apos;une filiale a été effectuée depuis la consolidation, l&apos;icône de consolidation (<img src="../../Resources/Images/icon-consolidation-updated.png" style="vertical-align: bottom;" />) qui apparaît dans le menu supérieur s&apos;affiche avec un point rouge. Dans la page Hiérarchie de consolidation, les entités dont les balances de vérification ont été mises à jour affichent une icône d&apos;avertissement (<img src="../../Resources/Images/icon-warning-consolidation.png" />). Vous pouvez appliquer la mise à jour à l&apos;aide de l&apos;option <b>Reconsolider</b> de la hiérarchie.</p>
+        <p>Dans l&apos;exemple ci-dessous, des modifications ont été apportées aux données de la balance de vérification de la filiale CaseWare Auto Shop. Sélectionnez <b>Autres actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Reconsolider</b> pour mettre à jour les informations dans le fichier consolidé.</p>
+        <p><img src="../../Resources/Images/reconsolidate-graph-view.png" style="width: 1445px;height: 456px;" alt="L&apos;option de reconsolidation d&apos;une filiale dans la vue graphique." /></p>
+        <p><img src="../../Resources/Images/reconsolidate-grid-view.png" style="width: 1461px;height: 344px;" alt="L&apos;option de reconsolidation d&apos;une filiale dans la vue en grille." /></p>
+    </body>
+</html>

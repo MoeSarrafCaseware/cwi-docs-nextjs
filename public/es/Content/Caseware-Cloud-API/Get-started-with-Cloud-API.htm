@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Introducción a Cloud API</h1>
+        <p class="note inline"><b>Nota:</b> Si ya es usuario de Caseware Cloud API y ha implementado la V1, planifique su transición a la V2. Si eres un usuario nuevo, asegúrate de empezar por la V2. Todos los ejemplos son de V2.</p>
+        <p>Caseware Cloud API proporciona un conjunto de operaciones de API para automatizar la gestión de los datos de su consulta, como clientes, usuarios, grupos, permisos y mucho más.</p>
+        <p>La aplicación SDK ejemplifica lo siguiente:</p>
+        <ul>
+            <li>
+                <p>Puntos finales disponibles y operaciones en cada punto final</p>
+            </li>
+            <li>
+                <p>Parámetros de entrada y salida para cada operación</p>
+            </li>
+            <li>
+                <p>Encabezados obligatorios y de respuesta</p>
+            </li>
+        </ul>
+        <h2>Autenticación y autorización</h2>
+        <p>Al registrar un cliente de API y adquirir un token de API, puede enviar solicitudes a los puntos finales de Cloud API. La API de Caseware Cloud está estructurada en torno a REST. Las URL predecibles orientadas a recursos ofrecen respuestas codificadas en JSON, junto con códigos de respuesta HTTP estándar.</p>
+        <p>Cloud API sigue los requisitos de autenticación del flujo de concesión de credenciales de cliente del protocolo OAuth 2.0. Este flujo está diseñado para la comunicación confidencial de servidor a servidor sin usuario final.</p>
+        <p><b>Procedimientos iniciales</b></p>
+        <ol>
+            <li>
+                <p>Obtener un ID de cliente y un secreto de cliente. Para más información, véase <a href="../Explore/Interface/Firm-Settings/Integration.htm">Ajustes de la empresa - Integración</a> .</p>
+            </li>
+            <li>
+                <p>A continuación, utilice el ID de cliente y el secreto de cliente generados para obtener un token de API en POST /auth/token:</p>
+            </li>
+        </ol>
+        <p><b>requests</b></p><div><pre><code>curl --location &apos;https://{region}.casewarecloud.com/{firm}/ms/caseware-cloud/api/v2/auth/token&apos; \ --header &apos;accept: application/json&apos; \ --header &apos;Content-Type: application/json&apos; \ --data &apos;{ &quot;ClientId&quot;: &quot;966592b3-8586-4541-9909-f7a901ef0b9a&quot;, &quot;ClientSecret&quot;: &quot;sg1eb53tkbn6dez0momdxr0gm87fih1kkoekm40u&quot;, &quot;Language&quot;: &quot;en&quot; }&apos;</code></pre></div><p><b>Respuesta</b></p>
+        <p><code>Código de estado: 200 OK</code></p><div><pre><code>
+            { &quot;Token&quot;: &quot;YTA1NGNiOTgtOWJjOS02NDg5LWIyYTgtZTZhNDA5MDJiNGQwOjk1Y2U2YmRjLWUzMDktMmxZS00ZDYyLWY5NWJmZGE4MGY1ZjpiYTk4OTc1YS04Mjc4LTRhZWEtOWVjOC0wMDcyM2FhMjRjNGY=&quot; }</code></pre></div><p>Utilice el token de API como token portador en una cabecera de autorización para realizar solicitudes de API adicionales. El token de la API es válido durante 30 minutos.<br /></p>
+        <h2>Duración de la sesión</h2>
+        <p>Cada autenticación de Cloud API genera una nueva sesión que dura 30 minutos y que no invalida ninguna sesión anterior. Un restablecimiento del secreto de cliente invalida todas las sesiones existentes de ese cliente API. En consecuencia, se requiere una nueva autorización.</p>
+        <h2>Política de limitación de tipos</h2>
+        <p>El límite de velocidad tiene como objetivo evitar que los recursos de la API de la nube se agoten. Cuando un cliente de la API realiza una solicitud, la disponibilidad de los recursos disminuye temporalmente y se repone tras un cierto retraso.</p>
+        <p>Cuando no hay recursos disponibles, se devuelve el estado HTTP 429 (demasiadas solicitudes). Puede utilizar la cabecera de respuesta ratelimit para determinar el número restante de solicitudes, la capacidad de ráfagas, la tasa de reposición y el número de fichas solicitadas. El algoritmo token bucket regula las solicitudes entrantes. Imagina un cubo de fichas. Cuando se realiza una solicitud a la API, debe tomarse un token del bucket para seguir procesando la solicitud. La solicitud API se rechaza si no hay ningún token disponible en el bucket. Los tokens se añaden automáticamente al cubo al ritmo de reposición a medida que las solicitudes de la API consumen tokens de la reserva disponible.</p>
+        <p><b>Encabezados de respuesta</b></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Encabezado</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x-ratelimit-burst-capacity</td>
+                    <td>El número máximo de fichas que puede contener el cubo y que pueden utilizarse en un segundo.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-remaining</td>
+                    <td>The number of tokens left in the bucket.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-replenish-rate</td>
+                    <td>Número de fichas que se reponen en un segundo.</td>
+                </tr>
+                <tr>
+                    <td>x-ratelimit-requested-tokens</td>
+                    <td>El número de tokens que cuesta una solicitud API.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note inline"><b>Nota:</b> Es probable que cambien los valores de la configuración del límite de velocidad. No codifique estos valores.</p>
+        <h2>View API documentation</h2>
+        <p>El punto final y los parámetros de Cloud API se describen en la aplicación Caseware Cloud SDK:</p>
+        <p><b>Para ver la compatibilidad con API:</b></p>
+        <ol>
+            <li>En su navegador, vaya a esta URL:</li>
+        </ol><div><pre><code>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk</code></pre>
+            <p> </p></div><ol>
+            <li value="2">A la izquierda, expanda <b>/caseware-cloud</b></li>
+            <li>Seleccione la versión que está utilizando.</li>
+            <li>Utilice la Búsqueda para localizar la operación que necesita:</li>
+        </ol>
+        <p><img alt="Utilizar la búsqueda para encontrar una operación API" src="../Resources/Images/SearchAPI.png" /></p>
+        <p>Se describen los parámetros de consulta que pueden utilizarse en la API de su solicitud.</p>
+        <p>Consulte el formato de la URL de la solicitud ampliando el desplegable de la firma del endpoint:</p>
+        <p><img src="../Resources/Images/API-endpoint-signature.png" alt="Ver el formato de la URL de solicitud" /></p>
+        <ol>
+            <li value="5">Consulte los ejemplos de respuesta de la derecha para ver listados y descripciones de los datos que puede esperar en la respuesta.</li>
+        </ol>
+        <p><img src="../Resources/Images/GetEntityDetails.png" alt="View response samples for an API request" /></p>
+    </body>
+</html>

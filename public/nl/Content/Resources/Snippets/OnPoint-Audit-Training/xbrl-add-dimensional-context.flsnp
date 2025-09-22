@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Je kunt nieuwe contexten toevoegen en bestaande contexten kopiëren vanuit het XBRL-overzichtspaneel.</p>
+        <p>Voordat u begint, selecteert u het XBRL-pictogram (pictogram) in het bovenste menu, selecteert u de taxonomie die u wilt beoordelen en Start Review om het beoordelingspaneel te openen.</p>
+        <p><b>Een dimensionale of getypeerde dimensionale context toevoegen</b></p>
+        <ol>
+            <li>
+                <p>Selecteer in de financiële overzichten de inhoud waarvoor een aangepaste context nodig is.</p>
+            </li>
+            <li>
+                <p>Selecteer in de <b>Context-sectie</b> van het beoordelingspaneel <b>Meer acties</b> (<img src="../../Icons/more-actions-vertical.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Nieuwe context</b>.</p>
+                <p><img src="../../Images/xbrl-review-panel-new-dimensional-context.png" alt="Het XBRL-beoordelingspanel." /></p>
+            </li>
+            <li>
+                <p>Selecteer de gewenste sleutelwaarden.</p>
+                <p class="note"><b>Let op:</b> De rol die bij de tag hoort is vooraf geselecteerd in het veld <b>Selecteer rol</b> . Als de rol een getypte dimensie bevat, verschijnt er een informatiebericht dat aangeeft dat je waarden voor de dimensie moet instellen. U kunt waarden instellen voor de getypte dimensie nadat u <b>Bevestigen</b>hebt geselecteerd.</p>
+                <p><img src="../../Images/xbrl-edit-dimensions-dialog.png" alt="Het dialoogvenster Afmetingen bewerken." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>BEVESTIGEN</b>.</p>
+            </li>
+            <li>
+                <p>Als je waarden moet invoeren voor een getypte dimensie, vul dan de nieuwe <b>Dimensie Instantie</b> velden in die verschijnen in de <b>Dimensies</b> sectie. Ga anders door naar de volgende stap.</p>
+                <p><img src="../../Images/xbrl-dimension-instance.png" alt="De sectie Afmetingen van het dialoogvenster Contexteditor." /></p>
+                <p>Met deze waarden kun je tegelijkertijd meerdere contexten produceren met verschillende waarden voor deze getypte dimensie. In het voorbeeldscherm zijn de benodigde opties voor het benoemen van een controlerende partij geselecteerd. Aangezien er drie controlerende partijen zijn in de voorbeeldopdracht, kunnen deze worden ingevuld zoals in de schermafbeelding hierboven, 1 tot 3, om automatisch drie contexten te maken met getypte dimensies met waarde 1, 2 en 3.</p>
+            </li>
+            <li>
+                <p>Voer in het gedeelte <b>Context</b> de vereiste waarden in.</p>
+                <p class="note"><b>Let op:</b> Als u een getypte dimensie hebt toegevoegd, voegt u het element <b>&lt;n&gt;</b> toe aan het veld <b>Naam</b> . Dit zorgt ervoor dat de contextnamen overeenkomen met de instantiewaarde van de getypeerde dimensie die aan de context is toegevoegd. Je kunt de context niet toevoegen als je dit element niet toevoegt aan het veld <b>Name</b> .</p>
+                <p><img src="../../Images/xbrl-context-editor-dialog-3.png" alt="Het dialoogvenster Contexteditor." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Context(en) toevoegen</b>.</p>
+            </li>
+        </ol>
+        <p>De context die u hebt aangemaakt is nu beschikbaar om toe te voegen aan tags.</p>
+    </body>
+</html>

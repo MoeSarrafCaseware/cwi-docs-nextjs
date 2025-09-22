@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Préparer un fichier CSV ou Excel pour importer des transactions ou des données de comptabilité auxiliaire</h1>
+        <p>Vous pouvez importer vos transactions ou d&apos;autres données de comptabilité auxiliaire dans un engagement Cloud à partir de fichiers CSV ou Excel correctement formatés.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de transactions ou d&apos;autres données de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel dans les missions Cloud, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions et autres données de comptabilité auxiliaire du client à partir d&apos;un fichier CSV ou Excel</a>.</p>
+        <h2>Exigences relatives au fichier CSV</h2>
+        <p>Pour garantir la réussite de l&apos;importation :</p>
+        <ul>
+            <li>
+                <p>Le fichier doit être un fichier <b>.csv</b> avec un encodage <b>UTF-8</b> .</p>
+            </li>
+            <li>
+                <p>Si le fichier CSV comprend des en-têtes de colonne sans données (seules les valeurs d&apos;en-tête existent), les fichiers sont rejetés et le téléchargement échoue.</p>
+            </li>
+            <li>
+                <p>La taille du fichier doit être inférieure à 5 Go.</p>
+            </li>
+            <li>
+                <p>La première ligne du CSV (la ligne d&apos;en-tête) est exclue de l&apos;importation. Les transactions doivent commencer à la deuxième ligne.</p>
+            </li>
+            <li>S&apos;il y a une valeur entre guillemets (&quot;) :<ul style="list-style-type: circle;"><li><p>La valeur doit comporter deux guillemets (un guillemet ouvrant et un guillemet fermant). Si une valeur comporte un guillemet, ajoutez-en un autre ou supprimez le guillemet.</p></li><li><p>La valeur doit être échappée en l&apos;entourant d&apos;une paire supplémentaire de guillemets ou de barres obliques inverses (\).</p></li><li><p>Les valeurs composées de plus d&apos;un mot - dont un ou deux ont des guillemets - doivent être entièrement placées entre guillemets.</p></li><p>Exemples :</p><p>Dans les données ci-dessous, la valeur <i>Definitely &quot;real&quot; cash</i> consiste en un mot entre guillemets :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,Définitivement de l&apos;argent &quot;réel&quot;,1000000</code></p><p>Vous devez le modifier pour qu&apos;il ressemble à ceci :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123, &quot;Définitivement de la &quot;vraie&quot; monnaie&quot;,1000000</code></p><p>Ou comme ceci :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123, &quot;Définitivement \&quot;real\&quot;cash&quot;,1000000</code></p><p>Dans les données ci-dessous, la valeur <i>&quot;cash&quot;</i> est entre guillemets :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123, &quot;cash&quot;,1000000</code></p><p>Vous devez le modifier pour qu&apos;il ressemble à ceci :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,&quot;&quot;cash&quot;&quot;,1000000</code></p><p>Ou comme ceci :</p><p><code>accountId,accountDescription,amount</code></p><p><code>123,\&quot;real\&quot;,1000000</code></p></ul></li>
+        </ul>
+        <h2>Exigences relatives au fichier Excel</h2>
+        <p>Pour garantir une importation réussie :</p>
+        <ul>
+            <li>
+                <p>Le format du fichier doit être <b>.xlsx</b>.</p>
+            </li>
+            <li>
+                <p>Le fichier ne doit pas contenir de cellules fusionnées.</p>
+            </li>
+            <li>
+                <p>Les données doivent exister sur la première feuille, car seule la première feuille est incluse dans l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Les données doivent commencer à la deuxième ligne, car la première ligne (la ligne d&apos;en-tête) est exclue de l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Au moins une colonne doit contenir des données après la première ligne.</p>
+            </li>
+            <li>
+                <p>Il ne doit pas y avoir de lignes vides.</p>
+            </li>
+        </ul>
+        <h2><a name="Mandator"></a>Champs obligatoires pour l&apos;importation de transactions</h2>
+        <p>Pour importer des transactions en vue de <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">les visualiser</a> ou d&apos;exécuter une <a href="../Accounts-and-Analysis/Sample-selection.htm">section d&apos;échantillons</a>, vous devez vous assurer que les champs suivants sont inclus dans les données d&apos;importation :</p>
+        <ul>
+            <li><b>Date de publication</b></li>
+            <li><b>Identifiant du compte</b></li>
+            <li><b>Montant</b></li>
+        </ul>
+    </body>
+</html>

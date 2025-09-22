@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Lücken</h1>
+        <p>Die Analysefunktion Lücken identifiziert fehlende Transaktionen innerhalb einer bestimmten Transaktionssequenz.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Unsachgemäß konfigurierte Systemeinstellungen, die möglicherweise verbessert und weiter ausgewertet werden müssen</p>
+            </li>
+            <li>
+                <p>Unzureichende interne Kontrollen</p>
+            </li>
+            <li>
+                <p>Schwache Überwachung und Aufdeckung von Aktivitäten</p>
+            </li>
+            <li>
+                <p>Mangelhafte Ausbildung</p>
+            </li>
+            <li>
+                <p>Journalbuchungen am Jahresende werden häufig mit einer speziellen Nummerierungsfolge gebucht - der Prüfer kann diese Nummerierungsfolge festlegen und eine Liste zur Überprüfung erstellen</p>
+            </li>
+            <li>
+                <p>Fehlende Transaktionen, die potenziell entwertet wurden</p>
+            </li>
+            <li>
+                <p>Risiko wesentlicher falscher Darstellungen aufgrund potenzieller Betrugsfälle.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <p><b>Kernfeld</b> - Das numerische, Datums- oder Zeichenfeld, das als Kernfeld für die Lückenanalyse verwendet werden soll.</p>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <ul>
+            <li>
+                <p><b>Unterer Bereich</b> - Wählen Sie den Startpunkt der Lückenanalyse. Dies ist in der Regel die erste Transaktion, aber möglicherweise nicht, wenn Transaktionen am Anfang fehlen.</p>
+            </li>
+            <li>
+                <p><b>Oberer Bereich</b> - Wählen Sie den Endpunkt der Lückenanalyse aus. Dies ist in der Regel die letzte Transaktion, aber möglicherweise nicht, wenn Transaktionen am Ende fehlen.</p>
+            </li>
+            <li>
+                <p><b>Schrittweite</b> - Geben Sie die erwartete Schrittweite für das zu analysierende Feld ein. Normalerweise beträgt die Schrittweite eins.</p>
+            </li>
+            <li>
+                <p><b>Feiertage ausschließen</b> - Legen Sie fest, ob Feiertage für Tests, bei denen das analysierte Feld ein Datumsfeld ist, berücksichtigt werden sollen oder nicht.</p>
+            </li>
+            <li>
+                <p><b>Feiertage auswählen</b> - Wenn Sie Feiertage ausschließen möchten, geben Sie an, welche Daten Feiertage sind.</p>
+            </li>
+            <li>
+                <p><b>Wochenenden ausschließen</b> - Legen Sie fest, ob Wochenenden für Tests, bei denen das analysierte Feld ein Datumsfeld ist, berücksichtigt werden sollen oder nicht.</p>
+            </li>
+            <li>
+                <p><b>Maske</b> - Wenn das zu analysierende Feld ein Zeichenfeld ist, geben Sie eine Maske ein, um anzugeben, welcher Teil den numerischen Teil enthält, der für die Lückenerkennung verwendet werden soll. Wenn Sie z. B. ein Rechnungsfeld im Format ABC123456 verwenden, würde die Maske CCCNNNNNN lauten, wobei die Ns für den numerischen Teil des Feldes stehen. Nur der numerische Teil wird auf Lücken untersucht.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p><b>Datumslücken</b> - Suchen Sie nach Daten, die keine Transaktionen aufweisen, obwohl sie aufgrund der ausgewählten Parameter zu erwarten wären.</p>
+            </li>
+            <li>
+                <p><b>Lücken in Belegnummern</b> - Suche nach Lücken in numerischen Listen, z. B. fehlende Schecknummern.</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analysefunktion Lücken ausführen, werden die folgenden Schritte durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Bestätigen Sie, dass ein Feld für die Kernanalyse ausgewählt wurde. Diese Felder sollten numerische, Datums- oder Zeichenfelder sein. Diese Analyse funktioniert nicht für Zeitfelder.</p>
+            </li>
+            <li>
+                <p>Ordnen Sie die Datenbank in aufsteigender Reihenfolge auf der Grundlage des Lückenfeldes.</p>
+            </li>
+            <li>
+                <p>Die Lückenanalyse wird je nach Art des Bereichs unterschiedlich durchgeführt:</p>
+                <ul>
+                    <li>
+                        <p><b>Numerisch</b> - Ermitteln Sie den Anfangs- und Endpunkt (Bereich für die Lücke) sowie die Schrittweite. Die Standardwerte sollten der kleinste und der größte Wert sein, und der Standardwert für die Schrittweite ist 1. Dies kann vom Benutzer geändert werden. Erstellen Sie eine Liste aller Lücken, die innerhalb des ausgewählten Bereichs liegen, und erhöhen Sie diese.</p>
+                        <p class="note"><b>Hinweis:</b> Enthält die Spalte nicht ganzzahlige Werte, so wird die Spalte auf die nächste Dezimalstelle gerundet.</p>
+                    </li>
+                    <li>
+                        <p><b>Datum</b> - Ermitteln Sie das früheste und das späteste vom Benutzer eingegebene Datum. Die Standardschrittweite beträgt einen Tag. Bei diesem Test kann der Benutzer auch Wochenenden und Feiertage von der Lückenerkennung ausschließen.</p>
+                    </li>
+                    <li>
+                        <p><b>Zeichen</b> - Geben Sie die Maske an, die angibt, welche Teile des Feldwerts die numerischen Teile sind, die der Lückenerkennung unterzogen werden.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Es gibt zwei Sätze von Ergebnissen. Der erste Satz enthält die Anfangs- und Endlücke sowie die Anzahl der fehlenden Elemente, der zweite Satz enthält die fehlenden Elemente.</p>
+            </li>
+        </ol>
+    </body>
+</html>

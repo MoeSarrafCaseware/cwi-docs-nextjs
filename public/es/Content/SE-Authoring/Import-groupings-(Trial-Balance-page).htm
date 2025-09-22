@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Import groupings (Trial Balance page)</h1>
+        <p>You can import groupings from CSV or Excel files. For CSV imports, you need to properly prepare the files first. If you have groupings that have been defined in Working Papers, you can export them to an Excel file and import the file.</p>
+        <p>To import groupings from a CSV file:</p>
+        <ol>
+            <li><a href="#Prepare">Preparar el archivo CSV de las transacciones</a></li>
+            <li><a href="#Import">Importar grupos</a></li>
+        </ol>
+        <p>To import groupings from Working Papers:</p>
+        <ol>
+            <li><a href="#Export">Export groupings from Working Papers to Excel</a></li>
+            <li><a href="#Import">Importar grupos</a></li>
+        </ol>
+        <h2><a name="Prepare"></a>Prepare a CSV file for import (Trial Balance page)</h2>
+        <p>The CSV file must include the following five columns, they can have empty values but each column must be available in the file:</p>
+        <ul>
+            <li>
+                <p>Map number (known as group number in SE)</p>
+            </li>
+            <li>
+                <p>Account name (known as group name in SE)</p>
+            </li>
+            <li>
+                <p>Postable (accounts can be assigned to the grouping)</p>
+            </li>
+            <li>
+                <p>Type (balance sheet or income statement)</p>
+            </li>
+            <li>
+                <p>Sign (debit or credit)</p>
+            </li>
+        </ul>
+        <p>You can optionally include the following columns:</p>
+        <ul>
+            <li>Weight</li>
+            <li>Allow</li>
+            <li>Nombre de contrapartida</li>
+            <li>Nombre inconsistente</li>
+            <li>Categoría de dimensión</li>
+            <li>Dimensiones incluidas</li>
+            <li>Reassign Group for contrary accounts</li>
+            <li>Group Classification</li>
+            <li>Link to a Tax Group</li>
+            <li>Link to a Chart of Accounts Group</li>
+            <li>Ciclo</li>
+            <li>Área</li>
+            <li>Componentes</li>
+            <li>Grupo predeterminado</li>
+        </ul>
+        <p>You can use these columns to help <a href="Set-up-automapping-(Trial-Balance-page).htm">set up automapping</a> (automatic assignment of accounts to groupings) when users import a new trial balance.</p>
+        <p>The following table describes all the information columns:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Columna</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Descripción</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Map Number</p>
+                        <p>*Obligatorio</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a map number for the grouping. Also known as <i>group number</i> in SE.</p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Nombre de cuenta</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Escriba un nombre único para el panel de información. Also known as group name in SE.</p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+                        <p>If this field is left blank, the grouping will be named <b>&quot;[Untitled]&quot;</b> by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Postable</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether accounts can be assigned to the grouping.</p>
+                        <p>Can contain a single letter. Valor esperado</p>
+                        <ul>
+                            <li><b>Y</b> - accounts cannot be assigned to the grouping.</li>
+                            <li><b>N</b> - accounts can be assigned to the grouping.</li>
+                        </ul>
+                        <p>If this field is left blank, you will be able to assign accounts to the grouping by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Tipo</p>
+                        <p>*Obligatorio</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping belongs to the balance sheet or to the income statement.</p>
+                        <p>Can contain a single letter. Valor esperado</p>
+                        <ul>
+                            <li>Balance general</li>
+                            <li>Estado de resultados</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Signo</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping should be for debit accounts or credit accounts.</p>
+                        <p>Can contain a single letter. Valor esperado</p>
+                        <ul>
+                            <li><b>D</b> - debit</li>
+                            <li><b>C</b> - credit</li>
+                        </ul>
+                        <p>If this field is left blank, the grouping will be have the debit sign by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Group Classification</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>escriba una descripción para el campo.</p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Weight</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>escriba una descripción para el campo. In cases where multiple groupings have the same classification, then any account with that classification will be assigned to the grouping with the highest weighting number.</p>
+                        <p>Can contain a decimal number from 1 to -1.</p>
+                        <p>If this field is left blank, the grouping will have a weight of 0 by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Allow</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping has any account balance restrictions.</p>
+                        <p>Can contain a single character. Valor esperado</p>
+                        <ul>
+                            <li>Solo se pueden asignar cuentas con saldo (positivo) de débito</li>
+                            <li>Solo se pueden asignar cuentas con saldo (negativo) de crédito</li>
+                            <li><b>*</b> - accounts with debit or credit balances can be assigned.</li>
+                        </ul>
+                        <p>If this field is left blank, you will be able to assign accounts with debit or credit balances by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Link to a Tax Group</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a group number from the Link to a group in the Tax Code grouping structure drop-down in the Group Properties dialog.</p>
+                        <p>By adding this value, you automatically assign accounts to groups in the Tax grouping structure based on their initial group assignment.</p>
+                        <p><![CDATA[
+
+]]><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Link to a Chart of Accounts Group</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a group number from the Link to a group in the Prescribed grouping structure drop-down in the Group Properties dialog.</p>
+                        <p>By adding this value, you automatically assign accounts to groups in the Prescribed grouping structure based on their initial group assignment.</p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Ciclo</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a cycle from the business cycle list (as defined in the <a href="Add-areas-and-cycles.htm">Product Settings</a>). When you assign a group to a business cycle, items in that group will automatically be shown under this cycle in the Risk Assessment document, making it easier to audit by business cycle.</p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Área</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Select an area for the group from the area list (as defined in the <a href="Add-areas-and-cycles.htm">Product Settings</a>). When you assign a group to an area, items in that group will automatically be shown under this area in the Risk Assessment document, making it easier to audit by area.</p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Componentes</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Components provide a more market-driven, region-driven or product-driven visibility logic for trial balance groups. For example, if the entity operates within the <i>Agriculture</i> industry, then only display trial balance groups that are relevant to agriculture. To learn more, see <a href="Group-properties.htm#Componen">Components.</a></p>
+                        <p>Enter one or more component to assign to the group (as defined in the <a href="Define-components.htm">Product Settings</a>).</p>
+                        <p style="font-weight: bold;">Valor esperado</p>
+                        <p style="font-style: italic;">Texto</p>
+                        <p>Use a colon to separate multiple components associated with a group (example: component1;component2;component3).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Nombre de contrapartida</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>If applicable, enter a description for group entries that are opposite to the group&apos;s normal sign. For example, &quot;Bank Overdraft&quot; will appear instead of &quot;Bank&quot; when the account balance is a credit.</p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Nombre inconsistente</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>If applicable, enter an alternative description for the group when the current and prior year have opposite signs.</p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Categoría de dimensión</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Enter a dimension category for the group (select from the list defined in <a href="Add-dimensions.htm">Product Settings</a>). <b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Dimensiones incluidas</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter the dimensions that are excluded from the selected category.</p>
+                        <p class="note inline"><![CDATA[
+]]><b>Note:</b> This property is only be available if a value for Dimension Category exists.</p>
+                        <p><![CDATA[
+
+]]><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                        <p>Use a colon to separate multiple excluded dimensions (example: dimension1;dimension2)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Reassign Group for contrary accounts</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>If applicable, enter a group from the Financials grouping structure for accounts with a contrary balance.</p>
+                        <p>If an account should automatically be assigned to a specific group but it does not match the selected sign (debit or credit) for this group, it is automatically assigned to the <b>reassign target.</b> For example, negative <b>Asset</b> -&gt; positive <b>Liability</b></p>
+                        <p><![CDATA[ 
+
+]]><b>Valor esperado</b><![CDATA[
+
+]]><i>Texto</i></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">Grupo predeterminado</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Specify whether or not the group is a default group. To learn more, see <a href="Group-properties.htm#Default">Default Group.</a><![CDATA[
+
+]]></p>
+                        <p><b>Valor esperado</b><![CDATA[
+
+]]></p>
+                        <ul>
+                            <li>Y or 1 or TRUE</li>
+                            <li>N or 0 or FALSE</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export"></a>Export groupings from Working Papers to Excel</h2>
+        <p>To use the grouping structure you&apos;ve defined in Working Papers, you need to export it to an Excel file, then convert the file to a .csv.</p>
+        <p>Open Working Papers and follow the steps below.</p>
+        <p style="font-weight: bold;">To export a grouping from Working papers to an Excel file:</p>
+        <ol>
+            <li>
+                <p>Open the file that you want to export.</p>
+            </li>
+            <li>
+                <p>On the ribbon, click <b>Engagement | Groupings.</b></p>
+            </li>
+            <p>The Groupings worksheet displays.</p>
+            <li>
+                <p>Haga clic derecho en el encabezado de una columna y luego haga clic en <b>Editor de filtros</b>.</p>
+            </li>
+            <p>In the Reorder Table Columns dialog, arrange the Active Columns as: Number &gt; Name &gt; Title &gt; Type &gt; Sign</p>
+            <li>
+                <p>Haga clic en <b>Aceptar</b>.</p>
+            </li>
+            <p>Ensure that each group contains a unique number, a defined type and sign.</p>
+            <li>
+                <p>On the ribbon, click <b>Tools | Options.</b></p>
+            </li>
+            <li>
+                <p>On the General tab, in the Table List Field Style drop-down menu, select <b>Entry Codes.</b></p>
+            </li>
+            <li>
+                <p>Haga clic en <b>Aceptar</b>.</p>
+            </li>
+            <li>
+                <p>On the worksheet, select all the groups by clicking any group number, then pressing the <b>CTRL+A</b> on your keyboard.</p>
+            </li>
+            <li>
+                <p>Copy the selection by pressing <b>CTRL+C</b> on your keyboard.</p>
+            </li>
+            <li>
+                <p>Open a new Excel workbook.</p>
+            </li>
+            <li>
+                <p>Paste the groups by clicking cell <b>A1</b>, then hitting the <b>CTRL+V</b> keys on your keyboard.</p>
+            </li>
+            <li>
+                <p>Verifique que la información sea correcta</p>
+                <ul>
+                    <li>
+                        <p>Check for duplicate group numbers by selecting the whole column and pressing <b>Home | Conditional Formatting | Highlight Cell Rules | Duplicate Values.</b></p>
+                    </li>
+                    <li>
+                        <p>Check for missing or empty values in the Name, Title, and Type columns.</p>
+                    </li>
+                    <li>
+                        <p>Check the Type column to ensure the classification is correct for each line.</p>
+                    </li>
+                    <li>
+                        <p>Check the Sign column to ensure the sign is correct for each line. If the sign is blank, it will default to <b>Debit.</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Save the Excel workbook as a .csv file.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Import groupings from a CSV or an Excel file (Trial Balance page)</h2>
+        <p>Once you have the CSV or Excel file ready, you can start the import process.</p>
+        <p style="font-weight: bold;">To import a grouping from a CSV or Excel:</p>
+        <ol>
+            <li>
+                <p>Go to the <b>Trial Balance</b> tab, then select <b>More actions (<img src="../Resources/Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Import Groups.</b></p>
+            </li>
+            <li>
+                <p>Drag and drop the .csv file into the pop-up dialog.</p>
+            </li>
+            <li>
+                <p>Select <b>Yes</b> when prompted to confirm deletion of existing financial groups.</p>
+            </li>
+        </ol>
+        <p>Once the import is complete, review the structure to ensure that the import was successful. You can select the <b>Expand All/Collapse All</b> (<img src="../Resources/Icons/expandAllCollapseAll.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) to review the imported structure. If necessary, you can also <span><a href="Add,-edit-and-move-groups-(Trial-Balance-page).htm#Edit">edit a group</a></span> to add additional properties or change existing ones.</p>
+    </body>
+</html>

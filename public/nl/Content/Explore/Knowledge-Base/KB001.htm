@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Toegang tot Caseware Cloud uitschakelen voor oudere en niet-ondersteunde browsers</h1>
+        <p><b>Gepubliceerd:</b> 18-jun-20</p>
+        <hr />
+        <p><b>Kort na de release van Caseware Cloud 31 zal Caseware de toegang tot Caseware Cloud uitschakelen voor oudere en niet-ondersteunde webbrowsers.</b> Deze oudere en niet-ondersteunde browsers gebruiken verouderde coderingsprotocollen - TLS versie 1.0 en v1.1.</p>
+        <p>De PCI Security Standards Council heeft alle organisaties die hun best practices volgen aangeraden om te migreren van SSL/TLS naar TLS v1.2 of hoger. Deze verandering wordt in de hele branche doorgevoerd om veilige verbindingen te onderhouden die uw gevoelige gegevens versleutelen en beschermen tegen kwaadwillige inbreuken. Caseware zal de aanbeveling volgen voor al onze inkomende verbindingen.</p>
+        <h2>Wat is TLS?</h2>
+        <p>TLS staat voor &quot;Transport Layer Security&quot; Het is een protocol dat privacy en gegevensintegriteit biedt tussen twee communicerende applicaties. Het is het meest gebruikte beveiligingsprotocol van dit moment en wordt gebruikt voor webbrowsers en andere toepassingen waarbij gegevens veilig over een netwerk moeten worden uitgewisseld. TLS zorgt ervoor dat een verbinding met een eindpunt op afstand het bedoelde eindpunt is door middel van versleuteling en identiteitsverificatie van het eindpunt. De versies van TLS zijn tot nu toe TLS 1.0, 1.1, 1.2 en 1.3.</p>
+        <h2>Wie wordt getroffen?</h2>
+        <p>Caseware Cloud-klanten (medewerkers en contactpersonen) en Hybrid Cloud-klanten die oudere en niet-ondersteunde webbrowsers gebruiken om toegang te krijgen tot Caseware-producten, zullen worden beïnvloed. De volledige lijst van webbrowsers die worden beïnvloed, wordt hieronder beschreven in het gedeelte <b>over compatibiliteit met internetbrowsers</b> .</p>
+        <p><b>Om te controleren of u een browser gebruikt die niet wordt ondersteund:</b></p>
+        <ol>
+            <li>Gebruik deze tool om <a href="https://www.ssllabs.com/ssltest/viewMyClient.html">de SSL/TLS-mogelijkheden</a>van uw browser te controleren.</li>
+            <li>Als de browser moet worden bijgewerkt (d.w.z. als TLS 1.2 of hoger niet wordt weergegeven), raadpleeg dan deze website voor stappen om TLS 1.2 of hoger in te schakelen: <a href="https://knowledge.digicert.com/generalinformation/INFO3297.html">TLS 1.1 en TLS 1.2 inschakelen op webbrowsers</a>.</li>
+        </ol>
+        <h2>Gebruikerservaring als er geen actie wordt ondernomen</h2>
+        <p><b>Gebruikers kunnen geen verbinding maken met Caseware Cloud</b> tenzij hun browser of browserinstellingen zijn bijgewerkt volgens de onderstaande compatibiliteitsrichtlijnen.</p>
+        <ol>
+            <li>
+                <p><b>Caseware Cloud Connector</b></p>
+                <p>Gebruikers die geen compatibele browser gebruiken, krijgen een foutmelding op de Caseware Cloud inlogpagina en kunnen geen verbinding maken met de server. Zodra hun browser of browserinstellingen zijn bijgewerkt, kunnen gebruikers de pagina vernieuwen om toegang te krijgen tot het inlogscherm.</p>
+            </li>
+            <li>
+                <p><b>Werkdocumenten Gebruikers met cloudintegratie voor SmartSync</b></p>
+                <p>Gebruikers die geen compatibele browser gebruiken, kunnen sommige of alle van de volgende problemen ondervinden:</p>
+                <p><b>Working Papers 2018 of hoger</b></p>
+                <ul>
+                    <li>Krijgt een foutmelding wanneer verbinding wordt gemaakt met het inlogscherm van Caseware Cloud vanuit Working Papers.</li>
+                    <li>U kunt geen bestanden zien of openen via het tabblad SmartSync Server onder <b>Bestand | Openen</b>.</li>
+                    <li>Kunnen geen verbinding maken met de server (d.w.z. online gaan) om wijzigingen van hun lokale synchronisatiekopie te synchroniseren. In de rechterbenedenhoek wordt met een tekstballon aangegeven dat het bestand offline is.</li>
+                </ul>
+                <p><b>Working Papers 2017 of lager</b></p>
+                <ul>
+                    <li>U kunt geen bestanden zien of openen via het tabblad SmartSync Server onder <b>Bestand | Openen</b>.</li>
+                    <li>Kunnen geen verbinding maken met de server (d.w.z. online gaan) om wijzigingen van hun lokale synchronisatiekopie te synchroniseren. In de rechterbenedenhoek wordt met een tekstballon aangegeven dat het bestand offline is.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Zodra de browser of browserinstellingen zijn bijgewerkt, keren de bestanden van Working Papers terug naar hun online staat wanneer ze met het internet zijn verbonden. Het kan nodig zijn om in te loggen in Caseware Cloud als uw bedrijfsinstellingen zijn geconfigureerd om dagelijks in te loggen in Caseware Cloud.</p>
+        <h2>Compatibiliteit internetbrowser</h2>
+        <p>Volgens onze <a href="../Getting-Started/Supported-software-and-hardware.htm">systeemvereisten</a>ondersteunt Caseware Cloud de volgende browsers:</p>
+        <ul>
+            <li>Google Chrome (aanbevolen)</li>
+            <li>Mozilla Firefox</li>
+            <li>Microsoft Edge</li>
+        </ul>
+        <p>Controleer met <a href="https://www.ssllabs.com/ssltest/viewMyClient.html">dit hulpprogramma</a>of uw browser TLS 1.2 of hoger ondersteunt. Als de browser moet worden bijgewerkt (d.w.z. als TLS 1.2 of hoger niet wordt weergegeven), raadpleeg dan <a href="https://knowledge.digicert.com/generalinformation/INFO3297.html">deze website</a> voor stappen om TLS 1.2 of hoger in te schakelen.</p>
+        <p>Raadpleeg de onderstaande compatibiliteitsrichtlijnen:</p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>
+                        <p>Browser</p>
+                    </th>
+                    <th>
+                        <p>Compatibiliteit</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Google Chrome 38 en hoger</td>
+                    <td>Compatibel met TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Google Chrome 30 tot 37</td>
+                    <td>
+                        <p>Compatibel als deze wordt uitgevoerd op:</p>
+                        <ul>
+                            <li>Windows XP SP3, Vista of nieuwer (desktop),</li>
+                            <li>OS X 10.6 (Snow Leopard) of nieuwer (desktop), of</li>
+                            <li>Android 2.3 (Gingerbread) of nieuwer (mobiel)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Google Chrome 29 en lager</td>
+                    <td>NIET COMPATIBEL MET TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Firefox 27 en hoger</td>
+                    <td>Standaard compatibel met TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Firefox 24 tot 26</td>
+                    <td>
+                        <p>Compatibel, maar niet standaard</p>
+                        <p>Gebruik about:config om TLS 1.1 of TLS 1.2 in te schakelen door de waarde security.tls.version.max config bij te werken naar 2 voor TLS 1.1 of 3 voor TLS 1.2</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Firefox 23 en lager</td>
+                    <td>NIET COMPATIBEL MET TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Edge</td>
+                    <td>
+                        <p>Standaard compatibel met TLS 1.2.</p>
+                        <p>Niet officieel ondersteund door Caseware Cloud</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Android 5.0 (Lollipop) en hoger</td>
+                    <td>Compatibel met TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Android 4.4 (KitKat) naar 4.4.4</td>
+                    <td>Kan compatibel zijn met TLS 1.2 of hoger. Sommige apparaten met Android 4.4.x ondersteunen TLS 1.2 mogelijk niet</td>
+                </tr>
+                <tr>
+                    <td>Android 4.3 (Jelly Bean) en lager</td>
+                    <td>NIET COMPATIBEL MET TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Desktop Safari versie 7 en hoger voor OS X 10.9 (Mavericks) en hoger</td>
+                    <td>Standaard compatibel met TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Desktop Safari versie 6 en lager voor OS X 10.8 (Mountain Lion) en lager</td>
+                    <td>Niet compatibel met TLS 1.1 of hogere codering</td>
+                </tr>
+                <tr>
+                    <td>Mobile Safari-versies 5 en hoger voor iOS 5 en hoger</td>
+                    <td>Standaard compatibel met TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Mobile Safari voor iOS 4 en lager</td>
+                    <td>NIET COMPATIBEL MET TLS 1.2</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

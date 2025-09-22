@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Nous vous suggérons de valider les dossiers d&apos;engagement de votre organisation afin de déterminer s&apos;ils sont prêts pour la <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Migrate-engagement-files-to-Cloud">migration vers le Cloud.</a> Les problèmes les plus courants qui empêchent la validation d&apos;un fichier sont les suivants :</p>
+        <ul>
+            <li>
+                <p>Le fichier est corrompu</p>
+            </li>
+            <li>
+                <p>Le fichier est une copie de synchronisation plutôt qu&apos;un fichier parent</p>
+            </li>
+            <li>
+                <p>Le nom du fichier comprend des caractères unicode</p>
+            </li>
+            <li>
+                <p>La version du fichier est antérieure à Working Papers 2011</p>
+            </li>
+            <li>
+                <p>Le fichier compressé ne comprend pas de sous-dossiers</p>
+            </li>
+        </ul>
+        <p>Dans la mesure du possible, veillez à résoudre ces problèmes avant la validation. Si l&apos;un de ces problèmes est découvert après une tentative de validation, il convient de le résoudre et de réessayer la validation.</p>
+        <p><b>Pour valider vos fichiers d&apos;engagement pour la migration :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Valider les fichiers</b>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur l&apos;icône du dossier et recherchez le dossier contenant les fichiers à valider. Cliquez sur <b>Sélectionner un dossier</b>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>VALIDER</b>.</p>
+            </li>
+        </ol>
+        <p>Les résultats du processus de validation sont affichés dans le rapport de validation. Pour obtenir des informations plus détaillées, consultez le fichier journal automatisé en cliquant sur le lien fourni. Cliquez sur <b>FERMER</b> pour revenir au menu principal.</p>
+    </body>
+</html>

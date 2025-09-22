@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Paramètres de la firme - Sherlock Starter</h1><MadCap:snippetBlock src="../../../Resources/Snippets/TopicRequiresSherlock.flsnp" /><h2><a name="Processing-Messages"></a>Traitement des messages</h2>
+        <p>Le rapport Messages de traitement affiche des informations sur les nombreux processus d&apos;extraction de données qui ont lieu chaque jour.</p>
+        <p><b>Pour afficher le rapport Traitement des messages :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Ouvrez le <b>menu Cloud</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) et sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Sherlock Starter | Traitement des messages.</b></p>
+            </li>
+            <li>
+                <p>Le rapport Messages de traitement charge une liste des processus d&apos;extraction de données historiques lors de sa première ouverture.</p>
+                <p><img src="../../../Resources/Images/process-report-01.png" style="border:1px solid #000000" /></p>
+                <ul>
+                    <li>
+                        <p>(Facultatif) Utilisez l&apos;icône d&apos;actualisation (<img src="../../../Resources/Icons/refresh-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour recharger le rapport sur le traitement des messages.</p>
+                    </li>
+                    <li>
+                        <p>(Facultatif) Utilisez la barre de recherche ou le filtre (<img src="../../../Resources/Icons/filter-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour limiter les résultats du rapport à ceux qui correspondent aux propriétés spécifiées.</p>
+                        <table class="table">
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th>Propriété</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>Icônes d&apos;état (<img src="../../../Resources/Icons/extraction-in-progress-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />,<img src="../../../Resources/Icons/extraction-failure-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</td>
+                                    <td>Affiche en un coup d&apos;œil si l&apos;extraction a été un succès (<img src="../../../Resources/Icons/extraction-in-progress-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) ou un échec (<img src="../../../Resources/Icons/extraction-failure-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</td>
+                                </tr>
+                                <tr>
+                                    <td>Temps d&apos;extraction</td>
+                                    <td>L&apos;heure à laquelle la tentative d&apos;extraction a été effectuée.</td>
+                                </tr>
+                                <tr>
+                                    <td>Entité</td>
+                                    <td>Le nom de l&apos;entité où se trouve le fichier.</td>
+                                </tr>
+                                <tr>
+                                    <td>Fichier</td>
+                                    <td>Le nom du fichier d&apos;engagement.</td>
+                                </tr>
+                                <tr>
+                                    <td>Dernière modification</td>
+                                    <td>Date de la dernière modification du dossier d&apos;engagement.</td>
+                                </tr>
+                                <tr>
+                                    <td>Statut</td>
+                                    <td>Indique si l&apos;extraction a réussi ou échoué.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sélectionnez un processus d&apos;extraction de données dans la liste pour obtenir plus de détails, y compris le message d&apos;erreur complet pour les extractions qui ont échoué.</p>
+                <p><img src="../../../Resources/Images/process-report-02.png" style="border:1px solid #000000" /></p>
+            </li>
+        </ol>
+        <h2><a name="Gold-Standard-Mapping"></a>Cartographie de référence</h2>
+        <p>Si votre entreprise dispose de modèles d&apos;audit personnalisés, vous pouvez utiliser la cartographie Gold Standard pour faire correspondre les risques, les contrôles et les éléments à signaler dans vos modèles avec le &quot;gold standard&quot; de Caseware. Grâce à ce processus de mise en correspondance, Sherlock peut extraire les risques, les contrôles et les éléments à déclarer des dossiers de mission qui sont basés sur le modèle du cabinet.</p>
+        <p><b>Pour configurer le mappage Gold Standard :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> ou des privilèges équivalents.</p>
+            </li>
+            <li>
+                <p>Ouvrez le <b>menu Cloud</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) et sélectionnez <b>Paramètres</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Sherlock Starter | Gold Standard Mapping</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>Ajouter une règle de mappage</b> (<img src="../../../Resources/Icons/add-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) sous le type de mappage applicable pour créer une nouvelle règle de mappage, ou l&apos;icône <b>Modifier</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) à côté d&apos;une règle existante.</p>
+                <p><img src="../../../Resources/Images/gold-standard-01.png" style="border:1px solid #000000" /></p>
+                <p class="note"><b>Remarque :</b> Vous ne pouvez pas modifier les règles de mappage avec le statut <b>ACTIF</b> .</p>
+            </li>
+            <li>
+                <p>Sur la page Select Source, sélectionnez un fichier Working Papers parmi les 20 fichiers les plus récents. Les<a href="https://documentation.caseware.com/latest/CaseView/en/Content/Customization/Databases/CaseView-database.htm">informations de la base de données CaseView</a> sont chargées à partir du fichier sélectionné. Sélectionnez jusqu&apos;à 3 groupes applicables et un formulaire.</p>
+                <p><img src="../../../Resources/Images/gold-standard-02.png" style="border:1px solid #000000" /></p>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>Sur la page Mapper des ID à des cibles, vous pouvez établir des relations en mappant des ID à des cibles. Sélectionnez l&apos;icône <b>Ajouter un ID</b> (<img src="../../../Resources/Icons/add-id-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) à droite d&apos;une cible, puis sur la page Ajouter des ID, sélectionnez les ID applicables à associer à la cible.</p>
+                <p><img src="../../../Resources/Images/gold-standard-03.png" style="border:1px solid #000000" /></p>
+                <p>Le numéro figurant à côté de chaque identifiant indique le nombre de fois qu&apos;il a été associé à une cible. Sélectionnez <b>Ajouter</b> pour mapper les ID.</p>
+                <p><img src="../../../Resources/Images/gold-standard-04.png" style="border:1px solid #000000" /></p>
+                <ul>
+                    <li>
+                        <p>(Facultatif) Sélectionnez <b>Affecter</b> à côté d&apos;une cible spécifique pour affecter une règle de transformation des valeurs. Sur la page Affecter une valeur à la transformation, à côté de l&apos;ID applicable, sélectionnez une règle existante dans le menu déroulant, cliquez sur l&apos;icône <b>Modifier</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour modifier une règle existante ou cliquez sur l&apos;icône <b>Ajouter une règle de transformation</b> (<img src="../../../Resources/Icons/add-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour créer une nouvelle règle. Par exemple :</p>
+                        <p><img src="../../../Resources/Images/gold-standard-05.png" style="border:1px solid #000000" /></p>
+                    </li>
+                </ul>
+                <p>Lorsque vous avez terminé, sélectionnez <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>La page Résumé affiche une vue d&apos;ensemble de la règle de mappage. Si la règle de mappage est complète, sélectionnez <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>La règle de mappage est enregistrée en tant que projet. Sélectionnez l&apos;icône <b>Modifier</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour continuer à modifier la règle, ou sélectionnez <b>ACTIVER</b> au-dessus du type de mappage pour activer la règle.</p><div class="note"><p><b>Notes :</b></p>
+                    <ul>
+                        <li>
+                            <p>S&apos;il existe deux règles à l&apos;état de <b>PROJET</b> pour un type de mappage particulier, le fait de sélectionner <b>ACTIVER</b> activera les deux règles.</p>
+                        </li>
+                        <li>
+                            <p>Une fois activée, vous ne pouvez plus modifier ou supprimer une règle de mappage.</p>
+                        </li>
+                        <li>
+                            <p>Chaque point de contrôle, de risque ou de gestion peut avoir jusqu&apos;à deux règles de correspondance.</p>
+                        </li>
+                    </ul></div></li>
+        </ol>
+    </body>
+</html>

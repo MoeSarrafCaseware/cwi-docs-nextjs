@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gegevens importeren en beheren</h1>
+        <p>Je kunt proefbalans-, grootboek- en subgrootboekgegevens vanuit verschillende bronnen importeren in je engagement.</p>
+        <p>Gegevensimportbestanden, zoals Excel- of CSV-bestanden, worden gegevensbronnen genoemd, die je vervolgens kunt configureren en toewijzen aan een dataset op de pagina <strong>Datasets</strong> . Meerdere gegevensbronnen kunnen worden toegewezen aan een enkele dataset. Daarnaast kun je ook ongestructureerde data importeren - data die niet gemakkelijk kan worden toegewezen aan een van de bestaande dataset types - door het Other dataset type te selecteren. De beschikbare importbron en dataset opties variëren per product.</p>
+        <p>Een engagement kan verschillende soorten datasets hebben, dat zijn verzamelingen van gegevens die normaal gesproken in een engagement worden gevonden. Elke dataset slaat gegevens op met betrekking tot een ander aspect van een engagement en heeft vooraf bepaalde velden. Zie beschrijvingen van datasets en hun velden in <MadCap:xref href="#Dataset">Typen beschreven datasets</MadCap:xref>.</p>
+        <p class="note inline"><b>Let op:</b> De pagina <strong>Datasets</strong> is niet beschikbaar voor gegevens die zijn geïmporteerd vanuit Working Papers of vanuit een andere opdracht. Het is alleen beschikbaar voor proefbalansgegevens die zijn geïmporteerd vanuit CSV of Excel als dit is ingeschakeld in uw product.</p>
+        <p>Zie voor meer informatie over het importeren en beheren van je gegevens:</p>
+        <ul>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file-old-method.htm">De saldibalans importeren vanuit een CSV- of Excel-bestand (oude methode)</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">De saldibalans importeren vanuit een CSV- of Excel-bestand (nieuwe methode)</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-data-from-online-accounting-sofware-new-method.htm">Gegevens importeren vanuit online accounting software</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-data-from-a-desktop-accounting-software.htm">Gegevens importeren uit desktop accounting software</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-from-Sage-desktop.htm">Importeren vanuit Sage-desktop</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-the-trial-balance-from-an-engagement-file.htm">De saldibalans importeren vanuit een opdrachtbestand</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">De transacties en andere subgrootboekgegevens van de klant importeren vanuit een CSV- of Excel-bestand</a></p>
+            </li>
+            <li>
+                <p><a href="../../Engagements/File-Preparation/Manage-your-imported-data.htm">Uw geïmporteerde gegevens beheren</a></p>
+            </li>
+        </ul>
+        <h2>Uitleg over gegevensbronnen en datasets, een voorbeeld</h2>
+        <p>Het diagram conceptualiseert de verschillen tussen gegevensbronnen en datasets. Zie ook <a href="../../Engagements/File-Preparation/Resolve-data-conflicts.htm">Gegevensimportconflicten oplossen</a> voor meer informatie over hoe gegevensconflicten kunnen ontstaan en hoe je ze kunt oplossen.</p>
+        <p><img src="../../Resources/Images/Dataset-versus-data-sources.png" alt="Gegevensbronnen in relatie tot gegevensreeksen" /></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Een of meer gegevensbronnen kunnen worden geïmporteerd in een dataset. Elk gegevensimportbestand wordt weergegeven als een afzonderlijke gegevensbron. Er is een gegevensconflict tussen ImportbestandA en ImportbestandB in de gegevensrij waarvan de leverancier-ID 1234 is in beide bestanden. In dit geval heeft de gebruiker ervoor gekozen om de gegevens in ImportFileA te bewaren.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>De resulterende dataset bevat niet noodzakelijk alle gegevensrijen van alle gegevensbronnen, afhankelijk van hoe mogelijke gegevensconflicten worden opgelost.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Je kunt de gegevens waaruit een dataset bestaat bekijken door de dataset te exporteren.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Dataset"></a>Typen beschreven datasets</h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>DATASETTYPE</th>
+                    <th>Omschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Understand-genledger-data.htm?region=int#General">Grootboek</a></td>
+                    <td>Grootboekposten</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Trial-balance-described.htm">Saldibalans</a></td>
+                    <td>Een werkblad waarin alle grootboeken worden samengevoegd in debet- en creditkolommen om ervoor te zorgen dat de boekhouding van een bedrijf wiskundig correct is.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-invoices.htm">Crediteuren - facturen </a></td>
+                    <td>
+                        <p>De dataset Crediteuren-facturen bevat alle facturen die tijdens de onderzochte periode zijn ontvangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-payments-made.htm">Crediteuren — gemaakte betalingen</a></td>
+                    <td>
+                        <p>De dataset Crediteuren-betalingen bevat alle betalingstransacties (cheque, overboeking, contant, enzovoort) die tijdens de periode zijn uitgevoerd.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-suppliers.htm">Crediteuren — leveranciers</a></td>
+                    <td>
+                        <p>De Accounts payable-suppliers dataset bevat alle details met betrekking tot de leverancier, zoals contactgegevens, adres, kredietlimiet enzovoort.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AP-open-balances.htm">Crediteuren - openstaande saldi</a></td>
+                    <td>
+                        <p>De dataset Openstaande rekeningen-betaalbaar bevat gegevens over alle openstaande, onbetaalde of onopgeloste crediteurentransacties aan het einde van het boekjaar op een bepaalde datum.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-invoices.htm">Debiteuren — facturen</a></td>
+                    <td>
+                        <p>De dataset Debiteuren-facturen bevat alle facturen die tijdens de onderzochte periode zijn gegenereerd.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-cash-received.htm">Debiteuren — ontvangen betalingen</a></td>
+                    <td>
+                        <p>De dataset Debiteuren-ontvangen contanten bevat alle betalingstransacties (cheque, overboeking, contanten, enzovoort) die tijdens de periode zijn ontvangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-customers.htm">Debiteuren — klanten</a></td>
+                    <td>De dataset Debiteuren-klanten bevat alle details over de klant, zoals contactgegevens, adres, kredietlimiet enzovoort.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-AR-open-balances.htm">Debiteuren — openstaande saldi</a></td>
+                    <td>De dataset Openstaande rekeningen-betaalbaar bevat gegevens over alle openstaande, onbetaalde of onopgeloste crediteurentransacties aan het einde van het boekjaar op een bepaalde datum.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-transactions.htm">Voorraadtransacties</a></td>
+                    <td>Legt alle transacties vast die van invloed zijn op inventarisrekeningen tijdens de opgegeven periode (bijvoorbeeld ontvangsten, verzendingen, overdrachten, retouren en aanpassingen).</td>
+                </tr>
+                <tr>
+                    <td><a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Subledger-data-schema-inventory-on-hand.htm">Beschikbare voorraad</a></td>
+                    <td>Legt de voorraadhoeveelheden van artikelen vast per locatie en hoeveelheid vanaf de opgegeven datum.</td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td>Ongestructureerde transactiegegevens die geen vooraf gedefinieerd schema volgen. Selecteer deze optie om gegevens te importeren die niet overeenkomen met een van de datasettypen die hier worden beschreven. Elk bestand dat je importeert met dit type dataset wordt beschouwd als een eigen dataset.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

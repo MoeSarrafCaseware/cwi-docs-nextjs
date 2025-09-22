@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entities to represent client firms, which can be used by contacts and staff to collaborate and store files" />
+    </head>
+    <body>
+        <h1>Kundenentität erstellen</h1>
+        <p>In Caseware Cloud werden Kunden oder Mandanten durch <b>Kundenentitäten</b> repräsentiert. Diese Entitäten können auf verschiedene Weise kategorisiert und organisiert werden, indem z. B. Verbünde gebildet oder Tags oder Workflow-Status zugewiesen werden.</p>
+        <h2 id="Creating-client-workspaces-from-a-client-list"><a name="Creating"></a>Kundenentitäten aus einer Kunden/Mandanten-Liste erstellen</h2>
+        <p>CaseWare Cloud ermöglicht Ihnen das Hinzufügen von mehreren Kundenentitäten in einem einzigen Verfahren mit Hilfe einer .CSV Datei oder einer durch Trennzeichen unterteilten Datei oder eines durch Trennzeichen unterteilten Textblocks.</p>
+        <p>Bei beiden Methoden ist Folgendes sicherzustellen:</p>
+        <ul>
+            <li>
+                <p>Jede Zeile repräsentiert eine Kundenentität und</p>
+            </li>
+            <li>
+                <p>Jede Spalte repräsentiert eine Eigenschaft, wie z. B. Name, Startdatum und Tags. Um mehrere Tags zuzuweisen, setzen Sie die Tags zwischen Anführungszeichen und trennen Sie sie durch Kommas. Jeder Tag, der aktuell nicht in Caseware Cloud existiert, wird bei Durchführung des Imports erstellt.</p>
+            </li>
+            <li>
+                <p>Die Datumsangaben in den Spalten <b>Mandant/Kunde seit</b> und <b>Deaktivierungsdatum</b> müssen das gleiche Format wie das in Ihren persönlichen Regionalen Einstellungen gesetzte Datum haben.</p>
+            </li>
+        </ul>
+        <p>In diesem Beispiel möchte ein Administrator zwei Kundenentitäten hinzufügen:</p>
+        <p><i>Name, Standort, Entitätsnummer, Mandant/Kunde seit</i><br style="font-style: italic;" /><i>Zahnmuster Dentaltechnik AG, Brügge, BEL-109, 17. Februar 2019</i><br style="font-style: italic;" /><i>Musterhauszaun GmbH, Gerlingen, ESF-305, 15. Mai 2012</i></p><MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp" /><p>Die Entitäten werden zu Caseware Cloud hinzugefügt. Alle existierenden Entitäten mit der gleichen <b>Entitätsnummer</b> werden geändert.</p>
+        <h2 id="Creating-a-single-client-workspace"><a name="Single"></a>Eine einzelne Kundenentität erstellen</h2>
+        <p>Wenn Sie stattdessen Unternehmen individuell erstellen möchten, können Sie dies auf der Seite <b>Entitäten</b> durchführen.</p>
+        <p><b>Eine Entität erstellen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Entitätenadministrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Klicken Sie im Hauptmenü auf <b>Entitäten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Neu</b> und den geeigneten Entitätstyp.</p>
+                <p><img src="../../Resources/Images/Entity-new-create-types-630x220.png" alt="Bei der Erstellung einer neuen Entität müssen Sie zuerst den Entitätstyp auswählen." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie das <b>Land, in dem die Registrierung erfolgte</b> und einen <b>Unternehmenstyp</b>. Die zur Verfügung stehenden Unternehmenstypen variieren basierend auf dem ausgewählten Land der Registrierung. Weitere Informationen erhalten Sie in <MadCap:xref href="../../Explore/Interface/Entities/Entity-creation.htm">Entität erstellen</MadCap:xref>.</p>
+                <p><img src="../../Resources/Images/entities-create-new-entity-CAN.png" alt="Der Dialog Entität erstellen." /></p>
+            </li>
+            <li>
+                <p>Geben Sie <b>Name</b> und <b>Entitätsnummer</b> ein. Diese Felder sind erforderlich.</p>
+                <p class="note"><b>Hinweis:</b> Es kann sein, dass die Entitätenseite nicht korrekt sortiert wird, wenn sie alphanumerische Codes mit inkonsistenten Längen beinhaltet (z. B. 1 ABC, 23 DEF, 456 GHI). Um dies zu korrigieren, füllen Sie jede Zahl mit Nullstellen auf, um eine konsistente Länge zu gewährleisten (z. B. 001 ABC, 023 DEF, 456 GHI), oder verwenden Sie numerische Codes.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p>Die Entität wurde hinzugefügt und wird auf der Seite Entitäten angezeigt.</p>
+        <h2 id="Tagging-workspaces">Entitäten mit Tags versehen</h2>
+        <p>Die Zuordnung von <b>Tags</b> hilft Ihnen bei der Kategorisierung und Identifizierung von Personen, Dateien und Entitäten in Ihrem Unternehmen. Sie können Entitäten entsprechend ihrer Branche, ihrer Organisationsstruktur oder der durchgeführten Arbeit mit Tags versehen.</p>
+        <p style="font-weight: bold;">Entitäten mit Tags versehen:</p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Mitarbeiteradministrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Klicken Sie im Caseware Cloud Hauptmenü auf den Eintrag <b>Entitäten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die Entität, für die Sie die Tags bearbeiten möchten. Klicken Sie auf das Symbol <b>Tag</b> (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Tag-entity-select-630x80.png" alt="Wählen Sie das Symbol Tag für eine Entität oder Datei, um deren Tags zu verwalten." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie geeignete <b>Nicht zugewiesene</b> Tags, um diese zuzuweisen.</p>
+                <p><img src="../../Resources/Images/Tags-assign-dialog-645x339.png" alt="Der Dialog Tags zuweisen" /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>, um Ihre Änderungen anzuwenden.</p>
+            </li>
+        </ol>
+        <p>Nachdem Sie Tags einer Entität zugewiesen haben, können Sie über die Suchleiste Entitäten basierend auf ihren Tags filtern.</p>
+        <p><img src="../../Resources/Images/caseware-cloud-searching-with-tags.png" alt="Tags werden in der Drop-down-Liste Filter angezeigt." /></p>
+        <h2 id="Categori">Kundenentitäten kategorisieren</h2>
+        <p>Sollten Sie einen Workflow für Kundenentitäten erstellt haben, können Sie den Workflow-Status verwenden, um Ihre Kundenentitäten angemessen zu kategorisieren. Weitere Informationen zur Erstellung von Workflows erhalten Sie in <a href="../Administration-and-Settings/Create-custom-fields-tags-and-workflows.htm">Benutzerdefinierte Felder, Tags und Workflows erstellen</a>.</p>
+        <p>Es besteht auch die Möglichkeit, Entitäten über den Entitätsstatus zu kategorisieren. Workflow-Status und Entitätsstatus sind nur informativ und haben keinen Einfluss darauf, welche Aktionen ein Mitarbeiter in der Entität ausführen kann.</p>
+        <p>Bevor Sie beginnen, sollten Sie sicherstellen, dass Sie über die Rolle <i>Zugriff auf Entität</i> bzw. entsprechende Rechte verfügen.</p>
+        <p style="font-weight: bold;">Einen Workflow-Status für Entität festlegen:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie aus dem <b>Caseware Cloud</b> Menü(<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) die Option <b>Entitäten</b> und wählen Sie dann die Entität, die Sie bearbeiten möchten.</p>
+            </li>
+            <li>
+                <p>Wählen Sie den aktuellen Workflow-Status und anschließend den Workflow-Status, den Sie der Entität zuweisen möchten.</p>
+                <p><img src="../../Resources/Images/Workflow-update-client-640x433.png" alt="Aktualisieren Sie den Workflow Ihres Kunden/Mandanten, um den Typ zu ändern" /></p>
+            </li>
+        </ol>
+        <p><b>Einen Entitätsstatus festlegen:</b></p>
+        <ol>
+            <li>
+                <p>Wählen Sie aus dem <b>Caseware Cloud</b> Menü(<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) die Option <b>Entitäten</b> und wählen Sie dann die Entität, die Sie bearbeiten möchten.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf das Symbol <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Dialog <b>Entität bearbeiten</b> die Registerkarte <b>Profil</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie den geeigneten Status aus der Drop-down-Liste <b>Status</b>.</p>
+                <p><img src="../../Resources/Images/entities-profile-status-active.png" /></p>
+            </li>
+        </ol>
+    </body>
+</html>

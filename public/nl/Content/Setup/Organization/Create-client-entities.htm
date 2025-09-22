@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entities to represent client firms, which can be used by contacts and staff to collaborate and store files" />
+    </head>
+    <body>
+        <h1>Klantentiteiten aanmaken</h1>
+        <p>In Cloud worden klantorganisaties vertegenwoordigd door <b>Client Entities</b>. Deze entiteiten kunnen op verschillende manieren worden gecategoriseerd en georganiseerd, bijvoorbeeld door er associaties tussen te maken of door tags of workflowfasen toe te wijzen.</p>
+        <h2 id="Creating-client-workspaces-from-a-client-list"><a name="Creating"></a>Klantentiteiten maken van een klantenlijst</h2>
+        <p>Met Cloud kunt u meerdere klantentiteiten in één procedure toevoegen met behulp van een .csv-bestand of een blok afgebakende tekst.</p>
+        <p>Zorg er bij beide methoden voor dat:</p>
+        <ul>
+            <li>
+                <p>Elke rij vertegenwoordigt een klantentiteit en</p>
+            </li>
+            <li>
+                <p>Elke kolom vertegenwoordigt een eigenschap, zoals hun naam, begindatum en tags. Om meerdere tags toe te wijzen, plaatst u de tags tussen aanhalingstekens en scheidt u ze met komma&apos;s. Alle tags die momenteel nog niet bestaan in Cloud zullen worden aangemaakt door de import uit te voeren.</p>
+            </li>
+            <li>
+                <p>De datums in de kolom <b>Client Since (Klant sinds</b>  <b>)</b> en <b>Inactive Date (Inactieve datum)</b> moeten hetzelfde formaat hebben als het datumformaat dat is ingesteld in je persoonlijke regionale instellingen.</p>
+            </li>
+        </ul>
+        <p>In dit voorbeeld wil een beheerder twee cliëntentiteiten toevoegen:</p>
+        <p><i>Naam, locatie, entiteitnummer, klant sinds, einde boekjaar, tags</i><br style="font-style: italic;" /><i>Chockablock Industries, Toronto, 4829, 09/07/2012, December, &quot;Retail, Partnership&quot;</i><br style="font-style: italic;" /><i>Superieur meubilair, Singapore, 5937, 22 /08/2010, December, Singapore</i></p><MadCap:snippetBlock src="../../Resources/Snippets/To-import-a-list-of-entities.flsnp" /><p>De entiteiten worden toegevoegd aan Cloud. Bestaande entiteiten met hetzelfde <b>entiteitnummer</b> worden gewijzigd.</p>
+        <h2 id="Creating-a-single-client-workspace"><a name="Single"></a>Creating a single client entity</h2>
+        <p>Als je in plaats daarvan organisaties individueel wilt maken, kun je dat doen op de pagina <b>Entiteiten</b> .</p>
+        <p><b>Entiteiten aanmaken</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Nieuw</b> en het juiste entiteittype.</p>
+                <p><img src="../../Resources/Images/Entity-new-create-types-630x220.png" alt="Als u een nieuwe entiteit aanmaakt, selecteert u eerst het entiteittype." /></p>
+            </li>
+            <li>
+                <p>Kies een <b>Land van registratie</b> en een <b>Organisatietype</b>. De beschikbare organisatietypen variëren afhankelijk van het land van registratie dat is geselecteerd. Voor meer informatie, zie <MadCap:xref href="../../Explore/Interface/Entities/Entity-creation.htm">Entiteit aanmaken</MadCap:xref>.</p>
+                <p><img src="../../Resources/Images/entities-create-new-entity-CAN.png" alt="Het dialoogvenster Entiteit maken verschijnt." /></p>
+            </li>
+            <li>
+                <p>Voer een <b>naam</b> en <b>entiteitnummer</b>in. Deze velden zijn verplicht.</p>
+                <p class="note"><b>Let op:</b> De pagina Entiteiten sorteert mogelijk niet correct als deze alfanumerieke codes bevat met inconsistente lengtes (bijv. 1 ABC, 23 DEF, 456 GHI). Om dit te corrigeren, vult u elk nummer op met nullen om een consistente lengte te garanderen (bijv. 001 ABC, 023 DEF, 456 GHI) of gebruikt u numerieke codes.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>De entiteit is toegevoegd en wordt weergegeven op de pagina Entiteiten.</p>
+        <h2 id="Tagging-workspaces">Entiteiten taggen</h2>
+        <p>Het toekennen van <b>Tags</b> helpt bij het categoriseren en identificeren van mensen, bestanden en entiteiten in uw organisatie. U kunt entiteiten taggen op basis van hun branche, organisatiestructuur of het soort werk dat uw organisatie voor hen uitvoert.</p>
+        <p style="font-weight: bold;">Entiteiten taggen:</p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer het veld waaraan u de tag wilt toewijzen. Selecteer <b>Tag</b> (<img src="../../Resources/Icons/Tag-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) in het menu van de entiteit.</p>
+                <p><img src="../../Resources/Images/Tag-entity-select-630x80.png" alt="Selecteer het Tag-pictogram op een entiteit of bestand om de tags ervan te beheren" /></p>
+            </li>
+            <li>
+                <p>Kies de juiste <b>Niet-toegewezen</b> tags om ze toe te wijzen.</p>
+                <p><img src="../../Resources/Images/Tags-assign-dialog-645x339.png" alt="Het dialoogvenster Componenten toewijzen." /></p>
+            </li>
+            <li>
+                <p>Klik op <b>OK</b> om de parameters toe te passen.</p>
+            </li>
+        </ol>
+        <p>Nadat u tags aan een entiteit hebt toegekend, kunt u entiteiten filteren op basis van hun tags in de zoekbalk.</p>
+        <p><img src="../../Resources/Images/caseware-cloud-searching-with-tags.png" alt="Tags die worden weergegeven in het vervolgkeuzemenu Filter." /></p>
+        <h2 id="Categori">Klantentiteiten aanmaken</h2>
+        <p>Als u een workflow voor klantentiteiten hebt gemaakt, kunt u de stappen van die workflow gebruiken om uw klantentiteiten op de juiste manier te categoriseren. Zie <a href="../Administration-and-Settings/Create-custom-fields-tags-and-workflows.htm">Aangepaste velden, tags en workflows maken</a>voor meer informatie over het maken van workflows.</p>
+        <p>U kunt entiteiten ook categoriseren met behulp van de entiteitstatus. Zowel werkstroomstadia als entiteitstatussen zijn alleen informatief en hebben geen invloed op de acties die een medewerker in de entiteit kan ondernemen.</p>
+        <p>Zorg ervoor dat u de rol <i>Entity Access</i> of gelijkwaardige rechten voor de entiteit hebt.</p>
+        <p style="font-weight: bold;">De workflowfase van een entiteit instellen:</p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Entiteiten</b> in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) en selecteer vervolgens de entiteit die u wilt bewerken.</p>
+            </li>
+            <li>
+                <p>Selecteer de huidige workflowfase van de entiteit en selecteer vervolgens de workflowfase die u aan de entiteit wilt toewijzen.</p>
+                <p><img src="../../Resources/Images/Workflow-update-client-640x433.png" alt="Werk de workflow van je klant bij om het type te wijzigen" /></p>
+            </li>
+        </ol>
+        <p><b>De status van een entiteit instellen:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Entiteiten</b> in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) en selecteer vervolgens de entiteit die u wilt bewerken.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Afronden</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer in het dialoogvenster Delen het tabblad <b>Contactpersonen</b> .</p>
+            </li>
+            <li>
+                <p>Selecteer de juiste status in de vervolgkeuzelijst <b>Status</b> .</p>
+                <p><img src="../../Resources/Images/entities-profile-status-active.png" /></p>
+            </li>
+        </ol>
+    </body>
+</html>

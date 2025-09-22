@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Prepare"></a>Prepare a CSV file for import (Data page)</h1>
+        <p>The CSV file must include the following columns They can have empty values but each column must be available in the file:</p>
+        <ul>
+            <li>Map number</li>
+            <li>Kontoname</li>
+            <li>Postable</li>
+            <li>Typ</li>
+            <li>Sign</li>
+        </ul>
+        <p>You can optionally include the following columns:</p>
+        <ul>
+            <li>Weight</li>
+            <li>Allow</li>
+            <li>Contrary Name</li>
+            <li>Inconsistent Name</li>
+            <li>Dimension Category</li>
+            <li>Excluded Dimensions</li>
+            <li>Reassign Group for contrary accounts</li>
+            <li>Group Classification</li>
+            <li>Link to a Tax Group</li>
+            <li>Link to a Chart of Accounts Group</li>
+            <li>Prozess</li>
+            <li>Prüffeld</li>
+            <li>Components</li>
+            <li>Default group</li>
+        </ul>
+        <p>You can use these columns to help <a href="Set-up-automapping-(Data-page).htm">set up automapping</a> (automatic assignment of accounts to groupings) when users import a new trial balance.</p>
+        <p><a name="csv-columns-and-values"></a>The following listing describes the columns and the expected value for each column.</p>
+        <h2>Map Number (mandatory)</h2>
+        <p>Enter a map number for the grouping. Also known as <i>group number</i> in SE.</p>
+        <p><b>Expected value:</b></p>
+        <p><i>Number</i> - can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+        <h2>Kontoname</h2>
+        <p>Enter a name for the grouping. Also known as <i>group name</i> in SE.</p>
+        <p><b>Expected value:</b></p>
+        <p><i>Text</i> - can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+        <p>If this field is left blank, <b>&quot;[Untitled]&quot;</b> displays as the group name.</p>
+        <h2>Postable</h2>
+        <p>Indicate whether accounts can be assigned to the group.</p>
+        <p><b>Expected value:</b></p>
+        <ul>
+            <li><b>Y</b> or <b>1</b> or <b>TRUE</b>- accounts cannot be assigned to the group</li>
+            <li><b>N</b> or <b>0</b> or <b>FALSE</b> - accounts can be assigned to the group</li>
+        </ul>
+        <p>If this field is left blank, the system assumes that the accounts can be assigned to a group and one of the these values is added (<b>N</b> or <b>0</b> or <b>FALSE</b>).</p>
+        <h2>Type (mandatory)</h2>
+        <p>Indicates whether the grouping belongs to the balance sheet, income statement, comprehensive income, or net income.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <ul>
+            <li><![CDATA[
+]]><b>B</b> - Balance Sheet</li>
+            <li><![CDATA[
+]]><b>I</b> - for Income Statement</li>
+            <li><![CDATA[
+]]><b>C</b> - for Comprehensive Income</li>
+            <li><![CDATA[
+]]><b>N</b> - for Net Income</li>
+        </ul>
+        <h2>Sign</h2>
+        <p>Indicate whether the grouping should be for debit accounts or credit accounts.</p>
+        <p>Expected value:</p>
+        <ul>
+            <li><b>D</b>- debit</li>
+            <li><b>C</b>- credit</li>
+        </ul>
+        <p>If this field is left blank, the system assumes debit is the grouping sign and the value <b>D</b> is applied.</p>
+        <h2>Group Classification</h2>
+        <p>Enter automapping classification for the grouping.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p><i>Text </i></p>
+        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+        <h2>Weight</h2>
+        <p>Enter a weight for the grouping.</p>
+        <p>In cases where multiple groupings have the same classification, then any account with that classification will be assigned to the grouping with the highest weighting number. For example, groups with a positive weight are preferred over groups without a weight assigned.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Numerical value between -1 and +1.</p>
+        <p>If this field is left blank, the weight is assigned a value <b>0</b>.</p>
+        <h2>Allow</h2>
+        <p>Indicate whether the grouping has any account balance restrictions.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <ul>
+            <li><b>*</b> (Accounts with any balance to be assigned)</li>
+            <li><b>+</b> (Only accounts with debit (positive) balance to be assigned)</li>
+            <li><![CDATA[
+]]><b>-</b> (Only accounts with credit (negative) balance to be assigned)</li>
+        </ul>
+        <p>If this field is left blank, the system assumes that the accounts with any balance can be assigned to the group and the value <b>*</b> is applied.</p>
+        <h2>Link to a Tax Group</h2>
+        <p>Enter a group number from the <b>Link to a group in the Tax Code</b> grouping structure drop-down in the Group Properties dialog.</p>
+        <p>By adding this value, you automatically assign accounts to groups in the Tax grouping structure based on their initial group assignment.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p><i>Text</i></p>
+        <h2>Link to a Chart of Accounts Group</h2>
+        <p>Enter a group number from the <b>Link to a group in the Prescribed</b> grouping structure drop-down in the Group Properties dialog.</p>
+        <p>By adding this value, you automatically assign accounts to groups in the Prescribed grouping structure based on their initial group assignment.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p><i>Text</i></p>
+        <h2>Prozess</h2>
+        <p>Enter a cycle for the group (as defined in the <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Product Settings</a>).</p>
+        <p>When you assign a group to a business cycle, items in that group will automatically be shown under this cycle in the <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">Risk Assessment</a> document, making it easier to audit by business cycle.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Prüffeld</h2>
+        <p style="font-style: normal;">Enter an area for the group (as defined in the <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Product Settings</a>).</p>
+        <p style="font-style: normal;">When you assign a group to an area, items in that group will automatically be shown under this area in the <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">Risk Assessment</a> document, making it easier to audit by area.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Components</h2>
+        <p>Components provide a more market-driven, region-driven or product-driven visibility logic for trial balance groups. For example, if the entity operates within the <i>Agriculture</i> industry, then only display trial balance groups that are relevant to agriculture. To learn more, see <a href="Group-properties.htm#Componen">Components.</a></p>
+        <p>Enter one or more component to assign to the group (as defined in the <a href="Define-components.htm">Product Settings</a>).</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <p>Use a colon to separate multiple components associated with a group (example: component1;component2;component3).</p>
+        <h2>Contrary Name</h2>
+        <p>If applicable, enter a description for group entries that are opposite to the group&apos;s normal sign.</p>
+        <p>For example, &quot;Bank Overdraft&quot; will appear instead of &quot;Bank&quot; when the account balance is a credit.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Inconsistent Name</h2>
+        <p>If applicable, enter an alternative description for the group when the current and prior year have opposite signs.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Dimension Category</h2>
+        <p>Enter a dimension category for the group (select from the list defined in <a href="Add-dimensions.htm#Add">Product Settings</a>).</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Excluded Dimensions</h2>
+        <p>Enter the dimensions that are excluded from the selected category.</p>
+        <p class="note inline"><b>Note:</b> This property is only be available if a value for <b>Dimension Category</b> exists.</p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <p>Use a colon to separate multiple excluded dimensions (example: dimension1;dimension2)</p>
+        <h2>Reassign Group for contrary accounts</h2>
+        <p>If applicable, enter a group from the Financials grouping structure for accounts with a contrary balance.</p>
+        <p>If an account should automatically be assigned to a specific group but it does not match the selected sign (debit or credit) for this group, it is automatically assigned to the <b>reassign target. </b>For example, negative <b>Asset</b> -&gt; positive <b>Liability </b></p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <p style="font-style: italic;">Text</p>
+        <h2>Default Group</h2>
+        <p style="font-style: normal;">Specify whether or not the group is a default group. To learn more, see <a href="Group-properties.htm#Default">Default Group.</a></p>
+        <p style="font-weight: bold;">Expected value:</p>
+        <ul>
+            <li><b>Y</b> or <b>1</b> or <b>TRUE</b></li>
+            <li><![CDATA[
+]]><b>N</b> or <b>0</b> or <b>FALSE</b></li>
+        </ul>
+    </body>
+</html>

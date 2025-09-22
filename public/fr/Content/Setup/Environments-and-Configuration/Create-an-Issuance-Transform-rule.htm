@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Créer une règle de transformation des délivrances (ADFS)</h1>
+        <p>Créez une règle Issuance Transform pour faire correspondre les attributs LDAP aux créances sortantes.</p>
+        <p style="font-weight: bold;">• Créer une règle de transformation des délivrances</p>
+        <ol>
+            <li>
+                <p>Dans la console d&apos;administration ADFS, cliquez sur le dossier <b>Groupes d&apos;application</b> , puis double-cliquez sur votre <a href="Create-a-new-application-group.htm">nouveau groupe d&apos;application</a>.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Propriétés, double-cliquez sur l&apos; <a href="Create-a-Web-API-application.htm">application API Web</a>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-01.png" /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Propriétés de l&apos;API Web, cliquez sur l&apos;onglet <b>Règles de transformation de l&apos;émission</b> , puis sur <b>Ajouter une règle</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-02.png" /></p>
+            </li>
+            <li>
+                <p>Cliquez sur le menu déroulant du <b>modèle de règle de réclamation</b> et sélectionnez <b>Send LDAP Attributes as Claims (Envoyer les attributs LDAP en tant que réclamations</b>). Cliquez sur <b>Suivant.</b></p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-03.png" /></p>
+            </li>
+            <li>
+                <p>Saisissez un nom de règle de réclamation, puis cliquez sur le menu déroulant <b>Attribute store</b> et sélectionnez <b>Active Directory</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-04.png" /></p>
+            </li>
+            <li>
+                <p>Complétez le tableau Mapping of LDAP attribute to outgoing claim types comme suit :</p>
+                <table class="table">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <tbody>
+                        <tr>
+                            <th>Attribut LDAP</th>
+                            <th>Type de réclamation sortante</th>
+                        </tr>
+                        <tr>
+                            <td>E-Mail-Addresses</td>
+                            <td>Courriel</td>
+                        </tr>
+                        <tr>
+                            <td>Prénom</td>
+                            <td>&quot;prénom&quot;,</td>
+                        </tr>
+                        <tr>
+                            <td>NOM</td>
+                            <td>&quot;nom_de_famille&quot;,</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Oui</b> pour remplir le rapport.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Generate-the-reply-URL-ADFS.htm">Générer l&apos;URL de réponse (Okta)</a></p>
+    </body>
+</html>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Stock disponible décrit</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du livre auxiliaire Inventaire disponible.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID de la transaction <br /><code>(inventory_on_hand_transaction_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant de la transaction associé aux normes de données d&apos;audit du grand livre auxiliaire (ADS) Procure to Pay ou Order to Cash.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du produit en stock <br /><code>(inventory_on_hand_inventory_product_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant du produit est un code qui identifie de manière unique un article que vous avez en stock.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de série <br /><code>(numéro de série de l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>Le numéro associé à un produit individuel qui est utilisé pour le suivi et la gestion. Par exemple, une entreprise achète 10 ordinateurs, chaque ordinateur se voyant attribuer un numéro de série individuel.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Sixième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot <br /><code>(numéro de lot de l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>Numéro associé à un produit, utilisé pour le suivi et la gestion du lot.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Cinquième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID du lieu <br /><code>(inventory_on_hand_location_id</code>)</td>
+                    <td>L&apos;identifiant unique d&apos;un emplacement spécifique au sein d&apos;une division ou d&apos;un site où les stocks sont reçus, conservés et distribués. Type de données : Texte requis : Non</td>
+                </tr>
+                <tr>
+                    <td>Stocks détenus pour les fournisseurs <br /><code>(inventaire_en_main_inventaire_détenu_pour_les_fournisseurs</code>)</td>
+                    <td>
+                        <p>Vrai, si l&apos;inventaire est physiquement présent et qu&apos;il est détenu pour les vendeurs ; faux, dans le cas contraire.</p>
+                        <p>Type de données : Enum</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Valeurs possibles : true ou false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stocks détenus pour les clients <br /><code>(inventaire_en_main_inventaire_détenu_pour_les_clients</code>)</td>
+                    <td>
+                        <p>Vrai, si le stock est physiquement présent et s&apos;il est détenu pour les clients ; faux, dans le cas contraire.</p>
+                        <p>Type de données : Enum</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Valeurs possibles : true ou false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stocks détenus pour d&apos;autres <br /><code>(inventaire_en_main_inventaire_détenu_pour_les_autres</code>)</td>
+                    <td>Vrai, si le stock est physiquement présent et s&apos;il est détenu pour d&apos;autres personnes que des clients ou des fournisseurs ; faux, dans le cas contraire. Type de données : Enum Requis : Non Valeurs possibles : vrai ou faux.</td>
+                </tr>
+                <tr>
+                    <td>Inventaire obsolète ou endommagé <br /><code>(inventaire_en_main_obsolete_ou_inventaire_endommagé</code>)</td>
+                    <td>
+                        <p>Cet état des stocks permet d&apos;identifier les quantités en stock à faible rotation, endommagées ou obsolètes.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Exemples de valeurs : lent, endommagé ou obsolète</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID de la corbeille <br /><code>(inventory_on_hand_bin_id</code>)</td>
+                    <td>
+                        <p>L&apos;identifiant optionnel d&apos;un sous-lieu d&apos;inventaire. Code utilisé dans un système de gestion des stocks.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Quatrième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;-&lt;QuatrièmeAlternatif&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emplacement de la corbeille <br /><code>(inventaire_on_hand_bin_location</code>)</td>
+                    <td>Description du sous-lieu d&apos;inventaire identifié dans l&apos; <b>ID d&apos;</b>emplacement. Type de données : Texte requis : Non</td>
+                </tr>
+                <tr>
+                    <td>Quantité en stock <br /><code>(quantité_d&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>L&apos;inventaire dont l&apos;unité de mesure est spécifiée dans l&apos; <b>UOM du stock</b>.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Méthode du coût des stocks <br /><code>(méthode_du_coût_de_l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>La description des pratiques de calcul des coûts, telles que LIFO, FIFO, moyenne, standard et identification spécifique.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coût des stocks <br /><code>(stock_en_main_inventaire_coût</code>)</td>
+                    <td>
+                        <p>Le coût par unité en utilisant la méthode décrite dans la section <b>Méthode du coût des stocks</b>.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantité disponible Système <br /><code>(système d&apos;inventaire_à_main_quantité_à_main</code>)</td>
+                    <td>
+                        <p>Soit la quantité disponible lors du dernier comptage physique selon le système source, soit la quantité disponible calculée.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire en date du <br /><code>(inventaire_en_main_inventaire_à_la_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle vous commencez à suivre la quantité disponible d&apos;un article en stock.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code UOM pour le calcul du coût de revient de l&apos;inventaire <br /><code>(code_costing_uom_inventory_on_hand</code>)</td>
+                    <td>
+                        <p>Le code de l&apos;unité de mesure du coût de l&apos;inventaire.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code de l&apos;unité opérationnelle <br /><code>(code de l&apos;unité commerciale de l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>Utilisé pour identifier l&apos;unité commerciale, la région, la succursale, etc. au niveau où les états financiers sont audités.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                        <p>Clé primaire : Deuxième suppléant. Si l&apos; <b>identifiant de transaction</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Achats de stocks UOM <br /><code>(inventaire_en_main_inventaire_achats_uom</code>)</td>
+                    <td>
+                        <p>L&apos;unité de mesure principale utilisée pour exprimer les quantités de biens achetés par l&apos;organisation.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire Stockage UOM <br /><code>(inventaire_en_main_inventaire_stockage_uom</code>)</td>
+                    <td>
+                        <p>L&apos;unité de mesure utilisée pour compter les quantités d&apos;articles en stock.<![CDATA[
+]]></p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventaire Vente UOM <br /><code>(inventaire_en_main_inventaire_selling_uom</code>)</td>
+                    <td>
+                        <p>L&apos;unité de mesure principale dans laquelle sont exprimées les quantités vendues en stock.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coût standard <br /><code>(coût_standard_de_l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>S&apos;il est maintenu, le coût standard par unité.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coût moyen <br /><code>(coût moyen du stock_en_main</code>)</td>
+                    <td>
+                        <p>S&apos;il est maintenu, le coût moyen par unité.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coût spécifique <br /><code>(coût_spécifique_de_l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>S&apos;il est maintenu, le coût spécifique par unité.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantité disponible Comptage physique <br /><code>(inventaire_en_main_quantité_en_main_compte_physique</code>)</td>
+                    <td>
+                        <p>La quantité disponible lors du dernier comptage physique par comptage physique.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date du dernier décompte <br /><code>(inventaire_en_main_dernier_comptage_date</code>)</td>
+                    <td>
+                        <p>Date du dernier comptage physique.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prix de la liste d&apos;inventaire <br /><code>(prix_de_la_liste_de_l&apos;inventaire_en_main</code>)</td>
+                    <td>
+                        <p>Le prix de liste ou le prix de vente conseillé.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Achat de stocks depuis le début de l&apos;année <br /><code>(inventaire_en_main_inventaire_achat_année_à_date</code>)</td>
+                    <td>
+                        <p>La quantité achetée à cet endroit depuis le début de l&apos;année.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stocks vendus depuis le début de l&apos;année <br /><code>(inventaire_en_main_inventaire_vendu_année_à_date</code>)</td>
+                    <td>
+                        <p>Quantité vendue depuis le début de l&apos;année à partir de ce lieu.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lieu Monnaie <br /><code>(inventaire_on_hand_location_currency</code>)</td>
+                    <td>
+                        <p>La monnaie locale.</p>
+                        <p>Type de données : Texte</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

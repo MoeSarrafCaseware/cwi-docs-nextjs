@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Resolve data import conflicts</h1>
+        <p class="note inline"><strong>Note:</strong> Trial balance data cannot be merged within a single accounting period. When importing a new trial balance that contains account numbers already present in the existing data for the same period, the new balance amounts will completely replace the existing balance amounts. Any account numbers not previously in the system will be added as new accounts</p>
+        <p>For every row of data you import into Caseware Cloud, a unique identifier is created automatically using the values of one or more fields present in the data row. Where the data source is either a CSV or Excel file, data conflicts may be detected after you assign fields from incoming data to Caseware fields. See the scenarios below and how to resolve data conflicts in each. For more information on importing general ledger data from CSV or Excel files, see <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Import the client&apos;s data from a CSV or Excel file</a>.</p>
+        <p>See <a href="Understand-subledger-data.htm">Understand subledger datasets</a> for more information on how unique identifiers are formed in subledger datasets.</p>
+        <p>See <a href="Understand-genledger-data.htm">Understand the General ledger dataset</a> for more information on how unique identifiers are formed in the General ledger dataset.</p>
+        <h2>Data conflict in the same CSV or Excel file</h2>
+        <p>Data conflicts occur within a CSV or Excel file if more than one data row has the same unique identifier:</p>
+        <ul>
+            <li>A warning icon and a <strong>Reassign</strong> button appear in the Uploaded files section on the Import Data window.</li>
+            <li>If you hover over the warning icon, the following message appears, “Resolve conflicts in the data source before you reimport.”</li>
+        </ul>
+        <p><img src="../../Resources/Images/ResolveConflictsInDataSource-da-2024-09.png" alt="Resolve conflicts error message that appears if more than one data row in the CSV or Excel file has the same identifier." /></p>
+        <p><strong>To resolve data conflicts in the same import file:</strong></p>
+        <ol>
+            <li>You have these options:<ol style="list-style-type: lower-alpha;"><li>Delete the file from the Uploaded files section by clicking (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</li><li>Make sure that you are assigning the correct column to the Caseware field used as the primary key by clicking <b>Reassign</b>. See <a href="#Quick">Quick reference to conflicts by data type</a>, which lists the fields used to form the unique identifier by default in each dataset type.</li></ol></li>
+            <li>Open the file and delete or modify any duplicate data rows. Below is a <a href="#Quick">quick reference</a> to the fields whose values can cause data conflicts if they are the same in two or more data rows.</li>
+            <li>Reimport the fixed file.</li>
+        </ol>
+        <h2><a name="Data"></a>Data conflict between the dataset being imported and an existing dataset</h2>
+        <p>If there is already a row in the dataset that has the same unique identifier as a row you are trying to import, a data conflict arises. <a href="#Quick">Quick reference to conflicts by dataset type</a> lists the fields that cause data conflicts if their values are the same in the file you are importing and in the existing dataset. In addition, data conflicts only ever arise in the same dataset type. For example, there will never be any data conflicts found between a newly imported general ledger dataset and an existing subledger dataset.</p>
+        <p>In this scenario, a warning icon and a <strong>Resolve conflicts</strong> button appear in the Uploaded files section on the Import Data window.</p>
+        <p><img src="../../Resources/Images/ResolveConflictNewFilevsExisting.png" alt="Data conflict between the dataset being imported and an existing dataset." /></p>
+        <p><strong>To resolve a data import conflict between the incoming file and an existing dataset:</strong></p>
+        <ol>
+            <li>On the Import Data window, in the Uploaded files section, you can either delete the data source you just imported by clicking (<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) and import a different file, or click <strong>Resolve conflicts</strong> to use one of the data conflict resolution options. If you click <b>Resolve conflicts</b>, continue to the next step.</li>
+            <li>You have these options:<ol style="list-style-type: lower-alpha;"><li><strong>Resolve conflicts using data from &lt;data import file name&gt; </strong><ol style="list-style-type: lower-roman;"><li>Select this option to overwrite the data rows in the existing dataset with the data rows whose identifiers are the same in the newly imported data file. Click <strong> Next</strong>.</li><li>You are prompted to confirm. Click <strong>Continue</strong>.</li></ol></li><li><strong>Resolve conflicts using data from &lt;name of the existing dataset&gt; </strong><ol style="list-style-type: lower-roman;"><li>Select this option to disregard the data rows in the newly imported data file whose identifiers are the same as those in the existing dataset. All other data rows whose identifiers do not conflict with the existing dataset are imported. <strong>Click Next</strong>.</li><li>You are prompted to confirm. Click <strong>Continue</strong>.</li></ol></li><li><strong>CSV-Datei mit Konflikten herunterladen</strong></li><p class="indent">Click this link to download a CSV file of the data rows where conflicts have occurred. Analyze the file and then proceed with one of these options:</p><ol style="list-style-type: lower-roman;"><li>If you determine you want to use the data in the existing dataset, select <b>Resolve conflicts using data from </b>&lt;<b>name of the existing dataset&gt;</b>. Data rows with conflicts in the import file are not imported. All other data in the import file is imported.</li><li>If you determine you want to use the data in the import file, keep the data import file as it is and select the <b>Resolve conflicts using data from &lt;data import file name&gt;</b> option. All data in the import file is imported. Data rows in the existing dataset containing conflicts are overwritten.</li><li><p>Delete the data source you just imported, fix the import file by removing the data rows with unique identifiers that are the same as in the existing dataset and reimport the file.</p></li></ol></ol></li>
+        </ol>
+        <h2>Resolve data conflicts using data from a newly imported file</h2>
+        <p>When you choose to resolve data import conflicts using data from a newly imported file, and then later delete that file, the conflicting data rows are removed from the dataset completely.</p>
+        <p>The following case can happen depending on the degree of overlap between the newly imported file that was deleted and existing data rows in the dataset.</p>
+        <h3>Newly imported file is a superset of a previously imported data file</h3>
+        <p>In this case, a data file is imported into a dataset.</p>
+        <p><img src="../../Resources/Images/ImportFile1.png" alt="Data file is imported into a dataset" /></p>
+        <p>A second file including all the same data rows in the first file as well as some new data is imported into the same dataset. A data conflict is detected because some data rows in the dataset and in the incoming second import file have the same unique identifiers.</p>
+        <p><img src="../../Resources/Images/ResolveConflictsImport2.png" alt="A data conflict is detected because some data rows in the dataset and in the incoming second import file have the same unique identifiers." /></p>
+        <p>The user opts to click <b>Resolve conflicts</b>, and then selects the <b>Resolve conflicts using data from &lt;data import file name&gt;</b> option.</p>
+        <p><img src="../../Resources/Images/ResolveConflictsUsingDataFile2.png" alt="Resolving data conflicts by using the data from the second import file to overwrite any data rows in the first import with the same identifiers. " /></p>
+        <p>The data from the newly imported file overwrites the previously imported file. The resulting dataset now only contains the data in the newly imported file (<code>GeneralLedger_ImportFile2_Superset.csv</code>).</p>
+        <p><img src="../../Resources/Images/ResultConflictResolved.png" alt="Resulting dataset only contains data from the second import file (GeneralLedger_ImportFile2_Superset.csv)" /></p>
+        <p>However, the newly imported file, <code>GeneralLedger_ImportFile2_Superset.csv</code>, is deleted by mistake.</p>
+        <p><img src="../../Resources/Images/FIle2Deleted.png" alt="The second import file is deleted by mistake, causing the dataset to be empty." /></p>
+        <p>This results in an empty dataset. On the Datasets page, notice only the first file that was imported is listed, which in this example is <code>GeneralLedger_ImportFile1.csv</code>. If you export the dataset, you are prompted with a warning.</p>
+        <p><img src="../../Resources/Images/ExportDataset.png" alt="Attempting to export the deleted data." /></p>
+        <p>How you resolve the empty dataset depends on what you want to achieve:</p>
+        <h4>You want the dataset to contain the data from the second, larger import file you imported last</h4>
+        <ul>
+            <li>In the Source column, delete the file you imported first, which in this example is <code>GeneralLedger_ImportFile1.csv</code>.</li>
+            <li>Reimport the second data file into the dataset, which in this example is <code>GeneralLedger_ImportFile2_Superset.csv.</code></li>
+        </ul>
+        <h4>You want the dataset to contain only the data from the first import file</h4>
+        <ul>
+            <li>In the Source column, delete the file you imported first, which in this example is <code>GeneralLedger_ImportFile1.csv</code>.</li>
+            <li>Reimport the first data file into the dataset.</li>
+        </ul>
+        <h2><a name="Quick"></a>Quick reference to data conflicts by dataset type <a href="#Footnote">*</a></h2>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Dataset-Typ</th>
+                    <th>Conflicts occur where this field has the same value in two or more data rows</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hauptbuch</td>
+                    <td>Entry ID (<code>entry_id</code>) - Line Number (<code>line_number</code>)</td>
+                </tr>
+                <tr>
+                    <td>Verbindlichkeiten—Rechnungen</td>
+                    <td>Transaction ID (<code>ap_invoice_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Verbindlichkeiten aus Lieferungen und Leistungen—geleistete Zahlungen</td>
+                    <td>Transaction ID (<code>ap_payment_made_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Verbindlichkeiten—Lieferanten</td>
+                    <td>Supplier ID (<code>ap_supplier_supplier_account_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Verbindlichkeiten —offene Salden</td>
+                    <td>Transaction ID (<code>ap_open_balance_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Verbindlichkeiten—Rechnungen</td>
+                    <td>Transaction ID (<code>ap_invoice_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Forderungen aus Lieferungen und Leistungen—erhaltene Barmittel</td>
+                    <td>Transaction ID (<code>ar_cash_received_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Forderungen—Kunden</td>
+                    <td>Customer Account ID (<code>ar_customer_customer_account_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Accounts receivable—open balance</td>
+                    <td>Transaction ID (<code>ar_open_balance_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Bestandstransaktionen</td>
+                    <td>Transaction ID (<code>inventory_transaction_transaction_id</code>)</td>
+                </tr>
+                <tr>
+                    <td>Aktueller Bestand</td>
+                    <td>Transaction ID (<code>inventory_on_hand_transaction_id</code>)</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <p><a name="Footnote"></a><b>*</b> In the <i><a href="#Quick">Quick reference to data conflicts by dataset type</a></i> table, it is assumed you have assigned a field in the import file to the Caseware field indicated. By default this field is the primary key for the dataset and its value is used to autogenerate the unique identifier for each data row. Where you do not assign a field to the field designated as the primary key for the dataset, other fields designated as alternate primary keys are used to autogenerate a unique identifier. See field descriptions for the dataset type in question for more information: <a href="Understand-genledger-data.htm">Understand the general ledger dataset</a> or <a href="Understand-subledger-data.htm">Understand subledger datasets</a>.</p>
+    </body>
+</html>

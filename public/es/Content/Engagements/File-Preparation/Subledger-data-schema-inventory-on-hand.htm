@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Inventory on hand described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Inventory on hand subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id. de transacción <br />(<code>inventory_on_hand_transaction_id</code>)</td>
+                    <td>
+                        <p>El Id. de transacción asociado con el Estándar de datos de auditoría (ADS) del libro auxiliar de Compra al pago o Pedido al cobro.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de producto de inventario <br />(<code>inventory_on_hand_inventory_product_id</code>)</td>
+                    <td>
+                        <p>El Id. del producto es un código que identifica de forma única un artículo que se incluye en el inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de serie <br />(<code>inventory_on_hand_serial_number</code>)</td>
+                    <td>
+                        <p>El número asociado con un producto individual que se usa para realizar el seguimiento y gestión. Por ejemplo, una empresa compra 10 equipos informáticos, y cada uno tiene asignado un número de serie individual.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Sixth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de lote <br />(<code>inventory_on_hand_lot_number</code>)</td>
+                    <td>
+                        <p>El número asociado con un producto que se usa para realizar el seguimiento y gestión del lote.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Fifth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de ubicación <br />(<code>inventory_on_hand_location_id</code>)</td>
+                    <td>El Id. único de una ubicación específica dentro de una división o sitio en el que el inventario se recibe, mantiene o desde el que se envía. Data type: Text Required: No</td>
+                </tr>
+                <tr>
+                    <td>Inventario mantenido por proveedores <br />(<code>inventory_on_hand_inventory_held_for_vendors</code>)</td>
+                    <td>
+                        <p>True, si el inventario está presente físicamente y lo han mantenido los proveedores; en caso contrario, false.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: No</p>
+                        <p>Possible values: true or false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventario mantenido por clientes <br />(<code>inventory_on_hand_inventory_held_for_customers</code>)</td>
+                    <td>
+                        <p>True, si el inventario está presente físicamente y lo han mantenido los clientes; en caso contrario, false.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: No</p>
+                        <p>Possible values: true or false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventario mantenido por otros <br />(<code>inventory_on_hand_inventory_held_for_others</code>)</td>
+                    <td>True, si el inventario está presente físicamente y lo han mantenido otros además de los clientes o proveedores; en caso contrario, false. Data type: Enum Required: No Possible values: true or false.</td>
+                </tr>
+                <tr>
+                    <td>Inventario obsoleto o dañado <br />(<code>inventory_on_hand_obsolete_or_damaged_inventory</code>)</td>
+                    <td>
+                        <p>Este estado de inventario identifica cantidades de inventario con poco movimiento, dañadas u obsoletas.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Example values: slow moving, damaged, or obsolete</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de celda <br />(<code>inventory_on_hand_bin_id</code>)</td>
+                    <td>
+                        <p>El Id. opcional de una ubicación subordinada de inventario. Un código utilizado en un sistema de gestión de inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Fourth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ubicación de celda <br />(<code>inventory_on_hand_bin_location</code>)</td>
+                    <td>La descripción de la ubicación subordinada de inventario identificada en el Id. de celda. Data type: Text Required: No</td>
+                </tr>
+                <tr>
+                    <td>Cantidad del inventario <br />(<code>inventory_on_hand_quantity</code>)</td>
+                    <td>
+                        <p>El recuento de inventario cuya unidad de medida se especifica en la UdM de almacenamiento de inventario.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Método de costes de inventario <br />(<code>inventory_on_hand_inventory_cost_method</code>)</td>
+                    <td>
+                        <p>La descripción de la práctica de costes, como LIFO, FIFO, promedio, estándar e identificación específica.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coste de inventario <br />(<code>inventory_on_hand_inventory_cost</code>)</td>
+                    <td>
+                        <p>El coste por unidad usando el método encontrado en el campo Método de inventario.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sistema de cantidad disponible <br />(<code>inventory_on_hand_quantity_on_hand_system</code>)</td>
+                    <td>
+                        <p>La cantidad disponible en el último recuento físico por sistema, o la cantidad calculada disponible.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha inicial del inventario <br />(<code>inventory_on_hand_inventory_as_of_date</code>)</td>
+                    <td>
+                        <p>La fecha en la que comienza a hacer seguimiento de la cantidad disponible de un artículo del inventario.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de UdM de coste de inventario <br />(<code>inventory_on_hand_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>El código de la unidad de medida del coste del inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de unidad de negocio <br />(<code>inventory_on_hand_business_unit_code</code>)</td>
+                    <td>
+                        <p>Se usa para identificar la unidad de negocio, región, sucursal, etc., al nivel en el que se estén auditando los estados financieros.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UdM de compra de inventario <br />(<code>inventory_on_hand_inventory_purchasing_uom</code>)</td>
+                    <td>
+                        <p>La unidad de medida principal utilizada para expresar cantidades de bienes comprados por la organización.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UdM de almacenamiento de inventario <br />(<code>inventory_on_hand_inventory_stocking_uom</code>)</td>
+                    <td>
+                        <p>La unidad de medida que se utiliza para realizar un recuento de la cantidades de artículos mantenidos en el inventario.<![CDATA[
+]]></p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>UdM de venta de inventario <br />(<code>inventory_on_hand_inventory_selling_uom</code>)</td>
+                    <td>
+                        <p>La unidad de medida principal en la que se expresan las cantidades de ventas de inventario.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coste estándar <br />(<code>inventory_on_hand_standard_cost</code>)</td>
+                    <td>
+                        <p>Si se ha mantenido, el coste estándar por unidad.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coste promedio <br />(<code>inventory_on_hand_average_cost</code>)</td>
+                    <td>
+                        <p>Si se ha mantenido, el coste promedio por unidad.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coste específico <br />(<code>inventory_on_hand_specific_cost</code>)</td>
+                    <td>
+                        <p>Si se ha mantenido, el coste específico por unidad.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Recuento físico de cantidad disponible <br />(<code>inventory_on_hand_quantity_on_hand_physical_count</code>)</td>
+                    <td>
+                        <p>La cantidad disponible en el último recuento físico por inventario.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de último recuento <br />(<code>inventory_on_hand_last_count_date</code>)</td>
+                    <td>
+                        <p>La fecha del último recuento físico.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Precio de lista del inventario <br />(<code>inventory_on_hand_inventory_list_price</code>)</td>
+                    <td>
+                        <p>La lista o precio minorista sugerido</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Compra de inventario hasta la fecha <br />(<code>inventory_on_hand_inventory_purchase_year_to_date</code>)</td>
+                    <td>
+                        <p>La cantidad comprada en esta ubicación hasta la fecha.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Venta de inventario hasta la fecha <br />(<code>inventory_on_hand_inventory_sold_year_to_date</code>)</td>
+                    <td>
+                        <p>La cantidad vendida en esta ubicación hasta la fecha.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa de la ubicación <br />(<code>inventory_on_hand_location_currency</code>)</td>
+                    <td>
+                        <p>La divisa local.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

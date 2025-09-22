@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:conditions="General.Ignore">
+    <head><title>Tester les balises XBRL personnalisées</title>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Tester les balises XBRL personnalisées</h1>
+        <p class="note"><b>Remarque :</b> Cette fonctionnalité n&apos;est disponible que pour les distributeurs dans le cadre de tests bêta. Pour visualiser cette fonctionnalité, ouvrez un fichier d&apos;engagement et apportez la modification suivante à votre URL : <code>https://&lt;nom du serveur de votre site partenaire&gt;/&lt;nom de l&apos;entreprise où vous effectuez votre rédaction&gt;/e/eng/&lt;identifiant&gt;/index.jsp?enable-features=customXbrlTagging;testTaxonomy</code></p>
+        <p>Vous pouvez tester le marquage des faits XBRL directement dans un fichier d&apos;engagement pour vous assurer que les options disponibles pour les utilisateurs finaux lors de la création de balises personnalisées pour les faits XBRL sont correctes.</p>
+        <p>Vous pouvez également baliser les faits XBRL directement dans le modèle de produit, mais nous vous recommandons de continuer à utiliser des scripts pour baliser le contenu par défaut de votre produit. Cela garantit que les balises que vous créez sont considérées comme des balises système, ce qui optimise les performances lorsque les utilisateurs examinent les faits XBRL et exportent les documents d&apos;instance XBRL.</p>
+        <p><b>Pour marquer un fait XBRL :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;icône <b>XBRL</b> (<img src="../Resources/Icons/xbrl-author.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Dans la section <b>XBRL REVIEW</b> , sélectionnez la taxonomie que vous souhaitez réviser.</p>
+                <p><img src="../Resources/Images/xbrl-dialog-end-user.png" style="width: 342px;height: 438px;" alt="Le dialogue XBRL." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>START REVIEW</b>.</p>
+                <p>Le document des états financiers s&apos;ouvre en montrant la première zone qui contient des faits XBRL. Les faits marqués sont soulignés en vert et les faits non marqués sont surlignés en jaune.</p>
+            </li>
+            <li>
+                <p>Sélectionnez un fait non balisé, puis sélectionnez <b>Add XBRL Tag.</b></p>
+                <p><img src="../Resources/Images/xbrl-add-tag.png" alt="Sélectionnez Add XBRL Tag." style="width: 1370px;height: 645px;" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez une vue dans la liste.</p>
+                <p>You can also search for a specific tag using the search box.</p>
+                <p>Lorsque vous sélectionnez un élément dans la taxonomie, les informations relatives à cet élément, y compris l&apos;étiquette, la description et les propriétés, s&apos;affichent dans le panneau de droite de la boîte de dialogue de recherche.</p>
+                <p><img src="../Resources/Images/xbrl-search-taxonomy.png" alt="The XBRL search dialog." /></p>
+            </li>
+            <li>
+                <p>Sélectionner <b>SELECT</b>.</p>
+            </li>
+            <li>
+                <p>Dans le panneau de révision XBRL, sélectionnez les informations de <b>contexte</b> pour la balise parmi les options disponibles dans le menu déroulant.</p>
+                <p>Les options de la liste déroulante proviennent des informations contenues dans votre taxonomie XBRL.</p>
+            </li>
+        </ol>
+    </body>
+</html>

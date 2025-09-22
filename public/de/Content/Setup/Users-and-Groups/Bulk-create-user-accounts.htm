@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can import a large number of users at once using a .csv file or block of delimited text; recommended for large firms" />
+    </head>
+    <body>
+        <h1>Massenerstellung von Benutzerkonten</h1>
+        <p>Als Alternative zur Erstellung von individuellen Benutzerkonten steht Ihnen die Option <b>Import</b> auf den Seiten <b>Mitarbeiter</b> und <b>Kontakte</b> zur Verfügung.</p>
+        <p><img src="../../Resources/Images/import-users.png" alt="Massenerstellung von Benutzern. Bitte beachten Sie, dass diese Option für Mitarbeiter und Kontakte zur Verfügung steht." style="border:1px solid #3f66a3" /></p>
+        <p>Für große Unternehmen sollte die Option Import verwendet werden, um eine Massenerstellung von Benutzerkonten auszuführen, indem Benutzerinformationen aus einer Liste importiert werden. Dies erfolgt in zwei Schritten.</p>
+        <ol>
+            <li>Vorbereitung der Liste mit Benutzerinformationen</li>
+            <li>Import der Liste</li>
+        </ol>
+        <p>Bitte beachten Sie:</p>
+        <ul>
+            <li>
+                <p>Um eine Massenerstellung von Benutzerkonten für Firmenmitarbeiter und -kontakte durchzuführen, müssen Sie zwei separate Listen erstellen; eine für die Mitarbeiter der Firma und eine für die Kontakte der Firma.</p>
+            </li>
+            <li>
+                <p>Sie können die Import-Option verwenden, um eine Massenaktualisierung der vorhandenen Benutzerkonten auszuführen.</p>
+            </li>
+            <li>
+                <p>Verwendet Ihr Unternehmen <a href="../Organization/About-business-units.htm">Business Units</a>, können Sie den Standard-<b>Mitarbeiter</b>import einsetzen, um Mitarbeiter in den aktuellen Geschäftsbereich zu importieren. Wenn Sie Mitarbeiter in andere Business Units bzw. mehrere Business Units importieren oder Mitarbeiter zwischen Business Units verschieben, wählen Sie <b>Mitarbeiter zu Business Units</b>. Für diese Option ist ein Business Unit Feld in der Importliste erforderlich. Mitarbeiter, die bereits in der primären Cloud-Instanz existieren, können weiter die gleichen Anmeldedaten und die Auswahl Business Unit verwenden, um zwischen den Instanzen zu wechseln.</p>
+            </li>
+            <li>
+                <p>Nach dem erfolgreichen Import einer Benutzerliste sendet Caseware Cloud eine E-Mail-Benachrichtigung an jeden Benutzer, der erstellt wurde. Weitere Informationen erhalten Sie in <a href="#What">Was passiert nach dem Import der Liste.</a></p>
+            </li>
+        </ul>
+        <p>Caseware Cloud bietet Ihnen zwei Methoden, um Mitarbeiter oder Kontakte zu Ihrem Unternehmen hinzuzufügen: Import einer Liste als Datei im CSV-Format oder als Textblock mit Trennzeichen oder fügen Sie Benutzer individuell in Caseware Cloud hinzu. Verfügt Ihr Unternehmen über mehr als 50 Mitarbeiter oder Kontakte, empfehlen wir den Import einer Benutzerliste.</p>
+        <h2>Schritt 1: Vorbereitung der Liste mit Benutzerinformationen</h2>
+        <p>Durch die Übernahme von Benutzern aus einer Liste wird es Ihnen ermöglicht, eine große Anzahl von Benutzern auf einmal hinzuzufügen. Über die Listendatei oder den Listentext können Sie Benutzerprofile und Kontaktinformationen sowie auch deren Gruppenzugehörigkeit hinzufügen oder ändern. Wenn eine angegebene Gruppe nicht in Caseware Cloud existiert, wird sie durch den Import des Verzeichnisses erstellt.</p>
+        <p>Sie benötigen eine Liste der Benutzer in Form einer <b>.csv-Datei</b> oder als <b>Textblock mit Trennzeichen </b>.</p>
+        <p>Bei beiden Methoden ist Folgendes sicherzustellen:</p>
+        <ul>
+            <li>Jede Zeile repräsentiert einen Benutzer und</li>
+            <li>Jede Spalte repräsentiert eine Eigenschaft, wie Name, E-Mail und Benutzergruppe. Um einen Benutzer in mehr als eine Gruppe einzufügen, platzieren Sie eine Tilde (~) zwischen jedem Gruppennamen.</li>
+        </ul>
+        <p>In diesem Beispiel möchte ein Administrator vier Mitarbeiter zu Caseware Cloud hinzufügen. Für jede Methode könnte die Liste der Benutzer wie folgt aussehen:</p>
+        <p><b>.csv file:</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-csv.png" alt="CSV-Tabelle mit Benutzerinformationen" /></p>
+        <p><b>Delimited Block mit reinem Text:</b></p>
+        <p><img src="../../Resources/Images/bulk-create-user-plain-text.png" alt="Klartextliste von Benutzerinformationen, durch Kommas getrennt" /></p>
+        <h2 id="Importing-the-list-to-Cloud">Schritt 2: Import der Liste</h2>
+        <p>Sobald die Liste vorbereitet wurde, können Sie Ihre Benutzer in Caseware Cloud importieren.</p>
+        <p><b>Eine Benutzerliste importieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie für <i>Mitarbeiter: Administrator</i>-Rolle oder gleichwertige Berechtigungen haben.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Hauptmenü den Eintrag <b>Mitarbeiter</b> oder <b>Kontakte</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Neu</b> und wählen Sie unter Import die Option <b>Mitarbeiter</b> oder <b>Kontakte</b>.</p>
+                <p class="note"><b>Hinweis:</b> Verwendet Ihr Unternehmen <a href="../Organization/About-business-units.htm">Business Units</a>, können Sie den Standard-<b>Mitarbeiter</b>-Import einsetzen, um Mitarbeiter in den aktuellen Geschäftsbereich zu importieren. Wenn Sie Mitarbeiter in andere Business Units bzw. mehrere Business Units importieren oder Mitarbeiter zwischen Business Units verschieben, wählen Sie <b>Mitarbeiter zu Business Units</b>.</p>
+            </li>
+            <li>
+                <p>Vervollständigen Sie die Importoptionen nach Bedarf.</p>
+                <table class="table">
+                    <col style="width: 25%;" />
+                    <col style="width: 75%;" />
+                    <tbody>
+                        <tr>
+                            <th>Option</th>
+                            <th>Beschreibung</th>
+                        </tr>
+                        <tr>
+                            <td>Bestehende Mitarbeiterinformationen aktualisieren</td>
+                            <td>Wählen Sie diese Option, um bestehende Mitarbeiter mit Details aus einer CSV-Datei zu aktualisieren.</td>
+                        </tr>
+                        <tr>
+                            <td>(Standard) Mitarbeiter, die nicht in der Liste vorhanden sind, deaktivieren und neue Mitarbeiter aktivieren.</td>
+                            <td>
+                                <p>Wählen Sie diese Option, um alle Mitarbeiter zu deaktivieren, die in der Cloud-Instanz existieren, aber nicht in der CSV-Datei vorhanden sind. Neue Mitarbeiter in der Mitarbeiterliste werden aktiviert.</p>
+                                <p>Wählen Sie diese Option nur, wenn Sie eine komplette Mitarbeiter- oder Kontaktliste importieren.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>(Business Units) Mitarbeiter in nicht gelisteten Business Units deaktivieren</td>
+                            <td>
+                                <p>Wählen Sie diese Option, um alle Mitarbeiter zu deaktivieren, die in Business Units existieren, aber nicht in der CSV-Datei vorhanden sind.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Enthält Kopfzeile</td>
+                            <td>Geben Sie an, ob Ihre CSV-Datei eine Kopfzeile hat.</td>
+                        </tr>
+                        <tr>
+                            <td>Trennzeichen</td>
+                            <td>Wählen Sie das Trennzeichen, das in der CSV-Datei verwendet wird, um die Spalten zu trennen (z. B. , ; | ).</td>
+                        </tr>
+                        <tr>
+                            <td>Definieren Sie, wie das erste Kennwort festgelegt werden soll.</td>
+                            <td>Wählen Sie, ob das erste Kennwort vom Benutzer selbst festgelegt werden sollte, oder vom Identitätsanbieter (Admin).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Option <b>Import aus CSV-Datei</b> und navigieren Sie zum Verzeichnis mit Ihrer Datei im CSV-Format oder fügen Sie Ihren durch Trennzeichen unterteilten Textblock in das Textfeld ein. Klicken Sie anschließend auf <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>Ordnen Sie jeder Spalte die jeweilige Eigenschaft zu.</p>
+                <p><img src="../../Resources/Images/Staff-Contacts-Import-3-829x595.png" style="border:1px solid #3f66a3" alt="Ordnen Sie die Spalten Ihrer Entitätsliste zu, bevor Sie den Prozess abschließen." /></p>
+                <div class="note">
+                    <p><b>Hinweise:</b></p>
+                    <ul>
+                        <li>Haben existierende Benutzer die gleiche <b>E-Mail-Adresse</b>, werden sie aktualisiert.</li>
+                        <li>Wenn Sie Mitarbeiter in Business Units importieren, müssen alle nicht leeren Werte in der Spalte Business Units einem Namen einer Business Unit entsprechen. Mehrere Business Units können mit Tilden (~) getrennt werden.</li>
+                        <li>Wenn Sie eine Liste mit Kontakten importieren, sollten Sie das Feld E-Mail-Adresse für alle Kontakte leer lassen, die kein Benutzerkonto in Caseware Cloud erhalten sollen.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>Ein Bestätigungsdialog erscheint, in dem die Anzahl der erfolgreich hinzugefügten oder geänderten Benutzer angezeigt wird. Wurden Gruppen eingetragen, werden diese ebenfalls hinzugefügt oder geändert.</p>
+        <h2 id="After-the-import"><a name="What"></a>Was passiert nach dem Import der Liste?</h2>
+        <p>Nach dem Import einer Benutzerliste sendet Caseware Cloud automatisch eine E-Mail mit einem Link zur Anmeldeseite an diese Benutzer. Eine Aufzeichnung dieser E-Mail finden Sie unter <b>Einstellungen | E-Mail | E-Mail-Protokoll</b>.</p>
+        <p>Auf dem Anmeldebildschirm werden die Benutzer dazu aufgefordert, ihre E-Mail-Adresse und ihr Kennwort einzugeben und zu bestätigen. Vorgaben zur Sicherheit der Kennwörter und wie oft sie geändert werden müssen, können unter <b>Einstellungen | Zugriffschutz | Kennworteinstellungen</b> festgelegt werden.</p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Komplexe Kontenkombinationen</h1>
+        <p>Die Komplexe Kontenkombinationen Analyse identifiziert alle Einträge, die mehr als die vorgegebene Anzahl an Konten enthalten. Mit diesem Test können komplexe, nicht routinemäßige oder ungewöhnliche Geschäftsvorgänge ermittelt werden, die möglicherweise weitere Untersuchungen erfordern.</p>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Dieser Test verwendet zwei Felder zur Durchführung der Analyse:</p>
+        <ul>
+            <li>
+                <p>Kennungsfeld(er) mit Zahlen oder Zeichen, die angeben, wie die Kontokombinationen gruppiert sind. Das Feld <b>Journalbuchung</b> kann beispielsweise verwendet werden, um die Konten nach Journalbuchungen zu gruppieren.</p>
+            </li>
+            <li>
+                <p>Kontofeld(er), das/die entweder Zahlen oder Zeichen enthält/enthalten, die zur Berechnung der Anzahl der Kombinationen pro Kennung verwendet werden.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Es gibt einen Parameter, der für die Durchführung dieses Tests festgelegt werden muss:</p>
+        <p><b>Anzahl der Kontokombinationen</b> - Geben Sie die Mindestanzahl der Konten an, die die Kontengruppe als riskant oder ungewöhnlich einstufen. Diese Zahl muss eine Ganzzahl sein. Wenn Sie z. B. 11 eingeben, werden alle Kontengruppen mit mindestens 11 Konten identifiziert.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Komplexe Kontenkombinationen Analyse ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die wichtigsten Analysefelder ausgewählt wurden. Dabei handelt es sich um das/die Kennungsfeld(er) und das/die Kontofeld(er).</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die Anzahl der Kombinationen eingegeben wurde. Dies muss eine positive Ganzzahl sein. Der Standardwert ist 11.</p>
+            </li>
+            <li>
+                <p>Fassen Sie die Quelldatei nach der/den Kennungsspalte(n) und der/den Kontenspalte(n) zusammen. Vergewissern Sie sich, dass die Zusammenfassung nach der Anzahl der Datensätze summiert wird.</p>
+            </li>
+            <li>
+                <p>Fassen Sie Schritt 5 nach Kennungsspalte(n) zusammen und addieren Sie die Anzahl der Datensätze für jede Kennungsspalte(n).</p>
+            </li>
+            <li>
+                <p>Extrahiert alle Kennungsfelder, bei denen die Anzahl der Datensätze größer oder gleich dem Parameter <b>Anzahl der Kombinationen</b> ist.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie alle Quelltransaktionen, die dieselbe(n) Kombination(en) von Kennungsfeldern aus dem vorherigen Schritt aufweisen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

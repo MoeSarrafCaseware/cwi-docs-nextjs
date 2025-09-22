@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Éléments inhabituels – Comparaison avec la population</h1>
+        <p>Le test analytique Éléments inhabituels – Comparaison avec la population permet de repérer les transactions considérées comme inhabituelles par rapport à un groupe de transactions sélectionnées.</p>
+        <p>Par exemple, ce test peut être utilisé pour trouver les transactions enregistrées par les utilisateurs qui enregistrent peu de transactions par rapport aux autres. Les utilisateurs seraient comparés à la population pour obtenir un pourcentage de transactions, et tout utilisateur en dessous d&apos;un certain seuil apparaîtrait dans le résultat.</p>
+        <p>Vous pouvez également utiliser ce test pour analyser les champs de date. La population de transactions est totalisée par date, et les dates présentant un faible nombre de transactions sont signalées dans le résultat.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les transactions fictives ou non justifiées</p>
+            </li>
+            <li>
+                <p>Des problèmes systémiques dans le traitement des transactions par un service</p>
+            </li>
+            <li>
+                <p>Des paramètres du système mal configurés pouvant nécessiter une amélioration et une évaluation plus poussée</p>
+            </li>
+            <li>
+                <p>Les possibles tentatives de manipulation des états financiers</p>
+            </li>
+            <li>
+                <p>Les domaines de l&apos;information financière où la précision et l&apos;exactitude sont moindres</p>
+            </li>
+            <li>
+                <p>La déficience des contrôles internes qui peut avoir d&apos;autres conséquences dont il faut tenir compte</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Les transactions effectuées en dehors des jours ouvrables normaux</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <ul>
+            <li>
+                <p><b>Champs de référence</b> – Champs uniques utilisés pour créer un identifiant de transaction unique, comme le champ <b>ID de l’écriture</b> pour l’ensemble de données du grand livre général. Ces colonnes ne font pas partie du résultat, mais elles sont utilisées pour trouver les transactions qui font partie du résultat. Ce champ est déjà défini dans le test et ne peut pas être modifié.</p>
+            </li>
+            <li>
+                <p><b>Champs inhabituels</b> – Les champs dont les valeurs sont examinées pour déterminer si elles sont inhabituelles. Il peut s&apos;agir de champs numériques, de dates, d&apos;heures ou de caractères contenant un certain type de schéma récurrent. Par exemple, un champ numérique contenant des identifiants d&apos;utilisateurs pourrait être utilisé pour relever les transactions enregistrées par des utilisateurs qui enregistrent rarement des transactions. Les champs contenant des montants ou des quantités ne sont pas les mieux adaptés à ce test, car ils ne présentent généralement pas de schéma récurrent.</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Les paramètres suivants doivent être définis pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Valeur en pourcentage</b> – Saisissez la valeur en pourcentage que le test utilisera pour déterminer quelles valeurs doivent être considérées comme inhabituelles. Par exemple, si vous saisissez 3 %, tout élément de la colonne qui représente 3 % ou moins de la population est considéré comme inhabituel et inclus dans les résultats du test.</p>
+            </li>
+            <li>
+                <p><b>Type de pourcentage</b> – Si le pourcentage doit être inférieur, inférieur ou égal, égal, supérieur ou supérieur ou égal à la valeur du pourcentage.</p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Éléments inhabituels par rapport à la population</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Éléments de date inhabituels par rapport à la population</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Éléments inhabituels – Comparaison avec la population, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Si nécessaire, placez des filtres sur les données afin qu&apos;un sous-ensemble soit utilisé pour l&apos;analyse. Si aucun filtre n&apos;est placé, l&apos;analyse sera effectuée sur l&apos;ensemble du fichier de données. Cette étape peut également être réalisée à la dernière étape, et non à la première.</p>
+                <p class="note"><b>Remarque :</b> Remarque : Les filtres ne sont pas encore accessibles et seront inclus dans une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Obtenez les colonnes pour créer le sous-ensemble sur lequel l&apos;analyse sera effectuée. Ce sous-ensemble peut être basé sur une ou plusieurs colonnes, celles-ci pouvant être de n&apos;importe quel type et dans n&apos;importe quel ordre.</p>
+            </li>
+            <li>
+                <p>Obtenez le pourcentage pour comparaison.</p>
+                <ul>
+                    <li>
+                        <p>Si l&apos;utilisateur a sélectionné l&apos;une des options suivantes, un seul pourcentage est nécessaire :</p>
+                        <ul>
+                            <li>
+                                <p>Inférieur à (&lt;)</p>
+                            </li>
+                            <li>
+                                <p>Inférieur ou égal à (&lt;=)</p>
+                            </li>
+                            <li>
+                                <p>Égal à (==)</p>
+                            </li>
+                            <li>
+                                <p>Supérieur ou égal à (&gt;=)</p>
+                            </li>
+                            <li>
+                                <p>Supérieur à (&gt;)</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Si l&apos;utilisateur sélectionne une plage, il doit y avoir un pourcentage de valeur inférieure et un pourcentage de valeur supérieure. La plage peut être basée sur les éléments suivants :</p>
+                        <ul>
+                            <li>
+                                <p>Supérieur à (&gt;)</p>
+                            </li>
+                            <li>
+                                <p>Supérieur ou égal à (&gt;=)</p>
+                            </li>
+                            <li>
+                                <p>Inférieur ou égal à (&lt;=)</p>
+                            </li>
+                            <li>
+                                <p>Inférieur à (&lt;)</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Totalisez les colonnes des sous-ensembles afin d&apos;obtenir le nombre d&apos;enregistrements par sous-ensemble unique.</p>
+            </li>
+            <li>
+                <p>Calculez le pourcentage de chaque sous-ensemble sur la base du nombre total d&apos;enregistrements dans la population.</p>
+            </li>
+            <li>
+                <p>Extrayez tous les pourcentages des sous-ensembles qui se situent dans la comparaison de pourcentages sélectionnée à l&apos;étape 4.</p>
+            </li>
+            <li>
+                <p>Extrayez les transactions (lignes) qui se rapportent aux sous-ensembles extraits à l&apos;étape 7.</p>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

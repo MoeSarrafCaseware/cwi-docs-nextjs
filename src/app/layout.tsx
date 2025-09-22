@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SearchProvider } from "@/components/SearchProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Editor setup - Tailwind CSS",
-  description: "Tooling to improve the developer experience when working with Tailwind CSS. Learn about IntelliSense, Prettier integration, and editor support.",
+  title: "Caseware Cloud Documentation",
+  description: "Documentation for Caseware Cloud",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -26,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
-        <SearchProvider>
-          {children}
-        </SearchProvider>
+        <LanguageProvider>
+          <SearchProvider>
+            {children}
+          </SearchProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

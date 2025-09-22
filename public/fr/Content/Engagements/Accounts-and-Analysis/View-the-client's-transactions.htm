@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Consulter les données du grand livre et du livre auxiliaire du client</h1>
+        <p>Si vous avez <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importé les données du grand livre et de la comptabilité auxiliaire de votre client</a>, dans l&apos;onglet <b>Ensembles de données</b> , sur la page <b>Données</b> , cliquez sur <b>Afficher les données</b>.</p>
+        <p class="note inline"><b>Remarque :</b> The <b>View data</b> button is only visible on the <b>Datasets</b> tab if you&apos;ve successfully imported data.</p>
+        <p style="font-weight: bold;"><img src="../../Resources/Images/GL-ViewData.png" alt="Sélection de l&apos;affichage des données après leur importation. " /></p>
+        <h2>Trier les données</h2>
+        <h3>Tri des colonnes</h3>
+        <p>Les colonnes par lesquelles les données de l&apos;ensemble de données peuvent être triées sont marquées d&apos;une flèche vers le haut (<img src="../../Resources/Icons/upward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour indiquer que les données sont triées de manière ascendante, ou d&apos;une flèche vers le bas (<img src="../../Resources/Icons/downward-arrow.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour indiquer que les données sont triées de manière descendante. Cliquez sur l&apos;en-tête de la colonne pour modifier le sens du tri.</p>
+        <h3>Tri multi-colonnes</h3>
+        <p>Un nombre et une flèche de tri (<img src="../../Resources/Images/MulticolumnSortIndicator.png" alt="" style="vertical-align: text-bottom;" />) apparaissent sur plusieurs colonnes pour indiquer un tri sur plusieurs colonnes. Dans l&apos;exemple ci-dessous, les données sont triées par <b>ID d&apos;entrée</b> , puis par <b>numéro de ligne</b> par défaut.</p>
+        <p><b>Pour modifier la colonne triée en premier :</b></p>
+        <p>Survolez la colonne marquée 2 et maintenez la <b>touche Shift</b> enfoncée tout en cliquant sur l&apos;en-tête de la colonne.</p>
+        <p><img src="../../Resources/Images/MulticolumnSortExample.png" alt="Exemple de tri sur plusieurs colonnes montrant deux colonnes pouvant être utilisées pour trier l&apos;ensemble de données." /></p>
+        <h2>Options au niveau des colonnes</h2>
+        <p>Sélectionnez la liste déroulante (<img src="../../Resources/Images/ColumnSortOptions-DataViewer.png" alt="" style="vertical-align: text-bottom;" />) sur l&apos;en-tête d&apos;une colonne pour faire apparaître une liste d&apos;options.</p>
+        <p>Sélectionnez <b>Pin column</b> pour que la colonne devienne la première colonne à gauche.</p>
+        <p><img src="../../Resources/Images/PinColumn.png" alt="La sélection de l&apos;option Épingler la colonne permet de faire apparaître la colonne en premier sur la gauche." /></p>
+        <ul>
+            <li>
+                <p>Sélectionnez <b>Masquer</b> pour masquer le document.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Filtrer par colonne</b> pour filtrer les lignes de données et n&apos;afficher que celles qui contiennent la valeur spécifiée. Dans l&apos;exemple ci-dessous, seules les lignes de données dont le numéro de ligne contient la valeur `96` seront affichées.</p>
+            </li>
+        </ul>
+        <p><img src="../../Resources/Images/FilterColumn.png" alt="Filtrage de la colonne Numéro de ligne." /></p>
+        <h2>Filtrer l&apos;ensemble des données</h2>
+        <p>Vous pouvez filtrer l&apos;ensemble des données en cliquant sur <b>Filtres</b> puis, dans le panneau Filtres, en sélectionnant n&apos;importe quelle colonne de l&apos;ensemble de données. Tous les filtres de colonne utilisent l&apos;opérateur CONTAIN, tandis que l&apos;ensemble des filtres utilise l&apos;opérateur AND.</p>
+        <p>Dans l&apos;exemple ci-dessous, les lignes de données seront conservées par le filtre si</p>
+        <p><code><b>Source</b> = Xero - 11/14/24 4:40 pm</code></p>
+        <p>ET</p>
+        <p><code><b>Numéro de compte</b> = *96*</code> (tout numéro de compte contenant la valeur `96`)</p>
+        <p>ET</p>
+        <p><code><b>Nom du compte</b> = *Receivable*</code> (tout nom de compte contenant la valeur `Receivable`)</p>
+        <h2>Exclure des colonnes de la vue</h2>
+        <p>Vous pouvez exclure des colonnes des données affichées en cliquant sur <b>Colonnes</b>, puis en sélectionnant celles que vous ne souhaitez pas voir apparaître.</p>
+        <p><img src="../../Resources/Images/ExcludeColumnsFromDataViewer.png" alt="Filtrage de colonnes entières en les sélectionnant dans la liste des colonnes de l&apos;ensemble de données." /></p>
+    </body>
+</html>

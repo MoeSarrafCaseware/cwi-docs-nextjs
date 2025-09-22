@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Schlüsselwörter</h1>
+        <p>Die Analyse Schlüsselwörter durchsucht ein oder mehrere Felder nach bestimmten Schlüsselwörtern. Diese Schlüsselwörter können manuell eingegeben, aus einer vordefinierten Liste an Schlüsselwörtern ausgewählt oder aus einer Liste mit Begriffen, die aus den ausgewählten Feldern generiert wird, ausgewählt werden.</p>
+        <p>Dieser Test enthält auch einen Parameter, mit dem Sie bei der Suche nach Schlüsselwörtern zwischen exakten Übereinstimmungen und Teilübereinstimmungen wählen können.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Transaktionen, die signifikante Schätzungen enthalten</p>
+            </li>
+            <li>
+                <p>Fiktive Transaktionen</p>
+            </li>
+            <li>
+                <p>Transaktionen, die von komplexer oder ungewöhnlicher Art sind</p>
+            </li>
+            <li>
+                <p>Unternehmensinterne Transaktion</p>
+            </li>
+            <li>
+                <p>Transaktionen, die zur Abstimmung von Nebenbüchern verwendet werden. Sie können zum Beispiel nach den Stichworten „Nebenbuch abstimmen“ oder „Nebenbuch ausgleichen“ suchen.</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder sind für diese Analyse erforderlich:</p>
+        <ul>
+            <li>
+                <p><b>Referenzfeld(er)</b> - Eindeutige(s) Feld(er), das/die zur Erstellung einer eindeutigen Transaktions-ID verwendet wird/werden, wie z. B. das Feld <b>Eintrags-ID</b> für den Hauptbuch-Datensatz. Diese Spalten sind nicht Teil des Ergebnisses, sondern dienen der Identifizierung der Transaktionen, die Teil des Ergebnisses sind. Dieses Feld wurde bereits im Test definiert und kann nicht geändert werden.</p>
+            </li>
+            <li>
+                <p><b>Schlüsselwortfeld(er)</b> - Die Zeichenfelder, die nach den ausgewählten Schlüsselwörtern durchsucht werden.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <ul>
+            <li>
+                <p><b>Schlüsselwortliste</b> - Eine Liste von Schlüsselwörtern, die als Textdatei gespeichert wird.</p>
+            </li>
+            <li>
+                <p><b>Genaue Übereinstimmung</b> - Wählen Sie aus, ob die Werte exakt mit dem Schlüsselwort übereinstimmen müssen. Wenn Sie nicht auswählen, dass nur exakte Übereinstimmungen ermittelt werden, werden auch Teilübereinstimmungen ermittelt.</p>
+            </li>
+            <li>
+                <p><b>Groß- und Kleinschreibung ignorieren</b> - Wählen Sie aus, ob bei den Suchbegriffen zwischen Groß- und Kleinschreibung unterschieden werden soll oder nicht.</p>
+            </li>
+            <li>
+                <p><b>Spalte für übereinstimmende Wörter erstellen</b> - Erstellen Sie eine zusätzliche Spalte, in der die Wörter aufgelistet werden, für die in dieser Konfiguration Übereinstimmungen gefunden wurden.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p>Die einzige Konfiguration, die für diesen Test zur Verfügung steht, ist die <b>Schlüsselwortsuche</b>.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analysefunktion Schlüsselwörter ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Bestätigen Sie, dass ein oder mehrere Zeichenfelder für die Schlüsselwortsuche ausgewählt wurden.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie die Wortliste, die je nach Schnittstelle aus mehreren Quellen oder einer Mischung aus einer oder mehreren Quellen stammen kann:</p>
+                <ul>
+                    <li>
+                        <p>Eine vorprogrammierte Liste von Schlüsselwörtern.</p>
+                    </li>
+                    <li>
+                        <p>Eine vom Benutzer hochgeladene Liste der Schlüsselwörter.</p>
+                    </li>
+                    <li>
+                        <p>Der Benutzer gibt die Schlüsselwörter direkt in die Schnittstelle ein.</p>
+                    </li>
+                    <li>
+                        <p>Eine Kombination aus einem oder mehreren der oben genannten Punkte.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Erlauben Sie dem Benutzer, Schlüsselwörter aus der Liste hinzuzufügen oder zu löschen, insbesondere wenn sie aus 3a oder 3b stammen.</p>
+            </li>
+            <li>
+                <p>Ermitteln Sie, ob die Groß- und Kleinschreibung beachtet werden muss oder nicht.</p>
+            </li>
+            <li>
+                <p>Je nach Auswahl von exakten oder teilweisen Übereinstimmungen führen Sie die Suche nach den Stichwörtern aus Schritt 3 durch.</p>
+            </li>
+            <li>
+                <p>Wenn eine Spalte mit einem passenden Schlüsselwort ausgewählt wurde, wird nur eine Spalte hinzugefügt, auch wenn mehrere Spalten für die Suche ausgewählt wurden.</p>
+            </li>
+        </ol>
+    </body>
+</html>

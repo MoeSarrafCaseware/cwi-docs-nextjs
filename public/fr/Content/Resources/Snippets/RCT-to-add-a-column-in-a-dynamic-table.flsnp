@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Pour ajouter une colonne dans un tableau dynamique :</p><MadCap:snippetBlock src="RCT-to-edit-a-dynamic-table.flsnp" /><ol start="3">
+            <li>
+                <p>Allez à l&apos;endroit où vous souhaitez ajouter une colonne.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la partie supérieure du tableau.</p>
+                <p>Une colonne est ajoutée au tableau et les paramètres de la colonne s&apos;affichent sur la page.</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Pour modifier les paramètres de la colonne :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;en-tête de la colonne.</p>
+            </li>
+            <li>
+                <p>Modifiez les paramètres suivants si nécessaire :</p>
+                <ul>
+                    <li>
+                        <p><b>Type</b></p>
+                        <p>Choisissez un type de colonne. Les colonnes suivantes ont des valeurs prédéfinies :</p>
+                        <ul>
+                            <li>
+                                <p style="font-weight: bold;">Exercice précédent - <span style="font-weight: normal;">solde de l&apos;exercice précédent</span></p>
+                            </li>
+                            <li>
+                                <p><b>Année en cours</b> - solde de l&apos;année en cours</p>
+                            </li>
+                            <li>
+                                <p><b>Période en cours</b> - solde de la période en cours (pour les missions intermédiaires)</p>
+                            </li>
+                            <li>
+                                <p><b>Période comparative</b> - solde de la période comparative</p>
+                            </li>
+                            <li>
+                                <p><b>Montant de l&apos;écart</b> - différence entre le solde de l&apos;année précédente et le solde de l&apos;année en cours</p>
+                            </li>
+                            <li>
+                                <p><b>Écart en pourcentage</b> - différence en pourcentage entre le solde de l&apos;année précédente et le solde de l&apos;année en cours. Si vous choisissez ce type de colonne, vous pouvez également sélectionner le nombre de décimales à afficher dans la colonne. Par défaut, les colonnes de variance en pourcentage affichent des valeurs à deux décimales.</p>
+                            </li>
+                        </ul>
+                        <p>Vous pouvez saisir des valeurs personnalisées pour les colonnes suivantes :</p>
+                        <ul>
+                            <li>
+                                <p><b>Saisie</b> - saisir du texte, des chiffres, des valeurs monétaires ou des pourcentages.</p>
+                            </li>
+                            <li>
+                                <p><b>Calcul personnalisé</b> - saisir un calcul à l&apos;aide de l&apos;éditeur de calcul. Le calcul est appliqué à toutes les cellules de la colonne.</p>
+                            </li>
+                            <li>
+                                <p><b>Référence aux notes</b> - ajouter des références aux notes existantes dans les états financiers.</p>
+                            </li>
+                            <li>
+                                <p><b>Annotation</b> - ajouter une colonne d&apos;annotations. Sélectionnez <b>Ajouter</b> (<img src="../Images/icon-new-area-inline.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans chaque cellule de la colonne pour ajouter des annotations.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Rubrique</b></p>
+                        <p>Vous pouvez insérer un <b>texte dynamique</b> ou une formule<b style="font-style: italic;">(fx</b>) dans l&apos;en-tête. Vous pouvez également saisir un texte simple dans le champ d&apos; <b>édition</b> ou combiner un texte simple avec un texte dynamique et une formule.</p>
+                    </li>
+                    <li>
+                        <p><b>Dimension</b></p>
+                        <p>Les dimensions sont des propriétés de groupe que les auteurs peuvent configurer pour les groupes afin de mieux catégoriser les comptes. Par exemple, une catégorisation plus poussée des comptes en fonction de la localisation (Europe, Amérique du Nord, etc.).</p>
+                        <p>Vous pouvez sélectionner une dimension pour que la colonne n&apos;affiche que les données relatives à cette dimension.</p>
+                    </li>
+                    <li>
+                        <p><b>Entité</b></p>
+                        <p>Si votre mission est consolidée, vous pouvez choisir d&apos;afficher les données consolidées totales, les données consolidées ou les données d&apos;une filiale spécifique. S&apos;il y a au moins 15 entités subsidiaires, vous pouvez utiliser le champ de recherche pour trouver l&apos;entité que vous souhaitez sélectionner.</p>
+                    </li>
+                    <li>
+                        <p><b>Largeur</b></p>
+                        <p>Sélectionnez une largeur pour votre colonne. Les options de largeur pour toutes les colonnes sont <b>Étroite</b>, <b>Standard</b> et <b>Spécifique</b>, sauf pour les colonnes de référence de note, d&apos;annotation et de description, pour lesquelles les options de largeur sont <b>Petite</b>, <b>Moyenne</b> et <b>Grande</b>.</p>
+                        <p>Si vous sélectionnez <b>Spécifique</b>, vous pouvez alors spécifier la largeur de la colonne en centimètres ou en pouces. L&apos;unité de mesure est déterminée par l&apos;unité sélectionnée dans les <a href="../../Engagements/Template-and-Authoring/Customize-the-unit-of-measurement.htm">paramètres du produit</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Symbole de la monnaie</b></p>
+                        <p>Permet d&apos;afficher ou non le symbole de la devise dans l&apos;en-tête de la colonne.</p>
+                        <p>Options disponibles :</p>
+                        <ul>
+                            <li>
+                                <p><b>Utiliser le document par défaut</b> - le tableau utilise les paramètres par défaut du symbole de la devise pour les états financiers. Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Set-default-currency-symbol-options-dynamic-tables.htm">Définir les options par défaut des symboles monétaires pour les tableaux dynamiques</a>.</p>
+                            </li>
+                            <li>
+                                <p><b>Afficher dans l&apos;en-tête</b> - le symbole de la devise s&apos;affiche dans l&apos;en-tête de la colonne.</p>
+                            </li>
+                            <li>
+                                <p><b>Ne pas afficher dans l&apos;en-tête</b> - le symbole de la devise ne s&apos;affiche pas dans l&apos;en-tête.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Format</b></p>
+                        <p>Pour les colonnes de saisie ou de calcul personnalisé, vous pouvez choisir l&apos;un des formats suivants pour les valeurs de vos cellules :</p>
+                        <ul>
+                            <li>
+                                <p>Monnaie</p>
+                            </li>
+                            <li>
+                                <p>Nombre</p>
+                            </li>
+                            <li>
+                                <p>Pourcentage</p>
+                            </li>
+                            <li>
+                                <p>Texte</p>
+                            </li>
+                        </ul>
+                        <p>Si vous sélectionnez <b>Nombre</b> ou <b>Pourcentage</b>, vous pouvez également choisir le nombre de décimales.</p>
+                    </li>
+                    <li>
+                        <p><b>Options d&apos;affichage</b></p>
+                        <p>Pour certains types et formats de colonnes, vous pouvez sélectionner une ou plusieurs options d&apos;affichage :</p>
+                        <ul>
+                            <li>
+                                <p><b>Expand to fill the width of the page</b> - définit la largeur des colonnes de manière à ce que le tableau dynamique occupe toute la largeur de la page.</p>
+                                <p class="note"><b>Remarque</b>: Ce paramètre est activé par défaut dans la colonne <b>Description.</b></p>
+                            </li>
+                            <li>
+                                <p><b>Afficher les soldes nuls</b> - affiche les comptes dont le solde est nul dans la colonne.</p>
+                            </li>
+                            <li>
+                                <p><b>Afficher le signe opposé pour les soldes</b> - affiche le signe opposé (négatif ou positif) pour les valeurs de la colonne.</p>
+                            </li>
+                            <li>
+                                <p><b>Exclure des totaux</b> - exclut les valeurs de cette colonne du calcul de la ligne <b>Total du</b> groupe de comptes.</p>
+                            </li>
+                            <li>
+                                <p><b>Afficher le symbole dans l&apos;en-tête</b> - affiche le symbole de la devise ou le signe du pourcentage en haut de la colonne.</p>
+                            </li>
+                            <li>
+                                <p><b>Afficher l&apos;année dans l&apos;en-tête</b> - ajoute l&apos;année à l&apos;en-tête des colonnes de <b>l&apos;année en cours</b> ou de l&apos; <b>année précédente</b> .</p>
+                            </li>
+                            <li>
+                                <p><b>Utiliser les données non consolidées</b> - s&apos;il s&apos;agit d&apos;une mission consolidée, la sélection de cette option supprime les données consolidées de la colonne et affiche uniquement les données non consolidées.</p>
+                            </li>
+                        </ul>
+                        <p>Vous pouvez sélectionner l&apos;icône de l&apos;œil (<img src="../Images/icon-visibility-visible.png" alt=" " style="vertical-align: text-bottom;" />) pour faire apparaître une liste déroulante avec les options suivantes :</p>
+                        <ul>
+                            <li>
+                                <p><b>Appliquer le comportement par défaut</b> - le comportement par défaut est appliqué à la colonne. Notez que le comportement par défaut diffère en fonction du type de colonne.</p>
+                                <ul>
+                                    <li>
+                                        <p><b>Pour les colonnes de la balance de vérification :</b></p>
+                                        <p>La colonne s&apos;affiche toujours dans les états financiers et s&apos;affiche dans la copie d&apos;impression (PDF) si la colonne contient des données (au moins une cellule n&apos;est pas vide et sa valeur n&apos;est pas nulle). Notez que ce comportement par défaut peut être modifié pour un tableau dynamique individuel à partir des <a href="../../Engagements/Template-and-Authoring/Display-zero-balance-columns-in-dynamic-tables.htm">paramètres du tableau</a>.</p>
+                                        <p class="note"><b>Remarque :</b> Les colonnes de l&apos;année précédente ne s&apos;affichent pas s&apos;il n&apos;y a pas de données de l&apos;année précédente.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Pour les colonnes de saisie et de calcul personnalisé :</b></p>
+                                        <p>La colonne s&apos;affiche toujours dans les états financiers et s&apos;affiche dans la copie d&apos;impression (PDF) si la colonne contient des données (au moins une cellule n&apos;est pas vide et sa valeur n&apos;est pas nulle).</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Toujours afficher cette colonne</b> - la colonne est toujours affichée dans les états financiers et dans la copie imprimée (PDF).</p>
+                            </li>
+                            <li>
+                                <p><b>Toujours masquer cette colonne</b> - la colonne est toujours masquée dans les états financiers et dans la copie imprimée (PDF).</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Supprimer</b> (<img src="../Images/icon-dynamic-table-command-delete-12x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</p>
+                        <p>Sélectionnez cette icône pour supprimer la colonne du tableau.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Sélectionnez <b>DONE</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>SAVE</b> ou <b>SAVE &amp; CLOSE</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Geautoriseerd personeel toewijzen voor single sign-on (Azure AD)</h1>
+        <p>Als u ervoor wilt zorgen dat alleen geautoriseerde medewerkers binnen uw bedrijf toegang hebben tot Caseware Cloud via single sign-on, kunt u geautoriseerde gebruikers toewijzen aan uw app in Azure. Als u wilt dat alle medewerkers van uw bedrijf toegang hebben tot Caseware Cloud, kunt u deze stap overslaan en <a href="#Assign">API-rechten toewijzen</a>.</p>
+        <p style="font-weight: bold;">Geautoriseerd personeel toewijzen:</p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Azure Active Directory</b> | <b>Enterprise Applications</b>en selecteer vervolgens je app.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Eigenschappen</b>in het linker navigatiedeelvenster.</p>
+            </li>
+            <li>
+                <p>Stel <b>Gebruikerstoewijzing vereist</b> in op <b>Ja</b>.</p>
+                <p><img src="../../Resources/Images/azure-authorized-staff.png" alt="Stel Gebruikerstoewijzing vereist in op Ja." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Gebruikers en groepen</b>in het linker navigatiedeelvenster.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Voorwaarde toevoegen.</b></p>
+                <p><img src="../../Resources/Images/azure-add-user.png" alt="Selecteer Query maken." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Gebruikers</b> en selecteer elke gebruiker die je wilt toewijzen aan de applicatie.</p>
+                <p class="note"><b>Let op:</b> Als je een Premium Microsoft Azure account hebt, kun je gebruikersgroepen aanmaken en vervolgens de groep selecteren om toegang te verlenen aan alle leden van de groep. Zie voor meer informatie <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal">Een basisgroep maken en leden toevoegen met Azure Active Directory</a>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Selecteren</b> als je alle gebruikers hebt toegevoegd die toegang moeten hebben.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Toewijzen</b> om deze gebruikers toegang te geven tot de applicatie.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Assign-API-permissions.htm">API-machtigingen instellen</a></p>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Renseignements manquants</h1>
+        <p>Ce test analytique repère les champs qui sont vides ou qui contiennent des renseignements incomplets, comme les champs obligatoires de description.</p>
+        <p>Ce test peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Les transactions fictives</p>
+            </li>
+            <li>
+                <p>Les transactions pour lesquelles il n&apos;y a que peu ou pas d&apos;explication ou de description</p>
+            </li>
+            <li>
+                <p>Des problèmes systémiques dans le traitement des transactions par un service</p>
+            </li>
+            <li>
+                <p>Les paramètres du système mal configurés</p>
+            </li>
+            <li>
+                <p>L’échec du processus de validation des données</p>
+            </li>
+            <li>
+                <p>Documents justificatifs manquants</p>
+            </li>
+            <li>
+                <p>Comptabilisation incorrecte de transactions dans la bonne période intermédiaire</p>
+            </li>
+            <li>
+                <p>La faiblesse des contrôles internes</p>
+            </li>
+            <li>
+                <p>Une insuffisance dans les activités de surveillance et de détection</p>
+            </li>
+            <li>
+                <p>Une formation insuffisante</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Ce test utilise un ou plusieurs champs pour déterminer les renseignements potentiellement manquants ou incomplets. Les types de champs qui peuvent être utilisés sont les suivants :</p>
+        <ul>
+            <li>
+                <p><b>Numérique</b> – utilisé pour rechercher des valeurs nulles</p>
+            </li>
+            <li>
+                <p><b>Texte</b> – utilisé pour rechercher des champs vides ou des champs dont le nombre de caractères est inférieur à la longueur indiquée</p>
+            </li>
+            <li>
+                <p><b>Date</b> – utilisé pour rechercher les entrées de date manquantes</p>
+            </li>
+            <li>
+                <p><b>Heure</b> – utilisé pour rechercher les entrées d’heure manquantes</p>
+            </li>
+        </ul>
+        <h2>Paramètres</h2>
+        <p>Ce paramètre doit être défini pour que le test puisse être exécuté :</p>
+        <p><b>Sélectionner les champs</b> – Sélectionnez un ou plusieurs champs à utiliser pour effectuer le test analytique. Si vous sélectionnez un champ de texte tel qu&apos;un champ de description, vous pouvez spécifier le nombre maximum de caractères qu&apos;un champ peut contenir pour être considéré comme un renseignement manquant. Par exemple, si vous saisissez 10, tous les champs contenant 10 caractères ou moins seront identifiés comme des renseignements potentiellement manquants.</p>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p><b>Description manquante ou insuffisante</b> – Repère les transactions dont la description est insuffisante ou inexistante</p>
+            </li>
+            <li>
+                <p><b>Dates manquantes</b> – Repère les transactions sans date</p>
+            </li>
+            <li>
+                <p><b>Heures manquantes</b> – Repère les transactions sans saisie d&apos;heures</p>
+            </li>
+            <li>
+                <p><b>Chiffres manquants</b> – Repère les transactions sans chiffre, y compris les champs montant, remise, quantité et jours d&apos;échéance</p>
+            </li>
+            <li>
+                <p><b>ID/numéro manquant</b> – Repère les transactions sans identifiant, comme les champs <b>ID de l&apos;écriture</b> et <b>Numéro de document</b></p>
+            </li>
+            <li>
+                <p><b>Utilisateur manquant</b> – Repère les transactions sans information sur l&apos;utilisateur</p>
+            </li>
+            <li>
+                <p><b>Codes/types manquants</b> – Repère les transactions dont les codes sont manquants</p>
+            </li>
+            <li>
+                <p><b>Exercice ou période manquant</b> – Repère les transactions pour lesquelles il manque des renseignements sur l&apos;exercice ou la période</p>
+            </li>
+            <li>
+                <p><b>Monnaie manquante</b> – Repère les transactions dont la monnaie est manquante</p>
+            </li>
+            <li>
+                <p><b>Coordonnées manquantes</b> – Repère les transactions dont les coordonnées sont manquantes</p>
+            </li>
+            <li>
+                <p><b>Renseignements manquants – Tous les champs</b> – Repère les transactions pour lesquelles des renseignements manquent dans tous les champs sélectionnés</p>
+            </li>
+            <li>
+                <p><b>Numéros de TVA manquants sur les factures d&apos;achat/de vente</b> – Repère les numéros de TVA manquants sur les factures d&apos;achat ou de vente</p>
+            </li>
+            <li>
+                <p><b>ID manquants/vierges</b> – Repère la transaction dont l&apos;ID est manquant</p>
+            </li>
+            <li>
+                <p><b>Données manquantes dans le fichier maître des fournisseurs/clients</b> – Repère les champs vides dans les ensembles de données Comptes fournisseurs – Fournisseurs et Comptes fournisseurs – Clients</p>
+            </li>
+            <li>
+                <p><b>Aucune limite de crédit définie</b> – Repère les transactions pour lesquelles aucune limite de crédit n&apos;a été définie</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Renseignements manquants, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est réalisée seulement si des champs spécifiques ont été sélectionnés. Si tous les champs sont accessibles, cette étape n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;une colonne numérique, de texte, de date ou d’heure a été sélectionnée pour le ou les champs analytiques principaux.</p>
+            </li>
+            <li>
+                <p>S’il s’agit d’un champ de texte, obtenez le nombre maximum de caractères qu&apos;un champ peut contenir pour être considéré comme un renseignement manquant. Par défaut, la recherche porte sur les champs vides.</p>
+            </li>
+            <li>
+                <p>Pour les différents types de champs, procédez comme suit :</p>
+                <ul>
+                    <li>
+                        <p><b>Numérique</b> – rechercher les valeurs numériques qui sont vides ou égales à zéro.</p>
+                    </li>
+                    <li>
+                        <p><b>Texte</b> – rechercher des champs vides ou des champs dont la longueur est égale ou inférieure au nombre maximal de caractères spécifié.</p>
+                    </li>
+                    <li>
+                        <p><b>Date</b> – rechercher les écritures de dates vierges.</p>
+                    </li>
+                    <li>
+                        <p><b>Temps</b> – rechercher les écritures de temps vierges.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrayez les champs de résultats sélectionnés par l&apos;utilisateur. Tous les champs sont extraits par défaut.</p>
+                <p class="note"><b>Remarque :</b> Remarque : La capacité à choisir des champs de résultats n’est pas encore proposée et sera incluse dans une version ultérieure.</p>
+            </li>
+        </ol>
+    </body>
+</html>

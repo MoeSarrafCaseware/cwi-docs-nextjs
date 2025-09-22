@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Pour créer un fichier de remappage personnalisé :</p>
+        <ol>
+            <li>
+                <p style="font-weight: bold;"><span style="font-weight: normal;">Copier les composants.</span></p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Ouvrez votre fichier Working Papers.</p>
+                </li>
+                <p>Nous vous recommandons de créer une copie de sauvegarde de votre fichier avant de continuer<b>(Fichier | Sauvegarde</b>).</p>
+                <li>
+                    <p>Sur le ruban, cliquez <b>sur Fichier | Copier les composants. </b></p>
+                </li>
+                <p>L&apos;assistant de copie des composants s&apos;affiche.</p>
+                <li>
+                    <p>Cliquez sur <b>Copier dans ce fichier.</b></p>
+                </li>
+                <li>
+                    <p>Sur la page Sélectionner une source, cliquez sur l&apos;onglet <b>Fichier</b> , puis sur<b> Parcourir...</b></p>
+                </li>
+                <li>
+                    <p>Naviguez jusqu&apos;à <b>C:\NProgram Files (x86)\NCaseware\Scripts\Ncloudbridge\NCaseware ReviewComp et sélectionnez Caseware ReviewComp.ac</b>, puis cliquez sur <b>Suivant.</b></p>
+                </li>
+                <li>
+                    <p>Dans <b>la page Copier les composants</b>, sélectionnez <b>Groupements/Mappage.</b></p>
+                </li>
+                <li>
+                    <p>Sélectionnez <b>Mapping</b> et cliquez sur <b>Options..</b></p>
+                </li>
+                <p>La boîte de dialogue <b>Options de copie de mappage</b> s&apos;affiche.</p>
+            </ol>
+            <li>
+                <p>Numéros de remap.</p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Cliquez sur <b>Remap</b>.</p>
+                    <p>La boîte de dialogue Remap s&apos;affiche.</p>
+                </li>
+                <li>
+                    <p>Faites glisser un numéro de mappage de la liste <b>Numéros de mappage de fichiers de destination</b> et déposez-le dans le numéro de mappage approprié de la liste <b>Numéros de mappage de fichiers de source</b> .</p>
+                </li>
+                <li>
+                    <p>Répétez l&apos;opération pour attribuer d&apos;autres numéros de mappage.</p>
+                </li>
+                <li>
+                    <p>Une fois que vous avez terminé, cliquez sur <b>Appliquer</b> pour enregistrer vos paramètres, puis sur <b>OK.</b></p>
+                </li>
+            </ol>
+            <li>
+                <p>Générer le fichier <b>.ini</b> .</p>
+            </li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Dans la boîte de dialogue <b>Options de copie de mappage</b> , cliquez sur <b>Annuler</b>.</p>
+                </li>
+                <li>
+                    <p>Dans l&apos; <b>assistant de copie des composants</b>, cliquez sur <b>Annuler.</b></p>
+                </li>
+                <p>Un fichier de remappage portant le nom <b>copy.ini</b> est créé dans le dossier de votre fichier Working Papers ( <b>C:\NProgram Files (x86)\NCaseware\NData</b>).</p>
+            </ol>
+        </ol>
+    </body>
+</html>

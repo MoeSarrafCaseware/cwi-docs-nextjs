@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3>Operating expenses by client</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>Accountsummary</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Horizontal bar chart (<img src="../Images/horizontal-bar-chart-23x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Y-axis</i></p>
+        <ul>
+            <li>
+                <p><b>entityname</b> - Displays a list of entities by name.</p>
+            </li>
+        </ul>
+        <p><i>Value</i></p>
+        <ul>
+            <li>
+                <p><b>operatingexpenses</b> - Displays the operating expense value for each entity.</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change how the operating expense is displayed:</p>
+                <ol>
+                    <li>
+                        <p>In the Field wells area, select the drop-down menu next to <b>operatingexpenses</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select how to aggregate the data (for example: sum, average, median, etc.).</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>

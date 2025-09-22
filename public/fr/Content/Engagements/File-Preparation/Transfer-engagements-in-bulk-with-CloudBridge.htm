@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Transférer des engagements en masse avec CloudBridge</h1>
+        <p>Utilisez CloudBridge pour transférer les données de plusieurs Working Papers vers Cloud.</p>
+        <p><b>Remarque :</b> Ces instructions ne s&apos;appliquent qu&apos;à CloudBridge (toutes les régions, en vrac). Pour les instructions de transfert individuel, voir <a href="Transfer-individual-engagements-with-CloudBridge.htm">Transfert d&apos;engagements individuels avec CloudBridge</a>.</p>
+        <h2>Obtenir CloudBridge (Toutes les régions, en vrac)</h2>
+        <p>Contactez votre représentant du support Caseware pour demander l&apos;accès à l&apos;utilitaire.</p>
+        <p>Cette version de CloudBridge est :</p>
+        <ul>
+            <li>
+                <p>Destiné aux applications de toutes les régions.</p>
+            </li>
+            <li>
+                <p>Utilisé pour transférer les données de plusieurs Working Papers vers le Cloud.</p>
+            </li>
+            <li>
+                <p>Autonome ; il n&apos;a pas besoin d&apos;être ajouté à d&apos;autres documents de travail.</p>
+            </li>
+            <li>
+                <p>Convient à une migration vers l&apos;informatique en nuage à l&apos;échelle de l&apos;entreprise.</p>
+            </li>
+        </ul>
+        <h2>Meilleures pratiques</h2>
+        <p>Avant de commencer, nous vous recommandons d&apos;appliquer les bonnes pratiques suivantes :</p>
+        <ul>
+            <li>
+                <p>Organisez les fichiers sur votre disque local ou réseau (par exemple, par ordre alphabétique, par priorité, par ordre de téléchargement, etc.)</p>
+            </li>
+            <li>
+                <p>Pour les utilisateurs hybrides, téléchargez les copies de synchronisation depuis le Cloud en utilisant l&apos; <a href="https://documentation.caseware.com/latest/Audit/en/Content/Common_Using_Audit/t_Batch_Update_Wizard.htm">outil Caseware Batch</a></p>
+            </li>
+            <li>
+                <p><a href="../../Setup/Organization/Create-client-entities.htm">Créer (ou importer) toutes les entités nécessaires</a></p>
+            </li>
+        </ul>
+        <p>En outre, nous vous recommandons</p>
+        <ul>
+            <li>
+                <p>Fermez toutes les autres applications pendant l&apos;exécution de CloudBridge.</p>
+            </li>
+            <li>
+                <p>Exécutez Cloudbridge pendant la nuit ou en dehors des heures de travail.</p>
+            </li>
+            <li>
+                <p>Limitez chaque téléchargement à 500 engagements à la fois.</p>
+            </li>
+        </ul>
+        <h2>Configurer CloudBridge</h2>
+        <p>Après avoir installé CloudBridge, vous devez vous connecter au site Cloud de destination où les données d&apos;engagement seront transférées.</p>
+        <p><b>Pour configurer CloudBridge :</b></p>
+        <ul>
+            <li>
+                <p>Faites un clic avec le bouton droit de la souris sur le fichier de commandes et choisissez <b>Exécuter en tant qu&apos;administrateur</b>. Ouverture de CloudBridge.</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Modifier les serveurs, saisissez le nom et l&apos;URL du site Cloud de destination où les données d&apos;engagement seront transférées. Vous pouvez ajouter d&apos;autres sites Cloud en sélectionnant <b>Ajouter un serveur</b>, mais notez que les données ne peuvent être transférées que vers une seule application dans un seul site Cloud à la fois. Lorsque vous avez terminé, sélectionnez <b>Terminé</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu déroulant Serveur, sélectionnez le site Cloud concerné et cliquez sur <b>Connecter</b>.</p>
+            </li>
+            <li>
+                <p>L&apos;invite de connexion s&apos;affiche. Saisissez vos informations d&apos;identification et sélectionnez <b>Sign-in</b> pour vous connecter au site Cloud.</p>
+            </li>
+        </ul>
+        <h2>Transfert des données d&apos;engagement</h2>
+        <p>Une fois que vous avez connecté CloudBridge à votre site Cloud de destination, vous êtes prêt à commencer le transfert des données d&apos;engagement.</p>
+        <p class="note"><b>Remarque :</b> Les comptes dont le solde est nul ne sont pas automatiquement importés. Si vous avez besoin de comptes à solde nul dans un engagement Cloud de destination, vous devez les ajouter et les affecter manuellement.</p>
+        <p><b>Transférer les données relatives à l&apos;engagement :</b></p>
+        <ol>
+            <li>
+                <p>Dans le menu principal de CloudBridge, sélectionnez <b>Nouveau téléchargement.</b></p>
+            </li>
+            <li>
+                <p>A l&apos;étape Général :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Saisissez un nom pour le formulaire.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez l&apos;application dans laquelle vous travaillerez avec les données d&apos;engagement transférées. Notez que si vous devez utiliser les données dans une autre application, vous devez effectuer un transfert supplémentaire et séparé.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Next.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Dans l&apos;étape Paramètres du fichier source :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Indiquez le répertoire des Working Papers sources contenant les données que vous souhaitez transférer.</p>
+                    </li>
+                    <li>
+                        <p>(Facultatif) Filtrer les missions des Working Papers sources en saisissant une date de début et une date de fin. Seules les données relatives aux engagements à l&apos;intérieur de la plage seront transférées.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez les points de données à transférer. Les options comprennent les ajustements, le grand livre, la balance des comptes (plusieurs années), les documents/dossiers externes et les risques et contrôles.</p>
+                    </li>
+                    <li>
+                        <p>Si vous sélectionnez <b>Balance de vérification (plusieurs années)</b>, vous avez la possibilité d&apos;utiliser un fichier de correspondance personnalisé. Pour plus d&apos;informations, voir <a href="#Remap">Créer une mission de consolidation</a> .</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez les fichiers externes à transférer. Les options comprennent Word, Excel, PowerPoint, PDF, CSV, texte, JPG, PNG ou tous les fichiers externes.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Next.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>A l&apos;étape des paramètres du fichier cloud :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez une méthode de dénomination pour les nouveaux engagements créés à l&apos;aide des données transférées. Les options comprennent le nom du fichier Working Papers, le nom d&apos;exploitation et l&apos;entité Cloud.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez un format de date de fin d&apos;année à inclure dans le nom des nouveaux engagements.</p>
+                    </li>
+                    <li>
+                        <p>Choisissez d&apos;inclure la date de fin d&apos;année ou de la placer au début (préfixe) ou à la fin (suffixe) des nouveaux noms d&apos;engagement.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Next.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Dans l&apos;étape Fichiers à télécharger :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Sélectionnez l&apos;entité Cloud dans laquelle vous souhaitez transférer les données (pour chaque fichier source).</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez l&apos;engagement Cloud dans lequel vous souhaitez transférer les données (pour chaque fichier source). Si aucun engagement dans le nuage n&apos;est sélectionné, un nouvel engagement sera pris dans l&apos;entité sélectionnée.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Next.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>A l&apos;étape Upload settings (Paramètres de téléchargement) :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Indiquez la durée maximale du transfert. Les options comprennent 1, 2, 3 et 4 heures. Une fois la durée écoulée, CloudBridge se fermera, même si le transfert est incomplet.</p>
+                    </li>
+                    <li>
+                        <p>Spécifiez le délai d&apos;attente pour chaque engagement de source. Les options comprennent 5, 10, 15 et 20 minutes. Une fois la durée écoulée, le transfert passe à l&apos;engagement source suivant, même si le précédent est incomplet.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Next.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>À l&apos;étape du résumé :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Passez en revue tous les paramètres que vous avez sélectionnés. Si vous devez apporter d&apos;autres modifications, sélectionnez <b>Précédent.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Télécharger les transactions.</b></p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Le transfert des données d&apos;engagement commence. Vous verrez l&apos;état d&apos;avancement de votre transfert et recevrez un rapport final une fois celui-ci terminé. Pour effectuer un autre transfert, recommencez cette procédure.</p>
+        <h3><a name="Remap"></a>Pour créer un fichier de remappage personnalisé :</h3>
+        <p>Si votre entreprise utilise une structure de mappage personnalisée, vous devez créer votre propre fichier de remappage (.ini) en fonction de votre structure de mappage personnalisée.</p>
+        <p><b>Pour créer un fichier de remappage personnalisé :</b></p>
+        <ol>
+            <li>
+                <p>Copier les composants.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Ouvrez votre fichier Working Papers.</p>
+                    </li>
+                    <li>
+                        <p>Nous vous recommandons de créer une copie de sauvegarde de votre fichier avant de continuer<b>(Fichier | Sauvegarde</b>).</p>
+                    </li>
+                    <li>
+                        <p>Sur le ruban, cliquez <b>sur Fichier | Copier les composants.</b> L&apos;assistant de copie des composants s&apos;affiche.</p>
+                    </li>
+                    <li>
+                        <p>Cliquez sur <b>Copier dans ce fichier.</b></p>
+                    </li>
+                    <li>
+                        <p>Sur la page Sélectionner une source, cliquez sur l&apos;onglet <b>Fichier</b> , puis sur<b> Parcourir...</b></p>
+                    </li>
+                    <li>
+                        <p>Naviguez jusqu&apos;à <b>C:\NProgram Files (x86)\NCaseware\NScripts\Ncloudbridge\N</b> et ouvrez le dossier de l&apos;application, puis sélectionnez le fichier .ac (par exemple <b>Caseware ReviewComp\NCaseware ReviewComp.ac</b>). Cliquez sur <b>Suivant.</b></p>
+                    </li>
+                    <li>
+                        <p>Dans la page Copier les composants, sélectionnez <b>Groupements/Mappage.</b></p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Mapping</b> et cliquez sur <b>Options..</b> La boîte de dialogue Options de copie de mappage s&apos;affiche.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Numéros de remap.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Cliquez sur <b>Remap</b>. La boîte de dialogue Remap s&apos;affiche.</p>
+                    </li>
+                    <li>
+                        <p>Faites glisser un numéro de mappage de la liste <b>Numéros de mappage de fichiers de destination</b> et déposez-le dans le numéro de mappage approprié de la liste <b>Numéros de mappage de fichiers de source</b> .</p>
+                    </li>
+                    <li>
+                        <p>Répétez l&apos;opération pour attribuer d&apos;autres numéros de mappage.</p>
+                    </li>
+                    <li>
+                        <p>Une fois que vous avez terminé, cliquez sur <b>Appliquer</b> pour enregistrer vos paramètres, puis sur <b>OK.</b></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Générer le fichier .ini .</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans la boîte de dialogue Options de copie de mappage , cliquez sur <b>Annuler</b>.</p>
+                    </li>
+                    <li>
+                        <p>Dans l&apos; assistant de copie des composants, cliquez sur <b>Annuler.</b> Un fichier de remappage portant le nom <b>copy.ini</b> est créé dans le dossier de votre fichier Working Papers ( <b>C:\NProgram Files (x86)\NCaseware\NData</b>).</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Vous pouvez maintenant utiliser ce fichier de remappage dans Cloudbridge pour transférer les données de vos Working Papers vers votre engagement.</p>
+        <p><b>Pour créer un fichier de remappage personnalisé :</b></p>
+        <ol>
+            <li>
+                <p>Renommez le fichier de remappage de manière à ce qu&apos;il suive la convention d&apos;appellation <b>&lt;Product Name&gt;.ini</b>, où &lt;Product Name&gt; correspond au nom du produit dans l&apos;étape générale.</p>
+                <p>Par exemple :</p>
+                <ul>
+                    <li>
+                        <p>Caseware ReviewComp.ini</p>
+                    </li>
+                    <li>
+                        <p>OnPoint Audit.ini</p>
+                    </li>
+                    <li>
+                        <p>US Review.ini</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Déplacez le fichier de remappage vers <b>C:ÚsersääPublicäCloudBridge</b>.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;étape Paramètres du fichier source, sélectionnez <b>Balance de vérification (plusieurs années) | Utiliser un fichier de mappage personnalisé.</b></p>
+            </li>
+        </ol>
+        <p class="note"><b>Remarque :</b> Si CloudBridge signale &quot;No mapping file found&quot;, vérifiez que le nom et l&apos;emplacement du fichier de remappage sont corrects.</p>
+    </body>
+</html>

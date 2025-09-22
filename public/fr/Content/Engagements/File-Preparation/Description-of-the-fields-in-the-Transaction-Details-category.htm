@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Détails de la transaction décrits</h1>
+        <p>Lorsque vous <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importez des</a> transactions du grand livre à partir d&apos;un fichier CSV ou Excel, vous devez mettre en correspondance les champs afin que les données des transactions s&apos;affichent correctement dans la mission. En outre, certains champs sont cohérents d&apos;une ligne à l&apos;autre dans une entrée. Lors d&apos;une importation, ces champs sont stockés séparément et sont remplis avec les valeurs de la première ligne de l&apos;entrée.  <a href="Understand-genledger-data.htm#Gen-ledger-data-storage">Pour plus d&apos;informations</a>, voir <a href="Understand-genledger-data.htm#Gen-ledger-data-storage">Comment les données du grand livre sont stockées lors de l&apos;importation.</a></p>
+        <p>Cette rubrique décrit les champs de la catégorie <b>DÉTAILS DE TRANSACTION</b> qui apparaissent dans le jeu de données du grand livre.</p>
+        <p>Notez que certains champs sont obligatoires pour que certains tests d&apos;analyse de données fonctionnent correctement. Pour en savoir plus, voir <a href="CSV-transaction-file-requirements.htm#Mandator2">Champs obligatoires pour l&apos;analyse des données.</a></p>
+        <h2>Numéro d&apos;entrée<code>(entry_number</code>)</h2>
+        <p>Identifiant séquentiel unique pour chaque écriture au journal.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Regroupe les lignes de transaction dans les transactions (si l&apos;ID d&apos;entrée n&apos;est pas marqué).</li>
+                <li>Identifiant visuel pour les transactions.</li>
+                <li>Si le numéro et l&apos;identifiant d&apos;entrée ne sont pas marqués, chaque transaction se voit attribuer un identifiant unique aléatoire.</li>
+                <li>Dans le test Sequence Gaps AnalyticsAI.</li>
+            </ul>
+        </p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Si l&apos;ID d&apos;entrée n&apos;est pas balisé, il ne doit pas y avoir de cellules de numéro d&apos;entrée vides.</p>
+                </li>
+                <li>
+                    <p>Si l&apos;ID d&apos;entrée est attribué, seule la première valeur du numéro d&apos;entrée pour chaque ID d&apos;entrée unique sera importée.</p>
+                </li>
+            </ul>
+        </p>
+        <h2>Montant<code>(montant)</code></h2>
+        <p>Montant de la ligne de transaction. Cette valeur peut être positive pour un débit et négative pour un crédit.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Rapprochement/complétude des données.</li>
+                <li>Dans ces tests AnalyticsAI :</li>
+                <ul>
+                    <li>Entrées en double</li>
+                    <li>Se termine en 999</li>
+                    <li>Montants élevés</li>
+                    <li>Montants arrondis</li>
+                    <li>2 chiffres de Benford</li>
+                    <li>Montants nuls</li>
+                </ul>
+            </ul>
+        </p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>Les valeurs positives et négatives peuvent être incluses dans l&apos;un ou l&apos;autre :</li>
+                <ul>
+                    <li>Une colonne avec des valeurs négatives formatées dans un formatage négatif standard. En voici quelques exemples :</li>
+                    <ul>
+                        <li>-4000.00</li>
+                        <li>(4000,00)</li>
+                        <li>4000,00-</li>
+                    </ul>
+                    <li>Séparer les colonnes &quot;débit&quot; et &quot;crédit&quot;.</li>
+                </ul>
+                <li>Les virgules ou les points sont interprétés comme des séparateurs décimaux.</li>
+            </ul>
+        </p>
+        <h2>Commentaire détaillé<code>(detail_comment</code>)</h2>
+        <p>Description de l&apos;entrée de ligne.</p>
+        <h3>Utilisation</h3>
+        <p>Dans ces tests AnalyticsAI :<ul><li>Descriptions manquantes</li><li>Mots clés spécifiques</li></ul></p>
+        <h2>Date d&apos;enregistrement<code>(posting_date</code>)</h2>
+        <p>Date d&apos;entrée en vigueur - l&apos;entrée de données a été comptabilisée (validée) dans le grand livre, quelle que soit la date de création.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Associe les transactions à une date et à une période fiscale.</li>
+                <li>Dans ces tests AnalyticsAI :<ul><li>Entrées en double</li><li>Jours insolites</li></ul></li>
+            </ul>
+        </p>
+        <h3>Exigences</h3>
+        <p>
+            <p>Pour être affichées dans la liste des transactions, les transactions doivent se situer dans la fourchette d&apos;exercices définie dans l&apos;engagement.</p>
+            <p>Le format de la date doit être correctement défini :</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><p><![CDATA[					
+						]]></p>
+        </p>
+        <h2>Statut du détachement<code>(posting_status</code>)</h2>
+        <p>Indique si l&apos;entrée a été comptabilisée ou non.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Les opérations marquées comme non comptabilisées ne sont pas utilisées pour calculer la somme des opérations dans le cadre des contrôles d&apos;exhaustivité des données.</li>
+                <li>Les transactions dont le <b>statut de comptabilisation</b> est défini sur <code>comptabilisé</code> sont utilisées dans les tests AnalyticsAI.</li>
+            </ul>
+        </p>
+        <p>Pour en savoir plus, voir les <a href="../../Explore/AnalyticsAI/Analytics-ai-test-results.htm">résultats des tests d&apos;AnalyticsAI</a>.</p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>
+                    <p>Moins de 2 500 valeurs uniques. Ces valeurs doivent être associées à l&apos;une d&apos;entre elles :</p>
+                </li>
+                <ul>
+                    <li>Affiché</li>
+                    <li>Non-affiché</li>
+                </ul>
+            </ul>
+        </p>
+        <h2>Type de document<code>(document_type</code>)</h2>
+        <p>Champ énuméré décrivant le document source original, avec chèque, débit-mémo, crédit-mémo, frais financiers, facture, commande-client, commande-fournisseur, paiement-autre, rappel, tegata, bon, expédition, réception, ajustement manuel, autre.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Filtrage des transactions en fonction du type de journal.</li>
+                <li>Dans le test AnalyticsAI des utilisateurs inhabituels.</li>
+            </ul>
+        </p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>Moins de 2 500 valeurs uniques.</li>
+                <li>Les données de la colonne applicable dans le fichier d&apos;importation de la transaction (le fichier CSV) doivent être affectées aux valeurs de <code>type de document</code> ci-dessous :<ul><li>GJ - Entrées du grand livre général</li><li>CD - Décaissement de trésorerie</li><li>CR - Encaissements</li><li>SJ - Factures de vente</li><li>PJ - Factures d&apos;achat</li><li>PL - Entrées dans le grand livre des salaires</li><li>AR - Ajustements des comptes clients (crédits, retours, autres ajustements)</li><li>AP - Ajustements des comptes fournisseurs (crédits, retours, autres ajustements)</li><li>FA - Ajustements de l&apos;actif immobilisé</li><li>IN - Ajustements des stocks</li><li>SC - Contrats de vente</li><li>SO - Commandes clients</li><li>PC - Achats Contrats</li><li>PR - Demandes d&apos;achat</li><li>PO - Bons de commande</li><li>GS - Marchandises expédiées</li><li>GR - Marchandises reçues</li><li>OT - Autres</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

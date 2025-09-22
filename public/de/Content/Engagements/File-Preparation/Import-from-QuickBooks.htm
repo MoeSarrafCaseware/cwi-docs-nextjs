@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Import aus QuickBooks Desktop</h1>
+        <p>You can import data from QuickBooks desktop by exporting it as a file, generating a zip file using the Caseware Cloud Import Utility, then importing it into your engagement.</p>
+        <p class="note"><b>Note:</b> Accounts with zero balances do not automatically import into Caseware Cloud apps with the exception of <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. To include zero-balance accounts, you must manually <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> and <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the designated groups.</p>
+        <h2>Daten aus Quickbooks exportieren</h2>
+        <p>Before you start, make sure that you complete the necessary prerequisite steps based on your QuickBooks version:</p>
+        <p style="font-weight: bold;">QuickBooks Canada / UK / Australia:</p>
+        <ul>
+            <li>
+                <p>Install an applicable version of QuickBooks on your workstation.</p>
+            </li>
+            <li>
+                <p>Install the QuickBooks Export Utility on your workstation. You can download it from <a href="https://my.caseware.com/">MyCaseware</a> on the Support Files page.</p>
+            </li>
+            <li>
+                <p>In QuickBooks, you must permit the QuickBooks Export Utility access to the file. On the ribbon, click <b>Edit</b> | <b>Preferences...</b> | <b>Integrated Applications</b> | <b>Company Preferences</b> and deselect <b>Don&apos;t allow any applications to access this company file</b>.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">QuickBooks USA:</p>
+        <ul>
+            <li>
+                <p>Install an applicable version of QuickBooks on your workstation.</p>
+            </li>
+        </ul>
+        <p>After completing the prerequisites, you can export data from QuickBooks Canada / UK / Australia or QuickBooks US.</p>
+        <p style="font-weight: bold;">To export data from QuickBooks Canada / UK / Australia:</p>
+        <ol>
+            <li>
+                <p>Log in to your QuickBooks desktop account, then open the company file that you want to import into Caseware Cloud.</p>
+            </li>
+            <li>
+                <p>Open the QuickBooks Export Utility.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the <b>QuickBooks Version</b> drop-down, select your QuickBooks version.</p>
+                    </li>
+                    <li>
+                        <p>​In the <b>Export Path</b> field, select <b>Browse…</b>.</p>
+                    </li>
+                    <p>The <b>Browse For Folder</b> dialog opens.</p>
+                    <li>
+                        <p>Navigate to the where you want to create the export file, then select <b>OK.</b></p>
+                    </li>
+                </ol>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Select <b>Specify last transaction date</b> and enter the applicable date.</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Accounting method</b> drop-down, select the applicable accrual method.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/quickbooks-export-utility.png" alt="The QuickBooks Export Utility" /></p>
+            </li>
+            <li>
+                <p>Select <b>Export</b>.</p>
+            </li>
+        </ol>
+        <p>The accounting data from the QuickBooks Desktop file is exported to a file in the specified location.</p>
+        <p style="font-weight: bold;">To export data from QuickBooks US:</p>
+        <ol>
+            <li>
+                <p>Log in to your QuickBooks desktop account, then open the company file that you want to import.</p>
+            </li>
+            <li>
+                <p>On the ribbon, select <b>File</b> | <b>Utilities</b> | <b>Copy Company File for QuickBooks Online...</b>.</p>
+                <p>If prompted to close any open windows, select <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>In the Save Exported Company file to... dialog, navigate to the location on your workstation where you want to create the QuickBooks Online file and select <b>Save</b>.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>The accounting data from the QuickBooks Desktop file is exported to a file in the specified location.</p>
+        <h2><a name="Generate"></a>Generate the import file for Quickbooks</h2>
+        <p>After exporting your data from QuickBooks, you can now generate the import file by using the Caseware Cloud Import Utility.</p>
+        <p style="font-weight: bold;">To generate the import file for Quickbooks:</p>
+        <ol>
+            <li>
+                <p>Download the Caseware Cloud Import Utility.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility(.exe)</a></p>
+            <p></p>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the <b>Import From</b> and <b>Version</b> drop-downs, select <b>QuickBooks</b> and the version you&apos;re importing from.</p>
+                <p class="note"><b>Note:</b> For a list of versions we support, see <a href="Supported-third-party-accounting-packages.htm">Supported third party accounting packages.</a></p>
+            </li>
+            <li>
+                <p>In <b>Import Path</b>, select <b>Browse</b> and navigate to the folder containing the collection of files you exported from QuickBooks using the Caseware QuickBooks Export Utility.</p>
+                <ul>
+                    <li>
+                        <p><b>Select Client ID File</b> is automatically filled with the name of the client ID file.</p>
+                    </li>
+                    <li>
+                        <p><b>File extension</b> is automatically filled with the correct file extension for the file. (The file extension options vary based on the version you previously selected.)</p>
+                    </li>
+                    <li>
+                        <p>In the <b>Accounting year</b> drop-down, select the year for which you want to import data.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/cloud-import-utility-quickbooks.png" alt="The Cloud Import Utility" /></p>
+            </li>
+            <li>
+                <p>Determine the remaining settings for the import.</p>
+                <p>The settings vary based on the version you previously selected.</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+            </li>
+        </ol>
+        <h2>Import the data into your engagement</h2>
+        <p>After you generate the zip file using the Caseware Cloud Import Utility, you can import the data into your engagement.</p>
+        <p><b>To import the data into your engagement:</b></p>
+        <ol>
+            <li>
+                <p>Open your Caseware Cloud engagement file. When you first open the engagement, the Engagement properties popup appears. Set <b>Year end date</b> to be the same as the data you are about to import.</p>
+                <p>The year-end date is the last element of the name of the zip file you generated in <a href="#Generate">Generate the import file for Quickbooks</a>. For example, for the file named SUNBRIDGE FARMS LTD. Mastercard Mark 8386 2022-09-30.zip, the year-end date is September 30, 2022.</p>
+            </li>
+            <li>
+                <p>Gehen Sie auf die Seite <b>Daten</b>. The Data page opens to the <b>Datasets</b> tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                </li>
+                <li>
+                    <p>If your engagement is consolidated and has internal subsidiary entities, select which entity you want to import data for from the list.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Under IMPORT FROM DATA CONNECTOR, select <b>QuickBooks Desktop</b> from the list of data sources, then select <b>Next</b>.</p>
+                <p>If the option is not visible, you can use the Search box to find it.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SelectQuickBooksDesktop.png" alt="Finding the QuickBooks Desktop data connector in the list on the Datasets tab." /></p>
+        <ol><li value="4"><p>At the Upload stage of the import wizard, select or drag-drop the zip file you generated using the Caseware Cloud Import Utility, then select <b>Next</b>.</p></li><li><p>At the Configure Data stage of the import wizard:</p><ul><li><p><b>Reporting period</b> is automatically filled with the reporting period of the data.</p></li><li><p><b>Year start Date</b> is automatically filled with the start date of the data.</p></li><li><p><b>Year end Date</b> is automatically filled with the end date of the data.</p></li></ul></li><li><p>In <b>Select dataset type</b>, choose the type of dataset you are importing. Select <b>Trial balance</b> if you are importing a trial balance and <b>General ledger</b> if you are importing transactions.</p></li><li><p>If you selected <b>Trial balance</b>, you can select the <b>Import the last 5 years of TB</b> option to import up to five years of trial balance data if it is available in the zip file you generated.</p></li></ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p class="indent">A new page appears displaying the data.</p>
+        <p class="indent">By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p class="indent">Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p class="indent">For more information, refer to <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>.</p>
+    </body>
+</html>

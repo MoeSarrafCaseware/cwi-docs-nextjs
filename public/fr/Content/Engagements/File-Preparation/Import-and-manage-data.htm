@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="exclude[General.SE-Authoring]">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Importer et gérer des données</h1>
+        <p>Vous pouvez importer dans votre engagement des données de balance de vérification, de grand livre et de comptabilité auxiliaire provenant de diverses sources.</p>
+        <p>Les fichiers d&apos;importation de données, tels que les fichiers Excel ou CSV, sont appelés sources de données, que vous pouvez ensuite configurer et affecter à un ensemble de données sur la page <strong>Ensembles de données</strong> . Plusieurs sources de données peuvent être affectées à un seul jeu de données. En outre, vous pouvez également importer des données non structurées, c&apos;est-à-dire des données qui ne peuvent pas être facilement attribuées à l&apos;un des types d&apos;ensembles de données existants, en sélectionnant le type d&apos;ensemble de données &quot;Autre&quot;. La source d&apos;importation et les options d&apos;ensemble de données disponibles varient en fonction de votre produit.</p>
+        <p>Toute mission peut comporter plusieurs types d&apos;ensembles de données, qui sont des collections de données normalement présentes dans une mission. Chaque ensemble de données stocke des données relatives à un aspect différent d&apos;un engagement et comporte des champs prédéterminés. Voir les descriptions des ensembles de données et de leurs champs dans <a href="#Dataset">Types d&apos;ensembles de données décrits</a>.</p>
+        <p>Pour en savoir plus sur l&apos;importation et la gestion de vos données, voir :</p>
+        <ul>
+            <li><a href="Import-data-from-online-accounting-sofware-new-method.htm">Importer des données à partir d&apos;un logiciel de comptabilité en ligne</a></li>
+            <li><a href="Import-data-from-a-desktop-accounting-software.htm">Importer des données à partir d&apos;un logiciel de comptabilité de bureau</a></li>
+            <li><a href="Import-from-Sage-desktop.htm">Importer à partir de Sage Desktop</a></li>
+            <li><a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Importer les transactions du client et d&apos;autres données du grand livre auxiliaire à partir d&apos;un fichier CSV ou Excel</a></li>
+            <li><a href="Import-the-trial-balance-from-an-engagement-file.htm">Importer la balance à partir d&apos;un fichier de mission</a></li>
+            <li><a href="Manage-your-imported-data.htm">Gérer vos données importées</a></li>
+        </ul>
+        <h2>Les sources de données et les ensembles de données expliqués, un exemple</h2>
+        <p>Le diagramme conceptualise les différences entre les sources de données et les ensembles de données. Voir aussi <a href="Resolve-data-conflicts.htm">Résoudre les conflits d&apos;importation de données</a> pour plus d&apos;informations sur la façon dont les conflits de données peuvent survenir et comment les résoudre.</p>
+        <p><img src="../../Resources/Images/Dataset-versus-data-sources.png" alt="Sources de données en relation avec les ensembles de données" /></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Une ou plusieurs sources de données peuvent être importées dans un jeu de données. Chaque fichier d&apos;importation de données est répertorié comme une source de données distincte. Il y a un conflit de données entre ImportFileA et ImportFileB dans la ligne de données dont l&apos;ID fournisseur est 1234 dans les deux fichiers. Dans ce cas, l&apos;utilisateur a choisi de conserver les données dans ImportFileA.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>L&apos;ensemble de données résultant ne contient pas nécessairement toutes les lignes de données de toutes les sources de données, en fonction de la manière dont les éventuels conflits de données sont résolus.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Vous pouvez visualiser les données composant un ensemble de données en exportant l&apos;ensemble de données.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Dataset"></a>Types d&apos;ensembles de données décrits</h2><MadCap:snippetBlock src="../../Resources/Snippets/dataset-descriptions.flsnp" /></body>
+</html>

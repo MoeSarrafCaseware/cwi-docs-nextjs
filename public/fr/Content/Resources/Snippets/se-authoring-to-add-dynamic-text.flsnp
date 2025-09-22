@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Pour ajouter un texte dynamique :</p>
+        <ol>
+            <li>
+                <p>Allez à l&apos;endroit où vous souhaitez ajouter une formule dans le texte.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Add Data Link</b> (<img src="../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la barre d&apos;outils.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;onglet <b>Texte dynamique</b> , sélectionnez la liste déroulante <b>Ajouter une condition.</b></p>
+            </li>
+            <p>Différents paramètres s&apos;affichent dans la boîte de dialogue <b>Liaison de données</b> en fonction de la condition choisie.</p>
+            <p>Pour plus d&apos;informations sur la définition des conditions, voir <a href="../../SE-Authoring/Conditions-for-glossary-terms-and-dynamic-text-display-logic.htm">Conditions pour les termes du glossaire et la logique d&apos;affichage dynamique de texte.</a></p>
+            <p>Vous pouvez ajouter plusieurs types de conditions pour déclencher des sorties de texte supplémentaires. Pour ajouter une autre condition, sélectionnez<b> Ajouter une condition.</b></p>
+            <p>Vous pouvez également spécifier une sortie alternative pour le texte si aucune condition n&apos;est remplie.</p>
+            <li>
+                <p>Une fois que vous avez terminé, sélectionnez <b>Enregistrer.</b></p>
+            </li>
+            <p>Si une (ou plusieurs) condition(s) est (sont) remplie(s), le texte d&apos;édition correspondant que vous avez spécifié pour cette condition s&apos;affiche.</p>
+            <p>Si aucune condition n&apos;est remplie, le texte alternatif (celui que vous avez spécifié lorsque aucune des conditions n&apos;est remplie) s&apos;affiche. Sinon, <i>#ValueEmpty#</i> s&apos;affiche.</p>
+        </ol>
+        <p class="tip"><b>Conseil :</b> Vous pouvez supprimer une liaison de données en la mettant en surbrillance, puis en sélectionnant Delete ou Backspace.</p>
+    </body>
+</html>

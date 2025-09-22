@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Ignore">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Data Analytics DA-9</h1>
+        <h2>AnalyticsAI</h2>
+        <p>No hay elementos a mostrar en esta sección.</p>
+        <h2>Importar datos</h2>
+        <h3>Importación de archivo Excel</h3>
+        <p>This release has added a new processing step to enable file validation during tagging.</p>
+        <p><img src="../Resources/Images/transaction-import-processing.png" alt="Transaction import processing progress" /></p>
+        <h3>Entry number error message</h3>
+        <p>Now, when mapping a column in a transactions file to ENTRY NUMBER, LINE NUMBER or ENTRY ID, an error displays if any blank cells are detected.</p>
+        <p><img src="../Resources/Images/entry-number-error.png" alt="Entry number error" /></p>
+        <p>Click on the warning to show the blank cells and their line numbers. With this information, you can correct the file using a tool of your choice, or contact your client with this information and ask for a corrected transactions file.</p>
+        <p>An error also displays if there are blank rows.</p>
+        <p><img src="../Resources/Images/blank-cells.png" alt="Blank cells error" /></p>
+        <p>You will not be able to import files with errors -- the <b>Import</b> button on the Import Transactions page will be inactive.</p>
+        <h3>Prueba mensaje de error.</h3>
+        <p>When mapping a column in a transactions file to AMOUNT, an error displays if any non-numeric properties are present.</p>
+        <p><img src="../Resources/Images/invalid-data-type.png" alt="Tipo de gráfico incorrecto" /></p>
+        <p>Click on the warning to view the affected data.</p>
+        <p><img src="../Resources/Images/invalid-data-rows.png" alt="Archivo de datos inválido" /></p>
+        <p>You will not be able to import files with errors -- the <b>Import</b> button on the Import Transactions page will be inactive.</p>
+        <h3>Unassigned value warnings</h3>
+        <p>When mapping a column in a transactions file to DOCUMENT TYPE, POSTING STATUS, IDENTIFIER TYPE or ORIGINATING DOCUMENT TYPE, a warning displays if there are any unassigned values. Por ejemplo:</p>
+        <p><img src="../Resources/Images/unassigned-document-type.png" alt="Tipo de documento original" /></p>
+        <h3>Entradas duplicadas</h3>
+        <p>If duplicate transactions are detected in CSV files, either in the same file, or a subsequent file in an engagement, the duplicate transactions will be ignored on import.</p>
+        <p>Attempting to import duplicate transactions will no longer corrupt the transactions database. Additionally, if an import fails, users will be able to upload and import another file. Prior to this release this action would also result in a corrupted datbase.</p>
+        <p><b>Note:</b> Transaction duplicates are based on the entry number property, not the entire transaction.</p>
+    </body>
+</html>

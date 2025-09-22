@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Les valeurs de la colonne <b>Influence %</b> sont appliquées en tant que fraction du risque de la transaction.</p>
+        <p>Les transactions à faible risque ne sont pas très affectées par des valeurs plus élevées du <b>pourcentage d&apos;influence</b> , alors que les transactions qui semblent déjà douteuses peuvent être augmentées de manière significative.</p>
+        <p>Par exemple, une transaction avec cinq points de risque, qui est affectée par un <b>pourcentage d&apos;influence</b> fixé à 20, passera à six points de risque, ce qui n&apos;est pas une différence significative.</p>
+        <p>Toutefois, une transaction déjà risquée, par exemple une transaction qui n&apos;a pas réussi le test des comptes complexes et qui a un score de risque de 50 points, passera à 60 points.</p>
+        <p>Si le <b>pourcentage d&apos;influence</b> est fixé à 60 %, la transaction à faible risque ne gagnera que huit points. En revanche, la transaction présentant le risque le plus élevé passerait à 80 - un saut important qui pourrait affecter de manière significative la position d&apos;une transaction dans la liste.</p>
+    </body>
+</html>

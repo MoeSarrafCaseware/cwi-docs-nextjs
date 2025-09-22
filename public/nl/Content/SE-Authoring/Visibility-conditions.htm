@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Zichtomstandigheden</h1>
+        <p><a name="visbility-conditions-description"></a>De volgende lijst beschrijft de zichtbaarheidcondities, de beschikbare parameters voor elke conditie en toont een voorbeeld voor elke conditie.</p>
+        <h2>Risico op een afwijking van materieel belang (RMM):</h2>
+        <p>Selecteer een beweringstype, een groep uit de proefbalans en een van de volgende voorwaarden:</p>
+        <ul>
+            <li><b>RMM</b> - geselecteerde groep heeft RMM voor dit beweringstype.</li>
+            <li><b>Geen RMM</b> - geselecteerde groep heeft geen RMM voor dit beweringstype.</li>
+        </ul>
+        <p>Als je <a href="Enable-the-new-risk-module.htm">de nieuwe risicomodule</a> in je product hebt <a href="Enable-the-new-risk-module.htm">ingeschakeld</a> , is er een andere set parameters beschikbaar voor deze conditie:</p>
+        <ul>
+            <li>Selecteer het extractietype.</li>
+            <li>Selecteer het gebied of de bedrijfscyclus.</li>
+            <li>Geef de logische bewerking op om te vergelijken en te evalueren (=,&lt;=,&gt;=).</li>
+            <li>Selecteer de tijdschaal.</li>
+        </ul>
+        <p>De waarden in de lijst met RMM-schalen zijn gedefinieerd in de <a href="Enable-the-new-risk-module.htm#Customiz">instellingen voor RMM-schalen</a> in Productinstellingen.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als <b>Volledigheid</b> voor <b>Contant geld</b>  <b>geen RMM</b>heeft, toon dit item dan.</p>
+        <p><i>Of, als je de nieuwe risicomodule hebt ingeschakeld:</i></p>
+        <p>Als <b>Nauwkeurigheid</b> voor <b>inventaris</b>  <b>RMM minder dan Gemiddeld</b>heeft, verberg dit item dan.</p>
+        <h2>Financiële groepen</h2>
+        <p>Selecteer een groep uit de proefbalans, geef het jaar op (huidig of vorig) en een van de volgende balanswaarden:</p>
+        <ul>
+            <li>is nul</li>
+            <li>niet nul is</li>
+            <li>is materieel</li>
+            <li>is niet materieel</li>
+        </ul>
+        <h3>Voorbeeld</h3>
+        <p>Als het saldo van de <b>kortetermijnbeleggingsrekening</b> voor het <b>lopende jaar materieel is</b>, toon dan deze post</p>
+        <h2><a name="Response"></a>Geen reactie</h2>
+        <p>Selecteer een brondocument, een procedure in het document en een antwoord voor de procedure.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als in het <b>200 Optimizer-document</b> het antwoord op <b>Wat is het type opdracht zoals gedefinieerd onder SSARS21?</b> procedure <b>Compilatie</b>is, verberg dan dit item.</p>
+        <p>Merk op dat als een reactie is gewijzigd nadat je een voorwaarde voor zichtbaarheid <b>van reacties</b> hebt ingesteld die naar die reactie verwijst, de waarde <b>Reactie niet opgenomen</b> wordt weergegeven.</p>
+        <p><img src="../Resources/Images/response-not-recorded.PNG" alt="De waarde Response Not Recorded wordt weergegeven in plaats van de reactie waarnaar wordt verwezen, omdat de reactie is gewijzigd nadat je de voorwaarde Response visibility hebt ingesteld." /></p>
+        <h2>consolidatie</h2>
+        <p>Geef aan of de opdracht geconsolideerd of niet-geconsolideerd is, waar:</p>
+        <ul>
+            <li>
+                <p>Niet-geconsolideerd saldo = moedermaatschappij + aanpassingen moedermaatschappij (exclusief eliminerende aanpassingen).</p>
+            </li>
+            <li>
+                <p>Geconsolideerde balans = moedermaatschappij + aanpassingen moedermaatschappij + aanpassingen dochtermaatschappijen + aanpassingen dochtermaatschappijen + eliminerende aanpassingen moedermaatschappij en dochtermaatschappijen.</p>
+            </li>
+        </ul>
+        <h3>Voorbeeld</h3>
+        <p>Als de verloving <b>geconsolideerd is,</b> toon dan dit item.</p>
+        <h2>Schalen/afronden</h2>
+        <p>Selecteer een van de items uit de vervolgkeuzelijst.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als de afronding in <b>miljoenen</b>is, geef dit dan weer.</p>
+        <h2><a name="reporting-period-cond"></a>Rapportageperiode</h2>
+        <p>Selecteer de rapportageperiode die van toepassing is</p>
+        <ul>
+            <li>Maandelijks</li>
+            <li>Per kwartaal</li>
+            <li>Halfjaarlijks</li>
+            <li>Jaarlijks</li>
+        </ul>
+        <h3>Voorbeeld</h3>
+        <p>Als de rapportageperiode <b>Jaar</b> is <b>,</b> wordt dit item weergegeven.</p>
+        <h2>Datum</h2>
+        <p>Om een datumvoorwaarde in te stellen, selecteert u de toepasselijke parameteroptie uit de beschikbare vervolgkeuzelijsten.</p>
+        <ol>
+            <li>Select the nature of the date:<ul><li>Effectief op</li><li>Verloopt op</li></ul></li>
+            <li>Selecteer de periodetype-opties voor het boekjaar en tussentijdse periodes binnen een boekjaar:<ul><li>Startdatum jaar</li><li>Einddatum jaar</li><li>Startdatum jaar</li><li>Einddatum jaar</li></ul></li>
+            <li>Selecteer de wiskundige bewerkingen die worden gebruikt om te vergelijken en te evalueren (&lt;,&gt;, &lt;=,&gt;=).</li>
+            <li>Selecteer de datum.</li>
+        </ol>
+        <h3>Voorbeeld</h3>
+        <p>Dit item geeft aan of <b>de</b>  <b>ingangsdatum van het verlovingsjaar</b> na <b>30 november 2019</b>valt.</p>
+        <h2>Type organisatie</h2>
+        <p>Selecteer het land en het type organisatie.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als het entiteittype <b>Canadian Private Corporation</b>is, toon dan dit item.</p>
+        <h2>Taal:</h2>
+        <p>Selecteer een van de items uit de vervolgkeuzelijst.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als de inhoudstaal <b>Frans</b>is, dan wordt dit item weergegeven.</p>
+        <p>Merk op dat:</p>
+        <ul>
+            <li>
+                <p>De taal van de inhoud is de taal die op dat moment is geselecteerd in het pop-upvenster <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Eigenschappen van de opdracht</a></p>
+            </li>
+            <li>
+                <p>Alleen <a href="Set-up-multiple-content-languages.htm">actieve talen</a> zijn beschikbaar voor selectie in het vervolgkeuzemenu</p>
+            </li>
+        </ul>
+        <h2>Groep voorwaarden</h2>
+        <p>Voeg de voorwaarden toe om de groep in te stellen</p>
+        <p class="note inline"><b>Let op:</b> Je kunt alle condities toevoegen.</p>
+        <h3>Voorbeeld</h3>
+        <p>Dit item geeft aan of het opdrachttype <b>Review</b> is en het entiteittype <b>Canadian Private Corporation</b><![CDATA[  ]]><i>of als</i> de <b>jaarster tdate</b> na <b>21 oktober 2019 </b>is.</p>
+        <h2>Vorm Waarde</h2>
+        <p>Je kunt een of meer formulieren opnemen in de voorwaarde-instellingen. Selecteer de formuliernaam, een veld in het geselecteerde formulier en een waarde voor het geselecteerde veld.</p>
+        <p>De waardeopties voor een geselecteerd veld hangen af van het veldtype. Numerieke velden hebben bijvoorbeeld logische operatoren en numerieke waarden, terwijl datumvelden een kalenderpictogram hebben om een datum te selecteren.</p>
+        <p class="note inline"><b>Let op:</b> Als je geen formulieren hebt ontwikkeld met <a href="Develop-custom-forms.htm">SE Builder</a> in je product, zijn de parameter keuzelijsten voor deze voorwaarde uitgeschakeld.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als het veld <b>T2S8</b> in <b>S8 -</b> formulier <b>Kapitaalkostentoeslag (CCA)</b>  <b>&gt; 10</b> is of het veld <b>T3S8</b> in <b>S8 -</b> formulier <b>Kapitaalkostentoeslag (CCA)</b>  <b>&gt; 10</b>is, toon dan deze post.</p>
+    </body>
+</html>

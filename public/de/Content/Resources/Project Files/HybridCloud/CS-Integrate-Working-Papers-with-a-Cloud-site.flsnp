@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>When you integrate Working Papers with a Cloud site, you gain access to Cloud&apos;s collaboration, file management and engagement tracking tools. You can also access your organization&apos;s data and engagement files from any location with an internet connection, making it easier to work offsite.</p>
+        <p><b>Prerequisites:</b></p>
+        <ul>
+            <li>
+                <p>Your organization must have Working Papers with <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/SS-Getting-Started-Guide.htm" target="_blank">SmartSync</a> technology. If you do not have SmartSync, see<a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/Differences-Between-SmartSync-Non-SmartSync.htm" target="_blank"> Differences between SmartSync and non-SmartSync</a>, and contact your <a href="https://www.caseware.com/distributors" target="_blank">local distributor</a> for more information.</p>
+            </li>
+            <li>
+                <p>Your organization must have a Caseware Cloud site. If you do not have a Cloud site, you can <a href="https://www.casewarecloud.com/request-invite" target="_blank">request an invite</a>.</p>
+            </li>
+            <li>
+                <p>You must have an internet browser that supports TLS 1.2 or later. For more information, see <a href="https://www.caseware.com/case-knowledge/disabling-access-caseware-cloud-older-unsupported-browsers" target="_blank">Disabling access to Caseware Cloud for older and unsupported browsers</a>.</p>
+            </li>
+        </ul>
+        <p><b>To integrate Working Papers with a Cloud site:</b></p>
+        <ol>
+            <li>
+                <p>Ensure you close your current engagement file (<b>File | Close</b>).</p>
+            </li>
+            <li>
+                <p>On the ribbon, click <b>File | Options | Caseware Cloud</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Integrate with Caseware Cloud</b>.</p>
+            </li>
+            <li>
+                <p>In the table, click the <b>Server</b> field and enter the URL of your organization&apos;s Cloud site. You do not need to include the web protocol (<i>http://</i> or <i>https://</i>). Click <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>Open a Working Papers file. The login screen displays where you can enter your credentials. Click <b>Sign In</b>.</p>
+            </li>
+        </ol>
+        <p>Your copy of Working Papers is integrated with the Cloud site. You can integrate with additional Cloud sites by repeating this process, but only one Cloud site can be active at a time. You can find your engagement files by clicking <b>File | Open | Caseware Cloud</b> and searching for the entity where the files are located.</p>
+    </body>
+</html>

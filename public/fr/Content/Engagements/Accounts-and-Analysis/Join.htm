@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Joindre</h1>
+        <p>Ce test analytique combine deux ensembles de données distincts en un seul ensemble de données unifié. Ce test est utile lorsque vous devez combiner deux ensembles de données, car l&apos;un d&apos;eux contient des données principales qui enrichissent les renseignements que vous pouvez tirer de l&apos;autre ensemble de données transactionnelles. Par exemple, vous pouvez utiliser ce test pour identifier les fournisseurs n&apos;ayant effectué aucune transaction.</p>
+        <p>Notez que les deux ensembles de données joints sont appelés ensemble de données A (le fichier primaire) et ensemble de données B (le fichier secondaire).</p>
+        <p>Ce test prend en charge les jonctions suivantes :</p>
+        <ul>
+            <li>
+                <p>Jonction interne (conserve seulement les lignes qui ont des correspondances dans les deux ensembles de données A et B)</p>
+            </li>
+            <li>
+                <p>Jonction externe (conserve toutes les lignes qui ont des correspondances dans l&apos;ensemble de données A ou B, ou dans les deux)</p>
+            </li>
+            <li>
+                <p>Jonction externe gauche (conserve toutes les lignes de l&apos;ensemble de données A et les lignes correspondantes de l&apos;ensemble de données B)</p>
+            </li>
+            <li>
+                <p>Jonction externe droite (conserve toutes les lignes de l&apos;ensemble de données B et les lignes correspondantes de A)</p>
+            </li>
+            <li>
+                <p>Enreg. sans concordance dans le fichier secondaire</p>
+            </li>
+            <li>
+                <p>Enreg. sans concordance dans le fichier primaire</p>
+            </li>
+        </ul>
+        <p>Ce test analytique peut être utilisé pour :</p>
+        <ul>
+            <li>
+                <p>Vérifier que toutes les transactions des fournisseurs sont correctement enregistrées. Un fichier de données maîtres des fournisseurs permet de s&apos;assurer que tous les fournisseurs sont consignés, ce qui réduit le risque de manquer des transactions.</p>
+            </li>
+            <li>
+                <p>Confirmer que les renseignements sur le fournisseur sont exacts. Permet de s&apos;assurer que les paiements sont versés à des fournisseurs légitimes et que les erreurs dans les renseignements sur les fournisseurs sont réduites au minimum.</p>
+            </li>
+            <li>
+                <p>Il est essentiel aux fins de la conformité de s&apos;assurer que le fichier de données maîtres du fournisseur est tenu à jour conformément aux exigences réglementaires et aux politiques de l&apos;entreprise. Les auditeurs vérifient la conformité aux lois, aux règlements et aux politiques internes pertinents.</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Les champs suivants sont obligatoires pour cette analyse :</p>
+        <p><b>Colonnes principales</b> :</p>
+        <ul>
+            <li>
+                <p>Fichier primaire :</p>
+                <ul>
+                    <li>
+                        <p>Un ou plusieurs champs qui seront utilisés pour la correspondance</p>
+                    </li>
+                    <li>
+                        <p>Un ou plusieurs champs à inclure dans le résultat de la jonction.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Fichier secondaire :</p>
+                <ul>
+                    <li>
+                        <p>Un ou plusieurs champs qui seront utilisés pour la correspondance.</p>
+                    </li>
+                    <li>
+                        <p>Un ou plusieurs champs à inclure dans le résultat de la jonction.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Pour les deux champs de jonction, il faut également indiquer si la jonction doit être effectuée dans un ordre croissant ou décroissant. Les champs des fichiers primaire et secondaire doivent correspondre, car ils seront utilisés comme clé pour la jonction.</p>
+        <h2>Paramètres</h2>
+        <p>Un paramètre doit être défini pour que le test puisse être exécuté :</p>
+        <p><b>Type de jonction</b> :</p>
+        <ul>
+            <li>
+                <p><b>Jonction interne</b> (conserve seulement les lignes qui ont des correspondances dans les deux ensembles de données A et B)</p>
+            </li>
+            <li>
+                <p><b>Jonction externe</b> (conserve toutes les lignes qui ont des correspondances dans l&apos;ensemble de données A ou B, ou dans les deux)</p>
+            </li>
+            <li>
+                <p><b>Jonction externe gauche</b> (conserve toutes les lignes de l&apos;ensemble de données A et les lignes correspondantes de l&apos;ensemble de données B)</p>
+            </li>
+            <li>
+                <p><b>Jonction externe droite</b> (conserve toutes les lignes de l&apos;ensemble de données B et les lignes correspondantes de A)</p>
+            </li>
+            <li>
+                <p><b>Enreg. sans concordance dans le fichier secondaire</b></p>
+            </li>
+            <li>
+                <p><b>Enreg. sans concordance dans le fichier primaire</b></p>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p>La seule configuration possible pour ce test est celle des <b>transactions sans compte fournisseur.</b></p>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Doublons, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Demandez s&apos;il s&apos;agit d&apos;un résultat définitif ou d&apos;un résultat intermédiaire.</p>
+            </li>
+            <li>
+                <p>Obtenez le type de jonction effectuée parmi les types suivants :</p>
+                <ul>
+                    <li>
+                        <p>Jonction interne (conserve seulement les lignes qui ont des correspondances dans les deux ensembles de données A et B)</p>
+                    </li>
+                    <li>
+                        <p>Jonction externe (conserve toutes les lignes qui ont des correspondances dans l&apos;ensemble de données A ou B, ou dans les deux)</p>
+                    </li>
+                    <li>
+                        <p>Jonction externe gauche (conserve toutes les lignes de l&apos;ensemble de données A et les lignes correspondantes de l&apos;ensemble de données B)</p>
+                    </li>
+                    <li>
+                        <p>Jonction externe droite (conserve toutes les lignes de l&apos;ensemble de données B et les lignes correspondantes de A)</p>
+                    </li>
+                    <li>
+                        <p>Enreg. sans concordance dans le fichier secondaire</p>
+                    </li>
+                    <li>
+                        <p>Enreg. sans concordance dans le fichier primaire</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Obtenez le fichier primaire :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Obtenez les champs correspondants</p>
+                    </li>
+                    <li>
+                        <p>Obtenez la liste des champs qui seront inclus dans le résultat</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Obtenez le fichier secondaire :</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Obtenez les champs correspondants</p>
+                    </li>
+                    <li>
+                        <p>Obtenez la liste des champs qui seront inclus dans le résultat</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Demandez si les correspondances sont dans l&apos;ordre croissant ou décroissant ou un mélange.</p>
+            </li>
+            <li>
+                <p>Effectuez la jonction appropriée en fonction des sélections de l&apos;utilisateur.</p>
+            </li>
+        </ol>
+    </body>
+</html>

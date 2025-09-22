@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="CaseWare Cloud comes with several built-in roles. These roles define both the type of access and operations a user can perform in Cloud. There are two types of built-in roles: Staff roles and Contact roles." />
+    </head>
+    <body>
+        <h1>Funciones incorporadas</h1>
+        <p>Caseware Cloud comes with several built-in roles. These roles define both the type of access and operations a user can perform in Cloud. Each built-in role is applicable to either <a href="#Staff_Roles">staff</a> or <a href="#Contact_Roles">contacts</a>.</p>
+        <p>To view the built-in roles, go to the <b>Settings</b> page, then select <b>Security | Role Permissions</b>.</p>
+        <p><img src="../../Resources/Images/settings-role-permissions.png" alt="Security settings - Role permissions" /></p>
+        <p>Select a role to view more information about it in the menu on the right-hand side of the page.</p><div class="note"><p><b>Notas:</b></p>
+            <ul>
+                <li>
+                    <p>Built-in roles cannot be modified or deleted.</p>
+                </li>
+                <li>
+                    <p>Each organization must have at least one user with the <i>Admin</i> role. This user has all permissions and the ability to modify any organization setting.</p>
+                </li>
+            </ul></div><h2><a name="Staff_Roles"></a>Staff roles</h2>
+        <p>Built-in staff roles include <a href="#Organization">organization</a> and <a href="#Content">content</a> roles. Staff roles can be assigned to staff or staff groups.</p>
+        <h3><a name="Organization"></a>Organization roles</h3>
+        <p>Organization roles provide organization-wide rights. Staff with these roles can shape and define the organization&apos;s Cloud environment.</p>
+        <ul>
+            <li>
+                <p>If an organization role is assigned in a firm utilizing the <a href="../Organization/About-business-units.htm">business units</a> feature, it applies to all business units in the organization.</p>
+            </li>
+            <li>
+                <p>If an organization role is assigned in a non-business unit firm, it applies to the entire Cloud site (i.e. system-wide).</p>
+            </li>
+        </ul>
+        <p>The following table describes the built-in organization roles for staff.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Funciones</th>
+                    <th>Ambito:</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Organization-wide</td>
+                    <td>
+                        <p>Every organization must have at least one staff member with the <i>Admin</i> role. <i>Admins</i> have all permissions and the ability to modify any organization setting.</p>
+                        <p><b>Note:</b> You must still allocate app licenses (for apps that require them) to staff with the <i>Admin</i> role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Configuración Admin</p>
+                    </td>
+                    <td>Organization-wide</td>
+                    <td>
+                        <p><i>Settings Admins</i> can edit all system settings.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Personal Admin</p>
+                    </td>
+                    <td>Organization-wide</td>
+                    <td>
+                        <p><i>Staff Admins</i> can create, view, edit and delete staff and staff groups.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Content"></a>Content roles</h3>
+        <p>Content roles provide system-wide, entity level or entity content level rights.</p>
+        <ul>
+            <li>
+                <p>If a content role is assigned <b>system-wide</b>, it applies to all entities in the Cloud site (non-business unit firms) or a single <a href="../Organization/About-business-units.htm">business unit</a> (business unit firms).</p>
+            </li>
+            <li>
+                <p>If a content role is assigned at the <b>entity</b> level, it applies to the specified entity.</p>
+            </li>
+            <li>
+                <p>If a content role is assigned at the <b>content</b> level, it applies to the specified content in an entity.</p>
+            </li>
+        </ul>
+        <p>The following table describes the built-in content roles for staff.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Funciones</th>
+                    <th>Ambito:</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Entidades Admin</td>
+                    <td>System-wide</td>
+                    <td><i>Entities Admins</i> can create, view, edit and delete contacts, contact groups, entities, and all content within entities.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Propietario</p>
+                    </td>
+                    <td>
+                        <p>System-wide, Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Owners</i> can view, edit and delete entity content, and assign roles to other staff where they have this role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Editor</p>
+                    </td>
+                    <td>
+                        <p>System-wide, Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Editors</i> can view and edit entity content where they have this role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visor</p>
+                    </td>
+                    <td>
+                        <p>System-wide, Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Viewers</i> can view entity content where they have this role.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Entity Access</p>
+                    </td>
+                    <td>
+                        <p>System-wide, Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Entity Access</i> allows staff to access entities where they have this role, so that they can be assigned a security role on content such as an activity or a file. It does not allow them to view or edit staff, contacts or other entity content, but does allow them to view the entity summary and details.</p>
+                        <p>This role is typically assigned to staff who would otherwise not know that an entity exists.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Contact_Roles"></a>Contact roles</h2>
+        <p>Contact roles provide entity level (an entity) or content level (content within an entity) rights. Contacts with these roles can access Cloud in a limited capacity, or not at all (with the Associated role).</p>
+        <p>The following table describes the built-in roles for contacts.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>Funciones</th>
+                    <th>Ambito:</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Entity Collaborator</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Entity Collaborators</i> can create new content and access existing content in entities where they have this role. They can receive file requests.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Entity Access</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Entity Access</i> allows contacts to access existing content in entities where they have this role. It does not allow them to receive file requests or initiate any communication.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Asociaciones</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Associated</i> allows contacts to be associated with an entity. It does not allow them to sign in to Cloud, receive notifications, or access any features.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Owner</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Owners</i> can view, edit and delete content where they have this role. They cannot share content.</p>
+                        <p>This role is automatically assigned on activities or files that contacts create.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Editor</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Editors</i> can view and edit content where they have this role. They cannot share content.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Viewer</p>
+                    </td>
+                    <td>
+                        <p>Entities and content within them</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Viewers</i> can view content where they have this role. They cannot share content.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

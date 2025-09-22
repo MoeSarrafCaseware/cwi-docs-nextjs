@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Exporter des factures vers Xero</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Après l&apos; <a href="Integrate-online-accounting-software-with-Cloud.htm">intégration</a> avec Xero, vous pouvez exporter les factures finalisées.</p>
+        <h2>Limites</h2>
+        <p>Avant d&apos;exporter une facture, il convient de tenir compte des limitations suivantes.</p>
+        <p style="font-weight: bold;">Les factures ne sont pas synchronisées entre les services</p>
+        <p>Si vous devez modifier une facture dans Cloud après l&apos;avoir exportée vers votre logiciel de comptabilité, vous devez effectuer à nouveau l&apos;exportation pour vous assurer que les deux services sont à jour. Pour plus d&apos;informations, voir <MadCap:xref href="#Modify">Modifier une facture exportée</MadCap:xref>.</p>
+        <p style="font-weight: bold;">L&apos;exportation et la modification des informations sur les clients sont limitées</p>
+        <p>Lorsque vous exportez une facture, Time tente d&apos;associer la facture à un client préexistant dans votre logiciel de comptabilité. Si aucune correspondance n&apos;est trouvée, un nouveau client est créé en utilisant le nom de l&apos;entité du nuage. Pour modifier les informations relatives à un client après une exportation, vous devez les mettre à jour manuellement dans Cloud et dans votre logiciel de comptabilité.</p>
+        <p style="font-weight: bold;">Les factures créées dans votre logiciel de comptabilité ne peuvent pas être exportées vers le cloud</p>
+        <p>Si vous créez une facture dans votre logiciel de comptabilité, vous ne pouvez pas exporter cette facture vers Cloud.</p>
+        <p style="font-weight: bold;">Les factures payées et approuvées sont automatiquement clôturées dans le nuage</p>
+        <p>Lorsque vous marquez une facture comme payée ou approuvée dans votre logiciel de comptabilité, le statut de la facture passe à Fermé dans le nuage. Ce processus peut prendre jusqu&apos;à douze heures en fonction de votre logiciel comptable.</p>
+        <p style="font-weight: bold;">Les numéros de factures appliqués aux factures exportées ne peuvent pas être réutilisés après que la facture a été marquée comme approuvée dans Xero</p>
+        <p>Si une facture est marquée comme approuvée dans Xero, son numéro de facture ne peut pas être réutilisé. Si une facture est supprimée avant d&apos;être marquée comme approuvée, son numéro peut être réutilisé.</p>
+        <h2>Exporter une facture</h2>
+        <p>Avant de commencer, assurez-vous que vous avez l&apos;autorisation d&apos; <i>exporter vers le logiciel de comptabilité</i> Time.</p>
+        <p style="font-weight: bold;">Exporter des factures vers Xero</p>
+        <ol>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Facturation</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez les factures finalisées que vous souhaitez exporter, puis cliquez sur <b>Plus d&apos;actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Exporter les factures sélectionnées vers Xero</b>.</p>
+            </li>
+        </ol>
+        <p>Si des erreurs ou des avertissements surviennent pendant l&apos;exportation, ils sont affichés dans la colonne <b>Xero Export.</b></p>
+        <h2><a name="Modify"></a>Modifier une facture exportée</h2>
+        <p>Dans certains cas, il est possible de modifier une facture après son exportation. Par exemple, si un poste est incorrect dans la facture. La procédure de modification d&apos;une facture après son exportation varie en fonction de votre logiciel comptable et du statut de la facture.</p>
+        <h3>Modifier une facture impayée</h3>
+        <p>Si vous avez exporté une facture vers Xero mais que vous n&apos;avez pas encore ajouté d&apos;informations de paiement, nous vous recommandons d&apos;effectuer les modifications nécessaires dans Cloud et non dans Xero. Les modifications apportées à une facture dans Xero ne sont pas synchronisées entre les deux services et peuvent entraîner des enregistrements inexacts dans Cloud.</p><MadCap:snippetBlock src="../../Resources/Snippets/to-modify-an-unpaid-invoice.flsnp" /><p>La facture est supprimée de Xero et peut maintenant être modifiée. Après avoir effectué les modifications nécessaires, exportez à nouveau la facture à l&apos;aide du menu <b>Autres actions.</b></p>
+        <h3>Modifier une facture payée ou approuvée</h3>
+        <p>Si une facture a été marquée comme approuvée dans Xero, elle ne peut pas être modifiée directement. Au lieu de cela, annulez la facture dans Xero, puis supprimez-la du nuage et créez une nouvelle facture dans le nuage.</p>
+    </body>
+</html>

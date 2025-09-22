@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Dimensionen hinzufügen</h1>
+        <p class="note"><b>Hinweis:</b> This feature is only available if it’s enabled in your product.</p>
+        <p>A dimension is a group property. An account can be assigned to one dimension within a specific group for further sorting and categorization.</p>
+        <p>You can create one or more dimension categories then populate the categories with dimensions. For example, you can create a dimension category called Location then create a dimension for each location that your client has. Once you create dimensions, you can then assign them to financial groups.</p>
+        <p>Note the following restrictions for assigning dimension categories to groups:</p>
+        <ul>
+            <li>
+                <p>End users cannot delete dimensions created by authors.</p>
+            </li>
+            <li>
+                <p>Firm authors and end users cannot modify dimension categories for groups that have inherited categories from higher level groups</p>
+            </li>
+        </ul><MadCap:snippetBlock src="../../Resources/Snippets/to-access-the-product-settings.flsnp"></MadCap:snippetBlock><p style="font-weight: bold;">To add a set of dimensions:</p>
+        <ol>
+            <li>
+                <p>Go to <b>Features | Dimensions.</b></p>
+            </li>
+            <li>
+                <p>Select <b>+ Category</b>, then add a name for the new dimension category.</p>
+            </li>
+            <li>
+                <p>Select <b>+ Dimension</b> to add a dimension for the new category.</p>
+            </li>
+            <li>
+                <p>Enter a name for the new dimension.</p>
+                <p>If you want to use dimension numbers to assign a unique identifier for each dimension, enter a value in the <b>Number</b> field. The number can consist of letters or numbers. These dimension numbers can be used to associate dimensions with transactions.</p>
+                <p>You can drag and drop dimensions to rearrange them within a category and use the up and down arrows to expand and collapse categories. You can also select <b>Delete Dimension</b> (<img src="../../Resources/Images/icon-delete.png" style="vertical-align: text-bottom;"></img>) to remove a dimension.</p>
+                <p>You can select <b>Add</b> (<img src="../../Resources/Images/icon-add-15x15.png" style="vertical-align: text-bottom;"></img>) to add a second-level dimension to your primary dimension. You can also add third-level dimensions to second-level dimensions.</p>
+                <p>You can set any dimension without children to be the default dimension for the category. Accounts in groups with this category applied will be automatically mapped to this dimension. For dimension categories without a default dimension set, accounts will not be automatically mapped to any dimension.</p>
+                <p><img src="../../Resources/Images/product-settings-dimensions.png" alt="The Dimensions tab of the Product Settings dialog." /></p>
+            </li>
+        </ol>
+        <p>When you have created your dimensions, you can then assign the dimension categories to financial groups. Note that you can assign multiple dimension categories to a single group.See <a href="Group-properties.htm">Group properties</a> for more information.</p>
+        <p><b>To assign a dimension category to a financial group:</b></p>
+        <ol>
+            <li>
+                <p>Go to the category in the product settings.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Assign Groups</b>.</p>
+            </li>
+            <li>
+                <p>If your product has multiple financial grouping structures, select the grouping structure you want from the drop-down.</p>
+            </li>
+            <li>
+                <p>Select all the applicable financial groups.</p>
+                <p>You can expand and collapse financial groups to view sub-groups and use the search bar to find the appropriate groups.</p>
+            </li>
+        </ol>
+    </body>
+</html>

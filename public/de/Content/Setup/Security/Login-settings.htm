@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can configure Cloud login settings to meet your security requirements." />
+    </head>
+    <body>
+        <h1>Anmeldeeinstellungen</h1>
+        <p>Wenn Sie beginnen, Ihr Cloud-Profil einzurichten, können Sie die Cloud-Einstellungen für den Zugriffschutz Ihres Unternehmens konfigurieren. Als Administrator können Sie:</p>
+        <ul>
+            <li>
+                <p>Cloud-Kennworteinstellungen ändern</p>
+            </li>
+            <li>
+                <p>Online-Sitzungsdauer festlegen</p>
+            </li>
+            <li>
+                <p>Zwei-Faktor-Authentifizierung konfigurieren</p>
+            </li>
+        </ul>
+        <h2 id="password-req">Kennwortanforderungen festlegen</h2>
+        <p>Cloud verfügt über einen Standard von Kennwortanforderungen, die für alle neuen Benutzer umgesetzt werden müssen. Sobald Sie sich selbst erfolgreich in Cloud angemeldet haben, können Sie diese Anforderungen weiter verschärfen.</p>
+        <p><b>Kennwortanforderungen festlegen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Zugriffschutz | Kennworteinstellungen</b>. Die Seite <b>Kennworteinstellungen</b> wird angezeigt.</p>
+            </li>
+        </ol>
+        <p>Sie können eine minimale Kennwortqualität festlegen und wählen, ob Kennwörter ablaufen oder nicht. Sobald Sie die Kennwortanforderungen festgelegt haben, wählen Sie <b>Speichern</b>, um Ihre Änderungen zuzuweisen.</p>
+        <h3 id="password-req-minimum-strength">Minimale Kennwortqualität</h3>
+        <p>Bei der minimalen Kennwortqualität handelt es sich um eine Einstellung, die die Mindestlänge für Cloud-Kennwörter und die verschiedenen Zeichentypen bestimmt, die beinhaltet sein müssen. Zeichen sind in vier Typen gruppiert:</p>
+        <ul>
+            <li>
+                <p>Kleinbuchstaben</p>
+            </li>
+            <li>
+                <p>Großbuchstaben</p>
+            </li>
+            <li>
+                <p>Zahlen</p>
+            </li>
+            <li>
+                <p>nicht-alphanumerische Zeichen</p>
+            </li>
+        </ul>
+        <p>Die minimale Kennwortqualität ist standardmäßig <b>Mittel</b>, es kann aber <b>Hoch</b> oder <b>Sehr hoch</b> gewählt werden. Je höher Sie Ihre Cloud-Kennwortqualität gewählt haben, desto länger muss das Kennwort sein oder desto mehr verschiedene Zeichentypen muss der Benutzer eingeben.</p>
+        <p>Wenn Sie z. B. die Einstellung <b>Mittel</b> zugewiesen haben, kann ein Mitarbeiter ein Kennwort verwenden, das nur aus Kleinbuchstaben besteht, wenn es mindestens 12 Zeichen lang ist. Wird die Einstellung <b>Sehr hoch</b> verwendet, kann dieser Mitarbeiter nur ein Kennwort mit Kleinbuchstaben verwenden, wenn das Kennwort mindestens 30 Zeichen lang ist.</p>
+        <h3 id="password-req-expiry"><a name="Password"></a>Kennwortablauffrist</h3>
+        <p>Die Kennwortablauffrist bewirkt, dass die Mitarbeiter regelmäßig ihr Kennwort ändern müssen. Standardmäßig werden Kennwörter nie ungültig.</p>
+        <p>Um Kennwortablauffristen zu setzen, wählen Sie <b>Ja</b> im Feld <b>Kennwörter laufen ab</b>. Eine neue Zeile wird angezeigt, in der Sie die Anzahl der Monate eingeben können, bis das Kennwort abläuft.</p>
+        <h2 id="session-length">Online-Sitzungsdauer festlegen</h2>
+        <p>Wenn ein Mitarbeiter sich bei Caseware Cloud anmeldet, beginnt er eine Sitzung. Dieser Mitarbeiter beendet seine Sitzung, wenn er sich von Cloud abmeldet oder wenn er die Anwendung schließt (im Webbrowser oder in Working Papers).</p>
+        <p>Sie können diese Einstellungen zur Sitzungsverwaltung für alle Benutzer in Ihrem Unternehmen ändern. Wenn Sie in Cloud festlegen, dass der Benutzer angemeldet bleiben kann, müssen sich die Benutzer nur einmal für eine festgelegte Zeitperiode anmelden. Es ist ihnen dann möglich, ihren Browser zu schließen, ohne die Sitzung zu beenden, und wenn sie im selben Browser wieder zurück in Cloud gehen, kehren sie automatisch zur letzten Stelle zurück, an der sie gearbeitet haben, ohne sich erneut anmelden zu müssen.</p>
+        <p>Während eine längere Sitzungsdauer die Login-Frequenz reduziert, erhöht es die Chancen, dass die Sitzung kompromittiert wird. Wir empfehlen, dass Sie die Online-Sitzungsdauer auf eine angemessene Länge begrenzen.</p>
+        <p><b>Online-Sitzungsdauer festlegen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Zugriffschutz | Sitzungsverwaltung</b>. Die Seite <b>Sitzungsverwaltung</b> wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Aktivieren Sie das Kontrollkästchen <b>Benutzer bei Anmeldung speichern</b>. Eine neue Zeile mit dem Feld <b>Anzahl der Stunden, die der Benutzer angemeldet bleiben soll</b> wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Geben Sie die Anzahl der Stunden ein, die die Cloud-Sitzungen Ihres Unternehmens offen bleiben sollen, nachdem Benutzer die Anwendung geschlossen haben.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>, um Ihre Änderungen anzuwenden.</p>
+            </li>
+        </ol>
+        <p>Sobald diese Einstellung aktiviert wurde, haben Mitarbeiter Ihres Unternehmens die Option für eine Anzahl von Stunden angemeldet zu bleiben, die Sie in den Einstellungen festgelegt haben.</p>
+        <p><img src="../../Resources/Images/session-management-remember-630x270.png" style="border:1px solid #3f66a3" alt="Ein Benutzer, der diese Checkbox vor der Anmeldung aktiviert, kann Cloud erneut öffnen, ohne die eigenen Benutzeranmeldeinformationen für bis zu 8 Stunden nach dem Schließen der Browsersitzung erneut eingeben zu müssen." /></p>
+        <h2 id="configure-2fa"><a name="Configur"></a>Zwei-Faktor-Authentifizierung konfigurieren</h2>
+        <p class="note"><b>Bitte beachten Sie:</b> SMS-basierte Zwei-Faktor-Authentifizierung steht aktuell als kostenloser Test zur Verfügung. In einem zukünftigen Release fügt unser Entwicklungsteam eine zweite Methode der Zwei-Faktor-Authentifizierung hinzu. Diese Methode wird mit mobilen Geräten arbeiten, nicht auf SMS aufbauen und kann kostenlos genutzt werden. Wenn die zweite Methode zur Verfügung steht, kann es zu zusätzlichen Kosten für den fortlaufenden Einsatz von SMS-basierter Zwei-Faktor-Authentifizierung kommen.</p>
+        <p>Um die sensiblen Daten Ihres Unternehmens effektiv zu schützen, sollten Sie die Zwei-Faktor-Authentifizierung erwägen. Bei der Zwei-Faktor-Authentifizierung wird erwartet, dass Sie zwei Informationen liefern, die Ihre Identität bestätigen, bevor Ihnen Zugriff auf Cloud gewährt wird.</p>
+        <ul>
+            <li>
+                <p>Ihr Kennwort</p>
+            </li>
+            <li>
+                <p>Ein einmalig verwendbarer Code, gesendet an Ihr Mobiltelefon</p>
+            </li>
+        </ul>
+        <p>Werden zwei Informationen verwendet, hilft dies sicherzustellen, dass Sie die einzige Person sind, die auf das Benutzerkonto zugreifen kann, auch wenn eine andere Person Ihr Kennwort hat.</p>
+        <h3>Empfohlene Vorgehensweise</h3>
+        <p>Wir empfehlen Folgendes, um sicherzustellen, dass Benutzer mit Zwei-Faktor-Authentifizierung den Zugriff auf Cloud bewahren.</p>
+        <ul>
+            <li>
+                <p>Stellen Sie sicher, dass Ihr Unternehmen <b>mindestens zwei</b> Mitarbeiter mit der Administrator-Rolle hat, bevor Sie die Zwei-Faktor-Authentifizierung aktivieren. Nur Mitarbeiter mit der Administrator-Rolle können die Zwei-Faktor-Authentifizierung deaktivieren. Das Zuweisen dieser Rolle zu zwei Benutzern stellt sicher, dass mindestens ein Konto immer auf Cloud zugreifen kann. Weitere Instruktionen finden Sie in <a href="Assign-system-wide-security-roles.htm">Zugriffsrollen zuordnen</a>.</p>
+            </li>
+            <li>
+                <p><a href="Login-settings.htm#Generate">Backup-Codes generieren</a>. Backup-Codes sind Einmalcodes, die Ihnen die Anmeldung ermöglichen, wenn Sie nicht auf Ihr Telefon zugreifen können, oder ein Administrator die Zwei-Faktor-Authentifizierung für Sie nicht deaktivieren kann.</p>
+            </li>
+        </ul>
+        <h3><a name="Addition"></a>Zusätzliche Anforderungen für Working Papers Anwender</h3>
+        <p>Aktuell wird die Zwei-Faktor-Authentifizierung nur mit Working Papers 2017.00.283 oder aktueller unterstützt. Wenn Sie eine ältere Version von Working Papers verwenden, muss ein Administrator die Zwei-Faktor-Authentifizierung für Ihr Cloud-Benutzerkonto deaktivieren, andernfalls können Sie sich nicht anmelden.</p>
+        <p>Um mehr über die Deaktivierung der Zwei-Faktor-Authentifizierung für individuelle Konten zu erfahren, lesen Sie <MadCap:xref href="Login-settings.htm#Enable">Zwei-Faktor-Authentifizierung für Ihr eigenes Konto aktivieren</MadCap:xref>.</p>
+        <h3 id="enable-2fa">Zwei-Faktor-Authentifizierung für Ihr Unternehmen aktivieren</h3>
+        <p class="note"><b>Bitte beachten Sie</b>: Mitarbeiter und Kontakte können immer die Zwei-Faktor-Authentifizierung ausgehend von ihren eigenen Konten aktivieren. Um mehr über die Aktivierung der Zwei-Faktor-Authentifizierung für individuelle Benutzer zu erfahren, lesen Sie <MadCap:xref href="Login-settings.htm#Enable">Zwei-Faktor-Authentifizierung für Ihr eigenes Konto aktivieren</MadCap:xref>.</p>
+        <p>Sie können die Zwei-Faktor-Authentifizierung für alle Mitarbeiter und Kontakte auf der Seite Einstellungen aktivieren. Sie können auch die Zwei-Faktor-Authentifizierung individuell für Ihr Konto aktivieren.</p>
+        <p><b>Zwei-Faktor-Authentifizierung für Mitarbeiter und Kontakte aktivieren: </b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem Cloud Hauptmenü <b>Einstellungen | Zugriffschutz | Authentifizierung und Sitzungsverwaltung</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Alle Mitarbeiter</b>, <b>Alle Kontakte</b> oder beides. Wenn Sie möchten, dass beide Gruppen in der Lage sind, temporär aus der Zwei-Faktor-Authentifizierung auszusteigen, wählen Sie <b>Dem Benutzer erlauben, die Einrichtung zu überspringen bis:</b> und geben Sie Datum und Uhrzeit ein. Diese Option soll Benutzern genügend Zeit geben, um den Einrichtungsvorgang abzuschließen.</p>
+                <p><img src="../../Resources/Images/firm-settings-authentication-session-management-2fa-settings.png" alt="Die Optionen Zwei-Faktor-Authentifizierung stehen auf der Seite Einstellungen zur Verfügung." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie aus der Drop-down-Liste <b>Alle 30 Tage</b> oder <b>Bei jeder Anmeldung</b>, um festzulegen, wie oft die Zwei-Faktor-Authentifizierung bei der Anmeldung erforderlich ist. Bei der ersten Anmeldung von einem neuen Gerät müssen Sie einen neuen Code eingeben, unabhängig davon, was Sie hier gewählt haben.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p>Sie haben die Zwei-Faktor-Authentifizierung für Mitarbeiter und Kontakte aktiviert. Wenn Sie dies bevorzugen, können Sie die Entscheidung zur Aktivierung der Zwei-Faktor-Authentifizierung dem individuellen Benutzer überlassen. Weitere Informationen erhalten Sie in <MadCap:xref href="Login-settings.htm#Enable">Zwei-Faktor-Authentifizierung für Ihr eigenes Konto aktivieren</MadCap:xref>.</p>
+        <h3 id="enable-personal-2fa"><a name="Enable"></a>Zwei-Faktor-Authentifizierung für Ihr eigenes Konto aktivieren</h3>
+        <p>Für Ihr eigenes Konto können Sie jederzeit die Zwei-Faktor-Authentifizierung aktivieren, sogar wenn sie nicht für Ihr gesamtes Unternehmen aktiviert wurde. Sie benötigen eine gültige Mobiltelefonnummer, um diese Option zu aktivieren.</p>
+        <p><b>Zwei-Faktor-Authentifizierung für ein individuelles Konto aktivieren: </b></p>
+        <ol>
+            <li>
+                <p>Wählen Sie Ihren <b>Avatar</b> und anschließend <b>Meine Einstellungen</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="Das Avatar-Menü." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie aus der Seitenleiste <b>Kontoeinstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Aktivieren</b> und anschließend Ihr Land aus der Drop-down-Liste <b>Land</b>.</p>
+            </li>
+            <li>
+                <p>Geben Sie Ihre Mobiltelefonnummer im Feld <b>Mobiltelefon</b> ein und wählen Sie <b>Telefonnummer aktualisieren</b>.</p>
+                <p><img src="../../Resources/Images/personal-settings-acount-settings-2fa.png" alt="Die Optionen Zwei-Faktor-Authentifizierung in Meine Einstellungen." /></p>
+            </li>
+            <li>
+                <p>Geben Sie Ihr Kennwort und dann Ihren Verifizierungscode im Feld <b>Verifizierungscode</b> ein.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Verifizieren</b>.</p>
+            </li>
+        </ol>
+        <p>Sie müssen die Zwei-Faktor-Authentifizierung für ein individuelles Konto einrichten. Sollten Sie Ihr Mobiltelefon verlieren, kann ein Administrator temporär die Zwei-Faktor-Authentifizierung deaktivieren. Weitere Informationen erhalten Sie in <MadCap:xref href="Login-settings.htm#Disable">Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren</MadCap:xref>.</p>
+        <h4 id="update-phone">Ihre Telefonnummer aktualisieren</h4>
+        <p>Wenn Sie Ihre Mobiltelefonnummer ändern, müssen Sie Ihre Zwei-Faktor-Authentifizierung aktualisieren. Sollten Sie nicht mehr länger auf Ihr Cloud-Konto zugreifen können, kann ein Administrator temporär die Zwei-Faktor-Authentifizierung deaktivieren (siehe <MadCap:xref href="Login-settings.htm#Disable">Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren</MadCap:xref> ).</p>
+        <p><b>Ihre Telefonnummer aktualisieren:</b><![CDATA[
+]]></p>
+        <ol>
+            <li>
+                <p>Wählen Sie Ihren <b>Avatar</b> und anschließend <b>Meine Einstellungen</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="Das Avatar-Menü." /></p>
+            </li>
+            <li>Wählen Sie aus der Seitenleiste <b>Kontoeinstellungen</b>.</li>
+            <li>
+                <p>Geben Sie Ihre Mobiltelefonnummer im Feld <b>Mobiltelefon</b> ein und wählen Sie <b>Telefonnummer aktualisieren</b>.</p>
+                <p><img src="../../Resources/Images/personal-settings-acount-settings-2fa.png" alt="Die Optionen Zwei-Faktor-Authentifizierung in Persönlichen Einstellungen." /></p>
+            </li>
+            <li>
+                <p>Geben Sie Ihr Kennwort und dann Ihren Verifizierungscode im Feld <b>Verifizierungscode</b> ein.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Verifizieren</b>.</p>
+            </li>
+        </ol>
+        <p>Sie haben Ihre Mobiltelefonnummer aktualisiert. Wenn Sie die Zwei-Faktor-Authentifizierung für Ihr Konto deaktivieren möchten, müssen Sie sich an einen Administrator wenden. Weitere Informationen zur Deaktivierung der Zwei-Faktor-Authentifizierung erhalten Sie in <MadCap:xref href="Login-settings.htm#Disable">Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren</MadCap:xref>.</p>
+        <h4 id="generate"><a name="Generate"></a>Backup-Codes generieren</h4>
+        <p>Backup-Codes ermöglichen Ihnen die Anmeldung, wenn Sie nicht auf Ihr Telefon zugreifen können, oder ein Administrator die Zwei-Faktor-Authentifizierung für Sie nicht deaktivieren kann. Backup-Codes sind Einmalcodes und müssen generiert werden, während Sie Zugriff auf Ihr Konto haben.</p>
+        <p><b>Backup-Codes generieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie die Zwei-Faktor-Authentifizierung für Ihr Konto aktiviert haben. Weitere Informationen erhalten Sie in <MadCap:xref href="Login-settings.htm#Enable">Zwei-Faktor-Authentifizierung für Ihr eigenes Konto aktivieren</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie Ihr Profilbild und anschließend <b>Meine Einstellungen</b>.</p>
+                <p><img src="../../Resources/Images/staff-avatar-my-settings.png" alt="Das Avatar-Menü." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie aus der Seitenleiste <b>Kontoeinstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Backup-Codes generieren</b>.</p>
+                <p><img src="../../Resources/Images/my-settings-account-settings-backup.png" alt="Mit dieser Option können Sie Backup-Codes nach Auswahl von Kontoeinstellungen generieren" /></p>
+            </li>
+            <li>
+                <p>Geben Sie Ihr Kennwort ein und wählen Sie <b>Fortfahren</b>.</p>
+            </li>
+            <li>
+                <p>Schreiben Sie Ihre Backup-Codes auf und bewahren Sie sie an einem sicheren Ort auf, oder wählen Sie <b>Herunterladen</b>, um sie als TXT-Datei zu speichern.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Schließen</b>.</p>
+            </li>
+        </ol>
+        <p>Sie haben einen Backup-Code generiert. Sollten Sie den Zugriff auf Ihre Backup-Codes und Ihr Mobiltelefon verlieren, müssen Sie einen Administrator kontaktieren, um Zugriff auf Ihr Konto zu erhalten.</p>
+        <h3 id="disable-2fa"><a name="Disable"></a>Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren</h3>
+        <p>Sollten Sie den Zugriff auf Ihr Mobiltelefon verlieren oder Ihre Telefonnummer ändern, können Sie nicht mehr auf Ihr Konto zugreifen. Um den Zugriff wiederzuerlangen, muss ein Administrator die Zwei-Faktor-Authentifizierung für Ihr Konto temporär deaktivieren. Bitte beachten Sie: Wenn ein Administrator die Zwei-Faktor-Authentifizierung permanent deaktiviert, können Sie Ihre Telefonnummer für die Zwei-Faktor-Authentifizierung nicht ändern.</p>
+        <p style="font-weight: bold;">Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren:</p>
+        <ol>
+            <li>
+                <p>Vergewissern Sie sich, dass Sie über die Rolle <i>Administrator</i> verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Mitarbeiter</b> oder <b>Kontakte</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie einen Mitarbeiter oder Kontakt und klicken Sie anschließend auf <b>Bearbeiten</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/Edit-user-630x131.png" alt="Das Symbol Bearbeiten wird auf der Seite Mitarbeiter oder Kontakte angezeigt, wenn ein Konto ausgewählt wurde." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Kennwort</b> und anschließend <b>Zwei-Faktor-Authentifizierung deaktivieren</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Bis:</b>, um Mitarbeitern und Kontakten zu erlauben, temporär auszusteigen. Dies stellt sicher, dass Mitarbeiter auf ihr Konto zugreifen und ihre Telefonnummer für die Zwei-Faktor-Authentifizierung bei Bedarf ändern können. Geben Sie im Feld das Datum für die automatische Reaktivierung der Zwei-Faktor-Authentifizierung ein.</p>
+                <p><img src="../../Resources/Images/personal-settings-password-disable-2fa.png" alt="Die Optionen werden angezeigt, wenn Sie die Zwei-Faktor-Authentifizierung für einen spezifischen Benutzer deaktivieren." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p>Sie können die Zwei-Faktor-Authentifizierung auch aus anderen Gründen deaktivieren. Sie können z. B. die Zwei-Faktor-Authentifizierung permanent deaktivieren, weil ein Mitarbeiter kein Mobiltelefon hat oder eine bestimmte Caseware Software in Cloud integriert hat. Um mehr darüber zu erfahren, wie integrierte Software mit der Zwei-Faktor-Authentifizierung interagiert, lesen Sie <MadCap:xref href="Login-settings.htm#Addition">Weitere Anforderungen für Working Papers und Time Benutzer</MadCap:xref>.</p>
+    </body>
+</html>

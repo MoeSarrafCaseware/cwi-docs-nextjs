@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Process details described</h1>
+        <p>When <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importing</a> general ledger transactions from a CSV or Excel file, you must map the fields, so the transactions display properly in the engagement.</p>
+        <p>This topic describes the fields within the <b>PROCESS DETAILS</b> category that appear in the General ledger dataset..</p>
+        <p>Note that some fields are mandatory for specific data analytics tests to function properly. To learn more see, <a href="CSV-transaction-file-requirements.htm#Mandator2">Mandatory fields for data analytics</a>.</p>
+        <h2>Originating Document Number (<code>originating_document_number</code>)</h2>
+        <p>Identifikationsnummer des Ursprungsbelegs, mit dem der Geschäftsprozess beginnt. This is the document which is the precursor for this recorded transaction. <br />Beispiele: &quot;PO-001&quot;, &quot;132134&quot;.</p>
+        <h3>Requirements</h3>
+        <p>
+            <ul>
+                <li>Less than 2,500 unique values.</li>
+                <li>The data in the applicable column in the transaction import file (the CSV file) must be assigned to the <code>originating_document_number</code> values below:<![CDATA[ 
+					]]><ul><li>GJ - General Journal</li><li>AR - Accounts Receivable Adjustments (credits, returns, other adjustments)</li><li>PC - Purchase Contracts</li><li>CD - Cash Disbursements</li><li>AP - Accounts Payable Adjustments (credits, returns, other adjustments)</li><li>PR - Purchase Requisitions</li><li>CR - Cash Receipts</li><li>FA - Fixed Assets</li><li>PO - Purchase Orders</li><li>SJ - Sales Journal (Sales Invoice Listing)</li><li>IA - Investment Assets</li><li>GS - Goods Shipped</li><li>PJ - Purchases Journal (Purchase Invoice Listing)</li><li>SC - Sales Contracts</li><li>GR - Goods Received</li><li>PL - Payroll Journal</li><li>SO - Sales Orders</li><li>OT - Other</li></ul></li>
+            </ul>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Migration de grands ensembles de données (plus de 50 fichiers)</h1>
+        <p>Le gestionnaire de migration est un outil administratif qui vous aide à migrer simplement et en toute sécurité de grandes quantités de données vers le cloud. Les organisations qui souhaitent utiliser le gestionnaire de migration doivent contacter le <a href="mailto:support@caseware.com">support Caseware</a> avec les informations suivantes :</p>
+        <ul>
+            <li>
+                <p>Date(s) de migration prévue(s)</p>
+            </li>
+            <li>
+                <p>Taille des données du client actif</p>
+            </li>
+            <li>
+                <p>Taille des données des clients inactifs</p>
+            </li>
+            <li>
+                <p>Nombre de fichiers à migrer (année en cours et année précédente)</p>
+            </li>
+            <li>
+                <p>Nombre d&apos;utilisateurs</p>
+            </li>
+        </ul>
+        <p>En outre, votre organisation doit confirmer qu&apos;elle n&apos;essaiera pas de migrer des fichiers qui ont été associés à une autre organisation.</p>
+        <p><b>Prérequis :</b></p>
+        <ul>
+            <li>
+                <p>Votre organisation doit utiliser les Working Papers 2019 ou une version ultérieure.</p>
+            </li>
+            <li>
+                <p>Votre organisation doit disposer de Working Papers dotés de la technologie <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/SS-Getting-Started-Guide.htm" target="_blank">SmartSync</a> . Si vous ne disposez pas de SmartSync, consultez la section <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Environments-Configuration/CaseWare-SmartSync/Differences-Between-SmartSync-Non-SmartSync.htm" target="_blank">Différences entre SmartSync et non-SmartSync</a>, et contactez votre <a href="https://www.caseware.com/distributors" target="_blank">distributeur local</a> pour plus d&apos;informations.</p>
+            </li>
+            <li>
+                <p>Votre organisation doit avoir un site Caseware Cloud. Si vous n&apos;avez pas de site Cloud, vous pouvez <a href="https://www.casewarecloud.com/request-invite" target="_blank">demander une invitation.</a></p>
+            </li>
+            <li>
+                <p>Vous devez disposer d&apos;un navigateur internet qui prend en charge TLS 1.2 ou une version ultérieure. Pour plus d&apos;informations, voir <a href="https://www.caseware.com/case-knowledge/disabling-access-caseware-cloud-older-unsupported-browsers" target="_blank">Désactiver l&apos;accès à Caseware Cloud pour les navigateurs plus anciens et non supportés</a>.</p>
+            </li>
+            <li>
+                <p>Vous devez installer le Gestionnaire de migration sur l&apos;ordinateur ou le serveur contenant les données à migrer.</p>
+            </li>
+            <li>
+                <p>Un administrateur doit faire fonctionner le Gestionnaire de migration au nom de l&apos;organisation (des privilèges administratifs sont requis).</p>
+            </li>
+            <li>
+                <p>Vous devez connecter le gestionnaire de migration à votre site cloud pour accéder à toutes les options de migration. Dans le menu principal, cliquez sur <b>Connexion</b> et entrez l&apos;URL de votre site Cloud et vos informations d&apos;identification d&apos;administrateur. Il n&apos;est pas nécessaire d&apos;inclure le protocole web<i>(http://</i> ou <i>https://)</i>dans l&apos;URL.</p>
+                <p class="note"><b>Remarque :</b> Si le site Cloud de votre organisation est configuré comme faisant partie d&apos;une <a href="../../Setup/Organization/About-business-units.htm">unité commerciale</a>, vous devez connecter le gestionnaire de migration à l&apos;URL d&apos;une unité commerciale individuelle, plutôt qu&apos;à l&apos;URL du site Cloud de premier niveau (où les membres du personnel se connectent généralement). Au cours du processus de migration, les données migreront vers l&apos;unité commerciale individuelle et ne seront accessibles qu&apos;aux utilisateurs de l&apos;unité commerciale. Vous pouvez ensuite répéter le processus avec les URL d&apos;autres unités commerciales individuelles.</p>
+            </li>
+        </ul>
+        <p><b>Recommandations :</b></p>
+        <ul>
+            <li>
+                <p>Validez l&apos;état de vos fichiers avant la migration. Pour plus d&apos;informations, voir <a href="#Validate-engagement-files">Valider les fichiers d&apos;engagement</a> .</p>
+            </li>
+            <li>
+                <p>Dans la mesure du possible, veillez à ce que les <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Engagement_Properties" target="_blank">propriétés d&apos;engagement de</a> vos fichiers contiennent autant d&apos;informations que possible pour faciliter le processus de cartographie automatique. Pour plus d&apos;informations, voir <a href="Migrate-large-data-sets-using-the-Migration-Manager.htm#Upload-entities-to-Cloud">Télécharger des entités dans le nuage</a> .</p>
+            </li>
+            <li>
+                <p>Compresser tous les fichiers parents avant la migration pour réduire les temps de migration. Veillez à inclure tous les sous-dossiers lors de la compression.</p>
+            </li>
+            <li>
+                <p>Sauvegarder tous les fichiers parents avant la migration. Les fichiers originaux sur votre serveur seront migrés vers le Cloud.</p>
+            </li>
+            <li>
+                <p>N&apos;exécutez qu&apos;une seule instance du Gestionnaire de migration à la fois. Les instances multiples n&apos;accélèrent pas le temps de traitement et peuvent avoir un impact négatif sur les performances du nuage.</p>
+            </li>
+            <li>
+                <p>Redémarrer les serveurs SmartSync auto-hébergés après une migration pour effacer la liste des fichiers d&apos;engagement. Si vous migrez vos données par étapes, redémarrez le serveur après chaque étape.</p>
+            </li>
+        </ul>
+        <h2><a name="Estimate-migration-time"></a>Estimer la durée de la migration</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Estimate-migration-time.flsnp" /><h2><a name="Upload-staff-to-Cloud"></a>Téléchargement du personnel dans le nuage</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Upload-staff-to-Cloud.flsnp" /><h2><a name="Upload-entities-to-Cloud"></a>Téléchargement d&apos;entités dans le nuage</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Upload-entities-to-Cloud.flsnp" /><h2><a name="Validate-engagement-files"></a>Valider les fichiers d&apos;engagement</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Validate-engagement-files.flsnp" /><h2><a name="Create-mapping-file"></a>Créer un fichier de mappage</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Create-a-mapping-file.flsnp" /><h2><a name="Migrate-engagement-files-to-Cloud"></a>Migrer les fichiers d&apos;engagement vers le nuage</h2><MadCap:snippetBlock src="../../Resources/Project Files/HybridCloud/MM-Migrate-engagement-files-to-Cloud.flsnp" /><h2>Pour intégrer des fichiers d&apos;engagement provenant d&apos;un serveur SmartSync :</h2>
+        <p>Les cabinets qui cherchent à tirer parti des capacités de gestion de Caseware Sherlock, tout en continuant à utiliser un serveur SmartSync sur site, peuvent intégrer leurs fichiers d&apos;engagement dans le Cloud directement via le gestionnaire de migration. Cette fonction permet aux entreprises d&apos;intégrer des fichiers historiques, d&apos;extraire des données historiques et d&apos;utiliser ces données dans Caseware Sherlock.</p><div class="note"><p><b>Notes :</b></p>
+            <ul>
+                <li>Il n&apos;est pas nécessaire de <a href="#Migrate-engagement-files-to-Cloud">migrer</a> vos fichiers d&apos;engagement pour ce processus.</li>
+                <li>Pour vous assurer qu&apos;aucune modification n&apos;est apportée aux fichiers historiques originaux, nous vous recommandons de faire des copies de tous les fichiers parents que vous avez l&apos;intention d&apos;intégrer et d&apos;effectuer les processus de <a href="#Validate-engagement-files">validation</a>, de <a href="#Create-mapping-file">mappage</a> et d&apos;intégration sur les copies, plutôt que sur les fichiers parents originaux. <b>Veiller à ce que toutes les copies de synchronisation des enfants restent fermées pendant toute la durée de l&apos;intégration</b>. Après l&apos;intégration, supprimez les copies du fichier parent avant que le personnel n&apos;ouvre les copies de synchronisation enfant.</li>
+            </ul></div><p><b>Pour intégrer des fichiers d&apos;engagement provenant d&apos;un serveur SmartSync :</b></p>
+        <ol>
+            <li>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</li>
+            <li>Dans le menu principal, cliquez sur <b>Intégrer les fichiers</b>.</li>
+            <li>Cliquez sur l&apos;icône de document et recherchez votre <a href="#Create-mapping-file">fichier de mappage</a> <i>(CWCloudMigrationMng.csv</i>). Sélectionnez le fichier et cliquez sur <b>Ouvrir.</b></li>
+            <li>Si vous souhaitez intégrer une série de fichiers (par exemple, les fichiers 1 à 50) plutôt que tous les fichiers à la fois, indiquez le premier et le dernier numéro de la série dans les champs correspondants.</li>
+            <li>Cliquez sur <b>INTEGRER</b>.</li>
+            <li>Si vous intégrez des fichiers provenant d&apos;une version antérieure de Working Papers, une boîte de dialogue s&apos;affiche pour vous permettre de convertir ou d&apos;ignorer ces fichiers. Les fichiers convertis ne seront plus accessibles dans la version précédente des Working Papers, tandis que les fichiers ignorés ne seront ni convertis ni intégrés dans Cloud.</li>
+        </ol>
+        <p>Les fichiers sont intégrés à Cloud et les résultats de l&apos;intégration s&apos;affichent. Pour obtenir des informations plus détaillées, consultez le fichier journal automatisé en cliquant sur le lien fourni. Cliquez sur <b>FERMER</b> pour revenir au menu principal.</p>
+        <p class="warning"><b>Important :</b> Avant que votre personnel n&apos;ouvre les copies de synchronisation enfant des fichiers, vous devez supprimer les copies du fichier parent.</p>
+    </body>
+</html>

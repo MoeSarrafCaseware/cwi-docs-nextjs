@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>To define a consolidation hierarchy:</b></p>
+        <ol>
+            <li>
+                <p>From the engagement properties pop-up of the parent engagement file, select <b>Consolidate</b>.</p>
+                <p><img src="../Images/consolidate-button-popup.png" alt="The Engagement Properties popup." /></p>
+                <p>The <b>Consolidation Hierarchy</b> page displays.</p>
+                <p><img src="../Images/consolidation-hierarchy-page.png" alt="The Consolidation Hierarchy page." /></p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) for the parent engagement.</p>
+            </li>
+            <li>
+                <p>To add a subsidiary with its own engagement file:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Agregar encargo vinculado</p>
+                    </li>
+                    <li>
+                        <p>Search for the subsidiary’s engagement file and select the correct one from the search results.</p>
+                    </li>
+                    <li>
+                        <p>Seleccione <b>OK</b>.</p>
+                    </li>
+                </ol>
+                <p><img src="../Images/add-linked-engagement.png" style="width: 810px;height: 435px;" alt="The Add Subsidiaries dialog for linked engagements." /></p>
+            </li>
+            <li>
+                <p>To add a subsidiary without its own engagement file:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Agregar BC importado</p>
+                    </li>
+                    <li>
+                        <p>Especifique el nombre para la base de datos de salida.</p>
+                    </li>
+                    <li>
+                        <p>If necessary, modify the parent entity’s ownership percentage in the <b>Percent Owned</b> field. This field is used for information purposes only. Final balances are not affected.</p>
+                    </li>
+                    <li>
+                        <p>Seleccione <b>SAVE</b>.</p>
+                    </li>
+                </ol>
+                <p><img src="../Images/add-trial-balance-only-entity.png" alt="The Add Trial Balance Only Entity option for internal subsidiaries." /></p>
+            </li>
+            <li>
+                <p>Select <b>Save</b> in the upper right corner to save and close the consolidation hierarchy.</p>
+                <p><img src="../Images/consolidation-hierarchy-example.png" alt="The Consolidation Hierarchy page." /></p>
+            </li>
+        </ol>
+        <p> </p>
+    </body>
+</html>

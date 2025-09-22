@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Nadat u uw ontwerpsjabloon hebt aangepast, kunt u deze bekijken en publiceren. Wanneer je een concept publiceert, wordt het de huidige bedrijfssjabloon en is het van toepassing op nieuwe opdrachten.</p>
+        <p style="font-weight: bold;">Een concept publiceren</p>
+        <ol>
+            <li MadCap:conditions="General.Online">
+                <p>Zorg ervoor dat u de <b>beheerdersrol voor instellingen</b> of gelijkwaardige rechten hebt. Zie voor meer informatie <a href="../../Setup/Security/Built-in-roles.htm">Ingebouwde rollen</a> en <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Beveiligingsrollen toewijzen</a>.</p>
+            </li>
+            <li MadCap:conditions="General.Online">
+                <p>Selecteer in het menu Cloud (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) <b>Instellingen</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | &lt;your product name&gt; | <b>Sjabloon beheren.</b></p>
+            </li>
+            <li MadCap:conditions="General.PDF">
+                <p>Selecteer in het Cloud-menu (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) <b>Instellingen</b> (<img src="../Images/icon-settings-cloud.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>OnPoint PCR</b></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PrintGuides.RCT"><b>Caseware ReviewComp</b></MadCap:conditionalText> | <b>Sjabloon beheren </b><MadCap:conditionalText MadCap:conditions="PrintGuides.OnPoint"><b>Primair</b></MadCap:conditionalText><b>.</b></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Sjabloon publiceren.</b></p>
+                <p>De gepubliceerde sjabloon wordt automatisch toegevoegd aan de lijst met gearchiveerde sjablonen. De sjabloonversie en de publicatiedatum worden in de lijst weergegeven.</p>
+                <p class="note inline"><b>Let op</b>: Zodra een licentie is ingetrokken, kan dit niet ongedaan worden gemaakt Je kunt echter<MadCap:conditionalText MadCap:conditions="General.PDF"> terugkeren naar een oudere versie.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../../Engagements/Template-and-Authoring/Revert-to-a-previous-template-version.htm">terugkeren naar een oudere versie</a>.</MadCap:conditionalText></p>
+            </li>
+        </ol>
+        <p>De opties op de pagina <b>Sjabloon beheren</b> zijn <b>Standaard gebruiken</b> en <b>Concept maken</b>.</p>
+        <p>Selecteer <b>Standaard gebruiken</b> als je de productsjabloon wilt gebruiken in plaats van een aangepaste bedrijfssjabloon.</p>
+        <p>Selecteer <b>Maak concept</b> als je een nieuw concept wilt maken en selecteer vervolgens <b>Open concept</b> om het aan te passen.</p>
+    </body>
+</html>

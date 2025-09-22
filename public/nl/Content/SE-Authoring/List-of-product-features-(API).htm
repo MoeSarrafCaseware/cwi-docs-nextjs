@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.SE-Authoring" MadCap:conditionTagExpression="exclude[General.Cloud-Help]">
+    <head>
+    </head>
+    <body>
+        <h1>Lijst met productfuncties (API)</h1>
+        <p>In de volgende lijst worden de productfuncties beschreven die u kunt in- en uitschakelen in uw SE-product.</p>
+        <p>Zie <a href="Workflow-(how-to-author-your-product-template).htm">Uw productsjabloon maken </a>voor meer informatie over het maken van uw SE-productsjabloon.</p>
+        <h2><a name="Additio"></a> Extra entiteitsvelden</h2>
+        <p>Definieer het veld <code>customFields</code> om de velden in het dialoogvenster Entiteit maken aan te passen.</p>
+        <p><img src="../Resources/Images/create-entity-dialog.PNG" alt="Dialoogvenster Discussie maken" /></p>
+        <h2><a name="Addition"></a>Extra annotaties</h2>
+        <p>Je kunt de module <code>com.caseware.reference</code> opnemen in het product.json bestand om extra annotatietypes mogelijk te maken.</p>
+        <h2><a name="Areas"></a>Gebied</h2>
+        <p>Gebieden stellen je in staat om groepen financiële overzichten op een hoger niveau samen te vatten voor risico-identificatie en -beoordeling (vaak op het niveau van het auditprogramma). Zie <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Gebieden en cycli toevoegen</a>voor meer informatie <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">.</a></p>
+        <h2><a name="Assertio"></a>Beweringen</h2>
+        <p>Neem de module <code>com.caseware.assertion</code> op in de product.json om annotaties in te schakelen in je Cloud app.</p>
+        <h2><a name="Automap"></a> Automapping</h2>
+        <p>Brengt automatisch secties van gegevensbestanden in kaart bij het importeren. Zie <a href="Set-up-automapping-(Data-page).htm">Bulkafdruk instellen</a>voor meer informatie <a href="Set-up-automapping-(Data-page).htm">.</a></p>
+        <p>Zie de <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html">SDK-tutorial</a> Importeren en <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html">automatiseren</a> voor meer informatie over de eigenschap automap.</p>
+        <h2>Automatisch afronden</h2>
+        <p>Om automatisch afronden in de financiële overzichten in te schakelen, maak je een script genaamd <code>financial-rounding-setup.js</code> en voeg je het toe aan de &quot;js&quot; array van je product.json bestand. Neem in dit script het volgende op:</p><div><pre><code>(function() {<br />     &apos;strict gebruiken&apos;;<br />     wpw.financials.financialsSetup.roundingErrorGroupNumbers = [&apos;A&apos;, &apos;B&apos;];<br />})();
+		</code></pre></div><p>a&apos; en &apos;B&apos; zijn tekenreeksen die de groepsnummers van de groepen in de structuur voorstellen die bij elkaar opgeteld nul moeten zijn. Indien gewenst kun je meer dan twee groepen opnemen.</p>
+        <p>Als de groeperingsstructuur bijvoorbeeld twee groepen Assets en Liabilities bevat die bij elkaar opgeteld nul moeten zijn, vervang dan de tekenreeks &apos;A&apos; in de bovenstaande functie door het groepsnummer voor Assets en vervang de &apos;B&apos; door het groepsnummer voor Liabilities. Verplichtingen en Activa worden dan opgeteld en gecontroleerd op afrondingsfouten.</p>
+        <p>Merk op dat afrondingsverschillen standaard worden toegepast op de eerste rekening zonder nullen in het laagste kindniveau dat verschijnt in de eerste groep in de proefbalans. Zie <a href="Change-the-default-group-for-rounding-differences.htm">De standaardgroep voor afrondingsverschillen wijzigen</a>voor meer informatie.</p>
+        <h2><a name="Checkli"></a> Checklist</h2>
+        <p>Schakelt de checklistfunctie in.</p>
+        <p>Zie <a href="Add-a-checklist.htm">Een engagementbestand maken</a>voor meer informatie.</p>
+        <h2><a name="Contacts"></a>Contacten regelen</h2>
+        <p>Deze eigenschap regelt de toegang van contactpersonen tot engagement. De standaardinstelling is dat contactpersonen geen afspraken kunnen bewerken of bekijken. Om weergavetoegang te verlenen aan contactpersonen die zijn toegewezen aan de overeenkomst, stel je <code>ContactAccess</code> in op <code>READ</code>.</p>
+        <p>Merk op dat als je contactpersonen eenmaal toegang geeft tot engagements, je niet kunt beperken tot welke delen van het engagementbestand ze toegang hebben. We raden aan deze functie alleen te gebruiken voor rapportageproducten en niet voor auditproducten. We raden ook aan om de functie grondig te bekijken voordat je je product uitbrengt om er zeker van te zijn dat het werkt zoals je verwacht.</p>
+        <h2><a name="Cycles"></a>Cycli (bedrijfscycli)</h2>
+        <p>Wordt gebruikt om de groepen in de Balans verder te ordenen.</p>
+        <p>Zie <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Gebieden en cycli toevoegen</a>voor meer informatie <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">.</a></p>
+        <h2><a name="Detailed"></a>Gedetailleerde documenten bekijken</h2>
+        <p>Maakt de <b>Gedetailleerde weergave</b> op de <b>Documentenpagina</b> de standaardweergave.</p>
+        <h2><a name="Dimensions-concept"></a>Dimensie</h2>
+        <p>Dimensies zijn eigenschappen die kunnen worden toegewezen aan accounts in een overeenkomst. Aan elke account kunnen een of meer dimensies worden toegewezen. Om dimensies in te schakelen in je product, stel je in je <code>product.json</code> bestand, in de <code>eigenschappen</code> array, beide in op <code><b>afmetingen</b></code> en <code><b>proefBalansDimensies</b></code> op <code>waar</code>.<br /></p>
+        <p><div><pre><code>Functie {&quot;dimensions&quot;: true, &quot;trialBalanceDimensions&quot;: true,</code></pre></div></p>
+        <p>Zie <span>Beveiligingsoverwegingen</span>voor meer informatie.</p>
+        <h2>Engagement from Source</h2>
+        <p>Om gebruikers nieuwe engagements te laten maken op basis van bestaande bestanden, moet je de eigenschap <code>this.canCreateEngagementFromSource = true</code> instellen in het bestand <code>collaborate.js</code> voor je product.</p>
+        <p>Een nieuwe opdracht aanmaken op basis van een bestaand bestand</p>
+        <h2><a name="Engagement-properties"></a> Pop-up Opdrachteigenschappen.</h2>
+        <p>Elke keer dat gebruikers een nieuwe overeenkomst openen, wordt de prompt Eigenschappen van de overeenkomst weergegeven. Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Een engagementbestand maken</a>voor meer informatie.</p>
+        <h2><a name="Engageme"></a>Verloving zoeken</h2>
+        <p>Schakelt het zoekveld in de Document Map in alle engagement documenten uit.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm#Locateandaccessdocumentsintheengagementfile">Documenten in het opdrachtbestand zoeken en openen</a> voor meer informatie.</p>
+        <h2><a name="Envision"></a>Envision</h2>
+        <p>Maakt het mogelijk om het kant-en-klare Envision-dataprofiel aan uw product toe te voegen. Envision-dataprofielen zijn dashboards die informatie weergeven over geïmporteerde transacties in engagements. Voor meer informatie, zie</p>
+        <p>Om Envision in te schakelen, voeg je <code>&quot;com.caseware.an.e.analytics.ai&quot;</code> toe aan de <code>set</code> array en stel je de eigenschap <code>&quot;envisionProfile&quot; in op: true</code>.</p>
+        <p>U kunt vervolgens het <b>pictogram Document toevoegen</b> (<img src="../Resources/Images/icon-document-add-dropdown.png" style="vertical-align: text-bottom;" />) op de pagina <b>Documenten</b> gebruiken om het aangepaste formulier <b>Envision Profile</b> aan uw product toe te voegen.</p>
+        <h2 MadCap:conditions="General.Ignore">Externe levenscyclus</h2>
+        <p MadCap:conditions="General.Ignore">Zet de <code>externalLifecycle</code> property op <code>true</code> als je wilt dat de engagements in je SE product buiten Caseware Cloud worden aangemaakt of verwijderd. --MEER INFORMATIE OF EEN VOORBEELD NODIG</p>
+        <h2><a name="Firm"></a>Bedrijfsaanpassingen</h2>
+        <p>Hiermee kunnen <a href="Firm-author.htm">schrijvers van bedrijven</a> de sjabloon aanpassen die wordt gebruikt om nieuwe opdrachten te maken. Deze optie wordt standaard geselecteerd.</p>
+        <h2><a name="Help"></a>Help</h2>
+        <p>Hiermee kunt u uw gebruikers een link geven naar een helppagina, zoals uw site met productinformatie.</p>
+        <p><img alt="Hier wordt de link gelegd. Gebruikers selecteren Informatie | Help en de inkt wordt geopend." src="../Resources/Images/help-property-in-application.PNG" /></p>
+        <h2><a name="Import"></a>Import Documents</h2>
+        <p>Stel de eigenschap <code>&quot;importDocuments&quot;</code> in <code>: true</code> om content te kopiëren van een andere Caseware Cloud app template. Zie <a href="Copy-content-from-another-template.htm">Inhoud kopiëren van een andere sjabloon</a>voor meer informatie.</p>
+        <h2><a name="Imports"></a>Importeren</h2>
+        <p>Met de <code>imports</code> array in het product .js bestand kun je importopties in het product inschakelen, zodat gebruikers klantgegevens kunnen importeren.</p>
+        <p>Voeg de modules voor de gewenste importopties toe aan de <code>imports</code> array. Voor meer informatie, zie <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html#provider-bindings-import-ui-switch">Provider Bindingen importeren inschakelen</a>.</p>
+        <p>Voor eindgebruikers worden de ingeschakelde importopties weergegeven op de pagina <b>Gegevens</b> (of de pagina <b>Proefbalans</b> als je de pagina Gegevens nog niet hebt ingeschakeld in je product).</p>
+        <p>Je kunt ook een aangepaste integratie voor je product maken om gegevens te importeren uit een online boekhoudpakket van derden. Voor meer informatie, zie <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-import-bindings/Get-started-with-import-bindings.htm">Provider Bindingen importeren inschakelen</a>.</p>
+        <h2>De import van dataset types inschakelen</h2>
+        <p>Maakt dataset type opties mogelijk voor het importeren van grootboekgegevens, subgrootboek transactiegegevens en proefbalans vanuit CSV-bestanden. Hiermee kunnen gebruikers selecteren welk type dataset van toepassing is op hun gegevensimport.</p>
+        <p>Om een datasettype in te schakelen, neem je de bijbehorende schema-ID op in het product.json-bestand, zoals in het onderstaande codevoorbeeld. Merk op dat je de code moet aanpassen om schema ID&apos;s te verwijderen voor dataset types die je niet wilt inschakelen voor gebruikers. Zie de datasettypes waarnaar hieronder wordt verwezen voor meer informatie.</p><div><pre><code>&quot;importTaxonomy&quot;: ID &quot;cwi.taxonomy.transactions&quot;, &quot;versie&quot;: &quot;0&quot;, &quot;schemaIds&quot;: [ &quot;cwi.schema.general_ledger&quot;, &quot;cwi.schema.ap_invoices&quot;, &quot;cwi.schema.ap_payments_made&quot;, &quot;cwi.schema.ap_suppliers&quot;, &quot;cwi.schema.ap_open_balances&quot;, &quot;cwi.schema.ar_invoices&quot;, &quot;cwi.schema.ar_cash_received&quot;, &quot;cwi.schema.ar_customers&quot;, &quot;cwi.schema.ar_open_balances&quot;, &quot;cwi.schema.inventory_transactions&quot;, &quot;cwi.schema.inventory_on_hand&quot; ] }</code></pre></div><p>Om gebruikers in staat te stellen gegevens te importeren die niet voldoen aan een dataset type, kun je <code>&quot;schemaless&quot;: true</code> toevoegen aan de &quot;feature&quot; sectie in het product.json bestand. Als gevolg hiervan hebben gebruikers de optie om het type Andere dataset te selecteren.</p><MadCap:snippetBlock src="../Resources/Snippets/dataset-descriptions.flsnp" /><p> </p>
+        <h2><a name="Interim"></a>Interim Reporting Period</h2>
+        <p>Maakt tussentijdse rapportage mogelijk.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-an-engagement-for-an-interim-period.htm?Highlight=interim">Een opdracht maken voor een tussentijdse verslagperiode</a>voor meer informatie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-an-engagement-for-an-interim-period.htm?Highlight=interim">.</a></p>
+        <h2><a name="Issues"></a> Problemen</h2>
+        <p>Hiermee kunnen gebruikers problemen toevoegen.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm">Een engagementbestand maken</a>voor meer informatie.</p>
+        <h2><a name="Job"></a>Job nummer</h2>
+        <p>Je kunt het veld Taaknummer verbergen in het dialoogvenster <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Eigenschappen van de opdracht </a>.</p>
+        <p>Stel de eigenschap &quot;hiddenJobNumber&quot; in : true om Taaknummerte verbergen.</p>
+        <h2><a name="Lockdown-history"></a>Geschiedenis van vergrendeling als PDF</h2>
+        <p>Gebruikers kunnen nu de afsluitingsgeschiedenis downloaden als PDF in het referentie-exemplaar. Om deze functie in te schakelen, voegt u de volgende code toe aan de <code>archiefarray</code> van het <i>product.json-bestand</i> voor uw product:</p><div><pre><code>Titel: &quot;Vergrendeling&quot;, &quot;uri&quot;: &quot;index.jsp#/lockdown&quot; } }</code></pre></div><p>De referentie kopie is beschikbaar via het <b>Informatie</b> icoon (<img src="../Resources/Images/info icon black.png" alt="" style="vertical-align: text-bottom;" />) in het bovenste menu.</p>
+        <p><img src="../Resources/Images/lockdown_history_as_pdf.png" alt="Geeft de functie Download referentie kopie weer in het menu Informatie" /></p>
+        <h2><a name="Material"></a>Materialiteit</h2>
+        <p>Maak materialiteit mogelijk in je product. Een geaccepteerde onjuiste weergave (als gevolg van een weglating of een fout) wordt als materieel beschouwd. Materialiteit is de geaccepteerde drempel (foutmarge) voor onjuistheden.</p>
+        <p>Zie <a href="Set-up-the-Materiality-document.htm">Materialiteit instellen</a> en <a href="Set-up-the-Summary-of-Misstatements.htm">Overzicht van onjuistheden</a>voor meer informatie <a href="Set-up-the-Summary-of-Misstatements.htm">.</a></p>
+        <h2><a name="Prior"></a> Vorige jaren</h2>
+        <p>Standaard wordt één saldo van een voorgaande periode ondersteund en weergegeven in de overeenkomst - zodra gebruikers de gegevens van de klant importeren.</p>
+        <p>Om maximaal vier saldi van voorgaande perioden in te schakelen, stel je de eigenschap <code>ShowAllPriorPeriods</code> in op <code>true</code>.</p>
+        <h2><a name="Product"></a>Productklasse</h2>
+        <p>Deze eigenschap wordt gebruikt door gebruikers van Working Papers. It returns one of the following values:</p>
+        <ul>
+            <li>
+                <p><b>PBC</b> - Om aan te geven dat Working Papers geïntegreerd is met een PBC-app. Merk op dat deze integratie alleen beschikbaar is voor Working Papers 2019 basisversie en hoger.</p>
+            </li>
+            <li>
+                <p><b>ANALYTICS</b> - Om aan te geven dat Working Papers is geïntegreerd met een AnalyticsAI-app. Merk op dat deze integratie alleen beschikbaar is voor Working Papers 2020 basisversie en hoger.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Let op: </b>Als query&apos;s zijn ingeschakeld in de AnalyticsAI app, retourneert deze eigenschap<b>&quot;ANALYTICS</b>&quot;.</p>
+        <h2><a name="Query"></a>zoekopdracht</h2>
+        <p>Gebruikers toestaan om queries te maken.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Samenwerking tussen personeel en contactpersonen (Query&apos;s)</a>voor meer informatie.</p>
+        <h2><a name="Reimport"></a>Opnieuw importeren</h2>
+        <p>Maakt het mogelijk om de naam en het nummer van de rekening bij te werken tijdens het opnieuw importeren van de proefbalans.</p>
+        <h2><a name="Review"></a>revisietools</h2>
+        <p>Schakelt de hulpmiddelen voor beoordelen in het hele product uit voor gebruikers.</p>
+        <p>Voor meer informatie, zie <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Bereide documenten nakijken met nakijktools.</a></p>
+        <h2><a name="Risk"></a>Risicobeoordeling</h2>
+        <p>Het risicobeoordelingsrapport inschakelen in uw product.</p>
+        <p>Zie voor meer informatie hoe je <a href="Set-up-the-Risk-report.htm">Risk</a>, <a href="Set-up-the-Control-report.htm">Control</a> en <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">RMM</a>instelt.</p>
+        <h2><a name="Forms"></a>Formulieren en formulierensets</h2>
+        <p>Om de risicobeoordelingen, risico&apos;s, controles, materialiteit en rapporten met onjuistheden op te nemen in je Cloud app, moet je de algemene formulierenset <code>com.caseware.ca.general</code> opnemen in de <code>set</code> eigenschappen. U kunt ook het volgende doen:</p>
+        <p><code>Functie [ &quot;cycli&quot;, &quot;risicobeoordeling&quot; ]</code></p>
+        <p><code>Modules [ &quot;com.caseware.visualization.charts&quot;, &quot;com.caseware.assertion&quot; ]</code></p>
+        <p>Als je niet alle rapporten wilt opnemen, kun je specifieke rapporten opnemen. Merk op dat als je ervoor kiest om specifieke formulieren op te nemen, je de vereiste eigenschap of module moet inschakelen. Selecteer bijvoorbeeld  om dit op te nemen in de module Risico&apos;s.</p>
+        <ul>
+            <li>
+                <p>De eigenschap <code>com.caseware.ca.general.control-report</code> opnemen in het <code>formulier</code></p>
+            </li>
+            <li>
+                <p>De eigenschap <a href="#Cycles">Cycli</a> inschakelen</p>
+            </li>
+        </ul>
+        <h2><a name="Roll"></a>roll forward</h2>
+        <p>Zie Overdracht. Het product.json bestand in de API moet worden aangepast om het vorige en volgende jaar op te nemen als deze bestaan. Zie de <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-enable-carry-forward.html">SDK-tutorial voor doorrollen voor</a> gedetailleerde instructies.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Carry-forward-an-engagement.htm">Een opdracht overdragen voor</a>informatie over de ervaring van de eindgebruiker bij het overdragen <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Carry-forward-an-engagement.htm">.</a></p>
+        <h2><a name="Second"></a>Tweede beoordelaar</h2>
+        <p>Schakelt een tweede beoordelaar in uw product in zodat de optie <b>Eindcontrole</b> wordt opgenomen in alle aftekeningen en het veld <b>Tweede beoordelaar</b> beschikbaar is in het dialoogvenster Opdracht maken. Voor meer informatie, zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">de engagementdocumenten beheren</a>.</p>
+        <h2><a name="Trial"></a>Saldibalans</h2>
+        <p>Schakel het tabblad Proefbalans in de opdracht in.</p>
+        <p>Zie <a href="Define-groupings.htm">Een engagementbestand maken</a>voor meer informatie.</p>
+        <h3>Synchroniseer saldibalans</h3>
+        <p>De functie <b>Synchroniseer proefbalans</b> is standaard ingeschakeld op alle Caseware producten die import van engagement bestanden ondersteunen. Omdat deze functie in sommige gevallen niet moet worden gebruikt, kan de primaire auteur met deze verbetering de functie verbergen voor de eindgebruiker in het dialoogvenster Opdrachtbestand importeren.</p>
+        <p>Om deze functie op te nemen, voeg je het volgende toe aan de features array in de <i>product.json</i>.</p>
+        <p><code>Functie {</code></p>
+        <p><code>&quot;syncTrialBalance&quot;: false,</code></p>
+        <h2><a name="User"></a>Door gebruiker gedefinieerde financiële groepen</h2>
+        <p>Hiermee kunnen gebruikers hun eigen groepen toevoegen.</p>
+        <p>Zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">Een engagementbestand maken</a>voor meer informatie.</p>
+        <h2><a name="Workflo"></a> Werkstroom</h2>
+        <p>Om alleen-lezen workflow in te schakelen of om de workflow status te verbergen in het <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">engagement eigenschappen</a> dialoogvenster.</p>
+        <p>Zie voor meer informatie <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-workflows.html">Workflows en triggers in SE</a>.</p>
+        <h2><a name="iXBRL"></a>iXBRL</h2>
+        <p>Inline eXtensible Business Reporting Language (iXBRL)-functionaliteit in het hele product. iXBRL is een open standaard waarmee bedrijven financiële overzichten kunnen opstellen in een indeling die de gestructureerde gegevens biedt die regelgevers en analisten nodig hebben, terwijl de opstellers volledige controle behouden over de lay-out en presentatie van hun rapport.</p>
+        <p>Een ondersteuningsbestand voor conversie en een verwijzing ernaar moeten worden toegevoegd in de API. Zie de <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">SDK-tutorial voor doorrollen voor</a> gedetailleerde instructies.</p>
+        <p>Als je ten minste één XBRL-taxonomie hebt ingesteld, is de XBRL-reviewmodus beschikbaar voor eindgebruikers en standaard ingeschakeld. Als u een XBRL-taxonomie wilt verbergen voor eindgebruikers, kunt u de eigenschap <code>&quot;hideFromReviewMode&quot;</code> instellen op <code>true</code> in de <code>XBRLTaxonomyDefinition</code>.</p>
+        <p>Merk op dat als alle taxonomieën verborgen zijn, de XBRL review modus niet beschikbaar is voor eindgebruikers.</p>
+        <p>Voor meer informatie over het beoordelen en exporteren van XBRL-documenten, zie <a href="XBRL-review-and-export.htm">XBRL beoordelen en exporteren</a>.</p>
+    </body>
+</html>

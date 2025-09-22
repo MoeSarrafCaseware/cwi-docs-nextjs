@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Herramienta para copiar y pegar / importar flujo de efectivo</h1>
+        <p><b>Cash flow import / copy-paste tool</b> has been developed to assist our users to efficiently transfer the cash flow statement balances from external sources (Excel or CSV worksheets) into dynamic tables within the financial statements.</p>
+        <p>Once the <b>Cash flow import / copy-paste tool</b> has been integrated with your solution, select <strong>Add</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) on your <b>Documents</b> page and add the following documents:</p>
+        <ul>
+            <li>
+                <p><b>Cash flow import</b> - The main form which includes all the functionality, for both the Indirect and the Direct Cash flow methods.</p>
+            </li>
+            <li>
+                <p><b>PA - Cash flow statement structures table</b> - An SE Builder form that is required to support the functionality of the main form. You must add this worksheet to your Documents page but you can always hide it by using the visibility settings.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>GC - Author mode visibility form</b> - An SE Builder form that drives the visibility settings on the content of the form based on the type of author that is accessing it. You must add this worksheet to your <b>Documents</b> page but you can always hide it by using the visibility settings.</p>
+                <p class="note"><b>Note:</b> <b>GC - Author mode visibility form</b> is a form that is used by other Global Components forms. If it was previously added to your solution, there are no other changes you have to perform.</p>
+            </li>
+        </ul>
+        <h2>Required Primary Author changes</h2>
+        <p>
+            <h3>Financial reporting framework &amp; Industry</h3>
+        </p>
+        <p>If your app supports multiple <b>Frameworks or Industries</b>, insert the procedures IDs where this information is documented.</p>
+        <p class="note"><b>Note:</b> If your app supports only one financial reporting framework or industry, leave these fields blank.</p>
+        <h3>Cash flow statement reporting method</h3>
+        <p>Perform the same steps to insert the procedure ID where the <b>cash flow method</b> type is documented in your solution (direct or indirect method).</p>
+        <p class="note"><b>Note:</b> If your app supports only one cash flow method, leave this field blank. By default, the form will apply the indirect method.</p>
+        <h3>Disable editing line’s description</h3>
+        <p>Select <b>Yes</b> to disable the ability for end-users to edit the lines&apos; descriptions.</p>
+        <p>
+            <h3>Cash &amp; Cash Equivalents financial groupings</h3>
+        </p>
+        <p>Select the financial groupings that total the <b>cash and cash equivalents balance</b>, which is used for the cash flow statement. This balance will be used to cross check amounts in the summary section.</p>
+        <h3>Supplemental cash flow information</h3>
+        <p>Select <b>Yes</b> if a Supplemental cash flow information section applies for your Solution.</p>
+        <p>
+            <h3>Cash flow structure table</h3>
+        </p>
+        <p>Use the table to set up the Cash Flow structures for each financial reporting framework and industry supported in your app based on the information provided in the above <b>Settings</b> section:</p>
+        <ul>
+            <li>
+                <p>Select each configuration applicable based on the financial reporting framework and industry supported by your app.</p>
+            </li>
+            <li>
+                <p>Specify the number of rows that should be included in each cash flow section (Operating / Investing or Financing).</p>
+                <p class="note"><b>Note:</b> The maximum number of rows for each section is defined by the SE Builder author through the <b style="font-style: italic;">values.json</b> file. A maximum of <b>40 rows</b> for each section have been defined in the master version of this form. Additional rows can be added by the SE Builder author by adding additional <b style="font-style: italic;">keys</b> in the <i style="font-weight: bold;">values.json</i>.</p>
+            </li>
+            <li>
+                <p>Click <b>Edit</b> to define the line item descriptions for each of the cash flow structures required.</p>
+            </li>
+        </ul>
+        <p>The <b>Edit</b> dialog provides the following options:</p>
+        <ul>
+            <li>
+                <p><b>Clear all</b> - Removes all line descriptions from all sections.</p>
+            </li>
+            <li>
+                <p><b>Restore original</b> - Restores the line descriptions back to the default ones as defined in the <i style="font-weight: bold;">values.json</i> file.</p>
+            </li>
+            <li>
+                <p><b>Set new default</b> - Saves the current values entered as the new default to be used for future structures.</p>
+            </li>
+            <li>
+                <p><b>Save</b> - Saves the values that have been entered.</p><div class="note"><p><b>Nota:</b></p>
+                    <ul>
+                        <li>
+                            <p>If your app supports only one financial reporting framework or one industry only, an “Engagement default” row will be shown to set-up the structure for the cash flow.</p>
+                        </li>
+                        <li>
+                            <p>The default cash flow statement structure included in the tool is based on the <i>International Full IFRS XBRL taxonomy</i>. Modify the structure based on your market specifics and ensure to save the changes.</p>
+                        </li>
+                        <li>
+                            <p>To modify or translate the default values, refer to <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Add translation or wording updates</a></p>
+                        </li>
+                    </ul></div></li>
+        </ul>
+        <p>
+            <h3>Authoring Financial Statements Dynamic Tables</h3>
+        </p>
+        <p>The <b>Cash flow import / copy paste tool</b> saves the information using <b style="font-style: italic;">Form values IDs</b>. To link the values between the SE Builder form and the Financial Statements, the primary author is required to author these <b style="font-style: italic;">Form values IDs</b> into the dynamic tables.</p>
+        <ul>
+            <li>
+                <p>To access a list of <b style="font-style: italic;">Form values IDs</b> which are linked to the financials dynamic tables click <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023(Final)-Cash_Flow_Statement_Import_Tool-values_json_keys_(Global_Components).xlsx">here</a>. Note that these are the default values shared and they could have already been modified by your solution SE developer.</p>
+            </li>
+            <li>
+                <p>Link each form value ID into its corresponding cell value in the dynamic table in financial statements.</p>
+                <p><img src="../Resources/Images/Data-link.jpg" alt="Data Link for Cash Flow Import Tool." /></p>
+            </li>
+        </ul>
+        <p>For a detailed walkthrough of the primary author configuration settings, review <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">this recording</a>.</p>
+        <p>To learn more about how to get access to the <b>Cash flow import / copy-paste tool</b> custom forms, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Get started with Cash flow import / copy-paste tool</a>.</p>
+        <p>
+            <h2>End user workflow</h2>
+        </p>
+        <p>As an end user, you are required to document the following information:</p>
+        <ol>
+            <li>
+                <p>Specify whether the amounts you want to import or copy are already rounded or not.</p><div class="note"><p><b>Nota:</b></p>
+                    <ul>
+                        <li>
+                            <p>Financial statements can be rounded to thousands, millions and billions.</p>
+                        </li>
+                        <li>
+                            <p>Specify whether the amounts imported/copied are already rounded as per the financial statements rounding settings.</p>
+                        </li>
+                        <li>
+                            <p>If the amounts are not rounded, the form will automatically apply the same rounding settings as specified in the financial statements rounding settings.</p>
+                        </li>
+                        <li>
+                            <p>To enable rounding in the financial statements refer to <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Customize-rounding-in-the-financial-statements.htm?region=int"><p>Personalizar el redondeo en los estados financieros</p></a></p>
+                        </li>
+                    </ul></div></li>
+            <li>
+                <p>Select the method to insert the cash flow amounts into this form: <b>CSV Import | Copy-Paste</b>.</p><div class="note"><p><b>Note:</b> The cash flow import tool supports two methods to insert the amounts into this form:</p>
+                    <ol>
+                        <li>
+                            <p><b>CVS Import:</b> CSV Import: Import the amounts using the predefined CSV template file provided.</p>
+                            <p><b>Note:</b> CSV Import supports loading the information from a CSV file with a predefined format/structure. An example file can be found here: <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023-CSV_Import_Templates_(no_Amounts-Direct&amp;Indirect).rar">CSV Import Template demo file</a>.</p>
+                        </li>
+                        <li>
+                            <p><b>Copy-Paste:</b> Allows you to directly copy and paste the amounts for each of the applicable cash flow sections.</p>
+                        </li>
+                    </ol></div></li>
+            <li>
+                <p>Select if you want to import Prior Year amounts or not.</p>
+            </li>
+            <li>
+                <p>Review the <b>Summary</b> section to ensure the cash flow statement is in balance.</p>
+            </li>
+        </ol>
+        <p>For a detailed walkthrough of the <b>Cashflow import / copy-paste tool</b> functionality applicable for end-users, see <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">this recording</a>.</p>
+    </body>
+</html>

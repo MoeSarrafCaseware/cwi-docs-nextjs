@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cuentas por cobrar- facturas</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Accounts receivable—invoices subledger.</p>
+        <p>For more information on the subledgerset data descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Id. de transacción <br />(<code>ar_invoice_transaction_id</code></td>
+                    <td>
+                        <p>Una referencia cruzada para el registro del libro mayor. Puede contener numerosos niveles diferentes para identificar la transacción, incluidos centros de costes, tales como empresa, división, región, grupo y sucursal/departamento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ejercicio fiscal de la factura<br /><br />(<code>ar_invoice_invoice_fiscal_year</code></td>
+                    <td>
+                        <p>El ejercicio fiscal en el que transcurre la <b>Fecha de la factura</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Período de la factura <br />(<code>ar_invoice_invoice_period</code></td>
+                    <td>
+                        <p>El período fiscal en el que transcurre la <b>Fecha de la factura</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de vencimiento de la factura <br />(<code>ar_invoice_invoice_due_date</code></td>
+                    <td>
+                        <p>La fecha en la que vence el pago del cliente. El vencimiento de una cuenta por cobrar suele calcularse en base a esta fecha.</p>
+                        <p>Tipo de datos</p>
+                        <p>Date Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de pedido de venta <br />(<code>ar_invoice_sales_order_id</code></td>
+                    <td>
+                        <p>El Id. de pedido de venta para artículos facturados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de la factura <br />(<code>ar_invoice_invoice_amount</code></td>
+                    <td>
+                        <p>El importe monetario de la transacción registrado en la divisa funcional o divisa de grupo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de la factura de informe <br />(<code>ar_invoice_invoice_amount_reporting</code></td>
+                    <td>
+                        <p>El importe monetario de la transacción registrado en la divisa de informe.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de la factura local <br />(<code>ar_invoice_invoice_amount_local</code></td>
+                    <td>
+                        <p>El importe monetario de la transacción en la divisa local. Por lo general, el importe visto en la factura original.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de grupo <br />(<code>ar_invoice_grouping_code</code></td>
+                    <td>
+                        <p>Un mecanismo de agrupación para artículos relacionados en un lote o grupo de facturas, como el grupo de facturas que se encuentra en ciertos sistemas de ERP.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Descripción de pago <br />(<code>ar_invoice_description</code></td>
+                    <td>
+                        <p>Descripción en formato libre del pago.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de lote <br />(<code>ar_invoice_batch_id</code></td>
+                    <td>
+                        <p>A batch identifier generated by the source system.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de origen <br />(<code>ar_invoice_source_id</code></td>
+                    <td>
+                        <p>Origen del registro. El código del origen de la entrada del diario, tal como diario de ventas, diario de recibos de efectivo, diario general, diario de nóminas, entrada manual del contable, hoja de cálculo, etc.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Número de factura <br />(<code>ar_invoice_invoice_number</code></td>
+                    <td>
+                        <p>Número de identificación para una factura generada de forma interna.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Yes</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la factura <br />(<code>ar_invoice_invoice_date</code></td>
+                    <td>
+                        <p>La fecha de la factura, independientemente de la fecha en la que se creó. La fecha a partir de la cual se calcula la fecha de vencimiento basada en las condiciones de la factura.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                        <p>Primary key: Second alternate. If Transaction ID is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe de la factura <br />(<code>ar_invoice_invoice_amount</code></td>
+                    <td>
+                        <p>Importe monetario de la transacción registrado en la divisa funcional o divisa de grupo.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de vencimiento de la factura <br />(<code>ar_invoice_invoice_due_date</code></td>
+                    <td>
+                        <p>La fecha en la que vence el pago al proveedor. No todas las transacciones tendrán una fecha de vencimiento (por ejemplo, las notas de crédito).</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código de unidad de negocio <br />(<code>ar_invoice_business_unit_code</code></td>
+                    <td>
+                        <p>Se usa para identificar la unidad de negocio, región, sucursal, etc., al nivel en el que se estén auditando los estados financieros.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otro número de referencia <br />(<code>ar_invoice_reference_number</code></td>
+                    <td>
+                        <p>El número de identificación de una transacción generada interna o externamente. Los ejemplos incluyen número de cheque, número de transferencia bancaria o Id. del documento original.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otra fecha de referencia <br />(<code>ar_invoice_reference_date</code></td>
+                    <td>
+                        <p>La fecha de una transacción generada de forma externa. Los ejemplos incluyen la fecha del cheque o la fecha de la transferencia bancaria.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Id. de cuenta de cliente <br />(<code>ar_invoice_customer_account_id</code></td>
+                    <td>
+                        <p>El Id. del cliente del que se espera el pago o al que se han aplicado los créditos no utilizados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre de cuenta del cliente <br />(<code>ar_invoice_customer_account_name</code></td>
+                    <td>
+                        <p>El nombre del cliente.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Porcentaje de descuento de las condiciones de la factura <br />(<code>ar_invoice_terms_discount_percentage</code></td>
+                    <td>
+                        <p>El porcentaje de descuento que el cliente puede tener si la factura se paga antes de que se cumpla cierto plazo.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Días de descuento de las condiciones de la factura <br />(<code>ar_invoice_terms_discount_days</code></td>
+                    <td>
+                        <p>El número de días desde la fecha de la factura en los que el cliente puede aprovechar las condiciones de descuento.</p>
+                        <p>Data type: Integer</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Días de vencimiento de las condiciones de la factura <br />(<code>ar_invoice_terms_due_days</code></td>
+                    <td>
+                        <p>El número de días permitido para cumplir las obligaciones antes de que una factura venza.</p>
+                        <p>Data type: Integer</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Creado por <br />(<code>ar_invoice_entered_by</code></td>
+                    <td>
+                        <p>La fecha en la que la transacción se creó en el sistema. Se conoce también como fecha de creación.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de creación <br />(<code>ar_invoice_entered_date</code></td>
+                    <td>
+                        <p>La hora en la que esta transacción se creó en el sistema.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de creación <br />(<code>ar_invoice_entered_time</code></td>
+                    <td>
+                        <p>La hora en la que esta transacción se creó en el sistema.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprobado por <br />(<code>ar_invoice_approved_by</code></td>
+                    <td>
+                        <p>El Id. de usuario de la persona que aprobó los cambios o adiciones en el archivo maestro de clientes.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de aprobación <br />(<code>ar_invoice_approved_by_date</code></td>
+                    <td>
+                        <p>La fecha en la que se aprobó el asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de aprobación <br />(<code>ar_invoice_approved_by_time</code></td>
+                    <td>
+                        <p>La hora en la que se aprobó el asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Última modificación realizada por: <br />(<code>ar_invoice_last_modified_by</code></td>
+                    <td>
+                        <p>Id. de usuario de la última persona que modificó este asiento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de la última modificación <br />(<code>ar_invoice_last_modified_date</code></td>
+                    <td>
+                        <p>La fecha en la que se realizó la última modificación del asiento.</p>
+                        <p>Valor devuelto: Fecha</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hora de la última modificación <br />(<code>ar_invoice_last_modified_time</code></td>
+                    <td>
+                        <p>La hora en la que se realizó la última modificación del asiento.</p>
+                        <p>Data type: Date/time</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa de la factura <br />(<code>ar_invoice_invoice_amount_currency</code></td>
+                    <td>
+                        <p>La divisa funcional o divisa de grupo relacionada con el importe de la factura.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa de la factura de informe <br />(<code>ar_invoice_invoice_reporting_currency</code></td>
+                    <td>
+                        <p>La divisa de informe relacionada con el importe del informe de factura para informes no consolidados.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Divisa de la factura local <br />(<code>ar_invoice_invoice_local_currency</code></td>
+                    <td>
+                        <p>La divisa para requisitos de informes locales.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de impuesto <br />ar_invoice_tax1_type</td>
+                    <td>
+                        <p>El código para el tipo de impuesto. Los ejemplos incluyen Ventas, Impuestos.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tax Description <br />ar_invoice_tax1_type_description</td>
+                    <td>
+                        <p>La descripción del tipo de impuesto. Por ejemplo, la autoridad a la que se paga el impuesto y otra información para identificar el tipo de impuesto.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe del impuesto <br />ar_invoice_tax1_local</td>
+                    <td>
+                        <p>El importe del impuesto en el <b>Tipo de impuesto</b> que se incluye en la transacción. Registrado en la divisa local.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código oficial de la factura <br />(<code>ar_invoice_official_invoice_code</code></td>
+                    <td>
+                        <p>El código oficial único de la factura, que lo suelen generar las autoridades fiscales.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Detalle de línea: Id. de cuenta <br />(<code>ar_invoice_line_account_id</code></td>
+                    <td>
+                        <p>Código de cuenta del libro mayor de la cuenta de ingresos del libro mayor. Este código puede contener un Id. de subcuenta, así como numerosos niveles diferentes para identificar la cuenta, incluidos centros de costes, tales como empresa, división, región, grupo y sucursal/departamento.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Detalle de línea: descripción de la cuenta <br />(<code>ar_invoice_line_account_description</code></td>
+                    <td>
+                        <p>The description of the account whose identifier appears in <b>Line Detail - Account ID</b>.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

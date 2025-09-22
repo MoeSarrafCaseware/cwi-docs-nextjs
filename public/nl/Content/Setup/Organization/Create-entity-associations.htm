@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" description="Administrators can create associations so that files and activities can be shared between entities where appropriate" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create entity associations to enable single workspaces for multiple internal or client entities" />
+    </head>
+    <body>
+        <h1>Entiteitsassociaties aanmaken</h1>
+        <p>Een groepering van twee of meer entiteiten samen, die een geconsolideerd overzicht geeft van activiteiten en bestanden voor elke entiteit die deel uitmaakt van de associatie. Entiteiten in verenigingen blijven onafhankelijk van elkaar.</p>
+        <h2 id="Possible-associations">Mogelijke associaties</h2>
+        <p>U kunt een associatie maken voor elk entiteittype - <b>intern</b>, <b>klant</b> of <b>anders</b>.</p>
+        <p>Als je bijvoorbeeld werk uitvoert voor meerdere dochterondernemingen van hetzelfde grote bedrijf, wil je misschien elke dochteronderneming vertegenwoordigen met een aparte klantentiteit en vervolgens een associatie voor hen aanmaken.</p>
+        <p>Een associatie kan ook verschillende soorten entiteiten bevatten. Als je bijvoorbeeld een interne entiteit hebt voor je belastingteam, zou je die kunnen koppelen aan de entiteiten van de klant waarvoor je belastingwerk doet.</p>
+        <p>Elke entiteit kan slechts deel uitmaken van één associatie. Pogingen om een entiteit te associëren met entiteiten die al in een associatie zitten, resulteren in één gecombineerde associatie.</p>
+        <p>Stel bijvoorbeeld dat er twee associaties zijn; de ene bestaat uit de verzameling {A, B, C} en de andere {D, E, F}. Het associëren van een entiteit uit de ene associatie met een entiteit uit de andere associatie (bijvoorbeeld, het associëren van entiteit C met entiteit E) resulteert in een gecombineerde associatie van de verzameling {A, B, C, D, E, F}.</p>
+        <h2 id="Viewing-associations">Verenigingen bekijken</h2>
+        <p>Wanneer u een entiteit bekijkt die deel uitmaakt van een associatie, verschijnt er een pictogram naast de naam van de entiteit. Dit pictogram werkt als een schakelaar om te schakelen tussen een <b>geassocieerde weergave</b> (<img src="../../Resources/Icons/AssociationAll-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), die de inhoud van alle geassocieerde entiteiten weergeeft, en <b>de weergave van één entiteit</b> (<img src="../../Resources/Icons/AssociationSingle-20x20.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), die alleen de inhoud van de geselecteerde entiteit weergeeft.</p>
+        <p><img src="../../Resources/Images/Single-entity-association-view-857x370.png" alt="Enkele entiteit vs. associatieweergave" /></p>
+        <p style="font-weight: bold;">Entiteitsassociaties aanmaken</p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer een entiteit die u wilt koppelen aan een andere entiteit en selecteer <b>Meer acties</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Koppelen</b>.</p>
+                <p><img src="../../Resources/Images/Associate-entity-630x150.png" alt="Selecteer de knop Associëren in het menu van de entiteit om te beginnen met het maken van een associatie" /></p>
+            </li>
+            <li>
+                <p>Zoek de entiteiten die u wilt toevoegen. Ze worden per entiteittype weergegeven in het dialoogvenster.</p>
+                <p><img src="../../Resources/Images/Associate-entity-search-630x285.png" alt="Zoek naar de entiteit waarmee u een associatie wilt maken" /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Sluiten</b>.</p>
+            </li>
+        </ol>
+        <h2 id="Permissions-for-associations">Machtigingen voor associaties</h2>
+        <p>Gebruikers kunnen entiteiten bekijken, toevoegen en verwijderen uit een associatie. Er worden geen aparte machtigingen toegekend aan associaties; een gebruiker mag entiteiten in een associatie bekijken of wijzigen op basis van de machtigingen die zijn toegekend aan individuele entiteiten.</p>
+        <ul>
+            <li>
+                <p>Om entiteiten in een associatie te bekijken, moet de rol van de gebruiker <b>leesrechten</b> (R) toekennen op het kenmerk <i>Samenvatting</i> van elke entiteit. Gebruikers die deze rechten niet hebben op alle entiteiten in een associatie kunnen alleen de subset van entiteiten zien waarvoor ze deze rechten hebben.</p>
+                <p>Gebruikers kunnen geen associaties zien als hun rol deze rechten slechts aan één entiteit in de associatie geeft.</p>
+            </li>
+            <li>
+                <p>Om entiteiten in een associatie toe te voegen of te verwijderen, moet de rol van de gebruiker bewerkrechten (E) toekennen op het kenmerk <i>Details</i> van elke entiteit. Gebruikers kunnen alleen een entiteit in een associatie toevoegen of verwijderen als ze toestemming hebben voor die entiteit.</p>
+                <p>Hoewel gebruikers een entiteit kunnen bekijken, kunnen ze deze niet toevoegen of verwijderen uit associaties zonder bewerkingsrechten.</p>
+            </li>
+        </ul>
+        <p>De volgende tabel geeft een overzicht van de rechten die nodig zijn om toegang te krijgen tot entiteiten in associaties en bevat suggesties voor ingebouwde rollen die deze rechten bieden.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Access</th>
+                    <th>Vereiste machtigingen</th>
+                    <th>Suggesties voor ingebouwde rollen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Entiteiten in een associatie<b>bekijken</b> .</p>
+                    </td>
+                    <td>
+                        <p><b>Leesrechten (R)</b> op het kenmerk <i>Samenvatting</i> van entiteit.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Viewer</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entiteit Toegang</i></p>
+                            </li>
+                            <li>
+                                <p><i>Entiteit Medewerker</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Entiteiten in een associatie<b>toevoegen</b> of <b>verwijderen</b> .</p>
+                    </td>
+                    <td>
+                        <p><b>Bewerk (E)-toestemming</b> op het kenmerk <i>Details</i> van entiteit.</p>
+                    </td>
+                    <td>
+                        <ul class="bulletRed">
+                            <li>
+                                <p><i>Editor</i></p>
+                            </li>
+                            <li>
+                                <p><i>Eigenaar</i></p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3>Number of risks with no controls</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../Images/kpi-24x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of risks with a blank associated control field:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count({assocd_ctrl}) - countIf({assocd_ctrl}, isNotNull(nullIf({assocd_ctrl},&apos;&apos;)))</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Number of untested controls</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Key performance indicator (<img src="../Images/kpi-24x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Value</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add a custom calculation field that counts the number of untested controls:</p>
+                <ol>
+                    <li>
+                        <p>On the top menu, select <b>Add (<img src="../Images/plus-13x13.png" />) | Add calculated field</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter a name for the calculated field.</p>
+                    </li>
+                    <li>
+                        <p>Build the following calculation:</p>
+                        <p><code>count(testctrl) - countIf(testctrl, testctrl=&quot;No&quot;)</code></p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Risk report</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the risk fields that you want to display (for example: Name, Description, Inherent Risk, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../Images/format-visual-16x17.png" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Control matrix</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvcontrol</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the control fields that you want to display (for example: Name, Description, Business Cycles, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../Images/format-visual-16x17.png" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Management letter report</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvmlp</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Table (<img src="../Images/table-20x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p>Add all the management letter point fields that you want to display (for example: Name, Observation, Reason, etc.).</p>
+            </li>
+        </ul>
+        <p><u><b>Additional considerations</b></u>
+        </p>
+        <ul>
+            <li style="list-style: none;">
+                <p>If you want to change the column headings of the table:</p>
+                <ol>
+                    <li>
+                        <p>Select the widget, then in the right-hand menu, select <b>Format visual</b> (<img src="../Images/format-visual-16x17.png" />).</p>
+                    </li>
+                    <li>
+                        <p>On the Format Visual panel, expand <b>Group-by column names</b> and enter the desired column heading names.</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Commonly raised risks</h3>
+        <ul>
+            <li>
+                <p><b>Dataset</b>: <i>cvrisk</i></p>
+            </li>
+            <li>
+                <p><b>Suggested visual type</b>: Word Cloud (<img src="../Images/word-cloud-35x20.png" />)</p>
+            </li>
+        </ul>
+        <p><u><b>Field wells</b></u>
+        </p>
+        <p><i>Group by</i></p>
+        <ul>
+            <li style="list-style: none;">
+                <p><b>name</b> - Identifies the most commonly raised risks based on the name field.</p>
+            </li>
+        </ul>
+    </body>
+</html>

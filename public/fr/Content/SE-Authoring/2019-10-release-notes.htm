@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2019-10</h1>
+        <p>SE 2019-10 présente une refonte du module de risque, la prise en charge de l&apos;Inline eXtensible Business Reporting Language (iXBRL) et bien plus encore.</p>
+        <h2>Nouvelle interface utilisateur pour le module de risque</h2>
+        <p>Le module de risque simple de Cloud Engagements passe à une nouvelle interface utilisateur pour prendre en charge des missions plus complexes, qui nécessitent une documentation supplémentaire et des flux de travail améliorés en matière d&apos;identification, d&apos;évaluation et de réponse aux risques.</p>
+        <p>Les principales caractéristiques en un coup d&apos;œil :</p>
+        <ul>
+            <li>
+                <p>Une approche centralisée pour l&apos;identification et l&apos;évaluation des risques.</p>
+            </li>
+            <li>
+                <p>Un flux de travail pour guider les utilisateurs dans l&apos;évaluation des risques, avec une vue d&apos;ensemble et des options d&apos;approfondissement - les utilisateurs peuvent voir les détails au fur et à mesure qu&apos;ils avancent dans chaque domaine des états financiers.</p>
+            </li>
+            <li>
+                <p>Étendre la documentation sur les risques pour adapter la plateforme à différents produits, types d&apos;engagement et juridictions.</p>
+            </li>
+            <li>
+                <p>L&apos;introduction de capacités de personnalisation au niveau du produit, où vous pouvez personnaliser la terminologie et le niveau de complexité requis pour leur marché, tels que les noms et les étiquettes des champs, les méthodes d&apos;évaluation, la cartographie du risque d&apos;anomalies significatives (Risk of Material Misstatement - RMM).</p>
+            </li>
+        </ul>
+        <p>La nouvelle interface utilise les meilleures pratiques modernes en matière d&apos;interface utilisateur :</p>
+        <ul>
+            <li>
+                <p>des fiches de risque et des fiches d&apos;évaluation avec des vues réduites et développées.</p>
+            </li>
+            <li>
+                <p>le filtrage et le tri des données.</p>
+            </li>
+            <li>
+                <p>une méthode améliorée pour lier les procédures de la liste de contrôle à l&apos;identification des risques et à la réaction.</p>
+            </li>
+            <li>
+                <p>lien avec les onglets d&apos;analyse des listes de contrôle.</p>
+            </li>
+            <li>
+                <p>amélioration du marquage des assertions.</p>
+            </li>
+        </ul>
+        <p>Le passage à des missions plus importantes et plus complexes a nécessité de nombreux changements de formulation. Par exemple, le terme &quot; <i>Référence&quot;</i> dans l&apos;ancienne interface a été reformulé en &quot; <i>Réponse à l&apos;audit&quot;</i> dans la nouvelle interface.</p>
+        <p><img src="../Resources/Images/risk-control-module.PNG" alt="Nouvelle présentation du module de risque. Dans cette image : (1) ajouter un risque, (2) filtres dans le volet gauche, (3) annoter, ajouter une question ou supprimer un risque, (4) assertions marquées pour le domaine/cycle concerné par le risque, (5) ajouter des contrôles, des références, des domaines/cycles et une réponse d&apos;audit, (6) champs de saisie pour les commentaires et les notes, (7) type de risque, (8) menu déroulant pour faciliter la sélection d&apos;une conclusion. " /></p>
+        <p>Pour passer à la nouvelle présentation du module de risque, allez dans les <a href="Enable-the-new-risk-module.htm">paramètres du produit</a> et sélectionnez <b>Risques</b> | <b>Général</b>, puis cochez la case <b>Activer la nouvelle fonctionnalité de risque</b> .</p>
+        <p><img src="../Resources/Images/enable-new-risk.PNG" alt="Comment activer le nouveau module de risque dans les paramètres de votre produit." /></p>
+        <p>Une fois la nouvelle mise en page activée, la nouvelle page <b>Risques</b> devient disponible dans le modèle, où vous pouvez facilement accéder au nouveau module de risque.</p>
+        <p>Pour compléter le nouveau module de risque, nous avons amélioré la condition de visibilité du risque d&apos;anomalies significatives (Risk of Material Misstatement - RMM) afin de prendre en charge davantage de logique. Outre le type d&apos;assertion, les paramètres suivants sont désormais disponibles :</p>
+        <ul>
+            <li>
+                <p>Cycle ou domaine économique.</p>
+            </li>
+            <li>
+                <p>Opérateur logique</p>
+            </li>
+            <li>
+                <p>Valeur RMM.</p>
+            </li>
+        </ul>
+        <p>Par exemple, une logique de condition RMM peut maintenant être : Si Précision pour Inventaire a RMM inférieur à Moyenalors cachez cet élément.</p>
+        <p class="note inline"><b>Please note that:</b><br />- les paramètres de condition RMM supplémentaires ne sont disponibles que si le nouveau module de risque est activé dans le produit.<br />- si vous activez le nouveau module de risque dans votre produit, les conditions de visibilité RMM existantes dans l&apos;ancien module de risque ne migrent pas vers la nouvelle présentation. Vous devez à nouveau définir les conditions de votre RMM en utilisant la logique des paramètres améliorée.<br />- nous vous conseillons vivement de tester minutieusement le nouveau module de risque et de vérifier que tout fonctionne comme prévu, avant de l&apos;activer dans l&apos;environnement de production.</p>
+        <h2>support iXBRL</h2>
+        <p>Nous supportons désormais Inline eXtensible Business Reporting Language (iXBRL). iXBRL est une norme ouverte qui permet aux entreprises de préparer des états financiers dans un format qui fournit les données structurées exigées par les régulateurs et les analystes, tout en permettant aux préparateurs de conserver un contrôle total sur la mise en page et la présentation de leur rapport. Pour en savoir plus sur iXBRL, consultez le site <a href="https://www.xbrl.org/the-standard/what/ixbrl/">iXBRL.org.</a></p>
+        <p>Pour plus d&apos;informations sur l&apos;activation d&apos;iXBRL, voir le <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">tutoriel XBRL SDK</a>.</p>
+        <h2>Valeurs de formulaire dans les paramètres de visibilité et les liens de données</h2>
+        <p>Les valeurs des formulaires SE Builder peuvent désormais être utilisées pour piloter la logique de visibilité dans le produit. Les valeurs des formulaires peuvent également être récupérées et insérées dans divers champs de texte à l&apos;intérieur des documents.</p>
+        <p class="note inline"><b>Remarque :</b> This feature is only available in the product if you have developed custom forms using SE Builder. Pour en savoir plus, voir <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-SE-Builder/Get-started-with-SE-Builder.htm">Démarrer avec les demandes SE</a>.</p>
+        <ul>
+            <li>
+                <p>Une nouvelle condition de visibilité, <b>Form Value,</b> est désormais disponible avec les paramètres suivants :</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>A list of the available forms in the product.</p>
+                    </li>
+                    <li>
+                        <p>Liste des champs disponibles pour un formulaire sélectionné.</p>
+                    </li>
+                    <li>
+                        <p>Les valeurs applicables pour un champ de formulaire sélectionné. Notez que les valeurs affichées dépendent des types de champs. Par exemple, les champs numériques ont des options de valeur différentes de celles des champs de date.</p>
+                    </li>
+                </ul>
+            </li>
+            <p class="note inline"><b>Remarque :</b> Plusieurs formulaires peuvent être sélectionnés lors de l&apos;établissement de cette condition.</p>
+            <p><img src="../Resources/Images/forms-values-visibility-condition.PNG" alt="Comment définir la condition de visibilité de la valeur du formulaire." /></p>
+            <li>
+                <p>Une nouvelle option de liaison de données (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Forms Value</b> est maintenant disponible. Cette option permet de récupérer une valeur spécifique dans un formulaire et de l&apos;insérer dans les champs de texte. Par exemple, insérer la valeur de la compétence provinciale d&apos;un formulaire fiscal dans une section de texte des états financiers.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/form-values-data-link.PNG" alt="Formule l&apos;option de liaison de données Value." /></p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2019-10.</p>
+        <p style="font-style: italic;">Chaque caractéristique est associée au rôle auquel elle s&apos;applique.</p>
+        <h3>Intégrer Q dans les documents de travail :</h3>
+        <p>#primaryauthor #firmauthor</p>
+        <p>Un nouveau champ &quot; <b>Author ID&quot;</b> est désormais disponible dans les documents de requête pour permettre aux utilisateurs de Working Papers (WP) d&apos;extraire les fichiers téléchargés dans un document de requête spécifique vers des emplacements désignés dans un fichier WP.</p>
+        <p>Notez que l&apos; <b>ID de l&apos;auteur</b> n&apos;est disponible que dans les documents de requête, pas dans les modèles de requête. Il s&apos;agit d&apos;un champ facultatif que vous ne devez spécifier que si vous avez l&apos;intention d&apos;intégrer des documents de requête dans votre produit avec les Working Papers.</p>
+        <p>Voici une brève description du déroulement des opérations :</p>
+        <ol>
+            <li>
+                <p>Définir une valeur d&apos;identification de l&apos;auteur. Vous pouvez le définir pour une ou plusieurs réponses.</p>
+            </li>
+            <p class="note inline"><b>Remarque :</b> You must collaborate with WP authors to decide where you should add Author IDs in your query document.</p>
+            <li>
+                <p>Les auteurs de Working Papers doivent utiliser le même identifiant lorsqu&apos;ils configurent un emplacement dans WP pour recevoir des fichiers d&apos;un document de requête.</p>
+            </li>
+            <li>
+                <p>Une fois qu&apos;un fichier est téléchargé et accepté dans le document de requête, les utilisateurs de WP peuvent cliquer sur le bouton Recevoir pour extraire automatiquement le fichier vers son emplacement désigné dans le gestionnaire de documents.</p>
+            </li>
+        </ol>
+        <p>Pour en savoir plus, voir <a href="Add-Author-IDs-(new-design).htm">Copier les identifiants d&apos;auteur</a>.</p>
+        <h3>Page de données</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauthor</a></p>
+        <p>Nous avons élargi la liste des fournisseurs d&apos;importation dans la page <b>Importation</b> . Il inclut désormais des plateformes d&apos;importation personnalisées développées par les auteurs.</p>
+        <h3>Analysis charts development</h3>
+        <p><a href="Primary-author.htm#Primary">#primaryauthor</a></p>
+        <p>Il n&apos;est plus nécessaire de gérer la description des graphiques d&apos;analyse dans le fichier analysis.js. La balise description est désormais utilisée comme titre pour les graphiques d&apos;analyse.</p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2019-10.</p>
+        <h3>Nouveau design pour les finances</h3>
+        <p>Nous avons apporté quelques améliorations aux documents de requête et au tableau de bord des requêtes.</p>
+        <ul>
+            <li>
+                <p>Le tableau de bord des requêtes comporte désormais une colonne supplémentaire, <b>Contacts</b> , qui affiche le nombre de contacts affectés à chaque document de la requête dans le tableau de bord.</p>
+            </li>
+            <p>Vous pouvez également sélectionner un numéro pour afficher une fenêtre contextuelle contenant les coordonnées de la personne à contacter. La fenêtre contextuelle comprend également le bouton <b>Ajouter des contacts</b> qui vous permet de créer un contact, si nécessaire.</p>
+            <p><img src="../Resources/Images/query-dashboard-assigned-contact.PNG" alt="Colonne Contacts dans le tableau de bord des requêtes. L&apos;utilisateur a sélectionné le nombre de contacts assignés pour les questions du client 300-Q - Mission de compilation." /></p>
+            <li>
+                <p>Dans les documents de requête,</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>les utilisateurs peuvent désormais réduire ou développer les ensembles de questions dans le volet de navigation de gauche.</p>
+                    </li>
+                    <li>
+                        <p>les questions d&apos;interrogation ne sont plus numérotées.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Une notification s&apos;affiche pour les contacts lorsqu&apos;ils répondent à toutes les questions du document. The notification message features the <b>Mark Responded</b> button so contacts can easily proceed to the next step in the workflow. De même, une notification s&apos;affiche pour les membres du personnel lorsqu&apos;ils acceptent toutes les réponses dans le document. Dans ce cas, le message de notification comporte le bouton <b>Marquer la fin</b> .</p>
+            </li>
+            <p><img src="../Resources/Images/mark-complete-queries.PNG" alt="Message de notification lorsque toutes les réponses sont acceptées, avec le bouton MARK COMPLETE." /></p>
+        </ul>
+        <h3>Page de données</h3>
+        <p>Nous avons apporté quelques améliorations à l&apos;interface utilisateur pour les utilisateurs finaux, ainsi que des changements dans la page d&apos;affichage des <b>comptes</b> pour prendre en charge les nouvelles fonctionnalités.</p>
+        <ul>
+            <li>
+                <p>Les utilisateurs peuvent désormais visualiser les transactions de l&apos;année précédente, s&apos;ils ont importé les données correspondantes. Cette fonctionnalité introduit deux changements dans la fonctionnalité actuelle de la page de visualisation des <b>comptes</b> .</p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Pour visualiser les transactions d&apos;un compte spécifique dans l&apos;année en cours, les utilisateurs sélectionnent désormais les comptes dans la colonne <b>Préliminaire</b> au lieu de la colonne <b>Finale</b> pour visualiser les transactions des comptes. Pour les opérations sur les comptes de l&apos;année précédente, les utilisateurs sélectionnent les comptes dans la colonne correspondante de l&apos;année précédente.</p>
+                </li>
+                <li>
+                    <p>Les utilisateurs ne peuvent plus modifier le nom ou le numéro du compte directement sur la page. Dans cette version, les utilisateurs sélectionnent l&apos;icône <b>Editer</b> (<img src="../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour modifier les informations du compte. Deux champs supplémentaires sont également disponibles dans la boîte de dialogue Compte pour permettre aux utilisateurs de modifier les soldes actuels et antérieurs, si nécessaire.</p>
+                </li>
+            </ul>
+            <p><img src="../Resources/Images/eidt-account.PNG" alt="Boîte de dialogue pour la modification des comptes dans la page Données." /></p>
+            <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les transactions du compte.</a></p>
+            <li>
+                <p>Les soldes d&apos;ouverture et de clôture sont désormais disponibles dans le pied de page des transactions pour le compte sélectionné. Cela permet aux utilisateurs de comparer le total net des transactions du compte au cours d&apos;une période donnée.</p>
+            </li>
+            <p><img src="../Resources/Images/opening-closing-balances.PNG" alt="Les soldes d&apos;ouverture et de clôture s&apos;affichent dans le pied de page pour les opérations de caisse." /></p>
+            <li>
+                <p>Les vues<b>Groupes de taxe</b> et <b>Groupes prescrits</b> ne s&apos;affichent plus pour les utilisateurs dans le volet de navigation gauche des vues de groupe si vous n&apos;avez pas configuré les regroupements de codes de taxe ou de plans comptables dans le produit.</p>
+            </li>
+            <p>De même, les options <b>Code de taxe</b> et <b>Ajustements de taxe</b> ne s&apos;affichent plus pour les utilisateurs dans la liste déroulante <b>Colonnes</b> des vues de groupe si vous n&apos;avez pas configuré les regroupements de codes de taxe et les ajustements de taxe dans le produit.</p>
+        </ul>
+        <h3>Examiner les outils des états financiers</h3>
+        <p>Deux outils de révision supplémentaires sont désormais disponibles dans les états financiers pour localiser facilement les soldes en désaccord et les soldes annulés dans le document.</p>
+        <ul>
+            <li>
+                <p><b>Balance check</b> - marks all rows with identified balance discrepancies and all rows where balances agree (that is, all rows with a <a href="Set-up-diagnostics.htm">Diagnostics label</a>).</p>
+            </li>
+            <li>
+                <p><b>Soldes écras</b> és - marque toutes les lignes dont les soldes ont été écrasés.</p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Examiner les documents préparés (Outils d&apos;examen).</a></p>
+        <h2>Corrections</h2>
+        <p>La liste suivante présente une brève description des corrections de bogues dans la SE 2019-10.</p>
+        <h3>Tableaux dynamiques</h3>
+        <p>Correction de problèmes dans les tables dynamiques où :</p>
+        <ul>
+            <li>
+                <p>les calculs personnalisés dans les en-têtes de tableaux dynamiques affichent des valeurs incorrectes ou NaN.</p>
+            </li>
+            <li>
+                <p>les descriptions de colonnes avec des liens de données (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) ne s&apos;affichent pas correctement.</p>
+            </li>
+            <li>
+                <p>les utilisateurs constatent un retard dans l&apos;affichage des données lorsqu&apos;ils mettent en place des lignes de saisie.</p>
+            </li>
+            <li>
+                <p>la fenêtre popup Détails du compte n&apos;affiche pas les ajustements pour un groupe d&apos;années antérieures.</p>
+            </li>
+            <li>
+                <p>les en-têtes de colonnes avec de longues descriptions ne s&apos;affichent pas correctement sur la page.</p>
+            </li>
+            <li>
+                <p>les utilisateurs ne peuvent pas rouvrir la boîte de dialogue Data Link dans les en-têtes de tableau.</p>
+            </li>
+            <li>
+                <p>certains postes de la balance de vérification sont manquants.</p>
+            </li>
+        </ul>
+        <h3>Documents de la liste de contrôle</h3>
+        <p>Correction de problèmes dans les documents de la liste de contrôle où :</p>
+        <ul>
+            <li>
+                <p>les utilisateurs obtiennent une erreur lorsqu&apos;ils tentent d&apos;ajouter une liaison de données (<img src="../Resources/Images/icon-text-field-edit-insert-formula.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la section <b>Conclusions</b> des documents de la liste de contrôle.</p>
+            </li>
+            <li>
+                <p>dans les procédures de listes de contrôle à plusieurs rangées sont mal alignées.</p>
+            </li>
+        </ul>
+        <h3>Création de produits</h3>
+        <p>Correction des problèmes de création de produits où :</p>
+        <ul>
+            <li>
+                <p>s&apos;ouvrent dans l&apos;ancienne présentation bien que la nouvelle présentation ait été activée dans les paramètres du produit.</p>
+            </li>
+            <li>
+                <p>les termes personnalisés saisis pour les étiquettes des colonnes <b>Préliminaire</b> et <b>Finale</b> ne sont pas appliqués.</p>
+            </li>
+            <li>
+                <p>la <b>page de données</b> est activée dans le modèle alors qu&apos;elle est désactivée dans les paramètres du produit.</p>
+            </li>
+            <li>
+                <p>l&apos;ordre des données dans les graphiques d&apos;analyse ne suit pas l&apos;ordre de la balance de vérification.</p>
+            </li>
+        </ul>
+        <h3>Requêtes</h3>
+        <p>Correction de problèmes dans les documents de requête où :</p>
+        <ul>
+            <li>
+                <p>l&apos;ajout d&apos;un commentaire dans une question à laquelle il a été répondu produit plusieurs messages de notification sur la page.</p>
+            </li>
+            <li>
+                <p>les documents récemment consultés ne sont pas affichés dans le volet de navigation de gauche.</p>
+            </li>
+        </ul>
+        <h3>Page de données</h3>
+        <p>Correction de problèmes dans la page Données où :</p>
+        <ul>
+            <li>
+                <p>l&apos;indicateur de déséquilibre (<img src="../Resources/Images/out-of-balance-indicator.PNG" style="vertical-align: text-bottom;" />) s&apos;affiche bien que tous les comptes soient correctement équilibrés.</p>
+            </li>
+            <li>
+                <p>les comptes ne sont pas triés correctement.</p>
+            </li>
+            <li>
+                <p>les utilisateurs doivent actualiser la page afin de pouvoir rechercher correctement les comptes dans la page <b>Attribuer des comptes</b> .</p>
+            </li>
+        </ul>
+        <h3>États financiers</h3>
+        <p>Correction de problèmes dans les états financiers liés à :</p>
+        <ul>
+            <li>
+                <p>la fonction de réconciliation, qui permet d&apos;identifier les lignes dont les soldes sont en accord et de les signaler comme étant en désaccord dans le document.</p>
+            </li>
+            <li>
+                <p>les notes relatives aux états financiers, où l&apos;ajout de sauts de page dans la zone des <b>notes relatives aux états financiers</b> génère des entrées en double dans la <b>table des matières. </b></p>
+            </li>
+        </ul>
+        <h3>Autres corrections</h3>
+        <p>Les problèmes généraux suivants sont corrigés dans la SE 2019-10.</p>
+        <ul>
+            <li>
+                <p>Le mot Balance de vérification n&apos;est pas mis en évidence lorsque les utilisateurs travaillent activement sur la page <b>Balance de vérification</b> .</p>
+            </li>
+            <li>
+                <p>Les noms de fichiers de certains fichiers copiés depuis Caseware Cloud vers un fichier d&apos;engagement ne s&apos;affichent pas correctement.</p>
+            </li>
+            <li>
+                <p>Les codes IGRF ne changent pas lors de la réaffectation des comptes de regroupement financier.</p>
+            </li>
+            <li>
+                <p>Les utilisateurs subissent des retards lors de l&apos;utilisation de la fonction d&apos;arrondi dans les états financiers avec un grand ensemble de données de balance de vérification.</p>
+            </li>
+            <li>
+                <p>Les liens internes ne fonctionnent pas lorsque les utilisateurs tentent d&apos;y accéder dans le volet de navigation gauche d&apos;un document.</p>
+            </li>
+            <li>
+                <p>Problème de report, où les sections ajoutées par l&apos;utilisateur dans les états financiers ne sont pas visibles ou disponibles en tant qu&apos;élément de sélection de report après que le fichier a été reporté.</p>
+            </li>
+            <li>
+                <p>Le signe du solde d&apos;un compte change lorsque les utilisateurs remplacent le solde dans le tableau des flux de trésorerie.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs effectuent une importation à partir de QuickBooks, puis une réimportation dans la page Balance de vérification au cours de la même année (pour mettre à jour les soldes), les soldes de l&apos;année précédente sont doublés.</p>
+            </li>
+            <li>
+                <p>L&apos;icône de <b>suppression</b> (<img src="../Resources/Icons/suppress-content.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) apparaît comme désactivée dans les modèles d&apos;entreprise alors qu&apos;elle est activée.</p>
+            </li>
+            <li>
+                <p>Quelques problèmes de traduction ont été corrigés.</p>
+            </li>
+        </ul>
+    </body>
+</html>

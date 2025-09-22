@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>De standaardgroep voor afrondingsverschillen wijzigen</h1>
+        <p>In de jaarrekeningtabellen worden afrondingsverschillen standaard toegepast op de eerste rekening zonder nullen in het laagste kindniveau dat in de eerste groep in de proefbalans voorkomt.</p><MadCap:snippetBlock src="../Resources/Snippets/Best-practice-rounding-product-settings.flsnp" /><p>Als de eerste moedergroep in de proefbalans bijvoorbeeld <i>Activa</i> is en als volgt is opgebouwd:</p>
+        <p><img src="../Resources/Images/show-default-plug-location.PNG" alt="Trial balance Assets group hierarchy" /></p>
+        <p>Zodra gebruikers vervolgens de proefbalansgegevens importeren, worden de afrondingsverschillen toegepast op de eerste rekening in <i>Land</i>die niet gelijk is aan nul.</p>
+        <p>Je kunt de standaardgroep wijzigen om ervoor te zorgen dat het afrondingsverschil wordt toegepast op een veelgebruikte jaarrekeningpost in jouw markt.</p>
+        <p>In dynamische tabellen wordt de rij van de groep waar afrondingsverschillen gelden gemarkeerd met een sterretje<b>(*</b>).</p>
+        <p style="font-weight: bold;">Om de rekening te wijzigen waarop afrondingsverschillen worden toegepast:</p>
+        <ol>
+            <li>
+                <p>Ga naar de dynamische tabel met de proefbalansgegevens.</p>
+            </li>
+            <p>Bijvoorbeeld tijdens het opstellen van de balans.</p>
+            <li>
+                <p>Selecteer de rij met een sterretje (*).</p>
+            </li>
+            <li>
+                <p>Selecteer de accountnaam bij <b>Huidig jaar</b>.</p>
+            </li>
+            <p>Er verschijnt een lijst met de proefbalansgroepen en -rekeningen.</p>
+            <li>
+                <p>Selecteer de Import Component uit de lijst.</p>
+            </li>
+            <li>
+                <p>Selecteer de groepsnaam bij <b>Voorgaand jaar</b> om een lijst van de proefbalansgroepen weer te geven.</p>
+            </li>
+            <li>
+                <p>Selecteer de Import Component uit de lijst.</p>
+            </li>
+        </ol>
+        <p>Zodra gebruikers de proefbalansgegevens in de opdracht importeren, worden afrondingsverschillen automatisch toegevoegd aan de eerste rekening zonder nullen in de groepen die je hebt geselecteerd voor respectievelijk het huidige jaar en het vorige jaar.</p>
+        <p>Als je de bovenliggende groepen samenvoegt voor de groep die je hebt geselecteerd voor afrondingsverschillen, wordt het sterretje verplaatst naar de bovenliggende groepen. Zo kun je zien waar de geselecteerde groep zich bevindt.</p>
+        <p>Laten we bijvoorbeeld aannemen dat de groep die is geselecteerd voor het afronden van verschillen <i>Land is.</i></p>
+        <p><img src="../Resources/Images/plug-in-land.PNG" alt="Geselecteerde groep voor afrondingsverschillen in Land" /></p>
+        <p>Merk op hoe het sterretje zich verplaatst naar de bovenliggende groepen wanneer ze worden samengevouwen. Wanneer de bovenliggende groep <i>Materiële vaste activa</i> wordt samengevoegd, wordt de asterisk daarheen verplaatst.</p>
+        <p><img src="../Resources/Images/third-level-parent-plug-group.PNG" alt="Asterix naast Materiële vaste activa" /></p>
+        <p>Wanneer de moedergroep <i>Vaste activa</i> wordt samengevoegd, wordt het sterretje daar verplaatst.</p>
+        <p><img src="../Resources/Images/second-level-parent-plug-group.PNG" alt="Wanneer de moedergroep Vaste activa wordt samengevoegd, wordt de asterisk verplaatst naar deze groep" /></p>
+        <p>Als de bovenliggende groep <i>Assets</i> wordt samengevouwen, wordt het sterretje daar geplaatst.</p>
+        <p><img src="../Resources/Images/first-level-parent-plug-group.PNG" alt="Een sterretje dat Activa markeert als ingeklapt" /></p>
+    </body>
+</html>

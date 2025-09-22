@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Import data from SAP S4 HANA</h1>
+        <p>You can import trial balance and general ledger data from SAP S4 HANA.</p>
+        <h2>Export your data from SAP S4 HANA</h2>
+        <p>If you want to import trial balance or general ledger data into your engagement from SAP S4 HANA, you must first export that data from SAP.</p>
+        <p><b>To export trial balance data from SAP:</b></p>
+        <ol>
+            <li>
+                <p>Log in to SAP.</p>
+            </li>
+            <li>
+                <p>In the SAP menu bar, enter <b>S_ALR_87012284</b> as the transaction code and then select <b>Execute</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-command.png" alt="The transaction code entered in the SAP menu bar." /></p>
+            </li>
+            <li>
+                <p>Enter the correct information for the data you want to export in the following fields:</p>
+                <ul>
+                    <li>
+                        <p><b>Chart of Accounts</b></p>
+                    </li>
+                    <li>
+                        <p><b>Company code</b></p>
+                    </li>
+                    <li>
+                        <p><b>Financial statement version</b></p>
+                    </li>
+                    <li>
+                        <p><b>Sprache</b></p>
+                    </li>
+                    <li>
+                        <p><b>Reporting year</b></p>
+                    </li>
+                    <li>
+                        <p><b>Reporting periods</b></p>
+                    </li>
+                    <li>
+                        <p><b>Comparison year</b></p>
+                    </li>
+                    <li>
+                        <p><b>Comparison periods</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-fields.png" alt="The Financial Statements screen of SAP with the correct information entered in the required fields." /></p>
+            </li>
+        </ol>
+        <ol>
+            <li>
+                <p>Select <b>Execute</b>.</p>
+            </li>
+            <li>
+                <p>From the top menu, select <b>System</b> | <b>List</b> | <b>Save</b> | <b>Save</b> to save the report.</p>
+            </li>
+            <li>
+                <p>In the dialog, select <b>Spreadsheet (XLSX)</b> to save the report as a .xlsx file.</p>
+            </li>
+        </ol>
+        <p><b>To export general ledger data from SAP:</b></p>
+        <ol>
+            <li>
+                <p>Log in to SAP.</p>
+            </li>
+            <li>
+                <p>In the SAP menu bar, enter <b>FAGLL03</b> as the transaction code and then select <b>Execute</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-gl-command.png" alt="The transaction code entered in the SAP menu bar." /></p>
+            </li>
+            <li>
+                <p>Enter the <b>Company code</b> for the data you want to export.</p>
+            </li>
+            <li>
+                <p>In the <b>Line Item Selection</b> section, select <b>All Items</b> and enter the ending date of the financial year for the data you want to export.</p>
+            </li>
+            <li>
+                <p>Select <b>Execute</b>.</p>
+            </li>
+            <li>
+                <p>From the toolbar, select the <b>Change Layout</b> (<img src="../../Resources/Icons/sap-change-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon.</p>
+                <p><img src="../../Resources/Images/sap-hana-toolbar-change-layout.png" title="The Change Layout icon in the toolbar." /></p>
+            </li>
+            <li>
+                <p>In the Change Layout dialog, ensure the following fields are selected and then select <b>Copy</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).:</p>
+                <ul>
+                    <li>
+                        <p><b>G/L Account</b></p>
+                    </li>
+                    <li>
+                        <p><b>Amount in Local Currency</b></p>
+                    </li>
+                    <li>
+                        <p><b>Text</b></p>
+                    </li>
+                    <li>
+                        <p><b>Belegnummer</b></p>
+                    </li>
+                    <li>
+                        <p><b>Belegart</b></p>
+                    </li>
+                    <li>
+                        <p><b>Document Date</b></p>
+                    </li>
+                    <li>
+                        <p><b>Buchungsdatum</b></p>
+                    </li>
+                    <li>
+                        <p><b>Posting Key</b></p>
+                    </li>
+                    <li>
+                        <p><b>Local Currency</b></p>
+                    </li>
+                    <li>
+                        <p><b>General Ledger Currency</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-change-layout-dialog.png" alt="The Change Layout dialog." /></p>
+            </li>
+            <li>
+                <p>From the toolbar, select the <b>Subtotal</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon.</p>
+            </li>
+            <li>
+                <p>In the Define Sort Order dialog, ensure the <b>Subtotal</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) boxes are unchecked for all fields and then select <b>Copy</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/sap-hana-define-sort-order-dialog.png" alt="The Define Sort Order dialog." /></p>
+            </li>
+            <li>
+                <p>You can save the customized layout to use it again later:</p>
+                <ol>
+                    <li>
+                        <p>Select the <b>Save Layout</b> (<img src="../../Resources/Icons/sap-save-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon from the toolbar.</p>
+                    </li>
+                    <li>
+                        <p>In the Layout: Save as dialog, rename the layout, add a description and then select <b>Save</b>.</p>
+                        <p><img src="../../Resources/Images/sap-hana-layout-save-as-dialog.png" alt="The Layout: Save as dialog." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>To export the report, from the top menu, select <b>List</b> | <b>Export</b> | <b>Spreadsheet</b>.</p>
+            </li>
+            <li>
+                <p>In the Export As dialog, enter a name for the file and ensure the file format is <b>Spreadsheet (.xlsx)</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Export to</b> button to export your data.</p>
+            </li>
+        </ol>
+        <h2>Import your data</h2>
+        <p>After you export your data, you can then import it into your engagement file.</p>
+        <p><b>To import the data into your engagement:</b></p>
+        <ol>
+            <li>
+                <p>Navigate to the <b>Data</b> page. The Data page opens to the Datasets tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                </li>
+                <li>
+                    <p>If your engagement is consolidated and has internal subsidiary entities, select which entity you want to import data for from the list.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="2">
+                <p>Under IMPORT FROM DATA CONNECTOR, select <b>SAP (File)</b> from the list of data sources.</p>
+                <p>If the option is not visible, you can use the search box to find it.</p>
+            </li>
+            <li>
+                <p>At the Upload stage of the import wizard, select or drag-drop the general ledger and trial balance data files you exported, then select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>At the Configure Data stage of the import wizard:</p>
+                <ul>
+                    <li>
+                        <p><b>Reporting period</b> is automatically filled with the reporting period of the data.</p>
+                    </li>
+                    <li>
+                        <p><b>Year start Date</b> is automatically filled with the start date of the data.</p>
+                    </li>
+                    <li>
+                        <p><b>Year end Date</b> is automatically filled with the end date of the data.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>In <b>Select dataset type</b>, choose the type of datasets you are importing.</p>
+                <p>Note that only trial balance and general ledger datasets are currently available for import from SAP S4 HANA.</p>
+            </li>
+            <li>
+                <p>If you selected <b>Trial balance</b>, select the <b>Import the last 5 years of TB</b> to import up to five years of trial balance data if it is available in the file you exported.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Weiter</b>.</p>
+            </li>
+            <li>
+                <p>At the Confirmation stage of the import wizard, review the information and select <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p class="indent">A new page appears displaying the data.</p>
+        <p class="indent">By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p class="indent">Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p class="indent">For more information, refer to <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>.</p>
+        <h2>Reimport the trial balance</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

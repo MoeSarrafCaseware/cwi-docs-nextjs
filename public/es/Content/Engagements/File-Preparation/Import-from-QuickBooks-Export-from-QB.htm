@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importar del escritorio de QuickBooks (Exportar desde QB)</h1>
+        <p>You can import data from QuickBooks desktop (Export from EB) by using the Export Module, then importing the file to your engagement.</p>
+        <p class="note"><b>Note:</b> Accounts with zero balances are not automatically imported into Caseware Cloud apps. If you want to include zero-balance accounts, you must manually <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">add</a> and <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">assign</a> them to the appropriate financial groups.<br /> Zero-balance accounts <i>are</i> imported into <a href="https://www.caseware.com/ca/products/idea/">IDEA</a> files.</p>
+        <p>Before you start, make sure that you create an export file from QuickBooks using the Export Module.</p>
+        <p style="font-weight: bold;">To import the exported data to your engagement:</p>
+        <ol>
+            <li>
+                <p>Download the Caseware Cloud Import Utility.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility(.exe)</a></p>
+            <p></p>
+            <li>
+                <p>Open the Utility, select <b>Other Data Source</b> and select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">In the <b>Import From</b> and <b>Version</b> drop-downs, select <b>QuickBooks (Export from QB)</b>.</p>
+                <p class="note"><b>Note:</b> Refer to <a href="Supported-third-party-accounting-packages.htm">Supported third party accounting packages</a> for the list of supported versions. If you find outdated versions in the list, report the issue to Caseware for investigation.</p>
+            </li>
+            <li>
+                <p>Browse to the <b>Import Path</b> of the client file you want to import.</p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">At <b>QuickBooks Exported Text Files</b>, browse and select the Chart of Accounts file.</p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>, then <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>Save the generated zip file using the displayed prompt.</p>
+            </li>
+            <li>
+                <p>In your engagement file, go to the <b>Data</b> page. The <b>Data</b> page opens to the <b>Datasets</b> tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>If you’ve previously imported data, select <b>Add data</b>.</p>
+                </li>
+                <li>
+                    <p>If your engagement is consolidated and has internal subsidiary entities, select which entity you want to import data for from the list.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="9">
+                <p>Under IMPORT FROM DATA CONNECTOR, select <b>QuickBooks Desktop</b> from the list of data sources, then select <b>Next</b>.</p>
+                <p>If the option is not visible, you can use the Search box to find it.</p>
+            </li>
+            <li>
+                <p>Select or drag-drop the zip file you&apos;ve saved in Step 7.</p>
+            </li>
+        </ol>
+        <p class="indent">To view the imported data, click <b>View data</b> next to the dataset you imported.</p>
+        <p class="indent">A new page appears displaying the data.</p>
+        <p class="indent">By default, all the columns in your dataset display. Click <b>Columns</b> to deselect those you want to hide.</p>
+        <p class="indent">Click <b>Filters</b> to filter the data displayed in the dataset.</p>
+        <p class="indent">For more information, refer to <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">View the client&apos;s general and subledger data</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Attribuer des comptes aux groupes dans la page Données (nouvelle conception)</h1>
+        <p class="note"><b>Remarque :</b> La nouvelle conception de l&apos;attribution des comptes n&apos;est disponible que si elle a été activée dans votre produit. Voir <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Affecter des comptes à des groupes dans la page Données</a> pour savoir comment affecter des comptes à partir de l&apos;ancienne version de la page.</p>
+        <p>Sur la page <b>Données</b> , l&apos;icône <b>Affectation des comptes</b> peut parfois afficher un badge rouge ( ) lorsque vous importez la balance générale. Cela signifie qu&apos;un ou plusieurs comptes n&apos;ont pas été mappés avec succès à des groupes. Il en va de même lorsque vous ajoutez manuellement un ou plusieurs comptes. Notez que le badge rouge indique le nombre de comptes non attribués. Par exemple, s&apos;il y a un compte non attribué, le badge indique <b>1</b> ().</p>
+        <p><img src="../../Resources/Images/assign-accounts-screen2.png" alt="Page d&apos;affectation des comptes."></img></p>
+        <p>Vous devez affecter manuellement les comptes non affectés aux groupes appropriés afin que vos données financières soient correctement renseignées tout au long de la mission. Si plusieurs structures de regroupement sont disponibles dans votre produit, lorsque vous affectez un groupe à un compte dans la structure de regroupement par défaut, il est automatiquement affecté aux groupes liés dans d&apos;autres structures de regroupement.</p>
+        <h2>Affecter des comptes à des groupes</h2>
+        <p style="font-weight: normal;">Vous pouvez affecter manuellement des comptes non affectés à des groupes à partir de la page <b>Affecter des comptes</b> .</p>
+        <p style="font-weight: bold;">Pour affecter un compte à un groupe :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;icône d&apos; <b>affectation des comptes</b> () dans le coin supérieur droit de la page <b>Données</b> .</p>
+                <p>Vous pouvez également sélectionner l&apos;onglet <b>Attribution de comptes</b> dans le panneau latéral gauche.</p>
+                <p>Dans l&apos;onglet <b>Assigner des comptes</b> , les comptes non assignés s&apos;affichent dans la section <b>Non assignés</b> .</p>
+                <p>Si votre mission est consolidée, vous pouvez utiliser la liste déroulante du sélecteur d&apos;entité pour sélectionner l&apos;entité à laquelle vous attribuez des comptes.</p>
+                <p>Les groupes financiers s&apos;affichent dans la section <b>Structure de regroupement</b> . Si votre produit possède plusieurs structures de regroupement, vous pouvez utiliser la liste déroulante pour sélectionner la structure de regroupement à laquelle vous souhaitez affecter les comptes.</p>
+                <p>Vous pouvez cocher la case <b>Plus d&apos;actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;"></img>) | <b>Afficher les</b> groupes cachés pour afficher les groupes qui ont été cachés dans l&apos;engagement Si vous sélectionnez <b>Afficher les</b>groupes cachés, l&apos;icône invisible (<img src="../../Resources/Images/icon-eye-01.png" style="vertical-align: text-bottom;"></img>) s&apos;affiche à côté des groupes cachés afin que vous puissiez les repérer dans la liste.</p>
+                <p><img src="../../Resources/Images/assign-accounts-new-design.png" alt="L&apos;onglet Affectation des comptes."></img></p>
+            </li>
+            <li>
+                <p>Sélectionnez un groupe pour affecter le compte sélectionné à ce groupe.</p>
+                <p>Vous pouvez également faire glisser le compte depuis la section Non attribué et le déposer dans un groupe pour le mapper.</p>
+                <p>Vous pouvez utiliser le champ de recherche ou les filtres pour trouver le compte que vous souhaitez affecter. Les filtres disponibles vous permettent de filtrer les comptes non affectés par nom de compte, numéro de compte, si le compte a un solde créditeur ou débiteur, et le montant du solde.</p>
+                <p>Vous pouvez également attribuer des comptes aux dimensions si elles sont disponibles dans votre produit.</p>
+                <p><img src="../../Resources/Images/assign-accounts-new-filters.png" alt="La page Attribuer des comptes avec le popover Filtres ouvert."></img></p>
+            </li>
+        </ol>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez affecter des comptes à un groupe de niveau inférieur que si aucun compte n&apos;est affecté à son groupe parent. Par exemple, supposons que vous ayez deux groupes de comptes, <i>Revenu</i> et <i>Revenu de location</i>, qui sont tous deux affectés au groupe parent <i>Revenu</i> . Si vous affectez un compte au groupe <i>Revenu</i> , vous ne pouvez pas affecter de comptes aux groupes <i>Revenu</i> ou Revenu <i>de location</i> . Si vous souhaitez affecter des comptes à un groupe de niveau inférieur, vous devez d&apos;abord désaffecter manuellement les comptes affectés au groupe parent. Pour en savoir plus, voir <a href="#Unassign">Désaffecter des comptes de groupes</a>.</p>
+        <p>Après avoir attribué un compte, vous pouvez sélectionner <b>Annuler</b> (<img src="../../Resources/Images/icon-undo-assign-accounts.png" style="vertical-align: text-bottom;"></img>), si nécessaire, pour annuler à nouveau l&apos;attribution du compte.</p>
+        <p><img src="../../Resources/Images/assign-accounts-undo.png"></img></p>
+        <h2>Copier l&apos;imputation d&apos;une autre mission</h2>
+        <p>Pour simplifier le processus d&apos;imputation, vous pouvez copier la structure d&apos;imputation d&apos;une autre mission. Cela vous permet de tirer parti des engagements qui utilisent la même structure de regroupement financier et les mêmes numéros de groupe, de sorte que vous pouvez automatiquement attribuer des comptes dans votre engagement actuel pour correspondre à l&apos;engagement que vous copiez.</p>
+        <p>Lorsque vous sélectionnez une mission à copier, les comptes de votre mission actuelle qui ont le même numéro de compte que les comptes de l&apos;autre mission seront affectés aux groupes financiers appropriés.</p>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez copier que des imputations de missions auxquelles vous avez accès.</p>
+        <p style="font-weight: bold;">Pour copier l&apos;imputation d&apos;un autre engagement :</p>
+        <ol>
+            <li>
+                <p>Sur la page <b>Affecter des comptes</b> , sélectionnez <b>Autres actions</b> (<img src="../../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;"></img>) | <b>Copier l&apos;affectation des comptes d&apos;une autre mission</b>.</p>
+                <p><img src="../../Resources/Images/assign-accounts-copy-assgnmt.png" alt="L&apos;option Copier l&apos;imputation d&apos;une autre mission dans le menu Autres actions."></img></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Copier l&apos;affectation à partir de la mission, sélectionnez l&apos;entité qui contient la mission que vous souhaitez copier, puis sélectionnez la mission.</p>
+                <p><img src="../../Resources/Images/copy-assignment-from-engagement-dialog.png" alt="La boîte de dialogue Copier l&apos;affectation à partir de l&apos;engagement."></img></p>
+            </li>
+            <li>
+                <p>Si vous souhaitez remplacer les imputations existantes que vous avez effectuées, sélectionnez <b>Remplacer l&apos;imputation existante</b>. Si vous ne sélectionnez pas cette option, vos imputations existantes restent inchangées et seuls les comptes actuellement non affectés sont affectés.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Terminé</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Unassign"></a>Désaffecter des comptes de groupes</h2>
+        <p>Vous pouvez manuellement désaffecter des comptes de groupes dans l&apos;onglet <b>Affecter des comptes</b> .</p>
+        <p><b>Pour retirer un compte d&apos;un groupe :</b></p>
+        <ol>
+            <li>
+                <p>Dans l&apos;onglet <b>Attribution de comptes</b> , naviguez jusqu&apos;au groupe dont vous souhaitez annuler l&apos;attribution de comptes.</p>
+            </li>
+            <li>
+                <p>Sélectionnez et faites glisser les comptes affectés au groupe parent vers la section <b>Non affectés.</b></p>
+            </li>
+        </ol>
+    </body>
+</html>

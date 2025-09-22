@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Ignore">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Data Analytics DA-9</h1>
+        <h2>AnalyticsAI</h2>
+        <p>Il n&apos;y a pas de mise à jour d&apos;AnalyticsAI dans cette version.</p>
+        <h2>Importer des données</h2>
+        <h3>Importation de fichiers de transactions</h3>
+        <p>Cette version a ajouté une nouvelle étape de traitement pour permettre la validation des fichiers pendant le balisage.</p>
+        <p><img src="../Resources/Images/transaction-import-processing.png" alt="Progression du traitement de l&apos;importation des transactions" /></p>
+        <h3>Message d&apos;erreur sur le numéro d&apos;entrée</h3>
+        <p>Désormais, lors de la mise en correspondance d&apos;une colonne dans un fichier de transactions avec le NUMÉRO D&apos;ENTRÉE, le NUMÉRO DE LIGNE ou l&apos;ID D&apos;ENTRÉE, une erreur s&apos;affiche si des cellules vides sont détectées.</p>
+        <p><img src="../Resources/Images/entry-number-error.png" alt="Erreur de numéro d&apos;entrée" /></p>
+        <p>Cliquez sur l&apos;avertissement pour afficher les cellules vides et leurs numéros de ligne. Avec ces informations, vous pouvez corriger le fichier à l&apos;aide d&apos;un outil de votre choix, ou contacter votre client avec ces informations et lui demander un fichier de transactions corrigé.</p>
+        <p>Une erreur s&apos;affiche également s&apos;il y a des lignes vides.</p>
+        <p><img src="../Resources/Images/blank-cells.png" alt="Erreur de cellules vides" /></p>
+        <p>Vous ne pourrez pas importer de fichiers contenant des erreurs. Le bouton &quot; <b>Importer</b> &quot; de la page &quot;Importer des transactions&quot; sera inactif.</p>
+        <h3>Message d&apos;erreur sur le montant</h3>
+        <p>Lors du mappage d&apos;une colonne dans un fichier de transactions vers AMOUNT, une erreur s&apos;affiche si des propriétés non numériques sont présentes.</p>
+        <p><img src="../Resources/Images/invalid-data-type.png" alt="Type de données non valide" /></p>
+        <p>Cliquez sur l&apos;avertissement pour afficher les données concernées.</p>
+        <p><img src="../Resources/Images/invalid-data-rows.png" alt="Lignes de données non valides" /></p>
+        <p>Vous ne pourrez pas importer de fichiers contenant des erreurs. Le bouton &quot; <b>Importer</b> &quot; de la page &quot;Importer des transactions&quot; sera inactif.</p>
+        <h3>Avertissements relatifs à des valeurs non attribuées</h3>
+        <p>Lors de la mise en correspondance d&apos;une colonne dans un fichier de transactions avec le TYPE DE DOCUMENT, le STATUT DE POSTE, le TYPE D&apos;IDENTIFICATEUR ou le TYPE DE DOCUMENT D&apos;ORIGINE, un avertissement s&apos;affiche s&apos;il y a des valeurs non attribuées. Par exemple,</p>
+        <p><img src="../Resources/Images/unassigned-document-type.png" alt="Type de document non attribué" /></p>
+        <h3>Entrées en double</h3>
+        <p>Si des transactions en double sont détectées dans des fichiers CSV, que ce soit dans le même fichier ou dans un fichier ultérieur d&apos;un engagement, les transactions en double seront ignorées lors de l&apos;importation.</p>
+        <p>Les tentatives d&apos;importation de transactions en double ne corrompent plus la base de données des transactions. En outre, en cas d&apos;échec de l&apos;importation, les utilisateurs pourront télécharger et importer un autre fichier. Avant cette version, cette action entraînait également une corruption de la base de données.</p>
+        <p><b>Remarque :</b> Les duplications de transactions sont basées sur la propriété du numéro d&apos;entrée, et non sur la transaction entière.</p>
+    </body>
+</html>

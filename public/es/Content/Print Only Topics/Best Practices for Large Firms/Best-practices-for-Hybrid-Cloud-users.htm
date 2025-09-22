@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Best practices for Hybrid Cloud users</h1>
+        <p>In order to optimize Cloud site performance, we recommend Hybrid Cloud users follow the guidelines detailed below.</p>
+        <h2 MadCap:autonum="1.1 ">Use Cloud solely for engagement files</h2>
+        <p>We recommend that Hybrid Cloud users use their Cloud site solely for engagements and minimize their use of other features such as Activities, Cloud Time, and Files. The Files app in particular can cause performance issues for users who are working on engagements if a large quantity of files are stored on your Cloud site.</p>
+        <h2 MadCap:autonum="1.2 ">Disable Time tracking for engagement files</h2>
+        <p>Time tracking automatically tracks the time spent by staff members in engagement files. We recommend that Hybrid Cloud users disable this feature in Working Papers to optimize Cloud performance.</p>
+        <p class="note"><b>Note:</b> Disabling Time tracking is only supported with Working Papers 2020: Update 1 or later. Users with earlier versions of Working Papers will not be able to disable Time tracking.</p>
+        <p><b>To disable Time tracking:</b></p>
+        <ol>
+            <li>
+                <p>Navigate to the <b>Caseware</b> directory.</p>
+                <p>The default location for this directory is the <b>Program Files (x86)</b> directory.</p>
+            </li>
+            <li>
+                <p>Open the <b>CV.ver</b> file using Notepad or a similar program.</p>
+                <p><img src="../../Resources/Images/cv-ver-file.png" /></p>
+            </li>
+            <li>
+                <p>Add the following line to the file: DisableTimeEntries=1</p>
+                <p><img src="../../Resources/Images/disable-time-entries.png" /></p>
+            </li>
+            <li>
+                <p>Select <b>File</b> &gt; <b>Save</b> or press <b>CTRL + S</b> to save the file.</p>
+            </li>
+        </ol>
+        <h2 MadCap:autonum="1.3 ">Set timeout settings</h2>
+        <p>We also recommend adding the following settings to the CV.ver file to further improve performance.</p>
+        <p style="font-weight: bold;">To set timeout settings:</p>
+        <ol>
+            <li>
+                <p>Navigate to the <b>Caseware</b> directory.</p>
+                <p>The default location for this directory is the <b>Program Files (x86)</b> directory.</p>
+            </li>
+            <li>
+                <p>Open the <b>CV.ver</b> file using Notepad or a similar program.</p>
+                <p><img src="../../Resources/Images/cv-ver-file.png" /></p>
+            </li>
+            <li>
+                <p>Add the following lines to the file:</p>
+                <p>MasterAvailabilityTimeout=30000</p>
+                <p>LongerMasterAvailabilityTimeout=40000</p>
+                <p>SSSTimeout=50000</p>
+                <p><img src="../../Resources/Images/wp-timeout-settings.png" /></p>
+            </li>
+            <li>
+                <p>Select <b>File</b> &gt; <b>Save</b> or press <b>CTRL</b> + <b>S</b> to save the file.</p>
+            </li>
+        </ol>
+    </body>
+</html>

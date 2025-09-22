@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Relativer Größenfaktor</h1>
+        <p>Die Analyse Relativer Größenfaktor identifiziert Anomalien, bei denen der größte Betrag für eine Teilmenge in einem bestimmten Schlüssel außerhalb der Norm für diese Teilmenge liegt. Ein Schlüssel ist ein bestimmtes Feld oder eine Kombination von Feldern, die zur Gruppierung von Daten in Teilmengen für die Analyse verwendet werden.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Ausreißerwerte oder ungewöhnliche Muster</p>
+            </li>
+            <li>
+                <p>Transaktionen, die signifikant von der Norm abweichen</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Die folgenden Felder werden für diese Analyse verwendet:</p>
+        <ul>
+            <li>
+                <p><b>Referenzfeld(er)</b> - Eindeutige(s) Feld(er), das/die zur Erstellung einer eindeutigen Transaktions-ID verwendet wird/werden, wie z. B. das Feld <b>Eintrags-ID</b> für den Hauptbuch-Datensatz. Diese Spalten sind nicht Teil des Ergebnisses, sondern dienen der Identifizierung der Transaktionen, die Teil des Ergebnisses sind. Dieses Feld wurde bereits im Test definiert und kann nicht geändert werden.</p>
+            </li>
+            <li>
+                <p><b>Numerisches Feld</b> - Das Feld, das zur Berechnung des relativen Größenfaktors (RSF) verwendet wird.</p>
+            </li>
+            <li>
+                <p><b>Beliebige(s) Feld(er)</b> - Ein oder mehrere Felder, die zur Erstellung der Teilmengen verwendet werden, aus denen das RSF generiert wird.</p>
+            </li>
+        </ul>
+        <h2>Parameter</h2>
+        <p>Zur Durchführung dieses Tests müssen die folgenden Parameter eingestellt werden:</p>
+        <ul>
+            <li>
+                <p><b>RSF-Faktor</b> - Geben Sie das Vielfache zwischen dem größten und dem zweitgrößten Betrag in der Teilmenge ein. Wenn der RSF-Faktor beispielsweise auf zwei gesetzt ist, müsste der größte Betrag doppelt so groß sein wie der zweitgrößte, um ausgewählt zu werden.</p>
+            </li>
+            <li>
+                <p><b>Kleine Beträge ignorieren</b> - Wählen Sie, ob kleine Beträge ausgeschlossen werden sollen.</p>
+            </li>
+            <li>
+                <p><b>Kleiner Betrag</b> - Wenn Sie die Option gewählt haben, kleine Beträge zu ignorieren, geben Sie den Wert ein, der als Mindestwert für den Test gelten würde. Wenn Sie zum Beispiel 100 Euro eingeben, werden alle Transaktionen unter 100 Euro von der Analyse ausgeschlossen.</p>
+            </li>
+            <li>
+                <p><b>Positive oder negative Werte</b> - Wählen Sie aus, ob der Test mit positiven oder negativen Werten durchgeführt werden soll.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p>Die einzige für diesen Test verfügbare Konfiguration ist <b>Relativer Größenfaktor</b>. Diese Analyse identifiziert Anomalien, bei denen der größte Betrag für eine Teilmenge in einem bestimmten Schlüssel außerhalb der Norm für diese Teilmenge liegt.</p>
+        <h2>Technische Spezifikationen</h2>
+        <p class="note"><b>Hinweis:</b> Diese technischen Spezifikationen beruhen auf der Auswahl von positiven Zahlen. Bei negativen Zahlen wird die kleinste Zahl als größte Zahl für die folgenden Schritte betrachtet.</p>
+        <p>Wenn Sie die Analysefunktion Schlüsselwörter ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Legen Sie bei Bedarf Filter über die Daten, damit eine Teilmenge für die Analyse verwendet wird. Wenn kein Filter gesetzt ist, wird die Analyse für die gesamte Datei durchgeführt. Dieser Schritt kann auch als letzter statt als erster Schritt durchgeführt werden.</p>
+                <p class="note"><b>Hinweis:</b> Filter sind derzeit nicht verfügbar und werden erst in einer späteren Version enthalten sein.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob ein Betragsfeld ausgewählt wurde.</p>
+            </li>
+            <li>
+                <p>Validieren Sie ein oder mehrere Felder (mit Ausnahme des Betrags), die für die Erstellung der Teilmengen verwendet werden sollen.</p>
+            </li>
+            <li>
+                <p>Fassen Sie die Datei auf der Grundlage der Felder zusammen, die für die Teilmenge ausgewählt wurden. Diese Felder sollten in der Reihenfolge der Auswahl stehen, die Zusammenfassung sollte die Anzahl der Datensätze pro Teilmenge enthalten. Führen Sie bei der Auswahl nur negative oder positive Werte aus, je nachdem, welches Kennzeichen angibt, für welche Art von Werten die Analyse durchgeführt werden soll.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie alle Datensätze, in denen die Anzahl der Datensätze größer als 1 ist (dies schließt alle Teilmengen aus, in denen es nur eine Transaktion gibt; für diese Analyse benötigen Sie zwei oder mehr Transaktionen pro Teilmenge).</p>
+            </li>
+            <li>
+                <p>Verbinden Sie die in Schritt 6 erstellte Datei wieder mit der Originaldatei anhand der ausgewählten Teilmengenfelder. Die Originaldatei sollte auch nach dem Betragsfeld gefiltert werden, je nachdem, ob das Kennzeichen positiv oder negativ ist. Ist das Kennzeichen positiv, sollte der Filter Betrag &gt; 0 sein, ist das Kennzeichen negativ, sollte er Betrag &lt; 0 sein. In diesem Schritt wird eine Datei mit allen Transaktionen erstellt, die in die RSF-Analyse einfließen sollen.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die beiden besten Übergänge für jede Teilmenge in Schritt 7. Nehmen Sie nur das/die Untermengenfeld/er, das Betragsfeld und den Datensatzschlüssel auf.</p>
+            </li>
+            <li>
+                <p>In Schritt 8 wird für jede Teilmenge der beste Datensatz nach Betrag extrahiert.</p>
+            </li>
+            <li>
+                <p>Benennen Sie das Betragsfeld in Schritt 8 in <b>Größter Betrag</b> um.</p>
+            </li>
+            <li>
+                <p>Aus Schritt 7 extrahieren Sie alle Transaktionen mit Ausnahme derjenigen, die sich in Schritt 6 befinden (oberste Datensätze). Dies ergibt eine Liste von Transaktionen, die die Transaktion mit dem höchsten Wert ausschließt.</p>
+            </li>
+            <li>
+                <p>Aus Schritt 11 wird die Transaktion mit dem größten Wert pro eindeutiger Teilmenge extrahiert; dies ergibt die zweitgrößte Transaktion für die Teilmengen.</p>
+            </li>
+            <li>
+                <p>Ab Schritt 11 benennen Sie das Betragsfeld in <b>Zweitgrößter Betrag</b>.</p>
+            </li>
+            <li>
+                <p>Ab Schritt 9 berechnen Sie den Durchschnittswert für jeden eindeutigen Schlüssel. Dieser Durchschnitt schließt den größten Betrag für die in Schritt 9 extrahierte eindeutige Teilmenge aus.</p>
+            </li>
+            <li>
+                <p>Benennen Sie das Feld Durchschnittswert in Schritt 14 in <b>Durchschnitt X größter Wert</b> um.</p>
+            </li>
+            <li>
+                <p>Kombinieren Sie die Transaktionen aus Schritt 9 (höchste Werte) und Schritt 12 (zweithöchste Werte) miteinander.</p>
+            </li>
+            <li>
+                <p>Kombinieren Sie die Transaktionen aus Schritt 16 (höchster Wert und zweitgrößter Wert) mit Schritt 15 (Durchschnitt X größter Wert). Das Ergebnis sollte nun die Spalten der Teilmenge, die Spalte Größter Betrag, die Spalte Zweitgrößter Betrag, die Spalte Durchschnitt X Größter Betrag und die Spalte Anzahl enthalten.</p>
+            </li>
+            <li>
+                <p>Erstellen Sie die Spalte Relativer Größenfaktor auf der Grundlage Größter Betrag / Zweitgrößter Betrag und verwenden Sie jeweils 4 Dezimalstellen für die Anzeige.</p>
+            </li>
+            <li>
+                <p>Extrahiert alle Transaktionen, die gleich oder größer sind als der Parameter RSF-Faktor. Wenn als Parameter festgelegt wurde, dass kleine Beträge ignoriert werden sollen, dann schließen Sie auch alle Transaktionen aus, bei denen der größte Wert des Betrags unter dem in den Parametern angegebenen Wert für den kleinen Betrag liegt.</p>
+            </li>
+            <li>
+                <p>Extrahieren Sie die RSF-bezogenen Transaktionen.</p>
+            </li>
+            <li>
+                <p>Verbinden Sie die ursprüngliche Quelldatei mit dem RSF-Dateitest. Der Join wird nur abgeglichen und die Übereinstimmung basiert auf den für die Teilmenge ausgewählten Feldern sowie dem Betragsfeld, das mit dem Feld Größter Betrag übereinstimmt.</p>
+            </li>
+        </ol>
+    </body>
+</html>

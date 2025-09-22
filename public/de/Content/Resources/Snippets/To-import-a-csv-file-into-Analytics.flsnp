@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        
+    </head>
+    <body>
+        <p><b>To import a .csv file into Analytics:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Editor</i> role, or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Analytics</b>.</p>
+            </li>
+            <li>
+                <p>Select the Analytics engagement, then select <b>Add Data Files</b>.</p>
+            </li>
+            <li>
+                <p>Select the appropriate option. After you select a file, the File Import dialog opens.</p>
+            </li>
+            <ul>
+                <li>
+                    <p><b>Select New File</b>: Upload a file from your system.</p>
+                </li>
+                <li>
+                    <p><b>Select Existing File</b>: Select a file from the <b>Files</b> page in Cloud.</p>
+                </li>
+            </ul>
+            <li>
+                <p>You can map your file from the File Import dialog, or wait until after the import is complete. You will need to map the file before you can perform most Analytics tests.</p>
+                <p><img src="../Images/Analytics-file-import-dialog-979x576.png" alt="Analytics- import csv file" /></p>
+            </li>
+            <p>To map the file from this dialog:<br /></p>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Enter a description of the file in the <b>Description</b> field.</p>
+                </li>
+                <li>
+                    <p>Select the predefined <b>Analytics Type</b> that best matches the file. The Type determines which Column meanings will be available to select from. If none of the Types are a good match, select Unassigned.</p>
+                </li>
+                <li>
+                    <p>If your file has a header row, select the <b>Contains Header</b> checkbox and specify its row number under Specify row containing column names. This is set to 1 by default. Do the same for the First row of data, which is set to 2 by default.</p>
+                </li>
+                <li>
+                    <p>For each column, select whether you want to include it in the import by selecting or deselecting <b>Ignore selected column</b>.</p>
+                </li>
+                <li>
+                    <p>For each column, specify a <b>Column name</b>, <b>Column type</b>, and <b>Column meaning</b> that best match the data. If no available meanings are appropriate or you&apos;re unsure which meaning to assign, leave the column Unmapped. True/False data can be imported, but not mapped.</p>
+                </li>
+            </ol>
+            <li>Select <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

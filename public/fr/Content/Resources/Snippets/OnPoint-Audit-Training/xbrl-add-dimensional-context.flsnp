@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Vous pouvez ajouter des contextes dimensionnels et des contextes dimensionnels typés à partir du panneau de révision XBRL.</p>
+        <p>Avant de commencer, sélectionnez l&apos;icône XBRL (<img src="../../Icons/xbrl-end-user.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans le menu supérieur, sélectionnez la taxonomie que vous souhaitez réviser et Démarrer la révision pour ouvrir le panneau de révision.</p>
+        <p><b>Pour ajouter un contexte dimensionnel ou un contexte dimensionnel typé :</b></p>
+        <ol>
+            <li>
+                <p>Dans les états financiers, sélectionnez le contenu qui nécessite un contexte personnalisé.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>Contexte</b> du panneau de révision, sélectionnez <b>Autres actions</b> (<img src="../../Icons/more-actions-vertical.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Nouveau contexte dimensionnel</b>.</p>
+                <p><img src="../../Images/xbrl-review-panel-new-dimensional-context.png" alt="Le volet XBRL REVIEW." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez les valeurs souhaitées de la clé.</p>
+                <p class="note"><b>Remarque :</b> Le rôle associé à l&apos;étiquette est présélectionné dans le champ <b>Sélectionner un rôle.</b>  Si le rôle contient une dimension typée, un message d&apos;information indiquant que vous devez définir des valeurs pour la dimension s&apos;affiche. Vous pouvez définir des valeurs pour la dimension saisie après avoir sélectionné <b>Confirmer</b>.</p>
+                <p><img src="../../Images/xbrl-edit-dimensions-dialog.png" alt="La boîte de dialogue Edit Group." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>CONFIRMER</b>.</p>
+            </li>
+            <li>
+                <p>Si vous devez saisir des valeurs pour une dimension typée, remplissez les nouveaux champs <b>Instance de dimension</b> qui apparaissent dans la section <b>Dimensions.</b>  Sinon, passez à l&apos;étape suivante.</p>
+                <p><img src="../../Images/xbrl-dimension-instance.png" alt="La section Dimensions de la boîte de dialogue de l&apos;éditeur de contexte." /></p>
+                <p>Ces valeurs vous permettent de produire simultanément plusieurs contextes avec des valeurs différentes pour cette dimension typée. Dans l&apos;exemple de la capture d&apos;écran, les options nécessaires à la désignation d&apos;une partie contrôlante ont été sélectionnées. Comme il y a trois parties contrôlantes dans l&apos;exemple d&apos;engagement, elles pourraient être renseignées comme dans la capture d&apos;écran ci-dessus, de 1 à 3, pour créer automatiquement trois contextes avec des dimensions saisies de valeur 1, 2 et 3.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>Contexte</b> , saisissez les valeurs requises.</p>
+                <p class="note"><b>Remarque :</b> Si vous avez ajouté une dimension typée, ajoutez l&apos;élément <b>&lt;n&gt;</b> au champ <b>Nom.</b>  Cela permet de s&apos;assurer que les noms des contextes s&apos;alignent sur la valeur de l&apos;instance de la dimension typée ajoutée au contexte. Vous ne pouvez pas ajouter le contexte si vous n&apos;ajoutez pas cet élément au champ <b>Nom.</b> </p>
+                <p><img src="../../Images/xbrl-context-editor-dialog-3.png" alt="La boîte de dialogue de l&apos;éditeur de contexte." /></p>
+            </li>
+            <li>
+                <p>Select <b>Add context(s)</b>.</p>
+            </li>
+        </ol>
+        <p>Le contexte que vous avez créé est maintenant disponible pour que vous puissiez l&apos;ajouter aux étiquettes.</p>
+    </body>
+</html>

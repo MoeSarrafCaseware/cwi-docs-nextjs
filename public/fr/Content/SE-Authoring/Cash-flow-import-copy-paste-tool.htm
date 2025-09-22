@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Outil d&apos;importation et de copier-coller des flux de trésorerie</h1>
+        <p>L&apos;<b>outil d&apos;importation / copier-coller</b> des flux de trésorerie a été développé pour aider nos utilisateurs à transférer efficacement les soldes des tableaux de flux de trésorerie à partir de sources externes (feuilles de calcul Excel ou CSV) dans des tableaux dynamiques au sein des états financiers.</p>
+        <p>Une fois que l&apos; <b>outil d&apos;importation / copier-coller de flux de trésorerie</b> a été intégré à votre solution, sélectionnez <strong>Ajouter</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) sur votre page <b>Documents</b> et ajoutez les documents suivants :</p>
+        <ul>
+            <li>
+                <p><b>Importation de flux financiers</b> - Le formulaire principal qui comprend toutes les fonctionnalités, tant pour la méthode des flux financiers indirects que pour la méthode des flux financiers directs.</p>
+            </li>
+            <li>
+                <p><b>PA - Tableau des structures du tableau des flux de trésorerie</b> - Un formulaire SE Builder nécessaire pour soutenir la fonctionnalité du formulaire principal. Vous devez ajouter cette feuille de calcul à votre page Documents, mais vous pouvez toujours la masquer en utilisant les paramètres de visibilité.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>GC - Formulaire de visibilité en mode auteur</b> - Un formulaire SE Builder qui pilote les paramètres de visibilité du contenu du formulaire en fonction du type d&apos;auteur qui y accède. Vous devez ajouter cette feuille de calcul à votre page <b>Documents</b> , mais vous pouvez toujours la masquer en utilisant les paramètres de visibilité.</p>
+                <p class="note"><b>Remarque :</b> <b>GC - Le formulaire de visibilité en mode auteur</b> est un formulaire utilisé par d&apos;autres formulaires de composants globaux. S&apos;il a déjà été ajouté à votre solution, il n&apos;y a pas d&apos;autres modifications à apporter.</p>
+            </li>
+        </ul>
+        <h2>Changements requis pour l&apos;auteur principal</h2>
+        <p>
+            <h3>Série sur le cadre d&apos;information financière</h3>
+        </p>
+        <p>Si votre application prend en charge plusieurs <b>cadres ou secteurs d&apos;activité</b>, insérez les numéros d&apos;identification des procédures où ces informations sont documentées.</p>
+        <p class="note"><b>Remarque :</b> Si votre application ne prend en charge qu&apos;un seul cadre de reporting financier ou un seul secteur d&apos;activité, laissez ces champs vides.</p>
+        <h3>Méthode d&apos;établissement du tableau des flux de trésorerie</h3>
+        <p>Procédez de la même manière pour insérer l&apos;ID de la procédure lorsque le type de <b>méthode de flux de trésorerie</b> est documenté dans votre solution (méthode directe ou indirecte).</p>
+        <p class="note"><b>Remarque :</b> Si votre application ne prend en charge qu&apos;une seule méthode de trésorerie, laissez ce champ vide. Par défaut, le formulaire applique la méthode indirecte.</p>
+        <h3>Désactiver l&apos;édition de la description de la ligne</h3>
+        <p>Sélectionnez <b>Oui</b> pour désactiver la possibilité pour les utilisateurs finaux de modifier les descriptions des lignes.</p>
+        <p>
+            <h3>Groupes financiers de la trésorerie et des équivalents de trésorerie</h3>
+        </p>
+        <p>Sélectionnez les groupes financiers qui totalisent le <b>solde de trésorerie et d&apos;équivalents de trésorerie</b>, utilisé pour le tableau des flux de trésorerie. Ce solde sera utilisé pour recouper les montants figurant dans la section récapitulative.</p>
+        <h3>Informations complémentaires sur les flux de trésorerie</h3>
+        <p>Sélectionnez <b>Oui</b> si une section d&apos;informations supplémentaires sur les flux de trésorerie s&apos;applique à votre solution.</p>
+        <p>
+            <h3>Tableau de structure des flux de trésorerie</h3>
+        </p>
+        <p>Utilisez le tableau pour configurer les structures de flux de trésorerie pour chaque cadre de reporting financier et chaque secteur d&apos;activité pris en charge dans votre application, en fonction des informations fournies dans la section <b>Paramètres</b> ci-dessus :</p>
+        <ul>
+            <li>
+                <p>Sélectionnez chaque configuration applicable en fonction du cadre de reporting financier et du secteur d&apos;activité pris en charge par votre application.</p>
+            </li>
+            <li>
+                <p>Indiquez le nombre de lignes à inclure dans chaque section de flux de trésorerie (exploitation / investissement ou financement).</p>
+                <p class="note"><b>Remarque :</b> Le nombre maximum de lignes pour chaque section est défini par l&apos;auteur du SE Builder dans le fichier <b style="font-style: italic;">values.json</b> . Un maximum de <b>40 lignes</b> pour chaque section a été défini dans la version maître de ce formulaire. Des lignes supplémentaires peuvent être ajoutées par l&apos;auteur de SE Builder en ajoutant des <b style="font-style: italic;">clés</b> supplémentaires dans le <i style="font-weight: bold;">fichier values.json</i>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Modifier</b> pour définir les descriptions des postes individuels pour chacune des structures de flux de trésorerie requises.</p>
+            </li>
+        </ul>
+        <p>La boîte de dialogue <b>Modifier</b> propose les options suivantes :</p>
+        <ul>
+            <li>
+                <p><b>Effacer tout</b> - Supprime toutes les descriptions de lignes de toutes les sections.</p>
+            </li>
+            <li>
+                <p><b>Rétablir l&apos;original</b> - Rétablit les descriptions de lignes par défaut, telles que définies dans le fichier <i style="font-weight: bold;">values.json</i> .</p>
+            </li>
+            <li>
+                <p><b>Définir une nouvelle valeur par défaut</b> - Enregistre les valeurs actuelles saisies en tant que nouvelle valeur par défaut à utiliser pour les structures futures.</p>
+            </li>
+            <li>
+                <p><b>Sauvegarder</b> - Sauvegarde les valeurs saisies.</p><div class="note"><p><b>Remarque :</b></p>
+                    <ul>
+                        <li>
+                            <p>Si votre application ne prend en charge qu&apos;un seul cadre de reporting financier ou qu&apos;un seul secteur d&apos;activité, une ligne &quot;Engagement par défaut&quot; sera affichée pour définir la structure du flux de trésorerie.</p>
+                        </li>
+                        <li>
+                            <p>La structure par défaut du tableau des flux de trésorerie incluse dans l&apos;outil est basée sur la <i>taxonomie XBRL de l&apos;International Full IFRS.</i> Modifiez la structure en fonction des spécificités de votre marché et veillez à enregistrer les changements.</p>
+                        </li>
+                        <li>
+                            <p>Pour modifier ou traduire les valeurs par défaut, voir <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Ajouter des traductions ou des mises à jour de libellés</a></p>
+                        </li>
+                    </ul></div></li>
+        </ul>
+        <p>
+            <h3>Création d&apos;états financiers Tableaux dynamiques</h3>
+        </p>
+        <p>L&apos; <b>outil d&apos;importation et de copier-coller des flux de trésorerie</b> enregistre les informations à l&apos;aide d&apos; <b style="font-style: italic;">ID de valeurs de formulaire</b>. Pour lier les valeurs entre le formulaire SE Builder et les états financiers, l&apos;auteur principal doit autoriser ces <b style="font-style: italic;">ID de valeurs de formulaire</b> dans les tables dynamiques.</p>
+        <ul>
+            <li>
+                <p>Pour accéder à une liste d&apos; <b style="font-style: italic;">identifiants de valeurs de formulaires</b> liés aux tableaux dynamiques financiers, cliquez <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023(Final)-Cash_Flow_Statement_Import_Tool-values_json_keys_(Global_Components).xlsx">ici.</a> Notez qu&apos;il s&apos;agit de valeurs par défaut partagées et qu&apos;elles peuvent déjà avoir été modifiées par le développeur de votre solution SE.</p>
+            </li>
+            <li>
+                <p>Lier chaque ID de valeur de formulaire à la valeur de cellule correspondante dans le tableau dynamique des états financiers.</p>
+                <p><img src="../Resources/Images/Data-link.jpg" alt="Lien de données pour l&apos;outil d&apos;importation de flux de trésorerie." /></p>
+            </li>
+        </ul>
+        <p>Pour une présentation détaillée des paramètres de configuration de l&apos;auteur principal, consultez <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">cet enregistrement.</a></p>
+        <p>Pour en savoir plus sur l&apos;accès aux formulaires personnalisés de l <b>&apos;outil d&apos;importation et de copier-coller</b> de <b>flux de trésorerie</b> , voir <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Cash-flow-import-copy-paste-tool.htm">Démarrer avec l&apos;outil d&apos;importation et de copier-coller de flux de trésorerie</a>.</p>
+        <p>
+            <h2>End user workflow</h2>
+        </p>
+        <p>En tant qu&apos;utilisateur final, vous devez documenter les informations suivantes :</p>
+        <ol>
+            <li>
+                <p>Indiquez si les montants que vous souhaitez importer ou copier sont déjà arrondis ou non.</p><div class="note"><p><b>Remarque :</b></p>
+                    <ul>
+                        <li>
+                            <p>Les états financiers peuvent être arrondis en milliers, millions et milliards.</p>
+                        </li>
+                        <li>
+                            <p>Indiquer si les montants importés/copiés sont déjà arrondis conformément aux paramètres d&apos;arrondi des états financiers.</p>
+                        </li>
+                        <li>
+                            <p>Si les montants ne sont pas arrondis, le formulaire appliquera automatiquement les mêmes paramètres d&apos;arrondi que ceux spécifiés dans les paramètres d&apos;arrondi des états financiers.</p>
+                        </li>
+                        <li>
+                            <p>To enable rounding in the financial statements refer to <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Customize-rounding-in-the-financial-statements.htm?region=int"><p>Personnaliser les arrondis dans les états financiers</p></a></p>
+                        </li>
+                    </ul></div></li>
+            <li>
+                <p>Sélectionnez la méthode pour insérer les montants des flux de trésorerie dans ce formulaire : <b>Importation CSV | Copier-coller</b>.</p><div class="note"><p><b>Remarque :</b> L&apos;outil d&apos;importation des flux de trésorerie propose deux méthodes pour insérer les montants dans ce formulaire :</p>
+                    <ol>
+                        <li>
+                            <p><b>Importation CVS :</b> Importation CSV : Importez les montants en utilisant le fichier modèle CSV prédéfini fourni.</p>
+                            <p><b>Remarque :</b> L&apos;importation CSV permet de charger les informations à partir d&apos;un fichier CSV dont le format et la structure sont prédéfinis. An example file can be found here: <a href="https://developers.caseware.com/downloads/CashFlowImportTool/Nov_2023-CSV_Import_Templates_(no_Amounts-Direct&amp;Indirect).rar">Fichier de démonstration du modèle d&apos;importation CSV</a>.</p>
+                        </li>
+                        <li>
+                            <p><b>Copier-coller :</b> Permet de copier et de coller directement les montants pour chacune des sections de flux de trésorerie applicables.</p>
+                        </li>
+                    </ol></div></li>
+            <li>
+                <p>Sélectionnez si vous souhaitez importer les montants de l&apos;année précédente ou non.</p>
+            </li>
+            <li>
+                <p>Examinez la section &quot; <b>Résumé&quot;</b> pour vous assurer que le tableau des flux de trésorerie est équilibré.</p>
+            </li>
+        </ol>
+        <p>Pour une présentation détaillée des fonctionnalités de <b>l&apos;outil d&apos;importation et de copier-coller de Cashflow</b> applicables aux utilisateurs finaux, voir <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=23470&amp;returntype=UploadedFile">cet enregistrement.</a></p>
+    </body>
+</html>

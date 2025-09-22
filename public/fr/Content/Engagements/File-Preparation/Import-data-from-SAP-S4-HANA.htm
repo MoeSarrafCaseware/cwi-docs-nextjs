@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Importer des données de SAP S4 HANA</h1>
+        <p>Vous pouvez importer des données de balance de vérification et de grand livre à partir de SAP S4 HANA.</p>
+        <h2>Importer des données de SAP S4 HANA</h2>
+        <p>Si vous souhaitez importer des données de balance de vérification ou de grand livre dans votre engagement à partir de SAP S4 HANA, vous devez d&apos;abord exporter ces données à partir de SAP.</p>
+        <p><b>To export trial balance data from SAP:</b></p>
+        <ol>
+            <li>
+                <p>Log in to SAP.</p>
+            </li>
+            <li>
+                <p>Dans la barre de menu SAP, saisissez <b>S_ALR_87012284</b> comme code de transaction et sélectionnez ensuite <b>Exécuter</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-command.png" alt="Le code de transaction saisi dans la barre de menu SAP." /></p>
+            </li>
+            <li>
+                <p>Saisissez les informations correctes pour les données que vous souhaitez exporter dans les champs suivants :</p>
+                <ul>
+                    <li>
+                        <p><b>Plan comptable</b></p>
+                    </li>
+                    <li>
+                        <p><b>Code de l&apos;entreprise</b></p>
+                    </li>
+                    <li>
+                        <p><b>Aperçus des états financiers</b></p>
+                    </li>
+                    <li>
+                        <p><b>Langue</b></p>
+                    </li>
+                    <li>
+                        <p><b>Année de référence</b></p>
+                    </li>
+                    <li>
+                        <p><b>Période intermédiaire</b></p>
+                    </li>
+                    <li>
+                        <p><b>Année de comparaison</b></p>
+                    </li>
+                    <li>
+                        <p><b>Périodes de comparaison</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-import-tb-fields.png" alt="L&apos;écran États financiers de SAP avec les informations correctes saisies dans les champs obligatoires." /></p>
+            </li>
+        </ol>
+        <ol>
+            <li>
+                <p>Sélectionnez <b>Exécuter</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu supérieur, sélectionnez <b>Système</b> | <b>Liste</b> | <b>Enregistrer</b> | <b>Enregistrer</b> pour enregistrer le rapport.</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue, sélectionnez <b>Tableur (XLSX)</b> pour enregistrer le rapport au format .xlsx.</p>
+            </li>
+        </ol>
+        <p><b>Pour exporter des données du grand livre à partir de SAP :</b></p>
+        <ol>
+            <li>
+                <p>Log in to SAP.</p>
+            </li>
+            <li>
+                <p>Dans la barre de menu SAP, saisissez <b>FAGLL03</b> comme code de transaction et sélectionnez ensuite <b>Exécuter</b>.</p>
+                <p><img src="../../Resources/Images/sap-hana-import-gl-command.png" alt="Le code de transaction saisi dans la barre de menu SAP." /></p>
+            </li>
+            <li>
+                <p>Saisissez la <b>société</b> correspondant aux données que vous souhaitez exporter.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>Sélection des postes</b> , sélectionnez <b>Tous les postes</b> et saisissez la date de fin de l&apos;exercice pour les données que vous souhaitez exporter.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Exécuter</b>.</p>
+            </li>
+            <li>
+                <p>Dans la barre d&apos;outils, sélectionnez l&apos;icône <b>Insérer une référence de note</b> (<img src="../../Resources/Icons/sap-change-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/sap-hana-toolbar-change-layout.png" title="L&apos;icône Modifier la mise en page dans la barre d&apos;outils." /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Modifier la mise en page, assurez-vous que les champs suivants sont sélectionnés, puis sélectionnez <b>Copier</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).. :</p>
+                <ul>
+                    <li>
+                        <p><b>Report de compte du grand livre</b></p>
+                    </li>
+                    <li>
+                        <p><b>Montant en devise locale</b></p>
+                    </li>
+                    <li>
+                        <p><b>Texte</b></p>
+                    </li>
+                    <li>
+                        <p><b>Numéro du document</b></p>
+                    </li>
+                    <li>
+                        <p><b>Type de document</b></p>
+                    </li>
+                    <li>
+                        <p><b>Date du document</b></p>
+                    </li>
+                    <li>
+                        <p><b>Date de publication</b></p>
+                    </li>
+                    <li>
+                        <p><b>Clé de report</b></p>
+                    </li>
+                    <li>
+                        <p><b>Local Currency</b></p>
+                    </li>
+                    <li>
+                        <p><b>Tests du grand livre :</b></p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sap-hana-change-layout-dialog.png" alt="La boîte de dialogue Modifier la présentation." /></p>
+            </li>
+            <li>
+                <p>Dans la barre d&apos;outils, sélectionnez l&apos;icône <b>Insérer une référence de note</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Définir l&apos;ordre de tri, assurez-vous que les cases <b>Sous-total</b> (<img src="../../Resources/Icons/sap-subtotal-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) ne sont pas cochées pour tous les champs, puis sélectionnez <b>Copier</b> (<img src="../../Resources/Icons/sap-copy-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/sap-hana-define-sort-order-dialog.png" alt="La boîte de dialogue Définir l&apos;ordre de tri." /></p>
+            </li>
+            <li>
+                <p>Vous pouvez enregistrer la mise en page personnalisée pour la réutiliser ultérieurement :</p>
+                <ol>
+                    <li>
+                        <p>Select the <b>Save Layout</b> (<img src="../../Resources/Icons/sap-save-layout-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon from the toolbar.</p>
+                    </li>
+                    <li>
+                        <p>Dans la mise en page : Dans la boîte de dialogue Enregistrer sous, renommez la mise en page, ajoutez une description, puis sélectionnez <b>Enregistrer.</b></p>
+                        <p><img src="../../Resources/Images/sap-hana-layout-save-as-dialog.png" alt="L&apos;agencement : Boîte de dialogue Enregistrer sous." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Pour exporter le rapport, sélectionnez <b>Liste</b> | <b>Exportation</b> | <b>Feuille de calcul dans</b>le menu principal.</p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue Exporter sous, saisissez un nom pour le fichier et assurez-vous que le format de fichier est <b>Tableur (.xlsx</b>).</p>
+            </li>
+            <li>
+                <p>Sélectionnez le bouton <b>Exporter vers</b> pour exporter vos données.</p>
+            </li>
+        </ol>
+        <h2>Importer les données</h2>
+        <p>Après avoir exporté vos données, vous pouvez les importer dans votre dossier d&apos;engagement.</p>
+        <p><b>Pour importer les données dans votre engagement :</b></p>
+        <ol>
+            <li>
+                <p>Accédez à la page <b>Données</b> . The Data page opens to the Datasets tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="2">
+                <p>Sous IMPORTATION DU CONNECTEUR DE DONNÉES, sélectionnez <b>SAP (Fichier)</b> dans la liste des sources de données.</p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+            <li>
+                <p>At the Upload stage of the import wizard, select or drag-drop the general ledger and trial balance data files you exported, then select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>A l&apos;étape Configuration des données de l&apos;assistant d&apos;importation :</p>
+                <ul>
+                    <li>
+                        <p>La période de<b>déclaration</b> est automatiquement remplie avec la période de déclaration des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>début</b> est automatiquement remplie avec la date de début des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>fin</b> est automatiquement remplie avec la date de fin des données.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Dans <b>Sélectionner le type de jeu</b>de données, choisissez le type de jeu de données que vous importez.</p>
+                <p>Notez que seuls les ensembles de données de la balance de vérification et du grand livre sont actuellement disponibles pour l&apos;importation à partir de SAP S4 HANA.</p>
+            </li>
+            <li>
+                <p>Si vous avez sélectionné <b>Balance de vérification</b>, vous pouvez sélectionner l&apos;option <b>Importer les 5 dernières années de TB</b> pour importer jusqu&apos;à cinq années de données de balance de vérification si elles sont disponibles dans le fichier zip que vous avez généré.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>À l&apos;étape de confirmation de l&apos;assistant d&apos;importation, vérifiez les informations et sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+        <h2>Réimporter la balance de vérification</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

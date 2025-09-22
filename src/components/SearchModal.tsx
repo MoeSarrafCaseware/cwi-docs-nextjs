@@ -2,8 +2,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import sidebarNavigation from "../content/sidebar-navigation.json";
-import searchIndex from "../content/search-index.json";
+import { useLanguage } from "./LanguageProvider";
 
 type SearchResult = {
   title: string;
@@ -15,6 +14,13 @@ type SearchResult = {
   matchType: 'title' | 'content' | 'keyword';
 };
 
+type SearchData = {
+  results: SearchResult[];
+  sectionResults: {[key: string]: SearchResult[]};
+  sortedSections: string[];
+  query: string;
+};
+
 type SearchModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -23,130 +29,23 @@ type SearchModalProps = {
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searchData, setSearchData] = useState<SearchData | null>(null);
   const [isSearching, setIsSearching] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const { currentLanguage, currentRegion, getLanguageDisplay } = useLanguage();
 
-  // Flatten navigation data for search
-  const searchData = useMemo(() => {
-    const results: SearchResult[] = [];
-    
-    sidebarNavigation.navigationSections.forEach(section => {
-      // Add section headers
-      results.push({
-        title: section.title,
-        path: `#${section.id}`,
-        section: section.title,
-        level: 0,
-        type: 'section',
-        matchType: 'title'
-      });
-
-      // Recursively add all items
-      const addItems = (items: any[], parentPath = "", level = 1) => {
-        items.forEach(item => {
-          // Use href field directly for navigation, fallback to name-based slug
-          const itemSlug = item.href ? encodeURIComponent(item.href) : item.name.toLowerCase().replace(/\s+/g, "-");
-          const itemPath = parentPath ? `${parentPath}/${itemSlug}` : `/docs/${itemSlug}`;
-          
-          // Get content from search index (use href as key if available)
-          const searchKey = item.href ? item.href.replace(/^\//, '') : itemPath.replace('/docs/', '');
-          const pageData = searchIndex.pages[searchKey as keyof typeof searchIndex.pages];
-          
-          results.push({
-            title: item.name,
-            path: itemPath,
-            section: section.title,
-            level,
-            type: 'page',
-            content: pageData?.content,
-            matchType: 'title'
-          });
-
-          if (item.children) {
-            addItems(item.children, itemPath, level + 1);
-          }
-        });
-      };
-
-      addItems(section.items);
-    });
-
-    return results;
-  }, []);
-
-  // Helper function to calculate match score
-  const getScore = (item: SearchResult, query: string): number => {
-    let score = 0;
-    
-    if (item.title.toLowerCase().includes(query)) score += 100;
-    if (item.section.toLowerCase().includes(query)) score += 50;
-    if (item.content?.toLowerCase().includes(query)) score += 30;
-    
-    if (item.type === 'page') {
-      const searchKey = item.path.replace('/docs/', '');
-      const pageData = searchIndex.pages[searchKey as keyof typeof searchIndex.pages];
-      if (pageData?.keywords?.some(keyword => keyword.toLowerCase().includes(query))) {
-        score += 20;
-      }
-    }
-    
-    return score;
-  };
-
-  // Filter results based on query
-  const filteredResults = useMemo(() => {
-    if (!query.trim()) return [];
-    
-    const lowercaseQuery = query.toLowerCase();
-    const results: SearchResult[] = [];
-    
-    searchData.forEach(item => {
-      let matchType: 'title' | 'content' | 'keyword' = 'title';
-      let score = 0;
-      
-      // Title match (highest priority)
-      if (item.title.toLowerCase().includes(lowercaseQuery)) {
-        score += 100;
-        matchType = 'title';
-      }
-      
-      // Section match
-      if (item.section.toLowerCase().includes(lowercaseQuery)) {
-        score += 50;
-      }
-      
-      // Content match from search index
-      if (item.content && item.content.toLowerCase().includes(lowercaseQuery)) {
-        score += 30;
-        matchType = 'content';
-      }
-      
-      // Keyword match
-      if (item.type === 'page') {
-        const searchKey = item.path.replace('/docs/', '');
-        const pageData = searchIndex.pages[searchKey as keyof typeof searchIndex.pages];
-        if (pageData?.keywords?.some(keyword => keyword.toLowerCase().includes(lowercaseQuery))) {
-          score += 20;
-          matchType = 'keyword';
-        }
-      }
-      
-      if (score > 0) {
-        results.push({ ...item, matchType });
+  // Flatten all results for keyboard navigation
+  const allResults = useMemo(() => {
+    if (!searchData) return [];
+    const flattened: SearchResult[] = [];
+    searchData.sortedSections.forEach(section => {
+      if (searchData.sectionResults[section]) {
+        flattened.push(...searchData.sectionResults[section]);
       }
     });
-    
-    // Sort by score (highest first) and limit to 8 results
-    return results
-      .sort((a, b) => {
-        const aScore = getScore(a, lowercaseQuery);
-        const bScore = getScore(b, lowercaseQuery);
-        return bScore - aScore;
-      })
-      .slice(0, 8);
-  }, [query, searchData, getScore]);
+    return flattened;
+  }, [searchData]);
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -157,19 +56,19 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         case 'ArrowDown':
           e.preventDefault();
           setSelectedIndex(prev => 
-            prev < searchResults.length - 1 ? prev + 1 : 0
+            prev < allResults.length - 1 ? prev + 1 : 0
           );
           break;
         case 'ArrowUp':
           e.preventDefault();
           setSelectedIndex(prev => 
-            prev > 0 ? prev - 1 : searchResults.length - 1
+            prev > 0 ? prev - 1 : allResults.length - 1
           );
           break;
         case 'Enter':
           e.preventDefault();
-          if (searchResults[selectedIndex]) {
-            handleSelect(searchResults[selectedIndex]);
+          if (allResults[selectedIndex]) {
+            handleSelect(allResults[selectedIndex]);
           }
           break;
         case 'Escape':
@@ -181,7 +80,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, searchResults, selectedIndex, onClose]);
+  }, [isOpen, allResults, selectedIndex, onClose]);
 
   // Focus input when modal opens
   useEffect(() => {
@@ -198,7 +97,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   // Search effect
   useEffect(() => {
     if (!query.trim() || query.length < 2) {
-      setSearchResults([]);
+      setSearchData(null);
       setIsSearching(false);
       return;
     }
@@ -206,33 +105,54 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     const searchTimeout = setTimeout(async () => {
       setIsSearching(true);
       try {
-        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&lang=${currentLanguage}&region=${currentRegion}`);
         const data = await response.json();
         
         if (data.results) {
           const results: SearchResult[] = data.results.map((result: any) => ({
             title: result.title,
-            path: `/docs/${encodeURIComponent(result.href)}`,
+            path: `/docs${result.href}`,
             section: result.section,
             level: 1,
             type: 'page' as const,
             content: result.snippet,
             matchType: result.matchType
           }));
-          setSearchResults(results);
+          
+          const sectionResults: {[key: string]: SearchResult[]} = {};
+          if (data.sectionResults) {
+            Object.keys(data.sectionResults).forEach(section => {
+              sectionResults[section] = data.sectionResults[section].map((result: any) => ({
+                title: result.title,
+                path: `/docs${result.href}`,
+                section: result.section,
+                level: 1,
+                type: 'page' as const,
+                content: result.snippet,
+                matchType: result.matchType
+              }));
+            });
+          }
+          
+          setSearchData({
+            results,
+            sectionResults,
+            sortedSections: data.sortedSections || [],
+            query: data.query
+          });
         } else {
-          setSearchResults([]);
+          setSearchData(null);
         }
       } catch (error) {
         console.error('Search error:', error);
-        setSearchResults([]);
+        setSearchData(null);
       } finally {
         setIsSearching(false);
       }
     }, 300); // Debounce search
 
     return () => clearTimeout(searchTimeout);
-  }, [query]);
+  }, [query, currentLanguage, currentRegion]);
 
   const handleSelect = (result: SearchResult) => {
     if (result.type === 'page') {
@@ -265,7 +185,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search documentation..."
+              placeholder={`Search documentation in ${getLanguageDisplay()}...`}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 text-lg bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -280,67 +200,83 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           {/* Results */}
           {query && (
             <div className="mt-2 bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
+              {/* Language indicator */}
+              <div className="px-4 py-2 bg-gray-700 border-b border-gray-600">
+                <div className="flex items-center gap-2 text-sm text-gray-300">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
+                  <span>Searching in {getLanguageDisplay()}</span>
+                </div>
+              </div>
               {isSearching ? (
                 <div className="px-4 py-8 text-center">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
                   <p className="text-gray-400">Searching...</p>
                 </div>
-              ) : searchResults.length > 0 ? (
-                <div className="py-2">
-                  {searchResults.map((result, index) => (
-                    <button
-                      key={`${result.path}-${index}`}
-                      onClick={() => handleSelect(result)}
-                      className={`w-full px-4 py-3 text-left hover:bg-gray-700 transition-colors ${
-                        index === selectedIndex ? 'bg-gray-700' : ''
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1 min-w-0">
+              ) : searchData && allResults.length > 0 ? (
+                <div className="py-2 max-h-96 overflow-y-auto">
+                  {searchData.sortedSections.map((sectionTitle, sectionIndex) => {
+                    const sectionResults = searchData.sectionResults[sectionTitle];
+                    if (!sectionResults || sectionResults.length === 0) return null;
+                    
+                    return (
+                      <div key={sectionTitle} className={`${sectionIndex > 0 ? 'mt-6' : ''}`}>
+                        {/* Section Header */}
+                        <div className="px-4 py-3 bg-gray-700 border-b border-gray-600">
                           <div className="flex items-center gap-2">
-                            {result.type === 'section' ? (
-                              <svg className="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                              </svg>
-                            ) : (
-                              <svg className="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            )}
-                            <span className="text-white font-medium truncate">
-                              {result.title}
-                            </span>
-                          </div>
-                          <div className="mt-1 text-sm text-gray-400">
-                            <div className="truncate">
-                              {result.section}
-                              {result.level > 1 && (
-                                <span className="text-gray-500">
-                                  {' • '}
-                                  {Array(result.level - 1).fill('').map((_, i) => (
-                                    <span key={i} className="text-gray-500">→</span>
-                                  ))}
-                                </span>
-                              )}
-                            </div>
-                            {result.content && result.matchType !== 'title' && (
-                              <div className="mt-1 text-xs text-gray-500 line-clamp-2">
-                                {result.content.length > 100 
-                                  ? result.content.substring(0, 100) + '...'
-                                  : result.content
-                                }
-                              </div>
-                            )}
+                            <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                            <span className="text-gray-200 font-semibold text-sm">{sectionTitle}</span>
+                            <span className="text-gray-400 text-xs bg-gray-600 px-2 py-1 rounded-full">{sectionResults.length}</span>
                           </div>
                         </div>
-                        <div className="ml-4 flex-shrink-0">
-                          <kbd className="inline-flex items-center px-2 py-1 text-xs font-mono text-gray-400 bg-gray-700 border border-gray-600 rounded">
-                            ↵
-                          </kbd>
+                        
+                        {/* Section Results */}
+                        <div className="divide-y divide-gray-700">
+                          {sectionResults.map((result, index) => {
+                            const globalIndex = allResults.findIndex(r => r.path === result.path);
+                            return (
+                              <button
+                                key={`${result.path}-${index}`}
+                                onClick={() => handleSelect(result)}
+                                className={`w-full px-4 py-3 text-left hover:bg-gray-700 transition-colors ${
+                                  globalIndex === selectedIndex ? 'bg-blue-600' : ''
+                                }`}
+                              >
+                                <div className="flex items-center justify-between">
+                                  <div className="flex-1 min-w-0">
+                                    <div className="flex items-center gap-2">
+                                      <svg className="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                      </svg>
+                                      <span className="text-white font-medium truncate">
+                                        {result.title}
+                                      </span>
+                                    </div>
+                                    {result.content && result.matchType !== 'title' && (
+                                      <div className="mt-1 text-xs text-gray-500 line-clamp-2">
+                                        {result.content.length > 100 
+                                          ? result.content.substring(0, 100) + '...'
+                                          : result.content
+                                        }
+                                      </div>
+                                    )}
+                                  </div>
+                                  <div className="ml-4 flex-shrink-0">
+                                    <kbd className="inline-flex items-center px-2 py-1 text-xs font-mono text-gray-400 bg-gray-700 border border-gray-600 rounded">
+                                      ↵
+                                    </kbd>
+                                  </div>
+                                </div>
+                              </button>
+                            );
+                          })}
                         </div>
                       </div>
-                    </button>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="px-4 py-8 text-center">

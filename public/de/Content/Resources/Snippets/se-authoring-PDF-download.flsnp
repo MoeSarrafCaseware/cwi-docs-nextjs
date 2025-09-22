@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <div>
+            <p>Möchten Sie die PDF-Version? Download below.</p>
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button><h3 class="modalheading">Gain Access to More Content</h3>
+                            <p class="modalmaintext">Subscribe to receive updates on the latest articles and news for Caseware products.</p>
+                            <p class="modalsubtext">Ihr Download startet sofort nach Ihrer Anmeldung.</p>
+                            <p class="emailmodalinputlabel">E-Mail:</p><input type="text" id="email" /><button id="submit" type="button" class="btn btn-primary" onclick="downloadFile();">Abonnieren</button> <a class="modalnoemail" onclick="downloadFilenoemail()">Nein danke. Ich möchte nur die Datei herunterladen.</a><div id="emailerrormsg">
+                            </div>
+                        </div>
+                        <div class="modal-footer"><a href="https://casewarecloud.com">Sie haben noch keine Caseware Cloud Instanz? Hier erhalten Sie weitere Informationen.</a></div>
+                    </div>
+                </div>
+            </div><a class="downloadLink" data-toggle="modal" filename="SE Authoring Guide.pdf" data-target="#myModal"><i class="fa fa-download downloadicon"></i> SE Authoring Guide (PDF)</a></div>
+    </body>
+</html>

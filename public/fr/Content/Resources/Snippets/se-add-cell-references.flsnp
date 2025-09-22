@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>Vous pouvez faire référence à des valeurs d&apos;un tableau dynamique dans un autre. Il n&apos;est donc plus nécessaire de saisir manuellement la même valeur plusieurs fois dans différents tableaux des états financiers.</p>
+        <p><b>Pour ajouter des références de cellules :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez le tableau.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Autres actions</b> (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), puis choisissez <b>Modifier le tableau dynamique</b>.</p>
+                <p>Le tableau s&apos;ouvre en mode édition.</p>
+            </li>
+            <li>
+                <p>Allez dans la cellule souhaitée et sélectionnez l&apos;icône <b>fx</b> .</p>
+                <p class="note inline"><b>Remarque :</b> La cellule doit être une cellule de <b>la ligne d&apos;entrée</b> ou de la colonne d&apos; <b>entrée.</b></p>
+                <p><img src="../Images/fx-icon-in-cell.png" alt="fx s&apos;affiche dans le bord gauche de la cellule." /></p>
+            </li>
+            <li>
+                <p>Dans la boîte de dialogue <b>Calcul</b> , sélectionnez <b>Insérer des données</b> <b>(</b><sub style="font-weight: bold;">fx</sub><b>)</b>.</p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Data Link s&apos;ouvre. Sélectionnez l&apos;onglet <b>Référence de cellule</b> .</p>
+            </li>
+            <li>
+                <p>Dans la liste déroulante <b>Sélectionner un domaine/une note</b> , sélectionnez dans la liste des domaines ou des notes disponibles à référencer.</p>
+                <p><img src="../Images/add-cell-references-01.png" alt="La liste déroulante Sélectionner la zone/note de la page Liaison de données." /></p>
+            </li>
+            <li>
+                <p>Dans le champ <b>Sélectionner un tableau dynamique</b> , recherchez un tableau dans le domaine des états financiers ou dans la note, ou sélectionnez un tableau dans la liste ci-dessous.</p>
+                <p><img src="../Images/add-cell-references-02.png" alt="Le champ de recherche Sélectionner un tableau dynamique dans la page Liaison de données." /></p>
+            </li>
+            <li>
+                <p>Dans l&apos;aperçu du tableau dynamique, sélectionnez la cellule applicable à référencer.</p>
+                <p><img src="../Images/add-cell-references-03.png" alt="Le volet de prévisualisation du tableau dynamique sur la page Data Link." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>FAIT</b> pour fermer l&apos;onglet <b>Calcul.</b></p>
+            </li>
+        </ol>
+    </body>
+</html>

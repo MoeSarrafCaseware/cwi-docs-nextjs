@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="940" MadCap:lastWidth="1103">
+    <head>
+        
+    </head>
+    <body>
+        <p><b>To format a .csv file for import into Analytics:</b></p>
+        <ol>
+            <li>
+                <p>In your accounting software, export your client file in an editable format (such as .txt, .xls or .csv).</p>
+            </li>
+            <li>
+                <p>Open the file in <b>Excel</b>.</p>
+            </li>
+            <li>
+                <p>Select each blank row in your file. Right-click on any blank row and select <b>Delete...</b>. In the Delete dialog, select <b>Entire row</b>, then click <b>OK</b>.</p>
+            </li>
+            <li>
+                <p>Delete all rows containing:</p>
+            </li>
+            <ul>
+                <li>
+                    <p>totals or subtotals.</p>
+                </li>
+                <li>
+                    <p>comments.</p>
+                </li>
+            </ul>
+            <li>
+                <p>Click <b>File | Save As</b> and choose:</p>
+            </li>
+            <ul>
+                <li>
+                    <p><b>CSV (Comma delimited)</b> as the <b>Save as type</b>.</p>
+                    <p><img src="../Images/Analytics-file-csv-file-type-630x292.png" alt="Preparing a CSV file." /></p>
+                </li>
+                <li>
+                    <p><b>Unicode (UTF-8)</b> as the <b>Encoding</b> (under <b>Tools | Web Options</b> at the bottom of the dialog).</p>
+                    <p><img src="../Images/Analytics-csv-web-options-630x248.png" alt="Updating web options." /></p>
+                </li>
+            </ul>
+            <li>
+                <p>Enter a file name and click <b>Save</b>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

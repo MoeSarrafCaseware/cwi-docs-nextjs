@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>As the client responds to your queries, you can <b>Accept</b> or <b>Decline</b> their responses. Accepted documents can be dragged from a query directly into the Document Manager of Working Papers. If you are a content author, you can use an Author ID to automate this process by directly linking the query document to a placeholder in the Document Manager.</p>
+        <p><b>To link a query document to the Document Manager:</b></p>
+        <ol>
+            <li>
+                <p>In the Queries app, <a href="../../../Engagements/Template-and-Authoring/Add-Author-IDs.htm#Add">add an Author ID</a> to the applicable document.</p>
+            </li>
+            <li>
+                <p>In Working Papers, <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#New_document_dialog" target="_blank">create a placeholder document</a> in the Document Manager.</p>
+            </li>
+            <li>
+                <p>Right-click the placeholder and select <b>Properties</b>.</p>
+            </li>
+            <li>
+                <p>In the Document Properties dialog, click the <b>Template</b> tab.</p>
+            </li>
+            <li>
+                <p>In the Queries Author ID field, enter the corresponding Author ID from the Queries file. Klicken Sie auf <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>The query document is linked to the placeholder. When you receive an update to the document in the query, you can transfer that update to the placeholder by clicking <b>Cloud | Receive</b> on the Working Papers ribbon.</p>
+        <p>If the document has an electronic signature (e-signature) available (indicated by a blue info icon <img src="../../Icons/esignature-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), right-click the document in the Document Manager and select <b>Export Signature Log</b> to download it.</p>
+        <p>After you&apos;ve accepted all the query responses, you can complete the query by clicking <b>Complete</b> at the top of the Cloud pane. Completed queries will automatically progress the status of engagement tracker in Cloud.</p>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1><a name="Add"></a>Dimensionen hinzufügen</h1>
+        <p>A dimension is a group property. An account can be assigned to one dimension within a specific group for further sorting and categorization.</p>
+        <p>You can create one or more dimension categories then populate the categories with dimensions. For example, you can create a dimension category called Location then create a dimension for each location that your client has. Once you create dimensions, you can then assign them to financial groups.</p>
+        <p>Note that firm authors and end users also have the ability to create dimensions and assign them to financial groups, with the following restrictions:</p>
+        <p><b>Primary author-created dimensions and categories:</b></p>
+        <ul>
+            <li>Firm authors and end users can:<ul><li><p>Assign to financial groups</p></li><li><p>Rename</p></li><li><p>Reorder</p></li><li><p>Add new dimensions to existing categories. Firm authors have full permissions for the dimensions they create.</p></li></ul></li>
+        </ul>
+        <p><b>Firm author-created dimensions and categories:</b></p>
+        <ul>
+            <li>End users can:<ul><li><p>Assign to financial groups</p></li><li><p>Rename</p></li><li><p>Reorder</p></li><li><p>Add new dimensions to existing categories. Firm authors have full permissions for the dimensions they create.</p></li></ul></li>
+        </ul><MadCap:snippetBlock src="../Resources/Snippets/to-access-the-product-settings.flsnp" /><p class="note" MadCap:conditions="General.SE-Authoring"><b>Note:</b> Make sure dimensions are enabled in the product.json file, otherwise, the <b>Dimensions</b> tab will not be available. To learn more, see <a href="Enable-or-disable-features-in-your-product.htm">Enable or disable features in your product.</a></p>
+        <p style="font-weight: bold;">To add a set of dimensions:</p>
+        <ol>
+            <li>
+                <p>Go to <b>Features | Dimensions.</b></p>
+            </li>
+            <li>
+                <p>Select <b>+ Category</b>, then add a name for the new dimension category.</p>
+            </li>
+            <li>
+                <p>Select <b>+ Dimension</b> to add a dimension for the new category.</p>
+            </li>
+            <li>
+                <p>Enter a name for the new dimension.</p>
+                <p>If you want to use dimension numbers to assign a unique identifier for each dimension, enter a value in the <b>Number</b> field. The number can consist of letters or numbers. These dimension numbers can be used to associate dimensions with transactions.</p>
+                <p>You can drag and drop dimensions to rearrange them within a category and use the up and down arrows to expand and collapse categories. You can also select <b>Delete Dimension</b> (<img src="../Resources/Images/icon-delete.png" style="vertical-align: text-bottom;" />) to remove a dimension.</p>
+                <p>You can select <b>Add</b> (<img src="../Resources/Images/icon-add-15x15.png" style="vertical-align: text-bottom;" />) to add a second-level dimension to your primary dimension. You can also add third-level dimensions to second-level dimensions.</p>
+                <p>You can set any dimension without children to be the default dimension for the category. Accounts in groups with this category applied will be automatically mapped to this dimension. For dimension categories without a default dimension set, accounts will not be automatically mapped to any dimension.</p>
+                <p><img src="../Resources/Images/product-settings-dimensions.png" alt="The Dimensions tab of the Product Settings dialog." /></p>
+            </li>
+        </ol>
+        <p>When you have created your dimensions, you can then assign the dimension categories to financial groups. Note that you can assign multiple dimension categories to a single group.</p>
+        <p><b>To assign a dimension category to a financial group:</b></p>
+        <ol>
+            <li>
+                <p>Go to the category in the product settings.</p>
+            </li>
+            <li>
+                <p>Select <b>More actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" style="vertical-align: text-bottom;" />) | <b>Assign Groups</b>.</p>
+            </li>
+            <li>
+                <p>If your product has multiple financial grouping structures, select the grouping structure you want from the drop-down.</p>
+            </li>
+            <li>
+                <p>Select all the applicable financial groups.</p>
+                <p>You can expand and collapse financial groups to view sub-groups and use the search bar to find the appropriate groups.</p>
+            </li>
+        </ol>
+        <p>Note that you can also assign dimension categories to a group from the Group properties dialog.</p>
+    </body>
+</html>

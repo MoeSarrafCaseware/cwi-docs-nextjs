@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Audit Response Table</h1>
+        <p class="note inline"><b>Note:</b> a new enhanced version of Audit Response Table was released. To learn more, see <a href="#Dynamic">Dynamic Audit Response Table</a>.</p>
+        <p>The Audit Response Table is an SE Builder custom form that can be added to checklists to assist users in documenting the appropriate nature and extent of audit procedures to address each relevant assertion in order to meet compliance requirements. The Audit Response Table includes the following key features:</p>
+        <ul>
+            <li>
+                <p>Information about the assessed risks at the assertion level for each area flows directly from the risk assessment report.</p>
+            </li>
+            <li>
+                <p>Users can document the extent of audit procedures for each assertion and each group of procedures.</p>
+            </li>
+            <li>
+                <p>Embedded warnings inform users if they are performing excessive (Overauditing) or insufficient (Underauditing) procedures or if any changes were made to the assessed risks or to the audit plan after sign-off.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/audit-response-table.png" alt="Features in the Audit Response Table." /></p>
+        <p>Once the Audit Response Table has been integrated with your solution, you can add it to your checklist from the <b>More actions</b> (<img src="../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) menu.</p>
+        <p><img src="../Resources/Images/checklist-add-form.png" alt="The Add Form feature in the More actions menu." /></p>
+        <p><img src="../Resources/Images/add-form-dialog.png" alt="The Add Form dialog." /></p>
+        <p>The Audit Response Table also allows you to set visibility settings on procedures based on responses to the <b>Will you be testing controls</b> options available for each area in the risk assessment report.</p>
+        <p><img src="../Resources/Images/art-visibility-settings.png" alt="Set visibility settings for procedures." /></p>
+        <p class="note"><b>Note:</b> In order to add the Audit Response Table to individual checklists, you must first add it to the <b>Documents</b> page. You can hide the form after you add it to the <b>Documents</b> page but cannot remove it.</p>
+        <p>To learn more about the Audit Response Table and how it integrates with SE checklists, see the <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=22857&amp;returntype=UploadedFile">Audit Response Table Demo</a> recording.</p>
+        <p>To learn more about how to request access to the Audit Response Table custom form and how to implement the Audit Response Table in your solution, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Audit-Response-Table.htm">Get started with the Audit Response Table</a>.</p>
+        <h1><a name="Dynamic"></a>Dynamic Audit Response Table</h1>
+        <p>The <b>Dynamic Audit Response Table</b> is a custom SE Builder form that you can add to checklists. The table assists you in documenting the appropriate nature and extent of audit procedures required to address each relevant assertion in order to meet compliance requirements.</p>
+        <p class="note inline"><b>Note:</b> The<strong> Dynamic Audit Response Table </strong>is an enhanced version of the previous Audit Response Table released in December 2022.</p>
+        <p>The <strong>Dynamic Audit Response Table</strong>:</p>
+        <p>
+            <ul>
+                <li>Seamlessly integrates into your solutions without extensive development effort. For more information on how to integrate the <strong>Dynamic Audit Response Table</strong> into your solutions, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Audit-Response-Table.htm">Get started with the Dynamic Audit Response Table</a>.</li>
+                <li>Dynamically reads the information about the <strong>risk assessment scales</strong> and <strong>assertions</strong> defined in the product settings by the template authors.</li>
+                <li>Includes a configuration settings form to define the required information prior to embedding it into the audit checklists.</li>
+            </ul>
+        </p>
+        <p>Once the <strong>Dynamic Audit Response Table</strong> has been integrated into your solution, select <strong>Add</strong> (<img src="../Resources/Images/icon-add-15x15.png" alt=" " style="vertical-align: text-bottom;" />) on your <strong>Documents </strong>page and add the following documents:</p>
+        <p>
+            <ul>
+                <li><strong>Dynamic Audit Response Table</strong> - the main repeater SE Builder form that should be added to the <strong>Documents</strong> page prior to embedding it into the audit checklists. You can hide this form after you add it to the <strong>Documents</strong> page, but you cannot remove it.</li>
+                <li><strong>Audit Response Table Settings</strong> - the configuration settings form required to define the applicable information based on your app specifics prior to embedding the <strong>Audit Response Table</strong> into the audit checklists.</li>
+            </ul>
+        </p>
+        <h2>Required Primary Author changes</h2>
+        <h3>Audit Response Table Settings</h3>
+        <p><strong>Assessed risks at financial statement level</strong></p>
+        <p>If applicable to your solution, insert the procedure ID where the assessed risks at the financial statement level are documented. For instructions on how to identify the procedure ID, see <a href="How-to-identify-the-procedure-ID.htm">Identify the procedure ID</a>.</p>
+        <p class="note inline"><b>Note:</b> If the assessed risks at the financial statement level are not documented in your app, leave this field blank.</p>
+        <p>Specify both the URL and the name of the document where the assessed risks at the financial statement level are documented to create the reference within the DART table.</p>
+        <h3>Summary of proposed audit responses</h3>
+        <p>Document the groups or subgroups of procedures that are included in the audit program checklists that you want to display in the Dynamic Audit Response Table. The order you enter the information will display in the Dynamic Audit Response Table in the same order.</p>
+        <p class="note inline"><b>Note:</b><ul>
+                <li>The Dynamic Audit Response Table can display up to a maximum of three groups or subgroups of procedures.</li>
+                <li>Ensure the procedure group or subgroup name inserted exactly matches the name of the group or subgroup as it was authored in the audit programs checklists.</li>
+            </ul>
+        </p>
+        <h4>Embed the Dynamic Audit Response Table into the audit checklists</h4>
+        <p>Once the <b>Author Settings - Dynamic Audit Response Table</b> form is complete, you can now embed the form into the audit checklists.</p>
+        <p><img src="../Resources/Images/EmbedFormIntoChecklists.png" alt="Embed the Dynamic Audit Response table into a checklist." /></p>
+        <p>For more information on how to request access to the Dynamic Audit Response Table custom form and how to integrate it into your solution, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-Global-Components/Get-started-with-Audit-Response-Table.htm">Get started with the Dynamic Audit Response Table</a>.</p>
+        <h2>Engagement-level functionality</h2>
+        <p>To learn more about the DART engagement-level functionality, see <a href="#Dynamic">Dynamic Audit Response Table</a>.</p>
+        <p>To learn more about the Audit Response Table and how it seamlessly integrates with SE audit checklists, see the <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files/view?id=22857&amp;returntype=UploadedFile">Audit Response Table Demo</a> recording.</p>
+    </body>
+</html>

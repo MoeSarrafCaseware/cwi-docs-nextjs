@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2020-03</h1>
+        <p>La SE 2020-03 apporte de nouvelles fonctionnalités<i> .</i>  Par exemple, la possibilité d&apos;exporter des groupes et leurs structures ou de copier des documents d&apos;un modèle à l&apos;autre. Des ajouts que nous avons qualifiés de &quot;petits&quot;. Pourtant, de façon tout à fait inattendue, ce sont eux qui ont suscité la plupart des discussions et des questions lors du webinaire sur la version 2020-03 !</p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2020-03.</p>
+        <h3>Contrôles</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p class="note inline"><b>Remarque :</b> Cette fonction n&apos;est disponible qu&apos;avec Caseware Audit. Il ne sera pas déployé dans des environnements de partenariat ou de production.</p>
+        <p>Une nouvelle section &quot; <b>Contrôles&quot;</b> est désormais disponible dans les paramètres du produit, car nous continuons à développer le nouveau module de risque :</p>
+        <ul>
+            <li>
+                <p>Automatisation de la mise en œuvre des contrôles et de la documentation de conception.</p>
+            </li>
+            <li>
+                <p>Tester l&apos;efficacité opérationnelle des contrôles.</p>
+            </li>
+        </ul>
+        <p>Dans l&apos;onglet <b>Général</b> , cochez la case <b>Activer les contrôles dans le module de risque</b> pour configurer les options générales et les champs relatifs à la conformité et à la documentation de l&apos;identification et du test des contrôles.</p>
+        <p><img src="../Resources/Images/settings-controls-enabled.PNG" alt="Les options générales deviennent disponibles lorsque vous activez les contrôles dans votre produit." /></p>
+        <p>Dans l&apos;onglet <b>Champs</b> , vous pouvez spécifier les champs qui s&apos;affichent dans le rapport de contrôle et personnaliser les étiquettes.</p>
+        <p>La figure ci-dessous montre la section <b>Évaluation de l&apos;efficacité opérationnelle</b> dans l&apos;onglet <b>Champs.</b>  Remarquez que chaque champ peut être activé ou désactivé dans le rapport. Les étiquettes des champs activés peuvent également être personnalisées.</p>
+        <p><img src="../Resources/Images/details-on-control-fields.PNG" alt=" Section d&apos;évaluation de l&apos;efficacité opérationnelle dans l&apos;onglet Champs. Remarquez que vous pouvez spécifier les champs qui s&apos;affichent dans le rapport de contrôle et personnaliser les étiquettes" /></p>
+        <p class="note inline"><b>Remarque :</b> Le rapport sur les contrôles &quot;Out-Of-The-Box&quot; sera disponible dans une prochaine version. Cependant, vous pouvez utiliser SE Builder pour créer un rapport de contrôle personnalisé basé sur les paramètres du produit. Contactez l&apos; <a href="https://calendly.com/kyle-silverman">équipe produit Cloud Engagements</a> pour plus d&apos;informations et pour obtenir de l&apos;aide.</p>
+        <h3>États financiers</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Un message d&apos;avertissement s&apos;affiche désormais dans les zones d&apos;états financiers comportant plus de 100 sections de contenu pour vous informer que vous (et les utilisateurs de votre produit) devez naviguer dans la zone à l&apos;aide de la <b>carte du document</b>, et non en faisant défiler les pages.</p>
+        <p>To learn more, see <a href="Best-practices.htm">Best practices for financial statements authoring.</a></p>
+        <p><img src="../Resources/Images/fs-notes-warning.PNG" alt="Nouveau message d&apos;avertissement pour les zones dépassant la taille maximale recommandée." /></p>
+        <h3>Copier-coller intelligent</h3>
+        <p>#primaryauthor #firmauthor</p><MadCap:snippetBlock src="../Resources/Snippets/smart-copy-paste-intro.flsnp" /><p>L&apos;adoption de cette approche vous aide à développer et à diffuser des produits de manière efficace, tout en réduisant la probabilité d&apos;erreurs potentielles.</p>
+        <p>Pour activer le copier-coller intelligent, attribuez la valeur <span style="font-family: 'Courier New';">true</span> à la propriété <span style="font-family: 'Courier New';">Importation de documents</span> dans le fichier product.json du modèle dans lequel vous souhaitez copier des documents.</p>
+        <p>Une fois que vous avez activé le copier-coller intelligent, l&apos;option <b>Copier à partir d&apos;un autre produit</b> devient disponible dans le modèle sur lequel vous travaillez actuellement et vous pouvez copier des documents rédigés dans d&apos;autres modèles de produits.</p>
+        <p><img src="../Resources/Images/copy-from-template.PNG" alt="Option Copier à partir d&apos;un autre produit." /></p>
+        <p>Dans la version SE 2020-03, la fonction de copier-coller intelligent a une fonctionnalité limitée que nous prévoyons d&apos;étendre dans les prochaines versions.</p>
+        <ul>
+            <li>
+                <p>Vous ne pouvez copier que des <b>lettres</b>, des <b>mémos</b>, des <b>feuilles de travail</b> et des <b>états</b><b>financiers</b> <b>.</b></p>
+            </li>
+            <li>
+                <p>La copie de documents d&apos;un modèle à l&apos;autre ne permet pas d&apos;identifier les données manquantes ou incohérentes dans les paramètres de visibilité, le texte dynamique, les formules, les termes du glossaire d&apos;engagement et les graphiques d&apos;analyse.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Remarque :</b> Vous devez identifier et résoudre manuellement les divergences de données pour les paramètres de visibilité, le texte dynamique, les formules, les termes du glossaire d&apos;engagement et les graphiques d&apos;analyse entre les modèles source et de destination après avoir copié des documents.</p>
+        <p>Pour en savoir plus, voir <a href="What-is-Smart-Copy---Paste.htm">Qu&apos;est-ce que le copier-coller intelligent</a>, <a href="Copy-content-from-another-template.htm">Copier le contenu d&apos;un autre modèle</a> et <a href="Current-limitations-in-smart-copy---paste.htm">Limites actuelles</a>.</p>
+        <h3>XBRL</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p class="note inline"><b>Remarque :</b> Cette fonction n&apos;est disponible qu&apos;avec Caseware Audit. Il ne sera pas déployé dans des environnements de partenariat ou de production.</p>
+        <p>Vous pouvez désormais examiner les faits XBRL dans les états financiers et exporter les documents d&apos;instance pour vérifier qu&apos;ils sont générés comme prévu.</p>
+        <p>Si vous avez <a href="List-of-product-features-(API).htm#iXBRL">activé XBRL</a> dans votre produit, l&apos;icône XBRL Review and Export est disponible dans votre modèle de produit.</p>
+        <p><img src="../Resources/Images/review-section-in-xbrl.PNG" alt="Révision et exportation XBRL" style="width: 402px;height: 458px;" /></p>
+        <p>Vous pouvez sélectionner la taxonomie que vous souhaitez réviser ou exporter. Vous pouvez interrompre le processus de révision à tout moment et le reprendre plus tard. Pour plus de détails sur la manière de tester, voir <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files?viewkey=Item&amp;entityId=48454&amp;folderId=5838.">XBRL Review and Export.</a></p>
+        <p class="note inline"><b>Remarque :</b> Dans la SE 2020-03, la révision et l&apos;exportation XBRL ne sont disponibles que pour les zones de tableaux dynamiques des états financiers. Nous prévoyons d&apos;étendre cette fonctionnalité à d&apos;autres documents dans les prochaines versions.</p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2020-03.</p>
+        <h3>Impression en vrac</h3>
+        <p>Une nouvelle option <b>Paramètres d&apos;impression en masse</b> est désormais disponible. Cette option permet aux utilisateurs de regrouper deux documents ou plus afin de les fusionner et de les imprimer sous la forme d&apos;un seul document PDF.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users.PNG" alt="Bulk print option in the Documents page." /></p>
+        <p>Vous pouvez configurer plusieurs groupes d&apos;impression en bloc. Le même document peut également être inclus dans plusieurs groupes d&apos;impression en masse.</p>
+        <p>Une fois qu&apos;un groupe d&apos;impression groupée est configuré, il s&apos;affiche dans l&apos;option d&apos;impression de la page <b>Documents</b> et dans chaque document d&apos;engagement. Notez que lorsque les impressions en masse sont configurées, vous avez toujours la possibilité d&apos;imprimer un document individuellement, si vous le souhaitez.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users-document-view.PNG" alt="Option d&apos;impression affichant trois options : (1) la configuration de l&apos;impression en masse (2) un groupe d&apos;impression en masse et (3) l&apos;option d&apos;impression individuelle du document." /></p>
+        <h3>Page de données</h3>
+        <p>La page Données présente de nouveaux ajouts liés aux onglets de groupe et à la colonne <b>Ajustements</b> .</p>
+        <ul>
+            <li>
+                <p>Les options d&apos;exportation sont désormais disponibles dans les onglets des groupes. Vous pouvez sélectionner <b>Exporter</b> (<img src="../Resources/Images/icon-export-data-page.PNG" style="width: 24px;height: 18px;vertical-align: text-bottom;" />) pour exporter les données vers un fichier CSV, PDF ou Working Papers. Vous pouvez également exporter la structure du groupe.</p>
+            </li>
+            <p>Notez que l&apos;exportation prend en compte les sélections existantes sur la page. For example, if users have disabled <b>Parent Groups</b>, then they&apos;re not included in the exported file.</p>
+            <p><img src="../Resources/Images/export-group-structure.PNG" alt="Nouvelle option d&apos;exportation dans les onglets de groupe." /></p>
+            <li>
+                <p>Les ajustements s&apos;affichent désormais en bleu. Vous pouvez sélectionner un ajustement pour accéder à la page <b>Ajustements</b> , où les écritures d&apos;ajustement correspondantes sont mises en évidence afin que vous puissiez en consulter les détails.</p>
+            </li>
+            <p><img src="../Resources/Images/adjustments-display-in-blue.PNG" alt="Les ajustements s&apos;affichent désormais en bleu. Les utilisateurs peuvent sélectionner un ajustement pour en voir les détails." /></p>
+            <p>La figure ci-dessous montre comment l&apos;écriture d&apos;ajustement correspondante est mise en évidence dans la page <b>Ajustements</b> .</p>
+            <p><img src="../Resources/Images/adjustments-navigated-from-Data-page.png" alt="L&apos;écriture d&apos;ajustement correspondante est mise en évidence (remarquez la ligne verticale bleue à gauche)." /></p>
+        </ul>
+        <h3>Problèmes</h3>
+        <p>Dans la SE 2020-03, nous avons amélioré la logique de suppression des questions afin d&apos;éviter la perte d&apos;informations et d&apos;améliorer la piste d&apos;audit.</p>
+        <ul>
+            <li>
+                <p>Les utilisateurs ne peuvent plus supprimer une question s&apos;ils ne l&apos;ont pas créée.</p>
+            </li>
+            <li>
+                <p>Seul un administrateur peut supprimer les questions créées par d&apos;autres utilisateurs. An Admin user has one or more Cloud security roles:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Administrateur</p>
+                    </li>
+                    <li>
+                        <p>Paramètres Admin</p>
+                    </li>
+                    <li>
+                        <p>Entités Admin</p>
+                    </li>
+                    <li>
+                        <p>Administrateur du personnel</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Nouveau dialogue sur les risques.</h3>
+        <p>Les évaluations des risques peuvent désormais être reportées.</p>
+        <p><img src="../Resources/Images/carry-forward-risk-assessments.PNG" alt="Report en bloc et report individuel pour les évaluations des risques. " /></p>
+        <p>La figure ci-dessous montre le report des risques.</p>
+        <p><img src="../Resources/Images/carry-forward-risks.png" alt="Option de report en bloc et options de report individuel pour les risques." /></p>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Het risico op materiële onjuistheden (RMM) beoordelingsrapport opstellen</h1>
+        <p class="note"><b>Let op:</b> Dit onderwerp is niet van toepassing op Cloud apps waarvoor de nieuwe risicomodule <a href="Enable-the-new-risk-module.htm">is ingeschakeld</a>.</p>
+        <p>Je kunt het RMM beoordelingsrapport inschakelen zodat gebruikers de RMM per financieel gebied kunnen beoordelen. Ze beoordelen bijvoorbeeld de kasstromen en beslissen of er al dan niet een risico bestaat dat de kasstromen materieel onjuist zijn weergegeven.</p>
+        <p>Het risicobeoordelingsrapport inschakelen in uw product:</p>
+        <ul>
+            <li>
+                <p>Stel de eigenschap <code>riskAssessment</code> in op <code>true</code></p>
+            </li>
+            <li>
+                <p>Specificeer de eigenschap <code>com.caseware.ca.general.risk-assessment</code> in de <code>vorm</code> in het bestand product.json. Zie <a href="Enable-or-disable-features-in-your-product.htm">Functies in uw product in- of uitschakelen</a>voor meer informatie</p>
+            </li>
+        </ul>
+        <p>Zodra je het rapport hebt ingeschakeld in je product, kun je het toevoegen aan je concept en het instellen.</p>
+        <p>Om het risicobeoordelingsrapport toe te voegen, selecteert u <b>Toevoegen (<img src="../Resources/Images/icon-add-DocumentsPage.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ) op de documentenpagina en kiest u vervolgens <b>Risicobeoordelingsrapport.</b></p>
+        <p style="font-weight: bold;">Het risicobeoordelingsrapport instellen:</p>
+        <ol>
+            <li>
+                <p>Selecteer in de vervolgkeuzelijst <b>Filters</b> linksboven de filter die je wilt toepassen op het document.</p>
+            </li>
+            <li>
+                <p>Wijzig indien nodig de standaardinstellingen onder <b>Instellingen (<img src="../Resources/Icons/risk-assessment-settings1.png" style="vertical-align: text-bottom;height: 20px;" alt="" /></b> ).</p>
+            </li>
+            <p>Kies uit de volgende onderwerpen:</p>
+        </ol>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Instellingen</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Omschrijving</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Gebruik niet-geconsolideerde gegevens</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Wel of geen geconsolideerde gegevens gebruiken</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Materialiteit tonen</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Al dan niet materialiteit tonen (informatie is afkomstig uit het materialiteitsdocument)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Conclusie</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Het al dan niet opnemen van de conclusie aan het einde van het rapport</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Extra kolom</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Het al dan niet opnemen van een extra kolom naast <b>de</b> kolom <b>Reden</b> voor elk financieel gebied</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Sta beoordelingen toe onder Cycli of Gebieden</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Het al dan niet toestaan van beoordelingen onder <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">cycli of gebieden.</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ol MadCap:continue="true">
+            <li>
+                <p>Selecteer in de vervolgkeuzelijst <b>Groeperen op</b> of je de informatie in het rapport wilt groeperen of niet.</p>
+            </li>
+            <p>Als u de informatie wilt groeperen, selecteert u op <b>Gebieden</b> of <b>Cycli.</b></p>
+            <li>
+                <p>Begeleidingsinformatie toevoegen:</p>
+            </li>
+            <p>Selecteer het tekstveld om inhoud toe te voegen. De werkbalk Opmaak wordt weergegeven. Gebruik de werkbalk om de volgende wijzigingen aan te brengen:</p>
+        </ol><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-guidance-formatting-toolbar-reports-online-help.flsnp" /><ol MadCap:continue="true">
+            <li>
+                <p>Hernoem de kolomkoppen om de termen aan te passen indien nodig.</p>
+            </li>
+            <p>Je kunt de kolommen <b>RMM, Reden</b> en <b>Extra informatie</b>een andere naam geven <b>.</b></p>
+            <li>
+                <p>Voeg een conclusie toe.</p>
+            </li>
+            <p>Selecteer het tekstveld om inhoud toe te voegen. De werkbalk Opmaak wordt weergegeven. Gebruik de werkbalk om de tekst op te maken en te bewerken.</p>
+        </ol>
+        <h2>Een link toevoegen of verwijderen in de procedurebeschrijving</h2><MadCap:snippetBlock src="../Resources/Snippets/se-authoring-add-a-link.flsnp" /></body>
+</html>

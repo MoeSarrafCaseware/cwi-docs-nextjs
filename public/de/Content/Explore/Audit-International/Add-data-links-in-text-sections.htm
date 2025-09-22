@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+    </head>
+    <body>
+        <h1>Datenverbindungen in Textabschnitten hinzufügen</h1>
+        <p>Data links (<img src="../../Resources/Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) allow you to have already existing information in the engagement or in Cloud automatically retrieved and inserted in text sections.</p>
+        <p>The following data links are available:</p>
+        <table>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Engagement-Eigenschaften</p>
+                        <p>(from Cloud)</p>
+                    </td>
+                    <td>
+                        <p>Engagement properties as defined in Cloud, such as:</p>
+                        <ul>
+                            <li>Operating name</li>
+                            <li>Legal name</li>
+                            <li>Jahresabschlussdatum</li>
+                            <li>Startdatum des Jahres</li>
+                            <li>Current Year</li>
+                            <li>Website</li>
+                            <li>Prior Year</li>
+                            <li>Entity address</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Hauptabschlussübersicht</p>
+                        <p>(from the engagement)</p>
+                    </td>
+                    <td>
+                        <p>Items in the trial balance such as, account name, grouping name, or values from the current or prior year.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Firm properties</p>
+                        <p>(from Cloud)</p>
+                    </td>
+                    <td>
+                        <p>Firm name</p>
+                        <p>Firm address</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Responses</p>
+                        <p>(from the engagement)</p>
+                    </td>
+                    <td>
+                        <p>Responses to procedures from checklists. Once you select a checklist document from the list, select the response you want to retrieve and insert in the text section.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Wesentlichkeit</p>
+                        <p>(from the engagement)</p>
+                    </td>
+                    <td>
+                        <p>Defined values in the Materiality document.</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="PrintGuides.FirmAuthor">
+                    <td>
+                        <p>Dynamic text</p>
+                    </td>
+                    <td>
+                        <p>Dynamic text is conditional text. It&apos;s a field where different text displays based on a condition or a set of conditions.</p>
+                        <p>See <span><a href="#To_add_dynamic_text:">Add dynamic text.</a></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Forms Value</td>
+                    <td>
+                        <p>Insert the value of a specific form field. Once you select a form and a field, the value of the selected field is inserted in the text field.</p>
+                        <p class="note inline"><b>Note:</b> This option is only available in the Data Link dialog if custom forms are available in your product, such as Tax forms.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div MadCap:conditions="PrintGuides.FirmAuthor">
+            <p><b>To add dynamic text:</b></p>
+            <p class="note"><b>Note</b>: You can only add dynamic text if you are customizing the firm template. Um auf die Unternehmensvorlage zugreifen zu können, müssen Sie über die Rolle <b>Einstellungen-Administrator</b> oder gleichwertige Rechte verfügen. Weitere Informationen erhalten Sie in <a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">Firmenvorlage verwalten</a>.</p>
+            <ol>
+                <li>
+                    <p>Open the document and select <b>Edit</b> (<img src="../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>).</p>
+                </li>
+                <li>
+                    <p>Go to where you want to add a formula in the text.</p>
+                </li>
+                <li>
+                    <p>Select <b>Add Data Link</b> (<img src="../../Resources/Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) from the toolbar.</p>
+                </li>
+                <li>
+                    <p>At the <b>Dynamic Text</b> tab, select the <b>Add Condition</b> drop-down list.</p>
+                    <p>Different setup details display in the <b>Data Link</b> dialog based on the condition you choose:</p>
+                    <table>
+                        <col />
+                        <col />
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p>Condition type</p>
+                                </th>
+                                <th>
+                                    <p>Condition setup</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Response</p>
+                                </td>
+                                <td>
+                                    <p><b>Document -</b> select the source document for the response</p>
+                                    <p><b>Procedure -</b> select the procedure for which the response is provided</p>
+                                    <p><b>Condition -</b> select the value of the response</p>
+                                    <p><b>Output -</b> select the text to be displayed when the condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Hauptabschlussübersicht</p>
+                                </td>
+                                <td>
+                                    <p><b>Financial Group -</b> select the trial balance account or account group</p>
+                                    <p><b>Condition -</b> select how the name of the Income Statement displays based on the value of Net Income in the trial balance</p>
+                                    <ul>
+                                        <li>Consistent → name displays as &quot;Statement of Income&quot;</li>
+                                        <li>Contrary → name displays as &quot;Statement of Loss&quot;</li>
+                                        <li>Inconsistent → name displays as &quot;Statement of Income (Loss)&quot;</li>
+                                    </ul>
+                                    <p><b>Output -</b> select the text to be displayed when the condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Consolidation</p>
+                                </td>
+                                <td>
+                                    <p><b>Condition -</b> select the consolidation situation (Consolidated, Non-consolidated)</p>
+                                    <p><b>Output -</b> select the text to be displayed when the condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Berichtsperiode</p>
+                                </td>
+                                <td>
+                                    <p><b>Condition -</b> select the value of the reporting period (Monthly, Quarterly, Semi-Annual, Annual)</p>
+                                    <p><b>Output -</b> select the text to be displayed when the condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Organization type</p>
+                                </td>
+                                <td>
+                                    <p><b>Condition -</b> select a country</p>
+                                    <p><b>Output -</b> select the text to be displayed when the condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Group of conditions</p>
+                                </td>
+                                <td>
+                                    <p>Select this option if you want to add a group of conditions, where the text output is based on how the conditions in the group are collectively evaluated</p>
+                                    <p><b>Group Condition -</b> select one of the following values:</p>
+                                    <p><i>When all conditions below are met</i> -&gt; all conditions must be true for the Group Condition to be met</p>
+                                    <p><i>When any condition below is met</i> -&gt; any condition must be true for the Group Condition to be met</p>
+                                    <p><b>Output -</b> select the text to be displayed when the Group Condition is met</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Form Value</td>
+                                <td>
+                                    <p><b>Condition</b> - select a form and a field in the selected form</p>
+                                    <p><b>Output</b> - select the text to be displayed when the condition is met</p>
+                                    <p class="note inline"><b>Note:</b> This condition is only functional if custom forms are available in your product, such as Tax forms.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <p>You can add more than one condition type to trigger additional text outputs. To add another condition, select<b> Add Condition.</b></p>
+                    <p>You can also optionally specify an alternate output for the text if no conditions are met.</p>
+                </li>
+                <li>
+                    <p>Once you&apos;re done, select <b>Save</b>.</p>
+                    <p>If a condition (or conditions) is met, the corresponding output text you specified for that condition displays.</p>
+                    <p>If no condition is met, the alternate text output (the one you specified for when none of the conditions are met) displays. Otherwise, <i>#ValueEmpty#</i> displays.</p>
+                </li>
+            </ol>
+            <p>Once you have finished changing the content in your client request, select the <b>Edit</b> icon at the top of the document to save your changes.</p>
+        </div>
+    </body>
+</html>

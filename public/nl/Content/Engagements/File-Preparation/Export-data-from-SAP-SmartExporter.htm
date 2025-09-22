@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Gegevens importeren vanuit SAP met SmartExporter</h1>
+        <p>U kunt proefbalans- en grootboekgegevens exporteren vanuit SAP® met SmartExporter en deze vervolgens importeren in uw Caseware Cloud app. Je moet een licentie hebben voor SmartExporter, voor meer informatie, zie <a href="https://smartexporter.com/distributors/">Distributeurs</a>.</p>
+        <p class="note inline"><b>Let op:</b> Caseware Cloud ondersteunt momenteel het importeren van de proefbalans (het bestand &quot;Financial Statements.csv&quot;) en het grootboek (het bestand &quot;GL Postings All Items.csv&quot;). Subgrootboeken zullen in volgende versies worden ondersteund.</p>
+        <h2>Je gegevens exporteren vanuit SmartExporter</h2>
+        <p>Als u proefbalans- of grootboekgegevens wilt importeren in uw engagement vanuit SAP® met behulp van SmartExporter, moet u die gegevens eerst exporteren vanuit SAP® met behulp van SmartExporter.</p>
+        <p><b>To export trial balance data from SmartExporter:</b></p>
+        <ol>
+            <li>
+                <p>Ga op de startpagina van SmartExporter naar het menu Favorieten en selecteer <b>Favorieten uitvoeren of beheren</b>.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/RunOrManageFavorites-SmartExporter.png" alt="Selecteer Favorieten uitvoeren of beheren in SmartExplorer." /></p>
+        <ol>
+            <li value="2">
+                <p>Dubbelklik op een sjabloon om deze te selecteren uit de lijst met vooraf geladen favorieten voor gegevensaanvragen.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Let op:</b> Als je nog geen Data Requests hebt geladen, gebruik je de knop <b>Importeren</b></p>
+        <p>(<img src="../../Resources/Images/ImportIcon-SmartExplorer.png" alt="" style="vertical-align: text-bottom;" />) in het Favorietenmenu om een sjabloon voor Gegevensaanvraag te importeren. Deze sjablonen worden u voor dit doel aangeboden.</p>
+        <ol>
+            <li value="3">
+                <p>Selecteer onder het tabblad <b>Verbinding</b> de knop <b>Nu verbinden</b> onderaan de pagina om de verbinding te testen.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/Connect-SmartExplorer.png" alt="Maak verbinding met SAP via SmartExplorer." /></p>
+        <ol>
+            <li value="4">
+                <p>Sla het tabblad <b>Tabellen selecteren</b> over. De volgende tabellen worden standaard toegevoegd op basis van het voorgeladen sjabloon:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>/AUDIC/FAGL_ACCOUNT_ITEMS_ALV</p>
+                    </li>
+                    <li>
+                        <p>/AUDIC/RFBILA_ALV</p>
+                    </li>
+                    <li>
+                        <p>AUDIC/RFITEMGL_ALV</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Selecteer het tabblad <b>Quick-Filters</b> en pas de gegevens aan zodat ze voldoen aan uw vereisten. Vul alle velden met een sterretje (*) in.</p>
+                <ul>
+                    <li>
+                        <p style="font-weight: bold;">Bedrijfscode</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Verslagjaar</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Rapportageperiode</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">gebied van de jaarrekening</p>
+                    </li>
+                    <li>
+                        <p style="font-weight: bold;">Regel Item Status</p>
+                    </li>
+                </ul>
+                <p class="indent"><img src="../../Resources/Images/SetTableDownloadLimits-SmartExplorer.png" alt="Downloadlimieten voor tabellen instellen in SmartExplorer." /></p>
+            </li>
+            <li>
+                <p>Sla het tabblad <b>Velden en filters</b> over. De relevante velden die worden opgehaald uit SAP® zijn standaard toegevoegd.</p>
+            </li>
+            <li>
+                <p>Geef op het tabblad <b>Joins</b> voor elke tabel de joins op die moeten worden opgenomen in het Data Request. De join expressies, velden en filters zijn vooraf geselecteerd in de sjabloon, maar je kunt ze wijzigen als dat nodig is. De geselecteerde joins worden opgehaald uit het SAP-systeem tijdens de Data Request:</p>
+            </li>
+        </ol>
+        <p class="indent">Om proefbalansgegevens te exporteren, moet u het volgende toevoegen:</p>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>accountNumber = &quot;RACCT&quot; (Rekeningnummer),</p>
+                </li>
+                <li>
+                    <p>Rekeningnummer tekst = &apos;TEXT&apos; (Tekst voor B/S P&amp;L),</p>
+                </li>
+                <li>
+                    <p>comparisonPeriodBalance = &apos;COMPVAL&apos; (totaal van de vergelijkingsperiode), en</p>
+                </li>
+                <li>
+                    <p>reportingPeriodBalance = &quot;REPVAL&quot; (Totaal van de rapportageperiode)</p>
+                </li>
+            </ul>
+        </p>
+        <p class="indent">Om grootboekgegevens te exporteren, moet je het volgende toevoegen:</p>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>accountNumber = &quot;KONTO&quot; (rekeningnummer)</p>
+                </li>
+                <li>
+                    <p>bedrag = &quot;WRSHB&quot; (Bedrag in Documentvaluta - Vreemde valuta)</p>
+                </li>
+                <li>
+                    <p>itemtext = &apos;SGTXT&apos; (Item Tekst)</p>
+                </li>
+                <li>
+                    <p>documentNumber = &quot;BELNR&quot; (documentnummer van een boekhouddocument)</p>
+                </li>
+                <li>
+                    <p>documentType = &apos;BLART&apos; (Documenttype)</p>
+                </li>
+                <li>
+                    <p>postingDate = &quot;BUDAT&quot; (Plaatsingsdatum in het document)</p>
+                </li>
+                <li>
+                    <p>lineNumber = &quot;BUZEI&quot; (nummer van regelitem in boekhouddocument)</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="8">
+                <p>Selecteer op het tabblad <b>Opties</b> de locatie op uw computer waar u uw bestanden wilt opslaan. Als u de opslaglocatie voor gedownloade bestanden wilt wijzigen, selecteert u <b>Bladeren</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer onder <b>Mijn tabellen opslaan als het volgende type</b> <b>CSV met koptekst</b>.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/SaveTablesAsCSV-SmartExplorer.png" alt="Het gegevensformaat van geëxporteerde tabellen instellen op CSV." /></p>
+        <ol>
+            <li value="10">
+                <p>Selecteer op het tabblad <b>Voltooien</b> de optie Een onbeheerde run plannen.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/ScheduleUnattendedRun-SmartExplorer.png" alt="Stel een gegevensexporttijd in vanuit SAP met SmartExplorer." /></p>
+        <ol>
+            <li value="11">
+                <p>Selecteer onder <b>Taak in SAP®-systeem plaatsen</b>de gewenste planning voor de taak. Als je de taak onmiddellijk wilt uitvoeren, selecteer je <b>Onmiddellijk</b>. Selecteer anders <b>at</b> en geef de datum en tijd op.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ScheduleExportTime-SmartExporter.png" alt="Plan de export van SAP-gegevens in SmartExplorer." /></p>
+        <ol>
+            <li value="12">
+                <p>Selecteer de knop <b>Gegevensaanvraag in wachtrij plaatsen</b> .</p>
+            </li>
+        </ol>
+        <p class="indent">Zodra de taak in de wachtrij is geplaatst, wordt een lijst van de taken in de wachtrij groen gemarkeerd weergegeven.</p>
+        <ol>
+            <li value="13">
+                <p>Sluit de weergave door <b>Sluiten</b> te selecteren in de rechterbenedenhoek.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/ViewQueuedExportJobs-SmartExplorer.png" alt="Bekijk gegevensexporttaken in de wachtrij in SmartExplorer." /></p>
+        <ol>
+            <li value="14">
+                <p>Selecteer <b>Voltooien</b> om je werk op te slaan.</p>
+            </li>
+            <li>
+                <p>Om de opgeslagen bestanden te bekijken en te downloaden, ga je naar de <b>Home-weergave</b> en selecteer je onder <b>Data Requests</b> <b>Manage Data Request Activity</b>.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/ManageDataRequestActivity.png" alt="Opgeslagen exportbestanden bekijken en downloaden in SmartExplorer. " /></p>
+        <ol>
+            <li value="16">
+                <p>Selecteer <b>Details</b> voor het bestand dat je wilt downloaden in de activiteit Beheren van gegevensverzoeken.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/SelectDetails.png" alt="Gegevensexportbestanden selecteren om te downloaden in SmartExplorer. " /></p>
+        <ol>
+            <li value="17">
+                <p>Selecteer <b>Downloaden</b>.</p>
+            </li>
+        </ol>
+        <p class="indent"><img src="../../Resources/Images/DownloadExportDataFiles.png" alt="Geëxporteerde gegevensbestanden downloaden in SmartExplorer." /></p>
+        <ol>
+            <li value="18">
+                <p>Bevestig de locatie waar je je bestanden wilt opslaan en selecteer <b>Start download</b>. Selecteer <b>Sluiten</b>zodra het downloaden is voltooid.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ViewingDownloadedFileSet.png" alt="Sluit de sessie in SmartExplorer." /></p>
+        <h2>Import your data</h2>
+        <p>Nadat je je gegevens hebt geëxporteerd, kun je ze importeren in je engagementbestand.</p>
+        <p><b>De gegevens importeren in je engagement:</b></p>
+        <ol>
+            <li>
+                <p>Navigeer naar de pagina <b>Data</b> . De <b>gegevenspagina</b> wordt geopend op het tabblad <b>Datasets</b> .</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SAP-Import-Datasets-Page.png" alt="De SAP SmartExporter gegevensconnector vinden op het tabblad Datasets." /></p>
+        <p class="indent"><ul><li><p>Als u eerder gegevens hebt geïmporteerd, selecteert u <b>Gegevens toevoegen</b>.</p></li><li><p>Als uw opdracht geconsolideerd is en interne dochterentiteiten heeft, selecteer dan in de lijst voor welke entiteit u gegevens wilt importeren.</p></li></ul></p>
+        <ol>
+            <li value="2">
+                <p>Selecteer onder IMPORT FROM DATA CONNECTOR <b>SmartExporter (Exporteren vanuit SAP®)</b> in de lijst met gegevensbronnen.</p>
+                <p>Als de optie niet zichtbaar is, kun je het zoekvak gebruiken om deze te vinden.</p>
+            </li>
+            <li>
+                <p>Selecteer in de Upload-fase van de importwizard de grootboek- en proefbalansgegevensbestanden die je hebt geëxporteerd of sleep ze naar de locatie en selecteer <b>Volgende</b>.</p>
+            </li>
+            <li>
+                <p>In het stadium Gegevens configureren van de importwizard:</p>
+            </li>
+        </ol>
+        <ul>
+            <li>
+                <p><b>Rapportageperiode</b> wordt automatisch gevuld met de rapportageperiode van de gegevens.</p>
+            </li>
+            <li>
+                <p><b>Year start Date</b> wordt automatisch gevuld met de begindatum van de gegevens.</p>
+            </li>
+            <li>
+                <p><b>Year end Date</b> wordt automatisch gevuld met de einddatum van de gegevens.</p>
+            </li>
+        </ul>
+        <ol>
+            <li value="7">
+                <p>Kies bij <b>Select dataset type</b>het type dat je importeert.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Let op: </b> Alleen de gegevensreeksen van de proefbalans en het grootboek zijn momenteel beschikbaar voor import vanuit SmartExporter (Exporteren vanuit SAP®).</p>
+        <ol><li value="8"><p>Als je Proefbalans hebt geselecteerd, selecteer <b>Importeer de laatste 5 jaar TB</b> om maximaal vijf jaar aan proefbalansgegevens te importeren als deze beschikbaar zijn in het bestand dat je hebt geëxporteerd.</p></li><li><p>Selecteer <b>Volgende</b>.</p></li><li><p>Bekijk de informatie in de fase Bevestiging van de importwizard en selecteer Importeren.<br />Om de geïmporteerde gegevens te bekijken, klik je op <b>Bekijk gegevens</b> naast de dataset die je hebt geïmporteerd.</p><p>Er verschijnt een nieuwe pagina met de gegevens.</p><p>Standaard worden alle kolommen in je dataset weergegeven. Klik op <b>Kolommen</b> om de selectie ongedaan te maken van de kolommen die je wilt verbergen.</p><p>Klik op <b>Filters</b> om de gegevens in de dataset te filteren.</p><p>Raadpleeg <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">De algemene en subgrootboekgegevens van de klant bekijken</a>voor meer informatie.</p></li></ol>
+        <h2>De proefbalans opnieuw importeren</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

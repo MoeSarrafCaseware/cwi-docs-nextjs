@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>SE 2020-03 release notes</h1>
+        <p>SE 2020-03 brings in the<i> big little</i> features. Like, the ability to export groups and their structures or copy documents from one template to another. Additions that we sized up as &quot;small&quot;. Yet, very unexpectedly, they&apos;ve driven most of the discussion and questions in the 2020-03 release webinar!</p>
+        <h2>New for authors</h2>
+        <p>Here is what&apos;s new for authors in SE 2020-03.</p>
+        <h3>Kontrollen</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p class="note inline"><b>Note:</b> This feature is only available for testing purposes. It will not be deployed to partner or production environments.</p>
+        <p>A new section <b>Controls</b> is now available in the Product Settings, as we continue to expand the new risk module to include:</p>
+        <ul>
+            <li>
+                <p>Automation of control implementation and design documentation.</p>
+            </li>
+            <li>
+                <p>Testing the operating effectiveness of controls.</p>
+            </li>
+        </ul>
+        <p>In the <b>General</b> tab, select the <b>Enable controls in the risk module</b> check box to set up general options and fields related to compliance and documentation of control identification and testing.</p>
+        <p><img src="../Resources/Images/settings-controls-enabled.PNG" alt="General options become available once you enable controls in your product." /></p>
+        <p>In the <b>Fields</b> tab, you can specify which fields display in the control report, as well as customize labels.</p>
+        <p>The figure below shows the <b>Operating effectiveness evaluation</b> section in the <b>Fields</b> tab. Notice how each field can be enabled or disabled in the report. Labels for enabled fields can be also customized.</p>
+        <p><img src="../Resources/Images/details-on-control-fields.PNG" alt=" Operating effectiveness evaluation section in the Fields tab. Notice how you can specify which fields display in the control report and customize labels" /></p>
+        <p class="note inline"><b>Hinweis:</b> The Out-Of-The-Box controls report will be available in a future release. However, you can use SE Builder to build a custom Control Report based on the Product Settings. Contact the <a href="https://calendly.com/kyle-silverman">Cloud Engagements Product Team</a> for details and support.</p>
+        <h3>Jahresabschluss</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>A warning message now displays in financial statements areas with over 100 content sections to inform you that you (and your product users) need to navigate the area using the <b>Document Map</b>, not by scrolling.</p>
+        <p>To learn more, see <a href="Best-practices.htm">Best practices for financial statements authoring.</a></p>
+        <p><img src="../Resources/Images/fs-notes-warning.PNG" alt="New warning message for areas going over the maximum recommended size." /></p>
+        <h3>Smart Copy-Paste</h3>
+        <p><a href="Primary-author.htm">#primaryauthor </a><a href="Firm-author.htm"> #firmauthor</a></p><MadCap:snippetBlock src="../Resources/Snippets/smart-copy-paste-intro.flsnp" /><p>Adopting this approach helps you develop and release products efficiently, as well as reduces the likelihood of potential errors.</p>
+        <p>To enable Smart Copy-Paste, set the <span style="font-family: 'Courier New';">Import Documents</span> property to <span style="font-family: 'Courier New';">true</span> in the product.json of the template you want to copy documents into.</p>
+        <p>Once you enable Smart Copy-Paste, the <b>Copy From Another Product</b> option becomes available in the template you&apos;re currently working on and you can copy documents authored in other product templates.</p>
+        <p><img src="../Resources/Images/copy-from-template.PNG" alt="Copy From Another Product option." /></p>
+        <p>In SE 2020-03, the Smart Copy-Paste feature has limited functionality that we plan to extend in future releases.</p>
+        <ul>
+            <li>
+                <p>You can only copy <b>Letters</b>, <b>Memos</b>, <b>Worksheets</b> and <b>Financial</b><b>Statements</b>.</p>
+            </li>
+            <li>
+                <p>Copying documents from one template to the other does not identify missing or inconsistent data within visibility settings, dynamic text, formulas, engagement glossary terms and analysis charts.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note:</b> You need to manually identify and resolve data discrepancies for visibility settings, dynamic text, formulas, engagement glossary terms and analysis charts between the source and destination templates after you copy documents.</p>
+        <p>To learn more, see <a href="What-is-Smart-Copy---Paste.htm">What is Smart Copy-Paste</a>, <a href="Copy-content-from-another-template.htm">Copy content from another template</a> and <a href="Current-limitations-in-smart-copy---paste.htm">Current limitations</a>.</p>
+        <h3>XBRL</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p class="note inline"><b>Note:</b> This feature is only available for testing purposes. It will not be deployed to partner or production environments.</p>
+        <p>You can now review XBRL facts in financial statements, as well as export the instance documents to validate that they generate as expected.</p>
+        <p>If you have <a href="List-of-product-features-(API).htm#iXBRL">enabled XBRL</a> in your product, the XBRL Review and Export icon is available in your product template.</p>
+        <p><img src="../Resources/Images/review-section-in-xbrl.PNG" alt="XBRL Review and Export." style="width: 402px;height: 458px;" /></p>
+        <p>You can select the taxonomy that you want to review or export. You can also stop the review process at any time and continue later. For more details on how to test, see <a href="https://cwi.casewarecloud.com/cwi/webapps/#Files?viewkey=Item&amp;entityId=48454&amp;folderId=5838.">XBRL Review and Export</a>.</p>
+        <p class="note inline"><b>Hinweis:</b> In SE 2020-03, XBRL review and export is only available for dynamic table areas in the financial statements. We plan to extend the feature to other documents in future releases.</p>
+        <h2>New for end users</h2>
+        <p>Here is what&apos;s new for <a href="End-user.htm">end users</a> in SE 2020-03.</p>
+        <h3>Bulk print</h3>
+        <p>A new <b>Bulk Print Settings</b> option is now available. This option allows users to group two or more documents to be merged and printed as one PDF document.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users.PNG" alt="Bulk print option in the Documents page." /></p>
+        <p>Users can configure more than one bulk print group. Also, the same document can be included in multiple bulk print groups.</p>
+        <p>Once a bulk print group is configured, it displays in the print option in the <b>Documents</b> page and every engagement document. With bulk prints configured, users still have the option to print a document individually, if needed.</p>
+        <p><img src="../Resources/Images/new-bulk-print-for-users-document-view.PNG" alt="Print option displaying three options: (1) bulk print setup (2) a bulk print group and (3) the option to print the document individually." /></p>
+        <h3>Data page</h3>
+        <p>The Data page features new additions related to group tabs and the <b>Adjustments</b> column.</p>
+        <ul>
+            <li>
+                <p>Export options are now available in the group tabs. Users can select <b>Export</b> (<img src="../Resources/Images/icon-export-data-page.PNG" style="width: 24px;height: 18px;vertical-align: text-bottom;" />) to export data to a CSV file, PDF or Working Papers. They can also export the grouping structure.</p>
+            </li>
+            <p>Note that the export takes into consideration existing selections on the page. For example, if users have disabled <b>Parent Groups</b>, then they&apos;re not included in the exported file.</p>
+            <p><img src="../Resources/Images/export-group-structure.PNG" alt="New export option in group tabs." /></p>
+            <li>
+                <p>Adjustments now display in blue. Users can select an adjustment to navigate to the <b>Adjustments</b> page, where the corresponding adjusting entries are highlighted and they can view their details.</p>
+            </li>
+            <p><img src="../Resources/Images/adjustments-display-in-blue.PNG" alt="Adjustments display in blue. Users can select an adjustment to view its details." /></p>
+            <p>The below figure shows how the corresponding adjusting entry is highlighted in the <b>Adjustments</b> page.</p>
+            <p><img src="../Resources/Images/adjustments-navigated-from-Data-page.png" alt="Corresponding adjusting entry highlighted (notice the blue vertical line on the left)." /></p>
+        </ul>
+        <h3>Aufgaben</h3>
+        <p>In SE 2020-03, we have enhanced the logic around deleting issues to prevent loss of information and improve audit trail.</p>
+        <ul>
+            <li>
+                <p>Users can no longer delete an issue unless they&apos;ve created it.</p>
+            </li>
+            <li>
+                <p>Nur ein Administrator darf Aufgaben löschen, die von anderen Benutzern erstellt wurden. An Admin user has one or more Cloud security roles:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Administrator</p>
+                    </li>
+                    <li>
+                        <p>Einstellungen-Administrator</p>
+                    </li>
+                    <li>
+                        <p>Entitätsadministrator</p>
+                    </li>
+                    <li>
+                        <p>Mitarbeiteradministrator</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>New risk module</h3>
+        <p>Risks can now be carried forward.</p>
+        <p><img src="../Resources/Images/carry-forward-risk-assessments.PNG" alt="Bulk Carry Forward and individual Carry Forward for risk assessments. " /></p>
+        <p>The figure below shows Carry Forward for risks.</p>
+        <p><img src="../Resources/Images/carry-forward-risks.png" alt="Bulk Carry Forward option and individual Carry Forward options for risks." /></p>
+    </body>
+</html>

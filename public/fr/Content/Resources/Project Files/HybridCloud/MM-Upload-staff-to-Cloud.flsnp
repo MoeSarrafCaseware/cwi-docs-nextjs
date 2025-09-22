@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Vous pouvez télécharger une liste des membres de votre personnel à partir d&apos;un fichier .csv, d&apos;un magasin de données partagé (fichier .cwc) ou d&apos; <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Export_Users_Groups_Cloud" target="_blank">un fichier d&apos;exportation de magasin de données</a> pour leur permettre de démarrer avec leur propre compte Cloud. Notez que chaque membre du personnel ajouté à Cloud recevra un courriel d&apos;inscription de la part de <i>donotreply@casewarecloud.com</i>. Nous vous conseillons de mettre cette adresse e-mail sur liste blanche pour éviter que vos filtres anti-spam ne bloquent l&apos;e-mail.</p>
+        <p>Si vous préparez un fichier .csv, assurez-vous que</p>
+        <ul>
+            <li>
+                <p>Chaque membre du personnel dispose au minimum d&apos;un prénom, d&apos;un nom de famille et d&apos;une adresse électronique unique</p>
+            </li>
+            <li>
+                <p>Chaque ligne représente un membre du personnel</p>
+            </li>
+            <li>
+                <p>Chaque colonne représente une propriété (par exemple, le prénom, le nom, l&apos;adresse électronique)</p>
+            </li>
+            <li>
+                <p>Les groupes de personnel multiples sont séparés par des tildes (~)</p>
+            </li>
+        </ul>
+        <p>Par exemple :</p><div style="font-size: 10pt;"><table class="table">
+                <col style="width: 15%;" />
+                <col style="width: 15%;" />
+                <col style="width: 40%;" />
+                <col style="width: 15%;" />
+                <col style="width: 15%;" />
+                <thead>
+                    <tr>
+                        <th>Nom de famille</th>
+                        <th>Prénom</th>
+                        <th>Adresse électronique</th>
+                        <th>Initiales</th>
+                        <th>Groupe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Barnett</td>
+                        <td>Betsy</td>
+                        <td>betsy.barnett@test.caseware.com</td>
+                        <td>BB</td>
+                        <td>G1</td>
+                    </tr>
+                    <tr>
+                        <td>Henri</td>
+                        <td>Isabel</td>
+                        <td>isabel.henry@test.caseware.com</td>
+                        <td>IH</td>
+                        <td>G1~G2</td>
+                    </tr>
+                    <tr>
+                        <td>Holt</td>
+                        <td>Ben</td>
+                        <td>ben.holt@test.caseware.com</td>
+                        <td>BH</td>
+                        <td>G2</td>
+                    </tr>
+                    <tr>
+                        <td>Nguyen</td>
+                        <td>Nicholas</td>
+                        <td>nicholas.nguyen@test.caseware.com</td>
+                        <td>NN</td>
+                        <td>G2</td>
+                    </tr>
+                </tbody>
+            </table></div><p><b>Pour télécharger du personnel à partir d&apos;un fichier .csv :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Upload Staff.</b></p>
+            </li>
+            <li>
+                <p>À côté de l&apos;option de téléchargement du fichier CSV, cliquez sur <b>TELECHARGER</b>.</p>
+            </li>
+            <li>
+                <p>L&apos;application Personnel s&apos;affiche dans le nuage. Cliquez sur <b>Nouveau | Importer | Personnel</b>.</p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Importation de personnel s&apos;affiche. Cliquez sur <b>Importer à partir de CSV</b> et recherchez votre fichier .csv, ou copiez et collez le contenu de votre fichier .csv dans la zone de texte. Cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>La liste du personnel de votre fichier .csv s&apos;affiche dans un tableau. Attribuez le titre approprié aux données de chaque colonne. Notez que les colonnes dont l&apos;intitulé est Ignorer ne seront pas téléchargées.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p>La liste du personnel est téléchargée sur Cloud. Vous pouvez consulter l&apos;ensemble du personnel de votre site Cloud en cliquant sur <b>Personnel</b> dans le menu Cloud. Fermez la boîte de dialogue Importation de personnel pour revenir au menu principal.</p>
+        <p><b>Pour télécharger du personnel à partir d&apos;un magasin de données partagé :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Upload Staff.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur l&apos;icône de fichier et recherchez le dossier contenant le fichier de connexion (.cwc). Sélectionnez le fichier et cliquez sur <b>Ouvrir.</b></p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>UPLOAD</b>.</p>
+            </li>
+            <li>
+                <p>Une boîte de dialogue de connexion s&apos;affiche pour demander les informations d&apos;identification de l&apos;administrateur pour le magasin de données partagé. Saisissez les informations d&apos;identification et cliquez sur <b>OK</b> pour commencer le téléchargement.</p>
+            </li>
+        </ol>
+        <p>La liste du personnel est téléchargée dans le nuage et les résultats du téléchargement s&apos;affichent. Pour obtenir des informations plus détaillées, consultez le fichier journal automatisé en cliquant sur le lien fourni. Cliquez sur <b>FERMER</b> pour revenir au menu principal.</p>
+        <p><b>Pour télécharger des agents et des groupes à partir d&apos;un fichier d&apos;exportation d&apos;un magasin de données :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Upload Staff.</b></p>
+            </li>
+            <li>
+                <p>À côté de l&apos;option de téléchargement du DSAT, cliquez sur <b>Télécharger.</b></p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Working Papers Security Import s&apos;affiche dans Cloud. Cliquez sur <b>Sélectionner des fichiers</b> et recherchez votre <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Export_Users_Groups_Cloud" target="_blank">fichier d&apos;exportation</a>ou faites glisser le fichier dans la boîte de dialogue.</p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Importer le personnel et les groupes s&apos;affiche avec une liste de votre personnel, de vos groupes de personnel et de vos rôles. Cliquez sur <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p>La liste du personnel est téléchargée sur Cloud et les rôles s&apos;affichent dans la liste de sécurité des documents de travail. Vous pouvez afficher l&apos;ensemble du personnel et des groupes de votre site Cloud en cliquant sur <b>Personnel</b> et <b>groupes</b> dans le menu Cloud. Fermez la boîte de dialogue Importation de personnel et de groupes pour revenir au menu principal.</p>
+    </body>
+</html>

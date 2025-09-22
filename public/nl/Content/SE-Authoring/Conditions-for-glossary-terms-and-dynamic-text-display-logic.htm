@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Voorwaarden voor woordenlijsttermen en logica voor dynamische tekstweergave</h1>
+        <p>De volgende lijst beschrijft de voorwaarden die nodig zijn om de weergavelogica voor een <a href="What's-the-engagement-glossary.htm">woordenlijstterm</a> of <a href="What's-dynamic-text.htm">dynamische tekst</a>te configureren. Het beschrijft ook de parameters voor elke conditie.</p>
+        <h2>Antwoordvoorwaarde</h2>
+        <p>Logica is gebaseerd op een checklistprocedure.</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li><b>Document -</b> selecteer het document van de checklist.</li>
+            <li><b>Procedure -</b> selecteer de procedure.</li>
+            <li><b>Voorwaarde -</b> selecteer het antwoord.</li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <p>Aan voorwaarde is voldaan als het geselecteerde antwoord in <b>Voorwaarde</b> wordt gegeven in de geselecteerde procedure van de controlelijst.</p>
+        <h2>Opties saldibalans</h2>
+        <p>De logica is gebaseerd op de eigenschappen van de proefbalansgroep.</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Financiële groep -</b> selecteer de proefbalansrekening of rekeninggroep</li>
+            <li><b>Voorwaarde -</b> selecteer een optie in het vervolgkeuzemenu.<ul style="list-style-type: circle;"><li><a href="Group-properties.htm#Consiste">Consistent</a></li><li><a href="Group-properties.htm#Contrary">Tegenstrijdig</a></li><li><a href="Group-properties.htm#Inconsis">Inconsistent</a></li></ul></li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <p>Als het groepssaldo bijvoorbeeld <b>Consistent</b> is → <i>Winst-en-verliesrekening</i> wordt weergegeven.</p>
+        <h2>Consolidatievoorwaarde</h2>
+        <p>De logica is gebaseerd op het feit of de opdracht een consolidatieopdracht is of niet.</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Voorwaarde -</b> selecteer de consolidatiesituatie (Geconsolideerd, Niet-geconsolideerd)</li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <h2>Schalen/afronden</h2>
+        <p>Selecteer een van de items uit de vervolgkeuzelijst.</p>
+        <h3>Voorbeeld</h3>
+        <p>Als de afronding in <b>miljoenen</b>is, geef dit dan weer.</p>
+        <h2>Reporting period condition</h2>
+        <p>De logica is gebaseerd op de rapportageperiode voor de opdracht.</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li style="font-weight: bold;"><b>Voorwaarde -</b> selecteer de waarde van de rapportageperiode (maandelijks, driemaandelijks, halfjaarlijks, jaarlijks)</li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <h2>Organization type condition</h2>
+        <p>De logica is gebaseerd op het land dat is geselecteerd voor de opdrachtentiteit.</p>
+        <p><b>Parameters:</b></p>
+        <ul>
+            <li><b>Voorwaarde -</b> selecteer een land</li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <h2>Form Value condition</h2>
+        <p>De logica is gebaseerd op de waarde van een formulierveld.</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li><b>Voorwaarde -</b> selecteer een formulier en een veld in het geselecteerde formulier</li>
+            <li><![CDATA[
+]]><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de voorwaarde is voldaan</li>
+        </ul>
+        <p class="note inline"><![CDATA[
+]]><b>Let op:</b> Deze voorwaarde is alleen ingeschakeld als je <a href="Develop-custom-forms.htm">SE Builder-formulieren</a> hebt ingesteld in je product.</p>
+        <h2>Groep voorwaarden</h2>
+        <p>Selecteer deze optie als je een groep voorwaarden wilt toevoegen, waarbij de tekstuitvoer is gebaseerd op hoe de voorwaarden in de groep gezamenlijk worden geëvalueerd</p>
+        <p style="font-weight: bold;">Parameters:</p>
+        <ul>
+            <li><b>Als aan alle onderstaande voorwaarden is voldaan</b> -&gt; alle voorwaarden moeten waar zijn om aan de Groepsvoorwaarde te voldoen</li>
+            <li><b>Als aan een van de onderstaande voorwaarden is voldaan</b> -&gt; elke voorwaarde moet waar zijn om aan de Groepsvoorwaarde te voldoen</li>
+            <li><b>Uitvoer -</b> selecteer de tekst die moet worden weergegeven als aan de Groepsvoorwaarde is voldaan</li>
+        </ul>
+    </body>
+</html>

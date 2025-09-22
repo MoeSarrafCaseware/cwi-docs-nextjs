@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Terugkerend numeriek patroon</h1>
+        <p>Deze analytische test identificeert specifieke, door de gebruiker gedefinieerde patronen die deel uitmaken van een waarde. Deze patronen kunnen aan het begin, aan het einde of ingebed zijn in de waarde. Je kunt kiezen of je wilt zoeken naar een specifieke cijfercombinatie of naar een bepaald aantal terugkerende cijfers in de waarden.</p>
+        <p>Merk op dat deze test geen rekening houdt met decimale waarden. De waarden 1000 en 1000,10 worden als hetzelfde beschouwd. Je hebt ook de optie om afgeronde waarden te negeren als je de test gebruikt om te zoeken naar terugkerende cijfers.</p>
+        <p>Deze analytische test kan worden gebruikt om te identificeren:</p>
+        <ul>
+            <li>
+                <p>Mogelijk niet-ondersteunde transacties</p>
+            </li>
+            <li>
+                <p>Beoordelen van risico&apos;s op afwijkingen van materieel belang als gevolg van mogelijke fraude.</p>
+            </li>
+            <li>
+                <p>Waarden met de combinatie 999 die kunnen wijzen op waarden net onder een drempelwaarde</p>
+            </li>
+            <li>
+                <p>Terugkerende waarden die kunnen duiden op fictieve getallen</p>
+            </li>
+        </ul>
+        <h2>Voor analyse gebruikte velden</h2>
+        <p>Deze test gebruikt een of meer numerieke velden om afgeronde bedragen of afgeronde hoeveelheidswaarden te detecteren. Je kunt instellen welke velden je wilt gebruiken door de parameter <b>Selecteer velden</b> aan te passen.</p>
+        <h2>Parameters</h2>
+        <p>De volgende parameters moeten worden ingesteld om de test te kunnen uitvoeren:</p>
+        <ul>
+            <li>
+                <p><b>Selecteer velden</b> - Selecteer een of meer numerieke velden uit de lijst om te gebruiken om de test uit te voeren.</p>
+            </li>
+            <li>
+                <p>Selecteer de <b>cijfercombinatie</b> of het aantal <b>terugkerende cijfers</b> waarnaar u wilt zoeken. Merk op dat de test geen rekening houdt met cijfers achter de komma. De waarden 1.000 en 1.000,10 worden bijvoorbeeld als hetzelfde beschouwd.</p>
+            </li>
+            <li>
+                <p>Als u <b>Cijfercombinatie</b>selecteert, voert u waarden in voor de volgende parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Cijfercombinatie</b> - Voer de cijfercombinatie in waarnaar in de waarden moet worden gezocht. De standaardwaarde is 999.</p>
+                    </li>
+                    <li>
+                        <p><b>Locatie cijfercombinatie</b> - Selecteer of de cijfercombinatie aan het begin, aan het einde of binnen de waarden moet worden gezocht. Als u ervoor kiest om aan het begin van waarden te zoeken, kunt u optioneel ook de totale lengte invoeren van de waarden waarnaar u wilt zoeken. Je kunt bijvoorbeeld zoeken naar waarden die beginnen met 123 en een totale lengte van 4 cijfers hebben.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Als u <b>Terugkerende cijfers</b>selecteert, voert u waarden in voor de volgende parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Aantal terugkerende cijfers</b> - Voer het aantal terugkerende cijfers in waarnaar u wilt zoeken. De standaardwaarde is 3.</p>
+                    </li>
+                    <li>
+                        <p><b>Locatie terugkerende cijfers</b> - Selecteer of u wilt zoeken naar terugkerende cijfers aan het begin of aan het einde van de waarden.</p>
+                    </li>
+                    <li>
+                        <p><b>Afgeronde bedragen negeren</b> - Selecteer of u afgeronde bedragen wilt negeren.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Testconfiguratie</h2>
+        <p class="note"><b>Let op:</b> De beschikbare configuraties variëren afhankelijk van het product dat je gebruikt.</p>
+        <p>De volgende configuraties zijn beschikbaar voor deze test:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Hoeveelheid met terugkerend numeriek patroon</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Hoeveelheid met terugkerend numeriek patroon</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numerieke waarden met terugkerend patroon - Alle velden</p>
+            </li>
+        </ul>
+        <h2>Technische specificaties</h2>
+        <p>Wanneer je de analytische test voor terugkerende numerieke patronen uitvoert, worden de volgende stappen uitgevoerd om de test uit te voeren:</p>
+        <ol>
+            <li>
+                <p>Controleer of de nodige referentievelden zijn geselecteerd. Als er geen velden zijn geselecteerd, maak dan een uniek referentieveld. Dit is alleen geldig als er specifieke velden zijn geselecteerd. Als alle kolommen beschikbaar zijn, is dit niet nodig.</p>
+            </li>
+            <li>
+                <p>Controleer of er ten minste één numeriek veld is geselecteerd voor de kernanalyse.</p>
+            </li>
+            <li>
+                <p>Verkrijg de benodigde parameters voor de kernanalyse:</p>
+                <ul>
+                    <li>
+                        <p>Cijferpatroon</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Verkrijg het cijferpatroon</p>
+                            </li>
+                            <li>
+                                <p>Bepaal de locatie van het cijferpatroon.</p>
+                                <ul>
+                                    <li>
+                                        <p>Als het cijferpatroon aan het begin staat, vraag dan of er een optionele parameter is voor de totale lengte van de waarde:</p>
+                                    </li>
+                                    <li>
+                                        <p>Als de lengte 0 is, worden alle waarden meegenomen.</p>
+                                    </li>
+                                    <li>
+                                        <p>De lengte moet groter of gelijk zijn aan het patroon. Als het patroon bijvoorbeeld 999 is, dan is de minimale lengte 3.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Als een gebruiker 6 als lengte selecteert en het beginpatroon is 999, dan wordt 999000 geselecteerd maar 99900 niet omdat het maar vijf tekens lang is.</p>
+                            </li>
+                            <li>
+                                <p>Extraheer alle waarden die voldoen aan de geselecteerde parameters. Decimale waarden worden genegeerd voor cijferpatronen aan het einde van de waarde. Decimale waarden worden niet afgerond.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Terugkerende cijfers</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Verkrijg het aantal terugkerende cijfers.</p>
+                            </li>
+                            <li>
+                                <p>Verkrijg of de terugkerende cijfers aan het begin of het einde van de numerieke waarde staan. Als ze aan het einde staan, negeer dan de decimale waarden. Decimale waarden worden niet afgerond.</p>
+                            </li>
+                            <li>
+                                <p>Geef aan of het patroon met terugkerende cijfers afgeronde bedragen moet negeren.</p>
+                            </li>
+                            <li>
+                                <p>Extraheer alle waarden die voldoen aan de geselecteerde parameters.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

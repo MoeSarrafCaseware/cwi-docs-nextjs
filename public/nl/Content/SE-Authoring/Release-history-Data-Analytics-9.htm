@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Ignore">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Data Analytics DA-9</h1>
+        <h2>AnalyticsAI</h2>
+        <p>Er zijn geen updates voor AnalyticsAI in deze release.</p>
+        <h2>Gegevensimport</h2>
+        <h3>Excel-import</h3>
+        <p>Deze release heeft een nieuwe verwerkingsstap toegevoegd om bestandsvalidatie mogelijk te maken tijdens het taggen.</p>
+        <p><img src="../Resources/Images/transaction-import-processing.png" alt="Voortgang verwerking transactie-import" /></p>
+        <h3>Foutmelding invoernummer</h3>
+        <p>Wanneer nu een kolom in een transactiebestand wordt toegewezen aan ENTRY NUMBER, LINE NUMBER of ENTRY ID, wordt er een fout weergegeven als er lege cellen worden gedetecteerd.</p>
+        <p><img src="../Resources/Images/entry-number-error.png" alt="Foutmelding invoernummer" /></p>
+        <p>Klik op de waarschuwing om de lege cellen en hun regelnummers weer te geven. Met deze informatie kun je het bestand corrigeren met een tool naar keuze, of contact opnemen met je klant met deze informatie en vragen om een gecorrigeerd transactiebestand.</p>
+        <p>Er wordt ook een fout weergegeven als er lege rijen zijn.</p>
+        <p><img src="../Resources/Images/blank-cells.png" alt="Fout met lege cellen" /></p>
+        <p>Je zult geen bestanden met fouten kunnen importeren -- de knop <b>Importeren</b> op de pagina Transacties importeren zal inactief zijn.</p>
+        <h3>Testfoutbericht.</h3>
+        <p>Bij het toewijzen van een kolom in een transactiebestand aan AMOUNT wordt een fout weergegeven als er niet-numerieke eigenschappen aanwezig zijn.</p>
+        <p><img src="../Resources/Images/invalid-data-type.png" alt="Selecteer gegevenstype" /></p>
+        <p>Klik op de waarschuwing om de betreffende gegevens te bekijken.</p>
+        <p><img src="../Resources/Images/invalid-data-rows.png" alt="Ongeldig gegevensbestand" /></p>
+        <p>Je zult geen bestanden met fouten kunnen importeren -- de knop <b>Importeren</b> op de pagina Transacties importeren zal inactief zijn.</p>
+        <h3>Waarschuwingen voor niet-toegewezen waarde</h3>
+        <p>Bij het toewijzen van een kolom in een transactiebestand aan DOCUMENTTYPE, POSTING STATUS, IDENTIFIERTYPE of ORIGINATING DOCUMENT TYPE wordt een waarschuwing weergegeven als er nog niet toegewezen waarden zijn. Bijvoorbeeld:</p>
+        <p><img src="../Resources/Images/unassigned-document-type.png" alt="Oorspronkelijk documenttype" /></p>
+        <h3>Dubbele boekingen</h3>
+        <p>Als er dubbele transacties worden gedetecteerd in CSV-bestanden, in hetzelfde bestand of een volgend bestand in een opdracht, dan worden de dubbele transacties genegeerd bij het importeren.</p>
+        <p>Bij het importeren van dubbele transacties wordt de transactiedatabase niet langer beschadigd. Als een import mislukt, kunnen gebruikers bovendien een ander bestand uploaden en importeren. Vóór deze versie resulteerde deze actie ook in een beschadigde databank.</p>
+        <p><b>Let op:</b> Transactie duplicaten zijn gebaseerd op de entry nummer eigenschap, niet op de hele transactie.</p>
+    </body>
+</html>

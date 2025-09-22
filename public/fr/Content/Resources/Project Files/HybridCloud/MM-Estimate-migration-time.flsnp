@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Pour vous aider à planifier votre migration de manière à minimiser les perturbations, consultez les estimations de temps de migration suivantes. Il convient de noter que ces estimations ont été réalisées dans un environnement contrôlé. La durée réelle de la migration peut être différente.</p><div style="font-size: 10pt;"><table class="table">
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <thead>
+                    <tr>
+                        <th>Nombre de fichiers</th>
+                        <th>Taille du fichier compressé</th>
+                        <th>Contient des métadonnées personnalisées</th>
+                        <th>Taille du téléchargement</th>
+                        <th>L&apos;heure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7915</td>
+                        <td>54 MB</td>
+                        <td>Oui</td>
+                        <td>425 GB</td>
+                        <td>39 heures</td>
+                    </tr>
+                    <tr>
+                        <td>1549</td>
+                        <td>211 MB</td>
+                        <td>Non</td>
+                        <td>325 GB</td>
+                        <td>24 heures</td>
+                    </tr>
+                    <tr>
+                        <td>1451</td>
+                        <td>211 MB</td>
+                        <td>Non</td>
+                        <td>305 GB</td>
+                        <td>20 heures</td>
+                    </tr>
+                    <tr>
+                        <td>3000</td>
+                        <td>211 MB</td>
+                        <td>Non</td>
+                        <td>630 GB</td>
+                        <td>43.5 heures</td>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td>211 MB</td>
+                        <td>Non</td>
+                        <td>210 GB</td>
+                        <td>13 heures</td>
+                    </tr>
+                </tbody>
+            </table></div><p>Pour réduire la durée de la migration, nous vous suggérons d&apos;effectuer les actions suivantes :</p>
+        <ul>
+            <li>
+                <p>Compresser tous les fichiers parents, y compris les sous-dossiers</p>
+            </li>
+            <li>
+                <p>Supprimer les copies de synchronisation inutiles</p>
+            </li>
+            <li>
+                <p>Effacer les informations de synchronisation des fichiers archivés</p>
+            </li>
+            <li>
+                <p>Télécharger les <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Upload-entities-to-Cloud">entités</a> et le <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Upload-staff-to-Cloud">personnel</a> avant la migration des fichiers</p>
+            </li>
+        </ul>
+        <p>En fonction de la quantité et de la taille des fichiers que vous migrez, il se peut que vous deviez effectuer la migration sur plusieurs week-ends. Pour plus d&apos;informations sur la segmentation du processus, voir <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Migrate-engagement-files-to-Cloud">Migrer les fichiers d&apos;engagement vers le cloud.</a></p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Define groupings</h1>
+        <p>Groupings provide context to the accounts that users import into the product. You need to define groupings to set a structure for trial balance accounts.</p>
+        <p>The balances in the financial statements document are organized and displayed based on the groupings you defined. If your users can import a trial balance into the product then you must define a grouping structure.</p>
+        <p>The following grouping structures are available:</p>
+        <ul>
+            <li>
+                <p><b>Financial grouping</b> - Resembles the layout of the Balance Sheet and Income statement. You can add up to three different financial grouping structures to a product. It supports:</p>
+                <ul>
+                    <li>
+                        <p>generating the financial statements and notes.</p>
+                    </li>
+                    <li>
+                        <p>performing Risk Assessment in the RMM report.</p>
+                        <p class="note"><b>Note:</b> Only the default financial grouping structure can be used to perform risk assessment.</p>
+                    </li>
+                    <li>
+                        <p>providing the appropriate level of detail for analysis graphs, materiality benchmarks, <a href="Visibility-conditions.htm"><span>visibility conditions</span></a> and leadsheets.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Tax grouping</b> - Resembles the tax codes applicable for your market. Automapping between the Financial grouping and corresponding tax code is available.</p>
+            </li>
+            <li>
+                <p><b>Chart of Accounts</b> - Certain markets may employ a standard chart of accounts that doesn&apos;t necessarily resemble the line items in the financial statements.</p>
+            </li>
+        </ul>
+        <p>Before you add groupings, you must enable them in the <a href="Enable-tax-and-prescribed-accounts-groupings.htm">product settings</a>. You can then manually add groupings or you can import them from an Excel file or a CSV file, or from Working Papers.</p>
+        <div class="note">
+            <p><b>Note:</b> In order for secondary financial grouping structures to be included in the PDF generated when users select the Download reference copy option, you must add the following to your product.json file:</p>
+            <div><pre><code><p>{ &quot;title&quot; : &quot;Secondary Financial Groups 2&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groups/financial-2&quot; },</p><p>{ &quot;title&quot; : &quot;Secondary Financial Groups 3&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groups/financial-3&quot; },</p></code></pre>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.WP" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators and partners can set up Working Papers security roles in order to control staff access to the areas of a SmartSync Working Papers file." />
+    </head>
+    <body>
+        <h1>Zugriffskontrolle auf Caseware Working Papers Dateien</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresWorkingPapers.flsnp" /><p>Wenn Ihr Unternehmen die Working Papers Sicherheitsfunktionen in Cloud verwendet, erhalten Sie das Beste aus zwei Welten. Working Papers Zugriffschutz kombiniert die einfache Benutzerverwaltung in Cloud mit den detaillierten Einstellungen für Zugriffschutz, die in Working Papers Dateien zur Verfügung stehen.</p>
+        <p>Working Papers Zugriffschutz funktioniert ganz ähnlich wie die Zugriffschutzrollen, die in Cloud für die Verwaltung des Zugangs von Benutzern und Gruppen verwendet werden. Erstellen Sie zuerst Working Papers Rollen in Cloud und dann können Sie Working Papers Zugriffschutz für Ihr Unternehmen aktivieren. Sobald der Zugriffschutz eingeschaltet wurde, können Sie diesen erweiterten Zugriffschutz für Working Papers Dateien, die Ihr Unternehmen in Cloud publiziert hat, aktivieren, indem Sie Working Papers Rollen Ihren Mitarbeitern zuweisen, um Ihnen Zugriff auf die entsprechenden Bereiche zu gewähren.</p>
+        <h2 id="import-WP-security"><a name="Import"></a>Einstellungen der Sicherheitskonfiguration aus Working Papers importieren</h2>
+        <p>Verwendet Ihr Unternehmen bereits die Einstellungen für den Zugriffschutz, die in Working Papers zur Verfügung stehen, können Sie aus dem Datenspeicher Administrator <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">Ihre Daten exportieren</a> und dann diese Einstellungen in Cloud importieren.</p>
+        <p><b>Einstellungen der Sicherheitskonfiguration aus Working Papers importieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Working Papers | Working Papers Zugriffschutz</b>. Die Seite Working Papers Zugriffschutz wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Neu</b> und dann auf <b>Import</b>. Der Import-Dialog wird angezeigt.</p>
+                <p><img src="../../Resources/Images/WP-security-import-1-630x320.png" style="border:1px solid #3f66a3" alt="Der Import-Dialog für Working Papers Zugriffschutzeinstellungen." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>Wählen Sie Dateien aus</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die .txt-Datei, die Sie aus dem Datenspeicher Administrator <a href="https://documentation.caseware.com/latest/WorkingPapers/en/Content/Setup/Users-Groups/Data-Store-Administration-Tool/Export-Users-Groups-Cloud.htm">exportiert</a> haben, und klicken Sie auf <b>Öffnen</b>. Der Dialog Mitarbeiter und Gruppen importieren wird angezeigt.</p>
+                <p><img src="../../Resources/Images/WP-security-import-2-630x514.png" style="border:1px solid #3f66a3" alt="Der Dialog Mitarbeiter und Gruppen importieren für Working Papers Zugriffschutzeinstellungen." /></p>
+            </li>
+            <li>
+                <p>Überprüfen Sie die Mitarbeiter, die Gruppen und Rollen, die importiert werden sollen. Sie können jede Gruppe oder Rolle umbenennen und die Beschreibungen bearbeiten.</p>
+            </li>
+            <li>
+                <p>Sobald Sie die Überprüfung des Importinhalts abgeschlossen haben, wählen Sie <b>Import</b>.</p>
+            </li>
+        </ol>
+        <p>Die Zugriffschutzrollen aus Ihrer Working Papers Datei werden in Cloud erstellt. Es werden automatisch neue Mitarbeiterprofile für jeden Benutzer im Import erstellt, die nicht bereits über ein Profil verfügen, und es werden auch automatisch Gruppen erstellt.</p>
+        <h2 id="create-WP-roles">Working Papers Zugriffschutzrollen erstellen</h2>
+        <p>Wenn Ihr Unternehmen nicht den Working Papers Zugriffschutz verwendet, können Sie Working Papers Zugriffschutzrollen in Cloud erstellen. Diese erweiterten Rollen verwenden die gleichen Listen von Zugriffsberechtigungen, die Working Papers unterstützt.</p>
+        <p><b>Working Papers Rolle erstellen:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Working Papers | Working Papers Zugriffschutz</b>. Die Seite Working Papers Zugriffschutz wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Neu</b> und dann auf <b>Erstellen</b>. Die Seite Working Papers Rolle erstellen wird angezeigt.</p>
+                <p><img src="../../Resources/Images/WP-security-create-1-630x540.png" style="border:1px solid #3f66a3" alt="Der Dialog Working Papers Rolle erstellen. Berechtigungskategorien werden links angezeigt und die Berechtigungen auf der rechten Seite." /></p>
+            </li>
+            <li>
+                <p>Geben Sie einen Rollennamen ein. Sie können auch eine Beschreibung eingeben.</p>
+            </li>
+            <li>
+                <p>Durch Auswahl einer Kategorie auf der linken Seite werden deren Berechtigungen auf der rechten Seite angezeigt. Wählen Sie alle Working Papers Berechtigungen, die auf Ihre neue Rolle zutreffen.</p>
+            </li>
+            <li>
+                <p>Wenn Ihr Unternehmen CaseView Zugriffsebenen verwendet, wählen Sie die Kategorie <b>Zugriffsebene von CaseView Dokumenten</b> auf der linken Seite und eine geeignete Zugriffsebene für Ihre Rolle.</p>
+                <p><img src="../../Resources/Images/WP-security-create-2-630x541.png" style="border:1px solid #3f66a3" alt="Wählen Sie eine der Zugriffsebenen von CaseView Dokumenten, um sie für Ihre Zugriffsrolle zu gewähren." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p>Sie haben nun die neue Working Papers Zugriffschutzrolle erstellt. Sobald Sie einige Rollen erstellt haben, die den benötigten Zugriffschutz widerspiegeln, sollten Sie bereit sein, den Working Papers Zugriffschutz zu aktivieren.</p>
+        <h2 id="enable-WP-security-firm">Working Papers Zugriffschutz aktivieren</h2>
+        <p>Sobald Sie Working Papers Zugriffschutzrollen in Cloud erstellt haben, können Sie den Working Papers Zugriffschutz aktivieren. Dies ist eine systemweite Einstellung, die es Benutzern ermöglicht, erweiterten Zugriffschutz für spezifische Working Papers Dateien zu aktivieren.</p>
+        <p><b>Working Papers Zugriffschutz aktivieren:</b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. entsprechende Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Einstellungen</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Working Papers | Working Papers Zugriffschutz</b>. Die Seite Working Papers Zugriffschutz wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die Schaltfläche <b>Deaktiviert</b>.</p>
+                <p><img src="../../Resources/Images/WP-security-enable-1-630x280.png" style="border:1px solid #3f66a3" alt="Wählen Sie die Schaltfläche Deaktiviert im oberen Bereich der Seite." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Ja</b>, wenn Sie dazu aufgefordert werden.</p>
+                <p><img src="../../Resources/Images/WP-security-enable-2-630x220.png" style="border:1px solid #3f66a3" alt="Dieser Dialog informiert Sie darüber, dass ein erweiterter Zugriffschutz für individuelle Dateien aktiviert werden kann, wenn Sie den Working Papers Zugriffschutz aktivieren." /></p>
+            </li>
+        </ol>
+        <p>Sie haben nun den Working Papers Zugriffschutz für das gesamte Unternehmen aktiviert, was bedeutet, dass Sie den erweiterten Zugriffschutz für Working Papers Dateien aktivieren können.</p>
+        <h2 id="enable-WP-security-file">Erweiterten Zugriffschutz für eine Working Papers Datei aktivieren</h2>
+        <p>Sobald der Working Papers Zugriffschutz für das Unternehmen aktiviert wurde, können Eigentümer von publizierten Working Papers Dateien den erweiterten Zugriffschutz für diese aktivieren. Dies führt dazu, dass Sie den Zugriff für Mitarbeiter gewähren müssen, indem Sie ihnen Working Papers Zugriffschutzrollen für publizierte Dateien zuweisen müssen.</p>
+        <p><b>Erweiterten Zugriffschutz für eine Working Papers Datei aktivieren:</b></p>
+        <ol>
+            <li>
+                <p>Bitte stellen Sie sicher, dass Sie über die Rolle <i>Eigentümer</i> oder über gleichwertige Berechtigungen für die Working Papers Datei verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie im Cloud Hauptmenü den Eintrag <b>Working Papers</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie eine Working Papers Datei und klicken Sie dann auf das Symbol <b>Freigabe</b> (<img src="../../Resources/Icons/Share-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-1-630x302.png" style="border:1px solid #3f66a3" alt="Klicken Sie auf das Symbol Freigabe im Detailbereich." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Weitere Aktionen</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Erweiterten Zugriffschutz aktivieren</b>.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-2-630x195.png" style="border:1px solid #3f66a3" alt="Wählen Sie im Dialog Freigabe die Option Erweiterten Zugriffschutz aktivieren." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie einen oder mehrere Benutzer, denen oder dem Sie die Erweiterte Rolle für diese Working Papers Datei geben möchten.</p>
+            </li>
+            <li>
+                <p>Klicken Sie auf die Schaltfläche <b>Rollen an (#) zuweisen</b> links unten im Dialog Freigabe und wählen Sie dann die betreffende erweiterte Rolle.</p>
+                <p><img src="../../Resources/Images/WP-security-protect-file-3-630x559.png" style="border:1px solid #3f66a3" alt="Wählen Sie eine der erweiterten Rollen, die diese Working Papers Berechtigungen dem ausgewählten Benutzer zuweisen." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Freigabe</b>.</p>
+            </li>
+        </ol>
+        <p>Sie haben nun erweiterten Zugriffschutz für diese Working Papers Dateien aktiviert. Die ausgewählten Benutzer haben nun basierend auf ihrer Rolle Zugriff auf die Bereiche der Datei und sie erhalten alle entsprechenden Working Papers Zugriffsberechtigungen dafür.</p>
+    </body>
+</html>

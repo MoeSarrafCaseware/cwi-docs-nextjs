@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Product.TIME">
+    <head>
+    </head>
+    <body>
+        <h1>Syntaxe d&apos;interrogation dans les requêtes GET</h1>
+        <p>Vous pouvez filtrer les objets que vous souhaitez récupérer en spécifiant une requête comme valeur du paramètre de <code>recherche</code> dans les requêtes GET. Les résultats sont renvoyés sous la forme d&apos;une page d&apos;objets dans un message de réponse.</p>
+        <p>Plusieurs pages de résultats peuvent être disponibles, mais la page renvoyée est celle que vous avez demandée à l&apos;aide du paramètre <code>page.</code> Si vous souhaitez obtenir la page suivante, vous devez faire une nouvelle demande et incrémenter le numéro de page. Réglez le paramètre <code>pageSize</code> sur le nombre d&apos;objets que vous souhaitez renvoyer dans le message de réponse.</p>
+        <p>La syntaxe de la requête pour le paramètre de <code>recherche</code> dans toute requête GET utilisant l&apos;API Caseware Cloud est la suivante :</p>
+        <p><code>&lt;Nom du champ&gt;&lt;opérateur&gt;&lt;valeur du champ&gt;</code></p>
+        <p>En laissant la requête vide, tous les objets de la liste seront renvoyés.</p>
+        <p><strong><code>&lt;nom du champ&gt;</code></strong> est le nom du champ de premier niveau sur lequel vous souhaitez opérer.</p>
+        <p class="note inline"><b>Remarque :</b> Tous les noms de champs ne sont pas valables. Le champ doit être un type de données primitif tel que le texte, les nombres, les booléens et les dates. Les types de données complexes tels que les collections ou les objets ne peuvent pas faire l&apos;objet d&apos;une recherche.</p>
+        <p class="tip"><b>Conseil :</b> La plupart des champs (ou paramètres de requête) qui peuvent être utilisés pour formuler des requêtes (spécifiés comme valeur du paramètre de requête de recherche) sont décrits dans le schéma du corps de la requête dans l&apos;opération POST Create pour l&apos;objet que vous interrogez. Par exemple, si vous interrogez des entités, consultez l&apos;opération POST Create pour les entités :</p>
+        <p><div><code><p>https://&lt;region&gt;.casewarecloud.com/&lt;firm&gt;/sdk/caseware-cloud#tag/Entities/operation/createEntity</p></code></div></p>
+        <p><img src="../Resources/Images/Post-Operation.png" alt="Visualisation du schéma du corps de la réponse dans l&apos;opération POST Create pour les entités. " /></p>
+        <h3>Opérateurs relationnels pris en charge</h3>
+        <p><strong><code>&lt;opérateur&gt;</code></strong> peut être l&apos;un des éléments suivants :</p>
+        <ul>
+            <li>= (égal à)</li>
+            <li>&lt; (moins que)</li>
+            <li>&gt; (plus grand que)</li>
+            <li>&lt;&gt; (pas égal)</li>
+        </ul>
+        <p><strong><code>&lt;fieldValue&gt;</code></strong> peut être n&apos;importe quelle valeur scalaire, c&apos;est-à-dire n&apos;importe quelle valeur unique :</p>
+        <p>Pour le <strong>texte</strong>, c&apos;est-à-dire tout champ dont le type de données est Chaîne, vous devez spécifier la valeur entre guillemets simples :</p>
+        <p><code>fieldName=&apos;test&apos;</code></p>
+        <p>Pour les champs dont le type de données contient des caractères spéciaux tels que &apos; ou \ doit utiliser un caractère d&apos;échappement (\) dans la requête de recherche :</p>
+        <p><code>fieldName=&apos;randomText&apos;s randomText&apos;</code></p>
+        <p>Pour les champs dont le type de données est un <strong>nombre,</strong> indiquez la valeur numérique sans guillemets :</p>
+        <p><code>nomduchamp=123</code></p>
+        <p>Pour les champs dont le type de données est <strong>booléen</strong>,<strong></strong>indique &quot;true&quot; ou &quot;false&quot; :</p>
+        <p><code>fieldName=&apos;true&apos;</code></p>
+        <p>Pour les champs dont le type de données est la <strong>date</strong>, la date doit respecter ce format ISO :</p>
+        <p><code>fieldName=&apos;YYYY-MM-DDTHH:MM:SS:Z&apos;</code></p>
+        <h3>Opérateurs logiques pris en charge</h3>
+        <p>Pour faciliter le filtrage des résultats, vous pouvez combiner deux ou plusieurs instructions de filtrage à l&apos;aide des opérateurs logiques AND ou OR. L&apos;opérateur AND a la priorité sur OR. Vous devez spécifier un espace avant et après l&apos;opérateur :</p>
+        <p><code>&lt;nom du champ&gt;&lt;opérateur&gt;&lt;valeur du champ&gt; ET &lt;nom du champ&gt;&lt;opérateur&gt;&lt;valeur du champ&gt;</code></p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Exploiter</th>
+                    <th>Description</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">ET</td>
+                    <td>Joindre deux ou plusieurs instructions de filtrage à l&apos;aide de l&apos;opérateur AND.</td>
+                    <td><code>countryCode=&apos;CA&apos; AND modifyDate&gt;&apos;2022-01-01&apos;</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">OU</td>
+                    <td>Joindre deux ou plusieurs instructions de filtrage à l&apos;aide de l&apos;opérateur OR.</td>
+                    <td><code>countryCode=&apos;US&apos; OR countryCode=&apos;CA&apos;</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

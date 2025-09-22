@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Valor redondeado</h1>
+        <p>Esta prueba analítica identifica valores numéricos que podrían redondearse, como 10, 500 o 9000. In accounting data, the presence of rounded amounts is typically uncommon and may indicate potential data manipulation.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Posibles intentos de manipulación de estados financieros.</p>
+            </li>
+            <li>
+                <p>Menor exactitud y precisión de áreas de información financiera</p>
+            </li>
+            <li>
+                <p>Transacciones que contienen estimaciones significativas</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+        </ul>
+        <p class="note"><b>Note:</b> Some industries or businesses may have many rounded transactions due to the nature of their operations.</p>
+        <h2>Fields used for analysis</h2>
+        <p>This test uses one or more numeric fields to detect rounded amounts or rounded quantity values. You can set which fields to use by modifying the <b>Select fields</b> parameter.</p>
+        <h2>Parámetros</h2>
+        <p>There are three parameters that must be set in order to run the test:</p>
+        <ul>
+            <li>
+                <p><b>Select fields</b> - Select one or more numeric fields from the list to use to perform the test.</p>
+            </li>
+            <li>
+                <p><b>Rounding value</b> - Enter a rounded integer value, such as 10, 100 or 1000, to be used to search for rounded values. For example, if you enter 10, the test will search for all values that are multiples of 10 such as 10, 20, and 30. This test is not limited to multiples of 10. You can also enter 5, 50, 500 or any other integer value. El valor predeterminado es 100.</p>
+            </li>
+            <li>
+                <p><b>Ignore decimals</b> - Select whether or not to ignore decimal values. This field determines whether decimal values are considered rounded values. For example, if you choose to ignore decimals, the value 100.99 is considered a rounded value, but if you choose not to ignore decimals, then it is not a rounded value. The default value is set to ignore decimals.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Rounded Amounts</b> - Lists transaction lines where the amount is rounded.</p>
+            </li>
+            <li>
+                <p><b>Rounded Quantity</b> - Lists transaction lines where the quantity is rounded.</p>
+            </li>
+            <li>
+                <p><b>Rounded Values</b> - Lists transaction lines where the value is rounded.</p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Rounded Amounts analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Validate that the core analytic field(s) is numeric, if not then exit the test.</p>
+            </li>
+            <li>
+                <p>Determine if decimals will be included in the analysis.</p>
+            </li>
+            <li>
+                <p>Obtain from the user the numeric value that will be used for the rounding, perform the test and extract all transactions that are round values of the numeric value for the result. Ensure to incorporate if the user has included or excluded decimals. If multiple columns have been selected and any column fails, the line will fail the test and be placed in the results.</p>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

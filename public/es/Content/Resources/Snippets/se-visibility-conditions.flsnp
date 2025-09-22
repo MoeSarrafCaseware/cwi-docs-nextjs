@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="instNotes" style="color: #000000;">The following table describes the available visibility conditions:</p>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Condición</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Parámetros</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Ejemplo</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Riesgo de incorrección material</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select an assertion type, a group from the trial balance and one of the following conditions:</p>
+                        <ul>
+                            <li style="color: #000000;"><b>RMM</b> - selected group has RMM for this assertion type</li>
+                            <li style="color: #000000;"><b>No RMM</b> - selected group has no RMM for this assertion type</li>
+                        </ul>
+                        <p style="color: #000000;">If the new risk module is enabled in your product, a difference set of parameters are available for this condition:</p>
+                        <ul>
+                            <li style="color: #000000;">Seleccione el tipo de extracción.</li>
+                            <li style="color: #000000;">Select the area or business cycle</li>
+                            <li style="color: #000000;">Specify the logical operation to compare and evaluate (=,&lt;=,&gt;=)</li>
+                            <li style="color: #000000;">Seleccione la escala de tiempo.</li>
+                        </ul>
+                        <p style="color: #000000;">Note that the values in the RMM scales list depend on your product setup.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If <b>Completeness</b> for <b>Cash</b> has <b>No RMM</b>, then show this item.</p>
+                        <p style="color: #000000;"><i>Or, if the new risk module is enabled in your product:</i></p>
+                        <p><span style="color: #000000;">If </span><b style="color: #000000;">Accuracy</b><span style="color: #000000;"> for </span><b style="color: #000000;">Inventory</b><span style="color: #000000;"> has </span><b style="color: #000000;">RMM less than Medium</b><span style="color: #000000;">, then hide this item.</span></p>
+                        <p style="color: #000000;"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Grupos de contabilidad</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select a group from the trial balance, specify the year (current or prior) and one of the following balance values:</p>
+                        <ul>
+                            <li style="color: #000000;">es cero</li>
+                            <li style="color: #000000;">es distinto de cero</li>
+                            <li style="color: #000000;">es material</li>
+                            <li style="color: #000000;">no es material</li>
+                        </ul>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If the balance for the <b>Short term investment</b> account for the <b>Current year</b> is <b>material,</b> then show this item</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Respuesta</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select a source document, a procedure in the document and a response for the procedure</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">In the <b>200 Optimizer</b> document, if the response to <b>What is the type of engagement as defined under SSARS21?</b> procedure is <b>Compilation</b>, then hide this item</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Consolidación</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Specify whether the engagement is Consolidated or Non-consolidated</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If the engagement is <b>Consolidated</b>, then show this item</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Escala/redondeo</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select a rounding scale from the drop-down.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If the rounding is in <b>Millions</b>, then display this item.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Período de informe</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select the reporting period:</p>
+                        <ul>
+                            <li style="color: #000000;">Mensual</li>
+                            <li style="color: #000000;">Trimestral</li>
+                            <li style="color: #000000;">Semestral</li>
+                            <li style="color: #000000;">Anual</li>
+                        </ul>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If the reporting period is <b>Annual</b>, the show this item</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Fecha</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Seleccione el ancho del borde:</p>
+                        <ul>
+                            <li style="color: #000000;">Efectivo</li>
+                            <li style="color: #000000;">Expires on</li>
+                        </ul>
+                        <p style="color: #000000;">Select the period type options for fiscal year and interim periods within a fiscal year:</p>
+                        <ul>
+                            <li style="color: #000000;">Fecha de inicio del ejercicio</li>
+                            <li style="color: #000000;">Fecha de cierre del ejercicio</li>
+                            <li style="color: #000000;">Fecha de inicio de período</li>
+                            <li style="color: #000000;">Fecha de fin de período</li>
+                        </ul>
+                        <p style="color: #000000;">Select the mathematical operations used to compare and evaluate (&lt;,&gt;, &lt;=,&gt;=)</p>
+                        <p style="color: #000000;">Seleccione la fecha inicial</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">This item shows if <b>effective date</b> for the <b>year start date</b> is after <b>November 30-2019.</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Tipo de organización</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Select country and select organization type</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">If the entity type is <b>Canadian Private Corporation</b>, then show this item</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">Idioma</span></td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">Select a content language from the drop-down. </span></td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;"><span style="color: #000000;">If the content language is </span><b style="color: #000000;">French</b><span style="color: #000000;">, then show this item.</span><p><span style="color: #000000;">Note that the content language means the language currently selected in the <a href="../../Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Set">Engagement Properties</a> popup up.</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Agrupar</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">Add the conditions in this group</p>
+                        <p style="color: #000000;" class="note"><b>Note:</b> All the above condition types are available for you to set up.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #008080;">
+                        <p style="color: #000000;">This item shows if the engagement type is <b>Review</b> and the entity type is <b>Canadian Private Corporation</b> or if the year star date is after <b>October-21-2019 </b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;">Valor de formulario</td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;">
+                        <p>You can include one or more forms in the condition setup. Select the form name, a field in the selected form and a value for the selected field.</p>
+                        <p>The value options for a selected field depend on the field type. For example, numeric fields have logical operators and numerical values, while date fields have a calendar icon for date selection.</p>
+                        <p class="note"><b>Nota:</b> Esta función sólo está disponible si está configurada en su producto. For example, Tax forms.</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;color: #000000;"><span style="color: #000000;">If the field </span><b style="color: #000000;">T2S8</b><span style="color: #000000;"> in </span><b style="color: #000000;">S8 - Capital cost allowance (CCA)</b><span style="color: #000000;"> form is </span><b style="color: #000000;">&gt; 10</b><span style="color: #000000;"> or the field </span><b style="color: #000000;">T3S8</b><span style="color: #000000;"> in </span><b style="color: #000000;">S8 - Capital cost allowance (CCA)</b><span style="color: #000000;"> form is </span><b style="color: #000000;">&gt; 10</b><span style="color: #000000;">, then show this item.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        
+    </head>
+    <body>
+        <p>Visibility settings provide built-in automation so that only the relevant documents or content are available in your engagement file. This is achieved by setting up visibility conditions for various engagement items.</p>
+        <p>The application evaluates the conditions and if the conditions are met, some items are visible (available) in the engagement file. Otherwise, they&apos;re hidden (not available).</p>
+        <p>Here are some use-cases:</p>
+        <ul>
+            <li>
+                <p>Hide documents that are not relevant to the user until they have defined the scope of the engagement.</p>
+            </li>
+            <li>
+                <p>Make a text area in a document visible only if the user provides a specific response to a procedure. This is useful when you want to customize content of letters, memos, and other documents based on information collected from the trial balance or from various forms and checklists.</p>
+            </li>
+        </ul>
+        <p>To set up visibility, you need to specify:</p>
+        <ul>
+            <li>
+                <p>the condition type and its parameters</p>
+            </li>
+            <p>Parameters point to where the system fetches information (values) to evaluate the condition. Each condition type has a different set of parameters.</p>
+            <li>
+                <p>the visibility logic</p>
+            </li>
+            <p>Define the visibility action (whether the item hides or shows) when conditions are met. Also, if you&apos;ve added more than one condition, you need to specify whether <b>all the conditions</b> or <b>at least one condition</b> must be true for the visibility action to apply.</p>
+        </ul>
+    </body>
+</html>

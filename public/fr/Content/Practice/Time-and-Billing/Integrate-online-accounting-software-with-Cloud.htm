@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Intégrer un logiciel de comptabilité en ligne à Caseware Cloud</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Vous pouvez exporter des factures de Caseware Cloud vers Xero ou QuickBooks Online (QBO). Ce processus est plus rapide et plus précis que la saisie manuelle des données. Avant d&apos;exporter des factures, vous devez.. :</p>
+        <ol>
+            <li>
+                <p>Reliez votre logiciel de comptabilité à l&apos;informatique en nuage.</p>
+            </li>
+            <li>
+                <p>Configurer les paramètres d&apos;intégration.</p>
+            </li>
+        </ol>
+        <h2 id="link-cloud">Intègre un logiciel de comptabilité en ligne à Caseware Cloud</h2>
+        <p>Pour exporter des factures vers un logiciel de comptabilité en ligne, liez Cloud à un compte existant.</p>
+        <p class="note"><b>Remarque :</b> Si vous êtes un utilisateur de QBO, vous devez activer l&apos;option Numéros de transaction personnalisés avant d&apos;exporter des factures. Pour plus d&apos;informations, voir <a href="https://community.intuit.com/articles/1145900-change-the-number-on-invoices-or-other-transactions">Modifier le numéro sur les factures ou autres transactions.</a></p>
+        <p><b>Lier le logiciel de comptabilité en ligne au Cloud :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> et que vous disposez de l&apos;autorisation Time.</p>
+            </li>
+            <li>
+                <p>Assurez-vous que le grand livre (GL) est désactivé. Pour plus d&apos;informations sur la désactivation du GL, voir <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm#Time">Paramètres du temps et des dépenses</MadCap:xref>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-time-and-expense-settings-gl-disabled.png" alt="La page Paramètres du temps et des dépenses avec l&apos;option Activer le grand livre désactivée." /></p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Paramètres | Temps | Général | Intégration des logiciels de comptabilité.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Link to QuickBooks Online</b> ou <b>Link to Xero</b>, puis connectez-vous à votre compte.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Remarque :</b> Après avoir établi un lien avec un compte Xero, toute tentative de changement de compte peut entraîner une erreur de récupération des données.</p>
+        <h2>Configurer les paramètres d&apos;intégration</h2>
+        <p>Pour que vos factures soient correctement exportées vers votre logiciel de comptabilité en ligne, vous devez définir le compte de revenu par défaut, le taux d&apos;imposition par défaut et le délai de paiement par défaut.</p>
+        <h3>Définir le compte de revenu par défaut</h3>
+        <p>Les factures exportées sont appliquées à un compte de revenu que vous sélectionnez dans la liste déroulante <b>Compte de revenu par défaut</b> .</p>
+        <p style="font-weight: bold;">Pour définir un compte de revenu par défaut :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> et que vous disposez de l&apos;autorisation Time.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Paramètres | Temps | Général | Intégration des logiciels de comptabilité.</b></p>
+            </li>
+            <li>
+                <p>Sélectionnez un compte de revenu dans la liste déroulante <b>Compte de revenu par défaut</b> .</p>
+                <p><img src="../../Resources/Images/default-income-account.png" alt="Sélectionnez un compte de revenu dans la liste déroulante Compte de revenu par défaut." /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <h3>Définir le taux d&apos;imposition par défaut</h3>
+        <p>Lorsque vous exportez des factures de Cloud vers le logiciel de comptabilité, la juridiction fiscale est automatiquement mappée en utilisant une approche optimale basée sur les taux d&apos;imposition définis dans Cloud. Vous pouvez également définir manuellement une juridiction fiscale par défaut en sélectionnant un <b>taux d&apos;imposition par défaut</b> dans le nuage.</p>
+        <p>Les taux d&apos;imposition dans la liste déroulante <b>Taux d&apos;imposition par défaut</b> varient en fonction de vos paramètres Cloud et de votre logiciel de comptabilité.</p>
+        <p style="font-weight: bold;">QuickBooks en ligne</p>
+        <p>Les taux d&apos;imposition de QBO correspondant à votre <b>taux d&apos;imposition principal</b> et à votre <b>taux d&apos;imposition secondaire</b> apparaissent dans la liste déroulante <b>Taux d&apos;imposition par défaut</b> . Par exemple, si votre <b>taux d&apos;imposition primaire</b> est fixé à 10 % et votre <b>taux d&apos;imposition secondaire</b> à 5 %, les taux d&apos;imposition de QBO avec un taux primaire de 10 % et un taux secondaire de 5 % s&apos;affichent dans la liste déroulante <b>Taux d&apos;imposition par défaut.</b></p>
+        <p><b>Xero</b></p>
+        <p>Les taux d&apos;imposition dans Xero correspondant au total de votre <b>taux d&apos;imposition primaire</b> et de votre <b>taux d&apos;imposition secondaire</b> apparaissent dans le menu déroulant <b>Taux d&apos;imposition par défaut</b> . Par exemple, si votre <b>taux d&apos;imposition principal</b> est fixé à 10 % et votre <b>taux d&apos;imposition secondaire</b> à 5 %, les taux d&apos;imposition totalisant 15 % dans Xero s&apos;affichent dans la liste déroulante.</p>
+        <p>Pour en savoir plus sur la fixation des taux d&apos;imposition, voir <MadCap:xref href="../../Explore/Interface/Firm-Settings/Time.htm">Heure (Réglages)</MadCap:xref>.</p>
+        <p>Si vos clients sont établis dans la même juridiction que votre entreprise, définissez le <b>taux d&apos;imposition par défaut</b> sur la juridiction fiscale de votre entreprise. Si vous exportez des factures pour des clients qui ne relèvent pas de votre juridiction, vous devrez peut-être définir manuellement la juridiction fiscale correcte dans votre logiciel de comptabilité après avoir exporté les factures.</p>
+        <p>Par exemple, supposons que votre entreprise exerce ses activités en Nouvelle-Écosse, au Canada, et que vous avez des clients en Nouvelle-Écosse et au Nouveau-Brunswick. Les deux juridictions exigent un taux d&apos;imposition de 15 % pour les biens et les services. Si la plupart de vos clients se trouvent en Nouvelle-Écosse, réglez le taux d&apos;imposition par défaut sur la Nouvelle-Écosse. Ainsi, pour chaque facture exportée qui facture une taxe de 15 %, la Nouvelle-Écosse sera définie comme juridiction dans votre logiciel de comptabilité. Si vous exportez une facture pour le Nouveau-Brunswick (qui a également un taux d&apos;imposition de 15 %), vous devez modifier manuellement la juridiction dans votre logiciel de comptabilité.</p>
+        <p><b>Pour définir un taux de taxe par défaut pour les factures exportées :</b></p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> et que vous disposez de l&apos;autorisation Time.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Paramètres | Temps | Général | Intégration des logiciels de comptabilité.</b></p>
+            </li>
+            <li>
+                <p>Dans la liste déroulante <b>Taux d&apos;imposition par défaut</b> , sélectionnez le taux d&apos;imposition applicable.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="La section Intégration du logiciel de comptabilité de la page Paramètres après l&apos;intégration de QuickBooks Online. " /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <h4>Définir le délai de paiement par défaut</h4>
+        <p>Le délai de paiement par défaut détermine le nombre de jours avant l&apos;échéance du paiement prévu. Par exemple, une facture émise le 10 juillet avec un délai de paiement par défaut de 7 est due le 17 juillet.</p>
+        <p>Un délai de paiement par défaut de 0 fixe la date d&apos;échéance de toutes les factures exportées à la date d&apos;émission de la facture. Par exemple, une facture créée le 1er septembre avec un délai de paiement de 0 aura également le 1er septembre comme date d&apos;échéance.</p>
+        <p>Lorsque vous intégrez votre logiciel de comptabilité, le délai de paiement par défaut est automatiquement fixé à 30.</p>
+        <p style="font-weight: bold;">Pour définir un délai de paiement par défaut :</p>
+        <ol>
+            <li>
+                <p>Assurez-vous que vous avez le rôle d&apos; <i>administrateur des paramètres</i> et que vous disposez de l&apos;autorisation Time.</p>
+            </li>
+            <li>
+                <p>Dans le menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), sélectionnez <b>Paramètres | Temps | Général | Intégration des logiciels de comptabilité.</b></p>
+            </li>
+            <li>
+                <p>Dans le champ <b>Délai de paiement par défaut</b> , saisissez un nombre compris entre 0 et 999.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-general-accounting-software-integration-tax-rate.png" alt="La section Intégration du logiciel de comptabilité de la page Paramètres après l&apos;intégration de QuickBooks Online. " /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+        </ol>
+        <p>Une fois l&apos;intégration terminée, vous pouvez exporter les factures vers votre logiciel de comptabilité en ligne. Pour plus d&apos;informations, voir</p>
+        <ul>
+            <li>
+                <p><a href="Export-invoices-to-QuickBooks-Online.htm">Exporter des factures vers QuickBooks Online</a></p>
+            </li>
+            <li>
+                <p><a href="Export-invoices-to-Xero.htm">Exporter des factures vers Xero</a></p>
+            </li>
+        </ul>
+    </body>
+</html>

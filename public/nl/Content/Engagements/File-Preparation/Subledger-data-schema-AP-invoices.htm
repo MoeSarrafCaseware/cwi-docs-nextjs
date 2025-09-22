@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Crediteuren—facturen</h1>
+        <p>Als je subgrootboektransacties importeert vanuit een CSV- of Excel-bestand, moet je velden in het bronbestand toewijzen aan Caseware-velden in het type subgrootboekdataset dat je selecteert bij het importeren, zodat de transactiegegevens correct worden weergegeven in de overeenkomst. Dit onderwerp beschrijft de velden in het subgrootboek Crediteuren-facturen.</p>
+        <p>Zie <a href="Understand-subledger-data.htm">Subgrootboekgegevens begrijpen</a>voor meer informatie over de beschrijvingen van de subgrootboekdatasets.</p>
+        <p>Zie <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Transacties van de klant importeren uit een CSV-bestand</a>voor meer informatie over het importeren van transactiegegevens uit CSV-bestanden.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transactie-ID <br /><code>(ap_invoice_transaction_id</code>)</td>
+                    <td>
+                        <p>Een kruisverwijzing naar de grootboekpost. Deze kan verschillende niveaus bevatten die de transactie kunnen identificeren. Voorbeelden zijn kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: De waarde van dit veld wordt gebruikt om de unieke identificatie van deze vermelding te vormen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurjaar <br /><code>(ap_invoice_fiscal_year</code>)</td>
+                    <td>
+                        <p>Het fiscaal jaar waarin de <b>Factuurdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurperiode<code>(ap_invoice_invoice_period</code>)</td>
+                    <td>
+                        <p>De fiscale periode waarin de <b>Factuurdatum</b> plaatsvindt.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vervaldatum factuur <br /><code>(ap_invoice_invoice_due_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de leverancier moet worden betaald. Niet alle transacties hebben een vervaldatum, bijv. kredietmemo&apos;s.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurbedrag<br /><code>ap_factuur_bedrag</code>)</td>
+                    <td>
+                        <p>Het geldbedrag van de transactie vastgelegd in de functionele valuta of groepsvaluta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gerapporteerd factuurbedrag <br /><code>(ap_invoice_invoice_amount_reporting</code>)</td>
+                    <td>
+                        <p>Het geldbedrag van de transactie dat in de gerapporteerde valuta is vastgelegd.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokaal factuurbedrag <br /><code>(ap_invoice_invoice_amount_local</code>)</td>
+                    <td>
+                        <p>Het geldbedrag van de transactie vastgelegd in de lokale valuta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Omschrijving <br /><code>(ap_invoice_description</code>)</td>
+                    <td>
+                        <p>Een beschrijving van de betaling (vrije tekst).</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batchnummer <br /><code>(ap_invoice_batch_id</code>)</td>
+                    <td>
+                        <p>Systeemgegenereerde ID voor batch</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bron-ID <br /><code>(ap_invoice_source_id</code>)</td>
+                    <td>
+                        <p>Boekingsbron. De code voor de bron van waaruit de journaalpost is geplaatst, zoals een verkoopjournaal, kassabonnenjournaal, algemeen journaal, loonkostenjournaal, handmatige invoer door accountant, spreadsheet, etc.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Leveranciers (ID) <br /><code>(ap_invoice_supplier_account_id</code>)</td>
+                    <td>
+                        <p>De ID van de leverancier aan wie betaling is verschuldigd of van wie kredieten zijn toegepast.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Tweede plaatsvervanger. Als <b>transactie-ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Naam leverancier <br /><code>(ap_invoice_supplier_account_name</code>)</td>
+                    <td>
+                        <p>De naam van de leverancier.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingspercentage <br /><code>(ap_invoice_terms_discount_percentage</code>)</td>
+                    <td>
+                        <p>Het kortingspercentage dat de leverancier mag opgeven als een factuur vóór een bepaald aantal dagen wordt betaald.</p>
+                        <p>Gegevenstype Decimalen</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden kortingsdagen <br /><code>(ap_invoice_terms_discount_days</code>)</td>
+                    <td>
+                        <p>Het aantal dagen vanaf de factuurdatum dat de leverancier van kortingsvoorwaarden kan profiteren.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvoorwaarden vervaldagen <br /><code>(ap_invoice_terms_due_days</code>)</td>
+                    <td>
+                        <p>Het aantal toegestane dagen om aan de verplichting te voldoen voordat een factuur achterstallig is.</p>
+                        <p>Gegevenstype Integer</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurnummer <br /><code>(ap_factuur_factuur_nummer</code>)</td>
+                    <td>
+                        <p>Het identificatienummer voor een extern gegenereerde factuur.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd Yes</p>
+                        <p>Primaire sleutel: Eerste plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurdatum <br /><code>(ap_invoice_invoice_date</code>)</td>
+                    <td>
+                        <p>De datum van de factuur, los van de datum waarop de factuur is ingeboekt. Dit is de datum waarop de vervaldatum wordt bepaald op basis van de factuurvoorwaarden.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                        <p>Primaire sleutel: Derde plaatsvervanger. Als <b>Transactie ID</b> niet aanwezig is in de gegevens, wordt de waarde van dit veld samengevoegd met de waarden van de andere alternatieve velden om de unieke identificatie van de invoer te vormen, bijvoorbeeld <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;.</code></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code bedrijfsunit <br /><code>(ap_invoice_business_unit_code</code>)</td>
+                    <td>
+                        <p>Wordt gebruikt om de bedrijfsunit, regio, branche, etc. te identificeren op het niveau waarop financiële overzichten worden geauditeerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geboekt door <br /><code>(ap_invoice_entered_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die het record aanmaakte.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van invoer <br /><code>(ap_invoice_entered_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de transactie in het systeem is ingevoerd. Dit wordt ook wel de aanmaakdatum genoemd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingevoerde tijd <br /><code>(ap_invoice_entered_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de transactie in het systeem is ingevoerd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Goedgekeurd door <br /><code>(ap_invoice_approved_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de persoon die de post goedkeurde.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum goedkeuring <br /><code>(ap_invoice_approved_by_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijdstip van goedkeuring <br /><code>(ap_invoice_approved_by_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post is goedgekeurd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laatst gewijzigd door <br /><code>(ap_invoice_last_modified_by</code>)</td>
+                    <td>
+                        <p>De gebruikers-ID van de laatste persoon die deze post aanpaste.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum van laatste wijziging <br /><code>(ap_invoice_last_modified_date</code>)</td>
+                    <td>
+                        <p>De datum waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tijd laatste wijziging <br /><code>(ap_invoice_last_modified_time</code>)</td>
+                    <td>
+                        <p>Het tijdstip waarop de post voor het laatst is gewijzigd.</p>
+                        <p>Gegevenstype Datum/Tijd</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inkooporder-ID <br /><code>(ap_invoice_purchase_order_id</code>)</td>
+                    <td>
+                        <p>De unieke ID voor elke inkooporder.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Product-ID <br /><code>(ap_invoice_line_product_code</code>)</td>
+                    <td>
+                        <p>De unieke ID voor elk aangekocht product. Mogelijk moet u velden samenvoegen om deze ID aan te maken, zoals bijv. bedrijfsunit, productnummer en jaar, zodat u elk product apart kunt identificeren.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Productomschrijving <br /><code>(ap_invoice_line_product_description</code>)</td>
+                    <td>
+                        <p>De alledaagse productbeschrijving, met de naam of andere kenmerkende eigenschappen van het product.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Factuurvaluta <br /><code>(ap_invoice_invoice_amount_currency</code>)</td>
+                    <td>
+                        <p>De functionele valuta of groepsvaluta die betrekking heeft op het factuurbedrag.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gerapporteerde factuurvaluta <br /><code>(ap_invoice_invoice_reporting_currency</code>)</td>
+                    <td>
+                        <p>De gerapporteerde valuta die betrekking heeft op het rapportagebedrag van de factuur voor niet-geconsolideerde rapporten.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokale factuurvaluta <br /><code>(ap_invoice_invoice_local_currency</code>)</td>
+                    <td>
+                        <p>De valuta voor lokale rapportageverplichtingen.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Belastingtype <br />ap_invoice_tax1_type</td>
+                    <td>
+                        <p>Code van het belastingtype. Voorbeelden zijn omzetbelasting en btw.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Belasting Omschrijving <br />ap_invoice_tax1_type_description</td>
+                    <td>
+                        <p>Een beschrijving van het belastingtype. Bijvoorbeeld de autoriteit waaraan de belasting wordt betaald, en andere informatie om het belastingtype te identificeren.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Btw-bedrag <br />ap_invoice_tax1_local</td>
+                    <td>
+                        <p>Het bedrag aan de in Belastingtype vermelde belasting die in de transactie is opgenomen. Geboekt in lokale valuta.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Officiële factuurcode <br /><code>(ap_invoice_official_invoice_code</code>)</td>
+                    <td>
+                        <p>De unieke officiële code van de factuur, die doorgaans door de belastingdienst wordt gegenereerd.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Rekening-ID <br /><code>(ap_invoice_line_account_id</code>)</td>
+                    <td>
+                        <p>De grootboekrekeningcode van de grootboekomzetrekening. Deze code kan een subrekening-ID bevatten, net als verschillende niveaus die de rekening kunnen identificeren, waaronder kostenplaatsen zoals bedrijf, divisie, regio, groep en branche/afdeling.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regeldetail - Omschrijving van rekening <br /><code>(ap_invoice_line_account_description</code>)</td>
+                    <td>
+                        <p>Een beschrijving van de rekening waarvan de identificatie verschijnt in <b>Lijndetail - Rekening-ID</b>.</p>
+                        <p>Gegevenstype Tekst</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

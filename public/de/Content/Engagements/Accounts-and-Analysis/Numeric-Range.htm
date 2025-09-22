@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Numerischer Bereich</h1>
+        <p>Diese Analyse Numerischer Bereich identifiziert Transaktionen innerhalb eines definierten Wertebereichs. Ihr Hauptzweck besteht darin, Transaktionen mit hohen Werten zu kennzeichnen. Aber Sie haben die Möglichkeit, die Konfiguration so anzupassen, dass Transaktionen unter einem bestimmten Schwellenwert oder innerhalb bestimmter Wertbereiche ermittelt werden. Zudem können Sie auch wählen, ob Sie prozentuale Schwellenwerte anstelle von numerischen Schwellenwerten verwenden möchten. Sie können beispielsweise die Analyse so konfigurieren, dass das höchste 1 % der Transaktionen identifiziert wird.</p>
+        <p>Diese Analyse kann zur Identifizierung verwendet werden:</p>
+        <ul>
+            <li>
+                <p>Transaktionen, die signifikante Schätzungen enthalten</p>
+            </li>
+            <li>
+                <p>Komplexe, nicht routinemäßige oder ungewöhnliche Geschäftsvorgänge, die weitere Untersuchungen rechtfertigen könnten</p>
+            </li>
+            <li>
+                <p>Wesentliche Transaktionen</p>
+            </li>
+            <li>
+                <p>Fehlende Transaktionen, die potenziell entwertet wurden</p>
+            </li>
+            <li>
+                <p>Bewertungsfragen</p>
+            </li>
+            <li>
+                <p>Wesentliche Transaktionen innerhalb der Grundgesamtheit</p>
+            </li>
+            <li>
+                <p>Transaktionen mit einem geringem Wert oder dem Wert Null innerhalb der Grundgesamtheit</p>
+            </li>
+            <li>
+                <p>Transaktionen oder Salden mit dem Wert Null</p>
+            </li>
+            <li>
+                <p>Ein Bereich von Werten, z. B. knapp unter einem Grenzwert</p>
+            </li>
+            <li>
+                <p>Sollkonten mit Habentransaktionen oder Habenkonten mit Solltransaktionen</p>
+            </li>
+            <li>
+                <p>Kunden mit hohen Kreditlimits</p>
+            </li>
+            <li>
+                <p>Forderungen über einem bestimmten Betrag</p>
+            </li>
+            <li>
+                <p>Verbindlichkeiten aus Lieferungen und Leistungen über einem bestimmten Betrag</p>
+            </li>
+        </ul>
+        <h2>Für die Analyse verwendete Felder</h2>
+        <p>Diese Analyse verwendet ein numerisches Feld, das entweder Beträge oder Mengen enthält. Sie können auswählen, welches Feld bei der Einstellung der Analyseparameter verwendet werden soll.</p>
+        <h2>Parameter</h2>
+        <p>Es gibt mehrere Parameter, die für die Durchführung dieses Tests festgelegt werden müssen:</p>
+        <ul>
+            <li>
+                <p><b>Felder auswählen</b> - Wählen Sie ein oder mehrere numerische Felder aus der Liste aus, die für die Durchführung des Tests verwendet werden sollen.</p>
+            </li>
+            <li>
+                <p><b>Numerischer oder Prozentwert</b> - Wählen Sie aus, ob der Test anhand der numerischen Werte der Felder oder anhand der Prozentwerte durchgeführt werden soll. Standardmäßig ist <b>Numerisch</b> ausgewählt. Die Option, die Sie hier auswählen, bestimmt die übrigen Parameter für diesen Test.</p>
+            </li>
+        </ul>
+        <p>Wenn Sie <b>Numerisch</b> wählen, treffen Sie eine Auswahl für die folgenden Parameter:</p>
+        <ul>
+            <li>
+                <p><b>Schwellenwert für hohe Werte</b> - Geben Sie einen Wert in dieses Feld ein, um alle Transaktionen mit Beträgen über diesem Wert zu extrahieren.</p>
+            </li>
+            <li>
+                <p><b>Schwellenwert für niedrige Werte</b> - Geben Sie einen Wert in dieses Feld ein, um alle Transaktionen mit Beträgen unter diesem Wert zu extrahieren.</p>
+            </li>
+            <li>
+                <p><b>Wertbereiche</b> - Geben Sie einen oder mehrere Wertbereiche ein, um alle Transaktionen mit Beträgen in diesen Bereichen zu extrahieren.</p>
+            </li>
+            <li>
+                <p><b>Genaue Werte</b> - Geben Sie einen genauen Wert ein, um alle Transaktionen mit diesem Wert zu extrahieren. Sie können diesen Parameter beispielsweise verwenden, um alle Transaktionen mit Nullwerten zu extrahieren.</p>
+            </li>
+        </ul>
+        <p>Wenn Sie <b>Prozentwert</b> wählen, treffen Sie eine Auswahl für die folgenden Parameter:</p>
+        <ul>
+            <li>
+                <p><b>Schwellenwert für hohen Prozentsatz</b> - Geben Sie in dieses Feld einen Prozentsatz ein, um alle Transaktionen zu extrahieren, deren Prozentsatz höher als dieser Wert ist.</p>
+            </li>
+            <li>
+                <p><b>Schwellenwert für niedrigen Prozentsatz</b> - Geben Sie in dieses Feld einen Prozentsatz ein, um alle Transaktionen zu extrahieren, deren Prozentsatz niedriger als dieser Wert ist.</p>
+            </li>
+            <li>
+                <p><b>Wertbereiche</b> - Geben Sie einen oder mehrere Prozentbereiche ein, um alle Transaktionen mit Prozentsätzen in diesen Bereichen zu extrahieren.</p>
+            </li>
+            <li>
+                <p><b>Genaue Werte</b> - Geben Sie einen genauen Prozentsatz ein, um alle Transaktionen mit diesem Prozentsatz zu extrahieren.</p>
+            </li>
+        </ul>
+        <h2>Test-Konfigurationen</h2>
+        <p class="note"><b>Hinweis:</b> Die verfügbaren Konfigurationen hängen von dem von Ihnen verwendeten Produkt ab.</p>
+        <p>Die folgenden Konfigurationen sind für diesen Test verfügbar:</p>
+        <ul>
+            <li>
+                <p><b>Betragsbereich (Betragsspanne)</b> - Identifiziert Transaktionen innerhalb eines definierten Bereichs für Betragsfelder basierend auf einem numerischen Wert oder einem Prozentwert.</p>
+            </li>
+            <li>
+                <p><b>Rabattbereich</b> - Identifiziert Transaktionen innerhalb eines definierten Bereichs für Rabattfelder basierend auf einem numerischen oder prozentualen Wert.</p>
+            </li>
+            <li>
+                <p><b>Mengenbereich</b> - Identifiziert Transaktionen innerhalb eines definierten Bereichs für Mengenfelder, basierend auf einem numerischen oder prozentualen Wert.</p>
+            </li>
+            <li>
+                <p><b>Fälligkeitsbereich</b> - Identifiziert Transaktionen innerhalb eines definierten Bereichs für Fälligkeitsfelder auf der Grundlage eines numerischen oder prozentualen Werts.</p>
+            </li>
+            <li>
+                <p><b>Rabattbereich</b> - Identifiziert Transaktionen innerhalb eines definierten Bereichs für Rabattfelder basierend auf einem numerischen oder prozentualen Wert.</p>
+            </li>
+            <li>
+                <p><b>Hoher Geldwert</b> - Identifiziert Transaktionen, bei denen das Betragsfeld größer oder gleich dem definierten numerischen Wert ist.</p>
+            </li>
+        </ul>
+        <h2>Technische Spezifikationen</h2>
+        <p>Wenn Sie die Analyse Numerischer Bereich ausführen, werden die folgenden Schritte zur Durchführung des Tests durchgeführt:</p>
+        <ol>
+            <li>
+                <p>Legen Sie bei Bedarf Filter über die Daten, damit eine Teilmenge für die Analyse verwendet wird. Wenn kein Filter gesetzt ist, wird die Analyse für die gesamte Datei durchgeführt. Dieser Schritt kann auch als letzter statt als erster Schritt durchgeführt werden.</p>
+                <p class="note"><b>Hinweis:</b> Filter sind derzeit nicht verfügbar und werden erst in einer späteren Version enthalten sein.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob die erforderlichen Referenzfelder ausgewählt wurden. Wenn keine Felder ausgewählt wurden, erstellen Sie ein eindeutiges Referenzfeld. Dieser Schritt wird nur ausgeführt, wenn bestimmte Felder ausgewählt wurden. Wenn alle Felder vorhanden sind, ist dieser Schritt nicht erforderlich.</p>
+            </li>
+            <li>
+                <p>Überprüfen Sie, ob das für den Test ausgewählte Feld numerisch ist.</p>
+            </li>
+            <li>
+                <p>Bestimmen Sie auf der Grundlage der vom Benutzer ausgewählten Parameter die Art der Mengenextraktion:</p>
+                <ul>
+                    <li>
+                        <p>Gleich dem Wert</p>
+                    </li>
+                    <li>
+                        <p>Größer als der Wert</p>
+                    </li>
+                    <li>
+                        <p>Größer als und gleich dem Wert</p>
+                    </li>
+                    <li>
+                        <p>Kleiner als der Wert</p>
+                    </li>
+                    <li>
+                        <p>Kleiner als und gleich dem Wert</p>
+                    </li>
+                    <li>
+                        <p>Nicht gleich dem Wert</p>
+                    </li>
+                    <li>
+                        <p>Eine Reihe von Werten</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Erfragen Sie vom Benutzer, ob die Analyse auf einem Prozentsatz oder einem Wert basieren soll.</p>
+                <ul>
+                    <li>
+                        <p>Wenn ein Wert ausgewählt wird, wird der Wert vom Benutzer abgefragt. Wenn die Option eine Bereichsextraktion ist, werden zwei Werte benötigt.</p>
+                    </li>
+                    <li>
+                        <p>Wenn ein Prozentsatz ausgewählt wird, erhalten Sie den Prozentsatz vom Benutzer und berechnen dann den Wert, den der Prozentsatz darstellt. Dieser Wert hängt von der Art der Extraktion ab, d. h. 10 % für hohe Werte ergeben einen anderen Wert als 10 % für niedrige Werte. Wenn die Option eine Bereichsextraktion ist, werden zwei Werte benötigt.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Extrahieren Sie die vom Benutzer ausgewählten Ergebnisfelder. Alle Felder werden standardmäßig extrahiert.</p>
+                <p class="note"><b>Hinweis:</b> Die Möglichkeit, Ergebnisfelder auszuwählen, ist derzeit nicht verfügbar und wird in einer späteren Version aufgenommen.</p>
+            </li>
+        </ol>
+    </body>
+</html>

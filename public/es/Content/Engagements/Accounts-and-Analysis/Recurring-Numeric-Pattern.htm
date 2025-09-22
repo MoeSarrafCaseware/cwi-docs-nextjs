@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Patrón numérico recurrente</h1>
+        <p>Esta prueba analítica identifica patrones definidos por el usuario que son parte de un valor. These patterns can be at the beginning, end or embedded within the value. You can select whether to search for a specific number combination or a certain number of recurring digits in the values.</p>
+        <p>Note that this test does not consider decimal values. The values 1000 and 1000.10 would be considered the same. You also have the option to ignore rounded values if you use the test to search for recurring digits.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Potentially unsupported transactions</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+            <li>
+                <p>Values with the combination 999 that may indicate values just below a threshold value</p>
+            </li>
+            <li>
+                <p>Recurring values that may indicate fictitious numbers</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>This test uses one or more numeric fields to detect rounded amounts or rounded quantity values. You can set which fields to use by modifying the <b>Select fields</b> parameter.</p>
+        <h2>Parámetros</h2>
+        <p>The following parameters must be set in order to run the test:</p>
+        <ul>
+            <li>
+                <p><b>Select fields</b> - Select one or more numeric fields from the list to use to perform the test.</p>
+            </li>
+            <li>
+                <p>Select either the <b>Digit combination</b> or the number of <b>Recurring digits</b> you want to search for. Note that the test will not consider any digits beyond the decimal place. For example, the values 1,000 and 1,000.10 would be considered the same.</p>
+            </li>
+            <li>
+                <p>If you select <b>Digit combination</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Digit combination</b> - Enter the combination of digits to search for in the values. El valor predeterminado es 999.</p>
+                    </li>
+                    <li>
+                        <p><b>Digit Combination location</b> - Select whether to search for the digit combination at the beginning, end or within the values. If you select to search for it at the beginning of values, you can also optionally enter the total length of the values you want to search for. For example, you can search for values that start with 123 and that have a total length of 4 digits.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If you select <b>Recurring digits</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Number of recurring digits</b> - Enter the number of recurring digits to search for. El valor predeterminado es 3.</p>
+                    </li>
+                    <li>
+                        <p><b>Recurring digits location</b> - Select whether to search for recurring digits at the beginning or end of the values.</p>
+                    </li>
+                    <li>
+                        <p><b>Ignore rounded amounts</b> - Select whether to ignore rounded amount values.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">AP: Importes con un patrón numérico recurrente</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Quantity with Recurring Numeric Pattern</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numerics with Recurring Pattern - All fields</p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Recurring Numeric Pattern analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected then create a unique reference field. This is only valid if specific fields have been selected. If all the columns are available, this is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that at least one numeric field has been selected for the core analytic.</p>
+            </li>
+            <li>
+                <p>Obtain the needed parameters for the core analytic:</p>
+                <ul>
+                    <li>
+                        <p>Digit pattern</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtain the digit pattern</p>
+                            </li>
+                            <li>
+                                <p>Obtain the location of the digit pattern.</p>
+                                <ul>
+                                    <li>
+                                        <p>If the digit pattern is at the beginning then obtain if there is an optional parameter for the total length of the value:</p>
+                                    </li>
+                                    <li>
+                                        <p>If the length is 0, then all values are included.</p>
+                                    </li>
+                                    <li>
+                                        <p>The length value must be larger or equal to the pattern. For example, if the pattern is 999, then the minimum length is 3.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>If a user selects 6 as the length and the beginning pattern is 999, then 999000 would be selected but 99900 would not as it is only five characters long.</p>
+                            </li>
+                            <li>
+                                <p>Extract all values that meet the selected parameters. Decimal values are ignored for digit patterns at the end of the value. Decimal values are not rounded.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Dígitos recurrentes</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtain the number of recurring digits.</p>
+                            </li>
+                            <li>
+                                <p>Obtain if the recurring digits are at the beginning or end of the numeric value. If they are at the end, ignore decimal values. Decimal values are not rounded.</p>
+                            </li>
+                            <li>
+                                <p>Obtain if the recurring digits pattern should ignore rounded amounts.</p>
+                            </li>
+                            <li>
+                                <p>Extract all values that meet the selected parameters.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

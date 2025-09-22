@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>De antwoord-URL genereren (Azure AD)</h1>
+        <p>Azure gebruikt je Reply URL om gebruikers terug te leiden naar Cloud nadat ze zich hebben aangemeld bij Azure.</p>
+        <p><b>Een antwoord-URL genereren in Cloud: </b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer in het menu <b>Cloud</b> (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>Instellingen | Eenmalige aanmelding | Identiteitsprovider</b>.</p>
+            </li>
+            <li>
+                <p>Vul de volgende velden in op de pagina Identity Provider:</p>
+                <ul>
+                    <li>
+                        <p><b>Naam identiteitsprovider</b>: Voer een betekenisvolle naam in voor je identiteitsprovider. Bijvoorbeeld Azure. Deze naam wordt naast de URL van je antwoord weergegeven om deze te identificeren.</p>
+                        <p class="note"><b>Let op:</b> Deze naam mag niet langer zijn dan 32 tekens en mag alleen letters, cijfers, underscores, plus- en mintekens bevatten.</p>
+                    </li>
+                    <li>
+                        <p><b>Eindpunt voor metagegevens van identiteitsprovider</b>: Plak het <b>Metadata Endpoint</b> dat je <a href="Copy-the-metadata-endpoint.htm">eerder naar een tekstdocument hebt gekopieerd</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>{0} (Client-ID:</b> Plak de <b>applicatie-ID</b> die u <a href="Register-a-new-app-for-single-sign-on-in-Azure.htm">eerder naar een tekstdocument hebt gekopieerd</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Geheim van de klant:</b> Plak het <b>Client Secret</b> dat je <a href="Generate-a-client-secret.htm">eerder naar een tekstdocument hebt gekopieerd</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/sso-settings.png" style="width: 816px;height: 551px;" alt="De Single Sign-On instellingenpagina." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>. De URL van je antwoord wordt weergegeven.</p>
+            </li>
+            <li>
+                <p>Selecteer de knop <b>Kopiëren naar klembord</b> (<img src="../../Resources/Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) om de URL van je antwoord te kopiëren. Je moet het toevoegen aan je app in Azure AD.</p>
+                <p><img src="../../Resources/Images/sso-copy-to-clipboard.png" alt="Gebruik de knop Kopiëren naar klembord om je antwoord-URL te kopiëren." /></p>
+            </li>
+        </ol>
+        <h2 id="SetReply">Stel uw antwoord-URL in Azure in</h2>
+        <p>Nadat je een antwoord-URL hebt gegenereerd, moet je deze toevoegen aan Azure om ervoor te zorgen dat gebruikers zich succesvol kunnen aanmelden.</p>
+        <p><b>Om je antwoord-URL in te stellen in Azure:</b></p>
+        <ol>
+            <li>
+                <p>Selecteer <b>Azure Active Directory | App Registration</b>en selecteer vervolgens je app.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Een omleidings-URL toevoegen</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-redirect-uri.png" alt="Selecteer Een omleidings-URL toevoegen." /></p>
+            </li>
+            <li>
+                <p>Voer je antwoord-URL in het veld <b>Redirect URI</b> in.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Assign-authorized-staff-to-use-single-sign-on.htm">Geautoriseerd personeel toewijzen voor single sign-on (Azure AD)</a></p>
+    </body>
+</html>

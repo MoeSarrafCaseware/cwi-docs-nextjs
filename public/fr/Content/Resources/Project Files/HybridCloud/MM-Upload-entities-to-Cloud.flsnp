@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Les entités sont des espaces de travail qui stockent toutes les informations pertinentes pour un client particulier, y compris les informations commerciales et de contact, les documents et les dossiers de mission. Vous pouvez télécharger une liste d&apos;entités dans le nuage à l&apos;aide d&apos;un fichier .csv. Lors de la préparation du fichier .csv, assurez-vous que</p>
+        <ul>
+            <li>
+                <p>Chaque entité contient au minimum un nom d&apos;entité (jusqu&apos;à 60 caractères) et un numéro (jusqu&apos;à 10 caractères)</p>
+            </li>
+            <li>
+                <p>Chaque ligne représente une entité client</p>
+            </li>
+            <li>
+                <p>Chaque colonne représente une propriété (par exemple, le nom du client, le nom de l&apos;entreprise, le site web)</p>
+            </li>
+            <li>
+                <p>Les balises multiples sont placées entre guillemets et séparées par des virgules</p>
+            </li>
+        </ul>
+        <p>Par exemple :</p><div style="font-size: 10pt;"><table class="table">
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <col style="width: 20%;" />
+                <thead>
+                    <tr>
+                        <th>Nom de l&apos;entité</th>
+                        <th>Numéro de l&apos;entité</th>
+                        <th>Date de début</th>
+                        <th>Fin de l&apos;année fiscale</th>
+                        <th>Étiquettes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chockablock Industries</td>
+                        <td>4829</td>
+                        <td>09 juillet 2012</td>
+                        <td>Décembre</td>
+                        <td>&quot;Commerce de détail, partenariat&quot;</td>
+                    </tr>
+                    <tr>
+                        <td>Meubles supérieurs</td>
+                        <td>5937</td>
+                        <td>22 août 2010</td>
+                        <td>Décembre</td>
+                        <td>Vente au détail</td>
+                    </tr>
+                </tbody>
+            </table></div><p>Nous vous suggérons d&apos;inclure autant de propriétés que possible afin de faciliter le processus de <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Migrate-engagement-files-to-Cloud">mise en correspondance de vos fichiers d&apos;engagement</a> avec les entités correctes lors de la migration.</p>
+        <p><b>Pour télécharger des entités à partir d&apos;un fichier .csv :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Upload Entities</b>.</p>
+            </li>
+            <li>
+                <p>La boîte de dialogue Importer des entités s&apos;affiche dans le nuage. Sélectionnez les options d&apos;importation applicables.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Importer à partir de CSV</b> et recherchez votre fichier .csv, ou copiez et collez le contenu de votre fichier .csv dans la zone de texte. Cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p>Les entités de votre fichier .csv s&apos;affichent dans un tableau. Attribuez le titre approprié aux données de chaque colonne. Notez que les colonnes dont l&apos;intitulé est Ignorer ne seront pas téléchargées.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p>Les entités sont téléchargées dans le nuage. Vous pouvez afficher toutes les entités de votre site Cloud en cliquant sur <b>Entités</b> dans le menu Cloud. Fermez la boîte de dialogue Importer des entités pour revenir au menu principal.</p>
+    </body>
+</html>

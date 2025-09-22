@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="These settings are related to the overall security of your Cloud, including role permissions, password settings, and session management." />
+    </head>
+    <body>
+        <h1>Paramètres du cabinet – Sécurité</h1>
+        <h2><a name="Role"></a>Permissions de rôle</h2>
+        <p><img src="../../../Resources/Images/settings-role-permissions.png" alt="Paramètres de sécurité - Autorisations des rôles" /></p>
+        <p>La section Permissions de rôle contient des options permettant de passer en revue les rôles intégrés à Cloud et d&apos;en créer de nouveaux pour répondre aux besoins de votre organisation.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ajouter un rôle</td>
+                    <td>
+                        <p>Créer un nouveau rôle de sécurité. Pour plus d&apos;informations, voir <MadCap:xref href="../../../Setup/Security/Create-custom-security-roles.htm">Création de rôles de sécurité</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Copier/modifier/supprimer un rôle</td>
+                    <td>
+                        <p>Modifier ou supprimer des rôles de sécurité. Les rôles intégrés dans le nuage ne peuvent pas être modifiés ou supprimés. L&apos;option <b>Copier</b> permet d&apos;utiliser les paramètres d&apos;autorisation d&apos;un rôle intégré comme base d&apos;un nouveau rôle personnalisé.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>S&apos;applique à</td>
+                    <td>
+                        <p>Indique si le rôle est destiné au <b>personnel</b> (<img src="../../../Resources/Icons/Staff-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) ou aux <b>contacts</b> (<img src="../../../Resources/Icons/Contacts-12x15.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du rôle</td>
+                    <td>
+                        <p>Le nom du rôle.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Champ d&apos;application</td>
+                    <td>
+                        <p>Les niveaux d&apos;accès définis dans ce rôle.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Password"></a>Paramètres du mot de passe</h2>
+        <p><img src="../../../Resources/Images/firm-settings-password-settings-1441x417.png" alt="Options de mot de passe affichées sur la page Paramètres." /></p>
+        <p>Définir les normes applicables à l&apos;ensemble du système pour les mots de passe des utilisateurs : <b>Modéré</b>, <b>Fort</b>ou <b>Très fort</b>, ainsi que la fréquence à laquelle les utilisateurs devront réinitialiser leurs mots de passe. Les définitions de Cloud pour chaque niveau de sécurité sont affichées dans les exemples.</p>
+        <h2><a name="Session"></a>Authentification et gestion des sessions</h2>
+        <p>Vous pouvez activer la gestion des sessions pour permettre aux utilisateurs de rester connectés pendant une période donnée. Lorsque cette option est activée, les utilisateurs n&apos;ont besoin de s&apos;identifier qu&apos;une seule fois pour accéder au nuage pendant la période spécifiée à partir du même navigateur. Ce n&apos;est que lorsque les utilisateurs se déconnectent explicitement du système ou qu&apos;ils ont dépassé la limite de temps spécifiée qu&apos;ils doivent se reconnecter.</p>
+        <p>Avec l&apos;authentification à deux facteurs, les utilisateurs devront fournir deux éléments d&apos;information pour vérifier leur identité avant d&apos;accéder au nuage. Pour en savoir plus sur l&apos;authentification à deux facteurs, voir <MadCap:xref href="../../../Setup/Security/Login-settings.htm#Configur">Configurer l&apos;authentification à deux facteurs</MadCap:xref>.</p>
+        <p>Ces options sont désactivées par défaut.</p>
+        <h3>Authentification à deux facteurs</h3>
+        <p><img src="../../../Resources/Images/firm-settings-authentication-session-management-two-factor.png" alt="Paramètres d&apos;authentification à deux facteurs." /></p>
+        <p><b>Tout le personnel</b> - Activer l&apos;authentification à deux facteurs pour tous les comptes du personnel.</p>
+        <p><b>Tous les contacts</b> - Activer l&apos;authentification à deux facteurs pour tous les contacts.</p>
+        <p><b>Permet à l&apos;utilisateur d&apos;ignorer la configuration jusqu&apos;à ce qu&apos;elle soit terminée :</b> - Autoriser les utilisateurs à se connecter sans authentification à deux facteurs jusqu&apos;à la date spécifiée.</p>
+        <p><b>Exiger des utilisateurs qu&apos;ils se connectent à l&apos;aide d&apos;une authentification à deux facteurs</b> - Définissez la fréquence à laquelle les utilisateurs doivent saisir un code de vérification lorsqu&apos;ils se connectent.</p>
+        <ul>
+            <li><b>Tous les 30 jours</b> - L&apos;utilisateur doit saisir un nouveau code de vérification tous les 30 jours.</li>
+            <li><b>Chaque connexion -</b>L&apos;utilisateur doit saisir un nouveau code de vérification à chaque fois qu&apos;il se connecte.</li>
+        </ul>
+        <p>La première fois qu&apos;un utilisateur se connecte sur un appareil, il doit saisir un nouveau code de vérification.</p>
+        <h3>Gestion des sessions</h3>
+        <p><img src="../../../Resources/Images/Firm-session-management-973x243.png" alt="Les options disponibles dans la section Gestion des sessions de la page Paramètres." /></p>
+        <p>Pour activer la gestion des sessions, sélectionnez <b>Se souvenir des utilisateurs lors de la connexion</b> et entrez le nombre d&apos;heures dans <b>Heures pour se souvenir des utilisateurs</b>.</p>
+        <p>Les utilisateurs peuvent alors sélectionner l&apos;option <b>Rester connecté pendant X heures</b> lorsqu&apos;ils se connectent<br /></p>
+    </body>
+</html>

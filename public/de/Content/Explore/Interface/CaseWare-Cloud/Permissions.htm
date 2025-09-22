@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Default-1col-category" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Berechtigungen</h1>
+        <p>Berechtigungen, die via Rollen oder Apps gewährt wurden, bestimmen wie Benutzer auf den Inhalt in Cloud zugreifen können.</p>
+        <h2 id="role-permissions">Rollenberechtigungen<br /></h2>
+        <p>Jede Rolle verfügt über einen Satz von Berechtigungen, die die verfügbaren Rechte für diese Rolle definieren. Es gibt fünf Berechtigungen und jede kann Objekten im System zugewiesen werden.</p>
+        <h3>Berechtigungstypen</h3>
+        <p>Objektberechtigungen beinhalten Erstellen (C), Lesen (R), Bearbeiten (E), Löschen (D) und Freigeben (A &amp; S). Jeder Objekttyp verfügt über seinen eigenen Satz von Objektberechtigungen. Mit benutzerdefinierten Rollen können Sie Ihren eigenen einmaligen Satz von Berechtigungstypen für jede Objektberechtigung ermöglichen.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Berechtigung</th>
+                    <th>Dem Benutzer gewährte Rechte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Erstellen (C)</td>
+                    <td>Objekt erstellen</td>
+                </tr>
+                <tr>
+                    <td>Lesen (R)</td>
+                    <td>Objekt anzeigen</td>
+                </tr>
+                <tr>
+                    <td>Bearbeiten (E)</td>
+                    <td>Objekt bearbeiten</td>
+                </tr>
+                <tr>
+                    <td>Löschen (D)</td>
+                    <td>Objekt löschen</td>
+                </tr>
+                <tr>
+                    <td>Freigeben (A)</td>
+                    <td>Beliebige Benutzerrolle zuweisen oder entfernen</td>
+                </tr>
+                <tr>
+                    <td>Freigeben (S)</td>
+                    <td>Eigene Benutzerrolle zuweisen oder entfernen</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Objekte</h3>
+        <p>Objekte werden entsprechend ihrer Bezeichnung auf der Oberfläche in Caseware Cloud, wie z. B. Aktivitäten, Inhalt, Entität und Hochgeladene Dateien, benannt.</p>
+        <p>In den nachfolgenden Tabellen sind alle Objektberechtigungen mit ihren Beschreibungen aufgelistet (die vollständige Liste der Objektberechtigungen steht auch im Bereich Rollenberechtigungen auf der Seite <b>Einstellungen</b> zur Verfügung):</p>
+        <ul>
+            <li><a href="#System_objects">Unternehmen</a></li>
+            <li><a href="#Entity_objects">Entität</a></li>
+            <li><a href="#App_objects">Inhalte innerhalb von Entitäten</a></li>
+        </ul>
+        <h3><a name="System_objects"></a>Unternehmen</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Typ</th>
+                    <th>Berechtigungen</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kontakt</td>
+                    <td>C D</td>
+                    <td>Der Kontakt selbst beinhaltet alle Informationen zu <i>Kontakt - Details</i> und <i>Kontakt - Zusammenfassung</i>.</td>
+                </tr>
+                <tr>
+                    <td>Kontakt - Details</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Kontaktformular:</p>
+                        <ul>
+                            <li>Telefonnummer (Privat, Mobil)</li>
+                            <li>Typ</li>
+                            <li>Tags</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kontakt - Zusammenfassung</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Kontaktformular:</p>
+                        <ul>
+                            <li>E-Mail-Adresse (Benutzername)</li>
+                            <li>Name (Vorname, Nachname)</li>
+                            <li>Beruf/Tätigkeit</li>
+                            <li>Telefonnummer (Unternehmen)</li>
+                            <li>Systemweite Rollen (Rollen, die auf der Seite Personen zugewiesen wurden)</li>
+                            <li>Mitarbeitergruppen</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kontaktgruppe</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Kontaktgruppen, einschließlich der Zuordnung und dem Entfernen von Kontakten.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Unternehmen</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Das Unternehmen selbst und die folgenden Bereiche:</p>
+                        <ul>
+                            <li>Einstellungen</li>
+                        </ul>
+                        <p><b>Time Erwägungen</b></p>
+                        <ul>
+                            <li>Arbeitscodes anzeigen (R)</li>
+                            <li>Arbeitscodes bearbeiten (E)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mitarbeiter</td>
+                    <td>C D</td>
+                    <td>Der Mitarbeiter selbst beinhaltet alle Informationen zu <i>Mitarbeiter - Details</i> und <i>Mitarbeiter - Zusammenfassung</i>.</td>
+                </tr>
+                <tr>
+                    <td>Mitarbeiter - Details</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Mitarbeiterformular:</p>
+                        <ul>
+                            <li>Telefonnummer (Privat, Mobil)</li>
+                            <li>Tags</li>
+                            <li>Rollenzuweisungen für Entitäten</li>
+                            <li>Systemweite Rollen (Rollen, die auf der Seite Personen zugewiesen wurden)</li>
+                        </ul>
+                        <p><b>Time Erwägungen</b></p>
+                        <ul>
+                            <li>Mitarbeitersätze für Mitarbeiter anzeigen (R)</li>
+                            <li>Mitarbeitersätze für Mitarbeiter bearbeiten (BE)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mitarbeiter - Zusammenfassung</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Mitarbeiterformular:</p>
+                        <ul>
+                            <li>Name (Vorname, Nachname)</li>
+                            <li>E-Mail-Adresse (Benutzername)</li>
+                            <li>Typ</li>
+                            <li>Titel</li>
+                            <li>Position</li>
+                            <li>Telefonnummer (Unternehmen)</li>
+                            <li>Status</li>
+                            <li>Mitarbeitergruppen</li>
+                            <li>Apps</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mitarbeitergruppe</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Mitarbeitergruppen, einschließlich der Zuordnung und dem Entfernen von Mitarbeitern.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tag</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Der Tag selbst und die folgenden Bereiche:</p>
+                        <ul>
+                            <li>Tag-Verwaltung auf der Seite Einstellungen.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Entity_objects"></a>Entität</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Typ</th>
+                    <th>Berechtigungen</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entität</td>
+                    <td>C D A S</td>
+                    <td>Die Entität selbst beinhaltet alle Informationen zu <i>Entität - Details</i> und <i>Entität - Zusammenfassung</i>.</td>
+                </tr>
+                <tr>
+                    <td>Entität - Details</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Entitätsformular:</p>
+                        <ul>
+                            <li>Status</li>
+                            <li>Startdatum</li>
+                            <li>Endmonat des Geschäftsjahres</li>
+                            <li>Inaktiv-Datum</li>
+                            <li>Telefonnummern (Unternehmen, Unternehmen Fax, Privat und Mobil)</li>
+                            <li>Social Profile (Webseite, Twitter, Facebook, LinkedIn)</li>
+                            <li>E-Mail</li>
+                            <li>Notiz</li>
+                            <li>Tags</li>
+                            <li>Branchencodes</li>
+                            <li>Steuer-Info</li>
+                            <li>Historie</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entität - Zusammenfassung</td>
+                    <td>R E</td>
+                    <td>
+                        <p>Die folgenden Informationen aus dem Entitätsformular:</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Typ</li>
+                            <li>Nummer</li>
+                            <li>Adresse 1 (Straße, Stadt, Bundesland, Land, PLZ)</li>
+                            <li>Adresse 2 (Straße, Stadt, Bundesland, Land, PLZ)</li>
+                        </ul>
+                        <p><b>Time Erwägungen</b></p>
+                        <ul>
+                            <li>Einträge für Zeit- und Kostenaufwand für Kunden eingeben (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="App_objects"></a>Inhalte innerhalb von Entitäten</h3>
+        <table class="table table-striped">
+            <col style="width: 20%" />
+            <col style="width: 10%" />
+            <col style="width: 70%" />
+            <thead>
+                <tr>
+                    <th>Typ</th>
+                    <th>Berechtigungen</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aktivität</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>Die folgenden Aktivitätstypen:</p>
+                        <ul>
+                            <li>Diskussionen</li>
+                            <li>Aufgaben</li>
+                            <li>Dateianforderungen</li>
+                            <li>Kommentare (R)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aktivität - Kommentar</td>
+                    <td>C E D</td>
+                    <td>
+                        <p>Kommentare zu den folgenden Aktivitätstypen:</p>
+                        <ul>
+                            <li>Diskussionen</li>
+                            <li>Aufgaben</li>
+                            <li>Dateianforderungen</li>
+                            <li>Systemaktivitäten</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datei</td>
+                    <td>C R E D A S</td>
+                    <td>
+                        <p>Die folgenden Objekte auf der Seite Dateien:</p>
+                        <ul>
+                            <li>Ordner</li>
+                            <li>URL-Links</li>
+                        </ul>
+                        <p>Für weitere Dateiobjekte wird der Zugriff auf der Registerkarte <b>Apps</b> bei der Erstellung oder Bearbeitung von Mitarbeitern, Kontakten oder Gruppen gewährt.</p>
+                        <p class="note"><b>Hinweis:</b> Die Berechtigung <b>Bearbeiten</b> für Dateien ermöglicht Benutzern, leere Ordner zu löschen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="app-permissions">App-Berechtigungen</h2>
+        <p>Jede App verfügt über einen Satz von Berechtigungen, die die Rechte für Mitarbeiter oder Gruppen definieren, denen Zugriff auf die App gewährt wurde. Stellen Sie sicher, dass Sie über die Rolle <i>Mitarbeiteradministrator</i> verfügen, um Mitarbeitern oder Mitarbeitergruppen Zugriff zu gewähren, oder die Rolle <i>Entitätsadministrator</i> innehaben, um Kontakten oder Kontaktgruppen Zugriff zu gewähren.</p><MadCap:snippetBlock src="../../../Resources/Snippets/To-set-app-access-for-a-user-or-group.flsnp" /><h3 id="time-app">Time App-Berechtigungen</h3>
+        <p><img src="../../../Resources/Images/edit-staff-time-app-permissions.png" alt="Eine Liste von verfügbaren Berechtigungen, die mit der Time App verbunden sind." /></p>
+        <p>Sie können die folgenden App-Berechtigungen jeder Gruppe oder jedem Mitarbeiter mit einer gültigen Time Lizenz zuordnen.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Berechtigung</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Eigene Einträge bearbeiten</td>
+                    <td>Persönliche Einträge zu Zeit- und Kostenaufwand übermitteln</td>
+                </tr>
+                <tr>
+                    <td>Alle Mitarbeitereinträge bearbeiten</td>
+                    <td>Einträge zu Zeit- und Kostenaufwand im Namen anderer Mitarbeiter übermitteln.</td>
+                </tr>
+                <tr>
+                    <td>Alle Mitarbeitereinträge übertragen</td>
+                    <td>Einträge zu Zeit- und Kostenaufwand zwischen Entitäten und Engagements transferieren.</td>
+                </tr>
+                <tr>
+                    <td>Verarbeiten</td>
+                    <td>Starten Sie die Billing App, lassen Sie die Summe der laufenden Arbeiten anzeigen und erstellen Sie Rechnungen</td>
+                </tr>
+                <tr>
+                    <td>Eigene Einträge anzeigen</td>
+                    <td>Verwenden Sie persönliche Einträge zu Zeit- und Kostenaufwand, um Analyseberichte zu erstellen</td>
+                </tr>
+                <tr>
+                    <td>Alle Mitarbeitereinträge anzeigen</td>
+                    <td>Verwenden Sie Einträge zu Zeit- und Kostenaufwand für alle Mitarbeitern, um Analyseberichte zu erstellen</td>
+                </tr>
+                <tr>
+                    <td>Rechnungsstellung und Einträge der laufenden Arbeiten anzeigen</td>
+                    <td>Verwenden Sie Informationen zu laufenden Arbeiten und zur Fakturierung, um Analyseberichte zu erstellen</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

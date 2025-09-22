@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Notes de mise à jour SE 2024-05</h1>
+        <p>Bienvenue dans la version SE 2024-05 ! Cette version comprend des mises à jour importantes de la conception de la bibliothèque des risques et des paramètres du produit, ainsi que des mises à jour de Cloud Connector, une nouvelle fonctionnalité permettant aux utilisateurs de synchroniser les données de la balance des comptes entre les missions et bien plus encore.</p>
+        <h2>Cloud Connector updates</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p><img src="../Resources/Images/cloud-connector-redesign.png" style="width: 928px;height: 492px;" alt="Un fichier Microsoft Excel avec le panneau Caseware Cloud Connector ouvert." /></p>
+        <p>A number of improvements have been made to Cloud Connector as part of this release:</p>
+        <ul>
+            <li>
+                <p>Le volet Cloud Connector présente désormais un nouveau design.</p>
+            </li>
+            <li>
+                <p>Un indicateur de chargement a été ajouté au volet afin que les utilisateurs sachent que leurs données sont en cours de chargement.</p>
+            </li>
+            <li>
+                <p>Les comptes et groupes dont le solde est nul sont désormais masqués par défaut. Vous pouvez cocher la case <b>Inclure les postes à solde nul</b> pour afficher ces postes.</p>
+            </li>
+            <li>
+                <p>Les formules de Cloud Connector prennent désormais en charge l&apos;utilisation des données de l&apos;entité mère, des filiales et des données consolidées pour les engagements de consolidation.</p>
+            </li>
+            <li>
+                <p>Lorsque vous ajoutez un groupe à votre feuille de calcul à partir du volet Connecteur cloud, tous les sous-groupes visibles de ce groupe sont désormais également ajoutés.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Les vidéos suivantes présentent des démonstrations des mises à jour de Cloud Connector :</p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1iHDeymHStT-lUZZESWOevLWEMqQ1T0-u/view?usp=sharing">Inclure les postes à solde nul</a></p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/1UpQyffhD-igOQWHllPKj_GZUXo5Qofu9/view?usp=sharing">Données de consolidation pour Cloud Connector</a></p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online"><a href="https://drive.google.com/file/d/14uiWLYxecyNGoTas_BwrRG54jbnRM1E8/view?usp=sharing">Ajouter tous les sous-groupes visibles d&apos;un groupe</a></p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="Insert-data-using-the-right-pane.htm">Insérer des données à l&apos;aide du volet droit</a>.</p>
+        <h2>Actions en bloc pour les documents</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>La page <b>Documents</b> offre désormais la possibilité d&apos;apporter des modifications à plusieurs documents à la fois.</p>
+        <p><img src="../Resources/Images/documents-page-bulk-actions-setting.png" alt="Le paramètre Actions en bloc du menu Autres actions de la page Documents." /></p>
+        <p>Lorsque vous activez l&apos;option <b>Actions en bloc</b> dans le menu <b>Autres actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) de la page <b>Documents</b> , vous pouvez sélectionner plusieurs documents, puis les déplacer, les supprimer ou les signer tous en même temps.</p>
+        <p>Notez que :</p>
+        <ul>
+            <li>
+                <p>Les auteurs principaux ne peuvent pas réorganiser les documents dans des groupes prédéfinis par les auteurs primaires</p>
+            </li>
+            <li>
+                <p>Les utilisateurs finaux ne peuvent pas supprimer les documents créés par les auteurs principaux ou les auteurs de l&apos;entreprise</p>
+            </li>
+            <li>
+                <p>L&apos;option de signature en bloc des documents n&apos;est disponible que dans les missions</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/documents-page-bulk-actions.png" style="width: 1236px;height: 589px;" alt="La page Documents avec les actions en bloc activées." /></p>
+        <p>Si les utilisateurs tentent de supprimer des documents qu&apos;ils n&apos;ont pas le droit de supprimer, une liste des documents qu&apos;ils ne peuvent pas supprimer s&apos;affiche dans la boîte de dialogue de confirmation.</p>
+        <p><img src="../Resources/Images/bulk-actions-delete-documents-dialog.png" style="width: 976px;height: 464px;" alt="La boîte de dialogue de confirmation Supprimer les documents énumère les documents qui ne peuvent pas être supprimés." /></p>
+        <p>Lorsque les utilisateurs signent des documents en bloc, ils peuvent revoir les documents avant de les signer. La colonne <b>Statut</b> de la boîte de dialogue Révision informe les utilisateurs des informations supplémentaires dont ils peuvent avoir besoin avant de signer les documents. Par exemple, s&apos;ils signent une liste de contrôle mais que toutes les procédures n&apos;ont pas été signées, la colonne <b>Statut</b> affiche cette information. Ils seront également informés s&apos;ils ont sélectionné des documents qui ne peuvent pas être signés.</p>
+        <p><img src="../Resources/Images/bulk-actions-review-selected-documents.png" style="width: 507px;height: 417px;" alt="La boîte de dialogue Réviser les documents sélectionnés." /></p>
+        <p>Lorsque vous avez terminé les actions que vous souhaitez entreprendre, vous pouvez désactiver les <b>actions en bloc</b> à partir du menu <b>Autres actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) ou sélectionner l&apos;icône <b>Fermer</b> (<img src="../Resources/Images/icon-remove-from-chart.png" style="vertical-align: text-bottom;" alt=" " />).</p>
+        <p>Voir <a href="https://drive.google.com/file/d/1O6xsiW3qsTI4WpA_0y1YMbSaIhbQ23Is/view?usp=sharing">Actions en bloc</a> pour visionner une vidéo de démonstration de cette fonctionnalité.</p>
+        <p>Pour en savoir plus, voir <a href="Finalize-your-draft.htm">Créer un brouillon</a>.</p>
+        <p><img src="../Resources/Images/bulk-actions-close.png" style="width: 999px;height: 496px;" alt="L&apos;icône Fermer pour les actions en bloc se trouve dans le coin supérieur droit de la page Documents." /></p>
+        <h2>Mise à jour de la conception de la bibliothèque des risques</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Un certain nombre de modifications ont été apportées à la conception de la page de la <b>bibliothèque des risques</b> afin d&apos;en améliorer la convivialité :</p>
+        <ul>
+            <li>
+                <p>Le filtre <b>VIEW BY</b> est désormais défini par défaut sur <b>Indicators</b> . L&apos;option <b>Catégories</b> du filtre a été renommée en <b>Cycles</b> ou <b>Zones</b> selon que des cycles ou des zones sont utilisés dans la bibliothèque des risques. Si les indicateurs ne sont pas utilisés dans la bibliothèque des risques, les risques sont affichés par cycles ou par domaines.</p>
+            </li>
+            <li>
+                <p>Les cartes de risque réduites affichent désormais toutes les assertions appliquées au risque, ainsi que le cycle ou le domaine associé au risque, le cas échéant.</p>
+            </li>
+            <li>
+                <p>L&apos;indicateur numérique des groupes à risque est désormais plus grand et s&apos;affiche à côté du nom du groupe plutôt qu&apos;à l&apos;extrême droite de l&apos;écran.</p>
+            </li>
+            <li>
+                <p>Le menu déroulant <b>Catégorie</b> est désormais le menu déroulant <b>Cycles</b> ou <b>Zones</b> , selon que des cycles ou des zones sont utilisés dans la bibliothèque des risques. Les groupes de risques s&apos;affichent comme des sous-catégories des cycles ou des domaines auxquels ils sont associés dans la liste déroulante.</p>
+            </li>
+            <li>
+                <p>Un filtre <b>Cycles</b> est désormais disponible pour filtrer les risques par cycle.</p>
+            </li>
+            <li>
+                <p>Vous pouvez désormais réduire et développer tous les cycles ou tous les groupes de risques.</p>
+            </li>
+        </ul>
+        <h2>Afficher les colonnes à solde nul dans les tableaux dynamiques</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les colonnes des tableaux dynamiques sont désormais masquées automatiquement si la colonne ne contient que des soldes nuls dans les paramètres du tableau.</p>
+        <p>Lorsque vous créez un nouveau tableau dynamique dans un modèle ou un engagement, le paramètre <b>Masquer les colonnes à solde nul</b> est activé par défaut. Pour tous les tableaux dynamiques existants créés avant cette version, le paramètre est désactivé.</p>
+        <p>Pour en savoir plus, voir <a href="Display-zero-balance-columns-in-dynamic-tables.htm">Grouper des colonnes dans des tableaux dynamiques</a>.</p>
+        <p><img src="../Resources/Images/dynamic-table-settings-hide-zero-balance-columns.png" style="width: 198px;height: 353px;" alt="Le paramètre Masquer les colonnes à solde nul dans les paramètres du tableau dynamique." /></p>
+        <h2>Customize headings in financial statements</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les mises à jour suivantes ont été effectuées afin de vous offrir davantage d&apos;options de personnalisation pour les en-têtes des états financiers :</p>
+        <ul>
+            <li>
+                <p>La boîte de dialogue Options de formatage comprend désormais un champ permettant de définir la taille de la police pour les titres des zones.</p>
+            </li>
+            <li>
+                <p>Vous pouvez désormais ajouter une numérotation pour les titres de zones dans la boîte de dialogue Options de numérotation des titres. Alors qu&apos;auparavant la numérotation n&apos;était affichée que dans le plan du document, elle s&apos;affiche désormais également lorsque vous naviguez vers la zone dans les états financiers ainsi que dans la table des matières</p>
+            </li>
+            <li>
+                <p>Les cinq niveaux de titres pour les domaines et les notes peuvent désormais être affichés dans la table des matières.</p>
+            </li>
+            <li>
+                <p>Vous pouvez désormais masquer les titres individuels des zones de la table des matières et masquer la numérotation d&apos;un titre individuel dans le menu <b>Plus d&apos;actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) d&apos;une zone.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Voir <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Améliorations des états financiers</a> pour visionner une démonstration vidéo de cette fonctionnalité.</p>
+        <p MadCap:conditions="General.Online">Pour en savoir plus, voir <a href="Customize-font-sizes-and-spacing-in-financial-statements.htm">Personnaliser la taille des polices et l&apos;espacement dans les états financiers</a> et <a href="Customize-numbered-headings-in-the-financial-statements.htm">Personnaliser les titres numérotés dans les états financiers</a>.</p>
+        <h2>Page numbering settings for financial statements</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les paramètres d&apos;impression pour les zones d&apos;états financiers comprennent désormais une section de <b>numérotation des pages.</b>  Vous pouvez choisir de poursuivre la numérotation des pages à partir de la zone précédente ou de recommencer la numérotation.</p>
+        <p MadCap:conditions="General.Online">Voir <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Améliorations des états financiers</a> pour visionner une démonstration vidéo de cette fonctionnalité.</p>
+        <p MadCap:conditions="General.Online">Configurer les options d&apos;impression dans les états financiers</p>
+        <p><img src="../Resources/Images/fs-print-settings-page-numbering.png" style="width: 680px;height: 503px;" alt="La section Numérotation des pages dans les paramètres d&apos;impression des états financiers." /></p>
+        <h2>Mise à jour de la conception de la boîte de dialogue &quot;Product Settings</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Cette version présente un tout nouveau design pour la boîte de dialogue Paramètres du produit afin d&apos;assurer une présentation cohérente pour chaque onglet de la boîte de dialogue.</p>
+        <p><img src="../Resources/Images/product-settings-redesign.png" style="width: 633px;height: 418px;" alt="La nouvelle boîte de dialogue Paramètres du produit affiche l&apos;onglet Polices et intitulés." /></p>
+        <h2>Numéros d&apos;ordre</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les dimensions disposent désormais d&apos;un champ <b>Numéro</b> permettant de définir un identifiant unique pour chaque dimension. Cet identifiant unique peut être utilisé comme champ lors de l&apos;importation de transactions pour affecter des transactions à une dimension. Pour en savoir plus, consultez les <a href="https://developers.caseware.com/developers_content/v1/Data-Analytics/Whats-new-data-analytics.htm#Dimensionsforgeneralledgerdatasets">notes de mise à jour de la SE 2024-02</a>.</p>
+        <p>Si un utilisateur ne souhaite pas utiliser les numéros de dimension, il peut désactiver l&apos;option <b>Afficher les numéros</b> et masquer la colonne <b>Numéro.</b> </p>
+        <p>Pour en savoir plus, voir <a href="Add-dimensions.htm">Ajouter des dimensions</a>.</p>
+        <p><img src="../Resources/Images/product-settings-dimensions-number-column.png" style="width: 717px;height: 472px;" alt="L&apos;onglet Dimensions dans les paramètres du produit. " /></p>
+        <h2>Formulaire de matérialité</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#premier auteur</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les mises à jour suivantes ont été apportées à la page Documents :</p>
+        <h3>Sections d&apos;information sur l&apos;orientation</h3>
+        <p>Vous pouvez ajouter des informations d&apos;orientation pour les utilisateurs afin d&apos;inclure des instructions spéciales, des hypothèses ou toute autre information nécessaire que vous devez communiquer concernant chacune des sections du document sur l&apos;importance relative ainsi que la zone d&apos;orientation générale du document.</p>
+        <p><img src="../Resources/Images/materiality-document-guidance.png" alt="L&apos;onglet Orientation du document de matérialité." /></p>
+        <p>Les auteurs du cabinet ont également la possibilité d&apos;activer leurs propres sections d&apos;informations d&apos;orientation et peuvent choisir de conserver ou non les sections d&apos;informations d&apos;orientation ajoutées par les auteurs principaux.</p>
+        <p><img src="../Resources/Images/materiality-document-overall-materiality.png" alt="La section &quot;Overall Materiality&quot; du document de matérialité avec les sections &quot;primary author&quot; et &quot;firm author guidance&quot;." /></p>
+        <h3>Section des informations qualitatives</h3>
+        <p>Vous pouvez désormais activer une nouvelle section pour documenter les éventuelles inexactitudes dans les informations qualitatives.</p>
+        <p><img src="../Resources/Images/materiality-document-qualitative-disclosures.png" alt="La section &quot;Informations qualitatives&quot; du document relatif à l&apos;importance relative." /></p>
+        <h3>Matérialité des performances basée sur des pourcentages prédéfinis</h3>
+        <p>Vous pouvez maintenant choisir de définir des pourcentages prédéfinis pour calculer les niveaux de matérialité des performances. Les auteurs de l&apos;entreprise peuvent personnaliser les valeurs en pourcentage. Toute mise à jour ultérieure du modèle de produit ne remplacera pas les personnalisations effectuées par l&apos;auteur de l&apos;entreprise.</p>
+        <p><img src="../Resources/Images/materiality-document-performance-materiality.png" alt="La section &quot;Performance Materiality&quot; du document de matérialité." /></p>
+        <p>Les utilisateurs finaux peuvent alors utiliser les pourcentages prédéfinis lorsqu&apos;ils remplissent le document de matérialité.</p>
+        <p><img src="../Resources/Images/materiality-document-performance-materiality-end-user.png" alt="Le point de vue de l&apos;utilisateur final sur la section &quot;Performance Materiality&quot; du document de matérialité." /></p>
+        <h3>Montant des inexactitudes négligeables calculé sur la base de pourcentages prédéfinis</h3>
+        <p>Vous pouvez désormais définir des pourcentages prédéfinis pour calculer le montant en deçà duquel les inexactitudes sont manifestement négligeables.</p>
+        <p>Les auteurs de l&apos;entreprise peuvent personnaliser les valeurs en pourcentage. Toute mise à jour ultérieure du modèle de produit ne remplacera pas les personnalisations effectuées par l&apos;auteur de l&apos;entreprise.</p>
+        <p><img src="../Resources/Images/materiality-document-trivial-misstatements.png" alt="La section sur les anomalies mineures du document sur l&apos;importance relative." /></p>
+        <h2>Nouveau pour les auteurs</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2024-05.</p>
+        <h3>Réaffectation dynamique des comptes pour les structures de regroupement secondaires</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauthor</a></p>
+        <p>La propriété <b>Réaffecter la cible pour les comptes contraires</b> est désormais disponible pour les groupes financiers dans les structures de regroupement secondaires. Cela vous permet de mettre en place une réaffectation dynamique des comptes pour les groupes dans ces structures.</p>
+        <h3>Composants du contenu de la bibliothèque des risques</h3>
+        <p><a href="Primary-author.htm" MadCap:conditions="General.Online">#primaryauthor</a></p>
+        <p>Vous pouvez maintenant attribuer des composants aux contenus suivants dans votre bibliothèque des risques :</p>
+        <ul>
+            <li>
+                <p>Risques</p>
+            </li>
+            <li>
+                <p>Groupes à risque</p>
+            </li>
+            <li>
+                <p>Procédures</p>
+            </li>
+            <li>
+                <p>Contrôles</p>
+            </li>
+            <li>
+                <p>Objectifs de contrôle</p>
+            </li>
+        </ul>
+        <p>Le fichier modèle de la bibliothèque des risques a été mis à jour pour inclure une feuille permettant de définir les composants. Des colonnes ont également été ajoutées aux feuilles existantes afin que les composants puissent être affectés au contenu. Notez que tous les composants inclus dans la bibliothèque des risques doivent déjà exister dans votre modèle de produit.</p>
+        <h3>Composants pour les auteurs d&apos;entreprises</h3>
+        <p><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>Les auteurs de cabinets peuvent désormais créer leurs propres composants et catégories de composants dans le modèle de cabinet. Une fois qu&apos;ils ont créé leurs composants, ils peuvent les affecter au contenu du modèle d&apos;entreprise, y compris au contenu créé par l&apos;auteur principal. Il est à noter que les auteurs d&apos;entreprises n&apos;ont pas accès à la personnalisation de la bibliothèque des risques et ne peuvent pas assigner de composants à ce contenu.</p>
+        <p>Dans le cadre de cette fonctionnalité, les auteurs de l&apos;entreprise peuvent également visualiser les composants et les catégories de composants créés par l&apos;auteur principal, toute logique de visibilité associée à ces composants et les composants affectés au contenu du modèle.</p>
+        <p>Les auteurs fermes ne peuvent pas modifier ou supprimer des composants, des catégories de composants ou des affectations de composants au contenu créé par l&apos;auteur principal, mais ils peuvent ajouter leurs propres composants aux catégories créées par l&apos;auteur principal.</p>
+        <p>Il est à noter que si les auteurs d&apos;entreprises peuvent affecter des composants aux groupes financiers qu&apos;ils créent, ils ne peuvent pas affecter de composants aux groupes créés par l&apos;auteur principal.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Define-components.htm">Définir des composants</a> et <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Assign-components-to-items-in-your-template.htm">Affecter des composants aux éléments de votre modèle.</a></p>
+        <h3>Couper et coller des tableaux dynamiques</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>Vous pouvez désormais couper et coller des tableaux dynamiques. Cette fonction permet de déplacer facilement les tableaux dynamiques d&apos;une partie à l&apos;autre des états financiers.</p>
+        <p>Pour couper un tableau dynamique, sélectionnez <b>Autres actions</b> (<img src="../Resources/Images/icon-more-actions-inline.png" alt=" " style="vertical-align: text-bottom;" />) | <b>Couper la section.</b></p>
+        <p><img src="../Resources/Images/fs-cut-dynamic-table.png" style="width: 145px;height: 297px;" alt="L&apos;option Couper la section dans le menu Plus d&apos;actions pour un tableau dynamique." /></p>
+        <p>Pour coller le tableau dynamique, sélectionnez l&apos;ajout d&apos;une nouvelle section, puis sélectionnez <b>Coller la section.</b></p>
+        <p MadCap:conditions="General.Online">Voir <a href="https://drive.google.com/file/d/1HAtGMpWUjxGAE8MnboAWYCucO0WBw9QJ/view">Améliorations des états financiers</a> pour visionner une démonstration vidéo de cette fonctionnalité.</p>
+        <p MadCap:conditions="General.Online">Pour en savoir plus, voir <a href="Cut-and-paste-a-table.htm">Couper et coller un tableau</a>.</p>
+        <p><img src="../Resources/Images/fs-paste-dynamic-table.png" style="width: 741px;height: 308px;" alt="L&apos;option Coller la section est disponible lors de l&apos;ajout d&apos;une nouvelle section dans un domaine des états financiers." /></p>
+        <h2>Nouveau pour les utilisateurs finaux</h2>
+        <p>Voici les nouveautés pour les utilisateurs finaux dans la SE 2024-05.</p>
+        <h3>Synchroniser la balance des comptes d&apos;une mission à l&apos;autre</h3>
+        <p>Lorsque les utilisateurs importent dans leur mission des données provenant d&apos;une autre mission, ils peuvent désormais sélectionner l&apos;option <b>Synchroniser la balance de vérification</b> pour synchroniser automatiquement les données de la mission source. Cela leur permet de modifier les données dans l&apos;engagement source et de partager automatiquement ces modifications avec les engagements synchronisés.</p>
+        <p><img src="../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="L&apos;option Synchroniser la balance de vérification dans la boîte de dialogue Recherche d&apos;engagement."></img></p>
+        <p>Lorsque les données d&apos;un engagement sont synchronisées à partir d&apos;un autre engagement :</p>
+        <ul>
+            <li>
+                <p>Un lien vers l&apos;engagement source s&apos;affiche sur la page <b>Données.</b> </p>
+            </li>
+            <li>
+                <p>Les utilisateurs ne peuvent pas modifier les comptes, les groupes ou les ajustements synchronisés à partir de l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Les utilisateurs ne peuvent pas attribuer des comptes qui ont été synchronisés à partir de l&apos;engagement source.</p>
+            </li>
+            <li>
+                <p>Les utilisateurs peuvent créer des problèmes et des annotations pour les comptes et les groupes synchronisés, mais ne peuvent pas créer d&apos;annotations pour les ajustements synchronisés.</p>
+            </li>
+            <li>
+                <p>Lorsque des modifications sont apportées à l&apos;engagement source, les utilisateurs de l&apos;engagement de destination reçoivent une notification les informant que ces modifications ont été appliquées à leur dossier. Les engagements sont resynchronisés toutes les cinq minutes.</p>
+            </li>
+            <li>
+                <p>Si les utilisateurs verrouillent un engagement qui contient des données synchronisées à partir d&apos;un engagement source, les modifications apportées à l&apos;engagement source ne sont plus synchronisées.</p>
+            </li>
+            <li>
+                <p>Si l&apos;engagement source et l&apos;engagement de destination sont reportés, les fichiers reportés sont automatiquement liés afin que les utilisateurs puissent continuer à synchroniser les données de l&apos;engagement source de l&apos;année en cours.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online">Voir <a href="https://drive.google.com/file/d/1DkmhqiUR315uPJ-0hu_E3M7N7Hi6AWZc/view?usp=sharing">Synchroniser la balance de vérification</a> pour voir une démonstration vidéo de cette fonctionnalité.</p>
+        <p MadCap:conditions="General.Online">Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Import-the-trial-balance-from-an-engagement-file.htm">Importer la balance de vérification à partir d&apos;un fichier CSV ou Excel</a>.</p>
+        <h3>Présentation des groupes financiers dans la page Données.</h3>
+        <p>Lorsque les utilisateurs accèdent aux onglets des groupes financiers de la page <b>Données</b> , ils peuvent désormais :</p>
+        <ul>
+            <li>
+                <p>Réorganiser un groupe</p>
+            </li>
+            <li>
+                <p>Développer et réduire les dossiers</p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">Importer les données du client</a>.</p>
+        <h3>Outils de révision activés.</h3>
+        <p>Lorsque les utilisateurs sélectionnent le numéro à côté d&apos;un outil de révision dans le popover Outils de révision, le document passe désormais automatiquement à l&apos;élément suivant marqué pour cet outil de révision. Cette amélioration permet aux utilisateurs de naviguer plus facilement dans les éléments à réviser d&apos;un document.</p>
+        <p>Notez que cette amélioration n&apos;est disponible que pour les listes de contrôle, les risques et les états financiers.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Travailler avec les outils de révision.</a></p>
+        <h3>Ajouter des comptes pour les filiales internes</h3>
+        <p>Dans les missions de consolidation, les utilisateurs peuvent désormais ajouter et modifier manuellement les comptes des filiales internes.</p>
+        <h3>Report des contrôles</h3>
+        <p>Les utilisateurs peuvent désormais modifier et supprimer les ajustements de l&apos;année précédente dans les missions créées à partir d&apos;un report.</p>
+        <h3>Link annotations to checklist procedures</h3>
+        <p>Les utilisateurs peuvent désormais lier les annotations à des procédures spécifiques de la liste de contrôle plutôt qu&apos;au document de la liste de contrôle dans son ensemble. Les utilisateurs peuvent sélectionner une procédure spécifique après avoir sélectionné un document de la liste de contrôle dans la liste déroulante <b>Lien.</b>  Ils peuvent développer et réduire les groupes et les procédures avec les sous-procédures pour trouver la procédure qu&apos;ils recherchent. La procédure sélectionnée s&apos;affiche en bleu.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps//en/Engagements/Documentation-and-Review/Add-annotations.htm">Ajouter des dimensions</a>.</p>
+        <p><img src="../Resources/Images/annotation-dialog-select-procedure.png" style="width: 264px;height: 382px;" alt="La section Procédure de la boîte de dialogue Créer une annotation."></img></p>
+        <h3>Ajustements sur la page Ajustements</h3>
+        <p>Les modifications suivantes ont été apportées à l&apos;affichage des ajustements sur la page <b>Données :</b> </p>
+        <ul>
+            <li>
+                <p>Les ajustements de l&apos;année précédente s&apos;affichent désormais sur la page des <b>données</b> .</p>
+            </li>
+            <li>
+                <p>The <b>Split Adjustments</b> option is now available on the <b>Data</b> page. Lorsque l&apos;utilisateur active cette option, les ajustements normaux et les ajustements de reclassement sont affichés dans des colonnes séparées. Pour mettre cette option à la disposition des utilisateurs finaux, cochez la case <b>Activer les colonnes d&apos;ajustement fractionnées</b> dans l&apos;onglet <b>Page de données</b> des paramètres de votre produit.</p>
+            </li>
+        </ul>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/View-the-clients-trial-balance-data.htm">Importer les données du client</a>.</p>
+        <h3>Sélectionner le nombre de lignes à afficher sur la page Données</h3>
+        <p>Vous pouvez maintenant sélectionner le nombre de lignes à afficher sur la page <b>Données</b> dans le menu déroulant <b>Lignes par page</b> . Vous pouvez choisir d&apos;afficher 100, 200, 300, 400 ou 500 lignes par page. La valeur par défaut est 100.</p>
+        <p><img src="../Resources/Images/data-page-rows-per-page-dropdown.png" alt="La liste déroulante Lignes par page de la page Données."></img></p>
+        <h3>Modifier les soldes de planification dans la page Données</h3>
+        <p>Les utilisateurs peuvent désormais modifier les soldes de planification sur la page <b>Données</b> , même après l&apos;importation du solde final.</p>
+        <h3>Sélection de plusieurs dimensions lors de la comptabilisation des ajustements</h3>
+        <p>Lorsque les utilisateurs postent des ajustements aux groupes, ils peuvent désormais sélectionner plusieurs dimensions pour chaque ligne de groupe dans l&apos;ajustement.</p>
+        <p>Pour en savoir plus, voir <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm">Comptabiliser les ajustements de la balance de vérification</a>.</p>
+        <h1>Corrections dans SE 2024-05</h1>
+        <p>La liste suivante contient une brève description des problèmes qui ont été résolus dans cette version.</p>
+        <ul>
+            <li>
+                <p>Problèmes d&apos;affichage dans les sections <b>En-tête</b> et <b>Pied de page</b> des paramètres d&apos;impression des états financiers.</p>
+            </li>
+            <li>
+                <p>Les réponses textuelles dans les requêtes ne sont pas sauvegardées.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs utilisent l&apos;option d&apos;aperçu avant impression, les graphiques d&apos;analyse ne tiennent pas sur les pages du PDF généré.</p>
+            </li>
+            <li>
+                <p>Dans les états financiers, lorsque les utilisateurs laissent le champ de <b>description de la table des matières</b> vide pour une zone, le champ se réduit et ne peut plus être édité.</p>
+            </li>
+            <li>
+                <p>Dans les états financiers, lorsque les utilisateurs excluent une note et actualisent ensuite la page, la section <b>Notes des états financiers</b> dans le plan du document n&apos;est plus développée.</p>
+            </li>
+            <li>
+                <p>Dans les états financiers, les descriptions des sauts de page ne s&apos;affichent pas dans la table des matières, à moins que la zone dans laquelle se trouvent les sauts de page ne soit également décrite.</p>
+            </li>
+            <li>
+                <p>Le paramètre <b>Groupes étendus</b> pour les tables dynamiques ne fonctionne pas comme prévu. Les groupes financiers ne sont pas entièrement développés dans le tableau.</p>
+            </li>
+            <li>
+                <p>Dans les missions créées par report, lorsque les utilisateurs ajoutent de nouvelles sections aux états financiers, la section est ajoutée au bas du document au lieu d&apos;être placée à l&apos;endroit sélectionné par l&apos;utilisateur.</p>
+            </li>
+            <li>
+                <p>Sur la page <b>Risques</b> , les liens vers les références des documents d&apos;une fiche de risque ne sont pas cliquables après le verrouillage de la mission.</p>
+            </li>
+            <li>
+                <p>Les utilisateurs finaux ne peuvent pas créer de groupes financiers de revenu global.</p>
+            </li>
+            <li>
+                <p>Dans les produits où la fonction de balance de vérification n&apos;est pas activée, la page <b>Risques</b> affiche des informations sur la balance de vérification.</p>
+            </li>
+            <li>
+                <p>Les colonnes du solde de planification s&apos;affichent sur la page <b>Données</b> dans les produits pour lesquels le solde de planification n&apos;est pas activé.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs se trouvent sur la page des <b>données</b> , le bouton &quot;retour&quot; de leur navigateur ne fonctionne pas.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs ajoutent des lignes aux tableaux dans le formulaire de matérialité, les lignes du tableau se réorganisent automatiquement lorsque l&apos;utilisateur actualise la page ou rouvre l&apos;engagement.</p>
+            </li>
+            <li>
+                <p>Le champ <b>Déclaration erronée</b> s&apos;affiche lors de la création initiale d&apos;un engagement si l&apos;utilisateur change le type en Normal ou Reclassement.</p>
+            </li>
+            <li>
+                <p>Problèmes d&apos;affichage lorsque les utilisateurs ouvrent un champ déroulant dans la boîte de dialogue Modifier l&apos;ajustement.</p>
+            </li>
+            <li>
+                <p>Dans les missions créées à partir d&apos;un report, l&apos;acceptation de toutes les suggestions de report dans une liste de contrôle ne fonctionne pas comme prévu.</p>
+            </li>
+            <li>
+                <p>Dans les procédures de liste de contrôle avec des types de réponse de type informations de contact, lorsque les utilisateurs cliquent dans le champ de réponse puis en sortent, les champs d&apos;informations de contact s&apos;affichent même si l&apos;utilisateur n&apos;a pas sélectionné de contact.</p>
+            </li>
+            <li>
+                <p>Une erreur se produit lorsque les utilisateurs tentent d&apos;accepter des suggestions de report dans les engagements BGL360.</p>
+            </li>
+            <li>
+                <p>Sur la page <b>Hiérarchie de consolidation</b> , si un utilisateur réduit la grille et actualise ensuite la page, la grille n&apos;est plus réduite.</p>
+            </li>
+            <li>
+                <p>Dans le filtre de <b>colonne</b> de la page <b>Données</b> , lorsque les utilisateurs glissent et déposent le filtre de colonne <b>Variance</b> , les sous-filtres <b>Variance $</b> et <b>Variance %</b> sont réorganisés.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs génèrent un échantillon dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> et quittent ensuite la page, la boîte de dialogue de confirmation les informant qu&apos;ils sont sur le point de perdre l&apos;échantillon généré ne s&apos;affiche qu&apos;après qu&apos;ils ont déjà navigué vers une autre page.</p>
+            </li>
+            <li>
+                <p>Lorsque les utilisateurs impriment un aperçu de la page <b>Documents</b> , les dossiers qui sont réduits sur la page ne sont pas développés dans l&apos;aperçu avant impression.</p>
+            </li>
+            <li>
+                <p>Le widget constellation ne s&apos;affiche pas comme prévu sur la page <b>Risques</b> .</p>
+            </li>
+            <li>
+                <p>Les données nouvellement importées ne s&apos;affichent pas dans la page <b>Données</b> tant que l&apos;utilisateur n&apos;a pas actualisé la page.</p>
+            </li>
+            <li>
+                <p>Dans l&apos;onglet <b>Transactions</b> de la page <b>Données</b> , la colonne <b>Montant</b> s&apos;affiche même si elle est paramétrée pour ne pas s&apos;afficher.</p>
+            </li>
+        </ul>
+    </body>
+</html>

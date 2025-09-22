@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Détails du compte décrits</h1>
+        <p>Lorsque vous <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importez des</a> transactions du grand livre à partir d&apos;un fichier CSV ou Excel, vous devez mettre en correspondance les champs afin que les données des transactions s&apos;affichent correctement dans la mission.</p>
+        <p>Cette rubrique décrit les champs de la catégorie <b>DÉTAILS DU COMPTE</b> qui apparaissent dans le jeu de données du grand livre.</p>
+        <p>Notez que certains champs sont obligatoires pour que certains tests d&apos;analyse de données fonctionnent correctement. Pour en savoir plus, voir <a href="CSV-transaction-file-requirements.htm#Mandator2">Champs obligatoires pour l&apos;analyse des données.</a></p>
+        <h2>Identifiant du compte<code>(account_id</code>)</h2>
+        <p>Un identifiant ou le compte dans lequel l&apos;entrée a été enregistrée. <br />Exemples &quot;1001&quot; ou &quot;Compte bancaire 1&quot;.</p>
+        <h3>Utilisation</h3>
+        <p>
+            <ul>
+                <li>Doit être étiqueté pour que toutes les caractéristiques liées à la transaction fonctionnent.</li>
+                <li>Associer la balance de vérification aux informations relatives aux transactions.</li>
+                <li>L&apos;analyse de la balance de vérification permet d&apos;obtenir des informations sur les transactions.</li>
+                <li>Dans tous les tests d&apos;AnalyticsAI - Tous les tests requièrent un identifiant de compte.</li>
+            </ul>
+        </p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>Moins de 5 000 valeurs uniques.</li>
+                <li>Correspondance avec les comptes de la balance de vérification importés.</li>
+            </ul>
+        </p>
+        <h2>Description du compte principal<code>(account_main_description</code>)</h2>
+        <p>Description de l&apos;identifiant du groupe de comptes dans lequel l&apos;entrée a été enregistrée. <br />Exemples : &quot; Trésorerie &quot;, &quot; Immobilisations corporelles &quot;.</p>
+        <h3>Utilisation</h3>
+        <p>Description visuelle des comptes.</p>
+        <h2>Saisi par<code>(entered_by</code>)</h2>
+        <p>Identifiant de la personne qui crée l&apos;entrée.</p>
+        <h3>Utilisation</h3>
+        <p>Dans ces tests AnalyticsAI :<ul><li>Saisie et approbation par le même utilisateur</li><li>Utilisateurs inhabituels</li></ul></p>
+        <h2>Date de saisie<code>(entered_date</code>)</h2>
+        <p>La date et l&apos;heure réelles de l&apos;enregistrement (validation) dans le grand livre - fournies automatiquement par le système - ne correspondent pas nécessairement à la date à laquelle l&apos;enregistrement a été effectué dans le grand livre.</p>
+        <h3>Utilisation</h3>
+        <p>Dans les moments inhabituels, le test AnalyticsAI.</p>
+        <h3>Exigences</h3>
+        <p>Le format de la date doit être correctement défini :</p><MadCap:snippetBlock src="../../Resources/Snippets/DateFormat/DateFormat.flsnp" /><h2>Personne responsable de l&apos;entrée<code>(entry_responsible_person)</code></h2>
+        <p>Identifiant de la personne qui approuve l&apos;entrée.</p>
+        <h3>Utilisation</h3>
+        <p>Dans le cadre du test AnalyticsAI, le même utilisateur saisit et approuve l&apos;analyse.</p>
+    </body>
+</html>

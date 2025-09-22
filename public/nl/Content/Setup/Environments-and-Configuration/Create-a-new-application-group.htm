@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Een nieuwe toepassingsgroep aanmaken (ADFS)</h1>
+        <p>Om Cloud met ADFS te integreren, moet je eerst een nieuwe applicatiegroep voor Cloud maken.</p>
+        <p><b>Een nieuwe toepassingsgroep aanmaken</b></p>
+        <ol>
+            <li>
+                <p>Start de <b>ADFS Administration Console</b>.</p>
+            </li>
+            <li>
+                <p>Klik op de map <b>Application Groups</b> en klik vervolgens in het menu Actions op <b>Add Application Groups</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-01.png" /></p>
+            </li>
+            <li>
+                <p>Voer de naam voor de map in. Selecteer <b>Serverapplicatie</b>in de lijst Sjabloon. Klik op <b>Volgende</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-02.png" /></p>
+            </li>
+            <li>
+                <p>Het veld Client Identifier wordt automatisch ingevuld.</p>
+                <p class="warning"><b>Belangrijk:</b> Kopieer de geheime waarde van de client en plak deze in een tekstdocument voor later gebruik. Label het <b>Client Identifier</b>.</p>
+                <p>Voer in het veld Redirect URI een tijdelijke URL in (bijvoorbeeld https://www.caseware.com) en klik op <b>Toevoegen</b>. Klik op <b>Volgende</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-03.png" /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>Een gedeeld geheim genereren</b>.</p>
+                <p class="warning"><b>Belangrijk:</b> Klik op <b>Kopieer naar klembord</b> en plak het geheim in een tekstdocument voor later gebruik. Label het <b>als Klantgeheim</b>.</p>
+                <p>Klik op <b>Volgende</b>.</p>
+                <p><img src="../../Resources/Images/adfs-application-group-04.png" /></p>
+            </li>
+            <li>
+                <p>Klik op <b>Ja</b> om de configuratie te voltooien.</p>
+            </li>
+        </ol>
+        <p class="note">Volgende <a href="Create-a-Web-API-application.htm">Een Web API-toepassing aanmaken</a></p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Définir les groupes</h1>
+        <p>Les regroupements fournissent un contexte aux comptes que les utilisateurs importent dans le produit. Vous devez définir des regroupements afin d&apos;établir une structure pour les comptes de la balance générale.</p>
+        <p>Les soldes du document des états financiers sont organisés et affichés en fonction des regroupements que vous avez définis. Si vos utilisateurs peuvent importer une balance de vérification dans le produit, vous devez définir une structure de regroupement.</p>
+        <p>Les liens de données suivants sont disponibles :</p>
+        <ul>
+            <li>
+                <p><b>Regroupement financier</b> - ressemble à la présentation du bilan et du compte de résultat. Vous pouvez ajouter jusqu&apos;à trois structures de regroupement financier différentes à un produit. Il prend en charge :</p>
+                <ul>
+                    <li>
+                        <p>générer les états financiers et les notes.</p>
+                    </li>
+                    <li>
+                        <p>la réalisation d&apos;une évaluation des risques dans le rapport RMM.</p>
+                        <p class="note"><b>Remarque :</b> Seule la structure de regroupement financier par défaut peut être utilisée pour effectuer l&apos;évaluation des risques.</p>
+                    </li>
+                    <li>
+                        <p>fournir le niveau de détail approprié pour les graphiques d&apos;analyse, les repères de matérialité, <a href="Visibility-conditions.htm"><span>conditions de visibilité</span></a> et les feuilles de route.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Groupement fiscal</b> - Correspond aux codes fiscaux applicables à votre marché. La correspondance automatique entre le groupe financier et le code fiscal correspondant est disponible.</p>
+            </li>
+            <li>
+                <p><b>Plan comptable</b> - Certains marchés peuvent utiliser un plan comptable standard qui ne ressemble pas nécessairement aux postes des états financiers.</p>
+            </li>
+        </ul>
+        <p>Avant d&apos;ajouter des groupes, vous devez les activer dans les <a href="Enable-tax-and-prescribed-accounts-groupings.htm">paramètres du produit</a>. Vous pouvez ensuite ajouter manuellement des groupes ou les importer à partir d&apos;un fichier Excel, d&apos;un fichier CSV ou de Working Papers.</p><div class="note"><p><b>Remarque :</b> Pour que les structures de regroupement financier secondaires soient incluses dans le PDF généré lorsque les utilisateurs sélectionnent l&apos;option Télécharger la copie de référence, vous devez ajouter ce qui suit à votre fichier product.json :</p><div><pre><code><p>Titre : &quot;Groupes financiers secondaires 2&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groups/financial-2&quot; },</p><p>Titre : &quot;Groupes financiers secondaires 3&quot;, &quot;uri&quot; : &quot;index.jsp#/se-groups/financial-3&quot; },</p></code></pre></div></div></body>
+</html>

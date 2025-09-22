@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>SE 2021-06 release notes</h1>
+        <p>Grab a glass of lemonade and settle in for the summer with SE 2021-06! This release introduces exciting new features like the risk library, multiple signoffs, review tools for the new risk module and more.</p>
+        <h2>Multiple signoffs for a role</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>The <b>Multiple Signoff</b> option is now available for custom signoff roles.</p>
+        <p><img src="../Resources/Images/multiple-signoff.png" style="width: 926px;height: 658px;" alt="The Multiple Signoff option in the Product Settings."></img></p>
+        <p>When the <b>Multiple Signoff</b> option for a role is enabled, more than one user can sign off on the role for a document. Signoffs are displayed in chronological order (the most recent signoff displays at the bottom).</p>
+        <p>Para obtener más información, consulte <a href="Define-signoff-roles.htm">Funciones incorporadas</a>.</p>
+        <h2>Hide sub-level headings for notes in financial statements</h2>
+        <p><a href="End-user.htm">#enduser</a><a href="Primary-author.htm">#primaryauthor</a><a href="Firm-author.htm">#firmauthor</a></p>
+        <p>To enhance presentation in the financial statements, the <b>Notes Print Settings</b> now include an option to automatically hide sub-level headings for notes in the PDF output if there are no subsequent notes in that group.</p>
+        <p>For example, if note 1 includes a subnote 1.a and there is no 1.b, 1.c notes, etc., then the note heading of subnote 1.a does not display in the PDF output. Only the content of that note displays.</p>
+        <p><img src="../Resources/Images/note-print-settings-hide-heading.png" style="width: 911px;height: 536px;" alt="The Hide sub-level headings option in the Notes Print Settings."></img></p>
+        <p>The option to hide sub-level headings in the PDF output is also available for individual notes in the <b>More actions</b> menu if there are no subsequent notes in that group.</p>
+        <p>To learn more, see <a href="Set-up-the-print-options-in-the-financial-statements.htm">Set up the print options in the financial statements</a> and <a href="Hide-sub-level-headings-for-notes.htm">Hide sub-level headings for notes</a>.</p>
+        <h2>New for authors</h2>
+        <p>Here is what&apos;s new for authors in SE 2021-06.</p>
+        <h3>Biblioteca de riesgos</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>To support a more efficient workflow for audit engagements, the risk library is now available. This library allows you to create a predefined list of risks. Users can then select the applicable and relevant risks from the library and add them to the engagement.</p>
+        <p class="note"><b>Note:</b> The risk library is only available for distributors for beta testing. It will not be deployed to partner or production environments. To enable the risk library for your beta site, post a DIST ticket with your request.</p>
+        <p>Once the risk library is enabled for your site, the Risk Library page is available in your firm settings. To create a risk library, upload an Excel file with the content of your library. You can add multiple risk libraries to accommodate different risk documentation requirements for different products.</p>
+        <p><img src="../Resources/Images/risk-library-create.png" style="width: 1189px;height: 549px;" alt="The Create Risk Library dialog."></img></p>
+        <p>When you’re ready, you can publish the library as the major version, then link that version to a product from the <b>Risk</b> | <b>General</b> tab in the product settings.</p>
+        <p>Tenga en cuenta que:</p>
+        <ul>
+            <li>
+                <p>The new risks module must be enabled in the product that you want to link a risk library to.</p>
+            </li>
+            <li>
+                <p>You can only link a product to one risk library at a time.</p>
+            </li>
+            <li>
+                <p>You can link the published risk library version to multiple products.</p>
+            </li>
+        </ul>
+        <p><img src="../Resources/Images/risk-library-product-settings.png" style="width: 915px;height: 654px;" alt="The Library Management section in the Risk | General tab."></img></p>
+        <p>If you need to make changes to a published risk library, you can select to add a new excel file and choose whether it’s a <b>Minor</b> or <b>Patch</b> version of the library. You can add minor versions to use them for planned updates to the library, while patch versions can be added for urgent updates.</p>
+        <p>Once you publish a risk library version and link it to a product, users can add predefined risks from the library instead of creating them manually.</p>
+        <p>When users select the <b>Risk from Library</b> option in the Add dialog, they are directed to the risk library where they can then use the filters and search option in the library to find the appropriate risks.</p>
+        <p><img src="../Resources/Images/risk-library-end-user-UI.png" style="width: 1103px;height: 512px;" alt="The end user view of the risk library."></img></p>
+        <p>Tiene los siguientes temas a su disposición:</p>
+        <ul>
+            <li>
+                <p><b>Type</b> - Filters the displayed risks based on risk type</p>
+            </li>
+            <li>
+                <p><b>Status</b> - Filters the displayed risks based on whether they have been added to the engagement</p>
+            </li>
+            <li>
+                <p><b>Direction</b> - Filters the displayed risks based on direction. This filter is only available for assertion level risks.</p>
+            </li>
+            <li>
+                <p><b>Assertions</b> - Filters the displayed risks based on the associated assertions. This filter is only available for assertion level risks.</p>
+            </li>
+        </ul>
+        <p>In the left panel, users can also select whether to view the displayed risks by <b>Indicators</b> or <b>Categories</b>.</p>
+        <p>To learn more, see:</p>
+        <ul>
+            <li><a href="Create-a-risk-library.htm">Crear biblioteca de riesgos</a></li>
+            <li><a href="Add-a-risk-library-version.htm">Add a risk library version</a></li>
+            <li><a href="Publish-a-risk-library-version.htm">Publish a risk library version</a></li>
+            <li><a href="Associate-a-risk-library-to-a-product.htm">Associate a risk library to a product</a></li>
+        </ul>
+        <h3>XBRL tagging</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>XBRL tagging capabilities have been expanded to allow authors and end users to add tags for XBRL facts directly in the template or engagement file.</p>
+        <p class="note"><b>Note:</b> This feature is only available for distributors for beta testing. It will not be deployed to partner or production environments. To view this feature, open a template or an engagement file and make the following change to your URL: <code>https://&lt;server name of your partner site&gt;/&lt;firm name where you perform your authoring&gt;/e/eng/&lt;identifier&gt;/index.jsp?enable-features=customXbrlTagging</code></p>
+        <p>When XBRL review mode is enabled, untagged items are highlighted in yellow. You can select the <b>Add XBRL Tag</b> option for a specific item to create a tag for it.</p>
+        <p><img src="../Resources/Images/xbrl-add-tag.png" style="width: 1166px;height: 549px;" alt="The Add XBRL Tag option for untagged items."></img></p>
+        <p>You can then select the <b>Element</b> and <b>Context</b> information for the tag from the available options in the review panel.</p>
+        <p>To learn more, see <a href="Test-custom-XBRL-tags.htm">Test custom XBRL tags</a>.</p>
+        <h3>Paragraph spacing in financial statements</h3>
+        <p><a href="Primary-author.htm">#primaryauthor </a></p>
+        <p>The <b>Use consistent paragraph spacing between content areas</b> setting is now available to allow primary authors to enforce a consistent paragraph spacing between content areas in the printed financial statements.</p>
+        <p>To learn more, see <a href="Customize-the-financial-statements-settings.htm">Customize the financial statement settings</a>.</p>
+        <p><img src="../Resources/Images/product-settings-paragraph-spacing.png" style="width: 1006px;height: 710px;" alt="The Use consistent paragraph spacing option in the Product Settings."></img></p>
+        <h3>Grouping structure import</h3>
+        <p><a href="Primary-author.htm">#primaryauthor</a></p>
+        <p>The order of the financial groups in a grouping structure is now maintained when you export then import a grouping structure.</p>
+        <h2>New for end users</h2>
+        <p>Here is what&apos;s new for end users in SE 2021-06.</p>
+        <h3>Signature log for Simple Electronic Signature</h3>
+        <p>Users can now view and download a signature log in the PDF viewer for documents that were electronically signed by clients in query documents.</p>
+        <p>To learn more, see <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/File-Preparation/Review-contact-responses.htm">Review contact responses</a> and <a href="https://docs.caseware.com/2020/webapps/31/en/Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm">Attach documents to an engagement file</a>.</p>
+        <p><img src="../Resources/Images/signature-log-pdf-viewer.png" alt="Descargar el registro de firmas"></img></p>
+        <h3>Review tools for risks</h3>
+        <p>Users can now use review tools to track changes made to risks in the new risks module after reviewer signoff.</p>
+        <p><img src="../Resources/Images/risks-review-tools.png" style="width: 1066px;height: 465px;" alt="Review tools in the risk module."></img></p>
+        <p>If you’ve enabled document level signoff for the risks module, the following review tools are available for users:</p>
+        <ul>
+            <li>
+                <p><b>Added</b> - Marks risks that have been added by staff members.</p>
+            </li>
+            <li>
+                <p><b>Deleted</b> - Marks risks that have been deleted by staff members.</p>
+            </li>
+            <li>
+                <p><b>Modified</b> - Marks risks that have been modified by staff members.</p>
+            </li>
+        </ul>
+        <p>If you’ve enabled individual risk signoff, only the <b>Modified</b> review tool is available. Note that when individual risk signoff is enabled, users cannot delete a risk once the reviewer has signed off on it.</p>
+        <h3>Enhanced balance discrepancy check</h3>
+        <p>Balance discrepancy checks in dynamic tables now compare the absolute values for the labeled rows and do not take into account whether the value is negative or positive. This ensures that when balances for credit accounts are compared against debit accounts, the difference in sign between the two accounts is not flagged as a balance discrepancy.</p>
+    </body>
+</html>

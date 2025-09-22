@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Gérer les serveurs d&apos;autorisation (Okta)</h1>
+        <p>Les utilisateurs de l&apos;intégration de l&apos;authentification unique de votre entreprise passeront par un serveur d&apos;authentification. Okta fournit un serveur d&apos;authentification par défaut que vous pouvez modifier en fonction des besoins de votre entreprise. Si nécessaire, vous pouvez également <a href="#Add">ajouter des serveurs d&apos;autorisation</a>.</p>
+        <p class="note"><b>Remarque :</b> Cette étape est facultative et nécessite une licence pour la fonctionnalité de serveur d&apos;autorisation d&apos;Okta. Si vous n&apos;avez pas accès à cette fonctionnalité ou si vous n&apos;avez tout simplement pas besoin de modifier les serveurs d&apos;autorisation, passez à la section <a href="Generate-the-Reply-URL-Okta.htm">Générer l&apos;URL de réponse.</a></p>
+        <p><b>Pour gérer les serveurs d&apos;authentification :</b></p>
+        <ol>
+            <li>
+                <p>Connectez-vous au tableau de bord Okta de votre entreprise avec un compte <b>administrateur</b> .</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, développez le menu déroulant <b>Sécurité</b> et sélectionnez <b>API</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page Risques , sélectionnez l&apos;onglet <b>ÉVALUATION</b> . Cet onglet permet de modifier ou d&apos; <a href="#Add">ajouter des serveurs d&apos;authentification</a>. En regard du serveur d&apos;autorisation par défaut, sélectionnez l&apos;icône <b>Modifier</b> .</p>
+                <p><img src="../../Resources/Images/okta-03.png" /></p>
+            </li>
+            <li>
+                <p>Sur la page du serveur d&apos;autorisation par défaut, sélectionnez l&apos;onglet <b>Stratégies d&apos;accès.</b>  Dans cet onglet, vous pouvez modifier ou ajouter des politiques d&apos;accès. En regard de la politique par défaut, sélectionnez <b>Modifier</b>.</p>
+                <p><img src="../../Resources/Images/okta-04.png" /></p>
+            </li>
+            <li>
+                <p>Vous pouvez éventuellement modifier le nom et la description de la politique, et choisir de l&apos;attribuer à tous les clients ou à des clients spécifiques. Si vous avez apporté des modifications, sélectionnez <b>Mettre à jour la stratégie</b> pour les appliquer.</p>
+            </li>
+            <li>
+                <p>Vous pouvez également modifier ou ajouter des règles de politique. En regard de la règle de politique générale par défaut, sélectionnez l&apos;icône <b>Modifier</b> .</p>
+                <p><img src="../../Resources/Images/okta-05.png" /></p>
+            </li>
+            <li>
+                <p>Vous pouvez éventuellement modifier la règle selon vos préférences. Pour l&apos;intégration avec Caseware Cloud, assurez-vous que l&apos;option <b>Code d&apos;autorisation</b> est sélectionnée.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+        </ol>
+        <h2><a name="Add"></a>Add authorization servers</h2>
+        <p>Si vous ne souhaitez pas utiliser le serveur d&apos;autorisation par défaut ou si vous voulez simplement ajouter un autre serveur d&apos;autorisation pour l&apos;adapter aux besoins de votre entreprise, vous pouvez l&apos;ajouter dans le menu déroulant <b>Sécurité.</b> </p>
+        <p><b>Pour ajouter des serveurs d&apos;autorisation :</b></p>
+        <ol>
+            <li>
+                <p>Connectez-vous au tableau de bord Okta de votre entreprise avec un compte <b>administrateur</b> .</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, développez le menu déroulant <b>Sécurité</b> et sélectionnez <b>API</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page Risques , sélectionnez l&apos;onglet <b>ÉVALUATION</b> .</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter un serveur d&apos;autorisation</b>.</p>
+                <p><img src="../../Resources/Images/okta-06.png" /></p>
+            </li>
+            <li>
+                <p>Entrez un nom, une audience et une description pour le nouveau serveur d&apos;autorisation. Sélectionnez <b>Enregistrer</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page du serveur d&apos;autorisation, sélectionnez l&apos;onglet <b>Stratégies d&apos;accès.</b> </p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter un utilisateur</b>.</p>
+            </li>
+            <li>
+                <p>Saisissez un nom et une description pour la politique et choisissez de l&apos;attribuer à tous les clients ou à des clients spécifiques. Sélectionnez <b>Créer un brouillon</b>.</p>
+            </li>
+            <li>
+                <p>Sur la page de la politique, sélectionnez <b>Ajouter une règle</b>.</p>
+            </li>
+            <li>
+                <p>Saisissez un nom pour la règle et personnalisez les options de la règle si nécessaire. Pour l&apos;intégration avec Caseware Cloud, assurez-vous que l&apos;option <b>Code d&apos;autorisation</b> est sélectionnée.</p>
+                <p><img src="../../Resources/Images/okta-07.png" /></p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Créer un brouillon</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Next <a href="Generate-the-Reply-URL-Okta.htm">Générer l&apos;URL de réponse (Okta)</a></p>
+    </body>
+</html>

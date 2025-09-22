@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Ausstellungstransformationsregel erstellen (ADFS)</h1>
+        <p>Erstellen Sie eine Ausstellungstransformationsregel, um LDAP-Attribute den ausgehenden Ansprüchen zuzuordnen.</p>
+        <p style="font-weight: bold;">Eine Ausstellungstransformationsregel erstellen:</p>
+        <ol>
+            <li>
+                <p>Klicken Sie in der ADFS-Verwaltungskonsole auf den Ordner <b>Application Groups</b> und führen Sie danach einen Doppelklick auf Ihrer <a href="Create-a-new-application-group.htm">neuen Anwendungsgruppe</a> aus.</p>
+                <p><img src="../../Resources/Images/adfs-api-app-01.png" /></p>
+            </li>
+            <li>
+                <p>Führen Sie im Dialog <b>Properties</b> einen Doppelklick auf der <a href="Create-a-Web-API-application.htm">Web API Anwendung</a> aus.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-01.png" /></p>
+            </li>
+            <li>
+                <p>Klicken Sie im Dialog <b>Web API Properties</b> auf die Registerkarte <b>Issuance Transform Rules</b> und dann auf <b>Add Rule</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-02.png" /></p>
+            </li>
+            <li>
+                <p>Öffnen Sie die Drop-down-Liste <b>Claim rule template</b> und wählen Sie <b>Send LDAP Attributes as Claims</b>. Klicken Sie auf <b>Next</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-03.png" /></p>
+            </li>
+            <li>
+                <p>Geben Sie einen Namen für die Anspruchsregel ein, öffnen Sie dann die Drop-down-Liste <b>Attribute store</b>  und wählen Sie <b>Active Directory</b>.</p>
+                <p><img src="../../Resources/Images/adfs-transform-rule-04.png" /></p>
+            </li>
+            <li>
+                <p>Vervollständigen Sie die Tabelle <b>Mapping of LDAP attribute to outgoing claim types</b> wie folgt:</p>
+                <table class="table">
+                    <col style="width: 50%;" />
+                    <col style="width: 50%;" />
+                    <tbody>
+                        <tr>
+                            <th>LDAP Attribute</th>
+                            <th>Outgoing Claim Type</th>
+                        </tr>
+                        <tr>
+                            <td>E-Mail-Addresses</td>
+                            <td>email</td>
+                        </tr>
+                        <tr>
+                            <td>Given-Name</td>
+                            <td>given_name</td>
+                        </tr>
+                        <tr>
+                            <td>Surname</td>
+                            <td>family_name</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Finish</b>, um die Konfiguration abzuschließen.</p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Generate-the-reply-URL-ADFS.htm">Antwort-URL generieren</a></p>
+    </body>
+</html>

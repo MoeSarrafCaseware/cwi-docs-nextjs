@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Problemen met Microsoft Office en Cloud-opdrachten oplossen</h1>
+        <p><b>Gepubliceerd:</b> 10-jan-24</p>
+        <hr />
+        <p>Hulp nodig bij het uploaden van Office-documenten naar Caseware Cloud? Zie hieronder voor oplossingen.</p>
+        <h2>Controleer het beleid voor aanmeldingsgedrag op basis van formulieren dat is ingesteld in het Microsoft Trust Center</h2>
+        <p>Deze procedure gaat ervan uit dat u een beheerder bent en een abonnementsversie van Microsoft Office hebt, zoals Microsoft 365 Apps for enterprise, om het tabblad <strong>Formuliergebaseerd aanmeldgedrag</strong> op het Microsoft Trust Center te zien.</p>
+        <p>Om het beleid voor aanmeldingsgedrag op basis van formulieren te controleren:</p>
+        <ol>
+            <li>
+                <p>Open een Office-toepassing, zoals Word of Excel.</p>
+            </li>
+            <li>
+                <p>Ga naar <b>Bestand | Opties | Vertrouwenscentrum</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Instellingen vertrouwenscentrum</b>.</p>
+            </li>
+            <li>
+                <p>Klik op <b>Aanmelden op basis van formulieren</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer onder <b>Aanmeldingspromptgedrag</b>de optie <b>Vraag me wat ik moet doen voor elke host</b> .</p>
+            </li>
+            <li>
+                <p>Klik op <b>OK</b> om de wijzigingen op te slaan.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Microsoft Office blokkeert toekomstige aanmeldingsprompts niet.</li>
+                <li>De lijst <strong>met hosts die aanmeldprompts mogen tonen</strong> wordt automatisch ingevuld op basis van uw toekomstige acties.</li>
+            </ul>
+        </p>
+        <ol>
+            <li value="7">Doe een van de volgende dingen op de pagina Documenten van een opdracht: <ul><li>Open een bestaand Microsoft Office-bestand. Zie <a href="../../Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm#Access2">Een geüpload Word- of Excel-document openen</a> voor meer informatie.</li><li>Of voeg een nieuw Word- of Excel-bestand toe: Zie <a href="../../Engagements/Documentation-and-Review/Add-new-Word-and-Excel-documents.htm">Nieuwe Word- en Excel-documenten toevoegen</a> voor meer informatie.</li></ul></li>
+            <li>Maak een wijziging in het document, sla het op en sluit het.</li>
+            <li>Vernieuw de engagementpagina in uw browser.</li>
+            <li>Open het Microsoft Office-document dat u hebt aangepast en open de Trust Center-instellingen zoals eerder in deze procedure is beschreven.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Het volgende item zou automatisch moeten worden toegevoegd voor Caseware Cloud in de lijst <strong>met hosts die aanmeldprompts mogen tonen</strong> :</li>
+            </ul>
+        </p>
+        <p class="indent"><code>app.casewarecloud.com</code></p>
+        <h2>Controleer of add-ins Cloud verstoren</h2>
+        <p>Problemen met invoegtoepassingen oplossen door ze een voor een uit te schakelen.</p>
+        <p><strong>Om add-ins één voor één uit te schakelen:</strong></p>
+        <ol>
+            <li>Open Excel.</li>
+            <li>Selecteer <strong>Bestand | Opties | Invoegtoepassingen</strong>.</li>
+            <li>Stel de vervolgkeuzelijst <strong>Beheren</strong> in op Excel-add-ins en klik op <strong>Ga</strong>.</li>
+            <li>Als u in de lijst Beheer geen invoegtoepassingen kunt vinden die specifiek zijn voor de Office-app, kies dan in plaats daarvan COM-invoegtoepassingen.</li>
+            <li>Haal het vinkje weg bij een van de invoegtoepassingen in de lijst en klik op <strong>OK</strong>.</li>
+            <li>Probeer ondersteunende Word- of Excel-documenten te uploaden naar een Cloud-overeenkomst en kijk of het probleem is opgelost.</li>
+            <li>Herhaal deze stappen totdat u de invoegtoepassing hebt gevonden die het probleem veroorzaakt.</li>
+        </ol>
+        <h2>HttpClient op Windows controleren</h2>
+        <p>HttpClient is een klasse in het .NET framework die wordt gebruikt om HTTP-verzoeken te verzenden en HTTP-responses te ontvangen van een bron die wordt geïdentificeerd door een URI en wordt gebruikt in verschillende soorten toepassingen. Het kan de informatie-uitwisseling tussen Microsoft Office en Cloud-engagementen verstoren.</p>
+        <p><b>Om te controleren of HttpClient een probleem veroorzaakt bij het uitwisselen van informatie:</b></p>
+        <ol>
+            <li>Typ in het Windows-zoekvak services.msc</li>
+            <li>Selecteer <strong>services</strong>.</li>
+            <li>Zoek in <strong>Name</strong>naar <strong>WebClient</strong>.</li>
+            <li>Klik met de rechtermuisknop en selecteer <strong>Kopiëren naar</strong>.</li>
+            <li>Selecteer <strong>Automatisch</strong>bij <strong>Opstarttype</strong> <strong>.</strong></li>
+            <li>Klik op <strong>Toepassen</strong>en vervolgens op <strong>OK.</strong></li>
+            <li>Afsluiten</li>
+            <li>Kijk of dit het probleem oplost.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AutomaticStartupHttpClient.png" alt="De instelling voor het opstarttype voor de WebClient-service wijzigen. " /></p>
+        <h2>Problemen oplossen met het opslaan van Office-documenten in Cloud-opdrachten</h2>
+        <h3>Controleer of automatisch opslaan is uitgeschakeld</h3>
+        <p>Automatisch opslaan moet worden uitgeschakeld om de interacties tussen Microsoft Office en Cloud goed te laten werken.</p>
+        <p class="note inline"><b>Let op:</b> U mag geen website van een derde partij gebruiken om een Microsoft Office-document dat is gekoppeld aan een Cloud-afspraak op te slaan of er een back-up van te maken.</p>
+        <p><strong>Om te controleren of automatisch opslaan is uitgeschakeld:</strong></p>
+        <ol>
+            <li>Open een Office-toepassing, zoals Word of Excel.</li>
+            <li>Selecteer <strong>Bestanden | Opties | Opslaan.</strong></li>
+            <li>Schakel de optie <strong>Bestanden standaard opslaan in de cloud in Excel</strong> uit.</li>
+        </ol>
+        <h3>Controleer of u geen Office-bestanden uploadt vanaf de standaard lokale bestandslocatie</h3>
+        <p>Voor Office-toepassingen is de standaard lokale bestandslocatie de volgende:</p>
+        <p><code>C:\Users{gebruiker.naam}} Documenten</code></p>
+        <p><strong>Om uw standaard lokale bestandslocatie te controleren:</strong></p>
+        <ol>
+            <li>Open Excel.</li>
+            <li>Selecteer <strong>Bestanden | Opties | Opslaan.</strong></li>
+            <li>Zoek de instelling <strong>Standaard lokale bestandslocatie</strong> en controleer het pad. Zorg ervoor dat u geen bestanden uploadt van deze locatie naar Cloud.</li>
+        </ol>
+        <h3>Controleer of u of andere gebruikers van Cloud Engagement de functie voor delen binnen Microsoft Office niet gebruiken</h3>
+        <p>Zorg ervoor dat u of andere gebruikers geen gebruik maken van de Microsoft Office-functie voor het delen van Microsoft Office-documenten die u uploadt naar of aanmaakt binnen Cloud-overeenkomsten. De functie Microsoft Office delen wordt niet ondersteund in combinatie met Caseware Cloud:</p>
+        <p><img src="../../Resources/Images/ShareFeature.png" alt="Deelfunctie binnen Microsoft Office-toepassingen." /></p>
+        <ul>
+            <li>
+                <p>Als twee gebruikers dezelfde Office-documenten delen en er toegang toe hebben, kunnen er race-condities optreden bij het opslaan, met onverwachte resultaten tot gevolg.</p>
+            </li>
+            <li>
+                <p>Wanneer een gebruiker een Office-document deelt met behulp van de functie voor het delen van Office-documenten, is een site vereist om synchronisatiebewerkingen te ondersteunen. Als gevolg hiervan moeten synchronisatiebewerkingen plaatsvinden op de computer van de gebruiker die het delen heeft geïnitieerd. Er kunnen zich verschillende scenario&apos;s voordoen wanneer het gedeelde document wordt opgeslagen, die allemaal leiden tot verlies van opgeslagen informatie.</p>
+            </li>
+        </ul>
+        <p><strong>Om dit op te lossen:</strong></p>
+        <ol>
+            <li>Verwijder alle delen op huidige documenten door het document naar een andere locatie te kopiëren.</li>
+            <li>Breng de nodige wijzigingen aan in de documenten, bijvoorbeeld bewerkingen die niet konden worden uitgevoerd terwijl delen was ingeschakeld.</li>
+            <li>Vervang het bestand door de niet-gedeelde opgeslagen versie te uploaden.</li>
+        </ol>
+        <h2>Logboeken leveren op verzoek van de technische ondersteuning</h2>
+        <p>Als u deze logboeken verstrekt, kunnen we het probleem verder oplossen als u contact opneemt met Technische Ondersteuning.</p>
+        <h3>Mac</h3>
+        <p>Als u of uw klant Mac OS gebruikt en we logs moeten controleren, heeft ons technische ondersteuningsteam hulp van u of uw klant nodig om ze te verzamelen.</p>
+        <p><b>Pad waar u de logs kunt vinden</b></p>
+        <p><div><pre><code>/Users/gebruikersnaam/Library/Containers/com.microsoft.Excel/Data/Library/Logs/Diagnostics</code></pre></div></p>
+        <p>Om de logbestanden te vinden, kan het nodig zijn om de logbestanden te verbergen. Druk tegelijkertijd op de toetsen Shift + (⌘) + (.).</p>
+        <p> </p>
+        <p><img src="../../Resources/Images/LogsonMac.png" alt="Zoek Microsoft Office-documentenlogboeken op een Mac." /></p>
+        <p> </p>
+        <p>Zie <a href="https://support.apple.com/en-gb/guide/console/cnsl9361/mac">Een logbestand lokaliseren met Console op Mac</a>voor meer informatie.</p>
+        <h3>Windows</h3>
+        <p>De volgende instructies gelden voor Windows 10.</p>
+        <ol>
+            <li>Open Windows Verkenner.</li>
+            <li>Ga naar C:\Users\&lt;Gebruikers-ID&gt;\AppData\Local\Temp</li>
+            <li>Zoek de map Diagnostics.</li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>Zoek naar de map die vernoemd is naar de applicatie waarmee u problemen ondervindt.</li>
+            </ul>
+            <p><img src="../../Resources/Images/WindowsOfficeLogs.png" alt="Logboeken vinden voor Microsoft Office-toepassingen. " /></p>
+        </p>
+        <h2>De cache van Microsoft Office wissen</h2>
+        <p>Raadpleeg de instructies voor uw besturingssysteem:</p>
+        <h3>Windows</h3>
+        <ol>
+            <li>Verwijder de bestanden in de cache handmatig en open de bestanden opnieuw.</li>
+        </ol>
+        <p class="note inline"><b>Opmerking:</b>Het bestand dat momenteel geopend is in Excel wordt uitgesloten. Dit zou een download van Caseware Cloud moeten activeren.</p>
+        <ol>
+            <li value="2">Ga in uw Office-app naar <b>Bestand | Opties | Opslaan</b>.</li>
+            <li>Selecteer bij <b>Cache-instellingen</b> <b>de</b>optie <b>Bestanden verwijderen uit de Office Document cache wanneer ze worden gesloten</b>. Dit wist de cache van het bestand wanneer het wordt gesloten.</li>
+        </ol>
+        <p><img src="../../Resources/Images/CacheSettingsOfficeDocs.png" alt="Selecteer de instelling Bestanden uit de Office Document Cache verwijderen wanneer ze worden gesloten. " /></p>
+        <h3>Mac OS</h3>
+        <p>Ga naar de volgende locatie, die enigszins zal veranderen afhankelijk van of u Excel of Word gebruikt:</p>
+        <p><div><pre xml:space="preserve"><code>~/Library/Containers/MicrosoftExcel/Data/Library/Caches</code></pre></div></p>
+        <p>Zie <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">De Office-cache wissen</a>voor meer informatie.</p>
+        <p> </p>
+        <p><img src="../../Resources/Images/ClearCacheinMac.png" alt="Locatie van Office Document cache op computers met Mac OS." /></p>
+        <p> </p>
+    </body>
+</html>

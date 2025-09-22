@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Anzeige und Verwaltung der Ergebnisse aggregierter Analysen</h1>
+        <p class="note"><b>Hinweis:</b> Diese Funktion ist nur verfügbar, wenn sie in Ihrem Produkt aktiviert wurde.</p>
+        <p>Wenn mehrere Analysen an ein einzelnes Checklistenverfahren in Ihrem Engagement gebunden sind, können Sie die Gesamtergebnisse anzeigen. Sie können sie auch filtern und den Status jeder Transaktion, die durch Analysen markiert wurde, anzeigen und festlegen.</p>
+        <p><b>Zur Anzeige der Gesamtergebnisse für mehrere Analysen:</b></p>
+        <ol>
+            <li>Navigieren Sie auf der Seite Dokumente zu einem Checklistenverfahren, in dem mehrere Analysen verknüpft wurden. Das Symbol <b>Analyse</b> (<img src="../../Resources/Images/icon-analytics-test.png" style="vertical-align: text-bottom;" />) wird neben allen Checklistenverfahren angezeigt, für die eine Analyse verfügbar ist.</li>
+        </ol>
+        <p><img src="../../Resources/Images/NavigatingToAnalyticTest.png" alt="Aus einem Checklistenverfahren zu Analysen navigieren." /></p>
+        <ol>
+            <li value="2">Wählen Sie das Symbol, um die Analysen anzuzeigen:</li>
+        </ol>
+        <p class="indent">Wenn mehrere Analysen mit der Checkliste in Ihrem Produkt verknüpft wurden, öffnet sich der Analyse-Hub. Wenn nur eine einzige Analyse für das Verfahren verfügbar ist, wird eine Registerkarte Ergebnisse geöffnet, die nur Ergebnisse für diese Analyse anzeigt. Weitere Informationen finden Sie unter <a href="View-analytics-test-results-for-checklists.htm">Analyseergebnisse für Checklisten anzeigen</a>.</p>
+        <p><img src="../../Resources/Images/AnalyticsHub-Multiple.png" alt="Anzeige von mehreren Analysen im Analyse-Hub. " /></p>
+        <ol>
+            <li value="3">Wählen Sie die Analysen aus, die Sie durchführen möchten, und klicken Sie auf <b>Ausführen</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/RunMultipleAnalyticTests.png" alt="Durchführung der im Analyse-Hub ausgewählten Analysen." /><br />
+        </p>
+        <ol>
+            <li value="4">Sobald in der Spalte <b>Status</b> Erfolgsindikatoren (<img src="../../Resources/Images/SuccessIndicator.png" alt="" style="vertical-align: text-bottom;" />) für die Analysen angezeigt werden, klicken Sie auf <b>Ergebnisse</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/AnalyticsLastRun.png" alt="Navigieren zu aggregierten Ergebnissen von mehreren Analysen. " /></p>
+        <p class="indent">Auf der Seite Aggregierte Ergebnisse haben Sie diese Optionen:</p>
+        <ul>
+            <li>
+                <p><a href="#Exclude">Spalten oder Analysen ausschließen</a></p>
+            </li>
+            <li>
+                <p><a href="#Filter">Aggregierte Datenergebnisse filtern</a></p>
+            </li>
+            <li>
+                <p><a href="#Set">Status von Transaktionen setzen, die in Analysen markiert wurden</a></p>
+            </li>
+            <li>
+                <p><a href="#Export">Aggregierte Ergebnisse exportieren</a></p>
+            </li>
+        </ul>
+        <h2><a name="Exclude"></a>Spalten oder Analysen ausschließen</h2>
+        <p><b>Um Spalten oder Analysen aus den aggregierten Ergebnissen auszuschließen:</b></p>
+        <ol>
+            <li>Klicken Sie auf <b>Spalten</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/FilteringColumnsAggregateResults.png" alt="Filtern von aggregierten Ergebnissen nach Spalten. " /></p>
+        <ol>
+            <li value="2">Heben Sie die Markierung der Spalten oder Analysen auf, die Sie von den aggregierten Ergebnissen ausschließen möchten.</li>
+        </ol>
+        <p><img src="../../Resources/Images/DeselectingColumnsAggregateResults.png" alt="Aufheben der Auswahl von Spalten oder Analysen, um sie von der Anzeige auf der Seite mit den aggregierten Ergebnissen auszuschließen. " /></p>
+        <p class="indent">Die Spalten oder Analysen, die Sie abgewählt haben, sind von der Seite mit den aggregierten Ergebnissen ausgeschlossen.</p>
+        <h2><a name="Filter"></a>Aggregierte Datenergebnisse filtern</h2>
+        <p>Sie können die Aggregat-Ergebnisse filtern, indem Sie auf <b>Filter</b> klicken und dann im Bereich Filter eine Auswahl für eine der Spalten im Datensatz treffen. Alle Spaltenfilter verwenden den Operator CONTAIN, während die gesamte Gruppe der Filter den Operator AND verwendet.</p>
+        <p><b>Aggregierte Datenergebnisse filtern:</b></p>
+        <ol>
+            <li>Klicken Sie auf Filter.</li>
+        </ol>
+        <p><img src="../../Resources/Images/FilterAggregateResults.png" alt="Zu Filtern für aggregierte Ergebnisse navigieren" /></p>
+        <ol>
+            <li value="2">Treffen Sie im Bereich <b>Filter</b> eine Auswahl, um die Daten in den Spalten zu filtern, aus denen sich die aggregierten Ergebnisdaten zusammensetzen. Die Filterbedingungen, die Sie anwenden können, hängen vom Format der Daten in der Spalte ab, die Sie filtern. In einer Datumsspalte, wie z. B. <b>Buchungsdatum</b>, können Sie nach einem Datumsbereich filtern. Wenn die Spalte numerische Daten enthält, können Sie nach numerischen Bereichen oder bestimmten Werten filtern.</li>
+        </ol>
+        <p class="indent">Der gesamte Satz von Filtern verwendet den Operator AND.</p>
+        <p class="indent">Im folgenden Beispiel werden die Transaktionen vom Filter zurückgehalten, wenn</p>
+        <p class="indent"><code>Checklist/Procedure = `1-1 Data Reliability Checklist`&gt;</code> (jede Transaktionszeile, in der Checkliste/Verfahren auf den Wert `1-1 Data Reliability Checklist`gesetzt ist)</p>
+        <p class="indent">AND</p>
+        <p class="indent"><code>Status = `Open`</code> (jede Transaktionszeile, in der der Status auf den Wert „Open“ gesetzt ist)</p>
+        <p><img src="../../Resources/Images/AggregateResultsFilterExample.png" alt="Einrichten von Filtern für aggregierte Ergebnisse aus mehreren Analysen." /></p>
+        <ol>
+            <li value="3">Klicken Sie auf <b>Zuweisen</b>.</li>
+        </ol>
+        <h2><a name="Set"></a>Status von Transaktionen setzen, die in Analysen markiert wurden</h2>
+        <p>Auf der Seite Aggregierte Ergebnisse werden alle Transaktionen aufgelistet, die in den durchgeführten Analysen markiert wurden. Sie haben die Möglichkeit, einen Status zu setzen, um jede Transaktion, die markiert wurde, zu verfolgen. Alle gekennzeichneten Transaktionen sind zunächst auf Open gesetzt.</p>
+        <p><b>So setzen Sie den Status einer oder mehrerer Transaktionen:</b></p>
+        <ol>
+            <li>Wählen Sie in der linken Spalte die Listennummer des oder der Transaktionen aus, deren Status Sie bearbeiten möchten.</li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus-AggregateResults.png" alt="Auswahl der Transaktionszeilen, deren Status Sie bearbeiten möchten. " /></p>
+        <ol>
+            <li value="2">
+                <p>Klicken Sie auf <b>Status bearbeiten</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie den Status, auf den Sie die ausgewählten Transaktionen setzen möchten. Im folgenden Beispiel wird die Transaktion auf den Status „Investigating“ gesetzt.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/EditStatus.png" alt="Wählen Sie einen Status, der für die Transaktionszeile gesetzt werden soll." /></p>
+        <ol>
+            <li value="4">
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p class="note inline"><b>Hinweis:</b> Die verfügbaren Status können je nach Produkt variieren. Die im obigen Beispiel gezeigten sind standardmäßig verfügbar.</p>
+        <h2><a name="Export"></a>Aggregierte Ergebnisse exportieren</h2>
+        <p>Sie können die aggregierten Analysen, die auf der Seite Aggregierte Ergebnisse angezeigt werden, in eine CSV-Datei exportieren.</p>
+        <p><b>Aggregierte Ergebnisse exportieren:</b></p>
+        <ol>
+            <li>Klicken Sie auf <b>Exportieren</b></li>
+        </ol>
+        <p><img src="../../Resources/Images/ExportAggregateResults.png" alt="Aggregierter Ergebnisse aus mehreren Analysen exportieren. " /></p>
+        <ol>
+            <li value="2">
+                <p>Sie erhalten die Meldung, dass der Export der aggregierten Daten einige Minuten dauern kann. Klicken Sie auf <b>Exportieren</b></p>
+            </li>
+            <li>
+                <p>Wenn Sie dazu aufgefordert werden, geben Sie den Namen der CSV-Exportdatei und ihren Speicherort an.</p>
+            </li>
+        </ol>
+    </body>
+</html>

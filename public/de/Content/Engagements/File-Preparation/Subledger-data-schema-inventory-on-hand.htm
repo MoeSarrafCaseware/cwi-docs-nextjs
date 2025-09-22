@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Inventory on hand described</h1>
+        <p>When importing subledger transactions from a CSV or Excel file you must assign fields in the file to Caseware fields in the subledger dataset type you select on import, so that the transaction data displays correctly in the engagement. This topic details the fields in the Inventory on hand subledger.</p>
+        <p>For more information on the subledger dataset descriptions, see <a href="Understand-subledger-data.htm">Understand subledger data</a>.</p>
+        <p>For more information on importing transaction data from CSV files, see <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Import the client’s transactions from a CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Feld</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Transaktions-ID <br />(<code>inventory_on_hand_transaction_id</code>)</td>
+                    <td>
+                        <p>The transaction identifier associated with either the Procure to Pay or Order to Cash Subledger Audit Data Standards (ADS).</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: The value of this field is used to form the unique identifier of this entry.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inventarprodukt-ID <br />(<code>inventory_on_hand_inventory_product_id</code>)</td>
+                    <td>
+                        <p>The product identifier is a code that uniquely identifies an item that you carry in inventory.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Ja</p>
+                        <p>Primary key: First alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seriennummer <br />(<code>inventory_on_hand_serial_number</code>)</td>
+                    <td>
+                        <p>Einem einzelnen Produkt zugeordnete Nummer, die für die Überwachung und Verwaltung verwendet wird. Zum Beispiel kauft ein Unternehmen 10 Computer, wobei jedem Computer eine individuelle Seriennummer zugewiesen wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Sixth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Losnummer <br />(<code>inventory_on_hand_lot_number</code>)</td>
+                    <td>
+                        <p>Einem Produkt zugeordnete Nummer, die für die Überwachung und Verwaltung des Loses verwendet wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Fifth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Standort-ID <br />(<code>inventory_on_hand_location_id</code>)</td>
+                    <td>The unique identifier of a specific location within a division or site where inventory is received, held, and issued from. Data type: Text Required: Nein</td>
+                </tr>
+                <tr>
+                    <td>Für Kreditoren vorgehaltene Bestände <br />(<code>inventory_on_hand_inventory_held_for_vendors</code>)</td>
+                    <td>
+                        <p>Wahr, wenn der Bestand physisch vorhanden ist und für Lieferanten vorgehalten wird; andernfalls falsch.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: Nein</p>
+                        <p>Possible values: true or false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Für Debitoren vorgehaltene Bestände <br />(<code>inventory_on_hand_inventory_held_for_customers</code>)</td>
+                    <td>
+                        <p>Wahr, wenn der Bestand physisch vorhanden ist und für Kunden vorgehalten wird; andernfalls falsch.</p>
+                        <p>Data type: Enum</p>
+                        <p>Required: Nein</p>
+                        <p>Possible values: true or false.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Für Dritte vorgehaltene Bestände <br />(<code>inventory_on_hand_inventory_held_for_others</code>)</td>
+                    <td>Wahr, wenn der Bestand physisch vorhanden ist und nicht für Kunden oder Lieferanten, sondern für Dritte vorgehalten wird; andernfalls falsch. Data type: Enum Required: No Possible values: true or false.</td>
+                </tr>
+                <tr>
+                    <td>Veraltete oder beschädigte Bestände <br />(<code>inventory_on_hand_obsolete_or_damaged_inventory</code>)</td>
+                    <td>
+                        <p>Dieser Bestandsstatus identifiziert Bestandsmengen, die eine niedrige Umschlagshäufigkeit aufweisen, beschädigt oder veraltet sind.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Example values: slow moving, damaged, or obsolete</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lagerplatz-ID <br />(<code>inventory_on_hand_bin_id</code>)</td>
+                    <td>
+                        <p>The optional identifier of an inventory sublocation. Code, der in einem Bestandsverwaltungssystem verwendet wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Fourth alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lagerplatz <br />(<code>inventory_on_hand_bin_location</code>)</td>
+                    <td>The description of the inventory sublocation identified in <b>Bin ID</b>. Data type: Text Required: Nein</td>
+                </tr>
+                <tr>
+                    <td>Bestandsmenge <br />(<code>inventory_on_hand_quantity</code>)</td>
+                    <td>
+                        <p>The inventory count whose unit of measure is specified in <b>Inventory Stocking UOM</b>.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandskostenmethode <br />(<code>inventory_on_hand_inventory_cost_method</code>)</td>
+                    <td>
+                        <p>The description of costing practice, such as LIFO, FIFO, Average, Standard, and specific identification.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandskosten <br />(<code>inventory_on_hand_inventory_cost</code>)</td>
+                    <td>
+                        <p>The cost per unit using the method found in <b>Inventory Cost Method</b>.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Menge auf Lager - System <br />(<code>inventory_on_hand_quantity_on_hand_system</code>)</td>
+                    <td>
+                        <p>Either the quantity on hand at the last physical count according to the source system, or the calculated quantity on hand.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandsdatum <br />(<code>inventory_on_hand_inventory_as_of_date</code>)</td>
+                    <td>
+                        <p>Datum, an dem mit der Erfassung der Bestandsmenge eines Vorratsartikels begonnen wird.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandskostenmaßeinheit Code <br />(<code>inventory_on_hand_inventory_costing_uom_code</code>)</td>
+                    <td>
+                        <p>Code der Maßeinheit für die Kosten des Bestands.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Geschäftseinheitencode <br />(<code>inventory_on_hand_business_unit_code</code>)</td>
+                    <td>
+                        <p>Dient zur Identifizierung der Geschäftseinheit, Region, Niederlassung usw. auf der Ebene, auf der der Jahresabschluss geprüft wird.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                        <p>Primary key: Second alternate. If <b>Transaction ID</b> is not present in the data, the value of this field is concatenated with the values of the other alternate fields to form the unique identifier of the entry, for example <code>&lt;FirstAlternate&gt;-&lt;SecondAlternate&gt;-&lt;ThirdAlternate&gt;-&lt;FourthAlternate&gt;-&lt;FifthAlternate&gt;-&lt;SixthAlternate&gt;</code>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mengeneinheit für den Einkauf von Beständen <br />(<code>inventory_on_hand_inventory_purchasing_uom</code>)</td>
+                    <td>
+                        <p>Primäre Mengeneinheit, die verwendet wird, um die von der Organisation eingekauften Warenmengen auszudrücken.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mengeneinheit für den Lagerbestand <br />(<code>inventory_on_hand_inventory_stocking_uom</code>)</td>
+                    <td>
+                        <p>Mengeneinheit, in der die Menge der im Lagerbestand geführten Artikel erfasst wird.<![CDATA[
+]]></p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mengeneinheit für den Verkauf von Beständen <br />(<code>inventory_on_hand_inventory_selling_uom</code>)</td>
+                    <td>
+                        <p>Primäre Mengeneinheit, in der die Bestandsverkaufsmengen ausgedrückt werden.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Standardkosten <br />(<code>inventory_on_hand_standard_cost</code>)</td>
+                    <td>
+                        <p>Falls gepflegt, die Standardkosten pro Einheit.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Durchschnittskosten <br />(<code>inventory_on_hand_average_cost</code>)</td>
+                    <td>
+                        <p>Falls gepflegt, die Durchschnittskosten pro Einheit.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spezifische Kosten <br />(<code>inventory_on_hand_specific_cost</code>)</td>
+                    <td>
+                        <p>Falls gepflegt, die spezifischen Kosten pro Einheit.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Menge auf Lager - physische Zählung <br />(<code>inventory_on_hand_quantity_on_hand_physical_count</code>)</td>
+                    <td>
+                        <p>Vorhandene Menge bei der letzten physischen Zählung je physischer Zählung.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum der letzten Zählung <br />(<code>inventory_on_hand_last_count_date</code>)</td>
+                    <td>
+                        <p>Datum der letzten physischen Zählung.</p>
+                        <p>Data type: Datum</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bestandslistenpreis <br />(<code>inventory_on_hand_inventory_list_price</code>)</td>
+                    <td>
+                        <p>Listen- oder empfohlener Verkaufspreis.</p>
+                        <p>Data type: Money</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gekaufte Bestände im laufenden Jahr <br />(<code>inventory_on_hand_inventory_purchase_year_to_date</code>)</td>
+                    <td>
+                        <p>An diesem Standort gekaufte Menge im laufenden Jahr.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Verkaufte Bestände im laufenden Jahr <br />(<code>inventory_on_hand_inventory_sold_year_to_date</code>)</td>
+                    <td>
+                        <p>The quantity sold from this location year to date.</p>
+                        <p>Data type: Decimal</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ortswährung <br />(<code>inventory_on_hand_location_currency</code>)</td>
+                    <td>
+                        <p>Die lokale Währung.</p>
+                        <p>Data type: Text</p>
+                        <p>Required: Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

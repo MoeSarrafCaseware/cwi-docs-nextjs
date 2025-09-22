@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Comptes clients – Clients décrits</h1>
+        <p>Lorsque vous importez des transactions de comptabilité auxiliaire à partir d&apos;un fichier CSV ou Excel, vous devez affecter les champs du fichier aux champs Caseware dans le type d&apos;ensemble de données de comptabilité auxiliaire que vous sélectionnez lors de l&apos;importation, afin que les données de la transaction s&apos;affichent correctement dans la mission. Cette rubrique détaille les champs du livre auxiliaire Comptes clients - Clients.</p>
+        <p>Pour plus d&apos;informations sur les descriptions des jeux de données du livre auxiliaire, voir <a href="Understand-subledger-data.htm">Comprendre les données du livre auxiliaire</a>.</p>
+        <p>Pour plus d&apos;informations sur l&apos;importation de données de transaction à partir de fichiers CSV, voir <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Importer les transactions du client à partir d&apos;un fichier CSV</a>.</p>
+        <table class="table table-striped">
+            <col style="width: 302px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Champ d&apos;application</th>
+                    <th>Utilisation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Identifiant du compte client<code>(ar_customer_customer_account_id)</code></td>
+                    <td>
+                        <p>L&apos;identifiant du client dont le paiement est attendu ou auquel des crédits non utilisés ont été appliqués.</p>
+                        <p>
+                            <p>Type de données : Texte</p>
+                        </p>
+                        <p>Il s&apos;agit d&apos;une obligation : Oui</p>
+                        <p>Clé primaire : La valeur de ce champ est utilisée pour former l&apos;identifiant unique de cette entrée.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du compte client<code>(ar_customer_customer_account_name</code>)</td>
+                    <td>Le nom du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p><p>Clé primaire : Premier suppléant. Si l&apos; <b>identifiant du compte client</b> n&apos;est pas présent dans les données, la valeur de ce champ est concaténée avec les valeurs des autres champs alternatifs pour former l&apos;identifiant unique de l&apos;entrée, par exemple <code>&lt;PremierAlternatif&gt;-&lt;DeuxièmeAlternatif&gt;-&lt;TroisièmeAlternatif&gt;</code>.</p></td>
+                </tr>
+                <tr>
+                    <td>Groupe de clients<code>(ar_customer_customer_group</code>)</td>
+                    <td>Si l&apos;organisation segmente les clients en groupes, le groupe auquel ce client est affecté.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ligne 1 de l&apos;adresse physique du client<code>(ar_customer_customer_physical_street_address1</code>)</td>
+                    <td>L&apos;adresse physique (ligne 1) du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ligne 2 de l&apos;adresse physique du client<code>(ar_customer_customer_physical_street_address2</code>)</td>
+                    <td>L&apos;adresse physique (ligne 2) du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ville physique du client<code>(ar_customer_customer_physical_city</code>)</td>
+                    <td>La ville physique où se trouve le client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Province de l&apos;État physique du client<code>(ar_customer_customer_physical_state_province</code>)</td>
+                    <td>L&apos;état physique ou la province où se trouve le client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Code postal physique du client<code>(ar_customer_customer_physical_zip_postal_code</code>)</td>
+                    <td>Le code postal de la ville où le client est physiquement situé.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Pays physique du client<code>(ar_customer_customer_physical_country</code>)</td>
+                    <td>Code du pays où le client est physiquement situé.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>NIF du client<code>(ar_customer_customer_tin</code>)</td>
+                    <td>Le numéro d&apos;identification fiscale du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ligne 1 de l&apos;adresse de facturation du client<code>(ar_customer_customer_billing_address1</code>)</td>
+                    <td>L&apos;adresse de facturation ligne 1 du client<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ligne 2 de l&apos;adresse de facturation du client<code>(ar_customer_customer_billing_address2</code>)</td>
+                    <td>L&apos;adresse de facturation ligne 2 du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Ville de facturation du client<code>(ar_customer_customer_billing_city</code>)</td>
+                    <td>La ville de facturation du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Province de l&apos;État de facturation du client<code>(ar_customer_customer_billing_state_province</code>)</td>
+                    <td>L&apos;état ou la province de facturation du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Code postal de facturation du client<code>(ar_customer_customer_billing_zip_postal_code</code>)</td>
+                    <td>Le code postal de facturation de la ville du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Pays de facturation du client<code>(ar_customer_customer_billing_country</code>)</td>
+                    <td>Code du pays de facturation du client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;activité<code>(ar_customer_active_date)</code></td>
+                    <td>
+                        <p>Date à laquelle le client a été déclaré actif.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;inactivité<code>(ar_customer_inactive_date)</code></td>
+                    <td>
+                        <p>Date à laquelle le client a été déclaré inactif.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Limite de crédit de transaction<code>(ar_customer_transaction_credit_limit)</code></td>
+                    <td>
+                        <p>La limite de crédit par facture établie pour ce client.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Limite de crédit globale<code>(ar_customer_overall_credit_limit)</code></td>
+                    <td>
+                        <p>La limite de crédit pour le solde total de ce client.</p>
+                        <p>Type de données : L&apos;argent</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pourcentage de remise des conditions de facturation<code>(ar_customer_terms_discount_percentage)</code></td>
+                    <td>
+                        <p>Le pourcentage d&apos;escompte que le client peut prendre si une facture est payée avant un certain nombre de jours.</p>
+                        <p>Type de données : Décimale</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jours de remise des conditions de facturation<code>(ar_customer_terms_discount_days)</code></td>
+                    <td>
+                        <p>Nombre de jours à compter de la date de facturation dont dispose le client pour bénéficier des conditions d&apos;escompte.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jours d&apos;échéance de la facture<code>(ar_customer_terms_due_days)</code></td>
+                    <td>
+                        <p>Le nombre de jours accordés pour satisfaire à l&apos;obligation avant qu&apos;une facture ne devienne impayée.</p>
+                        <p>Type de données : Entier</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nom du contact principal<code>(ar_customer_primary_contact_name</code>)</td>
+                    <td>Le nom du contact principal chez le client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Téléphone du contact principal<code>(ar_customer_primary_contact_phone</code>)</td>
+                    <td>Le numéro de téléphone du contact principal chez le client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Courriel du contact principal<code>(ar_customer_primary_contact_email</code>)</td>
+                    <td>L&apos;adresse électronique du contact principal chez le client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>ID du client parent<code>(ar_customer_parent_customer_id</code>)</td>
+                    <td>L&apos;identifiant unique du client parent.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>ID du fournisseur correspondant<code>(ar_customer_corresponding_supplier_id</code>)</td>
+                    <td>L&apos;identifiant unique du fournisseur correspondant dans le cas où le client est également un fournisseur.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>ID du type de client<code>(ar_customer_type_id)</code></td>
+                    <td>L&apos;identifiant unique du type de client.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Saisi par<code>(ar_customer_entered_by</code>)</td>
+                    <td>L&apos;identifiant de la personne qui a créé l&apos;enregistrement.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;entrée<code>(ar_customer_entered_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle la commande a été introduite dans le système source. Cette date est parfois appelée date de création.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heure saisie<code>(ar_customer_entered_time)</code></td>
+                    <td>
+                        <p>Heure à laquelle cette transaction a été saisie dans le système source.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approuvé par<code>(ar_customer_approved_by</code>)</td>
+                    <td>L&apos;identifiant de la personne qui a approuvé les ajouts ou les modifications de la base de données clients.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>Date d&apos;approbation<code>(ar_customer_approved_by_date</code>)</td>
+                    <td>
+                        <p>Date à laquelle les ajouts ou les modifications de la base de données clients ont été approuvés.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temps d&apos;approbation<code>(ar_customer_approved_by_time</code>)</td>
+                    <td>
+                        <p>Heure à laquelle l&apos;entrée a été approuvée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière modification par<code>(ar_customer_last_modified_by</code>)</td>
+                    <td>L&apos;identifiant de la dernière personne à avoir modifié cette entrée.<p>Type de données : Texte</p><p>Il s&apos;agit d&apos;une obligation : Non</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date de la dernière modification<code>(ar_customer_last_modified_date</code>)</p>
+                        <p> </p>
+                    </td>
+                    <td>
+                        <p>Date de la dernière modification de l&apos;enregistrement du client.</p>
+                        <p>Type de données : Date</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dernière heure de modification<code>(ar_customer_last_modified_time</code>)</td>
+                    <td>
+                        <p>Heure de la dernière modification de l&apos;entrée.</p>
+                        <p>Type de données : Date/heure</p>
+                        <p>Il s&apos;agit d&apos;une obligation : Non</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Een berekening toevoegen of bewerken in tabelcellen in de jaarrekening</h1>
+        <p>Je kunt berekeningen toevoegen of bewerken in tabelcellen. Zodra gebruikers gegevens importeren, worden de cellen automatisch gevuld met berekende waarden op basis van je vooraf gedefinieerde formules. Je kunt bijvoorbeeld celberekeningen toevoegen aan je sjabloon om te bouwen:</p><MadCap:snippetBlock src="../Resources/Snippets/Best-practice-rounding-product-settings.flsnp" /><ul>
+            <li>
+                <p>complexe toelichtingen bij de jaarrekening, zoals bewegingsrijen.</p>
+            </li>
+            <li>
+                <p>werkbladen (die kunnen worden gebruikt als basisinstelling voor verschillende items in uw sjabloon).</p>
+            </li>
+            <li>
+                <p>bewegingsrijen in het kasstroomoverzicht.</p>
+            </li>
+            <li>
+                <p>ratio-analyse rijen in de sectie Winst per aandeel in de Winst-en-verliesrekening.</p>
+            </li>
+        </ul>
+        <p>De berekening kan bestaan uit getallen, gegevens uit de proefbalans, gegevens uit de jaarrekening, formulierwaarden (als er formulieren beschikbaar zijn in je product) of een combinatie van alle.</p>
+        <p class="note inline"><b>Let op:</b> Deze functie is alleen beschikbaar voor cellen in kolommen of rijen met het type <b>Invoer</b>.</p>
+        <p style="font-weight: bold;">Een berekening toevoegen of bewerken in tabelcellen in de jaarrekening</p>
+        <ol>
+            <li>
+                <p>Selecteer de tabel.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Meer acties</b> (<img src="../Resources/Images/icon-more-actions-inline.png" style="width: 24px;height: 13px;vertical-align: text-bottom;" />) en kies vervolgens <b>Dynamische tabel bewerken.</b></p>
+            </li>
+            <p>De tabel wordt geopend in de bewerkingsmodus.</p>
+            <li>
+                <p>Go to the desired cell and select the <b>fx</b> icon.</p>
+                <p class="note inline"><b>Let op:</b> De cel moet een <b>Input rij</b> of <b>Input</b> kolom cel zijn.</p>
+                <p><img src="../Resources/Images/fx-icon-in-cell.png" alt="Het fx-pictogram wordt weergegeven in de linkermarge van de cel." /></p>
+            </li>
+            <li>
+                <p>Voer uw formule in op het tabblad <b>Berekening</b> .</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer <b>Gegevens invoegen</b> () om een gegevenskoppeling voor de proefbalans in de formule in te voegen.</p>
+                    </li>
+                    <p>Het dialoogvenster <b>Gegevenskoppeling</b> wordt geopend op het tabblad <b>Proefbalans</b> . Het huidige document wordt standaard geselecteerd als bron voor proefbalansgegevens.</p>
+                    <p>Je kunt de standaardwaarde wijzigen met het vervolgkeuzemenu <b>Bron</b> :</p>
+                    <ul>
+                        <li>
+                            <p><b>Proefbalans</b> - proefbalansgegevens worden ontleend aan de kolom <b>Definitief</b> op de pagina <b>Gegevens</b> . Dat wil zeggen, de definitieve bedragen nadat eventuele bestaande aanpassingen zijn toegepast.</p>
+                        </li>
+                        <li>
+                            <p><b>Jaarrekeningen</b> - de gegevens van de proefbalans komen uit de jaarrekeningen. Dat wil zeggen, de bedragen nadat afronding is toegepast en eventuele handmatige overschrijvingen zijn gedaan.</p>
+                        </li>
+                    </ul>
+                    <p>Wanneer u gegevenskoppelingen invoegt, geeft het voorvoegsel <img src="../Resources/Images/icon-fs-data-source.png" style="width: 22px;height: 25px;vertical-align: text-bottom;" /> of <img src="../Resources/Images/icon-tb-data-source.png" style="vertical-align: text-bottom;width: 22px;height: 22px;" /> de gegevensbron aan.</p><div class="note inline"><p><b>Notities:</b></p>
+                        <ul>
+                            <li>
+                                <p>Met het tabblad <b>Celverwijzing</b> kun je waarden van de ene dynamische tabel naar de andere verwijzen. See <a href="Add-cell-references.htm">Add cell references</a> for more information.</p>
+                            </li>
+                            <li>
+                                <p>Als je SE Builder-formulieren in je product hebt ontwikkeld, is het tabblad <b>Formulierenwaarde</b> beschikbaar in het dialoogvenster <b>Datakoppeling</b> . Via dit tabblad kun je waarden invoegen vanuit formulieren.</p>
+                            </li>
+                        </ul></div><li>
+                        <p>Selecteer <b>Getallen</b> (<img src="../Resources/Images/icon-number.png" style="width: 26px;height: 18px;vertical-align: text-bottom;" />) om getallen in de formule in te voegen.</p>
+                        <p class="tip"><b>Tip:</b> Je kunt je toetsenbord gebruiken om getallen in te voegen.</p>
+                    </li>
+                    <li>
+                        <p>Voeg de gewenste operatoren toe om de formule op te bouwen.</p>
+                        <p class="tip"><b>Tip:</b> Je kunt je toetsenbord gebruiken om operatoren in te voegen.</p>
+                        <p><img src="../Resources/Images/cell-calculation-PY.PNG" alt="Berekeningsformule in een cel van een invoerrij." /></p>
+                    </li>
+                    <li>
+                        <p>Selecteer <b>Gereed</b> om de kolominstellingen te sluiten.</p>
+                        <p class="note inline"><b>Let op:</b> Als u een ongeldige formule hebt ingevoerd, wordt het pictogram <b>fx</b> rood weergegeven (<img src="../Resources/Images/icon-red-fx-invalid-calculation.png" style="width: 20px;height: 25px;vertical-align: text-bottom;" />) om een fout aan te geven.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>Terwijl je de financiële overzichten opstelt, kun je de berekeningsformules bekijken die je hebt toegevoegd. Selecteer een cel om de details van de berekening weer te geven.</p>
+        <p><img src="../Resources/Images/view-calculation-Fs-doc-PA1.png" alt="In het document kun je de cel selecteren om de details van de berekening te bekijken." /></p>
+        <p>Eindgebruikers kunnen celberekeningen opheffen. Voor meer informatie, zie <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Add-or-edit-a-calculation-in-table-cells-in-the-financial-statements.htm">Een berekening toevoegen of bewerken in tabelcellen van financiële overzichten</a>.</p>
+    </body>
+</html>

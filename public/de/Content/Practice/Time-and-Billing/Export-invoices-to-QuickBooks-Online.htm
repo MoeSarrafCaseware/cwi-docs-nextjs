@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Export invoices to QuickBooks Online</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>After <a href="Integrate-online-accounting-software-with-Cloud.htm">integrating</a> with QuickBooks Online, you can export finalized invoices.</p>
+        <h4>Invoices are not synchronized between services</h4>
+        <p>If you need to modify an invoice in Cloud after it has been exported to your accounting software, you must perform the export again to ensure both services are up to date. For more information, see <MadCap:xref href="#Modify">Modify an exported invoice</MadCap:xref>.</p>
+        <h4>Exporting and editing client information is limited</h4>
+        <p>When you export an invoice, Time attempts to associate the invoice with a pre-existing client in your accounting software. If no match is found, a new client is created using the entity name from Cloud. To change client information after an export, you need to manually update it in Cloud and your accounting software.</p>
+        <h4>Invoices created in your accounting software cannot be exported to Cloud</h4>
+        <p>If you create an invoice in your accounting software, you cannot export that invoice to Cloud.</p>
+        <h4>Paid and approved invoices are closed automatically in Cloud</h4>
+        <p>When you mark an invoice as Paid or Approved in your accounting software, the status of the invoice changes to Closed in Cloud. This process can take up to twelve hours depending on your accounting software.</p>
+        <h2>Export an invoice</h2>
+        <p>Before you start, ensure you have the <i>Export to accounting software</i> Time permission.</p>
+        <div class="note">
+            <p><b>Note:</b> If you are exporting from QuickBooks Online <b>US</b>, consider the following:</p>
+            <ul>
+                <li>If the Primary or Secondary Tax options are disabled or have a rate of <b>0</b> in <b>Settings | Time | Tax</b>, the associated line in the exported invoice will not be taxable.</li>
+                <li>An error will display if sales tax is set in the invoice, but not in QuickBooks Online US.</li>
+                <li>If automated sales tax is enabled in QuickBooks Online US, it will overwrite the existing tax rate in the invoice. This may result in a different tax rate than expected. Ensure that the Primary or Secondary Tax options are set to the correct rate.</li>
+                <li>If automated sales tax is disabled in QuickBooks Online US (default for companies created before November 10, 2017), ensure the tax rate matches, otherwise an error will display.</li>
+            </ul>
+        </div>
+        <p><b>To export an invoice to QuickBooks Online:</b></p>
+        <ol>
+            <li>
+                <p>From the <b>Cloud</b> menu (<img src="../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), select <b>Billing</b>.</p>
+            </li>
+            <li>
+                <p>Select the finalized invoices you want to export, then select the <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Export selected invoices to QuickBooks Online</b>.</p>
+            </li>
+        </ol>
+        <p>If any errors or warnings occur during export, they are displayed in the <b>QuickBooks Export</b> column.</p>
+        <h2><a name="Modify"></a>Modify an exported invoice</h2>
+        <p>In some cases, you may want to modify an invoice after it has been exported. For example, if a line item is incorrect in the invoice. The process for modifying an invoice after it has been exported varies depending on your accounting software and the invoice status.</p>
+        <h3>Modify an unpaid invoice</h3>
+        <p>If you have exported an invoice to QuickBooks Online but have not yet added any payment information, we recommend that you make the necessary changes in Cloud and not in QuickBooks Online. Changes made to an invoice in QuickBooks Online are not synced between the two services and can lead to inaccurate records in Cloud.</p><MadCap:snippetBlock src="../../Resources/Snippets/to-modify-an-unpaid-invoice.flsnp" /><p>The invoice is removed from QuickBooks Online and can now be modified. After you make the necessary changes, export the invoice again using the <b>More Actions</b> menu.</p>
+        <h3>Modify a paid or approved invoice</h3>
+        <p>Invoices marked as paid in QBO are automatically marked as Closed in Cloud. This process can take up to one hour.</p>
+        <ul>
+            <li>
+                <p>To make changes to a <b>Finalized</b> invoice that has been marked as Paid in QBO, change it&apos;s status to <b>Draft</b>.</p>
+            </li>
+            <li>
+                <p>To make changes to a <b>Closed</b> invoice that has been marked as Paid in QBO, change the status of the invoice from <b>Closed</b> to <b>Finalized</b>, then change it&apos;s status to <b>Draft</b>. To learn more about editing closed invoices, see <a href="Send-an-invoice-to-a-client.htm#Display">Display closed invoices</a>.</p>
+            </li>
+        </ul>
+        <p>After you change the invoice status in Cloud, its status in QBO automatically changes to Outstanding. Note that QBO retains any payment information.</p>
+    </body>
+</html>

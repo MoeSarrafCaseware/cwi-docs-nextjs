@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>For organizations where the staff access Working Papers from a terminal server, administrators should designate a default Cloud site in the terminal server's registry. Adding this registry value ensures that closing the remote session does not clear the Cloud site URL and staff can easily reconnect during their next session.</p>
+        <p>
+            <b>To designate a default Cloud site for a terminal server:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Connect to the terminal server and open <b>Registry Editor</b>.</p>
+            </li>
+            <li>
+                <p>Navigate to the registry key <i>HKEY_CURRENT_USER\SOFTWARE\Caseware International\Working Papers\20xx.00\Core</i>.</p>
+            </li>
+            <li>
+                <p>Right-click the <b>Server</b> key and click <b>Modify...</b>.</p>
+            </li>
+            <li>
+                <p>In the <b>Value</b> data field, enter the URL of your Cloud site. You do not need to include the web protocol (<i>http://</i> or <i>https://</i>). Click <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>The default Cloud site is set for terminal server connections. Staff can access the integrated Cloud site by entering their login credentials.</p>
+    </body>
+</html>

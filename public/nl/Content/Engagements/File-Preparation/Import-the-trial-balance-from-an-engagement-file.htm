@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>De saldibalans importeren vanuit een opdrachtbestand</h1>
+        <p>Je kunt de proefbalans importeren uit een ander engagementbestand als de optie <b>Importeren uit Caseware Cloud Engagement</b> is ingeschakeld in je product.</p>
+        <p><img src="../../Resources/Images/ImportFromExistingEngagement.png" alt="Optie om gegevens te importeren uit een bestaande Cloud-overeenkomst" /></p>
+        <p>Merk op dat:</p>
+        <ul>
+            <li>
+                <p>Om te importeren vanuit een engagementbestand dat bij een andere Cloud app hoort, moet je toegang hebben tot die app en de entiteit waar het bestand bij hoort. Zie <a href="../../Setup/Users-and-Groups/Review-security-settings-for-the-default-groups.htm">Toegangsniveaus voor personeel instellen</a>voor meer informatie</p>
+            </li>
+            <li>
+                <p>Periodegegevens tussen de bron- en doelopdrachten worden automatisch in kaart gebracht. De kolom <b>Huidige jaargegevens</b> van de bronovereenkomst wordt bijvoorbeeld automatisch geïmporteerd naar de kolom <b>Huidige jaar</b> in de bestemmingsovereenkomst</p>
+            </li>
+            <li>
+                <p>Zodra de gegevens zijn geïmporteerd, wordt de einddatum voor de bestemmingsverbintenis automatisch ingesteld op de einddatum van de bronverbintenis</p>
+            </li>
+            <li>
+                <p>Annotaties en problemen worden niet geïmporteerd</p>
+            </li>
+            <li>
+                <p>Importeren vanuit een consolidatieverbintenis importeert de gegevens van de moederentiteit alleen in de bestemmingsverbintenis</p>
+            </li>
+            <li>
+                <p>Als de bron- en bestemmingsgroepen niet of gedeeltelijk overeenkomen, worden niet-toegewezen accounts weergegeven op het tabblad <b>Accounts toewijzen</b> en moet je ze handmatig toewijzen. To learn more, see <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Assign accounts to groups in the Data page</a></p>
+            </li>
+        </ul>
+        <p>Als je gegevens importeert van een andere opdracht, heb je de optie om de optie <b>Proefbalans synchroniseren</b> aan te zetten. Als je deze optie inschakelt, worden gegevens van de bron-engagement automatisch gesynchroniseerd met de doel-engagement. Hierdoor kun je wijzigingen aanbrengen in de gegevens in de bronafspraak en deze wijzigingen automatisch delen met gesynchroniseerde afspraken. Je kunt geen geconsolideerde afspraken als bronafspraken selecteren.</p>
+        <p>Wanneer engagementgegevens worden gesynchroniseerd vanuit een andere engagement:</p>
+        <ul>
+            <li>
+                <p>Er wordt een koppeling naar de bronafspraak weergegeven op de pagina <b>Data</b> en voor aanpassingen die worden gesynchroniseerd vanaf de bronafspraak.</p>
+            </li>
+            <li>
+                <p>Je kunt geen accounts, groepen of aanpassingen bewerken die zijn gesynchroniseerd vanuit de bronafspraak.</p>
+            </li>
+            <li>
+                <p>Je kunt geen accounts toewijzen die zijn gesynchroniseerd vanuit de bronafspraak.</p>
+            </li>
+            <li>
+                <p>U kunt kwesties en annotaties maken voor gesynchroniseerde accounts en groepen, maar geen annotaties voor gesynchroniseerde aanpassingen.</p>
+            </li>
+            <li>
+                <p>Wanneer er wijzigingen worden aangebracht in de bronovereenkomst, ontvangen gebruikers in de doelovereenkomst een melding om hen te informeren dat deze wijzigingen zijn toegepast op hun bestand. Verbintenissen worden elke vijf minuten opnieuw gesynchroniseerd.</p>
+                <p>Als er wijzigingen zijn aangebracht in de bron-engagement terwijl een gebruiker was uitgelogd bij de doel-engagement, krijgen ze een melding dat er wijzigingen in behandeling zijn wanneer ze de volgende keer inloggen bij het bestand, en dan worden de in behandeling zijnde wijzigingen gesynchroniseerd naar de doel-engagement op de gebruikelijke vijf-minuten cyclus.</p>
+                <p class="note"><b>Let op:</b> Groepsnamen die zijn gewijzigd in de bronafspraak worden niet gesynchroniseerd naar de doelafspraak.</p>
+            </li>
+            <li>
+                <p>Wanneer je aanpassingen maakt in de bestemmingsverbintenis, worden de aanpassingen niet terug gesynchroniseerd naar de bronverbintenis.</p>
+            </li>
+            <li>
+                <p>Als je een engagement vergrendelt die gegevens bevat die zijn gesynchroniseerd vanuit een bron-engagement, worden wijzigingen die zijn gemaakt in de bron-engagement niet langer gesynchroniseerd.</p>
+            </li>
+            <li>
+                <p>Als zowel de bron- als de bestemmingsverbintenis worden overgedragen, worden de overgedragen bestanden automatisch gekoppeld, zodat je gegevens van de bronverbintenis van het huidige jaar kunt blijven synchroniseren.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">De saldibalans importeren vanuit een opdrachtbestand</p>
+        <ol>
+            <li>
+                <p>Ga naar de Pagina <b>Documenten</b>. De gegevenspagina wordt geopend op het tabblad Datasets.</p>
+            </li>
+            <li>
+                <p>Selecteer de optie <b>Importeren uit Caseware Cloud Engagement</b></p>
+                <p>Selecteer in het gedeelte Selecteer opdracht de opdracht waarvan je de proefbalans wilt importeren.</p>
+                <p>Je kunt maar één verbintenis selecteren.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/ImportFromCloudEngagement.png" alt="Zoeken naar een overeenkomst om gegevens van te importeren. " /></p>
+        <p class="tip"><b>Tip:</b> Om een opdracht te selecteren die bij een andere entiteit hoort, schakel je het selectievakje <b>Alle entiteiten weergeven</b> in.</p>
+        <ol>
+            <li value="3">
+                <p>Als je updates van de proefbalansgegevens automatisch wilt synchroniseren van de bronopdracht naar de doelopdracht, selecteer je de optie <b>Proefbalans synchroniseren</b> .</p>
+                <p><img src="../../Resources/Images/engagement-search-dialog-sync-trial-balance.png" style="width: 522px;height: 435px;" alt="De optie Proefbalans synchroniseren in het dialoogvenster Opdracht zoeken." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>BEVESTIGEN</b>.</p>
+            </li>
+        </ol>
+        <h2>De proefbalans opnieuw importeren</h2><MadCap:snippetBlock src="../../Resources/Snippets/reimport-trial-balance-new.flsnp" /></body>
+</html>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Enviar</h1>
+        <p>This analytic test combines two separate datasets into one unified dataset. This test is useful when you need to combine two datasets because one dataset holds master data which enriches the insights you can derive from the second transactional dataset. For example, you could use this test to identify vendors with no transactions.</p>
+        <p>Note that the two datasets being joined to are referred to as dataset A (the primary file) and dataset B (the secondary file).</p>
+        <p>This test supports the following joins:</p>
+        <ul>
+            <li>
+                <p>Inner Join (Retains only the rows that have matches in both datasets A and B)</p>
+            </li>
+            <li>
+                <p>Outer Join (Retains all rows that have matches in either dataset A or B, or in both)</p>
+            </li>
+            <li>
+                <p>Left Outer Join (Retains all rows from dataset A, and the matching rows from B)</p>
+            </li>
+            <li>
+                <p>Right Outer Join (Retains all rows from dataset B, and the matching rows from A)</p>
+            </li>
+            <li>
+                <p>Registros sin coincidencias secundarias</p>
+            </li>
+            <li>
+                <p>Registros sin coincidencias primarias</p>
+            </li>
+        </ul>
+        <p>This analytic test can be used to:</p>
+        <ul>
+            <li>
+                <p>Verificar que todas las transacciones de proveedor se han registrado adecuadamente. Un archivo de datos maestros de proveedor garantiza que todos los proveedores estén documentados, lo que reduce el riesgo de que falten transacciones.</p>
+            </li>
+            <li>
+                <p>Confirmación de que la información del proveedor es precisa. Esto ayuda a garantizar que los pagos se realizan a proveedores legítimos y que se reduzcan los errores en la información de proveedor.</p>
+            </li>
+            <li>
+                <p>Garantizar que el archivo de datos maestros de proveedor se mantiene de conformidad con los requisitos reglamentarios y las políticas de la empresa es esencial para los fines de cumplimiento. Los auditores verifican el cumplimiento con las leyes, reglamentos y políticas internas relevantes.</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <p><b>Core column(s)</b>:</p>
+        <ul>
+            <li>
+                <p>Primary File:</p>
+                <ul>
+                    <li>
+                        <p>One or more fields that will be used as the match</p>
+                    </li>
+                    <li>
+                        <p>One or more fields to be included in the joined result.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Secondary File:</p>
+                <ul>
+                    <li>
+                        <p>One or more fields that will be used as the match.</p>
+                    </li>
+                    <li>
+                        <p>One or more fields to be included in the joined result.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>For the two join fields there must also be an indicator if the join should be performed in an ascending or descending order. The fields from the primary and secondary files must match as they will be used as the key for the join.</p>
+        <h2>Parámetros</h2>
+        <p>One parameter must be set in order to run the test:</p>
+        <p><b>Join Type</b>:</p>
+        <ul>
+            <li>
+                <p><b>Inner Join</b> (Retains only the rows that have matches in both datasets A and B)</p>
+            </li>
+            <li>
+                <p><b>Outer Join</b> (Retains all rows that have matches in either dataset A or B, or in both)</p>
+            </li>
+            <li>
+                <p><b>Left Outer Join</b> (Retains all rows from dataset A, and the matching rows from B)</p>
+            </li>
+            <li>
+                <p><b>Right Outer Join</b> (Retains all rows from dataset B, and the matching rows from A)</p>
+            </li>
+            <li>
+                <p><b>Registros sin coincidencias secundarias</b></p>
+            </li>
+            <li>
+                <p><b>Registros sin coincidencias primarias</b></p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p>The only configuration available for this test is <b>Transactions with no supplier account</b>.</p>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Duplicates analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>Obtain if this is a final result or an interim result.</p>
+            </li>
+            <li>
+                <p>Obtain the type of join being performed from the following types:</p>
+                <ul>
+                    <li>
+                        <p>Inner Join (Retains only the rows that have matches in both datasets A and B)</p>
+                    </li>
+                    <li>
+                        <p>Outer Join (Retains all rows that have matches in either dataset A or B, or in both)</p>
+                    </li>
+                    <li>
+                        <p>Left Outer Join (Retains all rows from dataset A, and the matching rows from B)</p>
+                    </li>
+                    <li>
+                        <p>Right Outer Join (Retains all rows from dataset B, and the matching rows from A)</p>
+                    </li>
+                    <li>
+                        <p>Registros sin coincidencias secundarias</p>
+                    </li>
+                    <li>
+                        <p>Registros sin coincidencias primarias</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Obtain the primary file:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Obtain the matching field(s)</p>
+                    </li>
+                    <li>
+                        <p>Obtain the list of fields that will be included in the result</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Obtain the secondary file:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Obtain the matching field(s)</p>
+                    </li>
+                    <li>
+                        <p>Obtain the list of fields that will be included in the result</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Obtain if the matches are in ascending or descending order or a mix.</p>
+            </li>
+            <li>
+                <p>Perform the proper join based on the user selections.</p>
+            </li>
+        </ol>
+    </body>
+</html>

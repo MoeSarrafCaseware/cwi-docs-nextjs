@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Une fois l&apos;importation terminée, vous pouvez réimporter les données de la balance de vérification à tout moment ou <a href="Import">importer une nouvelle balance de vérification</a>:</p>
+        <p>Lorsque vous réimportez des données,</p>
+        <ul>
+            <li>
+                <p>Les noms et les soldes des comptes seront remplacés par les données réimportées pour les comptes qui existent déjà dans l&apos;engagement</p>
+            </li>
+            <li>
+                <p>Tout nouveau compte dans les données réimportées qui n&apos;existe pas encore dans l&apos;engagement sera ajouté à l&apos;engagement.</p>
+            </li>
+            <li>
+                <p>Les comptes qui existent dans la mission et qui ne sont pas inclus dans les données réimportées seront supprimés, sauf si</p>
+                <ul>
+                    <li>
+                        <p>Le compte existant a un solde pour une période, un type de solde ou une autre entité qui n&apos;est pas inclus dans les données réimportées. Par exemple, si le compte existant a un solde de l&apos;année précédente mais que les données réimportées ne comprennent que des données pour les soldes de l&apos;année en cours, le compte existant ne sera pas supprimé.</p>
+                    </li>
+                    <li>
+                        <p>Le compte existant est assorti d&apos;un ajustement, d&apos;une question ou d&apos;une annotation.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Tous les ajustements, problèmes et annotations effectués avant la réimportation seront conservés après la réimportation des données.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Remarque :</b> Si vous réimportez les données à partir d&apos;une source différente et que les données existantes contiennent des comptes qui ne figurent pas dans les nouvelles données, le solde de ces comptes existants est fixé à 0.</p>
+        <p class="note inline"><b>Remarque :</b> Dans les fichiers d&apos;engagement créés à partir d&apos;un report, les soldes des comptes des années précédentes ne sont pas écrasés ou supprimés par les nouvelles données issues de la réimportation.</p>
+        <p><b>Réimporter la balance de vérification</b></p>
+        <ol>
+            <li>
+                <p>Reassign the fields in the trial balance. Sélectionnez <b>Options</b> (<img src="../Images/OptionsIcon.png" alt="" style="vertical-align: text-bottom;" />) | <b>Réaffecter les champs</b> dans l&apos;onglet <b>Ensembles de données</b> de la page Données.</p>
+            </li>
+        </ol>
+        <p><img src="../Images/Reassign-fields-Datasets-tab.png" alt="Sélection de l&apos;option Réaffecter les champs en vue de réimporter la balance de vérification." /></p>
+        <ol>
+            <li value="2">
+                <p>Dans les menus déroulants, apportez les modifications nécessaires à la manière dont les champs du fichier de données sont assignés aux champs Caseware. Sélectionnez <b>Réimporter</b>.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Import a new trial balance</h2>
+        <p>Dans une mission où vous avez déjà importé une balance de vérification, vous pouvez importer une nouvelle balance de vérification. Supprimez la balance de vérification existante, puis procédez à l&apos;importation de la nouvelle balance de vérification.</p>
+        <p><b>Pour importer la balance de vérification :</b></p>
+        <ol>
+            <li>
+                <p>Supprimer la balance de vérification existante. Sélectionnez <b>Options</b> (<img src="../Images/OptionsIcon.png" alt="" />) | <b>Supprimer les données</b> sur la page <b>Ensembles de données</b> .</p>
+            </li>
+        </ol>
+        <p><img src="../Images/DeleteDataset.png" alt="Suppression d&apos;un jeu de données de balance de vérification dans la page Jeux de données." /></p>
+        <ol>
+            <li value="2">
+                <p>Proceed to import the new trial balance. Dans la boîte de dialogue Ajouter un nouveau jeu de données, parcourez ou faites glisser le fichier CSV ou Excel dans la zone de téléchargement de fichiers.</p>
+            </li>
+        </ol>
+        <p> </p>
+    </body>
+</html>

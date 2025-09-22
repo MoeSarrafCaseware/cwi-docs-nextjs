@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="instNotes"><b>Pour configurer les options d&apos;impression :</b></p>
+        <ol>
+            <li>
+                <p class="instNotes">Accédez à la carte du document, puis sélectionnez <b>Paramètres</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Paramètres d&apos;impression du document.</b></p>
+                <p class="instNotes">Vous ne pouvez accéder à cette option que pour le contenu que vous ajoutez dans les états financiers - pas pour le contenu prédéfini. Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Add-content-areas-in-the-financial-statements.htm">Renommer les domaines de contenu dans les états financiers</a>.</p>
+                <p class="note"><b>Remarque :</b> Pour le contenu prédéfini du document, vous ne pouvez accéder aux paramètres d&apos;impression que si vous personnalisez le modèle de cabinet. Pour accéder au modèle d&apos;entreprise, vous devez avoir le rôle d&apos; <b>administrateur des paramètres</b> ou un rôle similaire. Pour plus d&apos;informations, voir <a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">Gérer le modèle d&apos;entreprise</a> .</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online" class="instNotes">Si vous souhaitez définir des paramètres différents pour les notes, accédez à la carte du document et sélectionnez <b>Paramètres</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Paramètres d&apos;impression des notes</b></p>
+                <p>Si vous souhaitez définir des paramètres différents pour une zone, accédez à la zone souhaitée dans le document et sélectionnez <b>Autres actions (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Modifier les paramètres d&apos;impression.</b></p>
+                <p>Si vous voulez avoir des paramètres différents pour une page spécifique, allez au saut de page de cette page et sélectionnez <b>Plus d&apos;actions (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Paramètres d&apos;impression.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Spécifiez les paramètres préférés pour l&apos; <b>en-tête</b>, la <b>taille de la page</b> et les <b>marges</b>.</p>
+                <p>Notez que les en-têtes des états financiers ne sont pas affectés par les marges des pages et ne sont pas affichés en ligne avec le texte. Vous devez ajuster manuellement les marges de la page pour vous assurer que le contenu du document n&apos;empiète pas sur l&apos;en-tête.</p>
+                <p>Pour déterminer la taille appropriée des marges de la page en pouces, divisez la taille en pixels de votre papier à en-tête par 96. Par exemple, si votre papier à en-tête a une hauteur de 100 px, vous pouvez diviser 100 par 96 pour déterminer la taille de votre marge supérieure. Dans ce cas, la marge doit être d&apos;au moins 1,04 pouce pour éviter que l&apos;en-tête n&apos;empiète sur le contenu de votre document.</p>
+                <p>Si votre papier à en-tête n&apos;apparaît que sur la première page de votre document, vous pouvez <a href="../../Engagements/Template-and-Authoring/Add-a-page-break-in-the-financial-statements.htm#Add">ajouter un saut de page</a> afin de définir des marges différentes pour les autres pages.</p>
+            </li>
+            <li>
+                <p>Sous <b>Tableaux dynamiques</b>, sélectionnez l&apos;option <b>Afficher les en-têtes de colonne sur les pages</b> suivantes si vous souhaitez que les tableaux dynamiques répètent les en-têtes de colonne sur les pages suivantes.</p>
+            </li>
+            <li>
+                <p>Sous <b>Conserver</b>  <b>ensemble</b>, sélectionnez l&apos;option <b>Conserver les en-têtes de notes avec les paragraphes et conserver les paragraphes ensemble</b> si vous voulez vous assurer que les en-têtes de notes ne sont pas imprimés sur des pages séparées du contenu de la note et que les paragraphes ne sont pas répartis sur plusieurs pages.</p>
+                <p>Notez que les paragraphes de plus d&apos;une page seront toujours scindés.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Appliquer un fil</b> igrane pour appliquer un filigrane dans le document.</p>
+                <p>Vous pouvez saisir le contenu du filigrane dans le champ de texte associé.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Paysage</b> pour modifier l&apos;orientation de la page.</p>
+                <p>La valeur par défaut est <b>Portrait.</b></p>
+            </li>
+            <li>
+                <p class="instNotes">Décochez la case <b>Compter dans la numérotation des</b> pages si vous souhaitez que la numérotation des pages commence après la page de <b>la table des matières</b> .</p>
+            </li>
+            <li>
+                <p>Sous <b>Numérotation des pages</b>, sélectionnez <b>Commencer la page à</b> et entrez un numéro de page dans le champ de texte si vous souhaitez commencer la numérotation des pages à un numéro de page personnalisé.</p>
+                <p>Par défaut, la numérotation des pages commence à 1 pour les états financiers et les numéros de page d&apos;un domaine individuel sont repris à partir du domaine précédent. Vous pouvez relancer la numérotation des pages plusieurs fois dans les états financiers en modifiant les paramètres d&apos;impression pour des zones individuelles.</p>
+            </li>
+            <li>
+                <p>Dans la section <b>Paramètres d&apos;impression des notes</b>:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans les Paramètres d&apos;impression des notes, sélectionnez <b>Masquer les en-têtes de sous-niveau avec une seule note</b> si vous souhaitez masquer automatiquement les en-têtes de sous-niveau des notes lorsqu&apos;il n&apos;y a pas de notes suivantes dans le groupe.</p>
+                        <p>Par exemple, si la note 1 comprend une sous-note 1.a et qu&apos;il n&apos;y a pas de notes 1.b, 1.c, etc., l&apos;en-tête de la sous-note 1.a ne s&apos;affiche pas dans la sortie PDF. Seul le contenu de cette note s&apos;affiche.</p>
+                    </li>
+                    <li>
+                        <p>Sélectionnez <b>Activer le texte d&apos;en-tête continu</b> si vous souhaitez saisir un suffixe personnalisé pour les en-têtes des notes qui s&apos;étendent sur plusieurs pages.</p>
+                        <p>Par exemple, si vous saisissez le suffixe &quot;suite&quot;, une note dont l&apos;en-tête est &quot;Principales méthodes comptables&quot; s&apos;affichera comme &quot;Principales méthodes comptables suite&quot; sur les pages suivantes.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

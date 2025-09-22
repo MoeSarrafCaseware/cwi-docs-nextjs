@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>De gegevensset van de saldibalans begrijpen</h1>
+        <p>Als je een proefbalans importeert vanuit een CSV- of Excel-bestand, moet je de velden in kaart brengen, zodat de proefbalansgegevens goed worden weergegeven in de opdracht. Dit onderwerp beschrijft de velden binnen de <strong>Trial Balance-dataset </strong>. Voor meer informatie over het importeren van grootboekgegevens uit CSV- of Excel-bestanden, zie <a href="Import-the-trial-balance-from-a-CSV-or-Excel-file.htm">Gegevens van de klant importeren uit een CSV- of Excel-bestand</a>.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Instructies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rekeningidentificatiecode<code>(account_id</code>)</td>
+                    <td>
+                        <p>De identifier voor de rekening.</p>
+                        <p>Gegevenstype String</p>
+                        <p>Benodigd Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rekeningnaam<code>(account_main_description)</code></td>
+                    <td>
+                        <p>De naam of beschrijving van de rekening.Voorbeelden:</p>
+                        <p>Voorbeelden: Kasgeld, Materiële vaste activa; Verkoop</p>
+                        <p>Gegevenstype String</p>
+                        <p>Benodigd Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nummer financiële groep</td>
+                    <td>
+                        <p>Het nummer voor de financiële groep waaraan de rekening is toegewezen in de groeperingsstructuur. Deze informatie wordt niet verstrekt door de klant en wordt gebruikt om rekeningen automatisch toe te wijzen aan financiële groepen.</p>
+                        <p>Rekeningen die momenteel aan groepen zijn toegewezen, kunt u opnieuw toewijzen wanneer u dit gegevensveld importeert.</p>
+                        <p>Gegevenstype String</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Balans van het huidige jaar</td>
+                    <td>
+                        <p>Het saldo in het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo voorgaand jaar</td>
+                    <td>
+                        <p>Het saldo in het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo voorgaand jaar 2</td>
+                    <td>
+                        <p>Het saldo voor voorgaand jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                        <p> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo voorgaand jaar 3</td>
+                    <td>
+                        <p>Het saldo voor voorgaand jaar 3.</p>
+                        <p>Merk op dat als je opdracht extern geconsolideerd is, je zowel een veld <b>Moederbalans - PY 3</b> als een veld <b>Geconsolideerd saldo - PY 3</b> ziet. Als je een van deze velden toewijst, moet je ook het andere toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saldo voorgaand jaar 4</td>
+                    <td>
+                        <p>Het saldo voor voorgaand jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - geconsolideerde balans</td>
+                    <td>De planning saldibalans voor het huidige jaar. De geconsolideerde balans voor het huidige jaar.Als u dit veld toewijst, moet u ook een overeenkomstige bovenliggende balans voor het huidige jaar toewijzen.<p>Gegevenstype Geld</p><p>Benodigd No</p></td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - geconsolideerde balans</td>
+                    <td>
+                        <p>De planning saldibalans voor het voorgaande jaar. De geconsolideerde balans voor het voorgaande jaar.Als u dit veld toewijst, moet u ook een overeenkomstige bovenliggende balans voor het voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - geconsolideerde balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 2. De geconsolideerde balans voor het 2e voorgaande jaar.&lt;br&gt;&lt;br&gt;Als u dit veld toewijst, moet u ook een overeenkomstige bovenliggende balans voor het 2e voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - geconsolideerde balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 3. De geconsolideerde balans voor het 3e voorgaande jaar.&lt;br&gt;&lt;br&gt;Als u dit veld toewijst, moet u ook een overeenkomstige bovenliggende balans voor het 3e voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - geconsolideerde balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 4. De geconsolideerde balans voor voorgaand jaar 4.Als u dit veld toewijst, moet u ook een overeenkomstige bovenliggende balans voor voorgaand jaar 4 toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - bovenliggende balans</td>
+                    <td>
+                        <p>De planning saldibalans voor het huidige jaar. De bovenliggende balans voor het huidige jaar.Als u dit veld toewijst, moet u ook een overeenkomstige geconsolideerde balans voor het huidige jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - bovenliggende balans</td>
+                    <td>
+                        <p>De planning saldibalans voor het voorgaande jaar. De bovenliggende balans voor het voorgaande jaar.Als u dit veld toewijst, moet u ook een overeenkomstige geconsolideerde balans voor het voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - bovenliggende balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 2. De bovenliggende balans voor het 3e voorgaande jaar.&lt;br&gt;&lt;br&gt;Als u dit veld toewijst, moet u ook een overeenkomstige geconsolideerde balans voor het 3e voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - bovenliggende balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 3. De bovenliggende balans voor het 2e voorgaande jaar.&lt;br&gt;&lt;br&gt;Als u dit veld toewijst, moet u ook een overeenkomstige geconsolideerde balans voor het 2e voorgaande jaar toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - bovenliggende balans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 4. De bovenliggende balans voor voorgaand jaar 4.Als u dit veld toewijst, moet u ook een overeenkomstige geconsolideerde balans voor voorgaand jaar 4 toewijzen.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo januari</td>
+                    <td>
+                        <p>Het saldo voor januari van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo februari</td>
+                    <td>
+                        <p>Het saldo voor februari van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maart</td>
+                    <td>
+                        <p>Het saldo voor maart van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo april</td>
+                    <td>
+                        <p>Het saldo voor april van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo mei</td>
+                    <td>
+                        <p>Het saldo voor mei van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo juni</td>
+                    <td>
+                        <p>Het saldo voor juni van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo juli</td>
+                    <td>
+                        <p>Het saldo voor juli van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo augustus</td>
+                    <td>
+                        <p>Het saldo voor augustus van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo september</td>
+                    <td>
+                        <p>Het saldo voor september van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo oktober</td>
+                    <td>
+                        <p>Het saldo voor oktober van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo november</td>
+                    <td>
+                        <p>Het saldo voor november van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo december</td>
+                    <td>
+                        <p>Het saldo voor december van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo kwartaal 1</td>
+                    <td>
+                        <p>Het saldo voor het eerste kwartaal van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo kwartaal 2</td>
+                    <td>
+                        <p>Het saldo voor het tweede kwartaal van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo kwartaal 3</td>
+                    <td>
+                        <p>Het saldo voor het derde kwartaal van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo kwartaal 4</td>
+                    <td>
+                        <p>Het saldo voor het vierde kwartaal van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo januari</td>
+                    <td>
+                        <p>Het saldo voor januari van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo februari</td>
+                    <td>
+                        <p>Het saldo voor februari van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maart</td>
+                    <td>
+                        <p>Het saldo voor maart van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo april</td>
+                    <td>
+                        <p>Het saldo voor april van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo mei</td>
+                    <td>
+                        <p>Het saldo voor mei van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo juni</td>
+                    <td>
+                        <p>Het saldo voor juni van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo juli</td>
+                    <td>
+                        <p>Het saldo voor juli van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo augustus</td>
+                    <td>
+                        <p>Het saldo voor augustus van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo september</td>
+                    <td>
+                        <p>Het saldo voor september van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo oktober</td>
+                    <td>
+                        <p>Het saldo voor oktober van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo november</td>
+                    <td>
+                        <p>Het saldo voor november van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo december</td>
+                    <td>
+                        <p>Het saldo voor december van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo kwartaal 1</td>
+                    <td>
+                        <p>Het saldo voor het eerste kwartaal van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo kwartaal 2</td>
+                    <td>
+                        <p>Het saldo voor het tweede kwartaal van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo kwartaal 3</td>
+                    <td>
+                        <p>Het saldo voor het derde kwartaal van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo kwartaal 4</td>
+                    <td>
+                        <p>Het saldo voor het vierde kwartaal van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 1</td>
+                    <td>
+                        <p>Het saldo voor de eerste maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No<br /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 2</td>
+                    <td>
+                        <p>Het saldo voor de tweede maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 3</td>
+                    <td>
+                        <p>Het saldo voor de derde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 4</td>
+                    <td>
+                        <p>Het saldo voor de vierde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 5</td>
+                    <td>
+                        <p>Het saldo voor de vijfde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 6</td>
+                    <td>
+                        <p>Het saldo voor de zesde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 7</td>
+                    <td>
+                        <p>Het saldo voor de zevende maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 8</td>
+                    <td>
+                        <p>Het saldo voor de achtste maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 9</td>
+                    <td>
+                        <p>Het saldo voor de negende maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 10</td>
+                    <td>
+                        <p>Het saldo voor de tiende maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 11</td>
+                    <td>
+                        <p>Het saldo voor de elfde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo maand 12</td>
+                    <td>
+                        <p>Het saldo voor de twaalfde maand van het huidige boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo eerste jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de eerste helft van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - Saldo tweede jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de tweede helft van het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo eerste jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de eerste helft van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo tweede jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de tweede helft van het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo eerste jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de eerste helft van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo tweede jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de tweede helft van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo eerste jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de eerste helft van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo tweede jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de tweede helft van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo eerste jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de eerste helft van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo tweede jaarhelft</td>
+                    <td>
+                        <p>Het saldo voor de tweede helft van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Huidig jaar - planning saldibalans</td>
+                    <td>
+                        <p>De planning saldibalans voor het huidige jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - planning saldibalans</td>
+                    <td>
+                        <p>De planning saldibalans voor het voorgaande jaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 1</td>
+                    <td>
+                        <p>Het saldo voor de eerste maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 2</td>
+                    <td>
+                        <p>Het saldo voor de tweede maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 3</td>
+                    <td>
+                        <p>Het saldo voor de derde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 4</td>
+                    <td>
+                        <p>Het saldo voor de vierde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 5</td>
+                    <td>
+                        <p>Het saldo voor de vijfde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 6</td>
+                    <td>
+                        <p>Het saldo voor de zesde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 7</td>
+                    <td>
+                        <p>Het saldo voor de zevende maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 8</td>
+                    <td>
+                        <p>Het saldo voor de achtste maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 9</td>
+                    <td>
+                        <p>Het saldo voor de negende maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 10</td>
+                    <td>
+                        <p>Het saldo voor de tiende maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 11</td>
+                    <td>
+                        <p>Het saldo voor de elfde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar - Saldo maand 12</td>
+                    <td>
+                        <p>Het saldo voor de twaalfde maand van het voorgaande boekjaar.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 1</td>
+                    <td>
+                        <p>Het saldo voor de eerste maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 2</td>
+                    <td>
+                        <p>Het saldo voor de tweede maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 3</td>
+                    <td>
+                        <p>Het saldo voor de derde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 4</td>
+                    <td>
+                        <p>Het saldo voor de vierde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 5</td>
+                    <td>
+                        <p>Het saldo voor de vijfde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 6</td>
+                    <td>
+                        <p>Het saldo voor de zesde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 7</td>
+                    <td>
+                        <p>Het saldo voor de zevende maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 8</td>
+                    <td>
+                        <p>Het saldo voor de achtste maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 9</td>
+                    <td>
+                        <p>Het saldo voor de negende maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 10</td>
+                    <td>
+                        <p>Het saldo voor de tiende maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 11</td>
+                    <td>
+                        <p>Het saldo voor de elfde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maand 12</td>
+                    <td>
+                        <p>Het saldo voor de twaalfde maand van het voorgaande boekjaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 1</td>
+                    <td>
+                        <p>Het saldo voor de eerste maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 2</td>
+                    <td>
+                        <p>Het saldo voor de tweede maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 3</td>
+                    <td>
+                        <p>Het saldo voor de derde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 4</td>
+                    <td>
+                        <p>Het saldo voor de vierde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 5</td>
+                    <td>
+                        <p>Het saldo voor de vijfde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 6</td>
+                    <td>
+                        <p>Het saldo voor de zesde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 7</td>
+                    <td>
+                        <p>Het saldo voor de zevende maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 8</td>
+                    <td>
+                        <p>Het saldo voor de achtste maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 9</td>
+                    <td>
+                        <p>Het saldo voor de negende maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 10</td>
+                    <td>
+                        <p>Het saldo voor de tiende maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 11</td>
+                    <td>
+                        <p>Het saldo voor de elfde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maand 12</td>
+                    <td>
+                        <p>Het saldo voor de twaalfde maand van het voorgaande boekjaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 1</td>
+                    <td>
+                        <p>Het saldo voor de eerste maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 2</td>
+                    <td>
+                        <p>Het saldo voor de tweede maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 3</td>
+                    <td>
+                        <p>Het saldo voor de derde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 4</td>
+                    <td>
+                        <p>Het saldo voor de vierde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 5</td>
+                    <td>
+                        <p>Het saldo voor de vijfde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 6</td>
+                    <td>
+                        <p>Het saldo voor de zesde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 7</td>
+                    <td>
+                        <p>Het saldo voor de zevende maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 8</td>
+                    <td>
+                        <p>Het saldo voor de achtste maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 9</td>
+                    <td>
+                        <p>Het saldo voor de negende maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 10</td>
+                    <td>
+                        <p>Het saldo voor de tiende maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 11</td>
+                    <td>
+                        <p>Het saldo voor de elfde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maand 12</td>
+                    <td>
+                        <p>Het saldo voor de twaalfde maand van het voorgaande boekjaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo januari</td>
+                    <td>
+                        <p>Het saldo voor januari van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo februari</td>
+                    <td>
+                        <p>Het saldo voor februari van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo maart</td>
+                    <td>
+                        <p>Het saldo voor maart van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo april</td>
+                    <td>
+                        <p>Het saldo voor april van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo mei</td>
+                    <td>
+                        <p>Het saldo voor mei van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo juni</td>
+                    <td>
+                        <p>Het saldo voor juni van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo juli</td>
+                    <td>
+                        <p>Het saldo voor juli van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo augustus</td>
+                    <td>
+                        <p>Het saldo voor augustus van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo september</td>
+                    <td>
+                        <p>Het saldo voor september van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo oktober</td>
+                    <td>
+                        <p>Het saldo voor oktober van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo november</td>
+                    <td>
+                        <p>Het saldo voor november van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo december</td>
+                    <td>
+                        <p>Het saldo voor december van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo januari</td>
+                    <td>
+                        <p>Het saldo voor januari van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo februari</td>
+                    <td>
+                        <p>Het saldo voor februari van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo maart</td>
+                    <td>
+                        <p>Het saldo voor maart van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo april</td>
+                    <td>
+                        <p>Het saldo voor april van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo mei</td>
+                    <td>
+                        <p>Het saldo voor mei van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo juni</td>
+                    <td>
+                        <p>Het saldo voor juni van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo juli</td>
+                    <td>
+                        <p>Het saldo voor juli van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo augustus</td>
+                    <td>
+                        <p>Het saldo voor augustus van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo september</td>
+                    <td>
+                        <p>Het saldo voor september van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo oktober</td>
+                    <td>
+                        <p>Het saldo voor oktober van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo november</td>
+                    <td>
+                        <p>Het saldo voor november van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo december</td>
+                    <td>
+                        <p>Het saldo voor december van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo januari</td>
+                    <td>
+                        <p>Het saldo voor januari van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo februari</td>
+                    <td>
+                        <p>Het saldo voor februari van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo maart</td>
+                    <td>
+                        <p>Het saldo voor maart van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo april</td>
+                    <td>
+                        <p>Het saldo voor april van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo mei</td>
+                    <td>
+                        <p>Het saldo voor mei van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo juni</td>
+                    <td>
+                        <p>Het saldo voor juni van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo juli</td>
+                    <td>
+                        <p>Het saldo voor juli van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo augustus</td>
+                    <td>
+                        <p>Het saldo voor augustus van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo september</td>
+                    <td>
+                        <p>Het saldo voor september van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo oktober</td>
+                    <td>
+                        <p>Het saldo voor oktober van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo november</td>
+                    <td>
+                        <p>Het saldo voor november van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo december</td>
+                    <td>
+                        <p>Het saldo voor december van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo kwartaal 1</td>
+                    <td>
+                        <p>Het saldo voor het eerste kwartaal van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo kwartaal 2</td>
+                    <td>
+                        <p>Het saldo voor het tweede kwartaal van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo kwartaal 3</td>
+                    <td>
+                        <p>Het saldo voor het derde kwartaal van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - Saldo kwartaal 4</td>
+                    <td>
+                        <p>Het saldo voor het vierde kwartaal van het voorgaande jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo kwartaal 1</td>
+                    <td>
+                        <p>Het saldo voor het eerste kwartaal van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo kwartaal 2</td>
+                    <td>
+                        <p>Het saldo voor het tweede kwartaal van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo kwartaal 3</td>
+                    <td>
+                        <p>Het saldo voor het derde kwartaal van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - Saldo kwartaal 4</td>
+                    <td>
+                        <p>Het saldo voor het vierde kwartaal van het voorgaande jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo kwartaal 1</td>
+                    <td>
+                        <p>Het saldo voor het eerste kwartaal van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo kwartaal 2</td>
+                    <td>
+                        <p>Het saldo voor het tweede kwartaal van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo kwartaal 3</td>
+                    <td>
+                        <p>Het saldo voor het derde kwartaal van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - Saldo kwartaal 4</td>
+                    <td>
+                        <p>Het saldo voor het vierde kwartaal van het voorgaande jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 2 - planning saldibalans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 2.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 3 - planning saldibalans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 3.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorgaand jaar 4 - planning saldibalans</td>
+                    <td>
+                        <p>De planning saldibalans voor vorig jaar 4.</p>
+                        <p>Gegevenstype Geld</p>
+                        <p>Benodigd No</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Einmaliges Anmelden autorisierten Mitarbeiter zuweisen (Azure AD)</h1>
+        <p>Wenn Sie sicherstellen möchten, dass nur autorisierte Mitarbeiter in Ihrem Unternehmen via Einmaliges Anmelden auf Caseware Cloud zugreifen können, haben Sie die Möglichkeit, autorisierte Benutzer Ihrer App in Azure zuzuweisen. Sollen alle Mitarbeiter Ihres Unternehmens auf Caseware Cloud zugreifen können, überspringen Sie ggf. diesen Schritt und fahren Sie damit fort <a href="#Assign">API-Berechtigungen zuzuweisen</a>.</p>
+        <p style="font-weight: bold;">Autorisierte Mitarbeiter zuordnen:</p>
+        <ol>
+            <li>
+                <p>Wählen Sie <b>Azure Active Directory</b> | <b>App Registrations</b> und anschließend Ihre App.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>Properties</b>.</p>
+            </li>
+            <li>
+                <p>Setzen Sie die Option <b>User assignment required</b> auf <b>Yes</b>.</p>
+                <p><img src="../../Resources/Images/azure-authorized-staff.png" alt="Setzen Sie die Option User assignment required auf Yes." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>Users and Groups</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Add user</b>.</p>
+                <p><img src="../../Resources/Images/azure-add-user.png" alt="Auswahl von Add User." /></p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Users</b> und dann jeden Benutzer, den Sie der Anwendung zuordnen möchten.</p>
+                <p class="note"><b>Hinweis:</b> Wenn Sie ein Premium Microsoft Azure Benutzerkonto haben, können Sie Benutzergruppen erstellen und anschließend Gruppen auswählen, um den Zugriff für alle Mitglieder der Gruppe zu erlauben. Weitere Informationen finden Sie in <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal">Eine Basisgruppe erstellen und via Azure Active Directory Mitglieder hinzufügen</a>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Select</b>, wenn Sie alle Benutzer, die Zugriff haben sollten, hinzugefügt haben.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Assign</b>, um diesen Benutzern zu erlauben, auf die Anwendung zuzugreifen.</p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Assign-API-permissions.htm">API-Berechtigungen zuweisen</a></p>
+    </body>
+</html>

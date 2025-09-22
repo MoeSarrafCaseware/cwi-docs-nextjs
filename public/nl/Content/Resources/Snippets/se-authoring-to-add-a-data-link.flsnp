@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Data links (<img src="../Images/text-format-formula.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) allow you to have engagement information and properties retrieved and inserted in text fields.</p>
+        <p>U kunt de volgende projecten archiveren:</p>
+        <ul>
+            <li>
+                <p><b>Opdrachteigenschappen</b></p>
+            </li>
+            <p>Haalt informatie op uit het dialoogvenster Engagementeigenschappen en entiteiteigenschappen en voegt deze in.</p>
+            <p>De volgende afbeelding toont het dialoogvenster Eigenschappen van opdracht. Om dit dialoogvenster te openen, selecteert u de titel van de opdracht bovenaan.</p>
+            <p><img src="../Images/engagement-properties-dialog.PNG" alt="Het dialoogvenster Documenteigenschappen." /></p>
+            <p>De volgende afbeelding toont de eigenschappen van de entiteit. Om de entiteiteigenschappen te bekijken, ga je naar het menu Cloud (<img src="../Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Entities</b>. Zoek de gewenste entiteit en selecteer deze.</p>
+            <p><img src="../Images/entity-properties.PNG" alt="Eigenschappen entiteit" /></p>
+            <p>Als de waarde van de eigenschap beschikbaar is (d.w.z. niet leeg is), wordt deze weergegeven in het dialoogvenster Gegevenskoppeling, zodat je een voorbeeld kunt bekijken van wat er in het tekstveld wordt ingevoegd.</p>
+            <p><img src="../Images/data-link-values-dispay-in-dialog.PNG" alt="Data Link toont de waarden van elk object - indien beschikbaar." /></p>
+            <p>Koppelingen naar de gegevens van Engagement Properties zijn onder andere:<ul style="list-style-type: circle;"><li><p>Bedrijfsnaam</p><p>Dit is het veld <b>Bedrijfsnaam</b> dat gebruikers invoeren in het dialoogvenster Entiteit aanmaken (wanneer ze de entiteit aanmaken). Als gebruikers de besturingsnaam bijwerken in het dialoogvenster Eigenschappen van de opdracht, haalt de gegevenskoppeling deze waarde op.</p><p>Voorbeeld: Gebruikers creëren een entiteit met de bedrijfsnaam <i>GreenLight Inc.</i> Nadat ze de eerste opdracht hebben gemaakt, werken ze de bedrijfsnaam van de entiteit in het dialoogvenster Eigenschappen van de opdracht bij naar <i>GreenLight Holding</i>. Als ze een datalink invoegen (fx) en Bedrijfsnaam selecteren, dan wordt <i>GreenLight Holding</i> ingevoegd in het tekstveld.</p></li><li><p>Juridische naam</p><p>Dit is het veld <b>Naam</b> dat gebruikers invoeren in het dialoogvenster Entiteit aanmaken (wanneer ze de entiteit aanmaken).</p></li><li><p>Einddatum jaar</p><p>Dit is het veld <b>Einddatum van het jaar</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de periode of de datums wijzigen en vervolgens een gegevenskoppeling proberen toe te voegen, wordt de laatste datum opgehaald.</p></li><li><p>Startdatum jaar</p><p>Dit is het <b>startdatumveld voor het jaar</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de periode of de datums wijzigen en vervolgens proberen deze gegevenskoppeling toe te voegen, wordt de laatste datum opgehaald.</p></li><li><p>Huidig jaar</p><p>Haalt het jaar op in het veld <b>Einddatum van het jaar</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de periode of de datums wijzigen en vervolgens proberen deze gegevenskoppeling toe te voegen, wordt het laatste jaar opgehaald.</p></li><li><p>Website</p><p>Haalt het veld <b>Website</b> op in de entiteiteigenschappen die gebruikers invoeren in het tabblad <b>Algemene informatie</b> | <b>Sociaal profiel</b> . Als gebruikers de website bijwerken en vervolgens proberen deze gegevenskoppeling toe te voegen, wordt de meest recente invoer opgehaald.</p></li><li><p>Vorige jaren</p><p>Haalt het jaar op in het veld <b>Einddatum jaar</b> in het dialoogvenster Eigenschappen van de opdracht en trek er één vanaf (dat wil zeggen einddatum jaar - 1). Als gebruikers de periode of de data wijzigen en vervolgens proberen deze gegevenskoppeling toe te voegen, wordt de waarde voor het vorige jaar opnieuw berekend.</p></li><li><p>Valuta code</p><p>Haalt de valutacode op uit het veld <b>Valuta</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de geselecteerde valuta bijwerken in de eigenschappen van de opdracht, wordt de laatst geselecteerde valutacode opgehaald.</p></li><li><p>Naam valuta</p><p>Haalt de valutanaam op uit het veld <b>Valuta</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de geselecteerde valuta bijwerken in de eigenschappen van de opdracht, wordt de laatste geselecteerde valutanaam opgehaald.</p></li><li><p>Valutasymbool</p><p>Haalt het valutasymbool op uit het veld <b>Valuta</b> in het dialoogvenster Eigenschappen van de opdracht. Als gebruikers de geselecteerde valuta bijwerken in de eigenschappen van de opdracht, wordt het laatst geselecteerde valutasymbool opgehaald.</p></li><li><p>Adres van de entiteit</p><p>Haalt de waarden op in de sectie <b>Adressen</b> in de eigenschappen van de entiteit.</p></li></ul></p>
+            <li>
+                <p style="font-weight: bold;">Saldibalans</p>
+                <p>Items in de proefbalans zoals de naam van de rekening, de naam van de groep of waarden van het huidige of vorige jaar. Een selectievakje <b>voor het weergeven van</b> het rekeningsaldo in tegenovergestelde (balans) <b>tekens</b> . Als meerdere financiële groeperingsstructuren zijn ingeschakeld in je product, kun je filteren op rekeningen en groepen per groeperingsstructuur. Als dimensies zijn ingeschakeld in je product, kun je filteren op accounts en groepen op dimensie.</p>
+                <p>Als de verbintenis geconsolideerd is, kun je kiezen of je gegevens van de moedermaatschappij of een dochteronderneming wilt gebruiken en of je de geconsolideerde of niet-geconsolideerde waarde voor de rekening of groep wilt gebruiken. Je kunt er ook voor kiezen om de standaardwaarde te gebruiken op basis van of het document is ingesteld om geconsolideerde of niet-geconsolideerde gegevens te gebruiken.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Vaste eigenschappen</p>
+                <p>Opdrachteigenschappen zoals gedefinieerd in Cloud, zoals:</p>
+                <ul style="list-style-type: circle;">
+                    <li>Naam bedrijf</li>
+                    <li>Adres bedrijf</li>
+                </ul>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Geen reactie</p>
+                <p>Reacties op procedures van checklists. Zodra je een document van de controlelijst hebt geselecteerd in de lijst, selecteer je het antwoord dat je wilt ophalen en invoegen in het tekstgedeelte.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Materialiteit</p>
+                <p>Values defines in the <a href="../../SE-Authoring/Set-up-the-Materiality-document.htm">Materiality</a> document.</p>
+            </li>
+            <li>
+                <p><b>Begrippenlijst verloving</b></p>
+                <p>Voeg een term uit de <a href="../../SE-Authoring/What's-the-engagement-glossary.htm">begrippenlijst</a>toe.</p>
+                <p>Zie <a href="#To_add_an_Engagement_Glossary_term:">Een begrippenlijst voor opdrachten toevoegen</a>.</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Dynamische tekst</p>
+                <p>Dynamische tekst is voorwaardelijke tekst. Het is een veld waar verschillende tekst wordt weergegeven op basis van een voorwaarde of een reeks voorwaarden.</p>
+                <p>Zie <span><a href="#To_add_dynamic_text:">Dynamische tekst toevoegen.</a></span></p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Vormen Waarde</p>
+                <p>Voeg de waarde van een specifiek formulierveld in. Zodra je een formulier en een veld selecteert, wordt de waarde van het geselecteerde veld ingevoegd in het tekstveld.</p>
+                <p class="note inline"><b>Let op:</b> Deze optie is alleen beschikbaar in het dialoogvenster Gegevenskoppeling als je formulieren hebt ontwikkeld met SE Builder in je product. Zie <a href="../../SE-Authoring/Develop-custom-forms.htm">Aangepaste formulieren ontwikkelen</a>voor meer informatie <a href="../../SE-Authoring/Develop-custom-forms.htm">.</a></p>
+            </li>
+        </ul>
+    </body>
+</html>

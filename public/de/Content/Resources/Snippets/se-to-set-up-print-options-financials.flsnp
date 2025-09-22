@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="instNotes"><b>Druckoptionen einrichten:</b></p>
+        <ol>
+            <li>
+                <p class="instNotes">Gehen Sie in die Dokumentennavigation und wählen anschließend <b>Einstellungen</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | <b>Druckeinstellungen für das Dokument</b>.</p>
+                <p class="instNotes">Sie können auf diese Option nur für die Inhalte zugreifen, die Sie im Jahresabschluss hinzufügen - nicht für die vordefinierten Inhalte. Weitere Informationen finden Sie in <a href="../../Engagements/Template-and-Authoring/Add-content-areas-in-the-financial-statements.htm">Inhaltsbereiche in den Jahresabschluss einfügen</a>.</p>
+                <p class="note"><b>Hinweis:</b> Für die vordefinierten Inhalte im Dokument können Sie nur auf die Druckeinstellungen zugreifen, wenn Sie die Firmenvorlage anpassen. Um auf die Unternehmensvorlage zugreifen zu können, müssen Sie über die Rolle <b>Einstellungen-Administrator</b> oder gleichwertige Rechte verfügen. Weitere Informationen erhalten Sie in <a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">Firmenvorlage verwalten</a>.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Online" class="instNotes">Wenn Sie andere Einstellungen für die Anhangangaben festlegen möchten, gehen Sie in die Dokumentennavigation und wählen <b>Einstellungen</b> (<img src="../Icons/risk-assessment-settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt=""></img>) | <b>Druckeinstellungen Erläuterungen</b></p>
+                <p>Wenn Sie andere Einstellungen für einen bestimmten Bereich vornehmen möchten, gehen Sie in den betreffenden Bereich des Dokuments und wählen <b>Weitere Aktionen (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img><b>)</b> | <b>Druckeinstellungen bearbeiten</b>.</p>
+                <p>Wenn Sie andere Einstellungen für eine bestimmte Seite vornehmen möchten, gehen Sie zum  Seitenumbruch für die betreffende Seite und wählen <b>Weitere Aktionen (</b><img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt=""></img><b>)</b> | <b>Druckeinstellungen </b>.</p>
+            </li>
+            <li>
+                <p class="instNotes">Nehmen Sie die gewünschten Einstellungen für <b>Briefkopf</b>, <b>Seitengröße</b> und <b>Ränder</b> vor.</p>
+                <p>Bitte beachten Sie, dass Briefköpfe in Jahresabschlüssen nicht von Seitenrändern betroffen sind und nicht „Inline“ mit Text angezeigt werden. Sie müssen die Seitenränder manuell anpassen, um sicherzustellen, dass der Inhalt des Dokuments sich sich nicht mit dem Briefkopf überschneidet.</p>
+                <p>Zur Bestimmung der geeigneten Größe für die Seitenränder in Zoll, teilen Sie die Pixelgröße Ihres Briefkopfs durch 96. Ist zum Beispiel Ihr Briefkopf 100px hoch, können Sie 100 durch 96 teilen, um die Größe Ihres oberen Randes zu bestimmen. In diesem Fall sollte der Rand mindestens 1,04 Zoll sein, um sicherzustellen, dass der Briefkopf sich nicht mit dem Dokumenteninhalt überschneidet.</p>
+                <p>Wird Ihr Briefkopf nur auf der ersten Seite des Dokuments angezeigt, können Sie einen <a href="../../Engagements/Template-and-Authoring/Add-a-page-break-in-the-financial-statements.htm#Add">Seitenumbruch hinzufügen</a>, um unterschiedliche Ränder für die anderen Seiten festzulegen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie unter <b>Dynamische Tabellen</b> die Option <b>Spaltenüberschriften auf Folgeseiten anzeigen</b>, wenn Sie möchten, dass dynamische Tabellen die Spaltenüberschriften auf Folgeseiten wiederholen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie unter <b>Nicht trennen</b> die Option <b>Notizenüberschriften mit Absätzen zusammenhalten und Absätze zusammenhalten</b>, wenn Sie sicherstellen möchten, dass Notizenüberschriften nicht auf getrennten Seiten vom Notizeninhalt gedruckt und Absätze nicht auf mehrere Seiten aufgeteilt werden.</p>
+                <p>Beachten Sie, dass Absätze, die länger als eine Seite sind, trotzdem geteilt werden.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Wasserzeichen zuweisen</b>, um ein Wasserzeichen zum Dokument hinzuzufügen.</p>
+                <p>Sie können den Inhalt des Wasserzeichens in das zugehörige Feld eingeben.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Querformat</b>, um die Seitenausrichtung zu ändern.</p>
+                <p>Der Standard ist <b>Hochformat</b>.</p>
+            </li>
+            <li>
+                <p class="instNotes">Deaktivieren Sie die Option <b>In Seitenzahlanzeige einschließen</b>, wenn Sie möchten, dass die Seitennummerierung nach der Seite mit dem <b>Inhaltsverzeichnis</b> beginnt.</p>
+            </li>
+            <li>
+                <p>Wählen Sie unter <b>Seitennummerierung </b> die Option <b>Beginngen mit Seite</b> und geben Sie eine Seitenzahl in das Textfeld ein, wenn Sie die Seitennummerierung bei einer benutzerdefinierten Seitenzahl beginnen möchten.</p>
+                <p>Standardmäßig beginnt die Seitennummerierung für die Jahresabschlüsse bei 1, und die Seitenzahlen der einzelnen Bereiche werden vom vorherigen Bereich fortgesetzt. Sie können die Seitennummerierung im gesamten Jahresabschluss mehrmals neu starten, indem Sie die Druckeinstellungen für einzelne Bereiche ändern.</p>
+            </li>
+            <li>
+                <p>In den <b>Druckeinstellungen für Notizen</b>:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Wählen Sie <b>Unterüberschriften verbergen, wenn nur ein Eintrag vorhanden ist</b>, wenn Sie untergeordnete Überschriften für Notizen automatisch ausblenden möchten, wenn keine weiteren Notizen in der Gruppe vorhanden sind..</p>
+                        <p>Umfasst z. B. die Anhangangabe 1 den Unterpunkt 1.a und es gibt keine weiteren Unterpunkte 1.b, 1.c etc., wird die Überschrit 1.a in der PDF-Ausgabe nicht angezeigt. Nur der Inhalt zur Überschrift 1 a wird angezeigt.</p>
+                    </li>
+                    <li>
+                        <p>Aktivieren Sie <b>Fortgesetzten Kopfzeilentext aktivieren</b>, wenn Sie ein benutzerdefiniertes Suffix für Kopfzeilen von Notizen eingeben möchten, die sich über mehrere Seiten erstrecken.</p>
+                        <p>Wenn Sie beispielsweise das Suffix „Fortsetzung“ eingeben, wird eine Notiz mit der Überschrift „Wesentliche Bilanzierungs- und Bewertungsmethoden“ auf den Folgeseiten als „Wesentliche Bilanzierungs- und Bewertungsmethoden Fortsetzung“ angezeigt.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

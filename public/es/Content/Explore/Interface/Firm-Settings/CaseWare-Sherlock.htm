@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Firm settings - Sherlock Starter</h1><MadCap:snippetBlock src="../../../Resources/Snippets/TopicRequiresSherlock.flsnp" /><h2><a name="Processing-Messages"></a>Processing Messages</h2>
+        <p>The Processing Messages report displays information about the numerous data extraction processes that occur each day.</p>
+        <p><b>To view the Processing Messages report:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>Open the <b>Cloud menu</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) and select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Sherlock Starter | Processing Messages</b>.</p>
+            </li>
+            <li>
+                <p>The Processing Messages report loads a list of historical data extraction processes the first time it is opened.</p>
+                <p><img src="../../../Resources/Images/process-report-01.png" style="border:1px solid #000000" /></p>
+                <ul>
+                    <li>
+                        <p>(Optional) Use the refresh icon (<img src="../../../Resources/Icons/refresh-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to reload the Processing Messages report.</p>
+                    </li>
+                    <li>
+                        <p>(Optional) Use the search bar or filter (<img src="../../../Resources/Icons/filter-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) to narrow the report results to those that match the specified properties.</p>
+                        <table class="table">
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <th>Propiedad</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>Status icons (<img src="../../../Resources/Icons/extraction-success-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />,<img src="../../../Resources/Icons/extraction-in-progress-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />,<img src="../../../Resources/Icons/extraction-failure-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />)</td>
+                                    <td>Displays at a glance whether the extraction is a success (<img src="../../../Resources/Icons/extraction-success-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />), in progress<MadCap:conditionalText MadCap:conditions="General.Ignore">/validating</MadCap:conditionalText> (<img src="../../../Resources/Icons/extraction-in-progress-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) or a failure (<img src="../../../Resources/Icons/extraction-failure-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />).</td>
+                                </tr>
+                                <tr>
+                                    <td>Extraction Time</td>
+                                    <td>The time when the extraction attempt was performed.</td>
+                                </tr>
+                                <tr>
+                                    <td>Entidad</td>
+                                    <td>The name of the entity where the file is located.</td>
+                                </tr>
+                                <tr>
+                                    <td>Archivo</td>
+                                    <td>El nombre del archivo de salida.</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Modified</td>
+                                    <td>The date when the engagement file was last modified.</td>
+                                </tr>
+                                <tr>
+                                    <td>Estado</td>
+                                    <td>Displays whether the extraction was a success or failure.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Select a data extraction process from the list to view more details, including the full error message for failed extractions.</p>
+                <p><img src="../../../Resources/Images/process-report-02.png" style="border:1px solid #000000" /></p>
+            </li>
+        </ol>
+        <h2><a name="Gold-Standard-Mapping"></a>Gold Standard Mapping</h2>
+        <p>If your firm has custom Audit templates, you can use Gold Standard Mapping to map the risks, controls and reportable items in your templates to match the Caseware &quot;gold standard&quot;. As a result of this mapping process, Sherlock can retrieve the risks, controls and reportable items from engagement files that are based on the firm template.</p>
+        <p><b>To configure Gold Standard Mapping:</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li>
+                <p>Open the <b>Cloud menu</b> (<img src="../../../Resources/Icons/cloud-menu.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) and select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Sherlock Starter | Gold Standard Mapping</b>.</p>
+            </li>
+            <li>
+                <p>Select the <b>Add Mapping Rule</b> (<img src="../../../Resources/Icons/add-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon below the applicable mapping type to create a new mapping rule, or the <b>Edit</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon next to an existing rule.</p>
+                <p><img src="../../../Resources/Images/gold-standard-01.png" style="border:1px solid #000000" /></p>
+                <p class="note"><b>Note:</b> You cannot edit mapping rules with the <b>ACTIVE</b> status.</p>
+            </li>
+            <li>
+                <p>On the Select Source page, select a Working Papers file from the 20 most recent files. <a href="https://documentation.caseware.com/latest/CaseView/en/Content/Customization/Databases/CaseView-database.htm">CaseView database information</a> loads from the selected file. Select up to 3 applicable groups and a form.</p>
+                <p><img src="../../../Resources/Images/gold-standard-02.png" style="border:1px solid #000000" /></p>
+                <p>Select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>On the Map IDs to Targets page, you can establish relationships by mapping IDs to targets. Select the <b>Add ID</b> (<img src="../../../Resources/Icons/add-id-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon to the right of a target, then on the Add IDs page, select the applicable IDs to map to the target.</p>
+                <p><img src="../../../Resources/Images/gold-standard-03.png" style="border:1px solid #000000" /></p>
+                <p>The number next to each ID indicates how many times it has been mapped to a target. Select <b>Add</b> to map the IDs.</p>
+                <p><img src="../../../Resources/Images/gold-standard-04.png" style="border:1px solid #000000" /></p>
+                <ul>
+                    <li>
+                        <p>(Optional) Select <b>Assign</b> next to a specific target to assign a value transformation rule. On the Assign Value to Transform page next to the applicable ID, select an existing rule from the drop-down menu, select the <b>Edit</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon to edit an existing rule, or select the <b>Add Transformation Rule</b> (<img src="../../../Resources/Icons/add-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon to create a new rule. Por ejemplo:</p>
+                        <p><img src="../../../Resources/Images/gold-standard-05.png" style="border:1px solid #000000" /></p>
+                    </li>
+                </ul>
+                <p>When complete, select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>The Summary page displays an overview of the mapping rule. If the mapping rule is complete, select <b>Finish</b>.</p>
+            </li>
+            <li>
+                <p>The mapping rule is saved as a draft. Select the <b>Edit</b> (<img src="../../../Resources/Images/edit-icon.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) icon to continue editing the rule, or select <b>ACTIVATE</b> above the mapping type to enable the rule.</p><div class="note"><p><b>Notas:</b></p>
+                    <ul>
+                        <li>
+                            <p>If there are two rules in the <b>DRAFT</b> status for a particular mapping type, selecting <b>ACTIVATE</b> will enable both rules.</p>
+                        </li>
+                        <li>
+                            <p>Once active, you can no longer edit or delete a mapping rule.</p>
+                        </li>
+                        <li>
+                            <p>Each Control, Risk or Management Letter Point can have up to 2 mapping rules.</p>
+                        </li>
+                    </ul></div></li>
+        </ol>
+    </body>
+</html>

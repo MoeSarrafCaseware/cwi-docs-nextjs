@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p style="font-weight: bold;">Een berekening toevoegen of bewerken in tabelcellen in de jaarrekening</p>
+        <ol>
+            <li>
+                <p>Open de <b>balans</b>, selecteer de tabel.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Meer acties</b> (<img src="../Images/icon-more-actions-inline.png" style="width: 24px;height: 13px;vertical-align: text-bottom;" />) en kies vervolgens <b>Dynamische tabel bewerken.</b></p>
+            </li>
+            <p>De tabel wordt geopend in de bewerkingsmodus.</p>
+            <li>
+                <p>Go to the desired cell and select the <b>fx</b> icon.</p>
+            </li>
+            <p>Het tabblad <b>Berekening</b> wordt geopend.</p>
+            <p class="note inline"><b>Let op:</b> De cel moet een <b>Input rij</b> of <b>Input</b> kolom cel zijn.</p>
+            <p><img src="../Images/insert-calculation-end-user.png" alt="het fx-pictogram wordt weergegeven in de linkerrand van de cel." /></p>
+            <li>
+                <p>In the <b>Calculation</b> tab:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Selecteer <b>Gegevens invoegen</b> (<img src="../Images/icon-link.png" style="width: 20px;height: 20px;vertical-align: text-bottom;" />) om een gegevenskoppeling voor de proefbalans in de formule in te voegen.</p>
+                    </li>
+                    <p>Het dialoogvenster <b>Gegevenskoppeling</b> wordt geopend, waarbij <b>Jaarrekeningen</b> standaard is geselecteerd als bron voor de proefbalansgegevens.</p>
+                    <p class="note inline"><b>Let op:</b> Als je gegevens van voorgaande jaren hebt geïmporteerd, worden in het dialoogvenster gegevens van maximaal vier voorgaande jaren weergegeven.</p>
+                    <p>Je kunt de standaardwaarde wijzigen met het vervolgkeuzemenu <b>Bron</b> :<ul><li><b>Proefbalans</b> - proefbalansgegevens worden ontleend aan de kolom <b>Definitief</b> op de pagina <b>Gegevens</b> . Dat wil zeggen, de uiteindelijke bedragen na aanpassingen.</li><li><b>Jaarrekeningen</b> - de gegevens van de proefbalans komen uit de jaarrekeningen. Dat wil zeggen, de afgeronde bedragen en bedragen die handmatig zijn overschreven.</li></ul></p>
+                    <p>Wanneer u gegevenskoppelingen invoegt, geeft het voorvoegsel <img src="../Images/icon-fs-data-source.png" style="width: 22px;height: 25px;vertical-align: text-bottom;" /> of <img src="../Images/icon-tb-data-source.png" style="vertical-align: text-bottom;width: 22px;height: 22px;" /> de gegevensbron aan.</p>
+                    <p class="note" MadCap:conditions="PrintGuides.Teacher"><b>Let op:</b> Als er formulieren beschikbaar zijn in je product, is het tabblad <b>Formulierwaarde</b> beschikbaar in het dialoogvenster <b>Gegevenskoppeling</b> . Via dit tabblad kun je waarden invoegen vanuit formulieren.</p>
+                    <li>
+                        <p>Selecteer <b>Getallen</b> (<img src="../Images/icon-number.png" style="width: 26px;height: 18px;vertical-align: text-bottom;" />) om getallen in de formule in te voegen.</p>
+                        <p class="tip"><b>Tip:</b> Je kunt je toetsenbord gebruiken om getallen in te voegen.</p>
+                    </li>
+                    <li>
+                        <p>Voeg de gewenste operatoren toe om de formule op te bouwen.</p>
+                        <p class="tip"><b>Tip:</b> Je kunt je toetsenbord gebruiken om operatoren in te voegen.</p>
+                        <p><img src="../Images/end-user-build-calculation.PNG" alt="Gebruiker heeft een formule toegevoegd op het tabblad Berekening." /></p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Selecteer <b>Gereed</b> om de kolominstellingen te sluiten.</p>
+            </li>
+            <p>Als u een ongeldige formule hebt ingevoerd, wordt het pictogram <b>fx</b> rood weergegeven (<img src="../Images/icon-red-fx-invalid-calculation.png" style="width: 20px;height: 25px;vertical-align: text-bottom;" />) om een fout aan te geven.</p>
+            <p class="instNotes note" MadCap:conditions="PrintGuides.Teacher"><b>Let op:</b> Als u een berekening bewerkt die deel uitmaakt van de <MadCap:conditionalText MadCap:conditions="General.PDF"><a href="https://docs.caseware.com/latest/webapps/en/Practice/Templates-and-Authoring/Manage-the-firm-template.htm">standaardinhoud</a> </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Engagements/Template-and-Authoring/Manage-the-firm-template.htm">standaard inhoud</a></MadCap:conditionalText>die bij uw product is geleverd, is er een pictogram <b>Terugkeren</b> (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />) beschikbaar bij de cel, zodat u indien nodig kunt terugkeren naar de oorspronkelijke berekening.</p>
+        </ol>
+        <p><img src="../Images/revert-calculation1.png" alt="Het pictogram Terugkeren is alleen beschikbaar als je een vooraf gedefinieerde berekening overschrijft." /></p>
+        <p>Terug in het document kun je de berekeningsformules bekijken die je hebt toegevoegd. Selecteer een cel om de details van de berekening weer te geven.</p>
+        <p><img src="../Images/view-calculation-end-user.PNG" alt="Account Details popup met de celberekening." /></p>
+        <p>Als je een berekende celwaarde overschrijft, kun je de cel selecteren om de oorspronkelijke berekening en waarde te bekijken. Het pop-upvenster Accountgegevens bevat ook de optie <b>Terugkeren</b> (<img src="../Images/icon-revert-to-inline.PNG" style="width: 21px;height: 16px;vertical-align: text-bottom;" />).</p>
+        <p><img src="../Images/calculation-popup=post-override1.png" alt="De optie Terugkeren is altijd beschikbaar als u een celwaarde overschrijft die afkomstig is van een berekeningsformule." /></p>
+    </body>
+</html>

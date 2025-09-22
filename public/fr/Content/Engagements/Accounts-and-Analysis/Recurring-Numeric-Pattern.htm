@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Motif numérique récurrent</h1>
+        <p>Le test analytique des motifs numériques récurrents est conçu pour identifier des motifs spécifiques définis par l&apos;utilisateur qui font partie d&apos;une valeur. Ces motifs peuvent se trouver au début, à la fin ou intégrés dans la valeur. Vous pouvez choisir de rechercher une combinaison de chiffres spécifique ou un certain nombre de chiffres récurrents dans les valeurs.</p>
+        <p>Notez que ce test ne prend pas en compte les valeurs décimales. Les valeurs 1000 et 1000.10 seraient considérées comme identiques. Vous avez également la possibilité d&apos;ignorer les valeurs arrondies si vous utilisez le test pour rechercher des chiffres récurrents.</p>
+        <p>Ce test analytique peut être utilisé pour repérer :</p>
+        <ul>
+            <li>
+                <p>Transactions potentiellement non soutenues</p>
+            </li>
+            <li>
+                <p>Un risque d&apos;anomalie significative due à la fraude</p>
+            </li>
+            <li>
+                <p>Valeurs avec la combinaison 999 qui peuvent indiquer des valeurs juste en dessous d&apos;une valeur seuil</p>
+            </li>
+            <li>
+                <p>Valeurs récurrentes pouvant indiquer des numéros fictifs</p>
+            </li>
+        </ul>
+        <h2>Champs utilisés pour l&apos;analyse</h2>
+        <p>Ce test utilise un ou plusieurs champs numériques pour détecter les montants arrondis ou les valeurs de quantité arrondies. Vous pouvez définir les champs à utiliser en modifiant le paramètre <b>Sélectionner les champs</b>.</p>
+        <h2>Paramètres</h2>
+        <p>Un paramètre doit être défini pour que le test puisse être exécuté :</p>
+        <ul>
+            <li>
+                <p><b>Sélectionner les champs</b> – Sélectionnez dans la liste un ou plusieurs champs numériques à utiliser pour effectuer le test.</p>
+            </li>
+            <li>
+                <p>Sélectionnez la <b>combinaison de chiffres</b> ou le nombre de <b>chiffres récurrents</b> que vous souhaitez rechercher. Notez que le test ne prend pas en compte les chiffres au-delà de la décimale. Par exemple, les valeurs 1 000 et 1 000,10 sont considérées comme identiques.</p>
+            </li>
+            <li>
+                <p>If you select <b>Digit combination</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Combinaison de chiffres</b> - Saisissez la combinaison de chiffres à rechercher dans les valeurs. La valeur par défaut est 999.</p>
+                    </li>
+                    <li>
+                        <p><b>Emplacement de la combinaison de</b> chiffres - Choisir de rechercher la combinaison de chiffres au début, à la fin ou à l&apos;intérieur des valeurs. Si vous choisissez de le rechercher au début des valeurs, vous pouvez également indiquer la longueur totale des valeurs à rechercher. Par exemple, vous pouvez rechercher les valeurs qui commencent par 123 et qui ont une longueur totale de 4 chiffres.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If you select <b>Recurring digits</b>, enter values for the following parameters:</p>
+                <ul>
+                    <li>
+                        <p><b>Nombre de chiffres récurrents</b> - Saisissez le nombre de chiffres récurrents à rechercher. La valeur par défaut est 3.</p>
+                    </li>
+                    <li>
+                        <p><b>Emplacement des chiffres récurrents</b> - Permet de rechercher les chiffres récurrents au début ou à la fin des valeurs.</p>
+                    </li>
+                    <li>
+                        <p><b>Ignore rounded amounts</b> - Select whether to ignore rounded amount values.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Configurations de test</h2>
+        <p class="note"><b>Remarque :</b> Remarque : Les configurations proposées varient en fonction du produit que vous utilisez.</p>
+        <p>Les configurations suivantes sont possibles pour ce test :</p>
+        <ul>
+            <li>
+                <p style="font-weight: bold;">Montants ayant un motif numérique récurrent</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Quantité avec motif numérique récurrent</p>
+            </li>
+            <li>
+                <p style="font-weight: bold;">Numérique avec motif récurrent - Tous les champs</p>
+            </li>
+        </ul>
+        <h2>Spécifications techniques</h2>
+        <p>Lorsque vous exécutez le test analytique Plage numérique, il faut réaliser les étapes suivantes pour l’exécution du test :</p>
+        <ol>
+            <li>
+                <p>Vérifiez que les champs de référence nécessaires ont été sélectionnés. Si les champs n&apos;ont pas été sélectionnés, créez un champ de référence unique. Cette étape est valable seulement si des champs spécifiques ont été sélectionnés. Si toutes les colonnes sont accessibles, elle n&apos;est pas nécessaire.</p>
+            </li>
+            <li>
+                <p>Vérifiez qu&apos;un champ a été sélectionné pour l&apos;analyse de base.</p>
+            </li>
+            <li>
+                <p>Obtenir les paramètres nécessaires pour l&apos;analyse de base :</p>
+                <ul>
+                    <li>
+                        <p>Motif des chiffres</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtenir le modèle de chiffres</p>
+                            </li>
+                            <li>
+                                <p>Obtenir l&apos;emplacement du motif du chiffre.</p>
+                                <ul>
+                                    <li>
+                                        <p>Si le motif des chiffres se trouve au début, il faut obtenir s&apos;il existe un paramètre facultatif pour la longueur totale de la valeur :</p>
+                                    </li>
+                                    <li>
+                                        <p>Si la longueur est de 0, toutes les valeurs sont incluses.</p>
+                                    </li>
+                                    <li>
+                                        <p>La valeur de la longueur doit être supérieure ou égale au motif. Par exemple, si le motif est 999, la longueur minimale est de 3.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Si un utilisateur choisit 6 comme longueur et que le motif de départ est 999, 999000 sera sélectionné, mais pas 99900, car il ne comporte que cinq caractères.</p>
+                            </li>
+                            <li>
+                                <p>Extraire toutes les valeurs qui répondent aux paramètres sélectionnés. Les valeurs décimales sont ignorées pour les motifs de chiffres à la fin de la valeur. Les valeurs décimales ne sont pas arrondies.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Chiffres récurrents</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Obtenir le nombre de chiffres récurrents.</p>
+                            </li>
+                            <li>
+                                <p>Permet de savoir si les chiffres récurrents se trouvent au début ou à la fin de la valeur numérique. Si elles se trouvent à la fin, les valeurs décimales ne sont pas prises en compte. Les valeurs décimales ne sont pas arrondies.</p>
+                            </li>
+                            <li>
+                                <p>Obtenir si le modèle de chiffres récurrents doit ignorer les montants arrondis.</p>
+                            </li>
+                            <li>
+                                <p>Extraire toutes les valeurs qui répondent aux paramètres sélectionnés.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

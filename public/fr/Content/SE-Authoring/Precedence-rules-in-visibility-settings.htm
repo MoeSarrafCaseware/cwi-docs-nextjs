@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Règles de priorité dans les paramètres de visibilité</h1>
+        <p>Les règles de priorité suivantes s&apos;appliquent lorsque les paramètres de visibilité sont évalués pour un élément spécifique :</p>
+        <p><i>Un élément est un élément de la plateforme pour lequel vous pouvez définir une visibilité. Par exemple, une procédure de liste de contrôle, un ensemble de questions, un document, un dossier.</i></p>
+        <ol>
+            <li>
+                <p><b>Approbation</b></p>
+                <p>La signature prend le rang le plus élevé dans la préséance. Si l&apos;élément est signé, il devient visible.</p>
+                <p>En d&apos;autres termes, si un élément est caché et que les utilisateurs le signent, il devient visible.</p>
+                <p><b>Exemple :</b> Si un document de la liste de contrôle est masqué par les paramètres de visibilité et qu&apos;un utilisateur sélectionne <b>Afficher les éléments masqués</b> puis signe le document, la procédure devient visible.</p>
+            </li>
+            <li>
+                <p><b>Paramètres de visibilité de l&apos;élément</b></p>
+                <p>Les paramètres de visibilité de l&apos;élément viennent en deuxième position. S&apos;il existe des paramètres de visibilité pour l&apos;élément, ce sont les paramètres de visibilité de l&apos;élément qui sont utilisés, quels que soient les paramètres de visibilité du parent auquel il appartient.</p>
+                <p><b>Exemple</b>: Si une procédure d&apos;une liste de contrôle est masquée en raison de ses propres paramètres de visibilité et que le groupe auquel elle appartient est visible, alors la procédure est masquée - en fonction de ses propres paramètres de visibilité et non de ceux du groupe.</p>
+            </li>
+            <li>
+                <p><b>Paramètres de visibilité sur le parent de l&apos;élément (si l&apos;élément a un parent)</b></p>
+                <p>Les paramètres de visibilité du parent de l&apos;élément (si l&apos;élément appartient à un parent) sont prioritaires. Si la visibilité de l&apos;élément n&apos;est pas définie et qu&apos;il appartient à un parent, les paramètres de visibilité du parent sont utilisés.</p>
+            </li>
+            <p>En d&apos;autres termes, si le parent d&apos;un élément est masqué en raison de paramètres de visibilité et qu&apos;il n&apos;y a pas de paramètres de visibilité pour cet élément, alors l&apos;élément est masqué et suit les paramètres de visibilité de son parent.</p>
+            <p><b>Exemple</b>: Si un dossier est masqué par des paramètres de visibilité et qu&apos;aucun paramètre de visibilité n&apos;est disponible pour les documents de ce dossier et qu&apos;aucun des documents n&apos;a été signé, chaque document est masqué, conformément aux paramètres de visibilité du dossier.</p>
+        </ol>
+        <p class="note inline"><b>Remarque :</b> Les<a href="Define-components.htm">composants</a> ne sont pas inclus dans cette liste car ils n&apos;affectent actuellement que les groupes de balance de vérification. Dans une prochaine version, les composants affecteront la visibilité d&apos;autres éléments dans la plate-forme et des informations sur leur ordre de priorité seront ajoutées.</p>
+    </body>
+</html>

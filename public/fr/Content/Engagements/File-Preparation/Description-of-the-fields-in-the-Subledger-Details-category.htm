@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Détails du grand livre auxiliaire décrits</h1>
+        <p>Lorsque vous <a href="Import-clients-transactions-from-a-CSV-or-Excel-file.htm">importez des</a> transactions du grand livre à partir d&apos;un fichier CSV ou Excel, vous devez mettre en correspondance les champs afin que les données de la transaction s&apos;affichent correctement dans la mission.</p>
+        <p>Cette rubrique décrit les rubriques de la catégorie <b>DÉTAILS DU SOUS-JACENT</b> qui apparaissent dans le jeu de données du grand livre.</p>
+        <p>Notez que certains champs sont obligatoires pour que certains tests d&apos;analyse de données fonctionnent correctement. Pour en savoir plus, voir <a href="CSV-transaction-file-requirements.htm#Mandator2">Champs obligatoires pour l&apos;analyse des données.</a></p>
+        <h2>Type d&apos;identifiant<code>(identifier_type)</code></h2>
+        <p>Type d&apos;identification des données dans le livre auxiliaire.</p>
+        <h3>Exigences</h3>
+        <p>
+            <ul>
+                <li>Moins de 2 500 valeurs uniques. Ces valeurs doivent être associées à l&apos;une d&apos;entre elles :<ul><li>CU - Clients</li><li>PE - Dépenses payées d&apos;avance</li><li>SU - Fournisseurs</li><li>EM - Employés</li><li>IA - Actifs d&apos;investissement</li><li>OT - Autres</li><li>CA - Immobilisations (actifs fixes)</li><li>IN - Inventaire</li><li>DL - Passif de la dette</li></ul></li>
+            </ul>
+        </p>
+        <h2>Code d&apos;identification<code>(code_identifiant</code>)</h2>
+        <p>Code d&apos;identification des données dans le livre auxiliaire. <br />Exemple : numéro de client, numéro de fournisseur, numéro de salarié. <br />Exemples : &quot;C123&quot;, &quot;V6589&quot;, &quot;6597&quot;.</p>
+        <h3>Exigences</h3>
+        <p>Si le type d&apos;identifiant est balisé, il doit l&apos;être également.</p>
+        <h2>Description de l&apos;identifiant<code>(identifier_description</code>)</h2>
+        <p>Nom associé au code d&apos;identification. <br />Exemples : &quot;ABC Customer Ltd.&quot;, &quot;DEF Purchase Inc.&quot;, &quot;Sally Jones&quot;.</p>
+        <h2>Identifiant actif<code>(identifier_active</code>)</h2>
+        <p>Indique si le code d&apos;identification est actif ou inactif.</p>
+        <h2>Rue de l&apos;identifiant<code>(identifier_street</code>)</h2>
+        <p>Rue de l&apos;identifiant - ligne 1. <br />Exemples : &quot;123 Anywhere Street&quot;, &quot;Anywhere 26&quot;.</p>
+        <h2>Identifiant Rue 2<code>(identifier_address_street2)</code></h2>
+        <p>Détail de l&apos;adresse de l&apos;identifiant - ligne 2. <br />Exemples : &quot;Suite 1100&quot;, &quot;Unité 002B&quot;</p>
+        <h2>Ville de l&apos;identifiant<code>(identifier_city</code>)</h2>
+        <p>Ville où se trouve l&apos;identifiant. <br />Exemples : &quot;Toronto&quot;, &quot;Los Angeles&quot;.</p>
+        <h2>État ou province de l&apos;identifiant<code>(identifier_state_ou_province)</code></h2>
+        <p>État ou province où se trouve l&apos;identifiant. <br />Exemples : &quot;Ontario&quot;, &quot;Californie&quot;.</p>
+        <h2>Code postal de l&apos;identifiant<code>(identifier_zip_ou_postal_code)</code></h2>
+        <p>Code postal où se trouve l&apos;identifiant. <br />Exemples : &quot;94704&quot;, &quot;M5A 0L6&quot;.</p>
+        <h2>Pays de l&apos;identifiant<code>(identifier_country</code>)</h2>
+        <p>Pays (code) où se trouve l&apos;identifiant.</p>
+        <h2>Numéro du document<code>(document_number</code>)</h2>
+        <p>Identifiant associé au document source. Il s&apos;agit du document qui justifie la transaction saisie dans le PGI. <br />Exemples : &quot;PO4569&quot; pour le bon de commande, &quot;7956&quot; pour le chèque.</p>
+        <h2>Application du document au numéro<code>(document_Apply_To_Number</code>)</h2>
+        <p>Numéro de document associé au document source utilisé pour compenser les débits et les crédits. Utilisé pour calculer le solde ouvert lorsque le paiement, l&apos;avance, la note de crédit/débit n&apos;ont pas été entièrement appliqués, ce qui permet de calculer l&apos;élément ouvert. <br />Exemples : &quot;INV-001&quot;, &quot;121296&quot;.</p>
+    </body>
+</html>

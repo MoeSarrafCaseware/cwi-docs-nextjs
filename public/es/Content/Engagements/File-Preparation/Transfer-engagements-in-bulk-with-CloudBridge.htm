@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Transfer engagements in bulk with CloudBridge</h1>
+        <p>Use CloudBridge to transfer data from multiple Working Papers engagements to Cloud.</p>
+        <p><b>Note:</b> These instructions only apply to CloudBridge (All regions, Bulk). For individual transfer instructions, see <a href="Transfer-individual-engagements-with-CloudBridge.htm">Transfer individual engagements with CloudBridge</a>.</p>
+        <h2>Get CloudBridge (All regions, Bulk)</h2>
+        <p>Contact your Caseware Support Representative to request access to the utility.</p>
+        <p>This version of CloudBridge is:</p>
+        <ul>
+            <li>
+                <p>Intended for apps from all regions.</p>
+            </li>
+            <li>
+                <p>Used to transfer data from multiple Working Papers engagements to Cloud.</p>
+            </li>
+            <li>
+                <p>Standalone; it does not need to be added to any Working Papers engagements.</p>
+            </li>
+            <li>
+                <p>Suitable for an organization-wide migration to Cloud.</p>
+            </li>
+        </ul>
+        <h2>Best practices</h2>
+        <p>Before you get started, we recommend performing the following best practices:</p>
+        <ul>
+            <li>
+                <p>Organize the files on your local or network drive (e.g. alphabetically, by priority, by upload sequence, etc.)</p>
+            </li>
+            <li>
+                <p>For hybrid users, download sync copies from Cloud using the <a href="https://documentation.caseware.com/latest/Audit/en/Content/Common_Using_Audit/t_Batch_Update_Wizard.htm">Caseware Batch Tool</a></p>
+            </li>
+            <li>
+                <p><a href="../../Setup/Organization/Create-client-entities.htm">Create (or import) any required entities</a></p>
+            </li>
+        </ul>
+        <p>Additionally, we recommend that you:</p>
+        <ul>
+            <li>
+                <p>Close any other applications while running CloudBridge.</p>
+            </li>
+            <li>
+                <p>Run Cloudbridge overnight or during off-hours.</p>
+            </li>
+            <li>
+                <p>Limit each upload to 500 engagements at a time.</p>
+            </li>
+        </ul>
+        <h2>Set up CloudBridge</h2>
+        <p>After you’ve installed CloudBridge, you’ll need to connect to the destination Cloud site where the engagement data will be transferred.</p>
+        <p><b>To set up CloudBridge:</b></p>
+        <ul>
+            <li>
+                <p>Haga clic derecho en el archivo setup.exe y seleccione <b>Ejecutar como administrador</b>. CloudBridge opens.</p>
+            </li>
+            <li>
+                <p>In the Edit servers dialog, enter the name and URL of the destination Cloud site where the engagement data will be transferred. You can add more Cloud sites by selecting <b>Add a server</b>, but note that data can only be transferred to one app in one Cloud site at a time. When finished, select <b>Done</b>.</p>
+            </li>
+            <li>
+                <p>From the Server drop-down menu, select the applicable Cloud site and select <b>Connect</b>.</p>
+            </li>
+            <li>
+                <p>The login prompt is displayed. Enter your credentials and select <b>Sign-in</b> to connect to the Cloud site.</p>
+            </li>
+        </ul>
+        <h2>Transfer engagement data</h2>
+        <p>Once you’ve connected CloudBridge to your destination Cloud site, you’re ready to begin transferring engagement data.</p>
+        <p class="note"><b>Note:</b> Accounts with zero balances will not be transferred. If you require zero-balance accounts in a destination Cloud engagement, you must manually add and assign them.</p>
+        <p><b>To transfer engagement data:</b></p>
+        <ol>
+            <li>
+                <p>On the CloudBridge main menu, select <b>New upload</b>.</p>
+            </li>
+            <li>
+                <p>On the General step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Escriba un nombre único para el panel de información.</p>
+                    </li>
+                    <li>
+                        <p>Select the application where you’ll work with the transferred engagement data. Note that if you need to work with the data in another app, you must perform an additional, separate transfer.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Source file settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Specify the directory of the source Working Papers engagements with the data you want to transfer.</p>
+                    </li>
+                    <li>
+                        <p>(Optional) Filter the source Working Papers engagements by entering a start and end date. Only data from engagements within the range will be transferred.</p>
+                    </li>
+                    <li>
+                        <p>Select the applicable data points to transfer. The options include adjustments, general ledger, trial balance (multiple years), external documents/folders and risks and controls.</p>
+                    </li>
+                    <li>
+                        <p>If you select <b>Trial balance (multiple years)</b>, you have the option to use a custom mapping file. See <a href="#Remap">Create a custom remap file</a> for more information.</p>
+                    </li>
+                    <li>
+                        <p>Select the applicable external files to transfer. The options include Word, Excel, PowerPoint, PDF, CSV, Text, JPG, PNG or all external files.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Cloud file settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select a naming method for new engagements created using the transferred data. The options include Working Papers file name, operating name and Cloud entity.</p>
+                    </li>
+                    <li>
+                        <p>Select a year end date format to include in the name for new engagements.</p>
+                    </li>
+                    <li>
+                        <p>Select whether to include the year end date, or place it at the beginning (prefix) or end (suffix) of new engagement names.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Files to upload step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Select the Cloud entity where you want to transfer the data (for each source file).</p>
+                    </li>
+                    <li>
+                        <p>Select the Cloud engagement where you want to transfer the data (for each source file). If no Cloud engagement is selected, a new engagement will be made in the selected entity.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Upload settings step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Specify the maximum duration of the transfer. The options include 1, 2, 3 and 4 hours. After the duration has elapsed, CloudBridge will close, even if the transfer is incomplete.</p>
+                    </li>
+                    <li>
+                        <p>Specify the timeout for each source engagement. The options include 5, 10, 15 and 20 minutes. After the duration has elapsed, the transfer will skip to the next source engagement, even if the previous is incomplete.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Next</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>On the Summary step:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Review all the settings you’ve selected. If you need to make additional changes, select <b>Previous</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Upload Files</b>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>The engagement data transfer begins. You’ll see the status of your transfer as it progresses and a final report when complete. To perform another transfer, restart this procedure.</p>
+        <h3><a name="Remap"></a>Create a custom remap file</h3>
+        <p>If your firm uses a custom mapping structure, you need to create your own remap file (.ini) file based on your custom mapping structure.</p>
+        <p><b>To create a custom remap file:</b></p>
+        <ol>
+            <li>
+                <p>Copy components.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Open your Working Papers file.</p>
+                    </li>
+                    <li>
+                        <p>We recommend that you create a backup copy of your file before you proceed (<b>File | Back Up</b>).</p>
+                    </li>
+                    <li>
+                        <p>On the ribbon, click <b>File | Copy Components</b>. The Copy Components Wizard is displayed.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Copy Into This File</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Select Source page, click the <b>File</b> tab, then click <b>Browse</b>.</p>
+                    </li>
+                    <li>
+                        <p>Navigate to <b>C:\Program Files (x86)\Caseware\Scripts\cloudbridge\</b> and open the folder of the application, then select the .ac file (e.g. <b>Caseware ReviewComp\Caseware ReviewComp.ac</b>). Haga clic en <b>Siguiente</b>.</p>
+                    </li>
+                    <li>
+                        <p>On the Copy Components page, select <b>Groupings/Mapping</b>.</p>
+                    </li>
+                    <li>
+                        <p>Select <b>Mapping</b> and click <b>Options</b>. The Mapping Copy Options dialog is displayed.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Remap numbers.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click <b>Remap</b>. The Remap dialog is displayed.</p>
+                    </li>
+                    <li>
+                        <p>Drag a mapping number from the <b>Destination File Mapping Numbers</b> list and drop it into the appropriate mapping number in the <b>Source File Mapping Numbers</b> list.</p>
+                    </li>
+                    <li>
+                        <p>Repeat the process to assign additional mapping numbers.</p>
+                    </li>
+                    <li>
+                        <p>Once you&apos;re done, click <b>Apply</b> to save your settings, then click <b>OK</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Generate the .ini file.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the Mapping Copy Options dialog, click <b>Cancel</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the Copy Components Wizard, click <b>Cancel</b>. A remap file with the name <b>copy.ini</b> is created in the folder of your Working Papers file (<b>C:\Program Files (x86)\Caseware\Data</b>).</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>You can now use this remap file in CloudBridge to transfer your Working Papers data to your engagement.</p>
+        <p><b>To use a custom remap file:</b></p>
+        <ol>
+            <li>
+                <p>Rename the remap file so that it follows the naming convention <b>&lt;Product Name&gt;.ini</b>, where &lt;Product Name&gt; matches the product name on the General step.</p>
+                <p>Por ejemplo:</p>
+                <ul>
+                    <li>
+                        <p>Caseware ReviewComp.ini</p>
+                    </li>
+                    <li>
+                        <p>OnPoint Audit.ini</p>
+                    </li>
+                    <li>
+                        <p>US Review.ini</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Move the remap file to <b>C:\Users\Public\CloudBridge</b>.</p>
+            </li>
+            <li>
+                <p>On the Source file settings step, select <b>Trial balance (multiple years) | Use custom mapping file</b>.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Note:</b> If CloudBridge reports “No mapping file found”, verify that the remap file name and location are accurate.</p>
+    </body>
+</html>

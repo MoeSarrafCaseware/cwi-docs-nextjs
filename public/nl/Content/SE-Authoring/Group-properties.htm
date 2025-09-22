@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Eigenschappen van de groep</h1>
+        <p>De volgende lijst beschrijft elke eigenschap in het dialoogvenster Groepseigenschappen.</p>
+        <h2><a name="Number"></a>Aantal</h2>
+        <p>Voer een uniek toewijzingsnummer in. Als u al groepen hebt geïmporteerd, moet het toewijzingsnummer de bestaande structuur van het toewijzingsmasker volgen.</p>
+        <h2><a name="Consiste"></a>Consistente naam</h2>
+        <p>Voer een beschrijving in voor de groep die moet worden weergegeven als de balans overeenkomt met het normale teken van de groep. Deze beschrijving wordt ingevuld in de kolom <b>Voorlopig</b> in de jaarrekening.</p>
+        <h2><a name="Contrary"></a>Tegenstrijdige naam</h2>
+        <p>Voer, indien van toepassing, een beschrijving in voor de groep die moet worden weergegeven als het saldo tegenovergesteld is aan het normale teken van de groep. Deze beschrijving wordt ingevuld in de kolom <b>Voorlopig</b> in de jaarrekening.</p>
+        <p>Er verschijnt bijvoorbeeld &quot;Bank Overdraft&quot; in plaats van &quot;Bank&quot; als het saldo een krediet is.</p>
+        <h2><a name="Inconsis"></a>Inconsistente naam</h2>
+        <p>Voer, indien van toepassing, een alternatieve beschrijving voor de groep in die moet worden weergegeven wanneer het huidige en het vorige jaar tegenovergestelde tekens hebben. Deze beschrijving wordt ingevuld in de kolom <b>Voorlopig</b> in de jaarrekening.</p>
+        <p class="note inline"><b>Let op:</b> Deze naam heeft voorrang op de consistente naam en de tegengestelde naam, ongeacht het groepssaldo in de Balans.</p>
+        <h2><a name="Sign"></a>Aanmelden</h2>
+        <p>Selecteer het teken dat van toepassing is (debet of credit).</p>
+        <h2><a name="Type"></a>Type</h2>
+        <p>Selecteer het juiste overzichtstype voor deze groep (Balans, Winst-en-verliesrekening of Overzicht van gerealiseerde en niet-gerealiseerde resultaten).</p>
+        <h2>Formule</h2>
+        <p>Voer, indien van toepassing, een AOCI-formule in om de waarden voor deze groep te berekenen. Zodra je gebruiker de proefbalans importeert, zal deze groep een bedrag weergeven dat is afgeleid van de saldi in andere groepen.</p>
+        <p><b>Voorbeeldformule voor AOCI:</b></p>
+        <p><span style="font-family: 'Courier New';">Tagbal(&quot;1.234&quot;,perspec({jaarOffset}),{type},{code})</span></p>
+        <p>waarbij 1,234 de OCI-groep in de sectie Winst-en-verliesrekening is</p>
+        <h2><a name="Breakdow"></a>Opsplitsing per dimensie</h2>
+        <p>Selecteer, indien van toepassing, dimensiecategorieën voor de groep in het vervolgkeuzemenu <b>Indeling op dimensie</b> (waarden in de lijst zijn gedefinieerd in de productinstellingen). Hiermee kunnen gebruikers de proefbalans filteren zodat ze de balansinformatie per dimensie kunnen bekijken.</p>
+        <h2><a name="Include"></a>Afmetingen opnemen</h2>
+        <p>Deze knop is alleen beschikbaar als een dimensiecategorie is geselecteerd in <b>Opsplitsen per dimensie</b>. Hiermee kun je specifieke dimensies uitsluiten van de geselecteerde categorie.</p>
+        <p>De knop geeft de beschikbare afmetingen in de geselecteerde categorie weer. Je kunt een specifieke dimensie uitsluiten door het selectievakje ernaast uit te schakelen.</p>
+        <p style="text-align: left;"><img src="../Resources/Images/include-dimensions-button.PNG" style="width: 257px;height: 174px;" alt="Opsplitsing per dimensie met een geselecteerde deminsiecategorie" /></p>
+        <h2><a name="Cycle"></a>Fiets en gebied</h2>
+        <p>Selecteer een bedrijfscyclus en gebied voor de vervolgkeuzelijsten Groep<b>Gebied/Cyclus</b> (waarden in de vervolgkeuzelijsten worden gedefinieerd in de <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Productinstellingen</a>). Als je Cloud app een risicobeoordelingsdocument bevat, worden items in die groep automatisch onder deze cyclus weergegeven in het document wanneer je een groep toewijst aan een bedrijfscyclus.</p>
+        <h2><a name="Componen2"></a>Onderdeel Categorieën</h2>
+        <p>Componentcategorieën organiseren de componenten in uw product voor meerdere branches, entiteittypen of rapportagekaders. Je kunt bijvoorbeeld alle componenten met betrekking tot bedrijfstypes in één categorie groeperen en alle componenten met betrekking tot rapportagekaders in een andere categorie. Zie <a href="Define-components.htm">Gebieden toevoegen</a>voor meer informatie.</p>
+        <p>Selecteer een of meer categorieën om toe te wijzen aan de groep in het vervolgkeuzemenu <b>Componentcategorieën</b> (de categorieën in het vervolgkeuzemenu zijn gedefinieerd in de <a href="Define-components.htm">Productinstellingen</a>). Zodra je een categorie aan een groep hebt toegewezen, wordt deze opgenomen in het dialoogvenster Groepseigenschappen en kun je de van toepassing zijnde componenten toewijzen.</p>
+        <p><img src="../Resources/Images/component-category-property.png" alt="Gebruikers kunnen categorieën selecteren in het vervolgkeuzemenu." /></p>
+        <h2><a name="Componen"></a>Onderdelen</h2>
+        <p>Componenten helpen je bij het opzetten van een markt- of regio-gestuurde zichtbaarheidslogica voor balansgroepen. Als de entiteit bijvoorbeeld actief is in de landbouwsector, geef dan proefbalansgroepen weer die relevant zijn voor de landbouw. Zie <a href="Define-components.htm">Gebieden toevoegen</a>voor meer informatie.</p>
+        <p>Voordat je componenten kunt toewijzen, moet je een of meer <a href="#Componen2">componentcategorieën</a>selecteren. Zodra je een categorie voor de groep hebt geselecteerd, wordt deze opgenomen in het dialoogvenster. Selecteer een of meer componenten om toe te wijzen aan de groep in het vervolgkeuzemenu voor categorieën (componenten in het vervolgkeuzemenu voor categorieën zijn gedefinieerd in de <a href="Define-components.htm">Productinstellingen</a>).</p>
+        <p><img src="../Resources/Images/components-in-a-category.PNG" alt="De gebruiker selecteert de categorieën Industrie en Landbouw, bosbouw, visserij en jacht. Merk op hoe ze worden opgenomen in het dialoogvenster zodra ze zijn geselecteerd." /></p>
+        <p>Als je meerdere componenten aan inhoud koppelt en voor elk van de componenten <a href="Define-components.htm#To">zichtbaarheidsinstellingen definieert</a> , dan varieert de zichtbaarheidslogica op basis van het feit of de toegewezen componenten tot dezelfde categorie of tot verschillende categorieën behoren:</p>
+        <ul>
+            <li>
+                <p>Als de toegewezen componenten tot dezelfde categorie behoren, is de proefbalansgroep zichtbaar als ten minste één component zichtbaar is - anders is de groep verborgen</p>
+            </li>
+            <li>
+                <p>Als de toegewezen componenten tot verschillende categorieën behoren, is de proefbalansgroep zichtbaar als ten minste één component van elke categorie zichtbaar is - anders is de groep verborgen</p>
+            </li>
+        </ul>
+        <p>Een uitzondering op de bovenstaande regels is als medewerkers een account toevoegen aan een overeenkomst, het selectievakje <b>Verborgen tonen</b> (op het tabblad <b>Accounts toewijzen</b> ) inschakelen en de nieuwe account toewijzen aan een verborgen groep. In dit geval worden de groep en zijn bovenliggende groepen zichtbaar.</p>
+        <p>Laten we bijvoorbeeld aannemen dat de groep <i>Bedrijfskosten</i> verborgen is door de zichtbaarheidsinstellingen van onderdelen. De gebruiker maakt een rekening <i>Overige kosten</i> en wijst deze toe aan <i>Bedrijfskosten</i>. In dit geval worden <i>Bedrijfskosten</i> en de bovenliggende groepen automatisch zichtbaar.</p>
+        <h2><a name="Link"></a>Linked group structures</h2>
+        <p>Selecteer groepen in andere groeperingsstructuren om de financiële groep eraan te koppelen. Hierdoor kun je accounts automatisch toewijzen aan groepen in andere groeperingsstructuren op basis van hun initiële groepstoewijzing.</p>
+        <h2>Eigenschappen</h2>
+        <p>Deze eigenschap is gereserveerd voor toekomstig gebruik in de ontwikkeling van aangepaste formulieren.</p>
+        <p MadCap:conditions="General.Ignore">&lt;InFORMATIE VERWIJDERD ALS ALLEEN VAN TOEPASSING OP OUDE FINANCIËN DIE WE NIET LANGER ONDERSTEUNEN- VAN WEKELIJKSE TICKETVERGADERING, KYLE EN TEAM&gt;Selecteer de van toepassing zijnde optie in het vervolgkeuzemenu Eigenschappen.</p>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-01.PNG" style="width: 530px;height: 75px;" alt="Eigenschappen uitklapmenu" /></p>
+        <ul>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>uitsplitsing = zichtbaar</b> - Selecteer deze optie om de subgroepen standaard uit te vouwen in de financiële overzichten.</p>
+                <p MadCap:conditions="General.Ignore"><b style="font-style: italic;">Materiële vaste activa</b> toont bijvoorbeeld standaard de subgroepen <i>Materiële vaste activa</i> en <i>Materiële vaste activa Geaccumuleerde afschrijvingen</i> .</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-02.PNG" style="width: 392px;height: 251px;" /></p>
+        <ul MadCap:continue="true">
+            <p MadCap:conditions="General.Ignore">De groep kan worden samengevouwen in de Financiële overzichten door het pictogram <b>Groep samenvouwen</b> te selecteren.</p>
+        </ul>
+        <p MadCap:conditions="General.Ignore"><img src="../Resources/Images/group-table-03.PNG" style="width: 335px;height: 95px;" alt="Materiële vaste activa en subgroep Materiële vaste activa ingestort" /></p>
+        <ul>
+            <li MadCap:conditions="General.Ignore"><b>breakdown = hidden</b> - Selecteer deze optie om subgroepen standaard samen te vouwen in de financiële overzichten. Je kunt de details in de Financiële overzichten uitbreiden door het pictogram <b>Groep uitbreiden</b> te selecteren.</li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>breakdown = none</b> - Selecteer deze optie om subgroepen in de jaarrekening te verbergen.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>highLevelView = true</b> - Voer deze eigenschap in voor rekeninggroepen die moeten worden samengevouwen wanneer de gebruiker de knop <b>Samenvouwen</b> selecteert in de proefbalans.</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.Ignore"><b>financialClassification = netIncome</b> - Selecteer deze optie om de groep te markeren als netto-inkomen.</p>
+            </li>
+        </ul>
+        <h2><a name="Allow"></a>Kopieer rekeningtoewijzing</h2>
+        <p style="font-weight: normal;">Schakel dit selectievakje in om toe te staan dat accounts aan deze groep worden toegewezen.</p>
+        <h2><a name="Reassign"></a>Doel opnieuw toewijzen voor tegengestelde accounts</h2>
+        <p>Selecteer, indien van toepassing, een groep (<b>&quot;doel opnieuw toewijzen</b>&quot;) voor rekeningen met een tegengesteld saldo. Als een rekening automatisch aan deze groep zou worden toegewezen, maar niet overeenkomt met het geselecteerde teken (debet of credit) voor deze groep, dan wordt deze automatisch toegewezen aan het <b>doel van het opnieuw toewijzen</b>.<b> </b></p>
+        <p>Bijvoorbeeld, negatief <b>actief</b> --&gt; positief <b>passief</b></p>
+        <h2><a name="Classifi"></a>•	Classificatie</h2>
+        <p>Typ of selecteer een classificatie uit een hoofdrekeningschema. Deze hoofdlijst van classificaties maakt directe automatisering vanuit een boekhoudpakket mogelijk door de classificatie die wordt toegepast op de groep te matchen met het accounttype in het boekhoudpakket.</p>
+        <h2><a name="Adjust"></a>Voorkeur van groep aanpassen</h2>
+        <p>Gewicht wordt gebruikt om accounts automatisch toe te wijzen aan een groep op basis van een schaal. Groepen met een positief gewicht krijgen bijvoorbeeld de voorkeur boven groepen waaraan geen gewicht is toegekend.</p>
+        <h2><a name="Account"></a>Beperkingen op rekeningsaldo</h2>
+        <p>Specificeer de soorten rekeningen die kunnen worden toegewezen op basis van hun saldo:</p>
+        <ul>
+            <li>rekeningen met een eventueel toe te wijzen saldo</li>
+            <li>alleen rekeningen met een debetsaldo (positief) worden toegewezen</li>
+            <li>alleen rekeningen met een creditsaldo (negatief) worden toegewezen</li>
+        </ul>
+        <h2>Oudergroep</h2>
+        <p>Selecteer de groep van het hoogste niveau in de structuur.</p>
+        <h2><a name="Default"></a>Standaardgroep</h2>
+        <p>Met deze eigenschap kun je de groep markeren als een van je standaardgroepen of <i>voorkeursgroepen</i>. Als de optie <b>Alleen standaardgroepen</b> is ingeschakeld in de groepsweergave (Financieel, Belasting of Voorgeschreven), worden alleen de standaardgroepen weergegeven op de pagina.</p>
+        <p>Als je bijvoorbeeld een grote groepenstructuur hebt, kun je de meest gebruikte groepen waar je mee werkt (je voorkeursgroepen) markeren door het selectievakje <b>Standaardgroep</b> in te schakelen. Selecteer in de groepsweergave de optie <b>Alleen standaardgroepen</b> om alleen de gemarkeerde groepen (met het selectievakje Standaardgroep) weer te geven op de pagina.</p>
+    </body>
+</html>

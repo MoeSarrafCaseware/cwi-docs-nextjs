@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False" MadCap:conditions="General.SE-Authoring" MadCap:conditionTagExpression="exclude[General.Cloud-Help]">
+    <head>
+    </head>
+    <body>
+        <h1>List of product features (API)</h1>
+        <p>The following list describes the product features that you can enable/disable in your SE product.</p>
+        <p>See <a href="Workflow-(how-to-author-your-product-template).htm">How to author your product template </a>to learn more about how to author your SE product template.</p>
+        <h2><a name="Additio"></a> Additional Entity Fields</h2>
+        <p>Define the <code>customFields</code> field to customize the fields in the Create Entity dialog.</p>
+        <p><img src="../Resources/Images/create-entity-dialog.PNG" alt="Create Entity dialog." /></p>
+        <h2><a name="Addition"></a>Additional annotations</h2>
+        <p>You can include the <code>com.caseware.reference</code> module in the product.json file to enable additional annotation types.</p>
+        <h2><a name="Areas"></a>Áreas</h2>
+        <p>Las áreas permiten resumir grupos de estados financieros a un nivel superior para la identificación y evaluación de riesgos (a menudo a nivel de programa de auditoría). For more information, see <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Add areas and cycles.</a></p>
+        <h2><a name="Assertio"></a>Afirmaciones</h2>
+        <p>Include the <code>com.caseware.assertion</code> module in the product.json to enable annotations in your Cloud app.</p>
+        <h2><a name="Automap"></a> Automapping</h2>
+        <p>Automatically maps sections of data files on import. To learn more, see <a href="Set-up-automapping-(Data-page).htm">Set up automapping.</a></p>
+        <p>See the importing and <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html">automapping SDK tutorial</a> for more information on the automap property.</p>
+        <h2>Automatic rounding</h2>
+        <p>To enable automatic rounding in the financial statements, create a script called <code>financial-rounding-setup.js</code> and include it in the “js” array of your product.json file. In this script, include the following:</p><div><pre><code>(function() {<br />     ‘use strict&apos;;<br />     wpw.financials.financialsSetup.roundingErrorGroupNumbers = [&apos;A&apos;, &apos;B&apos;];<br />})();
+		</code></pre></div><p>‘A’ and ‘B’ are strings representing the group numbers of the groups in the structure that should sum to zero. If required, you can include more than two groups.</p>
+        <p>For example, if the grouping structure contains two groups Assets and Liabilities that should sum to zero, then replace the ‘A’ string in the above function with the group number for Assets and replace the ‘B’ with the group number for Liabilities. Liabilities and Assets are then summed and checked for rounding errors.</p>
+        <p>Note that rounding differences are applied by default to the first non-zero account in the lowest child level that appears in the first group in the trial balance. For more information, see <a href="Change-the-default-group-for-rounding-differences.htm">Change the default group for rounding differences</a>.</p>
+        <h2><a name="Checkli"></a> Lista de verificación</h2>
+        <p>Enables the checklist functionality.</p>
+        <p>For more information, see <a href="Add-a-checklist.htm">Add a checklist.</a></p>
+        <h2><a name="Contacts"></a>Contacts control</h2>
+        <p>This property controls contacts&apos; access to engagement. The default setting is that contacts cannot edit or view any engagement. To grant view access to contacts assigned to the engagement, set <code>contactAccess</code> to <code>READ</code>.</p>
+        <p>Note that once you grant contacts access to engagements, you cannot limit what areas of the engagement file they can access. We recommend using this feature for reporting products only and not audit products. We also recommend thoroughly reviewing the feature before releasing your product to ensure it works as you expect.</p>
+        <h2><a name="Cycles"></a>Cycles (business cycles)</h2>
+        <p>Used to further organize the groups in the Trial Balance.</p>
+        <p>For more information, see <a href="Add-areas-and-cycles.htm#add-area-cycle-phase">Add areas and cycles.</a></p>
+        <h2><a name="Detailed"></a>Detailed Documents View</h2>
+        <p>Makes the <b>Detailed View</b> in the <b>Documents</b> page the default view.</p>
+        <h2><a name="Dimensions-concept"></a>Dimensiones</h2>
+        <p>Dimensions are properties that can be assigned to accounts in an engagement. Each account can be assigned one or more dimensions.</p>
+        <p>For more information, see<a href="Add-dimensions.htm#Add"> <span> Add dimensions.</span></a></p>
+        <h2><a name="Engagement-properties"></a> Engagement Properties Prompt</h2>
+        <p>Display the Engagement Properties prompt each time users open a new engagement. For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Set the engagement properties.</a></p>
+        <h2><a name="Engageme"></a>Búsqueda de encargo</h2>
+        <p>Disables the search field at the Document Map in all engagement documents.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm#Locateandaccessdocumentsintheengagementfile">Locate and access documents in the engagement files.</a></p>
+        <h2><a name="Envision"></a>Envision</h2>
+        <p>Enables the ability to add the out-of-the-box Envision data profile to your product. Envision data profiles are dashboards that display information about imported transactions in engagements. For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/AnalyticsAI/Envision.htm">Envision</a>.</p>
+        <p>To enable Envision, add <code>&quot;com.caseware.an.e.analytics.ai&quot;</code> to the <code>set</code> array and set the property <code>&quot;envisionProfile&quot;: true</code>.</p>
+        <p>You can then use the <b>Add Document icon</b> (<img src="../Resources/Images/icon-document-add-dropdown.png" style="vertical-align: text-bottom;" />) in the <b>Documents</b> page to add the <b>Envision Profile</b> custom form to your product.</p>
+        <h2 MadCap:conditions="General.Ignore">External life cycle</h2>
+        <p MadCap:conditions="General.Ignore">Set the <code>externalLifecycle</code> property to <code>true</code> if you want the engagements in your SE product to be created or deleted outside of Caseware Cloud. --NEED MORE INFOR OR AN EXAMPLE</p>
+        <h2><a name="Firm"></a>Firm Customizations</h2>
+        <p>Allows <a href="Firm-author.htm">firm authors</a> to customize the template used to create new engagements. Esta opción es la opción predeterminada.</p>
+        <h2><a name="Help"></a>Ayuda</h2>
+        <p>Allows you to provide your users with a link to a help page, such as your product information site.</p>
+        <p><img alt="This is where the link is established. Users select Information | Help and the ink opens." src="../Resources/Images/help-property-in-application.PNG" /></p>
+        <h2><a name="Import"></a>Import Documents</h2>
+        <p>Set the property <code>&quot;importDocuments&quot;: true</code> to copy content from a different Caseware Cloud app template. To learn more, see <a href="Copy-content-from-another-template.htm">Copy content from another template</a>.</p>
+        <h2><a name="Imports"></a>Importaciones</h2>
+        <p>The <code>imports</code> array in the product .js file allows you to enable import options in the product, so that users can import client data.</p>
+        <p>Add the modules for the desired import options to the <code>imports</code> array. To learn more, see <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-import-and-automap.html#provider-bindings-import-ui-switch">Enable Provider Bindings imports</a>.</p>
+        <p>For end users, the enabled import options display in the <b>Data</b> page (or the <b>Trial Balance</b> page if you&apos;ve not yet enabled the Data page in your product).</p>
+        <p>You can also build a custom integration for your product to import data from a 3rd party online accounting package. To learn more, see <a href="https://developers.caseware.com/developers_content/v1/Get-started-with-import-bindings/Get-started-with-import-bindings.htm">Provider Bindings SDK</a>.</p>
+        <h2>Enable the import of dataset types</h2>
+        <p>Enables dataset type options for general ledger data, subledger transaction data and trial balance imports from CSV files. This allows users to select which dataset type applies to their data import.</p>
+        <p>To enable a dataset type, include its corresponding schema ID in the product.json file as shown in the code sample below. Note that you should adjust the code to remove schema IDs for any dataset types you do not want to enable for users. See the descriptions linked below for more information.</p><div><pre><code>&quot;importTaxonomy&quot;: {
+					&quot;id&quot;: &quot;cwi.taxonomy.transactions&quot;,
+					&quot;version&quot;: &quot;0&quot;,
+					&quot;schemaIds&quot;: [
+					&quot;cwi.schema.general_ledger&quot;,
+					&quot;cwi.schema.ap_invoices&quot;,
+					&quot;cwi.schema.ap_payments_made&quot;,
+					&quot;cwi.schema.ap_suppliers&quot;,
+					&quot;cwi.schema.ap_open_balances&quot;,
+					&quot;cwi.schema.ar_invoices&quot;,
+					&quot;cwi.schema.ar_cash_received&quot;,
+					&quot;cwi.schema.ar_customers&quot;,
+					&quot;cwi.schema.ar_open_balances&quot;,
+					&quot;cwi.schema.inventory_transactions&quot;,
+					&quot;cwi.schema.inventory_on_hand&quot;
+					]
+			}</code></pre></div><p>To enable users to import data that does not conform to any dataset type, you can add <code>&quot;schemaless&quot;: true</code> to the &quot;feature&quot; section in the product.json file. As a result, users will have the option of selecting the Other dataset type.</p><MadCap:snippetBlock src="../Resources/Snippets/dataset-descriptions.flsnp" /><p> </p>
+        <h2><a name="Interim"></a>Interim Reporting Period</h2>
+        <p>Enables interim reporting.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-an-engagement-for-an-interim-period.htm?Highlight=interim">Create an engagement for an interim reporting period.</a></p>
+        <h2><a name="Issues"></a> Problemas</h2>
+        <p>Allows users to add issues.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm">Add issues to an engagement file.</a></p>
+        <h2><a name="Job"></a>Número de trabajo</h2>
+        <p>You can hide the Job Number field in the <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Engagement Properties </a>dialog.</p>
+        <p>Set the property <code>&quot;hiddenJobNumber&quot;: true</code> to hide <b>Job Number</b>.</p>
+        <h2><a name="Material"></a>Materialidad</h2>
+        <p>Enable materiality in your product. An accepted misstatement (due to omission or error) is considered material. Materiality is the accepted threshold (error margin) for misstatements.</p>
+        <p>For more information, see <a href="Set-up-the-Materiality-document.htm">Set up Materiality</a> and <a href="Set-up-the-Summary-of-Misstatements.htm">Summary of Misstatements.</a></p>
+        <h2><a name="Prior"></a> Ejercicios anteriores</h2>
+        <p>By default, one prior period balance is supported and displays in the engagement - once users import the client&apos;s data.</p>
+        <p>To enable up to four prior period balances, set the <code>showAllPriorPeriods</code> property to <code>true</code>.</p>
+        <h2><a name="Product"></a>Product Class</h2>
+        <p>This property is utilized by Working Papers users. It returns one of the following values:</p>
+        <ul>
+            <li>
+                <p><b>PBC</b> - To indicate that Working Papers integrated with a PBC app. Note that this integration is only available for Working Papers 2019 base release and higher.</p>
+            </li>
+            <li>
+                <p><b>ANALYTICS</b> - To indicate that Working Papers is integrated with an AnalyticsAI app. Note that this integration is only available for Working Papers 2020 base release and higher.</p>
+            </li>
+        </ul>
+        <p class="note inline"><b>Note: </b>If queries are enabled in the AnalyticsAI app, this property returns &quot;<b>ANALYTICS</b>&quot;.</p>
+        <h2><a name="Query"></a>Consulta</h2>
+        <p>Allow users to create queries.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm">Staff-Contact collaboration.</a></p>
+        <h2><a name="Reimport"></a>Volver a importar</h2>
+        <p>Allows update of account name and number during trial balance reimport.</p>
+        <h2><a name="Review"></a>Herramientas de revisión</h2>
+        <p>Disables the Review Tools throughout the product for users.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Explore/Interface/CaseWareCloud-SE/Work-with-Review-Tools.htm">Review prepared documents with review tools.</a></p>
+        <h2><a name="Risk"></a>Evaluación de riesgos</h2>
+        <p>To enable the Risk Assessment report in your product.</p>
+        <p>For more information, see how to set up <a href="Set-up-the-Risk-report.htm">Risk</a>, <a href="Set-up-the-Control-report.htm">Control</a> and <a href="Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm">RMM</a>.</p>
+        <h2><a name="Forms"></a>Forms and Form sets</h2>
+        <p>To include the risk assessments, risks, controls, materiality and misstatements reports in your Cloud app, include the general form set <code>com.caseware.ca.general</code> in the <code>set</code> property. También puede hacer lo siguiente:</p>
+        <p><code>&quot;feature&quot;: [ &quot;cycles&quot;, &quot;riskAssessment&quot; ]</code></p>
+        <p><code>&quot;module&quot;: [ &quot;com.caseware.visualization.charts&quot;, &quot;com.caseware.assertion&quot; ]</code></p>
+        <p>If you don&apos;t want to include all the reports, you can include specific reports. Note that if you choose to include specific forms, you must enable the required property or module. For example, to enable the Controls report:</p>
+        <ul>
+            <li>
+                <p>Include the <code>com.caseware.ca.general.control-report</code> in the <code>form</code> property</p>
+            </li>
+            <li>
+                <p>Enable the <a href="#Cycles">Cycles</a> property</p>
+            </li>
+        </ul>
+        <h2><a name="Roll"></a>Transporte</h2>
+        <p>¿Aceptar la transferencia? The product.json file in the API needs to be modified to include the previous and next years when they exist. See the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-enable-carry-forward.html">roll forward SDK tutorial</a> for the detailed instructions.</p>
+        <p>For information on the end user experience for carry forward, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Carry-forward-an-engagement.htm">Carry forward an engagement.</a></p>
+        <h2><a name="Second"></a>Segundo revisor</h2>
+        <p>Enables a second reviewer in your product so that the <b>Final Review</b> option is included in all signoffs and the <b>Second Reviewer</b> field is available in the Create Engagement dialog. To learn more, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">Set up the engagement properties</a>.</p>
+        <h2><a name="Trial"></a>Balance de comprobación</h2>
+        <p>Enable the Trial Balance tab in the engagement.</p>
+        <p>For more information, see <a href="Define-groupings.htm">Define groupings.</a></p>
+        <h2><a name="User"></a>User Defined Financials Groups</h2>
+        <p>Allows users to add their own groups.</p>
+        <p>For more information, see <a href="https://docs.caseware.com/latest/webapps/en/Engagements/Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">Add a group.</a></p>
+        <h2><a name="Workflo"></a> Esquema de trabajo</h2>
+        <p>To enable read-only workflow feature or to hide the workflow status at the <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">engagement properties</a> dialog.</p>
+        <p>For more information, see <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-workflows.html">Workflows and Triggers in SE</a>.</p>
+        <h2><a name="iXBRL"></a>iXBRL</h2>
+        <p>Enables Inline eXtensible Business Reporting Language (iXBRL) functionality throughout the product. iXBRL is an open standard that allows firms to prepare financial statements in a format that provides the structured data that regulators and analysts require, while allowing preparers to retain full control over the layout and presentation of their report.</p>
+        <p>A conversion support file and a pointer to it must be added in the API. See the <a href="https://developers.caseware.com/sdk/cloud/Reference/SE/tutorial-xbrl.html">XBRL SDK tutorial</a> for the detailed instructions.</p>
+        <p>If you have at least one XBRL taxonomy set up, XBRL review mode is available to end users and enabled by default. If you want to hide an XBRL taxonomy from end users, you can set the <code>&quot;hideFromReviewMode&quot;</code> property to <code>true</code> in the <code>XBRLTaxonomyDefinition</code>.</p>
+        <p>Note that if all taxonomies are hidden, XBRL review mode is not available to end users.</p>
+        <p>To learn more about how to review and export XBRL documents, see <a href="XBRL-review-and-export.htm">XBRL review and export</a>.</p>
+    </body>
+</html>

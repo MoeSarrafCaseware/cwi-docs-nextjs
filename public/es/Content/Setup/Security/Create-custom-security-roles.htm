@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can create security roles to grant specific levels of access to Cloud content." />
+    </head>
+    <body>
+        <h1>Crear funciones de seguridad personalizadas</h1>
+        <p>In the course of regular business for your organization, you need to control access to your client files. Different engagement teams require access to their specific client files, but they are restricted from accessing other clients&apos; materials. Some staff require access to all client files for an engagement, while others only need to access the documents assigned to them.</p>
+        <p>You can manage access to your organization&apos;s engagements and the related engagement material in Cloud using security roles.</p>
+        <p>The <a href="Built-in-roles.htm">built-in</a> security roles cover the more common types of security access that you might want to give to your users. You can, however, also create custom roles for your organization.</p>
+        <p><b>Crear funciones de seguridad personalizadas</b></p>
+        <ol>
+            <li>
+                <p>Ensure that you have the <i>Settings Admin</i> role or the equivalent privileges.</p>
+            </li>
+            <li>
+                <p>From the Cloud menu, select <b>Settings</b>.</p>
+            </li>
+            <li>
+                <p>Select <b>Security | Role Permissions</b>.</p>
+                <p><img src="../../Resources/Images/settings-role-permissions.png" alt="Security Role Permissions" /></p>
+            </li>
+            <li>
+                <p>Select <b>Add Role</b>.</p>
+            </li>
+            <li>
+                <p>Desactive las casillas de los siguientes campos:</p>
+                <ul>
+                    <li>
+                        <p><b>Nombre</b></p>
+                    </li>
+                    <li>
+                        <p><b>Descripción</b></p>
+                    </li>
+                    <li>
+                        <p><b>Applies To:</b> (<b>Staff</b> or <b>Contacts</b>)</p>
+                    </li>
+                    <li>
+                        <p><b>Scope</b> (<b>System-wide</b>, <b>Content within entities</b> or both)</p>
+                    </li>
+                </ul>
+                <p><img src="../../Resources/Images/role-permissions-add-630x452.png" style="border:1px solid #3f66a3" alt="The New Role dialog." /></p>
+            </li>
+            <li>
+                <p>Select <b>Next</b>.</p>
+            </li>
+            <li>
+                <p>Select one or more permissions to add those permissions to the role. When you are finished, select <b>OK</b>.</p>
+                <p><img src="../../Resources/Images/role-permissions-select-630x219.png" style="border:1px solid #3f66a3" alt="The bottom of the Role Permissions dialog. The permissions to create, read, edit, delete and share files are all selected." /></p>
+                <p class="bestpractice inline"><b>Best Practice:</b> Note that there are two <b>Share</b> permissions: <b>A</b> and <b>S</b>. The <b>Share (A)</b> permission allows the user to share all available entity or entity content permissions to themselves and other users, even if it would grant them a higher level of access than they currently possess. For example, if you create a custom system-wide role that has only the <b>Share (A)</b> permission for entities, users with this role will be able to grant themselves and other users the <i>Owner</i> role on any entity. If this is a security concern for your firm, we recommend using the <b>Share (S)</b> permission instead, which offers the same functionality but restricts the user from sharing entities or entity content that they cannot access. Para obtener más información, consulte <a href="Built-in-roles.htm">Funciones incorporadas</a>.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>División de entradas</h1>
+        <p>The Splitting of Entries analytic test looks for possible split transactions. Este análisis busca posibles transacciones divididas; se trata de transacciones que se han dividido en dos o más partes con el fin de evadir ciertos controles. For example, if an individual only has the authority to authorize payments below a certain amount threshold, they may split a payment into two or more parts so that each payment is below that threshold. This allows them to authorize each payment individually and work around the regulations that would prevent them from authorizing it if it was a single payment.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Problemas sistémicos sobre la forma en la que un departamento procesa las transacciones</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de los controles internos que puede tener repercusiones a tener en cuenta</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de las actividades de supervisión y detección</p>
+            </li>
+            <li>
+                <p>Transacciones inapropiadas o prematuras</p>
+            </li>
+            <li>
+                <p>Conflictos de intereses o pacto colusorio entre empleados</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are required for this analysis:</p>
+        <ul>
+            <li>
+                <p><b>Reference field(s)</b> - Unique field(s) that are used to create a unique transaction ID such as the Entry ID field for the general ledger dataset. These columns are not part of the result but are used to identify the transactions that are part of the result. This field is already defined in the test and cannot be modified.</p>
+            </li>
+            <li>
+                <p>Campos Y:</p>
+                <ul>
+                    <li>
+                        <p>The amount field that will be analyzed for split entries</p>
+                    </li>
+                    <li>
+                        <p>One or more fields that will make up the groupings to look for the split transactions. For example, you can look for transactions that have the same vendor, date and were posted by the same user.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Parámetros</h2>
+        <p>The following parameters are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>Cutoff amount</b> - Enter an amount to use as a cutoff. Transactions over this amount are ignored when the test is run. This parameter is mandatory.</p>
+            </li>
+            <li>
+                <p><b>Percentage under</b> - Enter the percentage under the cutoff for transactions to be included in the test. For example, if the cutoff is $10,000 and the percentage is set as 10% then transactions between $9,000 and $10,000 would be included.</p>
+            </li>
+            <li>
+                <p><b>Number of times during the same period</b> - Select the maximum number of entries a transaction can be split into to be considered a split transaction. Split transactions are often split into two or three entries, so setting a maximum allows you to exclude false positives from the test results. For example, if a company with ten properties pays all their electrical bills for those properties to the same company on the same date, this may be accidentally flagged as a split transaction.</p>
+            </li>
+            <li>
+                <p><b>Positive, negative or both</b> - Select whether to consider only positive amounts, only negative amounts or both positive and negative amounts.</p>
+            </li>
+        </ul>
+        <h2>Test configurations</h2>
+        <p class="note"><b>Note:</b> The configurations available to you vary depending on the product you’re using.</p>
+        <p>The following configurations are available for this test:</p>
+        <ul>
+            <li>
+                <p><b>JE: División de asientos basada en el corte</b></p>
+            </li>
+            <li>
+                <p><b>JE: División de asientos basada en el corte de porcentaje</b></p>
+            </li>
+            <li>
+                <p><b>JE: División de asientos basada en el corte con un número máximo de transacciones</b></p>
+            </li>
+        </ul>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Splitting of Entries analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference fields have been selected. If fields have not been selected, then create a unique reference field. This step is only performed if specific fields have been selected. If all the fields are available, this step is not necessary.</p>
+            </li>
+            <li>
+                <p>Validate that an amount field has been selected and that it is numeric.</p>
+            </li>
+            <li>
+                <p>Validate that one or more fields have been selected for the grouping.</p>
+            </li>
+            <li>
+                <p>Validate that a <b>Cutoff amount</b> has been entered and determine what value was selected for the <b>Positive, negative or both</b> parameter. If the choice is <b>Positive</b> then the cutoff needs to be greater than zero. If it’s <b>Negative</b>, then the cutoff needs to be less than zero. If <b>Both</b>, then the absolute value will be used.</p>
+            </li>
+            <li>
+                <p>If a value is entered for the <b>Percentage under</b> parameter is selected, validate that the percentage is greater than zero.</p>
+            </li>
+            <li>
+                <p>If a value is entered for the <b>Number of times during the same period</b> parameter, validate that it is greater than zero.</p>
+            </li>
+            <li>
+                <p>Split transactions under a certain value:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Extract all values between zero and the cutoff value:</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>If positive or negative are selected, extract all values between zero and the cutoff value.</p>
+                            </li>
+                            <li>
+                                <p>If both are selected, extract all values between the negative and positive values of the cutoff and zero.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Group the transactions from 8a based on the grouping.</p>
+                    </li>
+                    <li>
+                        <p>Extract any grouping that is equal to or exceeds the cutoff value.</p>
+                    </li>
+                    <li>
+                        <p>Join the items from 8c back to the original file in order to extract the entire line item.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Split transactions based on a certain percentage under:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Calculate the percentage amount based on the cutoff.</p>
+                    </li>
+                    <li>
+                        <p>Based on the percentage amount, extract the values for this range. For example, a $10,000 cutoff at 10% would be $1,000, so values greater than or equal to $9,000 but less than $10,000 would be included.</p>
+                    </li>
+                    <li>
+                        <p>Perform steps 8b to 8d.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Split transactions under x number of times during the same period.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Extract the transaction based on the parameters selected, this could be with percentages or for positive, negative or both positive and negative values.</p>
+                    </li>
+                    <li>
+                        <p>Summarize the transactions based on the grouping.</p>
+                    </li>
+                    <li>
+                        <p>Extract all transactions from step 10b that have less than the number of times during the same period variable step 7.</p>
+                    </li>
+                    <li>
+                        <p>Extract any grouping that is equal to or exceeds the cutoff value.</p>
+                    </li>
+                    <li>
+                        <p>Join the items from back to the original file in order to extract the entire line item.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Add grouping references so that items grouped together can be easily understood.</p>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The values in the <b>Influence %</b> column are applied as a fraction of the transaction’s risk.</p>
+        <p>Low-risk transactions aren’t greatly affected by higher <b>Influence %</b> values, whereas transactions that already appear questionable could be bumped up significantly higher.</p>
+        <p>For example, a transaction with five risk points, which is affected by an <b>Influence %</b> set to 20, will increase to six risk points, which is not a significant difference.</p>
+        <p>However, a transaction that’s already risky, for example, one that failed the complex accounts test, and has a risk score of 50 points, will be moved up to 60 points.</p>
+        <p>If the <b>Influence %</b> is set to 60%, the lower risk transaction would only move to eight points. However, the higher risk transaction would move to 80 — a large jump that could significantly affect a transaction’s position in the list.</p>
+    </body>
+</html>

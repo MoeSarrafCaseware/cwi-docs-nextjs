@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><b>Eine Antwort-URL in Caseware Cloud generieren: </b></p>
+        <ol>
+            <li>
+                <p>Stellen Sie sicher, dass Sie über die Rolle <i>Einstellungen-Administrator</i> bzw. gleichwertige Berechtigungen verfügen.</p>
+            </li>
+            <li>
+                <p>Wählen Sie aus dem <b>Caseware Cloud</b> Hauptmenü (<img src="../Icons/cloud-menu-16x11.png" style="vertical-align: text-bottom;" />) die Einträge <b>Einstellungen | Einmaliges Anmelden | Identitätsanbieter</b>.</p>
+            </li>
+            <li>
+                <p>Vervollständigen Sie die folgenden Felder auf der Seite Identitätsanbieter:</p>
+                <ul>
+                    <li>
+                        <p><b>Name des Identitätsanbieters</b>: Geben Sie einen aussagekräftigen Namen für Ihren Identitätsanbieter ein. Zum Beispiel: Azure. Dieser Name wird neben der Antwort-URL angezeigt, um diese zu identifizieren.</p>
+                        <p class="note"><b>Hinweis:</b> Dieser Name darf nicht mehr als 32 Zeichen umfassen und es dürfen nur Buchstaben, Zahlen, Unterstriche, Plus- und Minuszeichen enthalten sein.</p>
+                    </li>
+                    <li>
+                        <p><b>Metadatenendpunkt des Identitätsanbieters</b>: Fügen Sie den <b>Metadatenendpunkt</b> ein, den Sie <a href="../../Setup/Environments-and-Configuration/Copy-the-metadata-endpoint.htm">zuvor in ein Textdokument kopiert haben</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Client-ID:</b> Fügen Sie die <b>Anwendungs-ID</b> ein, die Sie <a href="../../Setup/Environments-and-Configuration/Register-a-new-app-for-single-sign-on-in-Azure.htm">zuvor in ein Textdokument kopiert haben</a>.</p>
+                    </li>
+                    <li>
+                        <p><b>Geheimer Clientschlüssel:</b> Fügen Sie den <b>Geheimen Clientschlüssel</b> ein, den Sie <a href="../../Setup/Environments-and-Configuration/Generate-a-client-secret.htm">zuvor in ein Textdokument kopiert haben</a>.</p>
+                    </li>
+                </ul>
+                <p><img src="../Images/sso-settings.png" style="width: 816px;height: 551px;" alt="Die Seite Einstellungen für Einmaliges Anmelden." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>. Ihre Antwort-URL wird angezeigt.</p>
+            </li>
+            <li>
+                <p>Verwenden Sie das Symbol <b>In Zwischenablage kopieren</b> (<img src="../Icons/copy-to-clipboard.png" style="vertical-align: text-bottom;" />), um Ihre Antwort-URL zu kopieren. Sie müssen diese in Ihrer App in Azure AD hinzufügen.</p>
+                <p><img src="../Images/sso-copy-to-clipboard.png" alt="Verwenden Sie das Symbol In Zwischenablage kopieren, um Ihre Antwort-URL zu kopieren." /></p>
+            </li>
+        </ol>
+    </body>
+</html>

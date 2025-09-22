@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.TIME" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="Administrators can add work codes and set staff rates to ensure that general and specialized work are being allocated and billed for correctly" />
+    </head>
+    <body>
+        <h1>Personeelstarieven en werkcodes instellen</h1><MadCap:snippetBlock src="../../Resources/Snippets/TopicRequiresTime.flsnp" /><p>Classificeer de factureerbare en niet-factureerbare tijd en uitgaven van je personeel door aangepaste werkcodes te maken. Als je bijvoorbeeld wilt dat je personeel de tijd bijhoudt die wordt besteed aan interne administratieve taken, kun je een juist geconfigureerde werkcode voor niet-factureerbare tijd toevoegen.</p>
+        <h2 id="Creating-a-new-work-code">Nieuwe werkcodes maken</h2>
+        <p>Je kunt nieuwe werkcodes aanmaken op de pagina <b>Instellingen</b> .</p>
+        <p><b>To create a work code:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Tijd</b> en kies onder Werkcodes <b>Tijd</b> of <b>Onkosten</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>NEW AREA</b>.</p>
+            </li>
+            <li>
+                <p>Vul de juiste velden in. Het enige verplichte veld is de <b>werkcode</b>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-new-add-646x1021.png" alt="Het dialoogvenster Nieuwe werkcode" /></p>
+                <p class="note"><b>Let op:</b> De lijst met werkcodes sorteert mogelijk niet correct als deze alfanumerieke codes bevat met inconsistente lengtes (bijv. 1 ABC, 23 DEF, 456 GHI). Om dit te corrigeren, vult u elk nummer op met nullen om een consistente lengte te garanderen (bijv. 001 ABC, 023 DEF, 456 GHI) of gebruikt u numerieke codes.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>Je nieuwe werkcode is toegevoegd.</p><MadCap:snippetBlock src="../../Resources/Snippets/note-on-note-field.flsnp" /><h2 id="Importing-a-list-of-work-codes">Een lijst met werkcodes importeren</h2>
+        <p>Je kunt ook werkcodes in bulk toevoegen met behulp van een <b>blok afgebakende tekst</b> of een<b>.csv-bestand</b>. Je hebt een lijst met werkcodes nodig in een .csv-bestand of een blok platte tekst.</p>
+        <p>Zorg er bij beide methoden voor dat:</p>
+        <ul>
+            <li>
+                <p>Elke rij vertegenwoordigt een klantentiteit en</p>
+            </li>
+            <li>
+                <p>Elke kolom vertegenwoordigt een eigenschap, zoals hun naam, begindatum en tags. Om een personeelslid in meer dan één groep op te nemen, plaats je een tilde (~) tussen elke groepsnaam.</p>
+            </li>
+        </ul>
+        <p>In dit voorbeeld wil een beheerder twee cliëntentiteiten toevoegen:</p>
+        <p style="font-style: italic;">Code, Type, Naam, Tarief, Toeslag</p>
+        <p style="font-style: italic;">E900, B, Amusement, 0,05, 0,00</p>
+        <p style="font-style: italic;">E10100, NB, Uitrusting, 0,10, 0,15</p>
+        <p style="font-style: italic;">E1000, B, Advieskosten, 0,10, 0,00</p>
+        <p><b>Om een lijst met werkcodes te importeren:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Tijd</b> en kies onder Werkcodes <b>Tijd</b> of <b>Onkosten</b>.</p>
+                <p><img src="../../Resources/Images/firm-settings-time-work-codes-695x813.png" alt="Selecteer Tijd of Kosten om een lijst met werkcodes te importeren." /></p>
+            </li>
+            <li>
+                <p>Selecteer <b>NEW AREA</b>.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Importeren uit CSV</b> en blader naar je .csv-mapbestand of plak je lijsttekst in het tekstvak.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-717x251.png" alt="Het dialoogvenster Werkcodes importeren." /></p>
+            </li>
+            <li>
+                <p>Selecteer de juiste opties onderaan het dialoogvenster en selecteer vervolgens <b>Volgende</b>.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-options-705x122.png" alt="De opties in het dialoogvenster Werkcodes importeren" /></p>
+            </li>
+            <li>
+                <p>Breng de eigenschap in kaart die overeenkomt met elke kolom. Het <b>werkcodenummer</b> is nodig om de import te voltooien. Als er bestaande codes zijn die hetzelfde werkcodenummer gebruiken, worden deze bijgewerkt wanneer de import wordt uitgevoerd.</p>
+                <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Firm-settings-import-work-codes-mapping-739x249.png" alt="De kolomtoewijzing van het dialoogvenster Werkcodes importeren" /></p>
+            </li>
+            <p>Als je het <b>Factuurtype</b>in kaart brengt, wordt je in een apart dialoogvenster gevraagd om de <b>Factureerbare</b> en <b>Niet-Factureerbare</b> codes te identificeren.</p>
+            <p><img src="../../Resources/Images/Firm-settings-import-work-codes-bill-type-630x337.png" alt="Het dialoogvenster Factuurtype van de procedure Werkcodes importeren" /></p>
+            <li>
+                <p>Selecteer <b>Opslaan</b>.</p>
+            </li>
+        </ol>
+        <p>Een dialoogvenster bevestigt het aantal geïmporteerde of gewijzigde codes.</p>
+        <h2 id="Setting-staff-rates">Personeelstarieven vaststellen</h2>
+        <p>Medewerkers moeten de juiste tarieven hebben ingesteld voordat ze hun tijd kunnen invoeren. Je kunt zowel <b>standaardtarieven</b> als <b>werkcodetarieven</b> toewijzen aan individuele medewerkers. Stel bijvoorbeeld dat je verschillende tarieven wilt toekennen voor algemeen werk en meer gespecialiseerd werk zoals juridisch advies. In dit geval zou je een standaard basistarief toekennen en een hoger tarief gekoppeld aan de werkcode voor het gespecialiseerde werk.</p>
+        <p><b>Personeelstarieven vaststellen:</b></p>
+        <ol>
+            <li>
+                <p>Zorg ervoor dat u de <i>beheerdersrol voor instellingen</i> of gelijkwaardige rechten hebt.</p>
+            </li>
+            <li>
+                <p>Selecteer <b>Activiteiten</b>in het menu Cloud.</p>
+            </li>
+            <li>
+                <p>Selecteer de statistieken die u wilt weergeven. In the user&apos;s menu, select <b>More Actions</b> (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) <b>| Rates</b>.</p>
+            </li>
+            <li>
+                <p>Om een standaardtarief toe te voegen, selecteer je <b>Standaardtarieven | Nieuw</b>, vul je de velden in en selecteer je <b>Opslaan</b>.</p>
+                <p><img src="../../Resources/Images/Staff-rate-standard-rate-630x427.png" alt="Het nieuwe standaard tarief dialoogvenster" /></p>
+            </li>
+            <li>
+                <p>Om een werkcodespecifiek tarief toe te voegen, selecteer je <b>Werkcode Tarieven | Nieuw</b>, vul je de velden in en selecteer <b>je Opslaan</b>. Je moet zoeken of selecteren uit de bestaande werkcodes van je organisatie in het veld Werkcode.</p>
+                <p><img src="../../Resources/Images/Staff-rate-work-code-rate-630x534.png" alt="Het dialoogvenster Nieuwe werkcode" /></p>
+            </li>
+        </ol>
+        <p>De tarieven die je hebt toegevoegd of bijgewerkt, vind je in het dialoogvenster <b>Personeelstarieven</b> van elke gebruiker.</p>
+        <p><img style="border: 1px solid #3f66a3;" src="../../Resources/Images/Work-code-rate-added-700x206.png" alt="Nieuwe werkcodes zijn te zien in het dialoogvenster Personeelstarief van een medewerker" /></p>
+    </body>
+</html>

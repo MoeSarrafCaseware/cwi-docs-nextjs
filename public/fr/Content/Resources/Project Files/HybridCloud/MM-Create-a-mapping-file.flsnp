@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Avant la migration, vous devrez créer un fichier de correspondance qui attribue chaque fichier d&apos;engagement à l&apos; <a href="../../../Explore/Hybrid-Cloud/Migrate-large-data-sets-using-the-Migration-Manager.htm#Upload-entities-to-Cloud">entité Cloud</a>correspondante.</p>
+        <p><b>Pour créer un fichier de mappage :</b></p>
+        <ol>
+            <li>
+                <p>Cliquez avec le bouton droit de la souris sur l&apos;exécutable du <b>Gestionnaire de migration</b> et cliquez sur <b>Exécuter en tant qu&apos;administrateur</b>.</p>
+            </li>
+            <li>
+                <p>Dans le menu principal, cliquez sur <b>Fichiers de carte</b>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur l&apos;icône de dossier et recherchez le dossier contenant les fichiers que vous souhaitez mapper. Cliquez sur <b>Sélectionner un dossier</b>.</p>
+            </li>
+            <li>
+                <p>Cliquez sur <b>AUTOMAP</b> pour attribuer des fichiers aux entités en fonction de leurs <a href="https://documentation.caseware.com/latest/WorkingPapers/en/cwin32_CSH.htm#Engagement_Properties" target="_blank">propriétés d&apos;engagement</a>.</p>
+            </li>
+            <li>
+                <p>Une liste de chaque dossier et des entités proposées s&apos;affiche. S&apos;il existe des fichiers non mappés ou incorrectement mappés, cochez la case en regard du nom du fichier et cliquez sur <b>MAP.</b> Sélectionnez l&apos;entité concernée, puis cliquez sur <b>Appliquer</b>. Répétez ce processus jusqu&apos;à ce que tous les fichiers d&apos;engagement soient associés à une entité.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Remarque :</b> En cliquant sur <b>MAP ALL</b> , tous les fichiers restants non mappés seront mappés vers une entité spécifiée. Les fichiers mappés ne seront pas modifiés.</p>
+        <p>Un fichier de mappage nommé <i>CWCloudMigrationMng.csv</i> est créé dans le dossier contenant les fichiers mappés. Si vous avez l&apos;intention de migrer les fichiers par étapes, reportez-vous à ce fichier de mappage pour connaître la plage à migrer. Cliquez sur <b>FERMER</b> pour revenir au menu principal.</p>
+    </body>
+</html>

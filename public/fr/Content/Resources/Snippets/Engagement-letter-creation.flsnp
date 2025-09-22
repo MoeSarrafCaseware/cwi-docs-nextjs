@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2>Remplacer le texte et les espaces réservés des champs</h2>
+        <p>Le contenu de la lettre peut inclure des espaces réservés pour certains textes et champs que vous devez remplacer par des informations spécifiques relatives à votre mission, votre organisation ou votre client.</p>
+        <p>L&apos;indicateur des espaces <b>réservés</b> situé en haut du document permet de suivre l&apos;évolution des espaces réservés. Il indique le nombre d&apos;espaces réservés qui n&apos;ont pas été remplacés par des informations réelles. Vous pouvez également sélectionner l&apos;indicateur pour naviguer jusqu&apos;au prochain espace vide.</p>
+        <p style="font-weight: bold;">Pour remplacer un espace réservé de texte :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;espace réservé au texte.</p>
+                <p class="tip"><b>Conseil :</b> Les textes surlignés en bleu dans le document sont des espaces réservés.</p>
+            </li>
+            <li>
+                <p>Dans la fenêtre contextuelle de l&apos; <b>espace réservé</b> , remplacez le texte de l&apos;espace réservé et sélectionnez <b>Enregistrer.</b></p>
+                <p class="note"><b>Remarque</b>: Si vous ne souhaitez pas modifier le texte de l&apos;espace réservé, vous devez sélectionner l&apos;espace réservé et choisir <b>Enregistrer</b> dans la boîte de dialogue de l&apos;espace réservé pour qu&apos;il soit supprimé du décompte de l&apos;indicateur d&apos; <b>espace réservé</b> .</p>
+            </li>
+        </ol>
+        <p style="font-weight: bold;">Pour remplacer un espace réservé de champ :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez l&apos;espace réservé du champ.</p>
+                <p class="tip"><b>Conseil :</b> Les champs déroulants bleus dans le document sont des espaces réservés.</p>
+            </li>
+            <li>
+                <p>Sélectionnez une valeur ou spécifiez une date comme indiqué dans le champ réservé.</p>
+            </li>
+        </ol>
+        <h2>Modifier les termes du glossaire et le texte dynamique de la mission</h2>
+        <p class="note"><b>Remarque</b>: Vous ne pouvez modifier un terme de glossaire existant ou une sortie de texte dynamique que si l&apos;option de remplacement est activée dans votre produit.</p>
+        <p>Un glossaire de l&apos;engagement contient des termes. Les termes sont des mots et des phrases qui peuvent être réutilisés dans le produit. Lorsqu&apos;un terme est modifié, il est modifié partout où l&apos;auteur l&apos;a défini.</p>
+        <p>Les champs de texte dynamiques changent si certaines conditions sont remplies. Par exemple, si le client répond &quot;Oui&quot; à une procédure de la liste de contrôle, la mention &quot;Accepté&quot; apparaît dans le champ de texte dynamique.</p>
+        <p>Vos documents peuvent contenir des termes du glossaire ou des champs de texte dynamiques. En fonction de votre produit, vous pouvez être en mesure d&apos;ignorer les termes du glossaire et les sorties de texte dynamiques.</p>
+        <p><b>Pour modifier un terme du glossaire ou une sortie de texte dynamique :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez la zone de texte du document à modifier.</p>
+                <p>Les zones surlignées en gris correspondent à des termes de glossaire ou à des champs de texte dynamiques.</p>
+            </li>
+            <li>
+                <p>Sélectionnez le terme du glossaire ou le texte dynamique pour ouvrir la boîte de dialogue <b>Data Link</b> .</p>
+                <p>Si vous sélectionnez un terme du glossaire, vous pouvez sélectionner l&apos;information (<img src="../Images/icon-information-blue-16x16.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) pour voir le nombre d&apos;endroits où ce terme est utilisé.</p>
+            </li>
+            <li>
+                <p>Modifiez la <b>sortie</b> comme vous le souhaitez et sélectionnez <b>Enregistrer.</b></p>
+            </li>
+        </ol>
+        <p>Lorsque la <b>condition de sortie</b> est remplie, le texte est modifié à tous les endroits où il est utilisé dans l&apos;engagement. Si une autre condition est remplie après la modification, la <b>sortie</b> est modifiée pour correspondre au texte de sortie configuré pour cette condition.</p>
+        <h2>Insérer le logo de l&apos;entreprise</h2>
+        <p>Vous pouvez insérer le logo de l&apos;entreprise dans n&apos;importe quelle zone de texte ou dans l&apos;en-tête ou le pied de page du document.</p>
+        <p style="font-weight: bold;">Pour insérer le logo de l&apos;entreprise :</p>
+        <ol>
+            <li>
+                <p>Sélectionnez le champ de texte dans lequel vous souhaitez insérer le logo.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Insert Logo Placeholder</b> (<img src="../Images/icon-insert-logo.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) dans la barre d&apos;outils de formatage.</p>
+            </li>
+            <p>Le logo de l&apos;entreprise est ajouté dans le champ de texte.</p>
+            <p>Si aucun logo n&apos;est disponible dans le modèle d&apos;entreprise, un espace réservé avec un lien vers Cloud s&apos;affiche afin que vous puissiez <a href="../../Engagements/Template-and-Authoring/Add-a-firm-logo-and-letterhead.htm">télécharger un logo</a>.</p>
+        </ol>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez télécharger un logo d&apos;entreprise que dans le modèle d&apos;entreprise. Pour accéder au modèle d&apos;entreprise, vous devez avoir le rôle d&apos; <b>administrateur des paramètres</b> ou un rôle similaire. Pour plus d&apos;informations, voir <a href="../../Setup/Security/Built-in-roles.htm">Rôles intégrés</a> et <a href="../../Setup/Security/Assign-system-wide-security-roles.htm">Attribuer des rôles de sécurité</a>.</p>
+        <h2><a name="Add9"></a>Ajouter un saut de page</h2>
+        <p>Vous pouvez ajouter un saut de page n&apos;importe où dans le document pour marquer manuellement l&apos;endroit où une page spécifique se termine et où une nouvelle page commence. Cela vous permet de contrôler la mise en page pour l&apos;impression.</p>
+        <p>Pour ajouter un saut de page, sélectionnez <b>+Ajouter une section | Saut de page.</b> Un saut de page est inséré avec un titre par défaut <b>Saut de page.</b> Vous pouvez sélectionner le titre par défaut pour le modifier. Notez que ce titre ne fait pas partie du contenu du document.</p>
+        <p class="note"><b>Remarque :</b> Vous ne pouvez pas ajouter un saut de page dans une zone de regroupement vide. Vous devez ajouter des zones de texte ou des sections d&apos;orientation.</p>
+        <p>Pour supprimer un saut de page, sélectionnez <b>Paramètres (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Supprimer.</b></p>
+        <h2><a name="Set2"></a>Configurer les options d&apos;impression</h2>
+        <p>Le bouton Imprimer (<img src="../Icons/print-financial-statement-inline1.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) convertit le document au format PDF pour que les utilisateurs puissent l&apos;imprimer ou le sauvegarder. Notez que les sections d&apos;orientation ne sont jamais incluses dans le PDF.</p>
+        <p style="font-weight: bold;">Pour configurer les options d&apos;impression :</p>
+        <ol>
+            <li>
+                <p>Accédez à la carte du document et sélectionnez <b>Autres actions (<img src="../Images/more-actions-inline.png" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Paramètres d&apos;impression.</b></p>
+            </li>
+            <p>Si vous souhaitez définir des paramètres différents pour un saut de page, une zone de regroupement ou la table des matières, sélectionnez <b>Paramètres (<img src="../Icons/settings.PNG" style="vertical-align: text-bottom;height: 20px;" alt="" />) | Modifier les paramètres d&apos;impression.</b></p>
+            <li>
+                <p>Spécifiez les paramètres préférés pour l&apos; <b>en-tête</b>, la <b>taille de la page</b> et les <b>marges</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Paysage</b> pour modifier l&apos;orientation de la page.</p>
+            </li>
+            <p>La valeur par défaut est <b>Portrait.</b></p>
+            <li>
+                <p>Décochez la case <b>Compter dans la numérotation des</b> pages si vous souhaitez que la numérotation des pages commence après la page de <b>la table des matières</b> .</p>
+            </li>
+        </ol>
+    </body>
+</html>

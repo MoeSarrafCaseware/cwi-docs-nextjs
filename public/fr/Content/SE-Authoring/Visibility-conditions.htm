@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Conditions de visibilité</h1>
+        <p><a name="visbility-conditions-description"></a>La liste suivante décrit les conditions de visibilité, les paramètres disponibles pour chaque condition et montre un exemple pour chaque condition.</p>
+        <h2>RMM (risque d&apos;anomalies significatives)</h2>
+        <p>Sélectionnez un type d&apos;assertion, un groupe de la balance générale et l&apos;une des conditions suivantes :</p>
+        <ul>
+            <li><b>RMM</b> - le groupe sélectionné dispose d&apos;un RMM pour ce type d&apos;assertion</li>
+            <li><b>Pas de RMM</b> - le groupe sélectionné n&apos;a pas de RMM pour ce type d&apos;assertion</li>
+        </ul>
+        <p>Si le nouveau module de risque est activé dans votre produit, un ensemble différent de paramètres est disponible pour cette condition :</p>
+        <ul>
+            <li>Sélectionner le type d&apos;assertion</li>
+            <li>Sélectionner le domaine ou le cycle économique</li>
+            <li>Spécifier l&apos;opération logique à comparer et à évaluer (=,&lt;=,&gt;=)</li>
+            <li>Sélectionner l&apos;échelle RMM</li>
+        </ul>
+        <p>Les valeurs de la liste des échelles RMM sont définies dans la <a href="Enable-the-new-risk-module.htm#Customiz">configuration des échelles RMM</a> dans les paramètres du produit.</p>
+        <h3>Exemple</h3>
+        <p>Si l&apos; <b>exhaustivité de l</b> &apos; <b>encaisse</b>  <b>n&apos;a pas de RMM</b>, afficher cet élément.</p>
+        <p><i>Ou si vous avez activé le nouveau module de risque :</i></p>
+        <p><b>Si </b>Précision<b> pour </b>Inventaire a <b>RMM inférieur à Moyen</b>alors cachez cet élément.</p>
+        <h2>Groupement financier</h2>
+        <p>Sélectionnez un groupe dans la balance générale, indiquez l&apos;année (actuelle ou antérieure) et l&apos;une des valeurs de solde suivantes :</p>
+        <ul>
+            <li>est égal à zéro</li>
+            <li>est non nulle</li>
+            <li>est matériel</li>
+            <li>n&apos;est pas significatif</li>
+        </ul>
+        <h3>Exemple</h3>
+        <p>Si le solde du compte des <b>placements à court terme</b> pour l&apos; <b>exercice en cours</b> est important, il faut alors indiquer ce poste</p>
+        <h2><a name="Response"></a>Réponse</h2>
+        <p>Sélectionner un document source, une procédure dans le document et une réponse à la procédure</p>
+        <h3>Exemple</h3>
+        <p>Dans le document <b>200 Optimizer</b> , si la réponse à la procédure <b>Quel est le type de mission tel que défini par SSARS21 ?</b> est <b>Compilation</b>, masquer cet élément</p>
+        <p>Notez que si une réponse a été modifiée après la mise en place d&apos;une condition de visibilité de la <b>réponse</b> faisant référence à cette réponse, la valeur <b>Réponse non enregistrée</b> s&apos;affiche.</p>
+        <p><img src="../Resources/Images/response-not-recorded.PNG" alt="La valeur Réponse non enregistrée s&apos;affiche à la place de la réponse référencée parce que la réponse a été modifiée après la mise en place de la condition de visibilité de la réponse." /></p>
+        <h2>Consolidation</h2>
+        <p>Préciser si la mission est consolidée ou non consolidée</p>
+        <ul>
+            <li>
+                <p>Solde non consolidé = Entité mère + ajustements de l&apos;entité mère (à l&apos;exclusion des ajustements d&apos;élimination).</p>
+            </li>
+            <li>
+                <p>Solde consolidé = Entité mère + Ajustements de l&apos;entité mère + Entités filiales + Ajustements des entités filiales + Ajustements d&apos;élimination des entités mères et filiales.</p>
+            </li>
+        </ul>
+        <h3>Exemple</h3>
+        <p>Si l&apos;engagement est <b>consolidé</b>, afficher cet élément</p>
+        <h2>Mise à l&apos;échelle/arrondi</h2>
+        <p>Sélectionnez une échelle d&apos;arrondi dans la liste déroulante.</p>
+        <h3>Exemple</h3>
+        <p>Si l&apos;arrondi est en <b>millions</b>, afficher cet élément.</p>
+        <h2><a name="reporting-period-cond"></a>Période intermédiaire</h2>
+        <p>Sélectionnez la période de référence :</p>
+        <ul>
+            <li>Mensuel</li>
+            <li>Trimestrielle</li>
+            <li>Semestrielle</li>
+            <li>Annuel</li>
+        </ul>
+        <h3>Exemple</h3>
+        <p>Si la période de référence est <b>annuelle</b>, l&apos;affichage de cette rubrique</p>
+        <h2>Date</h2>
+        <p>Pour définir une condition de date, sélectionnez l&apos;option de paramètre applicable dans les menus déroulants disponibles.</p>
+        <ol>
+            <li>Sélectionnez la nature de la date :<ul><li>En vigueur le</li><li>Expire le</li></ul></li>
+            <li>Sélectionnez les options de type de période pour l&apos;exercice comptable et les périodes intermédiaires au sein d&apos;un exercice comptable :<ul><li>Date de début de l&apos;année</li><li>Date de fin d&apos;année</li><li>Date de début de la période</li><li>Date de fin de période</li></ul></li>
+            <li>Sélectionner les opérations mathématiques utilisées pour comparer et évaluer (&lt;,&gt;, &lt;=,&gt;=)</li>
+            <li>Sélectionner la date</li>
+        </ol>
+        <h3>Exemple</h3>
+        <p>Cette rubrique indique si la date  d&apos;entrée en  vigueur pour le début de l&apos;année est postérieure au 30 novembre 2019.</p>
+        <h2>Type d&apos;organisation</h2>
+        <p>Sélectionnez le pays et le type d&apos;organisation</p>
+        <h3>Exemple</h3>
+        <p>Si le type d&apos;entité est une <b>société privée canadienne</b>, afficher cette rubrique</p>
+        <h2>Langue</h2>
+        <p>Sélectionnez une langue de contenu dans la liste déroulante.</p>
+        <h3>Exemple</h3>
+        <p><b>Si la langue du contenu est </b>Français, affichez cet élément.</p>
+        <p>Notez que :</p>
+        <ul>
+            <li>
+                <p>Notez que la langue du contenu correspond à la langue actuellement sélectionnée dans la fenêtre contextuelle <a href="https://docs.caseware.com/latest/webapps/en/Engagements/File-Preparation/Create-and-set-up-an-engagement-file.htm#Setuptheengagementproperties">des propriétés de l&apos;engagement</a> .</p>
+            </li>
+            <li>
+                <p>Seules les <a href="Set-up-multiple-content-languages.htm">langues actives</a> peuvent être sélectionnées dans le menu déroulant</p>
+            </li>
+        </ul>
+        <h2>Groupe de conditions</h2>
+        <p>Ajouter les conditions pour créer le groupe</p>
+        <p class="note inline"><b>Remarque :</b> All condition types are available for you to add.</p>
+        <h3>Exemple</h3>
+        <p>Cette rubrique indique si le type de mission est <b>Examen</b> et si le type d&apos;entité est <b>Société privée canadienne</b><![CDATA[  ]]><i>ou si</i> l&apos; <b>année de l&apos;étoile tdate</b> est postérieure au <b>21 octobre 2019 </b>.</p>
+        <h2>Valeur du formulaire</h2>
+        <p>Vous pouvez inclure un ou plusieurs formulaires dans la configuration des conditions. Sélectionnez le nom du formulaire, un champ du formulaire sélectionné et une valeur pour le champ sélectionné.</p>
+        <p>Les options de valeur pour un champ sélectionné dépendent du type de champ. Par exemple, les champs numériques comportent des opérateurs logiques et des valeurs numériques, tandis que les champs de date comportent une icône de calendrier pour la sélection de la date.</p>
+        <p class="note inline"><b>Remarque :</b> Si vous n&apos;avez pas développé de formulaires à l&apos;aide de <a href="Develop-custom-forms.htm">SE Builder</a> dans votre produit, les menus déroulants des paramètres pour cette condition sont désactivés.</p>
+        <h3>Exemple</h3>
+        <p><b>Si le champ </b>T2S8 dans <b>S8 - Déduction pour amortissement (DPA)</b> est <b>&gt; 10</b><b> ou le champ </b>T3S8 en <b>S8 - Déduction pour amortissement (DPA)</b> est <b>&gt; 10</b>alors affichez ce poste.</p>
+    </body>
+</html>

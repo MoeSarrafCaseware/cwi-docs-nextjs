@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Optionale Ansprüche konfigurieren (Azure AD)</h1>
+        <p>Bevor Sie den Integrationsprozess der Funktion Einmaliges Anmelden (Single Sign On/SSO) abschließen, müssen Sie das Manifest bearbeiten, um die Ansprüche (Claims) given_name und family_name einzuschließen. Wenn ein Mitarbeiter Einmaliges Anmelden verwendet, liefern diese Ansprüche den Vor- und Nachnamen an Cloud.</p>
+        <p style="font-weight: bold;">Optionale Ansprüche konfigurieren:</p>
+        <ol>
+            <li>
+                <p>Melden Sie sich an Ihrem Azure Portal an.</p>
+            </li>
+            <li>
+                <p>Wählen Sie <b>Azure Active Directory</b>.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>App registrations</b>.</p>
+            </li>
+            <li>
+                <p>Wählen Sie die richtige App aus der Liste.</p>
+            </li>
+            <li>
+                <p>Im linken Navigationsbereich wählen Sie <b>Manifest</b>.</p>
+            </li>
+            <li>
+                <p>Bearbeiten Sie die Eigenschaft <b>optionalClaims</b> wie folgt:</p>
+                <p><pre xml:space="preserve"><code class="language-python">&quot;optionalClaims&quot;: {<br />
+	&quot;idToken&quot;: [<br />
+		{<br />
+			&quot;name&quot;: &quot;given_name&quot;,<br />
+			&quot;essential&quot;: true<br />
+		},<br />
+		{<br />
+			&quot;name&quot;: &quot;family_name&quot;,<br />
+			&quot;essential&quot;: true<br />
+		}<br />
+	]<br />
+},</code></pre>
+                </p>
+                <p class="note"><b>Hinweis:</b> Sie müssen die obigen Informationen akkurat kopieren, um die optionalen Ansprüche richtig zu konfigurieren.</p>
+                <p><img src="../../Resources/Images/azure-optional-claims.png" alt="Die konfigurierte Eigenschaft optionalClaims." /></p>
+            </li>
+            <li>
+                <p>Klicken Sie auf <b>Speichern</b>.</p>
+            </li>
+        </ol>
+        <p class="note">Nächstes Thema: <a href="Generate-the-reply-URL-Azure-AD.htm">Antwort-URL generieren</a></p>
+    </body>
+</html>

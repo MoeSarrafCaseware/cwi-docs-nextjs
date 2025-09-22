@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Conditions préalables à l&apos;importation à partir d&apos;un logiciel de comptabilité de bureau</h1>
+        <p>Vous pouvez importer des données clients à partir de la plupart des logiciels comptables tiers pour les utiliser avec une variété d&apos;applications Caseware Cloud ou <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Avant de procéder à l&apos;importation, assurez-vous d&apos;avoir effectué les étapes préalables pour votre logiciel. Pour en savoir plus sur l&apos;importation de données clients, voir <a href="Import-data-from-a-desktop-accounting-software.htm">Importer des données à partir d&apos;un logiciel de comptabilité de bureau.</a></p>
+        <p class="note"><b>Remarque :</b> Si votre logiciel de comptabilité ne figure pas sur cette page, il n&apos;y a pas de conditions préalables. Vous pouvez suivre les instructions de la section <a href="Import-data-from-a-desktop-accounting-software.htm">Importer des données à partir d&apos;un logiciel de comptabilité de bureau</a> pour importer les données de vos clients.</p>
+        <h2>Accès aux dimensions de la comptabilité</h2>
+        <ul>
+            <li>
+                <p>Installez <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> localement sur la machine qui effectue l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.bak</p>
+                <p>(Obtenu en lançant Accounting Dimensions et en effectuant une opération de sauvegarde de l&apos;ensemble des données)</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Conservez une copie de sauvegarde de votre base de données à l&apos;aide de l&apos;outil <b>Access Dimensions Administrator (ADA)</b> fourni avec le progiciel.</p>
+            </li>
+            <li>
+                <p>Si l&apos;importation est exécutée sur la même machine que celle où le fichier Access Accounting Dimensions original est actif, assurez-vous que le nom du fichier de la base de données de sauvegarde est différent du nom de la base de données active et que le fichier de la base de données se trouve dans un répertoire différent de celui de la base de données active. Sinon, la base de données originale doit être supprimée du serveur SQL avant l&apos;importation.</p>
+            </li>
+        </ul>
+        <h2>Secours du comptable</h2>
+        <ul>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.mdb</p>
+            </li>
+        </ul>
+        <h2>AccountView</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Périodes financières : Périodes.txt</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : Transactions.txt</p>
+                    </li>
+                    <li>
+                        <p>Soldes de fin d&apos;année : Fin d&apos;année.txt</p>
+                    </li>
+                    <li>
+                        <p>Données non financières : NFD.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Accpac (série Advantage)</h2>
+        <ul>
+            <li>
+                <p>Installer le <a href="https://documentation.caseware.com/downloads/odbcupd.exe">moteur et le pilote ODBC</a>.</p>
+            </li>
+            <li>
+                <p>Installez <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">Pervasive SQL</a> (Btrieve) ou Microsoft SQL.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : CSCOM.DAT / CSCOM.RECCSFSC.DAT / CSFSC.REC</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : GLAMF.DAT / GLAMF.RECGLAFS.DAT / GLAFS.RECGLABK.DAT / GLABK.RECGLABRX.DAT / GLABRX.REC</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : GLPOST.DAT / GLPOST.REC</p>
+                    </li>
+                    <li>
+                        <p>Informations sur les divisions : Fichiers portant les extensions .dap, .dfe et .eap</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>S&apos;assurer que les structures de compte dans Accpac contiennent des séquences uniques de segments de compte et des longueurs totales différentes. Working Papers n&apos;est pas en mesure d&apos;importer correctement le numéro de division lorsque ces deux structures ne sont pas définies correctement. La fenêtre <b>Configuration de la structure des comptes ACCPAC</b> permet de modifier les structures.</p>
+            </li>
+        </ul>
+        <h2>Accpac (DOS)</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : GLGLOB</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : GLDATA</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : GLPST</p>
+                    </li>
+                    <li>
+                        <p>Dates de comptabilité : GLDATE&apos;I</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Grand livre Adagio</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : GLGLOB</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : GLMAST&apos;R / GLDATA</p>
+                    </li>
+                    <li>
+                        <p>Dates de comptabilité : GLDATE&apos;I</p>
+                    </li>
+                    <li>
+                        <p>Importation GL : GLPST</p>
+                    </li>
+                    <li>
+                        <p>Réglages de la date de la période : GLFISC&apos;R</p>
+                    </li>
+                    <li>
+                        <p>Données budgétaires : GLNBUD&apos;R</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Analyste AgExpert</h2>
+        <ul>
+            <li>
+                <p>Créer un fichier d&apos;exportation dans AgExpert à l&apos;aide du module d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichiers d&apos;importation : <i>filename</i>.cwe</p>
+            </li>
+        </ul>
+        <h2>Attaché Partenaire commercial</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : SYSFILE.DAT</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : GLMAST.DATGLMASTLY.DAT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : GLTRAN.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Bedford Simple Comptable DOS</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : SN3.REC / SN4.REC</p>
+                    </li>
+                    <li>
+                        <p>Balance : GN3.REC / GN4.REC</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : JOURNAL3.REC / JOURNAL4.REC</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Blue Link Solutions</h2>
+        <ul>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>Comptabilité brillante</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Balance de vérification consolidée : cwctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Balance de vérification non consolidée : cwunctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Mouvements GL : cwglmov1.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>BusinessVision</h2>
+        <ul>
+            <li>
+                <p>Installer le <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">moteur de base de données Pervasive SQL 2000</a>.</p>
+            </li>
+            <li>
+                <p>Le module d&apos;exportation de BusinessVision permet d&apos;exporter le plan comptable et le détail du grand livre sous forme de fichiers ASCII délimités par des virgules.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : GL-CHART.TXT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : GL.TXT</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : BVCON.FIL</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>C&amp;LAS</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : filename.TXT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : filename.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Concorde</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : PRIMO.TXT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : FINANS.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Creative Solutions Accounting</h2>
+        <ul>
+            <li>
+                <p>Installer la <a href="https://documentation.caseware.com/downloads/daoupdat.exe">mise à jour de l&apos;importation DAO</a>.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>nom de fichier</i>.WSW</p>
+            </li>
+        </ul>
+        <h2>DacEASY</h2>
+        <ul>
+            <li>
+                <p>Installer le <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">moteur de base de données Pervasive SQL 2000</a>.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Détail du GL : DEAGLTD.DB</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : DEAGNRL.DB</p>
+                    </li>
+                    <li>
+                        <p>Balance : DEAGLTH.DB</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>DATEV</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Balance Records : DatevexportKMVZ.txt</p>
+                    </li>
+                    <li>
+                        <p>Registres des noms de comptes : DatevexportKTSKI.txt</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : DatevexportMADMPD.txt</p>
+                    </li>
+                    <li>
+                        <p>Fichier de la balance de vérification : SKR*.csv</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>DYNACOM</h2>
+        <ul>
+            <li>
+                <p>Installer la <a href="https://documentation.caseware.com/downloads/daoupdat.exe">mise à jour de l&apos;importation DAO</a>.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>6.4 - 7.0 : <i>nom de fichier</i>.mdb</p>
+                    </li>
+                    <li>
+                        <p>8.0 - plus tard : <i>filename</i>.ddb</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Expert Comptable</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation d&apos;Expert Comptable pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>Gestionnaire d&apos;entreprise EZEBiz</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation dans EZEBiz Company Manager pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.csv</p>
+            </li>
+        </ul>
+        <h2>Finax v2.x</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur la date : MUMBU.ext</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : PARBU.ext</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : BUNIDET.ext</p>
+                    </li>
+                    <li>
+                        <p>Balance : ACCOUNTS.ext</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Finax v989.x</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : CODEINDX<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Descriptions de comptes étendues : LANCO<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Chiffres de l&apos;année précédente : <i>FIGZZZZZ</i><i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Chiffres du budget : GLTOTS<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Informations sur la date : MUMBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : PARBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : BUNIDET<i>.xxx</i></p>
+                    </li>
+                </ul>
+                <p><i>(xxx</i> est l&apos;extension Finax à trois chiffres. <i>ZZZZZ</i> est l&apos;identifiant comparatif à cinq caractères)</p>
+            </li>
+        </ul>
+        <h2>Fortune1000 Acomba</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : SCHARTE.FDW</p>
+                    </li>
+                    <li>
+                        <p>Les écritures de journal : GJOURNAL.FDW</p>
+                    </li>
+                    <li>
+                        <p># Nombre de périodes comptables : GCTRL.FDW</p>
+                    </li>
+                    <li>
+                        <p>Affiches détaillées : GPOST.FDW</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le client : SINFOCIE.FDW</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Fortune1000 DOS</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : GGL.FDA</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : GJOURNAL.FDA</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : GCIE.FDA</p>
+                    </li>
+                    <li>
+                        <p>Chiffres du budget : GPOST.FDA</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Grandes Plaines (Dynamique)</h2>
+        <p><b>Pervasive SQL (Btrieve)</b></p>
+        <ul>
+            <li>
+                <p>Installer le <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">moteur de base de données Pervasive SQL 2000</a>.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Liste des entreprises : Dynamique \ SY02100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : Dynamique \NSystème \NSystème SY01500.BTR</p>
+                    </li>
+                    <li>
+                        <p>Structure du numéro de compte : Dynamique \NSystème \NSystème SY00302.BTR</p>
+                    </li>
+                    <li>
+                        <p>Dates de la période : Dynamics \Client&gt; \Compagnie \SY40101.BTR</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Numéros de compte : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00105.BTR</p>
+                    </li>
+                    <li>
+                        <p>Soldes budgétaires : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00201.BTR</p>
+                    </li>
+                    <li>
+                        <p>Balance : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL10110.BTR</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL20000.BTR</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">C-Tree Plus</p>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Liste des entreprises : Dynamique \ SY02100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : Dynamique \NSystème \NSystème SY01500.DAT</p>
+                    </li>
+                    <li>
+                        <p>Structure du numéro de compte : Dynamique \NSystème \NSystème SY00302.DAT</p>
+                    </li>
+                    <li>
+                        <p>Dates de la période : Dynamics \Client&gt; \Compagnie \SY40101.DAT</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Numéros de compte : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00105.DAT</p>
+                    </li>
+                    <li>
+                        <p>Soldes budgétaires : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00201.DAT</p>
+                    </li>
+                    <li>
+                        <p>Balance : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL10110.DAT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL20000.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Great Plains (DOS)</h2>
+        <p><b>Pervasive SQL (Btrieve)</b></p>
+        <ul>
+            <li>
+                <p>Installer le <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-Pervasive-SQL.htm">moteur de base de données Pervasive SQL 2000</a>.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Liste des entreprises : Dynamique \ SY02100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : Dynamique \NSystème \NSystème SY01500.BTR</p>
+                    </li>
+                    <li>
+                        <p>Structure du numéro de compte : Dynamique \NSystème \NSystème SY00302.BTR</p>
+                    </li>
+                    <li>
+                        <p>Dates de la période : Dynamics \Client&gt; \Compagnie \SY40101.BTR</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00100.BTR</p>
+                    </li>
+                    <li>
+                        <p>Numéros de compte : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00105.BTR</p>
+                    </li>
+                    <li>
+                        <p>Soldes budgétaires : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00201.BTR</p>
+                    </li>
+                    <li>
+                        <p>Balance : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL10110.BTR</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL20000.BTR</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">C-Tree Plus</p>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Liste des entreprises : Dynamique \ SY02100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : Dynamique \NSystème \NSystème SY01500.DAT</p>
+                    </li>
+                    <li>
+                        <p>Structure du numéro de compte : Dynamique \NSystème \NSystème SY00302.DAT</p>
+                    </li>
+                    <li>
+                        <p>Dates de la période : Dynamics \Client&gt; \Compagnie \SY40101.DAT</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00100.DAT</p>
+                    </li>
+                    <li>
+                        <p>Numéros de compte : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00105.DAT</p>
+                    </li>
+                    <li>
+                        <p>Soldes budgétaires : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL00201.DAT</p>
+                    </li>
+                    <li>
+                        <p>Balance : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL10110.DAT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : Dynamics \N- &lt;Client&gt; \N- \N- \N- \N- \NFinances \N- \N- GL20000.DAT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>KHK</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : AUDITAGT.TXT</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : AUDITGLT.TXT</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>MAS 90 pour Windows</h2>
+        <ul>
+            <li>
+                <p>Créez un nouveau dossier en dehors de votre répertoire MAS 90. Dans MAS 90, sélectionnez un identifiant de société et exportez la balance de vérification vers un fichier ASCII fixe dans le nouveau dossier. Dans ce dossier, créez un sous-dossier, puis copiez le fichier <b>SY0CTL.SOA</b> du <b>dossier MAS 90 SOA</b> dans le sous-dossier.</p>
+            </li>
+            <li>
+                <p>Exportez les données que vous souhaitez importer (balance de vérification, détail du grand livre, données de l&apos;année précédente ou données budgétaires).</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : GL_FiscalYearDetail.m4t</p>
+            </li>
+        </ul>
+        <h2>Microsoft Office Comptabilité</h2>
+        <ul>
+            <li>
+                <p>Installez <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft SQL Server 2005</a> localement sur la machine qui effectue l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>nom de fichier</i>.sbb</p>
+            </li>
+        </ul>
+        <h2>MoneyWorks</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation de MoneyWorks pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MS Comptabilité des petites entreprises</h2>
+        <ul>
+            <li>
+                <p>Installez <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> localement sur la machine qui effectue l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Le seul fichier Microsoft Small Business Accounting requis est un fichier de sauvegarde <b>.zip</b> créé par MS_SBA obtenu en effectuant une opération de sauvegarde de l&apos;ensemble des données. Pour plus d&apos;informations sur la manière d&apos;effectuer une sauvegarde des données, consultez l&apos;aide en ligne de Microsoft Small Business Accounting.</p>
+            </li>
+        </ul>
+        <h2>Multi Express Business &amp; Accounting</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation de Multi Express Business &amp; Accounting pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB Comptabilité</h2>
+        <ul>
+            <li>
+                <p>Créez un fichier d&apos;exportation dans MYOB en cliquant sur <b>Fichier</b> | <b>AccountantLink</b> | <b>Envoyer à Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB AccountEdge</h2>
+        <ul>
+            <li>
+                <p>Créez un fichier d&apos;exportation dans MYOB en cliquant sur <b>Fichier</b> | <b>AccountantLink</b> | <b>Envoyer à Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>MYOB AccountRight</h2>
+        <ul>
+            <li>
+                <p>Créez un fichier d&apos;exportation dans MYOB en cliquant sur <b>Fichier</b> | <b>AccountantLink</b> | <b>Envoyer à Caseware</b>.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.txt</p>
+            </li>
+        </ul>
+        <h2>Verger</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : CODEINDX<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Descriptions de comptes étendues : LANCO<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Chiffres de l&apos;année précédente : <i>FIGyyyyyyy</i><i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Chiffres du budget : GLTOTS<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Informations sur la date : MUMBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Informations sur le profil : PARBU<i>.xxx</i></p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : BUNIDET<i>.xxx</i></p>
+                    </li>
+                </ul>
+                <p><i>(xxx</i> représente l&apos;extension à 3 chiffres du fichier Orchard. <i>yyyyy</i> représente l&apos;identifiant comparatif à 5 caractères)</p>
+            </li>
+        </ul>
+        <h2>Évolution des pastels</h2>
+        <ul>
+            <li>
+                <p>Exporter les transactions dans Pastel Evolution pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Balance de vérification consolidée : cwctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Balance de vérification non consolidée : cwunctb1.txt</p>
+                    </li>
+                    <li>
+                        <p>Mouvements GL : cwglmov1.txt</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Peachtree (DOS)</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : <i>GLxx</i> MST7.<i>Dyy</i></p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : <i>GLxxTRN7</i>.<i>Dyy</i></p>
+                    </li>
+                    <li>
+                        <p>Dates de fin d&apos;année/période : GLOPTS.<i>Dyy</i></p>
+                    </li>
+                </ul>
+                <p><i>(xx</i> représente le numéro de la période en cours pour le fichier Peachtree. <i>yy</i> représente le code client à deux caractères (ID de la société) pour le fichier Peachtree)</p>
+            </li>
+        </ul>
+        <h2>Pegasus Capital</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : SYSTEM.DBF</p>
+                    </li>
+                    <li>
+                        <p>Balance : NLNAME.DBF</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : NLTRAN.DBF</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Opéra Pegasus</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : _NPARM.DBF</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : nACNT.DBF</p>
+                    </li>
+                    <li>
+                        <p>Soldes budgétaires : nBUDG.DBF</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : _NTRAN.DBF</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Platine</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Plan comptable : NLCHART</p>
+                    </li>
+                    <li>
+                        <p>Dates de la période : NLPDATES</p>
+                    </li>
+                    <li>
+                        <p>Soldes de la période : NLBAL</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : NLCOSUB</p>
+                    </li>
+                    <li>
+                        <p>Détails du lot du journal : NLTXD</p>
+                    </li>
+                    <li>
+                        <p>Historique Détails du lot : NLTXDH</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>PwC SIF</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Balance de vérification : <i>nom de fichier</i>.xxx</p>
+                    </li>
+                    <li>
+                        <p>Flux de trésorerie : <i>nom de fichier</i>.xxx</p>
+                    </li>
+                </ul>
+                <p>Vous pouvez importer l&apos;un ou l&apos;autre de ces fichiers ou les deux. Il n&apos;y a pas de format défini pour le nom et l&apos;extension de ces fichiers.</p>
+            </li>
+        </ul>
+        <h2>RealBroker</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation de RealBroker pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>nom de fichier</i>.TXT</p>
+            </li>
+        </ul>
+        <h2>Sage 50 Comptes (Sage-Line50)</h2>
+        <ul>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Informations sur le profil : ACCDATA\COMPTE.DTA</p>
+                    </li>
+                    <li>
+                        <p>Plan comptable : ACCDATA\NOMINAL.DTA</p>
+                    </li>
+                    <li>
+                        <p>Indice CoA : ACCDATA\NOMINDEX.DTA</p>
+                    </li>
+                    <li>
+                        <p>Détail du GL : ACCDATA\SPLITS.DTA</p>
+                    </li>
+                    <li>
+                        <p>Informations sur l&apos;entreprise : ACCDATA\SETUP.DTA</p>
+                    </li>
+                    <li>
+                        <p>Types de comptes : ACCDATA\COA</p>
+                    </li>
+                    <li>
+                        <p>Informations bancaires : ACCDATA\BANK.DTA</p>
+                    </li>
+                    <li>
+                        <p>Index du grand livre : ACCDATA\NHEADER.DTA</p>
+                    </li>
+                    <li>
+                        <p>Informations sur le département : DEPARTM.DTA</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Sage 50 Comptabilité Édition CDN (Simply)</h2>
+        <ul>
+            <li>
+                <p>Installez Sage 50 Comptabilité (édition CDN) ou l&apos;utilitaire Sage 50 Connection Manager de <a href="https://my.caseware.com/">MyCaseware</a>. Vous devez disposer de l&apos;une de ces applications pour effectuer l&apos;importation ; toutefois, n&apos;installez pas les deux.</p>
+            </li>
+        </ul>
+        <h2>Logiciel agricole Settler GOLD</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation du logiciel Settler GOLD Farm pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>filename</i>.cwe</p>
+            </li>
+        </ul>
+        <h2>SigaFinance</h2>
+        <ul>
+            <li>
+                <p>Le module <b>Export</b> de SigaFinance permet de créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : filename.TXT</p>
+            </li>
+        </ul>
+        <h2>Tally Accounting (Exportation)</h2>
+        <ul>
+            <li>
+                <p>Dans Tally Accounting 9, utilisez l&apos;utilitaire d&apos;exportation autonome (Utilitaire d&apos;exportation pour Tally.ERP9) pour créer les fichiers de données clients suivants :</p>
+                <ul>
+                    <li>
+                        <p><i>companyID</i><i>.yyyymmdd</i>.Company.dat</p>
+                    </li>
+                    <li>
+                        <p><i>companyID</i><i>.yyyymmdd</i>.Chart.txt</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.TBal.txt</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.Budget.txt (facultatif)</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.Forex.txt (facultatif)</p>
+                    </li>
+                    <li>
+                        <p><i>companyIDyyyymmdd</i>.GL.txt</p>
+                    </li>
+                </ul>
+                <p><i>(companyID</i> représente l&apos;identifiant de l&apos;entreprise, <i>yyyymmdd</i> représente la date de début de l&apos;année)</p>
+            </li>
+        </ul>
+        <h2>Ufsoft</h2>
+        <ul>
+            <li>
+                <p>Installez <a href="https://documentation.caseware.com/2020/WorkingPapers/en/Content/Engagements/File-Preparation/Imports/Imports-SQL-Server.htm">Microsoft Windows SQL Server</a> localement sur la machine qui effectue l&apos;importation (si l&apos;application Ufsoft n&apos;est pas installée ou si vous n&apos;avez pas accès à sa base de données).</p>
+            </li>
+            <li>
+                <p>Importer des fichiers :</p>
+                <ul>
+                    <li>
+                        <p>Version 8.2 / 8.5 : Ufdata.bak</p>
+                    </li>
+                    <li>
+                        <p>Version 8.11 : Copiez Ufdata.mdp et Ufsystem.mdp dans un autre dossier.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Système Windward Cinq</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation de Windward System Five pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>nom de fichier</i>.TXT</p>
+            </li>
+        </ul>
+        <h2>WinLedge</h2>
+        <ul>
+            <li>
+                <p>Utilisez le module d&apos;exportation de WinLedge pour créer un fichier d&apos;exportation.</p>
+            </li>
+            <li>
+                <p>Fichier d&apos;importation : <i>nom de fichier</i>.TXT</p>
+            </li>
+        </ul>
+    </body>
+</html>

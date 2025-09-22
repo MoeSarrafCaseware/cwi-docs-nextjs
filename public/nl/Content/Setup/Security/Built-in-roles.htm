@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <meta name="description" content="CaseWare Cloud comes with several built-in roles. These roles define both the type of access and operations a user can perform in Cloud. There are two types of built-in roles: Staff roles and Contact roles." />
+    </head>
+    <body>
+        <h1>Ingebouwde rollen</h1>
+        <p>Caseware Cloud bevat verschillende ingebouwde rollen. Deze rollen bepalen zowel het type toegang als de bewerkingen die een gebruiker kan uitvoeren in Cloud. Elke ingebouwde rol is van toepassing op <a href="#Staff_Roles">medewerkers</a> of <a href="#Contact_Roles">contactpersonen</a>.</p>
+        <p>Om de ingebouwde rollen te bekijken, ga naar de <b>Instellingen</b> pagina en selecteer <b>Beveiliging | Rolmachtigingen</b>.</p>
+        <p><img src="../../Resources/Images/settings-role-permissions.png" alt="Beveiligingsinstellingen - Rolbevoegdheden" /></p>
+        <p>Selecteer een rol om er meer informatie over te bekijken in het menu aan de rechterkant van de pagina.</p><div class="note"><p><b>Notities:</b></p>
+            <ul>
+                <li>
+                    <p>Ingebouwde weergaven kunnen niet worden bewerkt of verwijderd.</p>
+                </li>
+                <li>
+                    <p>Elke organisatie moet minstens één gebruiker met de rol <i>Beheerder</i> hebben. Deze gebruiker heeft alle rechten en de mogelijkheid om elke organisatie-instelling te wijzigen.</p>
+                </li>
+            </ul></div><h2><a name="Staff_Roles"></a>Rollen voor personeel</h2>
+        <p>Ingebouwde personeelsrollen omvatten <a href="#Organization">organisatie-</a> en <a href="#Content">inhoudsrollen</a> . Personeelsrollen kunnen worden toegewezen aan personeel of personeelsgroepen.</p>
+        <h3><a name="Organization"></a>Rollen in de organisatie</h3>
+        <p>Organisatierollen geven organisatiebrede rechten. Medewerkers met deze rollen kunnen de Cloud-omgeving van de organisatie vormgeven en definiëren.</p>
+        <ul>
+            <li>
+                <p>Als een organisatierol wordt toegewezen in een bedrijf dat gebruik maakt van de functie <a href="../Organization/About-business-units.htm">bedrijfseenheden</a> , dan is deze rol van toepassing op alle bedrijfseenheden in de organisatie.</p>
+            </li>
+            <li>
+                <p>Als een organisatierol wordt toegewezen in een niet-bedrijfseenheid, geldt deze voor de hele Cloud site (d.w.z. systeembreed).</p>
+            </li>
+        </ul>
+        <p>De volgende tabel beschrijft de ingebouwde organisatierollen voor medewerkers.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>rol</th>
+                    <th>Bereik:</th>
+                    <th>Omschrijving</th>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Organisatiebreed</td>
+                    <td>
+                        <p>Elke organisatie moet minstens één medewerker hebben met de <i>Admin-rol</i> . <i>Admins</i> hebben alle rechten en de mogelijkheid om elke organisatie-instelling te wijzigen.</p>
+                        <p><b>Let op:</b> Je moet nog steeds app-licenties toewijzen (voor apps die dat vereisen) aan personeel met de rol <i>Beheerder</i> .</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Instellingen Admin</p>
+                    </td>
+                    <td>Organisatiebreed</td>
+                    <td>
+                        <p><i>Instellingen Admins</i> kunnen alle systeeminstellingen bewerken.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Personeelsadministratie</p>
+                    </td>
+                    <td>Organisatiebreed</td>
+                    <td>
+                        <p><i>Staff Admins</i> can create, view, edit and delete staff and staff groups.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Content"></a>Inhoud rollen</h3>
+        <p>Inhoudsrollen bieden rechten op systeemniveau, entiteitniveau of entiteitinhoudsniveau.</p>
+        <ul>
+            <li>
+                <p>Als een contentrol <b>systeembreed</b>is toegewezen, is deze van toepassing op alle entiteiten in de Cloud site (niet-bedrijfseenheden) of een enkele <a href="../Organization/About-business-units.htm">bedrijfseenheid</a> (bedrijfseenheden).</p>
+            </li>
+            <li>
+                <p>Als een inhoudsrol is toegewezen op <b>entiteitniveau</b> , dan is deze van toepassing op de gespecificeerde entiteit.</p>
+            </li>
+            <li>
+                <p>Als een inhoudsrol is toegewezen op <b>inhoudsniveau</b> , dan is deze van toepassing op de gespecificeerde inhoud in een entiteit.</p>
+            </li>
+        </ul>
+        <p>De volgende tabel beschrijft de ingebouwde inhoudsrollen voor medewerkers.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>rol</th>
+                    <th>Bereik:</th>
+                    <th>Omschrijving</th>
+                </tr>
+                <tr>
+                    <td>Entiteiten Beheer</td>
+                    <td>Systeembreed</td>
+                    <td><i>Entities Admins</i> can create, view, edit and delete contacts, contact groups, entities, and all content within entities.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Eigenaar</p>
+                    </td>
+                    <td>
+                        <p>Systeembreed, entiteiten en inhoud daarbinnen</p>
+                    </td>
+                    <td>
+                        <p><i>Eigenaren</i> kunnen inhoud van entiteiten bekijken, bewerken en verwijderen, en rollen toewijzen aan andere medewerkers als ze deze rol hebben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Editor</p>
+                    </td>
+                    <td>
+                        <p>Systeembreed, entiteiten en inhoud daarbinnen</p>
+                    </td>
+                    <td>
+                        <p>Redacteuren kunnen inhoud bekijken en bewerken als ze deze rol hebben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Viewer</p>
+                    </td>
+                    <td>
+                        <p>Systeembreed, entiteiten en inhoud daarbinnen</p>
+                    </td>
+                    <td>
+                        <p>Kijkers kunnen inhoud bekijken waarin ze deze rol hebben.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Entiteit Toegang</p>
+                    </td>
+                    <td>
+                        <p>Systeembreed, entiteiten en inhoud daarbinnen</p>
+                    </td>
+                    <td>
+                        <p><i>Entity Access</i> geeft medewerkers toegang tot entiteiten waar ze deze rol hebben, zodat ze een beveiligingsrol kunnen krijgen voor inhoud zoals een activiteit of een bestand. Hiermee kunnen ze geen medewerkers, contactpersonen of andere inhoud van de entiteit bekijken of bewerken, maar wel de samenvatting en details van de entiteit.</p>
+                        <p>Deze rol wordt meestal toegewezen aan personeel dat anders niet zou weten dat een entiteit bestaat.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Contact_Roles"></a>Contactrollen</h2>
+        <p>Contactrollen geven rechten op entiteitniveau (een entiteit) of op inhoudsniveau (inhoud binnen een entiteit). Contactpersonen met deze rollen hebben beperkte of helemaal geen toegang tot Cloud (met de rol Associated).</p>
+        <p>De volgende tabel beschrijft de ingebouwde rollen voor contactpersonen.</p>
+        <table class="table">
+            <col style="width: 20%" />
+            <col style="width: 20%" />
+            <col style="width: 60%" />
+            <tbody>
+                <tr>
+                    <th>rol</th>
+                    <th>Bereik:</th>
+                    <th>Omschrijving</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Entiteit Medewerker</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Entiteitmedewerkers</i> kunnen nieuwe inhoud maken en toegang krijgen tot bestaande inhoud in entiteiten waar ze deze rol hebben. Ze kunnen bestandsaanvragen ontvangen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Toegang entiteit</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p><i>Contact - Entiteitstoegang</i> geeft contactpersonen toegang tot bestaande inhoud in entiteiten waar ze deze rol hebben. Hiermee kunnen ze geen bestandsaanvragen ontvangen of communicatie initiëren.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Vereniging</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p><i>Met Gekoppeld</i> kunnen contactpersonen worden gekoppeld aan een entiteit. Ze kunnen zich niet aanmelden bij Cloud, geen meldingen ontvangen en geen toegang krijgen tot functies.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Eigenaar</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p>Redacteuren kunnen inhoud bekijken en bewerken als ze deze rol hebben. Ze kunnen geen inhoud delen.</p>
+                        <p>Deze rol wordt automatisch toegewezen aan activiteiten of bestanden die contactpersonen maken.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Redacteur</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p>Redacteuren kunnen inhoud bekijken en bewerken als ze deze rol hebben. Ze kunnen geen inhoud delen.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact - Weergave</p>
+                    </td>
+                    <td>
+                        <p>Entiteiten en inhoud daarin</p>
+                    </td>
+                    <td>
+                        <p>Kijkers kunnen inhoud bekijken waarin ze deze rol hebben. Ze kunnen geen inhoud delen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Mise en œuvre des rapports sur les fonds</h1>
+        <p>Vous pouvez mettre en œuvre l&apos;information sur les fonds dans vos états financiers lorsque des missions d&apos;examen des organismes sans but lucratif sont effectuées pour les types d&apos;organismes de <b>bienfaisance enregistrés</b> ou sans but lucratif . Pour mettre en œuvre le reporting par fonds, vous devez d&apos;abord ajouter un ensemble de dimensions, affecter les groupes financiers, puis modifier vos tableaux dynamiques dans les états financiers.</p>
+        <p>Dans OnPoint Audit, nous avons créé des catégories de dimensions par défaut pour les <b>restrictions imposées aux donateurs</b> et les <b>fonds à but non lucratif</b> , avec leurs dimensions respectives, que vous pouvez utiliser. Ces catégories de dimensions ont été affectées aux groupes financiers des dépenses d&apos;exploitation.</p>
+        <p>Si vous n&apos;utilisez pas les catégories de dimensions par défaut, vous pouvez désaffecter les groupes financiers et créer votre propre ensemble de dimensions.</p>
+        <h2>Ajouter un ensemble de dimensions</h2>
+        <p>Les dimensions sont des propriétés de groupe que vous pouvez configurer pour les regroupements afin de mieux catégoriser les comptes. Pour commencer, sélectionnez l&apos;icône <b>Information</b> (<img src="../../Resources/Images/icon-information-menu-end-user.png" style="vertical-align: text-bottom;" />) dans le menu supérieur, puis <b>Paramètres</b>. La boîte de dialogue Paramètres d&apos;engagement s&apos;ouvre et vous permet d&apos;afficher et de personnaliser les paramètres.</p>
+        <p><b>Pour ajouter un ensemble de dimensions :</b></p>
+        <ol>
+            <li>
+                <p>Aller à <b>Caractéristiques | Dimensions</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>+ Catégorie</b>, puis ajoutez un nom pour la nouvelle catégorie de dimension.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Ajouter une dimension</b> (<img src="../../Resources/Images/add-area-inline.png" style="vertical-align: text-bottom;" />) pour ajouter une dimension, puis donnez un nom à la nouvelle dimension.</p>
+                <p>Vous pouvez ajouter jusqu&apos;à trois niveaux de dimension.</p>
+            </li>
+        </ol>
+        <p>Nous pouvons maintenant affecter les catégories de dimensions aux groupes financiers.</p>
+        <p><b>Pour attribuer des groupes financiers :</b></p>
+        <ol>
+            <li>
+                <p>Accédez à la catégorie dans la boîte de dialogue Paramètres de l&apos;engagement. Sélectionnez <b>Autres actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />) | <b>Attribuer des groupes</b>.</p>
+            </li>
+            <li>
+                <p>Sélectionnez tous les groupes financiers applicables.</p>
+                <p>Vous pouvez développer et réduire les groupes financiers pour afficher les sous-groupes et utiliser la barre de recherche pour trouver les groupes appropriés.</p>
+            </li>
+        </ol>
+        <p>Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Add-dimensions.htm">Ajouter des dimensions</a>.</p>
+        <h2>Attribuer des comptes</h2>
+        <p>Après avoir ajouté un ensemble de dimensions et affecté des groupes financiers, vous pouvez affecter des comptes à partir de vos données clients importées.</p>
+        <p class="note"><b>Remarque :</b> Si les soldes des comptes de vos données importées ne sont pas séparés par fonds, une écriture de journal d&apos;ajustement est nécessaire pour répartir ces soldes entre vos dimensions.</p>
+        <p><b>Pour attribuer des comptes :</b></p>
+        <ol>
+            <li>
+                <p>Dans la page <b>Données</b> , allez dans l&apos;onglet <b>Affectation des comptes</b> .</p>
+            </li>
+            <li>
+                <p>Attribuez vos comptes. Par exemple, dans la capture d&apos;écran ci-dessous, vous avez la possibilité d&apos;affecter le compte de <b>location de l&apos;entrepôt</b> à l&apos;une des dimensions existantes, telles que <b>Location - Services de programme</b>, <b>Location - Collecte de fonds ou Location - Général et administratif</b>.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/assign-account-audit.png" alt="L&apos;imputation à l&apos;une des dimensions existantes." /></p>
+        <p>Pour en savoir plus, voir <a href="../../Engagements/Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">Attribuer des comptes aux groupes dans la page Données</a>.</p>
+        <h2>Modifier des tableaux dynamiques dans les états financiers</h2>
+        <p>Après avoir ajouté un ensemble de dimensions, vous pouvez mettre en œuvre le reporting par fonds dans vos états financiers en modifiant vos tableaux dynamiques.</p>
+        <p><b>Pour modifier un tableau dynamique :</b></p>
+        <ol>
+            <li>
+                <p>Dans les <b>états financiers 7-600</b>, naviguez jusqu&apos;au tableau dans lequel vous souhaitez que le rapport sur les fonds apparaisse.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Autres actions</b> (<img src="../../Resources/Images/icon-more-actions.png" style="vertical-align: text-bottom;" />), puis <b>Modifier le tableau dynamique</b>.</p>
+                <p>Le tableau s&apos;ouvre en mode édition.</p>
+            </li>
+            <li>
+                <p>Sélectionnez la colonne existante Solde de l&apos;année en cours.</p>
+            </li>
+            <li>
+                <p>Sélectionnez la catégorie de dimension dans la liste déroulante Dimension.</p>
+                <p>Les colonnes de dimension applicables et l&apos; <b>intitulé du groupe de colonnes</b> sont automatiquement ajoutés.</p>
+                <p><img src="../../Resources/Images/dimensions-drop-down-audit.png" alt="Liste déroulante des dimensions avec des options permettant de sélectionner différentes catégories de dimensions." /></p>
+            </li>
+            <li>
+                <p>Une fois les modifications terminées, sélectionnez <b>DONE</b>.</p>
+            </li>
+        </ol>
+        <p>Pour en savoir plus, voir <a href="../../Engagements/Template-and-Authoring/Edit-table-columns-in-the-financial-statements.htm">Traiter les colonnes des tableaux dans les états financiers</a> et <a href="../../Engagements/Template-and-Authoring/Group-columns-in-dynamic-tables.htm">Regrouper les colonnes dans les tableaux dynamiques</a>.</p>
+    </body>
+</html>

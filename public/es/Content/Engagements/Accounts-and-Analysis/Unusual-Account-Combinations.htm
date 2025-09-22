@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Combinaciones de cuentas inusuales</h1>
+        <p>Esta prueba analítica identifica transacciones que tienen combinaciones inusuales cuando se comparan con el resto de la población. The user can decide on the percentage of the population that would be considered unusual. The default is 3%.</p>
+        <p>This analytic test can be used to identify:</p>
+        <ul>
+            <li>
+                <p>Posibles intentos de manipulación de estados financieros.</p>
+            </li>
+            <li>
+                <p>Lower accuracy and precision of financial reporting areas</p>
+            </li>
+            <li>
+                <p>Potentially unsupported transactions</p>
+            </li>
+            <li>
+                <p>Vulnerabilidad de las actividades de supervisión y detección</p>
+            </li>
+            <li>
+                <p>Poor training</p>
+            </li>
+            <li>
+                <p>Transacciones comerciales complejas, no rutinarias o inusuales que pudieran justificar una investigación adicional</p>
+            </li>
+            <li>
+                <p>Interpretación incorrecta de políticas contables debida a falta de formación o errores del sistema que lleva a clasificaciones de estados financieros incorrectos</p>
+            </li>
+            <li>
+                <p>System settings that are not properly configured</p>
+            </li>
+            <li>
+                <p>Infrequently posted transactions</p>
+            </li>
+            <li>
+                <p>Evaluación de los riesgos de incorrección material debida a fraude potencial.</p>
+            </li>
+        </ul>
+        <h2>Fields used for analysis</h2>
+        <p>The following fields are used for this analysis:</p>
+        <p>Campos Y:</p>
+        <ul>
+            <li>
+                <p>One or more fields that determine how the group will define the combinations. For example, you can use the <b>Journal entry</b> field.</p>
+            </li>
+            <li>
+                <p>One or more fields that determine the groupings. This is usually the <b>Account number</b> field, but other fields can also be used as required.</p>
+            </li>
+            <li>
+                <p>Campo de importe* Only one amount field can be selected for the grouping.</p>
+            </li>
+        </ul>
+        <h2>Parámetros</h2>
+        <p>There is one parameter that must be set in order to run this test:</p>
+        <p><b>Percentage for unusual combinations</b> - Enter a percentage up to two decimal places to use when determining what is considered an unusual combination. This percentage must be greater than 0% and can be a max of 50%. El valor predeterminado es True.</p>
+        <h2>Especificación técnica</h2>
+        <p>When you run the Unusual Account Combinations analytic test, the following steps are performed to run the test:</p>
+        <ol>
+            <li>
+                <p>If needed place any filters on the data in order that a subset is used for the analysis. If no filter is placed, the analysis will be run on the entire data file. This step can also be performed as the last step instead of the first.</p>
+                <p class="note"><b>Note:</b> Filters are not currently available and will be included in a later release.</p>
+            </li>
+            <li>
+                <p>Validate that the necessary reference columns have been selected, namely that an amount column has been selected, one or more columns that make up the grouping column such as an Account Number and one or more columns that make up the ID such as the Journal Entry Number.</p>
+            </li>
+            <li>
+                <p>Create a NEW_ID column that concatenates the one or more columns that make up the ID.</p>
+            </li>
+            <li>
+                <p>Create a NEW_GROUP column that concatenates the one or more columns that make up the grouping.</p>
+            </li>
+            <li>
+                <p>Sort the data by NEW_ID and NEW_GROUP.</p>
+            </li>
+            <li>
+                <p>Replace the NEW_GROUP column with increasing numeric values. This is done by grouping the NEW_GROUP column to get unique values and then assigning a unique number starting from zero. This step is performed in case the column length of NEW_GROUP is too long.</p>
+            </li>
+            <li>
+                <p>Extract the credit combinations by ID. This is done by extracting all negative (credit) amounts. The credit combinations are added to a CREDIT_COMBINATIONS column. For example, if NEW_GROUP_NUMERIC had groupings 1 and 2, then the CREDIT_COMBINATIONS column would show 1, 2.</p>
+            </li>
+            <li>
+                <p>Extract the debit combinations by ID. This is done by extracting all positive (debit) amounts. The debit combinations are added to a DEBIT_COMBINATIONS column. For example, if NEW_GROUP_NUMERIC had groupings 1 and 2, then the DEBIT_COMBINATIONS column would show 1, 2.</p>
+            </li>
+            <li>
+                <p>Group the NEW_ID to obtain unique values.</p>
+            </li>
+            <li>
+                <p>For each NEW_ID, add the DEBIT_COMBINATIONS and CREDIT_COMBINATIONS. This step is performed to give the unique combination for each ID.</p>
+            </li>
+            <li>
+                <p>Replace any NaN with empty values.</p>
+            </li>
+            <li>
+                <p>Group the DEBIT_COMBINATIONS and CREDIT_COMBINATIONS in order to get the count for each combination.</p>
+            </li>
+            <li>
+                <p>Add a percentage that is based on the count / total count.</p>
+            </li>
+            <li>
+                <p>Extract all rows that are equal to or less than the unusual_combinations_percentage value.</p>
+            </li>
+            <li>
+                <p>Merge the previous dataset per ID to get the IDs that are under the unusual_combinations_percentage value.</p>
+            </li>
+            <li>
+                <p>Merge the previous dataset with the original dataset to get all the transactions that belong to the IDs flagged.</p>
+            </li>
+            <li>
+                <p>Delete any created columns so that the result only contains columns from the original record.</p>
+            </li>
+            <li>
+                <p>Extract the result fields selected by the user. All fields are extracted by default.</p>
+                <p class="note"><b>Note:</b> The ability to select result fields is not currently available and will be included in a later release.</p>
+            </li>
+        </ol>
+    </body>
+</html>

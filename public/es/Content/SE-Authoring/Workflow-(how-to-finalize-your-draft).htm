@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Workflow (how to finalize the draft?)</h1>
+        <p>Before you finalize and distribute your draft, here are a few things to consider...</p>
+        <ul>
+            <li>
+                <p>XBRL (eXtensible Business Reporting Language) identifiers are available throughout the application to support markets that need to submit their financial statements in XBRL format.</p>
+            </li>
+            <li>
+                <p>If engagement consolidation is relevant in your solution, note that you need to decide whether you want the consolidated data to be displayed in the financial statements document or not. For more information, see <a href="Specify-whether-or-not-to-use-consolidated-data.htm">Specify whether or not to use consolidated data</a> and <a href="Column-settings-in-dynamic-tables.htm">Set up the column data.</a></p>
+            </li>
+            <li>
+                <p>If interim reporting is relevant in your solution, you need to:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>enable interim reporting properties in the product API, see <a href="List-of-product-features-(API).htm#Engagement-properties">Engagement properties</a> for more information.</p>
+                    </li>
+                    <li>
+                        <p>set the column types in table to be Current Period, see <a href="Column-settings-in-dynamic-tables.htm#To-set-up-column-data">Set up the column data.</a></p>
+                    </li>
+                </ul>
+                <p>También podrá:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>set up visibility so that specific documents are available in the template based on the current period. See <a href="List-of-product-features-(API).htm#Interim">Reporting period.</a></p>
+                    </li>
+                    <li>
+                        <p>set up dynamic text and engagement glossary terms so that specific terms are available in the narrative (in letters or memos or financial statements) based on the current period. See <a href="Add-text-in-a-letter-or-a-memo.htm">Add data links.</a></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If carry forward is relevant in your solution and you&apos;ve configured input rows or columns in dynamic tables for current year (or current period) and prior year (or prior period) data, the application <u style="text-decoration: none; font-style: italic;">does not automatically</u> fix the values for years (or periods) in input rows or columns after the carry forward action.</p>
+            </li>
+            <li>
+                <p>You must add a note to the users specifying the input rows or columns that they need to fix the year values for manually after they perform a carry forward.</p>
+            </li>
+        </ul>
+        <p>The following steps summarize the recommended workflow for finalizing your draft. You can use this workflow for guidance.</p>
+        <ol>
+            <li>
+                <p><a href="Finalize-your-draft.htm#Add">Add a file placeholder, a link or upload a file</a></p>
+            </li>
+            <li>
+                <p><a href="Finalize-your-draft.htm#Organize"><p>Organize the items in your template</p></a></p>
+            </li>
+            <li>
+                <p><a href="Finalize-your-draft.htm#Set"><p>Set visibility</p></a></p>
+            </li>
+        </ol>
+    </body>
+</html>

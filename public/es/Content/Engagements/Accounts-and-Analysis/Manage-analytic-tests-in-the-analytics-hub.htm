@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Manage analytic tests in the Analytics Hub</h1>
+        <p class="note"><b>Nota:</b> Esta función sólo está disponible si se ha activado en su producto.</p>
+        <p>The Analytics Hub is a central location that you can use to view and manage all analytics tests available in your engagement. From the Analytics Hub, you can</p>
+        <ul>
+            <li>
+                <p>View all analytic tests available in your engagement</p>
+                <p class="note"><b>Note:</b> Tests linked to hidden checklist procedures are not shown in the Analytics Hub</p>
+            </li>
+            <li>
+                <p>View test statuses and results</p>
+            </li>
+            <li>
+                <p>Filter tests</p>
+            </li>
+            <li>
+                <p>Make adjustments to test configurations</p>
+            </li>
+            <li>
+                <p>Error al vincular el procedimiento de lista de verificación.</p>
+            </li>
+        </ul>
+        <p>To open the Analytics Hub, select <b>Analytics Hub</b> in the top menu. When you open the page, the list of all tests available in your engagement displays on the left. You can search or use the filters to find the test you’re looking for.</p>
+        <p><img src="../../Resources/Images/analytics-hub-multiple-tests-selected.png" alt="Habilitar Centro de análisis" /></p>
+        <p>Once you open a test, you can adjust the configuration or navigate to the linked checklist procedures on the <b>Test Parameters</b> tab. To run the test, you can select the <b>Run</b> button and then view the results on the <b>Results</b> tab for the test. Note that you can also select multiple tests using the checkboxes and run them at the same time.</p>
+        <p><img src="../../Resources/Images/analytics-hub-test-opened.png" alt="The Analytics Hub with a test open on the right." /></p>
+        <p>To open the <b>Aggregated Results</b> page, select the <b>Results</b> button at the top of the page. This page displays all transactions flagged as a result of all tests that you have run. You can use the <b>Columns</b> and <b>Filters</b> options to filter the results you see and use the <b>Export</b> button to export the results to a CSV file.</p>
+        <p><img src="../../Resources/Images/analytics-hub-aggregated-results-page.png" alt="The Aggregated Results page." /></p>
+        <h2>Dynamically filter data for analytic tests</h2>
+        <p>You can filter the source dataset for an analytic test and then run the test on the subset of data identified by the filter.</p>
+        <p><b>To dynamically filter data for an analytic test:</b></p>
+        <ol>
+            <li>
+                <p>In the Analytics Hub, select the analytic test whose input dataset you want to filter.</p>
+            </li>
+            <li>
+                <p>In <b>Filter dataset</b>, they select <b>+ Add filter</b> to create a filter condition that will be applied to a single column of the input dataset.</p>
+            </li>
+            <li>
+                <p>Select the column where you want to apply a filter.</p>
+            </li>
+        </ol>
+        <p class="indent"><ul><li><p>One or more filtering conditions are supported in a filter.</p></li><li><p>Multiple filtering conditions can be connected with logical connectives such as AND, OR, or NOT.</p></li><li><p>Each filtering condition is applied only to a single column of the input dataset.</p></li><li><p>Conditional arguments vary by data format. For example, in a date column, you can specify a range.</p></li></ul></p>
+        <p><img src="../../Resources/Images/Step1-AnalyticFilter.png" alt="Select a column where to apply a filter condition." /></p>
+        <ol>
+            <li value="4">Create the filter condition and select <b>Filter</b> to run it.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step2-Filtering.png" alt="Create a filter condition to isolate the subset of data on which you want to run the analytic test." /></p>
+        <p class="indent">The number of data rows matching the condition appears.</p>
+        <ol>
+            <li value="5">You can then run the analytic test on this subset of data by clicking <b>Run</b>.</li>
+        </ol>
+        <p><img src="../../Resources/Images/Step3-RunAnalyticTestonFilteredSubset.png" alt="Run the analytic test on the subset of input data you created with the filter." /></p>
+    </body>
+</html>

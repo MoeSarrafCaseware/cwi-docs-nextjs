@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Importer à partir de Sage Desktop</h1>
+        <p>Vous pouvez importer des données de Sage en générant un fichier zip à l&apos;aide de l&apos;utilitaire d&apos;importation Caseware Cloud, puis en l&apos;important dans votre engagement. Nous prenons actuellement en charge les logiciels de comptabilité Sage suivants :</p>
+        <ul>
+            <li>
+                <p>Importation à partir de Sage 50 Accounts (Sage-Line50)</p>
+            </li>
+            <li>
+                <p>Importation de Sage 50 Comptabilité Édition CDN (Simply)</p>
+            </li>
+        </ul>
+        <p>Pour une liste des versions que nous prenons en charge, voir <a href="Supported-third-party-accounting-packages.htm">Logiciels comptables tiers pris en charge.</a></p>
+        <p class="note"><b>Remarque :</b> Les comptes avec un solde nul ne sont pas automatiquement importés dans les applications Caseware Cloud, à l&apos;exception d&apos; <a href="https://www.caseware.com/ca/products/idea/">IDEA</a>. Pour inclure les comptes à solde nul, vous devez les <a href="../Accounts-and-Analysis/Add-an-account-or-a-group-in-the-Data-page.htm">ajouter</a> et les <a href="../Accounts-and-Analysis/Assign-accounts-to-groups-in-the-Data-page.htm">affecter</a> manuellement aux groupes désignés.</p>
+        <h2><a name="Generate"></a>Générer le fichier d&apos;importation pour Sage 50 Accounts (Sage-Line50)</h2>
+        <p>Avant de commencer, assurez-vous que vous disposez des fichiers d&apos;importation nécessaires :</p>
+        <ul>
+            <li>
+                <p>Informations sur le profil : ACCDATA\COMPTE.DTA</p>
+            </li>
+            <li>
+                <p>Plan comptable : ACCDATA\NOMINAL.DTA</p>
+            </li>
+            <li>
+                <p>Indice CoA : ACCDATA\NOMINDEX.DTA</p>
+            </li>
+            <li>
+                <p>Détail du GL : ACCDATA\SPLITS.DTA</p>
+            </li>
+            <li>
+                <p>Informations sur l&apos;entreprise : ACCDATA\SETUP.DTA</p>
+            </li>
+            <li>
+                <p>Types de comptes : ACCDATA\COA</p>
+            </li>
+            <li>
+                <p>Informations bancaires : ACCDATA\BANK.DTA</p>
+            </li>
+            <li>
+                <p>Index du grand livre : ACCDATA\NHEADER.DTA</p>
+            </li>
+            <li>
+                <p>Informations sur le département : DEPARTM.DTA</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Pour générer le fichier d&apos;importation pour Sage 50 Accounts (Sage-Line50) :</p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans les menus déroulants <b>Importer de</b> et <b>Version</b> , sélectionnez <b>Sage 50 Comptes</b> et la version à partir de laquelle vous effectuez l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Dans <b>Chemin d&apos;importation</b>, sélectionnez <b>Parcourir</b> et naviguez jusqu&apos;au dossier qui contient le dossier ACCDATA, où se trouvent les fichiers .DTA que vous souhaitez importer.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage50.png" alt="L&apos;utilitaire d&apos;importation dans le nuage." /></p>
+            </li>
+            <li>
+                <p>Déterminez les autres paramètres de l&apos;importation.</p>
+                <p>Les paramètres varient en fonction de la version que vous avez sélectionnée précédemment.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Suivant</b>, puis <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>Enregistrez le fichier zip généré à l&apos;aide de l&apos;invite affichée.</p>
+                <p>Pour poursuivre le processus d&apos;importation, voir Importer les données dans votre engagement.</p>
+            </li>
+        </ol>
+        <h2><a name="Generate2"></a>Générer le fichier d&apos;importation pour Sage 50 Comptabilité Edition CDN (Simply)</h2>
+        <p>Avant de commencer, assurez-vous que vous avez installé Sage 50 Comptabilité (édition CDN) ou l&apos;utilitaire Sage 50 Connection Manager de <a href="https://my.caseware.com/">MyCaseware</a>. Vous devez disposer de l&apos;une de ces applications pour effectuer l&apos;importation ; toutefois, n&apos;installez pas les deux.</p>
+        <p style="font-weight: bold;">Pour générer le fichier d&apos;importation pour Sage 50 Accounting CDN Edition (Simply) :</p>
+        <ol>
+            <li>
+                <p>Téléchargez l&apos;utilitaire d&apos;importation Caseware Cloud.</p>
+            </li>
+            <p><a class="downloadLink" data-toggle="modal" filename="CloudImport.exe" data-target="#downloadModal"><i class="fa fa-download downloadicon"></i>Caseware Cloud Import Utility (.exe)</a></p>
+            <li>
+                <p>Ouvrez l&apos;utilitaire, sélectionnez <b>Autre source de données</b> et cliquez sur <b>Suivant.</b></p>
+            </li>
+            <li>
+                <p style="font-weight: normal;">Dans les menus déroulants <b>Importer de</b> et <b>Version</b> , sélectionnez <b>Sage 50 Comptabilité Édition CDN (Simply)</b> et la version à partir de laquelle vous effectuez l&apos;importation.</p>
+            </li>
+            <li>
+                <p>Dans <b>Chemin d&apos;importation</b>, sélectionnez <b>Parcourir</b> et naviguez jusqu&apos;au dossier contenant le fichier client à importer. Les fichiers clients pour Sage portent l&apos;extension .SAI.</p>
+                <p>Le champ <b>ID client</b> se remplit automatiquement avec le nom du fichier client.</p>
+                <p><img src="../../Resources/Images/cloud-import-utility-sage-simply.png" alt="L&apos;utilitaire d&apos;importation dans le nuage." /></p>
+            </li>
+            <li>
+                <p>Déterminez les autres paramètres de l&apos;importation.</p>
+                <p>Les paramètres varient en fonction de la version que vous avez sélectionnée précédemment.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Suivant</b>, puis <b>Terminer</b>.</p>
+            </li>
+            <li>
+                <p>Enregistrez le fichier zip généré à l&apos;aide de l&apos;invite affichée.</p>
+            </li>
+        </ol>
+        <h2>Importer les données dans votre engagement</h2>
+        <p>Après avoir généré le fichier zip à l&apos;aide de l&apos;utilitaire d&apos;importation Caseware Cloud, vous pouvez importer les données dans votre engagement.</p>
+        <p><b>Pour importer les données dans votre engagement :</b></p>
+        <ol>
+            <li>
+                <p>Ouvrez votre fichier d&apos;engagement Caseware Cloud. Lorsque vous ouvrez l&apos;engagement pour la première fois, la fenêtre contextuelle Propriétés de l&apos;engagement s&apos;affiche. Définissez la <b>date de fin d&apos;année</b> comme étant la même que celle des données que vous êtes sur le point d&apos;importer.</p>
+                <p>La date de fin d&apos;année est le dernier élément du nom du fichier zip que vous avez généré dans <a href="#Generate">Générer le fichier d&apos;importation pour Sage 50 Comptes (Sage-Line50)</a> ou <a href="#Generate2">Générer le fichier d&apos;importation pour Sage 50 Comptabilité Edition CDN (Simply)</a>. Par exemple, pour le fichier nommé CONSTRUCTION UNIVERSELLE 2025-06-30.zip, la date de fin d&apos;année est le 30 juin 2025.</p>
+            </li>
+            <li>
+                <p>Accédez à la page <b>Données</b> . The Data page opens to the Datasets tab.</p>
+            </li>
+        </ol>
+        <p class="indent">
+            <ul>
+                <li>
+                    <p>Si vous avez déjà importé des données, sélectionnez <b>Ajouter des données.</b></p>
+                </li>
+                <li>
+                    <p>Si votre engagement est consolidé et comporte des filiales internes, sélectionnez dans la liste l&apos;entité dont vous souhaitez importer les données.</p>
+                </li>
+            </ul>
+        </p>
+        <ol>
+            <li value="3">
+                <p>Sélectionnez <b>Desktop Accounting Software</b> dans la liste des sources de données, puis sélectionnez <b>Next.</b></p>
+                <p>Si l&apos;option n&apos;est pas visible, vous pouvez utiliser la boîte de recherche pour la trouver.</p>
+            </li>
+        </ol>
+        <p><img src="../../Resources/Images/SageDesktopDataConnector.png" alt="Sélectionner le connecteur de données Sage 50 - Canada sur la page Datasets." /></p>
+        <ol>
+            <li value="4">
+                <p>A l&apos;étape Upload de l&apos;assistant d&apos;importation, sélectionnez ou glissez-déposez le fichier zip que vous avez généré en utilisant l&apos;utilitaire d&apos;importation Caseware Cloud, puis sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>A l&apos;étape Configuration des données de l&apos;assistant d&apos;importation :</p>
+                <ul>
+                    <li>
+                        <p>La période de<b>déclaration</b> est automatiquement remplie avec la période de déclaration des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>début</b> est automatiquement remplie avec la date de début des données.</p>
+                    </li>
+                    <li>
+                        <p>La date de<b>fin</b> est automatiquement remplie avec la date de fin des données.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Dans <b>Sélectionner le type de jeu</b>de données, choisissez le type de jeu de données que vous importez. Sélectionnez <b>Balance de vérification</b> si vous importez une balance de vérification et <b>Grand livre</b> si vous importez des transactions.</p>
+            </li>
+            <li>
+                <p>Si vous avez sélectionné <b>Balance de vérification</b>, réduisez la liste des types d&apos;ensembles de données en sélectionnant l&apos;icône de <b>réduction</b> (<img src="../../Resources/Images/icon-collapse-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />). Remarquez que l&apos;option<b>Importer les 5 dernières années de TB</b> apparaît. Sélectionnez-le pour importer jusqu&apos;à cinq années de données de balance de vérification si elles sont disponibles dans le fichier zip que vous avez généré.</p>
+            </li>
+            <li>
+                <p>Sélectionnez <b>Next.</b></p>
+            </li>
+            <li>
+                <p>À l&apos;étape de confirmation de l&apos;assistant d&apos;importation, vérifiez les informations et sélectionnez <b>Importer</b>.</p>
+            </li>
+        </ol>
+        <p class="indent">Pour afficher les données importées, cliquez sur <b>Afficher les données</b> en regard de l&apos;ensemble de données que vous avez importé.</p>
+        <p class="indent">Une nouvelle page s&apos;affiche avec les données.</p>
+        <p class="indent">Par défaut, toutes les colonnes de votre jeu de données s&apos;affichent. Cliquez sur <b>Colonnes</b> pour désélectionner celles que vous souhaitez masquer.</p>
+        <p class="indent">Cliquez sur <b>Filtres</b> pour filtrer les données affichées dans l&apos;ensemble de données.</p>
+        <p class="indent">Pour plus d&apos;informations, reportez-vous à la section <a href="../Accounts-and-Analysis/View-the-client's-transactions.htm">Consulter les données générales et auxiliaires du client.</a></p>
+    </body>
+</html>

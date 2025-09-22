@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Deaktivieren des Zugriffs auf Caseware Cloud für ältere und nicht unterstützte Browser</h1>
+        <p><b>Veröffentlicht:</b> 18. Juni 2020</p>
+        <hr />
+        <p><b>Kurz nach der Veröffentlichung von Caseware Cloud 31 wird Caseware den Zugriff auf Caseware Cloud für ältere und nicht unterstützte Webbrowser deaktivieren.</b> Diese älteren und nicht unterstützten Browser verwenden veraltete Verschlüsselungsprotokolle – TLS Version 1.0 und v1.1.</p>
+        <p>Der PCI Security Standards Council hat allen Organisationen, die seine „Best Practices“ befolgen, empfohlen, von SSL/TLS auf TLS v1.2 oder höher zu migrieren Diese Änderung wird in der gesamten Branche durchgesetzt, um sichere Verbindungen aufrechtzuerhalten, die Ihre sensiblen Daten verschlüsseln und vor böswilligen Zugriffen schützen. Caseware wird dieser Empfehlung bei allen eingehenden Verbindungen folgen.</p>
+        <h2>Was ist TLS?</h2>
+        <p>TLS steht für &quot;Transport Layer Security.“ Es handelt sich um ein Protokoll, das den Datenschutz und die Datenintegrität zwischen zwei kommunizierenden Anwendungen gewährleistet. Es ist das heute am weitesten verbreitete Sicherheitsprotokoll und wird für Webbrowser und andere Anwendungen verwendet, bei denen Daten sicher über ein Netzwerk ausgetauscht werden müssen. TLS stellt durch Verschlüsselung und Überprüfung der Identität des Endpunkts sicher, dass eine Verbindung zu einem entfernten Endpunkt der beabsichtigte Endpunkt ist. Die bisherigen Versionen von TLS sind TLS 1.0, 1.1, 1.2 und 1.3.</p>
+        <h2>Wer ist betroffen?</h2>
+        <p>Caseware Cloud Kunden (Mitarbeiter und Kontakte) und Hybrid Cloud Kunden, die ältere und nicht unterstützte Webbrowser für den Zugriff auf Caseware Produkte verwenden, sind davon betroffen. Die vollständige Liste der betroffenen Webbrowser finden Sie im Abschnitt <b>Kompatibilität mit Internet-Browsern</b> weiter unten.</p>
+        <p><b>So überprüfen Sie, ob Sie einen nicht unterstützten Browser verwenden:</b></p>
+        <ol>
+            <li>Verwenden Sie dieses Tool, um die <a href="https://www.ssllabs.com/ssltest/viewMyClient.html">SSL/TLS-Fähigkeiten</a> Ihres Browsers zu überprüfen.</li>
+            <li>Wenn der Browser aktualisiert werden muss (d. h. er zeigt nicht 1.2 oder höher an), finden Sie auf dieser Website Schritte, um TLS 1.2 oder höher zu aktivieren: <a href="https://knowledge.digicert.com/generalinformation/INFO3297.html">Enabling TLS 1.1 and TLS 1.2 on web browsers (in Englisch)</a>.</li>
+        </ol>
+        <h2>Benutzererfahrung, wenn keine Maßnahmen ergriffen werden</h2>
+        <p><b>Nutzer können sich nicht mit Caseware Cloud verbinden</b>, wenn ihr Browser oder ihre Browsereinstellungen nicht gemäß den unten genannten Kompatibilitätsrichtlinien aktualisiert werden.</p>
+        <ol>
+            <li>
+                <p><b>Caseware Cloud Benutzer</b></p>
+                <p>Benutzer, die keinen kompatiblen Browser verwenden, erhalten eine Fehlermeldung auf der Anmeldeseite der Caseware Cloud und können sich nicht mit dem Server verbinden. Sobald der Browser oder die Browsereinstellungen aktualisiert sind, können die Benutzer die Seite aktualisieren, um auf den Anmeldebildschirm zuzugreifen.</p>
+            </li>
+            <li>
+                <p><b>Benutzer von Working Papers mit Cloud-Integration für SmartSync</b></p>
+                <p>Bei Benutzern, die keinen kompatiblen Browser verwenden, werden einige oder alle der folgenden Probleme auftreten:</p>
+                <p><b>Working Papers 2018 oder aktueller</b></p>
+                <ul>
+                    <li>Sie erhalten eine Fehlermeldung, wenn Sie sich von Working Papers aus mit dem Anmeldebildschirm der Caseware Cloud verbinden.</li>
+                    <li>Sie können keine Dateien auf der Registerkarte SmartSync Server unter <b>Datei | Öffnen</b> sehen oder darauf zugreifen.</li>
+                    <li>Sie können keine Verbindung zum Server herstellen (d. h. online gehen), um Änderungen aus Ihrer lokalen Synchronisierungskopie zu synchronisieren. Eine Sprechblase in der unteren rechten Ecke zeigt an, dass die Datei offline ist.</li>
+                </ul>
+                <p><b>Working Papers 2017 oder älter</b></p>
+                <ul>
+                    <li>Sie können keine Dateien auf der Registerkarte SmartSync Server unter <b>Datei | Öffnen</b> sehen oder darauf zugreifen.</li>
+                    <li>Sie können keine Verbindung zum Server herstellen (d. h. online gehen), um Änderungen aus Ihrer lokalen Synchronisierungskopie zu synchronisieren. Eine Sprechblase in der unteren rechten Ecke zeigt an, dass die Datei offline ist.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Sobald der Browser oder die Browser-Einstellungen aktualisiert wurden, kehren die Working Papers-Dateien in ihren Online-Status zurück, wenn sie mit dem Internet verbunden sind. Sie müssen sich möglicherweise bei Caseware Cloud anmelden, wenn Ihre Firmeneinstellungen so konfiguriert sind, dass Sie sich täglich bei Caseware Cloud anmelden müssen.</p>
+        <h2>Kompatibilität mit Internet-Browsern</h2>
+        <p>Gemäß unseren <a href="../Getting-Started/Supported-software-and-hardware.htm">Systemanforderungen</a> unterstützt Caseware Cloud die folgenden Browser:</p>
+        <ul>
+            <li>Google Chrome (empfohlen)</li>
+            <li>Mozilla Firefox</li>
+            <li>Microsoft Edge</li>
+        </ul>
+        <p>Prüfen Sie mit <a href="https://www.ssllabs.com/ssltest/viewMyClient.html">diesem Tool</a>, ob Ihr Browser TLS 1.2 oder höher unterstützt. Wenn der Browser aktualisiert werden muss (d. h. er zeigt nicht 1.2 oder höher an), finden Sie auf <a href="https://knowledge.digicert.com/generalinformation/INFO3297.html">dieser Website</a> Schritte, um TLS 1.2 oder höher zu aktivieren.</p>
+        <p>Beachten Sie die nachstehenden Kompatibilitätsrichtlinien:</p>
+        <table class="table">
+            <col style="width: 25%;" />
+            <col style="width: 75%;" />
+            <tbody>
+                <tr>
+                    <th>
+                        <p>Browser</p>
+                    </th>
+                    <th>
+                        <p>Hinweise zur Kompatibilität</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Google Chrome 38 und höher</td>
+                    <td>Kompatibel mit TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Google Chrome 30 bis 37</td>
+                    <td>
+                        <p>Kompatibel mit folgenden Betriebssystemen:</p>
+                        <ul>
+                            <li>Windows XP SP3, Vista oder aktueller (Desktop),</li>
+                            <li>OS X 10.6 (Snow Leopard) oder aktueller (Desktop) oder</li>
+                            <li>Android 2.3 (Gingerbread) oder aktueller (mobil)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Google Chrome 29 und älter</td>
+                    <td>NICHT KOMPATIBEL MIT TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Firefox 27 und höher</td>
+                    <td>Standardmäßig kompatibel mit TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Firefox 24 bis 26</td>
+                    <td>
+                        <p>Kompatibel, aber nicht standardmäßig</p>
+                        <p>Verwenden Sie about:config, um TLS 1.1 oder TLS 1.2 zu aktivieren, indem Sie den Konfigurationswert security.tls.version.max auf 2 für TLS 1.1 oder 3 für TLS 1.2 aktualisieren.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Firefox 23 und niedriger</td>
+                    <td>NICHT KOMPATIBEL MIT TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Edge</td>
+                    <td>
+                        <p>Standardmäßig kompatibel mit TLS 1.2.</p>
+                        <p>Nicht offiziell von Caseware Cloud unterstützt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Android 5.0 (Lollipop) und höher</td>
+                    <td>Kompatibel mit TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Android 4.4 (KitKat) bis 4.4.4</td>
+                    <td>Möglicherweise kompatibel mit TLS 1.2 oder höher. Einige Geräte mit Android 4.4.x unterstützen TLS 1.2 möglicherweise nicht</td>
+                </tr>
+                <tr>
+                    <td>Android 4.3 (Jelly Bean) und niedriger</td>
+                    <td>NICHT KOMPATIBEL MIT TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Desktop Safari Version 7 und höher für OS X 10.9 (Mavericks) und höher</td>
+                    <td>Standardmäßig kompatibel mit TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Desktop Safari Version 6 und niedriger für OS X 10.8 (Mountain Lion) und niedriger</td>
+                    <td>Nicht kompatibel mit TLS 1.1 oder höherer Verschlüsselung</td>
+                </tr>
+                <tr>
+                    <td>Mobile Safari Versionen 5 und höher für iOS 5 und höher</td>
+                    <td>Standardmäßig kompatibel mit TLS 1.2</td>
+                </tr>
+                <tr>
+                    <td>Mobile Safari für iOS 4 und niedriger</td>
+                    <td>NICHT KOMPATIBEL MIT TLS 1.2</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

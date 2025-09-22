@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Application Security Tooling</h1>
+        <h2>CodeQL</h2>
+        <p>CodeQL is a static analysis tool developed by GitHub. It treats code as data and allows querying data flow patterns<MadCap:footnote style="mc-footnote-position: page;">https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning-with-codeql</MadCap:footnote> to detect the most common flaws based on the Common Weakness Enumeration, as well as some framework-specific vulnerabilities. We use the Security Extended query pack, and scans happen on every Pull Request.</p>
+        <p>Due to some technical limitations specific to Working Papers, CodeQL is used to scan the Server component (Smart Sync), but the desktop application currently is Scanned with Semgrep, while the aforementioned technical limitations are addressed by GitHub.</p>
+        <h2>Semgrep</h2>
+        <p>Semgrep is a fast, open-source static analysis tool for finding bugs, detecting vulnerabilities in third-party dependencies, and enforcing code standards<MadCap:footnote style="mc-footnote-position: page;">https://semgrep.dev/</MadCap:footnote>. We use default presets, and scans happen on every Pull Request. Semgrep is used to scan both the desktop and server components.</p>
+        <h2>Kics</h2>
+        <p>Kics is an open-source solution for static code analysis of Infrastructure as Code<MadCap:footnote style="mc-footnote-position: page;">https://kics.io/</MadCap:footnote>. We use default presets, and the scan happens on every Pull Request.</p>
+        <h2>Dependabot</h2>
+        <p>Dependabot is a tool that scans for known security vulnerabilities in third-party dependencies in Github. The development teams’ workflow includes triaging these findings on pull requests, while the Application Security team assists with interpretation and explanations as required for clarity.</p>
+        <h2>Secret scanning</h2>
+        <p>GitHub Advanced Security includes a Secrets scanner that prevents secrets from being introduced into our code base. We have Secrets Scanning enabled for all products with enforcement, so code cannot be approved if it contains secrets unless a developer explicitly whitelists that instance for a specific requirement. The Application Security team reviews all whitelisted secrets to make sure there are no impacts to confidentiality or sensitive information.</p>
+        <h2>Veracode Static Analysis - Pipeline scan (deprecated in December 2022)</h2>
+        <p>Veracode was previously used as a SAST scanner for this application. No new analysis has been performed on the application since December 2022, but the historical results are included in the report. Our methodology, process and tooling described with GitHub Advanced Security has been in place for Caseware Cloud since November 2021.</p>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/Auto.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Dépannage de Caseware Cloud Connector</h1>
+        <p>Cette section présente les solutions possibles aux problèmes courants que les utilisateurs peuvent rencontrer lors de l&apos;utilisation de Caseware Cloud Connector.</p>
+        <h2>Le volet Cloud Connector est vide</h2>
+        <p>Il y a plusieurs raisons pour lesquelles le contenu du volet Cloud Connector ne s&apos;affiche pas :</p>
+        <ul>
+            <li>
+                <p>Temps de chargement des pages</p>
+                <p>Il se peut que vous deviez parfois attendre plus longtemps que d&apos;habitude pour que la page se charge.</p>
+            </li>
+            <li>
+                <p>Lorsque de nouvelles mises à jour sont publiées pour Cloud Connector, le complément n&apos;est pas toujours mis à jour immédiatement. Complete the following steps to resolve the issue:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Dans la barre d&apos;outils <b>Accueil de</b> votre document Excel, sélectionnez <b>Compléments</b> | <b>Autres compléments</b> | <b>Mes compléments</b>.</p>
+                    </li>
+                    <li>
+                        <p>Dans la boîte de dialogue, sélectionnez <b>Modifier</b>.</p>
+                    </li>
+                    <li>
+                        <p>Fermez et rouvrez Excel.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Un bogue connu d&apos;Excel qui empêche le chargement du volet</p>
+                <p>Si le volet ne se charge toujours pas, sélectionnez le menu déroulant Connecteur cloud et choisissez <b>Redimensionner</b>.</p>
+                <p><img src="../../Resources/Images/cloud-connector-resize.png" alt="L&apos;option Redimensionner dans le menu déroulant Connecteur cloud." /></p>
+            </li>
+            <li>
+                <p>Une erreur d&apos;exécution qui empêche le chargement du volet</p>
+                <p>Si les conseils de dépannage précédents ne permettent pas de résoudre le problème, suivez les étapes suivantes avant de contacter notre équipe d&apos;assistance.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Cliquez avec le bouton droit de la souris sur le volet et sélectionnez <b>Inspecter</b>. La fenêtre des outils de développement s&apos;ouvre.</li>
+                    <li>Sélectionnez l&apos;onglet <b>Console</b> en haut de la fenêtre.</li>
+                    <li>Faites une capture d&apos;écran du contenu de l&apos;onglet <b>Console</b> et envoyez-la à notre équipe d&apos;assistance pour l&apos;aider à identifier et à résoudre le problème.</li>
+                </ol>
+            </li>
+        </ul>
+        <h2>Message d&apos;entreprise non valide</h2>
+        <p>Si vous recevez un message d&apos;entreprise invalide, il se peut que vous ayez installé la mauvaise version de l&apos;add-in Caseware Cloud Connector.</p>
+        <p><b>Pour confirmer quelle version du complément est installée :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez le menu déroulant en haut du volet Cloud Connector et sélectionnez <b>Security Info.</b></p>
+            </li>
+            <li>
+                <p>Si l&apos;URL contient &quot;cwcloudpartner&quot;, la version installée est incorrecte.</p>
+                <p><img src="../../Resources/Images/cloud-connector-partner-url.png" alt="La boîte de dialogue Informations sur la sécurité." /></p>
+            </li>
+        </ol>
+        <p><b>Pour désinstaller le complément :</b></p>
+        <ol>
+            <li>
+                <p>Sur le ruban Excel, sélectionnez <b>Mes compléments</b> dans l&apos;onglet <b>Insertion</b> .</p>
+            </li>
+            <li>
+                <p>Sélectionnez Caseware Cloud Connector, puis <b>Supprimer</b>.</p>
+            </li>
+        </ol>
+        <p>Pour réinstaller le complément, voir <a href="How-to-get-started-with-Cloud-Connector.htm">Démarrer avec Caseware Cloud Connector</a>.</p>
+        <h2>Plusieurs versions de Cloud Connector installées</h2>
+        <p>Si vous avez plusieurs versions de Caseware Cloud Connector installées, Cloud Connector ne fonctionnera pas comme prévu.</p>
+        <p>Pour confirmer le nombre de versions de Cloud Connector que vous avez installées, sélectionnez <b>Mes compléments</b> dans l&apos;onglet <b>Insertion</b> .</p>
+        <p><img src="../../Resources/Images/cloud-connector-addins.png" alt="L&apos;onglet Insertion d&apos;un fichier Excel." /></p>
+        <p>Si plusieurs compléments Cloud Connector sont installés, désinstallez-les.</p>
+        <p><b>Pour désinstaller le complément :</b></p>
+        <ol>
+            <li>
+                <p>Sélectionnez <b>Mes compléments</b> dans l&apos;onglet <b>Insertion</b> .</p>
+            </li>
+            <li>
+                <p>Sélectionnez Caseware Cloud Connector, puis <b>Supprimer</b>.</p>
+            </li>
+        </ol>
+        <p>Après avoir désinstallé les compléments, copiez vos feuilles dans un nouveau classeur Excel et téléchargez-le à nouveau dans votre dossier d&apos;engagement pour remplacer l&apos;ancien fichier. Vous pouvez ensuite réinstaller la version correcte de Cloud Connector. Pour plus d&apos;informations, voir <a href="How-to-get-started-with-Cloud-Connector.htm">Démarrer avec Caseware Cloud Connector</a>.</p>
+        <h2>Dépannage général</h2>
+        <p>Pour les problèmes généraux qui ne sont pas traités dans les sections précédentes, essayez de vider votre cache et de réinstaller le complément.</p>
+        <p style="font-weight: bold;">Pour désinstaller le complément :</p>
+        <ol>
+            <li>
+                <p>Sur le ruban Excel, sélectionnez <b>Mes compléments</b> dans l&apos;onglet <b>Insertion</b> .</p>
+            </li>
+            <li>
+                <p>Sélectionnez Caseware Cloud Connector, puis <b>Supprimer</b>.</p>
+            </li>
+            <li>
+                <p>Effacez la mémoire cache d&apos;Excel. Pour plus d&apos;informations, voir <a href="https://learn.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache">Vider le cache de l&apos;Office.</a></p>
+            </li>
+        </ol>
+        <p>Vous pouvez ensuite réinstaller la version correcte de Cloud Connector. Pour plus d&apos;informations, voir <a href="How-to-get-started-with-Cloud-Connector.htm">Démarrer avec Caseware Cloud Connector</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:searchable="False" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>Selección de la muestra</h1>
+        <p>La selección del muestreo es el proceso de crear un subconjunto del total de transacciones disponibles para analizar los datos y extraer conclusiones. Si la selección de muestras está activada en su producto, la opción <b>Selección de</b> muestras está disponible en la pestaña <b>Transacciones</b> de la página <b>Datos</b> . <a href="../File-Preparation/Import-clients-transactions-from-a-CSV-or-Excel-file.htm">Las transacciones de</a> sus clientes se convierten en la población a partir de la cual puede generar una muestra.</p>
+        <p><img src="../../Resources/Images/sample-selection.png" style="width: 842px;height: 293px;" alt="La opción Selección de muestras de la pestaña Transacciones de la página Datos." /></p>
+        <p>Puede elegir entre cuatro métodos de selección de muestras:</p>
+        <ul>
+            <li>
+                <p><b>Aleatorio</b> - Las transacciones se seleccionan aleatoriamente.</p>
+            </li>
+            <li>
+                <p><b>Sistemático</b> - Las transacciones se seleccionan a partir de un punto de partida aleatorio pero con un intervalo fijo y periódico. El intervalo viene determinado por el tamaño total de la población dividido por el tamaño de la muestra.</p>
+            </li>
+            <li>
+                <p><b>Unidad monetaria</b> - Las transacciones se seleccionan a partir de un punto de partida aleatorio pero basado en un intervalo de importes. El intervalo viene determinado por la cantidad absoluta de la población dividida por el tamaño de la muestra.</p>
+            </li>
+            <li>
+                <p><b>Manual</b> - Las transacciones se seleccionan manualmente.</p>
+            </li>
+        </ul>
+        <h2>Generar una muestra utilizando el método Aleatorio</h2>
+        <p>El método Aleatorio genera una muestra basada en una selección aleatoria de transacciones.</p>
+        <p><b>Para generar una muestra utilizando el método Aleatorio:</b></p>
+        <ol>
+            <li>
+                <p>En la pestaña <b>Transacciones</b> de la página <b>Datos</b> , seleccione <b>Selección de muestras</b>.</p>
+            </li>
+            <li>
+                <p>Seleccione el método <b>Aleatorio</b> .</p>
+                <p><img src="../../Resources/Images/sample-random.png" alt="Seleccione el método Aleatorio." /></p>
+            </li>
+            <li>
+                <p>Introduzca el <b>Tamaño de la muestra</b> o el <b>Porcentaje</b>deseado.</p>
+                <p>Puede especificar un valor hasta 1000 o 100%.</p>
+            </li>
+            <li>
+                <p>Opcionalmente, introduzca un <b>Umbral de cantidad alta</b> si desea incluir determinadas cantidades altas en el resultado de la selección de muestras.</p>
+                <p>Por ejemplo, si introduce un umbral de importe alto de 500 $, las transacciones mayores o iguales a (&gt;=) 500 $ (hasta un máximo de 1.000 transacciones) se excluirán de la población objeto de muestreo y se añadirán al resultado de la selección de la muestra.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>GENERAR</b>.</p>
+                <p class="note inline"><b>Nota:</b> Si ha introducido un <b>umbral de importe Alto</b>, el icono de estrella (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) aparece junto a las filas que se han incluido en la muestra debido al umbral.</p>
+                <p><img src="../../Resources/Images/sample-high-value-threshold.png" alt="Las transacciones con importes elevados (basados en un umbral de 10) se han incluido en el resultado de la selección de muestras marcado con el icono de la estrella." /></p>
+            </li>
+        </ol>
+        <h2>Generar una muestra utilizando el método Sistemático</h2>
+        <p>El método Sistemático genera una muestra basada en:</p>
+        <ul>
+            <li>
+                <p>Intervalo periódico fijo determinado dividiendo el número de transacciones totales de la población por el número de transacciones del tamaño de la muestra</p>
+            </li>
+            <li>
+                <p>Un punto de partida aleatorio que es una fila entre uno y el valor del intervalo</p>
+            </li>
+        </ul>
+        <p>Por ejemplo, si hay 500 transacciones en la población y el tamaño de la muestra es 50, el intervalo es 500/50 = 10 y el punto de partida es una fila aleatoria entre las filas uno y diez. Si la primera fila seleccionada es la 2, la siguiente será la 12, luego la 22 y así sucesivamente hasta el final de la población.</p>
+        <p><b>Generar una muestra utilizando el método Sistemático:</b></p>
+        <ol>
+            <li>
+                <p>En la pestaña <b>Transacciones</b> de la página <b>Datos</b> , seleccione <b>Selección de muestras</b>.</p>
+            </li>
+            <li>
+                <p>Seleccione el método <b>Sistemático</b> .</p>
+                <p><img src="../../Resources/Images/sample-systematic.png" alt="Seleccione el método Sistemático." /></p>
+            </li>
+            <li>
+                <p>Especifique el <b>Tamaño de la muestra</b> deseado.</p>
+                <p>Puede especificar un valor hasta 1000. El intervalo periódico fijo se calcula dividiendo el tamaño de la población por el tamaño de la muestra.</p>
+            </li>
+            <li>
+                <p>Opcionalmente, introduzca un <b>Umbral de cantidad alta</b> si desea incluir determinadas cantidades altas en el resultado de la selección de muestras.</p>
+                <p>Por ejemplo, si introduce un umbral de importe alto de 500 $, las transacciones mayores o iguales a (&gt;=) 500 $ (hasta un máximo de 1.000 transacciones) se excluyen de la población y se añaden al resultado de la selección de la muestra.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>GENERAR</b>.</p>
+                <p class="note inline"><b>Nota:</b> Si ha introducido un <b>umbral de importe Alto</b>, el icono de estrella (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) aparece junto a las filas que se han incluido en la muestra debido al umbral.</p>
+            </li>
+        </ol>
+        <h2>Generar una muestra utilizando el método de la Unidad Monetaria</h2>
+        <p>El método de la Unidad Monetaria genera una muestra basada en:</p>
+        <ul>
+            <li>
+                <p>Un intervalo de cantidad determinado dividiendo la cantidad absoluta de la población por el tamaño de la muestra</p>
+            </li>
+            <li>
+                <p>Un importe inicial aleatorio que sea un valor comprendido entre 1 $ y el importe del intervalo</p>
+            </li>
+            <li>
+                <p>Un punto de partida que es la primera fila de la población con un saldo absoluto acumulado mayor o igual que la cantidad inicial.</p>
+            </li>
+            <li>
+                <p>Las filas seleccionadas a continuación son aquellas cuyos saldos absolutos acumulados son iguales o superiores al importe del intervalo más el importe de la fila seleccionada anteriormente</p>
+            </li>
+        </ul>
+        <p>En este método, cada dólar individual de la población se considera una unidad de muestreo, por lo que las transacciones con un valor más alto tienen un valor proporcionalmente más alto de ser seleccionadas. Las transacciones pueden incluirse varias veces en la selección si los importes de las transacciones son superiores al importe del intervalo.</p>
+        <p>Por ejemplo, si tiene una población con un importe absoluto total de 300.000 $ e introduce un tamaño de muestra de 100, entonces el intervalo de importe es 300000/100 = 3000 $. La cantidad inicial es una cantidad aleatoria entre $1 y $3000. El punto de partida es la primera fila de la población con un saldo absoluto acumulado mayor o igual al importe inicial. Supongamos que el importe inicial seleccionado es de $2125 y que la fila 1 tiene un saldo de $500 y la fila 2 tiene un saldo absoluto acumulado de $2625. La primera fila seleccionada en este caso es la fila 2. La siguiente fila seleccionada es la fila con un saldo absoluto acumulado mayor o igual a $5125 ($2125 + $3000) y así sucesivamente hasta el final de la población.</p>
+        <p>Recuerde que las transacciones pueden incluirse varias veces en la selección. Digamos que la segunda fila seleccionada tiene un saldo absoluto acumulado de 10.250 $. La siguiente línea seleccionada después de esa es la línea con un saldo absoluto acumulado mayor o igual a $8125 ($5125 + $3000). Dado que la fila seleccionada actualmente cumple los criterios de selección, la operación se incluye de nuevo en la selección. Es decir, la fila con el saldo absoluto acumulado de 10.250 $ se selecciona para los intervalos de 512 $ y 8125 $.</p>
+        <p>La columna <b>Intervalo de ocurrencia</b> indica cuántas veces se ha seleccionado una transacción.</p>
+        <p><img src="../../Resources/Images/sampling-interval-occurence.png" alt="La columna Ocurrencia de intervalos." /></p>
+        <p><b>Para generar una muestra utilizando el método de la Unidad Monetaria:</b></p>
+        <ol>
+            <li>
+                <p>En la pestaña <b>Transacciones</b> de la página <b>Datos</b> , seleccione <b>Selección de muestras</b>.</p>
+            </li>
+            <li>
+                <p>Seleccione el método de <b>Unidades monetarias</b>.</p>
+                <p><img src="../../Resources/Images/sample-monetary-unit.png" alt="Seleccione el método de Unidades monetarias." /></p>
+            </li>
+            <li>
+                <p>Especifique el <b>Tamaño de la muestra</b> deseado.</p>
+                <p>Puede especificar un valor hasta 1000. La cantidad se calcula dividiendo la cantidad absoluta de la población por el tamaño de la muestra.</p>
+            </li>
+            <li>
+                <p>Opcionalmente, introduzca un <b>Umbral de cantidad alta</b> si desea incluir determinadas cantidades altas en el resultado de la selección de muestras.</p>
+                <p>Por ejemplo, si introduce un umbral de importe alto de 500 $, las transacciones mayores o iguales a (&gt;=) 500 $ (hasta un máximo de 1.000 transacciones) se excluyen de la población y se añaden al resultado de la selección de la muestra.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>GENERAR</b>.</p>
+                <p class="note inline"><b>Nota:</b> Si ha introducido un <b>umbral de importe Alto</b>, el icono de estrella (<img src="../../Resources/Images/icon-high-amount-star.png" style="vertical-align: text-bottom;" />) aparece junto a las filas que se han incluido en la muestra debido al umbral.</p>
+            </li>
+        </ol>
+        <h2>Generar una muestra utilizando el método Manual</h2>
+        <p>El método Manual genera una muestra basada en la selección manual de transacciones.</p>
+        <p><b>Para generar una muestra utilizando el método Manual:</b></p>
+        <ol>
+            <li>
+                <p>En la pestaña <b>Transacciones</b> de la página <b>Datos</b> , seleccione <b>Selección de muestras</b>.</p>
+            </li>
+            <li>
+                <p>Seleccione el método <b>Manual</b> .</p>
+                <p><img src="../../Resources/Images/sample-manual.png" alt="Seleccione el método Manual." /></p>
+            </li>
+            <li>
+                <p>En la lista de transacciones, seleccione la casilla de verificación de cada transacción que desee incluir en la muestra.</p>
+                <p><img src="../../Resources/Images/sample-manual-selection.png" alt="Seleccione la casilla de verificación de una transacción para incluirla en la muestra." /></p>
+                <p>Puede seleccionar la columna <b>Fecha de contabilización</b> o <b>Importe</b> para ordenar la lista por fecha de contabilización o importe a medida que realiza sus selecciones. Una flecha aparece junto a la columna para indicar que la lista está ordenada de forma ascendente (<img src="../../Resources/Images/icon-sample-filter-ascend.png" style="vertical-align: text-bottom;" />) o descendente (<img src="../../Resources/Images/icon-sample-filter-descend.png" style="vertical-align: text-bottom;" />). Tenga en cuenta que sus selecciones no se borran si lo ordena. Para borrar sus selecciones, seleccione el botón <b>Borrar selección</b> .</p>
+            </li>
+        </ol>
+        <h2>Exportar una muestra</h2>
+        <p>Después de generar una muestra de datos, puede exportarla a un archivo CSV o copiarla en el portapapeles.</p>
+        <p><b>Para exportar una muestra:</b></p>
+        <ol>
+            <li>
+                <p>Generar una muestra.</p>
+            </li>
+            <li>
+                <p>Seleccione el botón <b>EXPORT</b>.</p>
+                <p><img src="../../Resources/Images/sample-export.png" alt="Seleccione el botón EXPORTAR después de generar una muestra." /></p>
+            </li>
+            <li>
+                <p>En el cuadro de diálogo Exportación de muestras, seleccione el método de exportación.</p>
+                <p>Si selecciona <b>Exportar a CSV</b>, introduzca un nombre para el archivo CSV.</p>
+                <p><img src="../../Resources/Images/sample-export-dialog.png" alt="Seleccione un método de exportación en el cuadro de diálogo Exportación de muestras. Si selecciona Exportar a CSV, introduzca un nombre para el archivo." /></p>
+            </li>
+            <li>
+                <p>Seleccione la <b>Naturaleza de la prueba</b> en el menú desplegable.</p>
+            </li>
+            <li>
+                <p>Seleccione <b>CONTINUAR</b>.</p>
+                <p>La muestra se exporta como archivo CSV o se copia en el portapapeles en función de su selección.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p><b>Standaard gedrag toepassen</b></p>
+                <p>Merk op dat het standaardgedrag verschilt op basis van het kolomtype.</p>
+                <p>Voor invoerrijen:</p>
+            </li>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Geef deze rij altijd weer in de jaarrekening.</p>
+                </li>
+                <li>
+                    <p>Geef deze rij weer in het PDF-afdrukexemplaar van het document als de rij een saldo heeft dat niet gelijk is aan nul (d.w.z. de cel is niet leeg en de waarde is niet gelijk aan nul) - anders verbergt u de rij in het PDF-afdrukexemplaar.</p>
+                </li>
+            </ul>
+            <p>Voor groepsrijen (proefbalansgroep en aangepaste groep <b>Totaal</b> of <b>Titel</b>):</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Geef deze rij altijd weer in de jaarrekening.</p>
+                </li>
+                <li>
+                    <p>Geef deze rij weer in de afdrukkopie van de PDF van het document als de groep meer dan één rekening bevat met een saldo dat niet gelijk is aan nul (d.w.z. de cellen zijn niet leeg en hun waarden zijn niet gelijk aan nul) - anders verbergt u deze rij in de afdrukkopie van de PDF.</p>
+                </li>
+            </ul>
+            <p>Alternatieve proefbalanskolom</p>
+            <ul style="list-style-type: circle;">
+                <li>
+                    <p>Geef deze rij weer in de jaarrekening en in het PDF-afdrukexemplaar van het document als de saldi voor het huidige of voorgaande jaar bestaan - verberg deze rij anders in beide.</p>
+                </li>
+            </ul>
+            <li>
+                <p><b>Deze rij altijd weergeven</b></p>
+                <p>De rij is altijd verborgen in de jaarrekening en in de PDF-printkopie.</p>
+            </li>
+            <li>
+                <p><b>Verberg deze rij altijd</b></p>
+                <p>De rij is altijd verborgen in de jaarrekening en in de PDF-printkopie.</p>
+                <p class="note inline"><b>Let op:</b> Deze optie is alleen beschikbaar voor invoerrijen en groepsrijen (groepsrijen Proefbalans, Aangepaste groep <b>Titel</b> en <b>Totaalrijen</b> ).</p>
+            </li>
+        </ul>
+    </body>
+</html>
