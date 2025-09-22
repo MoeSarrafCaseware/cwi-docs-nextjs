@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/components/LanguageProvider';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 // TypeScript interfaces for the sidebar data
 interface NavigationItem {
@@ -30,6 +30,7 @@ interface SidebarProps {
 export default function TestSidebar({ data }: SidebarProps) {
     const { currentLanguage, currentRegion } = useLanguage();
     const router = useRouter();
+    const pathname = usePathname();
     const [navigationSections, setNavigationSections] = useState<NavigationSection[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
@@ -74,6 +75,57 @@ export default function TestSidebar({ data }: SidebarProps) {
         loadNavigation();
     }, [currentLanguage, currentRegion]);
 
+    // Detect active item and expand parent items based on current pathname
+    useEffect(() => {
+        if (navigationSections.length === 0) return;
+
+        const findActiveItemAndExpandParents = () => {
+            const newExpandedItems = new Set<string>();
+            let foundActiveItem: string | null = null;
+
+            // Extract the href path from the current pathname
+            // For /test/docs/en/Content/Explore/Whats-New/Whats-new-Cloud.htm
+            // We want to find the item with href="/en/Content/Explore/Whats-New/Whats-new-Cloud.htm"
+            const pathSegments = pathname.split('/');
+            const testDocsIndex = pathSegments.findIndex(segment => segment === 'test');
+            
+            if (testDocsIndex !== -1 && pathSegments[testDocsIndex + 1] === 'docs') {
+                // Reconstruct the href path starting from the language segment
+                const hrefPath = '/' + pathSegments.slice(testDocsIndex + 2).join('/');
+                
+                // Find the matching item in navigation
+                const findItem = (items: NavigationItem[], parentPath = ""): boolean => {
+                    for (const item of items) {
+                        if (item.href === hrefPath) {
+                            foundActiveItem = item.name;
+                            return true;
+                        }
+                        if (item.children) {
+                            if (findItem(item.children, item.href || parentPath)) {
+                                newExpandedItems.add(item.name);
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                };
+
+                for (const section of navigationSections) {
+                    if (findItem(section.items)) {
+                        break;
+                    }
+                }
+            }
+
+            setActiveItem(foundActiveItem);
+            setExpandedItems(newExpandedItems);
+        };
+
+        // Add a small delay to ensure navigation data is fully loaded
+        const timeoutId = setTimeout(findActiveItemAndExpandParents, 100);
+        return () => clearTimeout(timeoutId);
+    }, [pathname, navigationSections]);
+
     const toggleExpanded = (itemName: string) => {
         const newExpanded = new Set(expandedItems);
         if (newExpanded.has(itemName)) {
@@ -111,14 +163,15 @@ export default function TestSidebar({ data }: SidebarProps) {
         }
     };
 
-    const renderNavigationItem = (item: NavigationItem, level: number = 0) => {
+    const renderNavigationItem = (item: NavigationItem, level: number = 0, parentPath: string = '', index: number = 0) => {
         const hasChildren = item.children && item.children.length > 0;
         const isExpanded = expandedItems.has(item.name);
         const isActive = activeItem === item.name;
         const isHovered = hoveredItem === item.name;
 
-        // Create unique key by combining language, region, and item name
-        const uniqueKey = `${currentLanguage}-${currentRegion}-${item.name}-${item.href || 'no-href'}`;
+        // Create unique key by combining language, region, item name, href, parent path, level, and index
+        // This ensures uniqueness even for items with the same name and no href
+        const uniqueKey = `${currentLanguage}-${currentRegion}-${parentPath}-${item.name}-${item.href || 'no-href'}-${level}-${index}`;
 
         return (
             <div key={uniqueKey} className="relative">
@@ -171,7 +224,7 @@ export default function TestSidebar({ data }: SidebarProps) {
                     <div className="ml-4 relative">
                         {/* Continuous vertical line for all children - spans entire nested section */}
                         <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-cyan-400/50"></div>
-                        {item.children!.map((child) => renderNavigationItem(child, level + 1))}
+                        {item.children!.map((child, childIndex) => renderNavigationItem(child, level + 1, `${parentPath}-${item.name}`, childIndex))}
                     </div>
                 )}
             </div>
@@ -229,7 +282,7 @@ export default function TestSidebar({ data }: SidebarProps) {
                             {section.title}
                         </h2>
                         <div className="space-y-0">
-                            {section.items.map((item) => renderNavigationItem(item))}
+                            {section.items.map((item, index) => renderNavigationItem(item, 0, section.id, index))}
                         </div>
                     </div>
                 ))}

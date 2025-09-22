@@ -18,13 +18,24 @@ export default function TestHeader() {
     setIsLanguageDropdownOpen(false);
     
     // Navigate to the equivalent page in the new language
-    if (pathname.startsWith('/docs/')) {
+    if (pathname.startsWith('/docs/') || pathname.startsWith('/test/docs/')) {
       const pathSegments = pathname.split('/');
       if (pathSegments.length >= 3) {
-        // Replace the language segment with the new language
-        pathSegments[2] = language;
-        const newPath = pathSegments.join('/');
-        router.push(newPath);
+        // Find the language segment index
+        let languageIndex = -1;
+        for (let i = 0; i < pathSegments.length; i++) {
+          if (pathSegments[i] === 'docs' && i + 1 < pathSegments.length) {
+            languageIndex = i + 1;
+            break;
+          }
+        }
+        
+        if (languageIndex !== -1) {
+          // Replace the language segment with the new language
+          pathSegments[languageIndex] = language;
+          const newPath = pathSegments.join('/');
+          router.push(newPath);
+        }
       }
     }
   };

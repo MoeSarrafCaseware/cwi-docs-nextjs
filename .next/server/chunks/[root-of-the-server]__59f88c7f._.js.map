@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 67, "column": 0}, "map": {"version":3,"sources":["file:///Users/moe.sarraf/Documents/GitHub/cwi-docs-nextjs/src/app/api/languages/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\nimport fs from 'fs';\nimport path from 'path';\n\nexport async function GET() {\n  try {\n    const configPath = path.join(process.cwd(), 'src', 'content', 'language-config.json');\n    \n    if (!fs.existsSync(configPath)) {\n      return NextResponse.json({ error: 'Language configuration not found' }, { status: 404 });\n    }\n\n    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));\n    return NextResponse.json(config);\n  } catch (error) {\n    console.error('Error loading language configuration:', error);\n    return NextResponse.json({ error: 'Failed to load language configuration' }, { status: 500 });\n  }\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;AACA;;;;AAEO,eAAe;IACpB,IAAI;QACF,MAAM,aAAa,4GAAI,CAAC,IAAI,CAAC,QAAQ,GAAG,IAAI,OAAO,WAAW;QAE9D,IAAI,CAAC,wGAAE,CAAC,UAAU,CAAC,aAAa;YAC9B,OAAO,gJAAY,CAAC,IAAI,CAAC;gBAAE,OAAO;YAAmC,GAAG;gBAAE,QAAQ;YAAI;QACxF;QAEA,MAAM,SAAS,KAAK,KAAK,CAAC,wGAAE,CAAC,YAAY,CAAC,YAAY;QACtD,OAAO,gJAAY,CAAC,IAAI,CAAC;IAC3B,EAAE,OAAO,OAAO;QACd,QAAQ,KAAK,CAAC,yCAAyC;QACvD,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,OAAO;QAAwC,GAAG;YAAE,QAAQ;QAAI;IAC7F;AACF","debugId":null}}]
-}
