@@ -1,0 +1,168 @@
+/**
+ * Content API Route - R2 Version
+ * 
+ * This version fetches documentation from Cloudflare R2 instead of local files.
+ * 
+ * Setup:
+ * 1. Upload docs to R2 using: ./scripts/upload-to-r2.sh
+ * 2. Set R2_BUCKET_URL environment variable in Netlify
+ * 3. Rename this file from route-r2.ts.example to route.ts
+ * 4. Delete the old route.ts file
+ */
+
+import { NextRequest, NextResponse } from 'next/server';
+
+// R2 bucket URL from environment variables
+const R2_BUCKET_URL = process.env.R2_BUCKET_URL || process.env.NEXT_PUBLIC_R2_BUCKET_URL;
+
+// Fallback to local files if R2 URL not configured
+const USE_R2 = Boolean(R2_BUCKET_URL);
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const href = searchParams.get('href');
+
+    if (!href) {
+      return NextResponse.json(
+        { error: 'Missing href parameter' },
+        { status: 400 }
+      );
+    }
+
+    let content;
+
+    if (USE_R2) {
+      // Fetch from R2
+      content = await fetchFromR2(href);
+    } else {
+      // Fallback to local files (for development)
+      const { readHTMLFile } = await import('@/utils/htmlReader');
+      content = await readHTMLFile(href);
+    }
+
+    if (!content) {
+      return NextResponse.json(
+        { error: 'Content not found' },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json(content);
+  } catch (error) {
+    console.error('Error in content API:', error);
+    return NextResponse.json(
+      { error: 'Internal server error', details: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 500 }
+    );
+  }
+}
+
+/**
+ * Fetch content from Cloudflare R2
+ */
+async function fetchFromR2(href: string) {
+  if (!R2_BUCKET_URL) {
+    throw new Error('R2_BUCKET_URL not configured');
+  }
+
+  // Clean the href path
+  const cleanHref = href.startsWith('/') ? href.slice(1) : href;
+  const r2Url = `${R2_BUCKET_URL}/${cleanHref}`;
+
+  console.log(`Fetching from R2: ${r2Url}`);
+
+  try {
+    const response = await fetch(r2Url, {
+      // Add cache control for better performance
+      next: { revalidate: 3600 }, // Cache for 1 hour
+    });
+
+    if (!response.ok) {
+      console.error(`R2 fetch failed: ${response.status} ${response.statusText}`);
+      return null;
+    }
+
+    const htmlContent = await response.text();
+
+    // Parse the HTML content (simplified version)
+    return parseHTMLContent(htmlContent);
+  } catch (error) {
+    console.error('Error fetching from R2:', error);
+    return null;
+  }
+}
+
+/**
+ * Parse HTML content to extract title and body
+ * Simplified version without file system access for snippet processing
+ */
+function parseHTMLContent(htmlContent: string) {
+  // Extract title
+  const titleMatch = htmlContent.match(/<title[^>]*>(.*?)<\/title>/i) ||
+                    htmlContent.match(/<h1[^>]*>(.*?)<\/h1>/i);
+  const title = titleMatch ? cleanHTML(titleMatch[1]) : 'Untitled';
+
+  // Extract body content
+  const bodyMatch = htmlContent.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  let body = bodyMatch ? bodyMatch[1] : htmlContent;
+
+  // Clean the HTML
+  body = cleanHTMLContent(body);
+
+  return {
+    title,
+    content: body,
+    body: body
+  };
+}
+
+/**
+ * Clean HTML content
+ */
+function cleanHTMLContent(html: string): string {
+  // Remove script and style tags
+  html = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+  html = html.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+  
+  // Convert MadCap xref to links
+  html = html.replace(/<MadCap:xref href="([^"]+)">([^<]+)<\/MadCap:xref>/g, '<a href="$1" class="internal-link">$2</a>');
+  
+  // Remove MadCap snippets (can't process without file system)
+  html = html.replace(/<MadCap:snippetBlock[^>]*\/>/g, '');
+  html = html.replace(/<MadCap:snippetText[^>]*\/>/g, '');
+  
+  // Remove MadCap attributes
+  html = html.replace(/\s*MadCap:[^=]*="[^"]*"/gi, '');
+  html = html.replace(/\s*xmlns:[^=]*="[^"]*"/gi, '');
+  html = html.replace(/\s*data-mc-[^=]*="[^"]*"/gi, '');
+  
+  // Remove broken links
+  html = html.replace(/<a[^>]*>[\s\S]*?<\/a>/g, (match) => {
+    if (match.includes('href=""') || match.includes('href="#"')) {
+      return match.replace(/<a[^>]*>/, '<span>').replace(/<\/a>/, '</span>');
+    }
+    return match;
+  });
+  
+  // Fix relative image paths (convert to R2 URLs if available)
+  if (R2_BUCKET_URL) {
+    html = html.replace(/<img([^>]*)\ssrc="([^"]+)"/g, (match, attrs, src) => {
+      if (src.startsWith('http') || src.startsWith('//')) {
+        return match; // Already absolute
+      }
+      // Convert to R2 URL
+      const cleanSrc = src.startsWith('/') ? src.slice(1) : src;
+      return `<img${attrs} src="${R2_BUCKET_URL}/${cleanSrc}"`;
+    });
+  }
+  
+  return html;
+}
+
+/**
+ * Clean HTML text (remove tags)
+ */
+function cleanHTML(html: string): string {
+  return html.replace(/<[^>]*>/g, '').trim();
+}

@@ -30,8 +30,39 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+⚠️ **Important**: This project contains 859MB of documentation files. Standard deployment to Netlify will fail due to function size limits.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Quick Deployment Solutions
+
+**Option 1: Vercel (Fastest - 2 minutes)**
+```bash
+npx vercel --prod
+```
+
+**Option 2: Cloudflare R2 + Netlify (Free forever)**
+```bash
+./scripts/upload-to-r2.sh
+# Then follow steps in QUICK_START_FIX.md
+```
+
+**Option 3: Interactive Helper**
+```bash
+./scripts/deploy.sh
+```
+
+### Documentation
+
+- 📖 **[DEPLOYMENT_FIX_SUMMARY.md](./DEPLOYMENT_FIX_SUMMARY.md)** - Quick overview of all solutions
+- 📋 **[QUICK_START_FIX.md](./QUICK_START_FIX.md)** - Detailed step-by-step guides
+- 🔧 **[DEPLOYMENT_SOLUTION.md](./DEPLOYMENT_SOLUTION.md)** - Comprehensive technical details
+
+### Troubleshooting
+
+If you see this error on Netlify:
+```
+could not parse form file: http: request body too large
+```
+
+This means the serverless function bundle exceeds Netlify's limits. Follow one of the solutions above.
