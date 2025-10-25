@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "dev:stable": "next dev",
     "build": "next build --turbopack",
+    "build:netlify": "next build",
     "start": "next start",
     "lint": "eslint",
     "generate-nav": "npx tsx scripts/generate-navigation.tsx"
