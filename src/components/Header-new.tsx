@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useSearch } from "./SearchProvider-new";
+import { useSearch } from "./SearchProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
