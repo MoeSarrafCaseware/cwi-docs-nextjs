@@ -1,10 +1,10 @@
 "use client";
-import { createContext, useContext, useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import SearchModal from "./SearchModal";
+import { createContext, useContext, useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import SearchModal from './SearchModal';
 
 type SearchContextType = {
-  isOpen: boolean;
+  isSearchOpen: boolean;
   openSearch: () => void;
   closeSearch: () => void;
 };
@@ -12,22 +12,18 @@ type SearchContextType = {
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
 
-  const openSearch = () => setIsOpen(true);
-  const closeSearch = () => setIsOpen(false);
+  const openSearch = () => setIsSearchOpen(true);
+  const closeSearch = () => setIsSearchOpen(false);
 
-  // Handle ⌘K shortcut - only respond when NOT in /test route
+  // Handle Cmd+K shortcut
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Check for Cmd+K (Mac) or Ctrl+K (Windows/Linux)
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        // Only respond if we're NOT in the /test route
-        if (!pathname.startsWith('/test')) {
-          e.preventDefault();
-          setIsOpen(prev => !prev);
-        }
+        e.preventDefault();
+        openSearch();
       }
     };
 
@@ -36,9 +32,9 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   return (
-    <SearchContext.Provider value={{ isOpen, openSearch, closeSearch }}>
+    <SearchContext.Provider value={{ isSearchOpen, openSearch, closeSearch }}>
       {children}
-      <SearchModal isOpen={isOpen} onClose={closeSearch} />
+      <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
     </SearchContext.Provider>
   );
 }

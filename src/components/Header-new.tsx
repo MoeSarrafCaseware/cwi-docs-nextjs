@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useTestSearch } from "./TestSearchProvider";
+import { useSearch } from "./SearchProvider-new";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
-export default function TestHeader() {
-  const { openSearch } = useTestSearch();
+export default function Header() {
+  const { openSearch } = useSearch();
   const { currentLanguage, currentRegion, availableLanguages, setLanguage, getLanguageDisplay } = useLanguage();
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ export default function TestHeader() {
     setIsLanguageDropdownOpen(false);
     
     // Navigate to the equivalent page in the new language
-    if (pathname.startsWith('/docs/') || pathname.startsWith('/test/docs/')) {
+    if (pathname.startsWith('/docs/')) {
       const pathSegments = pathname.split('/');
       if (pathSegments.length >= 3) {
         // Find the language segment index

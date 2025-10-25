@@ -1,327 +1,292 @@
-"use client";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { FaChevronDown } from "react-icons/fa6";
-import { useLanguage } from "./LanguageProvider";
+'use client';
 
-type NavigationItem = {
-  name: string;
-  href: string;
-  children?: NavigationItem[];
-};
+import { useState, useEffect } from 'react';
+import { useLanguage } from '@/components/LanguageProvider';
+import { useRouter, usePathname } from 'next/navigation';
 
-type NavigationSection = {
-  id: string;
-  title: string;
-  items: NavigationItem[];
-};
-
-type SidebarProps = {
-  itemPaddingClass?: string;
-  indicatorOffsetClass?: string; // e.g. 'left-3'
-  indicatorWidthClass?: string; // e.g. 'w-[2px]'
-};
-
-// Recursive component for rendering navigation items
-function NavigationItemComponent({ 
-  item, 
-  level = 0, 
-  pathname, 
-  expandedItems, 
-  setExpandedItems,
-  parentPath = ""
-}: {
-  item: NavigationItem;
-  level: number;
-  pathname: string;
-  expandedItems: Set<string>;
-  setExpandedItems: (items: Set<string>) => void;
-  parentPath?: string;
-}) {
-  // Use href field directly for navigation, fallback to name-based slug
-  const itemSlug = item.href ? item.href : item.name.toLowerCase().replace(/\s+/g, "-");
-  const itemPath = item.href ? `/docs${item.href}` : (parentPath ? `${parentPath}/${itemSlug}` : `/docs${itemSlug}`);
-  const hasChildren = item.children && item.children.length > 0;
-  const isExpanded = expandedItems.has(item.name);
-  
-  // Check if this item or any of its children are active
-  const isActive = (() => {
-    if (pathname === itemPath) return true;
-    if (hasChildren) {
-      const checkChildren = (children: NavigationItem[], currentParentPath: string): boolean => {
-        return children.some(child => {
-          const childSlug = child.href ? child.href : child.name.toLowerCase().replace(/\s+/g, "-");
-          const childPath = child.href ? `/docs${child.href}` : (currentParentPath ? `${currentParentPath}/${childSlug}` : `/docs${childSlug}`);
-          if (pathname === childPath) return true;
-          if (child.children) return checkChildren(child.children, childPath);
-          return false;
-        });
-      };
-      return checkChildren(item.children!, itemPath);
-    }
-    return false;
-  })();
-
-  const toggleExpanded = () => {
-    const newExpandedItems = new Set(expandedItems);
-    if (isExpanded) {
-      newExpandedItems.delete(item.name);
-    } else {
-      newExpandedItems.add(item.name);
-    }
-    setExpandedItems(newExpandedItems);
-  };
-
-  const marginLeft = level * 16; // 16px per level
-
-  return (
-    <li className="relative group">
-      <div className="flex items-center">
-        {hasChildren ? (
-          // Parent items with children are only expandable, not navigable
-          <div
-            className={`block px-3 py-2 text-sm transition-colors relative flex-1 cursor-pointer hover:bg-gray-800 ${
-              isActive
-                ? "text-white font-bold border-l border-blue-500 sidebar-active-item"
-                : "text-gray-300 hover:text-white"
-            }`}
-            style={{ marginLeft: `${marginLeft}px` }}
-            onClick={toggleExpanded}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleExpanded();
-              }
-            }}
-            aria-expanded={isExpanded}
-          >
-            {item.name}
-          </div>
-        ) : (
-          // Leaf items without children are navigable links
-          <Link
-            href={itemPath}
-            className={`block px-3 py-2 text-sm transition-colors relative flex-1 ${
-              isActive
-                ? "text-white font-bold border-l border-blue-500 sidebar-active-item"
-                : "text-gray-300 hover:text-white hover:border-l hover:border-red-500"
-            }`}
-            style={{ marginLeft: `${marginLeft}px` }}
-          >
-            {item.name}
-          </Link>
-        )}
-        {hasChildren && (
-          <button
-            className="p-1 text-gray-400 hover:text-white transition-transform"
-            onClick={toggleExpanded}
-            aria-expanded={isExpanded}
-          >
-            <FaChevronDown className={`${isExpanded ? "rotate-0" : "-rotate-90"} transform duration-200`} />
-          </button>
-        )}
-      </div>
-      {hasChildren && isExpanded && (
-        <ul className="space-y-1.5  ml-2">
-          {item.children!.map((child, index) => (
-            <NavigationItemComponent
-              key={index}
-              item={child}
-              level={level + 1}
-              pathname={pathname}
-              expandedItems={expandedItems}
-              setExpandedItems={setExpandedItems}
-              parentPath={itemPath}
-            />
-          ))}
-        </ul>
-      )}
-    </li>
-  );
+// TypeScript interfaces for the sidebar data
+interface NavigationItem {
+    name: string;
+    href: string | null;
+    children?: NavigationItem[];
 }
 
-export default function Sidebar({
-  itemPaddingClass: _itemPaddingClass = "py-2",
-  indicatorOffsetClass: _indicatorOffsetClass = "left-3",
-  indicatorWidthClass: _indicatorWidthClass = "w-[2px]",
-}: SidebarProps) {
-  const { currentLanguage, currentRegion, setLanguage: _setLanguage } = useLanguage();
-  const [navigationSections, setNavigationSections] = useState<NavigationSection[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const pathname = usePathname();
+interface NavigationSection {
+    id: string;
+    title: string;
+    items: NavigationItem[];
+}
 
-  // Note: Removed automatic language detection from pathname
-  // Language selection should be controlled by the user via the header dropdown
-  // The sidebar will only respond to language changes, not initiate them
+interface SidebarData {
+    language: string;
+    region: string;
+    navigationSections: NavigationSection[];
+}
 
-  // Load navigation data for the current language
-  useEffect(() => {
-    const loadNavigation = async () => {
-      setIsLoading(true);
-      try {
-        // Try to load language-region specific navigation first
-        const response = await fetch(`/api/navigation/${currentLanguage}?region=${currentRegion}`);
-        if (response.ok) {
-          const data = await response.json();
-          setNavigationSections(data.navigationSections || []);
-        } else {
-          // Fallback to default navigation
-          const fallbackResponse = await fetch('/api/navigation');
-          if (fallbackResponse.ok) {
-            const fallbackData = await fallbackResponse.json();
-            setNavigationSections(fallbackData.navigationSections || []);
-          } else {
-            // No fallback - show empty navigation
-            setNavigationSections([]);
-          }
-        }
-      } catch (error) {
-        console.error('Failed to load navigation:', error);
-        // No fallback - show empty navigation
-        setNavigationSections([]);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+interface SidebarProps {
+    data?: SidebarData;
+}
 
-    loadNavigation();
-  }, [currentLanguage, currentRegion]);
-  
-  // Track which section id is expanded (accordion behavior)
-  const [expandedSectionId, setExpandedSectionId] = useState<string | null>(null);
-  
-  // Track which items are expanded (for nested items)
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  
-  // Find which section contains the current page and expand it after hydration
-  useEffect(() => {
-    const findCurrentSectionAndItems = () => {
-      const newExpandedItems = new Set<string>();
-      let currentSectionId: string | null = null;
+export default function Sidebar({ data: _data }: SidebarProps) {
+    const { currentLanguage, currentRegion } = useLanguage();
+    const router = useRouter();
+    const pathname = usePathname();
+    const [navigationSections, setNavigationSections] = useState<NavigationSection[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+    const [activeItem, setActiveItem] = useState<string | null>(null);
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-      for (const section of navigationSections) {
-        const findInItems = (items: NavigationItem[], parentPath = ""): boolean => {
-          for (const item of items) {
-            const itemSlug = item.href ? item.href : item.name.toLowerCase().replace(/\s+/g, "-");
-            const itemPath = item.href ? `/docs${item.href}` : (parentPath ? `${parentPath}/${itemSlug}` : `/docs${itemSlug}`);
+    // Load navigation data for the current language
+    useEffect(() => {
+        const loadNavigation = async () => {
+            setIsLoading(true);
+            // Clear state when language changes to prevent conflicts
+            setExpandedItems(new Set());
+            setActiveItem(null);
+            setHoveredItem(null);
             
-            if (pathname === itemPath) {
-              currentSectionId = section.id;
-              return true;
+            try {
+                // Try to load language-region specific navigation first
+                const response = await fetch(`/api/navigation/${currentLanguage}?region=${currentRegion}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setNavigationSections(data.navigationSections || []);
+                } else {
+                    // Fallback to default navigation
+                    const fallbackResponse = await fetch('/api/navigation');
+                    if (fallbackResponse.ok) {
+                        const fallbackData = await fallbackResponse.json();
+                        setNavigationSections(fallbackData.navigationSections || []);
+                    } else {
+                        // No fallback - show empty navigation
+                        setNavigationSections([]);
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load navigation:', error);
+                // No fallback - show empty navigation
+                setNavigationSections([]);
+            } finally {
+                setIsLoading(false);
             }
-            if (item.children) {
-              if (findInItems(item.children, itemPath)) {
-                newExpandedItems.add(item.name);
-                return true;
-              }
-            }
-          }
-          return false;
         };
 
-        if (findInItems(section.items)) {
-          break;
-        }
-      }
+        loadNavigation();
+    }, [currentLanguage, currentRegion]);
 
-      return { currentSectionId, newExpandedItems };
-    };
-    
-    const { currentSectionId, newExpandedItems } = findCurrentSectionAndItems();
-    if (currentSectionId) {
-      setExpandedSectionId(currentSectionId);
-    }
-    setExpandedItems(newExpandedItems);
+    // Detect active item and expand parent items based on current pathname
+    useEffect(() => {
+        if (navigationSections.length === 0) return;
 
-    // Auto-scroll to the active item after a short delay to allow for expansion
-    setTimeout(() => {
-      const activeItem = document.querySelector('.sidebar-active-item');
-      const sidebarContainer = document.querySelector('aside.w-64.bg-gray-900');
-      
-      if (activeItem && sidebarContainer) {
-        // Get the position of the active item relative to the sidebar container
-        const activeItemRect = activeItem.getBoundingClientRect();
-        const sidebarRect = sidebarContainer.getBoundingClientRect();
-        
-        // Calculate the scroll position needed to center the active item
-        const itemTop = activeItemRect.top - sidebarRect.top + sidebarContainer.scrollTop;
-        const itemHeight = activeItemRect.height;
-        const containerHeight = sidebarContainer.clientHeight;
-        
-        // Calculate the target scroll position to center the item
-        const targetScrollTop = itemTop - (containerHeight / 2) + (itemHeight / 2);
-        
-        // Smooth scroll within the sidebar container only
-        sidebarContainer.scrollTo({
-          top: Math.max(0, targetScrollTop),
-          behavior: 'smooth'
-        });
-      }
-    }, 100);
-  }, [pathname, navigationSections]);
+        const findActiveItemAndExpandParents = () => {
+            const newExpandedItems = new Set<string>();
+            let foundActiveItem: string | null = null;
 
-  if (isLoading) {
-    return (
-      <aside className="w-64 bg-gray-900 text-white overflow-y-auto h-[calc(100vh-4rem)] sticky top-16">
-        <nav className="p-4">
-          <div className="flex items-center justify-center h-32">
-            <div className="text-gray-400">Loading navigation...</div>
-          </div>
-        </nav>
-      </aside>
-    );
-  }
+            // Extract the href path from the current pathname
+            // For /docs/en/Content/Explore/Whats-New/Whats-new-Cloud.htm
+            // We want to find the item with href="/en/Content/Explore/Whats-New/Whats-new-Cloud.htm"
+            const pathSegments = pathname.split('/');
+            const docsIndex = pathSegments.findIndex(segment => segment === 'docs');
+            
+            if (docsIndex !== -1) {
+                // Reconstruct the href path starting from the language segment
+                const hrefPath = '/' + pathSegments.slice(docsIndex + 1).join('/');
+                
+                // Find the matching item in navigation
+                const findItem = (items: NavigationItem[], parentPath = ""): boolean => {
+                    for (const item of items) {
+                        if (item.href === hrefPath) {
+                            foundActiveItem = item.name;
+                            return true;
+                        }
+                        if (item.children) {
+                            if (findItem(item.children, item.href || parentPath)) {
+                                newExpandedItems.add(item.name);
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                };
 
-  return (
-    <aside className="w-64 bg-gray-900 text-white overflow-y-auto h-[calc(100vh-4rem)] sticky top-16">
-      <nav className="p-4">
-        {/* Documentation Sections */}
-        {navigationSections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="mb-6">
-            <div 
-              className="flex items-center justify-between cursor-pointer hover:bg-gray-800 px-2 py-1 transition-colors"
-              onClick={() =>
-                setExpandedSectionId(prev => (prev === section.id ? null : section.id))
-              }
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setExpandedSectionId(prev => (prev === section.id ? null : section.id));
+                for (const section of navigationSections) {
+                    if (findItem(section.items)) {
+                        break;
+                    }
                 }
-              }}
-              aria-expanded={expandedSectionId === section.id}
-              aria-controls={`section-list-${section.id}`}
-            >
-              <h3 id={`section-${section.id}`} className="text-xs font-semibold text-gray-400 uppercase tracking-wider my-2">
-                {section.title}
-              </h3>
-              <div className="my-2 text-gray-400 hover:text-white transition-transform">
-                <FaChevronDown className={`${expandedSectionId === section.id ? "rotate-0" : "-rotate-90"} transform duration-200`} />
-              </div>
+            }
+
+            setActiveItem(foundActiveItem);
+            setExpandedItems(newExpandedItems);
+        };
+
+        // Add a small delay to ensure navigation data is fully loaded
+        const timeoutId = setTimeout(findActiveItemAndExpandParents, 100);
+        return () => clearTimeout(timeoutId);
+    }, [pathname, navigationSections]);
+
+    const toggleExpanded = (itemName: string) => {
+        const newExpanded = new Set(expandedItems);
+        if (newExpanded.has(itemName)) {
+            newExpanded.delete(itemName);
+        } else {
+            newExpanded.add(itemName);
+        }
+        setExpandedItems(newExpanded);
+    };
+
+    const expandAll = () => {
+        const allItems = new Set<string>();
+        const collectItems = (items: NavigationItem[]) => {
+            items.forEach(item => {
+                if (item.children) {
+                    allItems.add(item.name);
+                    collectItems(item.children);
+                }
+            });
+        };
+        navigationSections.forEach(section => collectItems(section.items));
+        setExpandedItems(allItems);
+    };
+
+    const collapseAll = () => {
+        setExpandedItems(new Set());
+    };
+
+
+    const handleItemClick = (item: NavigationItem) => {
+        if (item.href) {
+            // Navigate to the HTML file in the docs route
+            router.push(`/docs${item.href}`);
+            setActiveItem(item.name);
+        }
+    };
+
+    const renderNavigationItem = (item: NavigationItem, level: number = 0, parentPath: string = '', index: number = 0) => {
+        const hasChildren = item.children && item.children.length > 0;
+        const isExpanded = expandedItems.has(item.name);
+        const isActive = activeItem === item.name;
+        const _isHovered = hoveredItem === item.name;
+
+        // Create unique key by combining language, region, item name, href, parent path, level, and index
+        // This ensures uniqueness even for items with the same name and no href
+        const uniqueKey = `${currentLanguage}-${currentRegion}-${parentPath}-${item.name}-${item.href || 'no-href'}-${level}-${index}`;
+
+        return (
+            <div key={uniqueKey} className="relative">
+                <div className="flex items-center">
+                    <button
+                        onClick={() => {
+                            if (hasChildren) {
+                                toggleExpanded(item.name);
+                            } else if (item.href) {
+                                handleItemClick(item);
+                            }
+                        }}
+                        onMouseEnter={() => setHoveredItem(item.name)}
+                        onMouseLeave={() => setHoveredItem(null)}
+                        className={`flex items-center justify-between w-full text-left py-1 px-2 rounded text-sm transition-all duration-200 ${
+                            hasChildren 
+                                ? 'cursor-pointer hover:text-purple-400' 
+                                : item.href 
+                                    ? 'cursor-pointer hover:text-cyan-400' 
+                                    : 'cursor-default'
+                        } ${isActive ? 'text-cyan-400' : 'text-gray-300'}`}
+                    >
+                        <span className="flex-1">{item.name}</span>
+                        {hasChildren && (
+                            <svg
+                                className={`w-3 h-3 text-gray-400 transition-transform ${
+                                    isExpanded ? 'rotate-90' : ''
+                                }`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        )}
+                    </button>
+                </div>
+                
+                {/* Purple highlight line for active items */}
+                {isActive && (
+                    <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-400 z-10"></div>
+                )}
+                
+                {hasChildren && isExpanded && (
+                    <div className="ml-4 relative">
+                        {/* Continuous vertical line for all children - spans entire nested section */}
+                        <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-cyan-400/50"></div>
+                        {item.children!.map((child, childIndex) => renderNavigationItem(child, level + 1, `${parentPath}-${item.name}`, childIndex))}
+                    </div>
+                )}
             </div>
-            {expandedSectionId === section.id && (
-              <ul className="space-y-1.5  ml-2">
-                {section.items.map((item: NavigationItem, itemIndex: number) => (
-                  <NavigationItemComponent
-                    key={itemIndex}
-                    item={item}
-                    level={0}
-                    pathname={pathname}
-                    expandedItems={expandedItems}
-                    setExpandedItems={setExpandedItems}
-                    parentPath=""
-                  />
+        );
+    };
+
+    if (isLoading) {
+        return (
+            <div className="w-80 bg-black text-white h-screen overflow-y-auto border-r border-purple-900/30">
+                <div className="p-4">
+                    <div className="flex items-center justify-center h-32">
+                        <div className="text-purple-400">Loading navigation...</div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="w-80 bg-black text-white h-screen overflow-y-auto border-r border-purple-900/30">
+            <div className="p-4">
+                {/* Navigation Header */}
+                <div className="mb-6">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-purple-400 text-xs font-mono uppercase tracking-wider">
+                            Navigation
+                        </h2>
+                        <div className="flex space-x-1">
+                            <button
+                                onClick={expandAll}
+                                className="p-1 text-gray-400 hover:text-purple-400 transition-colors"
+                                title="Expand All"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <button
+                                onClick={collapseAll}
+                                className="p-1 text-gray-400 hover:text-purple-400 transition-colors"
+                                title="Collapse All"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Navigation Sections */}
+                {navigationSections.map((section) => (
+                    <div key={section.id} className="mb-6">
+                        <h2 className="text-cyan-400 text-xs font-mono uppercase tracking-wider mb-3">
+                            {section.title}
+                        </h2>
+                        <div className="space-y-0">
+                            {section.items.map((item, index) => renderNavigationItem(item, 0, section.id, index))}
+                        </div>
+                    </div>
                 ))}
-              </ul>
-            )}
-          </div>
-        ))}
-      </nav>
-    </aside>
-  );
+            </div>
+        </div>
+    );
 }

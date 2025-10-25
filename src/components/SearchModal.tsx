@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 // import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useLanguage } from "./LanguageProvider";
+import { useLanguage } from "@/components/LanguageProvider";
 
 type SearchResult = {
   title: string;
@@ -168,7 +168,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
       
@@ -178,7 +178,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           {/* Search Input */}
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
@@ -188,86 +188,81 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               placeholder={`Search documentation in ${getLanguageDisplay()}...`}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 text-lg bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-12 pr-4 py-4 text-lg bg-purple-900/30 border border-purple-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
             />
             <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-              <kbd className="inline-flex items-center px-2 py-1 text-xs font-mono text-gray-400 bg-gray-700 border border-gray-600 rounded">
+              <kbd className="inline-flex items-center px-2 py-1 text-xs font-mono text-purple-300 bg-purple-800/50 border border-purple-600/50 rounded">
                 ESC
               </kbd>
             </div>
           </div>
 
-          {/* Results */}
-          {query && (
-            <div className="mt-2 bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
-              {/* Language indicator */}
-              <div className="px-4 py-2 bg-gray-700 border-b border-gray-600">
-                <div className="flex items-center gap-2 text-sm text-gray-300">
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                  </svg>
-                  <span>Searching in {getLanguageDisplay()}</span>
-                </div>
-              </div>
+          {/* Search Results */}
+          {query.length >= 2 && (
+            <div className="mt-4 bg-black/90 border border-purple-800/50 rounded-lg shadow-2xl backdrop-blur-sm">
               {isSearching ? (
-                <div className="px-4 py-8 text-center">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                  <p className="text-gray-400">Searching...</p>
+                <div className="p-6 text-center">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-cyan-500 mx-auto mb-2"></div>
+                  <p className="text-purple-400 text-sm">Searching...</p>
                 </div>
-              ) : searchData && allResults.length > 0 ? (
-                <div className="py-2 max-h-96 overflow-y-auto">
-                  {searchData.sortedSections.map((sectionTitle, sectionIndex) => {
-                    const sectionResults = searchData.sectionResults[sectionTitle];
-                    if (!sectionResults || sectionResults.length === 0) return null;
-                    
+              ) : searchData && searchData.results.length > 0 ? (
+                <div className="max-h-96 overflow-y-auto">
+                  {searchData.sortedSections.map((section, _sectionIndex) => {
+                    const sectionResults = searchData.sectionResults[section] || [];
+                    if (sectionResults.length === 0) return null;
+
                     return (
-                      <div key={sectionTitle} className={`${sectionIndex > 0 ? 'mt-6' : ''}`}>
-                        {/* Section Header */}
-                        <div className="px-4 py-3 bg-gray-700 border-b border-gray-600">
-                          <div className="flex items-center gap-2">
-                            <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                            </svg>
-                            <span className="text-gray-200 font-semibold text-sm">{sectionTitle}</span>
-                            <span className="text-gray-400 text-xs bg-gray-600 px-2 py-1 rounded-full">{sectionResults.length}</span>
-                          </div>
+                      <div key={section} className="border-b border-purple-800/30 last:border-b-0">
+                        <div className="px-4 py-2 bg-purple-900/20 border-b border-purple-800/30">
+                          <h3 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+                            {section}
+                          </h3>
                         </div>
-                        
-                        {/* Section Results */}
-                        <div className="divide-y divide-gray-700">
-                          {sectionResults.map((result, index) => {
-                            const globalIndex = allResults.findIndex(r => r.path === result.path);
+                        <div className="py-1">
+                          {sectionResults.map((result, resultIndex) => {
+                            const globalIndex = allResults.findIndex(r => r === result);
+                            const isSelected = globalIndex === selectedIndex;
+                            
                             return (
                               <button
-                                key={`${result.path}-${index}`}
+                                key={`${section}-${resultIndex}`}
                                 onClick={() => handleSelect(result)}
-                                className={`w-full px-4 py-3 text-left hover:bg-gray-700 transition-colors ${
-                                  globalIndex === selectedIndex ? 'bg-blue-600' : ''
+                                className={`w-full text-left px-4 py-3 hover:bg-purple-800/30 transition-colors ${
+                                  isSelected ? 'bg-purple-800/40 border-l-2 border-cyan-400' : ''
                                 }`}
                               >
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-start gap-3">
+                                  <div className="flex-shrink-0 mt-1">
+                                    <div className={`w-2 h-2 rounded-full ${
+                                      result.matchType === 'title' ? 'bg-cyan-400' : 
+                                      result.matchType === 'content' ? 'bg-purple-400' : 'bg-gray-400'
+                                    }`}></div>
+                                  </div>
                                   <div className="flex-1 min-w-0">
-                                    <div className="flex items-center gap-2">
-                                      <svg className="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                      </svg>
-                                      <span className="text-white font-medium truncate">
+                                    <div className="flex items-center gap-2 mb-1">
+                                      <h4 className={`text-sm font-medium ${
+                                        isSelected ? 'text-cyan-300' : 'text-white'
+                                      }`}>
                                         {result.title}
+                                      </h4>
+                                      <span className={`text-xs px-2 py-0.5 rounded-full ${
+                                        result.matchType === 'title' ? 'bg-cyan-400/20 text-cyan-300' :
+                                        result.matchType === 'content' ? 'bg-purple-400/20 text-purple-300' :
+                                        'bg-gray-400/20 text-gray-300'
+                                      }`}>
+                                        {result.matchType}
                                       </span>
                                     </div>
-                                    {result.content && result.matchType !== 'title' && (
-                                      <div className="mt-1 text-xs text-gray-500 line-clamp-2">
-                                        {result.content.length > 100 
-                                          ? result.content.substring(0, 100) + '...'
-                                          : result.content
-                                        }
-                                      </div>
+                                    {result.content && (
+                                      <p className="text-xs text-gray-400 line-clamp-2">
+                                        {result.content}
+                                      </p>
                                     )}
-                                  </div>
-                                  <div className="ml-4 flex-shrink-0">
-                                    <kbd className="inline-flex items-center px-2 py-1 text-xs font-mono text-gray-400 bg-gray-700 border border-gray-600 rounded">
-                                      ↵
-                                    </kbd>
+                                    <div className="flex items-center gap-2 mt-1">
+                                      <span className="text-xs text-purple-400 font-mono">
+                                        {result.path.replace('/docs', '')}
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </button>
@@ -278,42 +273,38 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     );
                   })}
                 </div>
-              ) : (
-                <div className="px-4 py-8 text-center">
-                  <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              ) : query.length >= 2 ? (
+                <div className="p-6 text-center">
+                  <svg className="w-12 h-12 mx-auto mb-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <h3 className="mt-2 text-sm font-medium text-gray-300">No results found</h3>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Try searching for something else
-                  </p>
+                  <p className="text-gray-400 mb-1">No results found</p>
+                  <p className="text-xs text-gray-500">Try different keywords or check your spelling</p>
                 </div>
-              )}
+              ) : null}
             </div>
           )}
 
-          {/* Footer */}
-          {query && (
-            <div className="mt-4 flex items-center justify-between text-xs text-gray-400">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-1">
-                  <kbd className="inline-flex items-center px-1.5 py-0.5 text-xs font-mono bg-gray-700 border border-gray-600 rounded">
-                    ↑↓
-                  </kbd>
-                  <span>to navigate</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <kbd className="inline-flex items-center px-1.5 py-0.5 text-xs font-mono bg-gray-700 border border-gray-600 rounded">
-                    ↵
-                  </kbd>
-                  <span>to select</span>
-                </div>
+          {/* Search Tips */}
+          {query.length < 2 && (
+            <div className="mt-4 bg-black/50 border border-purple-800/30 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+                <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Search Tips</h3>
               </div>
-              <div className="flex items-center gap-1">
-                <kbd className="inline-flex items-center px-1.5 py-0.5 text-xs font-mono bg-gray-700 border border-gray-600 rounded">
-                  ESC
-                </kbd>
-                <span>to close</span>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <kbd className="px-2 py-1 text-xs bg-purple-800/50 border border-purple-600/50 rounded text-purple-300">↑↓</kbd>
+                  <span>Navigate results</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <kbd className="px-2 py-1 text-xs bg-purple-800/50 border border-purple-600/50 rounded text-purple-300">Enter</kbd>
+                  <span>Select result</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <kbd className="px-2 py-1 text-xs bg-purple-800/50 border border-purple-600/50 rounded text-purple-300">Esc</kbd>
+                  <span>Close search</span>
+                </div>
               </div>
             </div>
           )}

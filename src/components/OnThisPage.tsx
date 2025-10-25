@@ -27,26 +27,44 @@ export default function OnThisPage({ items }: { items: TocItem[] }) {
   const list = useMemo(() => items, [items]);
 
   return (
-    <aside className="hidden lg:block w-64 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto px-6 py-6 border-l border-gray-800">
-      <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">On this page</h4>
-      <ul className="space-y-2">
+    <aside className="hidden lg:block w-64 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto px-6 py-6 border-l border-purple-800/50">
+      <div className="mb-6">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+          <h4 className="text-xs font-semibold text-purple-400 uppercase tracking-wider">On this page</h4>
+        </div>
+        <div className="text-xs text-gray-500 mb-4">
+          {list.length} {list.length === 1 ? 'section' : 'sections'}
+        </div>
+      </div>
+      
+      <ul className="space-y-1">
         {list.map((item) => (
           <li key={item.id}>
             <Link
               href={`#${item.id}`}
-              className={`block pl-3 border-l text-sm transition-colors ${
+              className={`block pl-3 border-l text-sm transition-all duration-200 ${
                 activeId === item.id
-                  ? "border-white text-white"
-                  : "border-transparent text-gray-300 hover:text-white"
+                  ? "border-cyan-400 text-cyan-400 bg-cyan-400/10"
+                  : "border-transparent text-gray-300 hover:text-purple-300 hover:border-purple-400/50 hover:bg-purple-400/5"
               }`}
             >
-              {item.label}
+              <div className="py-1.5">
+                {item.label}
+              </div>
             </Link>
           </li>
         ))}
       </ul>
+      
+      {list.length === 0 && (
+        <div className="text-center py-8">
+          <svg className="w-8 h-8 mx-auto mb-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <p className="text-xs text-gray-500">No sections available</p>
+        </div>
+      )}
     </aside>
   );
 }
-
-

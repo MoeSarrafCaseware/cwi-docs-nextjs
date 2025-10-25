@@ -69,12 +69,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [availableLanguages, currentLanguage]);
 
-  // Detect language from URL pathname for both /docs/ and /test/docs/ routes
+  // Detect language from URL pathname for /docs/ routes
   useEffect(() => {
     if (availableLanguages.length === 0) return;
 
     const detectLanguageFromPath = () => {
-      // Check for language in URL patterns like /docs/en/... or /test/docs/en/...
+      // Check for language in URL patterns like /docs/en/...
       const pathSegments = pathname.split('/');
       let languageFromPath: string | null = null;
 
